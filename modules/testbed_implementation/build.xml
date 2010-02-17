@@ -1,0 +1,79 @@
+<project name="testbed" basedir=".">
+
+    <!--
+       Module specific properties
+    -->
+
+<property file="build.properties"/>
+
+
+    <target name="initGetDomsServices">
+        <mkdir dir="build"/>
+    </target>
+
+
+    <target name="initBuildDomsServices">
+    </target>
+
+
+    <target name="clean">
+        <delete dir="build"/>
+        <delete dir="dist"/>
+
+    </target>
+
+
+    <target name="getDomsServices" depends="initGetDomsServices">
+        <!-- Checkout the SourceForge packages needed for building the testbed -->
+
+        <exec executable="bash">
+            <arg value="bin/create_build_environment.sh"/>
+            <arg value="${modules.checkoutdir}"/>
+        </exec>
+
+    </target>
+
+
+    <target name="buildDomsServices" depends="initBuildDomsServices">
+        <!--Call the ant file in each of the checkouted services in the ${modules.checkoutdir}-->
+        
+        <subant target="dist">
+            <fileset dir="${modules.checkoutdir}" includes="*/build.xml"/>
+        </subant>
+
+    </target>
+
+
+
+    <target name="dist" depends="buildDomsServices">
+        <mkdir dir="dist"/>
+
+        <zip destfile="dist/${release}.zip">
+
+            <zipfileset prefix="${release}" dir="${basedir}">
+                <include name="bin/**"/>
+                <include name="config/**"/>
+                <include name="docs/**"/>
+                <include name="fedora/**"/>
+                <include name="tomcat/**"/>
+                <include name="data/objects/*.xml"/>
+            </zipfileset>
+            <zipfileset prefix="${release}/webservices" dir="${modules.checkoutdir}/ecm/dist">
+                <include name="*.war"/>
+            </zipfileset>
+            <zipfileset prefix="${release}/webservices" dir="${modules.checkoutdir}/bitstorage/dist">
+                <include name="*.war"/>
+            </zipfileset>
+            <zipfileset prefix="${release}/webservices" dir="${modules.checkoutdir}/domsclient/dist">
+                <include name="*.war"/>
+            </zipfileset>
+            <zipfileset prefix="${release}/webservices" dir="${modules.checkoutdir}/domsserver/dist">
+                <include name="*.war"/>
+            </zipfileset>
+
+
+
+        </zip>
+    </target>
+
+</project>
