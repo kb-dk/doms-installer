@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  ~ $Id$
+  ~ $Revision$
+  ~ $Date$
+  ~ $Author$
+  ~
+  ~ The DOMS project.
+  ~ Copyright (C) 2007-2010  The State and University Library
+  ~
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+                     debug="false">
+    <appender name="Lowlevel Bitstorage"
+              class="dk.statsbiblioteket.doms.surveillance.rest.log4jappender.LogRegistryAppender">
+        <param name="Threshold" value="INFO"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="Highlevel Bitstorage"
+              class="dk.statsbiblioteket.doms.surveillance.rest.log4jappender.LogRegistryAppender">
+        <param name="Threshold" value="INFO"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="Characterizer"
+              class="dk.statsbiblioteket.doms.surveillance.rest.log4jappender.LogRegistryAppender">
+        <param name="Threshold" value="INFO"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="Surveyor"
+              class="dk.statsbiblioteket.doms.surveillance.rest.log4jappender.LogRegistryAppender">
+        <param name="Threshold" value="INFO"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="Fedora"
+              class="dk.statsbiblioteket.doms.surveillance.rest.log4jappender.LogRegistryAppender">
+        <param name="Threshold" value="INFO"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="ECM"
+              class="dk.statsbiblioteket.doms.surveillance.rest.log4jappender.LogRegistryAppender">
+        <param name="Threshold" value="INFO"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <!-- A console appender -->
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <param name="Threshold" value="ALL"/>
+        <!-- or WARN or DEBUG or INFO -->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <logger name="dk.statsbiblioteket.doms.bitstorage.lowlevel">
+        <level value="WARN"/>
+        <appender-ref ref="Highlevel Bitstorage"/>
+    </logger>
+
+    <logger name="dk.statsbiblioteket.doms.bitstorage.highlevel">
+        <level value="WARN"/>
+        <appender-ref ref="Lowlevel Bitstorage"/>
+    </logger>
+
+    <logger name="dk.statsbiblioteket.doms.bitstorage.characterizer">
+        <level value="WARN"/>
+        <appender-ref ref="Characterizer"/>
+    </logger>
+
+    <logger name="dk.statsbiblioteket.doms.surveillance.surveyor">
+        <level value="WARN"/>
+        <appender-ref ref="Surveyor"/>
+    </logger>
+
+    <logger name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor">
+        <level value="WARN"/>
+        <appender-ref ref="Fedora"/>
+    </logger>
+
+    <logger name="org.fcrepo">
+        <level value="WARN"/>
+        <appender-ref ref="Fedora"/>
+    </logger>
+
+    <logger name="fedora">
+        <level value="WARN"/>
+        <appender-ref ref="Fedora"/>
+    </logger>
+
+    <logger name="dk.statsbiblioteket.doms.ecm">
+        <level value="WARN"/>
+        <appender-ref ref="ECM"/>
+    </logger>
+
+    <root>
+        <level value="ERROR"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</log4j:configuration>

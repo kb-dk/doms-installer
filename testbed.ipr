@@ -66,7 +66,12 @@
         <option name="myLocal" value="false" />
       </profile>
     </profiles>
-    <list size="0" />
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="SERVER PROBLEM" />
+      <item index="1" class="java.lang.String" itemvalue="INFO" />
+      <item index="2" class="java.lang.String" itemvalue="WARNING" />
+      <item index="3" class="java.lang.String" itemvalue="ERROR" />
+    </list>
   </component>
   <component name="JavacSettings">
     <option name="DEBUGGING_INFO" value="true" />
@@ -226,11 +231,12 @@
   </component>
   <component name="ProjectFileVersion" converted="true" />
   <component name="ProjectKey">
-    <option name="state" value="http://doms.svn.sourceforge.net/svnroot/doms/testbed/trunk/testbed.ipr" />
+    <option name="state" value="https://doms.svn.sourceforge.net/svnroot/doms/testbed/trunk/testbed.ipr" />
   </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$//testbed.iml" filepath="$PROJECT_DIR$//testbed.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/testbed_implementation/testbed_implementation.iml" filepath="$PROJECT_DIR$/modules/testbed_implementation/testbed_implementation.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/testbed/testbed_implementation.iml" filepath="$PROJECT_DIR$/modules/testbed/testbed_implementation.iml" />
     </modules>
   </component>
