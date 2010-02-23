@@ -1,7 +1,5 @@
 <project name="domsserver" basedir=".">
 
-    <target name="dist">
-        <mkdir dir="dist"/>
-    </target>
-    
+<!-- TODO -->
+
 </project>

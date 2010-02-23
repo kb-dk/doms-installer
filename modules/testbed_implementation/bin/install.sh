@@ -26,7 +26,7 @@ popd > /dev/null
 BASEDIR=$SCRIPT_DIR/..
 
 TOMCATZIP=`basename $BASEDIR/tomcat/*.zip`
-FEDORAJAR=`basename $BASEDIR/tomcat/*.jar`
+FEDORAJAR=`basename $BASEDIR/fedora/*.jar`
 
 #
 # Import settings
@@ -70,16 +70,16 @@ echo "Full path destination: $TESTBED_DIR"
 # Unpack a tomcat server
 #
 cp $BASEDIR/tomcat/$TOMCATZIP $TESTBED_DIR/
-pushd $TESTBED_DIR
-unzip $TOMCATZIP
+pushd $TESTBED_DIR > /dev/null
+unzip -q $TOMCATZIP
 mv ${TOMCATZIP%.*} tomcat
 rm $TOMCATZIP
-popd
+popd > /dev/null
 
 #
 # Replace the tomcat server.xml with our server.xml
 #
-pushd $BASEDIR/tomcat
+pushd $BASEDIR/data/templates > /dev/null
 # sed/shell magic below according to  http://www.grymoire.com/Unix/Sed.html
 # See section "Passing arguments into a sed script".
 sed \
@@ -89,39 +89,48 @@ sed \
 -e 's/\$TOMCATSHUTDOWN\$/'"$TOMCAT_SHUTDOWNPORT"'/g' \
 <server.xml.template >server.xml
 mv server.xml $TESTBED_DIR/tomcat/conf/
-popd
+popd  > /dev/null
+
+#
+# Replace the tomcat context.xml with our context.xml
+#
+pushd $BASEDIR/data/templates > /dev/null
+sed \
+-e 's/\$FEDORAHOME\$/'"$BASEDIR/fedora"'/g' \
+<context.xml.template >context.xml
+mv context.xml $TESTBED_DIR/tomcat/conf/
+popd > /dev/null
 
 #
 # Update the tomcat tomcat-users.xml to make login possible
 #
 # Make it possible to log into the tomcat web manager-interface
-pushd $TESTBED_DIR/tomcat/conf
+# TODO: Consider using a template for consistency
+pushd $TESTBED_DIR/tomcat/conf > /dev/null
 cp tomcat-users.xml tomcat-users-backup.xml
 sed \
 -e 's|<tomcat-users>|<tomcat-users>\
 <role rolename="manager"/>\
 <user username="tomcat" password="tomcat" roles="manager"/>|g' \
 <tomcat-users-backup.xml >tomcat-users.xml
-popd
+popd > /dev/null
 
 #
 # Insert tomcat setenv.sh
 #
-pushd $BASEDIR/tomcat
-# sed/shell magic below according to  http://www.grymoire.com/Unix/Sed.html
-# See section "Passing arguments into a sed script".
+pushd $BASEDIR/data/templates > /dev/null
 sed \
 -e 's/\$FEDORAHOME\$/'"$BASEDIR/fedora"'/g' \
 -e 's/\$TOMCATHOME\$/'"$BASEDIR/tomcat"'/g' \
 <setenv.sh.template >setenv.sh
 mv setenv.sh $TESTBED_DIR/tomcat/bin/setenv.sh
-popd
+popd > /dev/null
 chmod +x $TESTBED_DIR/tomcat/bin/*.sh
 
 #
 # Install log4j configuration
 #
-cp $BASEDIR/tomcat/log4j.xml $TESTBED_DIR/tomcat/conf/
+cp $BASEDIR/data/templates/log4j.xml $TESTBED_DIR/tomcat/conf/
 
 #TODO context.xml
 
@@ -134,90 +143,70 @@ cp $BASEDIR/tomcat/log4j.xml $TESTBED_DIR/tomcat/conf/
 #
 # Install fedora including database
 #
-pushd $BASEDIR/fedora
-# sed/shell magic below according to  http://www.grymoire.com/Unix/Sed.html
-# See section "Passing arguments into a sed script".
+pushd $BASEDIR/data/templates > /dev/null
 sed \
 -e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
 -e 's|\$FEDORAADMINPASS\$|'"$FEDORAADMINPASS"'|g' \
 -e 's|\$INSTALLDIR\$|'"$TESTBED_DIR"'/fedora|g' \
 <fedora.properties.template >fedora.properties
-java -jar fedora*.jar fedora.properties
+java -jar fedora/$FEDORAJAR fedora.properties
 rm fedora.properties
-popd
-pushd $TESTBED_DIR
+popd > /dev/null
+pushd $TESTBED_DIR > /dev/null
 cp fedora/install/fedora.war $TESTBED_DIR/tomcat/webapps
-popd
-
-#
-# TODO: Everything below this point is not yet updated
-# Outstanding issues:
-#  - Installing all war files in tomcat
-#  - Installing surveillance-rest jar file and dependencies in tomcat lib
-#  - Patching fcfg with hook
-#  - Add context.xml parameters (at the place defined above)
-#  - A set of base objects
-#  - possibly start testbed
-
-# TODO: PLACEHOLDER UNTIL WE HAVE SPECIFIC INSTALL INSTRUCTIONS FOR EACH
-# Install into tomcat: webservices
-cp $BASEDIR/webservices/*.war $TESTBED_DIR/tomcat/webapps
-
-
-#INSTALL ECM
-mkdir $BASEDIR/temp
-pushd $BASEDIR/temp
-cp ../webservices/ecm.war .
-unzip ecm.war -d ecm
-rm ecm.war
-cd ecm/WEB-INF
-sed \
--e 's|http://localhost:7910/fedora|'"http://localhost:$TOMCATHTTP/fedora"'|g' \
-<web.xml > web.xml.new
-rm web.xml
-mv web.xml.new web.xml
-cd ..
-zip ../ecm.war -r .
-cp ../ecm.war $TESTBED_DIR/tomcat/webapps
-popd
-rm -rf $BASEDIR/temp
-
-#INSTALL LOWLEVELBITSTORAGE
-mkdir $BASEDIR/temp
-pushd $BASEDIR/temp
-cp ../webservices/lowlevelbitstorage.war .
-unzip lowlevelbitstorage.war -d lowlevelbitstorage
-rm lowlevelbitstorage.war
-cd lowlevelbitstorage/WEB-INF/classes
-sed \
--e 's|<script>bin/server.sh</script>|'"<script>$BITSTORAGE_SCRIPT</script>"'|g' \
--e 's|<server>domstest@halley</server>|'"<server>$BITSTORAGE_SERVER</server>"'|g' \
--e 's|<bitfinder>http://bitfinder.statsbiblioteket.dk/</bitfinder>|'"<bitfinder>$BITFINDER</bitfinder>"'|g' \
-< bitstorageSshImpl.xml > bitstorageSshImpl.xml.new
-rm bitstorageSshImpl.xml
-mv bitstorageSshImpl.xml.new bitstorageSshImpl.xml
-cd ../..
-zip ../lowlevelbitstorage.war -r .
-cp ../lowlevelbitstorage.war $TESTBED_DIR/tomcat/webapps
-popd
-rm -rf $BASEDIR/temp
-
+popd > /dev/null
 #TODO: take care of Fedora validator hook..
 
-#TODO: config webservices (ecm, bitstorage,..)
-
-export FEDORA_HOME=$TESTBED_DIR/fedora
-
-# Start the tomcat server
-$TESTBED_DIR/tomcat/bin/startup.sh
-sleep 30
-
-#TODO: provide initial objects to ingest
-# .. objects should be taken from the old (pre-sourceforge) doms and
-# put in a dir by name "data" in the domsserver trunk..
 #
-#sh $TESTBED_DIR/fedora/client/bin/fedora-ingest.sh dir $TESTBED_DIR/objects\
-# 'info:fedora/fedora-system:FOXML-1.1'\
+# Install into tomcat: webservices
+#
+cp $BASEDIR/webservices/*.war $TESTBED_DIR/tomcat/webapps
+
+#
+# Install into tomcat: logging appender
+#
+cp $BASEDIR/logappender/*.jar $TESTBED_DIR/tomcat/lib
+
+#
+# TODO: What is currently needed to configure ECM?
+#
+# mkdir $BASEDIR/temp
+# pushd $BASEDIR/temp
+# cp ../webservices/ecm.war .
+# unzip ecm.war -d ecm
+# rm ecm.war
+# cd ecm/WEB-INF
+# sed \
+# -e 's|http://localhost:7910/fedora|'"http://localhost:$TOMCATHTTP/fedora"'|g' \
+# <web.xml > web.xml.new
+# rm web.xml
+# mv web.xml.new web.xml
+# cd ..
+# zip ../ecm.war -r .
+# cp ../ecm.war $TESTBED_DIR/tomcat/webapps
+# popd
+# rm -rf $BASEDIR/temp
+
+#
+# TODO: Start tomcat
+#
+# export FEDORA_HOME=$TESTBED_DIR/fedora
+# Start the tomcat server
+# $TESTBED_DIR/tomcat/bin/startup.sh
+# sleep 30
+
+#
+# TODO: provide initial objects to ingest
+# .. objects should be taken from the old (pre-sourceforge) doms and
+# put in a dir by name "data/objects" in the domsserver trunk..
+#
+#sh $TESTBED_DIR/fedora/client/bin/fedora-ingest.sh dir \
+# $TESTBED_DIR/data/objects \
+# 'info:fedora/fedora-system:FOXML-1.1' \
 # localhost:$TOMCAT_HTTPPORT $FEDORAADMIN $FEDORAADMINPASS http
 
-$TESTBED_DIR/tomcat/bin/shutdown.sh
+
+#
+# TODO: Stop tomcat
+#
+#$TESTBED_DIR/tomcat/bin/shutdown.sh

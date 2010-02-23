@@ -237,7 +237,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$//testbed.iml" filepath="$PROJECT_DIR$//testbed.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/testbed_implementation/testbed_implementation.iml" filepath="$PROJECT_DIR$/modules/testbed_implementation/testbed_implementation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/modules/testbed/testbed_implementation.iml" filepath="$PROJECT_DIR$/modules/testbed/testbed_implementation.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
