@@ -40,8 +40,6 @@
             <zipfileset prefix="${release}" dir="${basedir}">
                 <include name="config/**"/>
                 <include name="docs/**"/>
-                <include name="fedora/**"/>
-                <include name="tomcat/**"/>
                 <include name="data/**"/>
             </zipfileset>
             <zipfileset prefix="${release}" dir="${basedir}" filemode="755">

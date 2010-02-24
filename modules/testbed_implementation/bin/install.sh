@@ -25,8 +25,8 @@ SCRIPT_DIR=$(pwd)
 popd > /dev/null
 BASEDIR=$SCRIPT_DIR/..
 
-TOMCATZIP=`basename $BASEDIR/tomcat/*.zip`
-FEDORAJAR=`basename $BASEDIR/fedora/*.jar`
+TOMCATZIP=`basename $BASEDIR/data/tomcat/*.zip`
+FEDORAJAR=`basename $BASEDIR/data/fedora/*.jar`
 
 #
 # Import settings
@@ -69,7 +69,7 @@ echo "Full path destination: $TESTBED_DIR"
 #
 # Unpack a tomcat server
 #
-cp $BASEDIR/tomcat/$TOMCATZIP $TESTBED_DIR/
+cp $BASEDIR/data/tomcat/$TOMCATZIP $TESTBED_DIR/
 pushd $TESTBED_DIR > /dev/null
 unzip -q $TOMCATZIP
 mv ${TOMCATZIP%.*} tomcat
@@ -83,10 +83,10 @@ pushd $BASEDIR/data/templates > /dev/null
 # sed/shell magic below according to  http://www.grymoire.com/Unix/Sed.html
 # See section "Passing arguments into a sed script".
 sed \
--e 's/\$TOMCATHTTP\$/'"$TOMCAT_HTTPPORT"'/g' \
--e 's/\$TOMCATSSL\$/'"$TOMCAT_SSLPORT"'/g' \
--e 's/\$TOMCATAJP\$/'"$TOMCAT_AJPPORT"'/g' \
--e 's/\$TOMCATSHUTDOWN\$/'"$TOMCAT_SHUTDOWNPORT"'/g' \
+-e 's|\$TOMCATHTTP\$|'"$TOMCAT_HTTPPORT"'|g' \
+-e 's|\$TOMCATSSL\$|'"$TOMCAT_SSLPORT"'|g' \
+-e 's|\$TOMCATAJP\$|'"$TOMCAT_AJPPORT"'|g' \
+-e 's|\$TOMCATSHUTDOWN\$|'"$TOMCAT_SHUTDOWNPORT"'|g' \
 <server.xml.template >server.xml
 mv server.xml $TESTBED_DIR/tomcat/conf/
 popd  > /dev/null
@@ -96,7 +96,7 @@ popd  > /dev/null
 #
 pushd $BASEDIR/data/templates > /dev/null
 sed \
--e 's/\$FEDORAHOME\$/'"$BASEDIR/fedora"'/g' \
+-e 's|\$FEDORAHOME\$|'"$TESTBED_DIR/fedora"'|g' \
 <context.xml.template >context.xml
 mv context.xml $TESTBED_DIR/tomcat/conf/
 popd > /dev/null
@@ -120,8 +120,8 @@ popd > /dev/null
 #
 pushd $BASEDIR/data/templates > /dev/null
 sed \
--e 's/\$FEDORAHOME\$/'"$BASEDIR/fedora"'/g' \
--e 's/\$TOMCATHOME\$/'"$BASEDIR/tomcat"'/g' \
+-e 's|\$FEDORAHOME\$|'"$TESTBED_DIR/fedora"'|g' \
+-e 's|\$TOMCATHOME\$|'"$TESTBED_DIR/tomcat"'|g' \
 <setenv.sh.template >setenv.sh
 mv setenv.sh $TESTBED_DIR/tomcat/bin/setenv.sh
 popd > /dev/null
@@ -149,8 +149,10 @@ sed \
 -e 's|\$FEDORAADMINPASS\$|'"$FEDORAADMINPASS"'|g' \
 -e 's|\$INSTALLDIR\$|'"$TESTBED_DIR"'/fedora|g' \
 <fedora.properties.template >fedora.properties
-java -jar fedora/$FEDORAJAR fedora.properties
-rm fedora.properties
+popd > /dev/null
+pushd $BASEDIR/data/fedora > /dev/null
+java -jar $FEDORAJAR $BASEDIR/data/templates/fedora.properties
+rm $BASEDIR/data/templates/fedora.properties
 popd > /dev/null
 pushd $TESTBED_DIR > /dev/null
 cp fedora/install/fedora.war $TESTBED_DIR/tomcat/webapps
