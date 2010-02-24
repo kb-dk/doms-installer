@@ -1,2 +1,2 @@
-export CATALINA_OPTS="-Dlog4j.configuration=$TOMCATHOME$/conf/log4j.xml"
+export CATALINA_OPTS="-Dlog4j.configuration=file://$TOMCATHOME$/conf/log4j.xml"
 export FEDORA_HOME=$FEDORAHOME$
