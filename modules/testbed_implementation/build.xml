@@ -4,6 +4,9 @@
         <delete dir="dist"/>
         <delete dir="${modules.checkoutdir}/logappender"/>
         <delete dir="${modules.checkoutdir}/webservices"/>
+        <subant target="distclean">
+            <fileset dir="${modules.checkoutdir}" includes="*/build.xml"/>
+        </subant>
     </target>
 
 
@@ -13,7 +16,6 @@
             <arg value="build/create_build_environment.sh"/>
             <arg value="${modules.checkoutdir}"/>
         </exec>
-
     </target>
 
 
@@ -24,7 +26,7 @@
         </subant>
     </target>
 
-    <target name="release" depends="buildDomsServices">
+    <target name="release" depends="clean, buildDomsServices">
         <mkdir dir="dist"/>
         <unzip dest="${modules.checkoutdir}/webservices">
             <fileset dir="${modules.checkoutdir}" includes="*/dist/*.zip"/>

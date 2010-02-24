@@ -1,5 +1,30 @@
 <Context>
-    <!--TODO: Fill out-->
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.characteriser.location" value="http://localhost:8080/characteriser/characterise/?wsdl" override="true"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.fedora.characstream" value="CHARACTERISATION" override="true"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.fedora.contentstream" value="CONTENTS" override="true"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.fedora.port" value="7910" override="true"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.fedora.server" value="localhost" override="true"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.location" value="http://localhost:8080/highlevelbitstorage/highlevel/?wsdl" override="true"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.preferredBytesLeft" value="1000000" override="true"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.requiredBytesLeft" value="100000" override="true"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.lowlevel.location" value="http://localhost:8080/lowlevelbitstorage/lowlevel/?wsdl" override="true"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.lowlevel.location" value="http://localhost:8080/lowlevelbitstorage/lowlevel/?wsdl" override="true"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.lowlevel.preferredBytesLeft" value="1000000" override="true"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.lowlevel.requiredBytesLeft" value="100000" override="true"/>
+    <Parameter name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor.fedoraPassword" value="fedoraSurveyorPass" override="true"/>
+    <Parameter name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor.fedoraUrl" value="http://localhost:8080/fedora" override="true"/>
+    <Parameter name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor.fedoraUser" value="fedoraSurveyor" override="true"/>
+    <Parameter name="dk.statsbiblioteket.doms.surveillance.rest.log4jappender.registryClass" value="dk.statsbiblioteket.doms.surveillance.rest.log4jappender.CachingLogRegistry" override="true"/>
+    <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.ignoredMessagesFile" value="ignored.txt" override="true"/>
+    <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.surveyorClass" value="dk.statsbiblioteket.doms.surveillance.surveyor.RestSurveyor" override="true"/>
+    <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.urls" value="http://localhost:8080/surveillance-surveyor/logsurveyservice/getStatusSince/{date}" override="true"/>
+    <Parameter name="bitfinder" value="http://bitfinder.statsbiblioteket.dk/" override="true"/>
+    <Parameter name="fedoraConnector" value="dk.statsbiblioteket.doms.ecm.repository.fedoraclient.FedoraClientConnector" override="true"/>
+    <Parameter name="fedoraLocation" value="http://localhost:7910/fedora" override="true"/>
+    <Parameter name="fedoraPidGenerator" value="dk.statsbiblioteket.doms.ecm.repository.PidGeneratorImpl" override="true"/>
+    <Parameter name="log4jConfigLocation" value="/WEB-INF/log4j.xml" override="true"/>
+    <Parameter name="script" value="bin/server.sh" override="true"/>
+    <Parameter name="server" value="domstest@halley" override="true"/>
 
     <!-- Default set of monitored resources -->
     <WatchedResource>WEB-INF/web.xml</WatchedResource>

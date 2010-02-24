@@ -132,14 +132,6 @@ chmod +x $TESTBED_DIR/tomcat/bin/*.sh
 #
 cp $BASEDIR/data/templates/log4j.xml $TESTBED_DIR/tomcat/conf/
 
-#TODO context.xml
-
-#
-# kill any running tomcats
-#
-#ps ax | grep org.apache.catalina.startup.Bootstrap | grep -v grep |\
-# awk '{print $1}' | xargs kill >/dev/null 2>&1
-
 #
 # Install fedora including database
 #
@@ -188,6 +180,12 @@ cp $BASEDIR/logappender/*.jar $TESTBED_DIR/tomcat/lib
 # cp ../ecm.war $TESTBED_DIR/tomcat/webapps
 # popd
 # rm -rf $BASEDIR/temp
+
+#
+# TODO: kill any running tomcats
+#
+# ps ax | grep org.apache.catalina.startup.Bootstrap | grep -v grep |\
+# awk '{print $1}' | xargs kill >/dev/null 2>&1
 
 #
 # TODO: Start tomcat
