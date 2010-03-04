@@ -97,22 +97,30 @@ popd  > /dev/null
 pushd $BASEDIR/data/templates > /dev/null
 sed \
 -e 's|\$FEDORAHOME\$|'"$TESTBED_DIR/fedora"'|g' \
+-e 's|\$TOMCAT_HTTPPORT\$|'"$TOMCAT_HTTPPORT"'|g' \
+-e 's|\$TOMCAT_SHUTDOWNPORT\$|'"$TOMCAT_SHUTDOWNPORT"'|g' \
+-e 's|\$TOMCAT_SSLPORT\$|'"$TOMCAT_SSLPORT"'|g' \
+-e 's|\$TOMCAT_AJPPORT\$|'"$TOMCAT_AJPPORT"'|g' \
+-e 's|\$TOMCAT_SERVERNAME\$|'"$TOMCAT_SERVERNAME"'|g' \
+-e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
+-e 's|\$FEDORAADMINPASS\$|'"$FEDORAADMINPASS"'|g' \
+-e 's|\$BITFINDER\$|'"$BITFINDER"'|g' \
+-e 's|\$BITSTORAGE_SCRIPT\$|'"$BITSTORAGE_SCRIPT"'|g' \
+-e 's|\$BITSTORAGE_SERVER\$|'"$BITSTORAGE_SERVER"'|g' \
 <context.xml.template >context.xml
 mv context.xml $TESTBED_DIR/tomcat/conf/
 popd > /dev/null
 
 #
-# Update the tomcat tomcat-users.xml to make login possible
+# Update the tomcat tomcat-users.xml to make it possible to log into the tomcat
+# web manager-interface
 #
-# Make it possible to log into the tomcat web manager-interface
-# TODO: Consider using a template for consistency
-pushd $TESTBED_DIR/tomcat/conf > /dev/null
-cp tomcat-users.xml tomcat-users-backup.xml
+pushd $BASEDIR/data/templates > /dev/null
 sed \
--e 's|<tomcat-users>|<tomcat-users>\
-<role rolename="manager"/>\
-<user username="tomcat" password="tomcat" roles="manager"/>|g' \
-<tomcat-users-backup.xml >tomcat-users.xml
+-e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
+-e 's|\$FEDORAADMINPASS\$|'"$FEDORAADMINPASS"'|g' \
+<tomcat-users.xml.template >tomcat-users.xml
+mv tomcat-users.xml $TESTBED_DIR/tomcat/conf/
 popd > /dev/null
 
 #
@@ -130,11 +138,17 @@ chmod +x $TESTBED_DIR/tomcat/bin/*.sh
 #
 # Install log4j configuration
 #
-cp $BASEDIR/data/templates/log4j.xml $TESTBED_DIR/tomcat/conf/
+pushd $BASEDIR/data/templates > /dev/null
+sed \
+-e 's|\$TESTBEDHOME\$|'"$TESTBED_DIR"'|g' \
+<log4j.xml.template >log4j.xml
+mv log4j.xml $TESTBED_DIR/tomcat/conf/
+popd > /dev/null
 
 #
-# Install fedora including database
+# Prepare fedora.war
 #
+export FEDORA_HOME=$TESTBED_DIR/fedora
 pushd $BASEDIR/data/templates > /dev/null
 sed \
 -e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
@@ -146,20 +160,38 @@ pushd $BASEDIR/data/fedora > /dev/null
 java -jar $FEDORAJAR $BASEDIR/data/templates/fedora.properties
 rm $BASEDIR/data/templates/fedora.properties
 popd > /dev/null
+
+#
+# Bundle logappender
+# TODO: Not pretty forcing stuff into fedora.war
+#
+pushd $TESTBED_DIR/fedora/install > /dev/null
+mkdir -p WEB-INF/lib
+cp $BASEDIR/logappender/*.jar WEB-INF/lib
+zip -g fedora.war WEB-INF/lib/*
+rm -r WEB-INF
+popd > /dev/null
+
+#
+# Install Fedora
+#
 pushd $TESTBED_DIR > /dev/null
 cp fedora/install/fedora.war $TESTBED_DIR/tomcat/webapps
 popd > /dev/null
-#TODO: take care of Fedora validator hook..
+
+
+#
+# TODO: deploy Fedora validator hook..
+#
+
+#
+# TODO: Patch fedora.fcfg with values for identify (and more?)
+#
 
 #
 # Install into tomcat: webservices
 #
 cp $BASEDIR/webservices/*.war $TESTBED_DIR/tomcat/webapps
-
-#
-# Install into tomcat: logging appender
-#
-cp $BASEDIR/logappender/*.jar $TESTBED_DIR/tomcat/lib
 
 #
 # TODO: What is currently needed to configure ECM?
@@ -182,15 +214,13 @@ cp $BASEDIR/logappender/*.jar $TESTBED_DIR/tomcat/lib
 # rm -rf $BASEDIR/temp
 
 #
-# TODO: kill any running tomcats
+# TODO: kill any running tomcats on HTTP port
 #
-# ps ax | grep org.apache.catalina.startup.Bootstrap | grep -v grep |\
-# awk '{print $1}' | xargs kill >/dev/null 2>&1
+#netstat -tnlp 2>&1|grep $TOMCATHTTP|grep -o [0-9]*/java|cut -d/ -f1| xargs kill >/dev/null 2>&1
 
 #
 # TODO: Start tomcat
 #
-# export FEDORA_HOME=$TESTBED_DIR/fedora
 # Start the tomcat server
 # $TESTBED_DIR/tomcat/bin/startup.sh
 # sleep 30

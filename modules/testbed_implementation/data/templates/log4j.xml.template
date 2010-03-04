@@ -30,17 +30,35 @@
 
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
                      debug="false">
-    <appender name="Lowlevel Bitstorage"
+    <appender name="LowlevelBitstorage"
               class="dk.statsbiblioteket.doms.surveillance.rest.log4jappender.LogRegistryAppender">
-        <param name="Threshold" value="INFO"/>
+        <param name="Threshold" value="WARN"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
     </appender>
 
-    <appender name="Highlevel Bitstorage"
+    <appender name="LowlevelBitstorageFile"
+              class="org.apache.log4j.FileAppender">
+        <param name="Threshold" value="DEBUG"/>
+        <param name="File" value="$TESTBEDHOME$/logs/doms-lowlevel.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="HighlevelBitstorage"
               class="dk.statsbiblioteket.doms.surveillance.rest.log4jappender.LogRegistryAppender">
-        <param name="Threshold" value="INFO"/>
+        <param name="Threshold" value="WARN"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="HighlevelBitstorageFile"
+              class="org.apache.log4j.FileAppender">
+        <param name="Threshold" value="DEBUG"/>
+        <param name="File" value="$TESTBEDHOME$/logs/doms-highlevel.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -48,7 +66,16 @@
 
     <appender name="Characterizer"
               class="dk.statsbiblioteket.doms.surveillance.rest.log4jappender.LogRegistryAppender">
-        <param name="Threshold" value="INFO"/>
+        <param name="Threshold" value="WARN"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="CharacterizerFile"
+              class="org.apache.log4j.FileAppender">
+        <param name="Threshold" value="DEBUG"/>
+        <param name="File" value="$TESTBEDHOME$/logs/doms-characterizer.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -56,7 +83,16 @@
 
     <appender name="Surveyor"
               class="dk.statsbiblioteket.doms.surveillance.rest.log4jappender.LogRegistryAppender">
-        <param name="Threshold" value="INFO"/>
+        <param name="Threshold" value="WARN"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="SurveyorFile"
+              class="org.apache.log4j.FileAppender">
+        <param name="Threshold" value="DEBUG"/>
+        <param name="File" value="$TESTBEDHOME$/logs/doms-surveyor.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -64,7 +100,25 @@
 
     <appender name="Fedora"
               class="dk.statsbiblioteket.doms.surveillance.rest.log4jappender.LogRegistryAppender">
-        <param name="Threshold" value="INFO"/>
+        <param name="Threshold" value="WARN"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="FedoraFile"
+              class="org.apache.log4j.FileAppender">
+        <param name="Threshold" value="DEBUG"/>
+        <param name="File" value="$TESTBEDHOME$/logs/fedora.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="FedoraSurveyorFile"
+              class="org.apache.log4j.FileAppender">
+        <param name="Threshold" value="DEBUG"/>
+        <param name="File" value="$TESTBEDHOME$/logs/doms-fedorasurveyor.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -72,7 +126,25 @@
 
     <appender name="ECM"
               class="dk.statsbiblioteket.doms.surveillance.rest.log4jappender.LogRegistryAppender">
+        <param name="Threshold" value="WARN"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="ECMFile"
+              class="org.apache.log4j.FileAppender">
+        <param name="Threshold" value="DEBUG"/>
+        <param name="File" value="$TESTBEDHOME$/logs/doms-ecm.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="DomsFile"
+              class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="INFO"/>
+        <param name="File" value="$TESTBEDHOME$/logs/doms.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -80,7 +152,7 @@
 
     <!-- A console appender -->
     <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
-        <param name="Threshold" value="ALL"/>
+        <param name="Threshold" value="ERROR"/>
         <!-- or WARN or DEBUG or INFO -->
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
@@ -88,47 +160,56 @@
     </appender>
 
     <logger name="dk.statsbiblioteket.doms.bitstorage.lowlevel">
-        <level value="WARN"/>
-        <appender-ref ref="Highlevel Bitstorage"/>
+        <level value="ALL"/>
+        <appender-ref ref="HighlevelBitstorage"/>
+        <appender-ref ref="HighlevelBitstorageFile"/>
     </logger>
 
     <logger name="dk.statsbiblioteket.doms.bitstorage.highlevel">
-        <level value="WARN"/>
-        <appender-ref ref="Lowlevel Bitstorage"/>
+        <level value="ALL"/>
+        <appender-ref ref="LowlevelBitstorage"/>
+        <appender-ref ref="LowlevelBitstorageFile"/>
     </logger>
 
     <logger name="dk.statsbiblioteket.doms.bitstorage.characterizer">
-        <level value="WARN"/>
+        <level value="ALL"/>
         <appender-ref ref="Characterizer"/>
+        <appender-ref ref="CharacterizerFile"/>
     </logger>
 
     <logger name="dk.statsbiblioteket.doms.surveillance.surveyor">
-        <level value="WARN"/>
+        <level value="ALL"/>
         <appender-ref ref="Surveyor"/>
+        <appender-ref ref="SurveyorFile"/>
     </logger>
 
     <logger name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor">
-        <level value="WARN"/>
+        <level value="ALL"/>
         <appender-ref ref="Fedora"/>
+        <appender-ref ref="FedoraSurveyorFile"/>
     </logger>
 
     <logger name="org.fcrepo">
-        <level value="WARN"/>
+        <level value="ALL"/>
         <appender-ref ref="Fedora"/>
+        <appender-ref ref="FedoraFile"/>
     </logger>
 
     <logger name="fedora">
-        <level value="WARN"/>
+        <level value="ALL"/>
         <appender-ref ref="Fedora"/>
+        <appender-ref ref="FedoraFile"/>
     </logger>
 
     <logger name="dk.statsbiblioteket.doms.ecm">
-        <level value="WARN"/>
+        <level value="ALL"/>
         <appender-ref ref="ECM"/>
+        <appender-ref ref="ECMFile"/>
     </logger>
 
     <root>
         <level value="ERROR"/>
         <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="DomsFile"/>
     </root>
 </log4j:configuration>
