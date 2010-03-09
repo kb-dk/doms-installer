@@ -1,4 +1,7 @@
 <project name="testbed" basedir=".">
+
+    <property file="build-${user.name}.properties" />
+
     <property file="build.properties"/>
     <target name="clean">
         <delete dir="dist"/>
@@ -33,11 +36,15 @@
             <patternset includes="**/*.war"/>
             <flattenmapper/>
         </unzip>
-        <!--TODO: Remove this copy when ECM uses build framework -->
+<!--
+        -->
+<!--TODO: Remove this copy when ECM uses build framework -->
+<!--
         <copy todir="${modules.checkoutdir}/webservices">
             <fileset dir="${modules.checkoutdir}" includes="*/dist/*.war"/>
             <flattenmapper/>
         </copy>
+-->
         <unzip dest="${modules.checkoutdir}/logappender">
             <fileset dir="${modules.checkoutdir}" includes="*/dist/surveillance-*.zip"/>
             <patternset includes="surveillance-*/jars/*.jar"/>
