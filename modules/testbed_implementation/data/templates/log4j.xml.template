@@ -161,14 +161,14 @@
 
     <logger name="dk.statsbiblioteket.doms.bitstorage.lowlevel">
         <level value="ALL"/>
-        <appender-ref ref="HighlevelBitstorage"/>
-        <appender-ref ref="HighlevelBitstorageFile"/>
+        <appender-ref ref="LowlevelBitstorage"/>
+        <appender-ref ref="LowlevelBitstorageFile"/>
     </logger>
 
     <logger name="dk.statsbiblioteket.doms.bitstorage.highlevel">
         <level value="ALL"/>
-        <appender-ref ref="LowlevelBitstorage"/>
-        <appender-ref ref="LowlevelBitstorageFile"/>
+        <appender-ref ref="HighlevelBitstorage"/>
+        <appender-ref ref="HighlevelBitstorageFile"/>
     </logger>
 
     <logger name="dk.statsbiblioteket.doms.bitstorage.characterizer">
