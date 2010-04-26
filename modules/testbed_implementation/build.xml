@@ -36,15 +36,6 @@
             <patternset includes="**/*.war"/>
             <flattenmapper/>
         </unzip>
-<!--
-        -->
-<!--TODO: Remove this copy when ECM uses build framework -->
-<!--
-        <copy todir="${modules.checkoutdir}/webservices">
-            <fileset dir="${modules.checkoutdir}" includes="*/dist/*.war"/>
-            <flattenmapper/>
-        </copy>
--->
         <unzip dest="${modules.checkoutdir}/logappender">
             <fileset dir="${modules.checkoutdir}" includes="*/dist/surveillance-*.zip"/>
             <patternset includes="surveillance-*/jars/*.jar"/>

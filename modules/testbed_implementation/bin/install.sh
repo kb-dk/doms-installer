@@ -146,6 +146,12 @@ mv log4j.xml $TESTBED_DIR/tomcat/conf/
 popd > /dev/null
 
 #
+# Insert log4j appender in lib
+# TODO: This is currently test
+#
+cp $BASEDIR/logappender/*.jar $TESTBED_DIR/tomcat/lib
+
+#
 # Prepare fedora.war
 #
 export FEDORA_HOME=$TESTBED_DIR/fedora

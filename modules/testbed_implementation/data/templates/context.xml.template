@@ -13,9 +13,7 @@
     <Parameter name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor.fedoraPassword" value="$FEDORAADMINPASS$" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor.fedoraUrl" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/fedora" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor.fedoraUser" value="$FEDORAADMIN$" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.surveillance.rest.log4jappender.registryClass" value="dk.statsbiblioteket.doms.surveillance.rest.log4jappender.CachingLogRegistry" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.ignoredMessagesFile" value="ignored.txt" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.surveyorClass" value="dk.statsbiblioteket.doms.surveillance.surveyor.RestSurveyor" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.urls" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/surveillance-surveyor/logsurveyservice/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/surveillance-fedorasurveyor/logsurveyservice/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/surveillance-fedorasurveyor/fedorarealtime/getStatus;http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/lowlevelbitstorage/lowlevelbitstoragerealtimesurveillanceservice/RealTimeService/getStatus;http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/highlevelbitstorage/highlevelbitstoragerealtimesurveillanceservice/RealTimeService/getStatus" override="false"/>
     <Parameter name="bitfinder" value="$BITFINDER$" override="false"/>
     <Parameter name="fedoraConnector" value="dk.statsbiblioteket.doms.ecm.repository.fedoraclient.FedoraClientConnector" override="false"/>

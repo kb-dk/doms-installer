@@ -8,5 +8,4 @@ FEDORAADMIN=fedoraAdmin
 FEDORAADMINPASS=fedoraAdminPass
 
 BITFINDER=http://bitfinder.statsbiblioteket.dk/
-BITSTORAGE_SERVER=domstest@halley
-BITSTORAGE_SCRIPT=bin/server.sh
+BITSTORAGE_SCRIPT="ssh domstest@halley bin/server.sh"

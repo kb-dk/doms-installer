@@ -19,7 +19,7 @@ set -eu    # see http://ss64.com/bash/set.html
 # for to define the SourceForge packages to check-out.
 #
 SOURCEFORGE_DOMS_SVN_URL="https://doms.svn.sourceforge.net/svnroot/doms"
-PACKAGES=( "bitstorage/trunk" "ecm/trunk" "surveillance/trunk")
+PACKAGES=( "bitstorage/trunk" "ecm/trunk" "surveillance/trunk" "pidgenerator/trunk")
 
 BASEDIR=$1
 
