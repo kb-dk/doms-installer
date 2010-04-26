@@ -2,7 +2,7 @@
 #Wed Sep 09 13:21:09 CEST 2009
 ri.enabled=true
 messaging.enabled=true
-apia.auth.required=true
+apia.auth.required=false
 database.jdbcDriverClass=org.apache.derby.jdbc.EmbeddedDriver
 jboss=false
 ssl.available=false
