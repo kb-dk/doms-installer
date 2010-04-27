@@ -41,6 +41,14 @@
             <patternset includes="surveillance-*/jars/*.jar"/>
             <flattenmapper/>
         </unzip>
+        <!--TODO This is temporary, until buildframework generates reasonable package-->
+        <copy todir="${modules.checkoutdir}/logappender">
+            <fileset dir="${modules.checkoutdir}/surveillance/lib">
+                <include name="*log*/jars/*.jar"/>
+                <include name="*util*/jars/*.jar"/>
+            </fileset>
+            <flattenmapper/>
+        </copy>
         <zip destfile="dist/${release}.zip">
             <zipfileset prefix="${release}" dir="${basedir}">
                 <include name="config/**"/>
