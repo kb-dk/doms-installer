@@ -228,8 +228,8 @@ cp $BASEDIR/webservices/*.war $TESTBED_DIR/tomcat/webapps
 # TODO: Start tomcat
 #
 # Start the tomcat server
- $TESTBED_DIR/tomcat/bin/startup.sh
- sleep 30
+$TESTBED_DIR/tomcat/bin/startup.sh
+sleep 30
 
 #
 # TODO: provide initial objects to ingest
@@ -237,9 +237,9 @@ cp $BASEDIR/webservices/*.war $TESTBED_DIR/tomcat/webapps
 # put in a dir by name "data/objects" in the domsserver trunk..
 #
 sh $TESTBED_DIR/fedora/client/bin/fedora-ingest.sh dir \
- $BASEDIR/data/objects \
- 'info:fedora/fedora-system:FOXML-1.1' \
- localhost:$TOMCAT_HTTPPORT $FEDORAADMIN $FEDORAADMINPASS http
+$BASEDIR/data/objects \
+'info:fedora/fedora-system:FOXML-1.1' \
+localhost:$TOMCAT_HTTPPORT $FEDORAADMIN $FEDORAADMINPASS http
 
 
 #
