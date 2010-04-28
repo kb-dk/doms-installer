@@ -146,8 +146,7 @@ mv log4j.xml $TESTBED_DIR/tomcat/conf/
 popd > /dev/null
 
 #
-# Insert log4j appender in lib
-# TODO: This is currently test
+# Insert logappender in lib
 #
 cp $BASEDIR/logappender/*.jar $TESTBED_DIR/tomcat/lib
 
@@ -168,15 +167,18 @@ rm $BASEDIR/data/templates/fedora.properties
 popd > /dev/null
 
 #
-# Bundle logappender
-# TODO: Not pretty forcing stuff into fedora.war
+# Remove log4j from fedora WAR file
+# TODO: Not pretty forcing stuff out of fedora.war
 #
 pushd $TESTBED_DIR/fedora/install > /dev/null
-mkdir -p WEB-INF/lib
-cp $BASEDIR/logappender/*.jar WEB-INF/lib
-zip -g fedora.war WEB-INF/lib/*
-rm -r WEB-INF
+zip -d fedora.war WEB-INF/lib/log4j\*.jar  
 popd > /dev/null
+
+# mkdir -p WEB-INF/lib
+# cp $BASEDIR/logappender/*.jar WEB-INF/lib
+# zip -g fedora.war WEB-INF/lib/*
+# rm -r WEB-INF
+
 
 #
 # Install Fedora
@@ -185,10 +187,17 @@ pushd $TESTBED_DIR > /dev/null
 cp fedora/install/fedora.war $TESTBED_DIR/tomcat/webapps
 popd > /dev/null
 
+#
+# Remove Fedora log4j properties, we use our own configuration
+#
+pushd $TESTBED_DIR > /dev/null
+rm fedora/server/config/log4j.properties
+touch fedora/server/config/log4j.properties
 
 #
 # TODO: deploy Fedora validator hook..
 #
+
 
 #
 # TODO: Patch fedora.fcfg with values for identify (and more?)
