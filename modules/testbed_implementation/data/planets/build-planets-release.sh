@@ -106,7 +106,6 @@ ant
 cd $PLANETS_DIR/pserv/PC/droid
 ant
 
-
 #pserv: ant PC/jhove
 cd $PLANETS_DIR/pserv/PC/jhove
 ant

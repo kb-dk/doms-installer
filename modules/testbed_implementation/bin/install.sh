@@ -247,6 +247,23 @@ grep -l -R 4446 * | grep \\.xml |  grep -v \/tmp\/ | grep '/deploy/\|/conf/' \
  sed -i \
  -e 's|4446|'"$PLANETS_4446PORT"'|g' \
   '{}'
+
+#Fix the fragging jackrabbit planets component, with its encoded 1099 port
+cd default/deploy
+mkdir zip
+mv jackrabbit-jcr-rmi.jar zip
+cd zip
+unzip jackrabbit-jcr-rmi.jar
+rm -rf jackrabbit-jcr-rmi.jar
+grep -l -R 1099 * | grep \\.xml \
+| xargs -I '{}' \
+ sed -i \
+ -e 's|1099|'"$PLANETS_1099PORT"'|g' \
+  '{}'
+zip -r jackrabbit-jcr-rmi.jar org/ META-INF/ jackrabbit-rmi-service.xml
+mv jackrabbit-jcr-rmi.jar ..
+cd ..
+rm -rf zip
 popd > /dev/null
 
 
