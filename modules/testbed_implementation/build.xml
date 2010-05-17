@@ -1,5 +1,9 @@
 <project name="testbed" basedir=".">
 
+    <!-- TODO If the directory in modules.checkoutdir does not exist,
+         then running the clean target produces an error. Please let ant-scripts
+         create directory if non-existent. -->
+    
     <property file="build-${user.name}.properties" />
 
     <property file="build.properties"/>
