@@ -19,7 +19,7 @@ set -eu    # see http://ss64.com/bash/set.html
 # for to define the SourceForge packages to check-out.
 #
 SOURCEFORGE_DOMS_SVN_URL="https://doms.svn.sourceforge.net/svnroot/doms"
-PACKAGES=( "bitstorage/trunk" "ecm/trunk" "surveillance/trunk" "pidGenerator/trunk")
+PACKAGES="bitstorage/trunk ecm/trunk surveillance/trunk pidGenerator/trunk"
 
 BASEDIR=$1
 
@@ -28,15 +28,10 @@ pushd $SCRIPT_DIR > /dev/null
 SCRIPT_DIR=$(pwd)
 popd > /dev/null
 
-# Import settings (SOURCEFORGE_DOMS_SVN_URL, PACKAGES)
-source $SCRIPT_DIR/../config/conf.sh
-
 # CHECKOUTDIR=$BASEDIR/checkouts
 CHECKOUTDIR=$BASEDIR
 mkdir -p $CHECKOUTDIR
 cd $CHECKOUTDIR
-
-NUMBER_OF_PACKAGES=${#PACKAGES[*]}
 
 # Each element in the array PACKAGES is expected to be a path with the first
 # path component being the name of the package, followed by a subpath to the
@@ -46,10 +41,7 @@ NUMBER_OF_PACKAGES=${#PACKAGES[*]}
 # (see http://tldp.org/LDP/abs/html/string-manipulation.html)
 # and used as the name of the directory inside the checkouts dir, in which the
 # svn checkout output goes.
-i=0
-while [ $i -lt $NUMBER_OF_PACKAGES ]
+for i in $PACKAGES
 do
-    svn co $SOURCEFORGE_DOMS_SVN_URL/${PACKAGES[i]} $CHECKOUTDIR/${PACKAGES[i]%%/*}
-#    echo $SOURCEFORGE_DOMS_SVN_URL/${PACKAGES[i]} $CHECKOUTDIR/${PACKAGES[i]%%/*}
-    ((i++))
+    svn co $SOURCEFORGE_DOMS_SVN_URL/$i $CHECKOUTDIR/${i%%/*}
 done

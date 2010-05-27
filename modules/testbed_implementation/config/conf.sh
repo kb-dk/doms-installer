@@ -8,7 +8,7 @@ FEDORAADMIN=fedoraAdmin
 FEDORAADMINPASS=fedoraAdminPass
 
 BITFINDER=http://bitfinder.statsbiblioteket.dk/
-BITSTORAGE_SCRIPT="ssh domstest@halley bin/server.sh"
+BITSTORAGE_SCRIPT="ssh doms@stage01 bin/server.sh"
 
 PLANETS_8080PORT=18080
 PLANETS_8443PORT=18443

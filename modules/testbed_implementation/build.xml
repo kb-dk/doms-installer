@@ -53,6 +53,17 @@
             </fileset>
             <flattenmapper/>
         </copy>
+        <unzip dest="${modules.checkoutdir}/fedoralib">
+            <fileset dir="${modules.checkoutdir}" includes="*/dist/ecm-*.zip"/>
+            <patternset includes="ecm-*/jars/fedoravalidatorhook.jar"/>
+            <flattenmapper/>
+        </unzip>
+        <unzip dest="${modules.checkoutdir}/fedoralib">
+            <fileset dir="${modules.checkoutdir}" includes="*/dist/bitstorage-*.zip"/>
+            <patternset includes="bitstorage-*/jars/hookApprove.jar"/>
+            <patternset includes="bitstorage-*/jars/highlevel_interface.jar"/>
+            <flattenmapper/>
+        </unzip>
         <zip destfile="dist/${release}.zip">
             <zipfileset prefix="${release}" dir="${basedir}">
                 <include name="config/**"/>
@@ -66,6 +77,9 @@
                 <include name="*.war"/>
             </zipfileset>
             <zipfileset prefix="${release}/logappender" dir="${modules.checkoutdir}/logappender">
+                <include name="*.jar"/>
+            </zipfileset>
+            <zipfileset prefix="${release}/fedoralib" dir="${modules.checkoutdir}/fedoralib">
                 <include name="*.jar"/>
             </zipfileset>
         </zip>

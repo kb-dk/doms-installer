@@ -175,7 +175,9 @@ zip -d fedora.war WEB-INF/lib/log4j\*.jar
 popd > /dev/null
 
 
-#INSTALL PLANETS
+#
+# Install PLANETS
+#
 cp $BASEDIR/data/planets/planets.tgz $TESTBED_DIR
 pushd $TESTBED_DIR > /dev/null
 tar -xzf planets.tgz
@@ -266,7 +268,15 @@ cd ..
 rm -rf zip
 popd > /dev/null
 
-
+#
+# Deploy Fedora validator hook, and approve file on publish
+# TODO: Not pretty forcing stuff into fedora.war
+#
+pushd $TESTBED_DIR/fedora/install > /dev/null
+mkdir -p WEB-INF/lib
+cp $BASEDIR/fedoralib/* WEB-INF/lib
+zip -r -m -u fedora.war WEB-INF/lib
+popd > /dev/null
 
 #
 # Install Fedora
@@ -283,13 +293,27 @@ rm fedora/server/config/log4j.properties
 touch fedora/server/config/log4j.properties
 
 #
-# TODO: deploy Fedora validator hook..
+# Patch fedora.fcfg with values for hooks and identify
 #
-
-
-#
-# TODO: Patch fedora.fcfg with values for identify (and more?)
-#
+pushd $BASEDIR/data/templates > /dev/null
+sed \
+-e 's|\$FEDORAHOME\$|'"$TESTBED_DIR/fedora"'|g' \
+-e 's|\$TOMCAT_HTTPPORT\$|'"$TOMCAT_HTTPPORT"'|g' \
+-e 's|\$TOMCAT_SHUTDOWNPORT\$|'"$TOMCAT_SHUTDOWNPORT"'|g' \
+-e 's|\$TOMCAT_SSLPORT\$|'"$TOMCAT_SSLPORT"'|g' \
+-e 's|\$TOMCAT_AJPPORT\$|'"$TOMCAT_AJPPORT"'|g' \
+-e 's|\$TOMCAT_SERVERNAME\$|'"$TOMCAT_SERVERNAME"'|g' \
+-e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
+-e 's|\$FEDORAADMINPASS\$|'"$FEDORAADMINPASS"'|g' \
+-e 's|\$BITFINDER\$|'"$BITFINDER"'|g' \
+-e 's|\$BITSTORAGE_SCRIPT\$|'"$BITSTORAGE_SCRIPT"'|g' \
+-e 's|\$BITSTORAGE_SERVER\$|'"$BITSTORAGE_SERVER"'|g' \
+<fedora.fcfg.patch.template >$TESTBED_DIR/fedora/server/config/fedora.fcfg.patch
+popd > /dev/null
+pushd $TESTBED_DIR/fedora/server/config > /dev/null
+patch fedora.fcfg < fedora.fcfg.patch
+rm fedora.fcfg.patch 
+popd > /dev/null
 
 #
 # Install into tomcat: webservices
@@ -317,21 +341,18 @@ cp $BASEDIR/webservices/*.war $TESTBED_DIR/tomcat/webapps
 # rm -rf $BASEDIR/temp
 
 #
-# TODO: kill any running tomcats on HTTP port
+# TODO: kill any running tomcats on HTTP port?
 #
 #netstat -tnlp 2>&1|grep $TOMCATHTTP|grep -o [0-9]*/java|cut -d/ -f1| xargs kill >/dev/null 2>&1
 
 #
-# TODO: Start tomcat
-#
 # Start the tomcat server
+#
 $TESTBED_DIR/tomcat/bin/startup.sh
 sleep 30
 
 #
-# TODO: provide initial objects to ingest
-# .. objects should be taken from the old (pre-sourceforge) doms and
-# put in a dir by name "data/objects" in the domsserver trunk..
+# Ingest initial objects
 #
 sh $TESTBED_DIR/fedora/client/bin/fedora-ingest.sh dir \
 $BASEDIR/data/objects \
@@ -340,6 +361,6 @@ localhost:$TOMCAT_HTTPPORT $FEDORAADMIN $FEDORAADMINPASS http
 
 
 #
-# TODO: Stop tomcat
+# TODO: Stop tomcat?
 #
 #$TESTBED_DIR/tomcat/bin/shutdown.sh

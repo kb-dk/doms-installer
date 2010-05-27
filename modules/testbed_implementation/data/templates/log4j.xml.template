@@ -64,7 +64,7 @@
         </layout>
     </appender>
 
-    <appender name="Characterizer"
+    <appender name="Characteriser"
               class="dk.statsbiblioteket.doms.surveillance.log4jappender.LogRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <layout class="org.apache.log4j.PatternLayout">
@@ -72,10 +72,10 @@
         </layout>
     </appender>
 
-    <appender name="CharacterizerFile"
+    <appender name="CharacteriserFile"
               class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="DEBUG"/>
-        <param name="File" value="$TESTBEDHOME$/logs/doms-characterizer.log"/>
+        <param name="File" value="$TESTBEDHOME$/logs/doms-characteriser.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -171,10 +171,10 @@
         <appender-ref ref="HighlevelBitstorageFile"/>
     </logger>
 
-    <logger name="dk.statsbiblioteket.doms.bitstorage.characterizer">
+    <logger name="dk.statsbiblioteket.doms.bitstorage.characteriser">
         <level value="ALL"/>
-        <appender-ref ref="Characterizer"/>
-        <appender-ref ref="CharacterizerFile"/>
+        <appender-ref ref="Characteriser"/>
+        <appender-ref ref="CharacteriserFile"/>
     </logger>
 
     <logger name="dk.statsbiblioteket.doms.surveillance.surveyor">
