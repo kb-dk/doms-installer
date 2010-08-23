@@ -1,21 +1,23 @@
 #Install Options
-#Wed Sep 09 13:21:09 CEST 2009
+#Mon Aug 23 13:55:42 CEST 2010
 ri.enabled=true
 messaging.enabled=true
-apia.auth.required=false
+apia.auth.required=true
 database.jdbcDriverClass=org.apache.derby.jdbc.EmbeddedDriver
-jboss=false
 ssl.available=false
-database.jdbcURL=jdbc\:derby\:$INSTALLDIR$/derby/fedora32;create\=true
+database.jdbcURL=jdbc\:derby\:$INSTALLDIR$/derby/fedora3;create\=true
 messaging.uri=vm\:(broker\:(tcp\://localhost\:61616))
 database.password=$FEDORAADMIN$
 database.username=$FEDORAADMINPASS$
+fesl.authz.enabled=false
 deploy.local.services=false
 xacml.enabled=true
 fedora.serverHost=localhost
 database=included
 database.driver=included
 fedora.serverContext=fedora
+llstore.type=akubra-fs
+fesl.authn.enabled=true
 fedora.home=$INSTALLDIR$
 install.type=custom
 servlet.engine=other

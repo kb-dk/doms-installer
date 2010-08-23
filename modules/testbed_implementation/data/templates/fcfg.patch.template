@@ -1,19 +1,25 @@
---- fedora.fcfg	2010-05-18 10:50:11.838278311 +0200
-+++ fedora.fcfg.new	2010-05-25 10:09:18.069569574 +0200
-@@ -1,10 +1,10 @@
- <?xml version="1.0" encoding="UTF-8"?>
- <server xmlns="http://www.fedora.info/definitions/1/0/config/" class="fedora.server.BasicServer">
--  <param name="repositoryName" value="Fedora Repository">
-+  <param name="repositoryName" value="DOMS Fedora Repository">
-     <comment>Defines a human readable name for the Fedora server; default is 
- 		Fedora Repository.</comment>
-   </param>
--  <param name="adminEmailList" value="bob@example.org sally@example.org">
-+  <param name="adminEmailList" value="doms@statsbiblioteket.dk">
+--- fedora.fcfg.orig	2010-08-23 13:55:43.410954000 +0200
++++ fedora.fcfg	2010-08-23 14:15:25.599959541 +0200
+@@ -8,15 +8,15 @@
      <comment>Defines one or more email addresses for server administrators; 
  		list is space delimited.</comment>
    </param>
-@@ -114,7 +114,7 @@
+-  <param name="fedoraServerPort" value="8080">
++  <param name="fedoraServerPort" value="$TOMCATHTTP$">
+     <comment>Defines the port number on which the Fedora server runs; 
+ 		default is 8080.</comment>
+   </param>
+-  <param name="fedoraShutdownPort" value="8005">
++  <param name="fedoraShutdownPort" value="$TOMCATSHUTDOWN$">
+     <comment>Defines the port number used to shutdown the Fedora sever; 
+ 		default is 8005.</comment>
+   </param>
+-  <param name="fedoraRedirectPort" value="8443">
++  <param name="fedoraRedirectPort" value="$TOMCATSSL$">
+     <comment>Defines the redirect port of the Fedora sever; default is 8443.</comment>
+   </param>
+   <param name="fedoraServerHost" value="localhost">
+@@ -156,7 +156,7 @@
      	context-appropriate DOReaders and DOWriters for reflecting on and 
      	writing to the objects stored in the repository. It also provides 
      	methods for reflecting on the contents of the repository as a whole..</comment>
@@ -22,7 +28,7 @@
        <comment>This is the namespace id for pids of newly-created objects. 
  	    	This should be unique for a repository. It can be from 1 to 17 
  	    	characters, and may only contain A-Z, a-z, 0-9, &apos;.&apos;, or &apos;-&apos; (dash).</comment>
-@@ -178,6 +178,33 @@
+@@ -229,6 +229,33 @@
              This specifies the minimum amount of time that each uploaded
              file should be kept in temporary storage.</comment>
      </param>
@@ -54,11 +60,11 @@
 +        <comment>Specifies the username</comment>
 +    </param>
    </module>
-   <module role="fedora.server.access.Access" class="fedora.server.access.DefaultAccess">
+   <module role="org.fcrepo.server.access.Access" class="org.fcrepo.server.access.DefaultAccess">
      <comment>Description: The access subsystem. This implements the methods 
-@@ -333,10 +360,9 @@
+@@ -384,10 +411,9 @@
    </module>
-   <module role="fedora.oai.OAIProvider" class="fedora.server.oai.FedoraOAIProviderModule">
+   <module role="org.fcrepo.oai.OAIProvider" class="org.fcrepo.server.oai.FedoraOAIProviderModule">
      <comment>Description: Exposes the repository for OAI harvesters.</comment>
 -    <param name="repositoryName" value="Your Fedora Repository Name Here"/>
 -    <param name="repositoryDomainName" value="example.org"/>
