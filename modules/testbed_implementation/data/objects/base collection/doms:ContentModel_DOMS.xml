@@ -21,12 +21,15 @@
 
     <foxml:datastream CONTROL_GROUP="X" ID="DS-COMPOSITE-MODEL" STATE="A" VERSIONABLE="true">
         <foxml:datastreamVersion  ID="DS-COMPOSITE-MODEL.0" LABEL="DS Composite Model"
-                                  MIMETYPE="text/xml" >
+                                  MIMETYPE="text/xml"
+                                  FORMAT_URI="info:fedora/fedora-system:FedoraDSCompositeModel-1.0">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
             <foxml:xmlContent>
                 <dsCompositeModel
                         xmlns="info:fedora/fedora-system:def/dsCompositeModel#">
-                    <dsTypeModel ID="RELS-EXT"/>
+                    <dsTypeModel ID="RELS-EXT">
+                        <form FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" MIME="application/rdf+xml"/>
+                    </dsTypeModel>
                 </dsCompositeModel>
             </foxml:xmlContent>
         </foxml:datastreamVersion>
@@ -35,7 +38,8 @@
 
     <foxml:datastream CONTROL_GROUP="X" ID="DC" STATE="A" VERSIONABLE="true">
         <foxml:datastreamVersion  ID="DC1.0" LABEL="Dublin Core Metadata"
-                                  MIMETYPE="text/xml" >
+                                  MIMETYPE="text/xml"
+                FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
             <foxml:xmlContent>
                 <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -52,6 +56,7 @@
 
     <foxml:datastream CONTROL_GROUP="X" ID="RELS-EXT" STATE="A" VERSIONABLE="false">
         <foxml:datastreamVersion  ID="RELS-EXT.1" LABEL="Relationships"
+                                  FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                                   MIMETYPE="application/rdf+xml" >
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
             <foxml:xmlContent>
@@ -63,6 +68,7 @@
                         <hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"
                                   xmlns="info:fedora/fedora-system:def/model#"/>
                         <doms:isPartOfCollection rdf:resource="info:fedora/doms:DOMS_Base_Collection"/>
+                        <doms:hasLicense rdf:resource="info:fedora/doms:Open_License" />
                     </rdf:Description>
                 </rdf:RDF>
             </foxml:xmlContent>
@@ -85,7 +91,8 @@
         <foxml:datastreamVersion
                 ID="ONTOLOGY.0"
                 LABEL="Local ontology"
-                MIMETYPE="text/xml">
+                FORMAT_URI="info:fedora/fedora-system:FedoraOntology-1.0"
+                MIMETYPE="application/rdf+xml">
             <foxml:xmlContent>
 
                 <rdf:RDF
@@ -131,7 +138,7 @@
                             </owl:Restriction>
                         </rdfs:subClassOf>
 
-                         <rdfs:subClassOf>
+                        <rdfs:subClassOf>
                             <owl:Restriction>
                                 <owl:onProperty
                                         rdf:resource="http://doms.statsbiblioteket.dk/relations/default/0/1/#isTemplateFor"/>
@@ -153,5 +160,19 @@
         </foxml:datastreamVersion>
     </foxml:datastream>
 
+    <foxml:datastream
+            CONTROL_GROUP="E"
+            ID="POLICY"
+            STATE="A"
+            VERSIONABLE="true">
+        <foxml:datastreamVersion
+                ID="POLICY.0"
+                LABEL="License for this object"
+                FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0"
+                MIMETYPE="application/rdf+xml">
+            <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
+            <foxml:contentLocation REF="http://localhost:8080/fedora/objects/doms:Open_License/LICENSE" TYPE="URL"/>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
 
 </foxml:digitalObject>

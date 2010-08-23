@@ -5,17 +5,17 @@
  		list is space delimited.</comment>
    </param>
 -  <param name="fedoraServerPort" value="8080">
-+  <param name="fedoraServerPort" value="$TOMCATHTTP$">
++  <param name="fedoraServerPort" value="$TOMCAT_HTTPPORT$">
      <comment>Defines the port number on which the Fedora server runs; 
  		default is 8080.</comment>
    </param>
 -  <param name="fedoraShutdownPort" value="8005">
-+  <param name="fedoraShutdownPort" value="$TOMCATSHUTDOWN$">
++  <param name="fedoraShutdownPort" value="$TOMCAT_SHUTDOWNPORT$">
      <comment>Defines the port number used to shutdown the Fedora sever; 
  		default is 8005.</comment>
    </param>
 -  <param name="fedoraRedirectPort" value="8443">
-+  <param name="fedoraRedirectPort" value="$TOMCATSSL$">
++  <param name="fedoraRedirectPort" value="$TOMCAT_SSLPORT$">
      <comment>Defines the redirect port of the Fedora sever; default is 8443.</comment>
    </param>
    <param name="fedoraServerHost" value="localhost">

@@ -2,7 +2,7 @@
 #Mon Aug 23 13:55:42 CEST 2010
 ri.enabled=true
 messaging.enabled=true
-apia.auth.required=true
+apia.auth.required=false
 database.jdbcDriverClass=org.apache.derby.jdbc.EmbeddedDriver
 ssl.available=false
 database.jdbcURL=jdbc\:derby\:$INSTALLDIR$/derby/fedora3;create\=true
