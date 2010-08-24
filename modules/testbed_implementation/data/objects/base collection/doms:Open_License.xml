@@ -58,11 +58,8 @@
         </foxml:datastreamVersion>
     </foxml:datastream>
 
-
-<!--
-
     <foxml:datastream
-            CONTROL_GROUP="E"
+            CONTROL_GROUP="X"
             ID="POLICY"
             STATE="A"
             VERSIONABLE="true">
@@ -71,10 +68,40 @@
                 MIMETYPE="text/xml"
                 LABEL="License for this object">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
-            <foxml:contentLocation REF="http://local.fedora.server/fedora/objects/doms:Open_License/datastreams/LICENSE/content" TYPE="URL"/>
+            <foxml:xmlContent>
+                <Policy xmlns="urn:oasis:names:tc:xacml:1.0:policy"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        PolicyId="Open_License"
+                        RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
+
+                    <Description>This is the default policy, if no other is specified. It allows
+                        for all actions on a object by everybody.
+                    </Description>
+                    <Target>
+                        <!-- *********************************************************************************************************************************************************-->
+                        <!--  This policy is applicable to any Subject. -->
+                        <!-- *********************************************************************************************************************************************************-->
+                        <Subjects>
+                            <AnySubject/>
+                        </Subjects>
+                        <!-- *********************************************************************************************************************************************************-->
+                        <!--  This policy is applicable to any resource -->
+                        <!-- *********************************************************************************************************************************************************-->
+                        <Resources>
+                            <AnyResource/>
+                        </Resources>
+                        <!-- *********************************************************************************************************************************************************-->
+                        <!--  This policy is applicable to any action. -->
+                        <!-- *********************************************************************************************************************************************************-->
+                        <Actions>
+                            <AnyAction/>
+                        </Actions>
+                    </Target>
+                    <Rule RuleId="1" Effect="Permit"/>
+                </Policy>
+            </foxml:xmlContent>
         </foxml:datastreamVersion>
     </foxml:datastream>
--->
 
     <foxml:datastream ID="LICENSE" CONTROL_GROUP="X">
         <foxml:datastreamVersion ID="LICENSE.0" MIMETYPE="text/xml">
