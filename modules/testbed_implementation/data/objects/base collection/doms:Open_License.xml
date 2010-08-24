@@ -65,8 +65,9 @@
             VERSIONABLE="true">
         <foxml:datastreamVersion
                 ID="POLICY.0"
-                MIMETYPE="text/xml"
-                LABEL="License for this object">
+                LABEL="License for this object"
+                MIMETYPE="application/rdf+xml"
+                FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
             <foxml:xmlContent>
                 <Policy xmlns="urn:oasis:names:tc:xacml:1.0:policy"

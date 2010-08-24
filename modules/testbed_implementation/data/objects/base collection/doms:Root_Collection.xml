@@ -21,7 +21,7 @@
     <foxml:datastream CONTROL_GROUP="X" ID="DC" STATE="A" VERSIONABLE="true">
         <foxml:datastreamVersion  ID="DC1.0" LABEL="Dublin Core Metadata"
                                   MIMETYPE="text/xml"
-                FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                                  FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
             <foxml:xmlContent>
                 <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
@@ -60,10 +60,11 @@
         <foxml:datastreamVersion
                 ID="POLICY.0"
                 LABEL="License for this object"
-                MIMETYPE="application/rdf+xml">
+                MIMETYPE="application/rdf+xml"
+                FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
             <foxml:contentLocation REF="http://local.fedora.server/fedora/objects/doms:Open_License/datastreams/LICENSE/content" TYPE="URL"/>
         </foxml:datastreamVersion>
     </foxml:datastream>
-    
+
 </foxml:digitalObject>

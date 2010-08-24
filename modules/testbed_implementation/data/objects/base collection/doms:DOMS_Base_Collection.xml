@@ -66,7 +66,8 @@
         <foxml:datastreamVersion
                 ID="POLICY.0"
                 LABEL="License for this object"
-                MIMETYPE="application/rdf+xml">
+                MIMETYPE="application/rdf+xml"
+                FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
             <foxml:contentLocation REF="http://local.fedora.server/fedora/objects/doms:Open_License/datastreams/LICENSE/content" TYPE="URL"/>
         </foxml:datastreamVersion>
