@@ -1,24 +1,18 @@
---- fedora.fcfg.orig	2010-08-23 13:55:43.410954000 +0200
-+++ fedora.fcfg	2010-08-23 14:15:25.599959541 +0200
-@@ -8,15 +8,15 @@
+--- fedora.fcfg.orig	2010-08-24 13:33:29.664813470 +0200
++++ fedora.fcfg	2010-08-24 13:32:25.171817998 +0200
+@@ -1,10 +1,10 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <server xmlns="http://www.fedora.info/definitions/1/0/config/" class="org.fcrepo.server.BasicServer">
+-  <param name="repositoryName" value="Fedora Repository">
++<param name="repositoryName" value="DOMS Fedora Repository">
+     <comment>Defines a human readable name for the Fedora server; default is 
+ 		Fedora Repository.</comment>
+   </param>
+-  <param name="adminEmailList" value="bob@example.org sally@example.org">
++<param name="adminEmailList" value="doms@statsbiblioteket.dk">
      <comment>Defines one or more email addresses for server administrators; 
  		list is space delimited.</comment>
    </param>
--  <param name="fedoraServerPort" value="8080">
-+  <param name="fedoraServerPort" value="$TOMCAT_HTTPPORT$">
-     <comment>Defines the port number on which the Fedora server runs; 
- 		default is 8080.</comment>
-   </param>
--  <param name="fedoraShutdownPort" value="8005">
-+  <param name="fedoraShutdownPort" value="$TOMCAT_SHUTDOWNPORT$">
-     <comment>Defines the port number used to shutdown the Fedora sever; 
- 		default is 8005.</comment>
-   </param>
--  <param name="fedoraRedirectPort" value="8443">
-+  <param name="fedoraRedirectPort" value="$TOMCAT_SSLPORT$">
-     <comment>Defines the redirect port of the Fedora sever; default is 8443.</comment>
-   </param>
-   <param name="fedoraServerHost" value="localhost">
 @@ -156,7 +156,7 @@
      	context-appropriate DOReaders and DOWriters for reflecting on and 
      	writing to the objects stored in the repository. It also provides 
@@ -28,7 +22,7 @@
        <comment>This is the namespace id for pids of newly-created objects. 
  	    	This should be unique for a repository. It can be from 1 to 17 
  	    	characters, and may only contain A-Z, a-z, 0-9, &apos;.&apos;, or &apos;-&apos; (dash).</comment>
-@@ -229,6 +229,33 @@
+@@ -229,6 +229,24 @@
              This specifies the minimum amount of time that each uploaded
              file should be kept in temporary storage.</comment>
      </param>
@@ -50,19 +44,10 @@
 +        </comment>
 +    </param>
 +    <param name="decorator3" value="dk.statsbiblioteket.doms.ecm.fedoravalidatorhook.FedoraModifyObjectHook"/>
-+    <param name="validator.webservice.location" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/ecm/validate/">
-+       <comment>Specifies the location of the validator webservice invoked by Decorator 4 above.</comment>
-+    </param>
-+    <param name="validator.webservice.fedora.password" value="$FEDORAADMINPASS$">
-+        <comment>Specifies the password for the validator webservice</comment>
-+    </param>
-+    <param name="validator.webservice.fedora.username" value="$FEDORAADMIN$">
-+        <comment>Specifies the username</comment>
-+    </param>
    </module>
    <module role="org.fcrepo.server.access.Access" class="org.fcrepo.server.access.DefaultAccess">
      <comment>Description: The access subsystem. This implements the methods 
-@@ -384,10 +411,9 @@
+@@ -384,10 +402,9 @@
    </module>
    <module role="org.fcrepo.oai.OAIProvider" class="org.fcrepo.server.oai.FedoraOAIProviderModule">
      <comment>Description: Exposes the repository for OAI harvesters.</comment>

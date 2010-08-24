@@ -250,6 +250,13 @@ grep -l -R 4446 * | grep \\.xml |  grep -v \/tmp\/ | grep '/deploy/\|/conf/' \
  -e 's|4446|'"$PLANETS_4446PORT"'|g' \
   '{}'
 
+#grep -l -R INSTALLDIRPLACEHOLDER * | grep \\.xml |  grep -v \/tmp\/ | grep '/deploy/\|/conf/' \
+#| xargs -I '{}' \
+# sed -i \
+# -e 's|INSTALLDIRPLACEHOLDER|'"$TESTBED_DIR/planets"'|g' \
+#  '{}'
+
+
 #Fix the fragging jackrabbit planets component, with its encoded 1099 port
 cd default/deploy
 mkdir zip
@@ -315,40 +322,27 @@ patch fedora.fcfg < fedora.fcfg.patch
 rm fedora.fcfg.patch 
 popd > /dev/null
 
+# Install custom policies
+pushd $BASEDIR/data/policies > /dev/null
+mkdir -p $TESTBED_DIR/fedora/data/fedora-xacml-policies/repository-policies 
+cp * $TESTBED_DIR/fedora/data/fedora-xacml-policies/repository-policies/
+popd > /dev/null
+
 #
 # Install into tomcat: webservices
 #
 cp $BASEDIR/webservices/*.war $TESTBED_DIR/tomcat/webapps
 
-#
-# TODO: What is currently needed to configure ECM?
-#
-# mkdir $BASEDIR/temp
-# pushd $BASEDIR/temp
-# cp ../webservices/ecm.war .
-# unzip ecm.war -d ecm
-# rm ecm.war
-# cd ecm/WEB-INF
-# sed \
-# -e 's|http://localhost:7910/fedora|'"http://localhost:$TOMCATHTTP/fedora"'|g' \
-# <web.xml > web.xml.new
-# rm web.xml
-# mv web.xml.new web.xml
-# cd ..
-# zip ../ecm.war -r .
-# cp ../ecm.war $TESTBED_DIR/tomcat/webapps
-# popd
-# rm -rf $BASEDIR/temp
 
 #
 # TODO: kill any running tomcats on HTTP port?
 #
-#netstat -tnlp 2>&1|grep $TOMCATHTTP|grep -o [0-9]*/java|cut -d/ -f1| xargs kill >/dev/null 2>&1
+netstat -tnlp 2>&1|grep $TOMCATHTTP|grep -o [0-9]*/java|cut -d/ -f1| xargs kill >/dev/null 2>&1
 
 #
 # Start the tomcat server
 #
-$TESTBED_DIR/tomcat/bin/startup.sh
+$TESTBED_DIR/tomcat/bin/catalina.sh jpda start
 sleep 30
 
 #
