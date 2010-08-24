@@ -379,7 +379,7 @@
                 FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                 MIMETYPE="application/rdf+xml">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
-            <foxml:contentLocation REF="http://localhost:8080/fedora/objects/doms:Open_License/LICENSE" TYPE="URL"/>
+            <foxml:contentLocation REF="http://local.fedora.server/fedora/objects/doms:Open_License/datastreams/LICENSE/content" TYPE="URL"/>
         </foxml:datastreamVersion>
     </foxml:datastream>
 

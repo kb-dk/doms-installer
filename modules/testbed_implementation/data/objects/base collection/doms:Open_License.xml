@@ -71,7 +71,7 @@
                 MIMETYPE="text/xml"
                 LABEL="License for this object">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
-            <foxml:contentLocation REF="http://localhost:8080/fedora/objects/doms:Open_License/LICENSE" TYPE="URL"/>
+            <foxml:contentLocation REF="http://local.fedora.server/fedora/objects/doms:Open_License/datastreams/LICENSE/content" TYPE="URL"/>
         </foxml:datastreamVersion>
     </foxml:datastream>
 -->
