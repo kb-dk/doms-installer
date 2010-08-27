@@ -167,15 +167,6 @@ rm $BASEDIR/data/templates/fedora.properties
 popd > /dev/null
 
 #
-# Remove log4j from fedora WAR file
-# TODO: Not pretty forcing stuff out of fedora.war
-#
-pushd $TESTBED_DIR/fedora/install > /dev/null
-zip -d fedora.war WEB-INF/lib/log4j\*.jar  
-popd > /dev/null
-
-
-#
 # Install PLANETS
 #
 cp $BASEDIR/data/planets/planets.tgz $TESTBED_DIR
@@ -293,11 +284,23 @@ cp fedora/install/fedora.war $TESTBED_DIR/tomcat/webapps
 popd > /dev/null
 
 #
-# Remove Fedora log4j properties, we use our own configuration
+# Add logappender to Fedora logback configuration
 #
-pushd $TESTBED_DIR > /dev/null
-rm fedora/server/config/log4j.properties
-touch fedora/server/config/log4j.properties
+pushd $BASEDIR/data/templates > /dev/null
+sed \
+-e 's|\$FEDORAHOME\$|'"$TESTBED_DIR/fedora"'|g' \
+-e 's|\$TOMCAT_HTTPPORT\$|'"$TOMCAT_HTTPPORT"'|g' \
+-e 's|\$TOMCAT_SHUTDOWNPORT\$|'"$TOMCAT_SHUTDOWNPORT"'|g' \
+-e 's|\$TOMCAT_SSLPORT\$|'"$TOMCAT_SSLPORT"'|g' \
+-e 's|\$TOMCAT_AJPPORT\$|'"$TOMCAT_AJPPORT"'|g' \
+-e 's|\$TOMCAT_SERVERNAME\$|'"$TOMCAT_SERVERNAME"'|g' \
+-e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
+-e 's|\$FEDORAADMINPASS\$|'"$FEDORAADMINPASS"'|g' \
+-e 's|\$BITFINDER\$|'"$BITFINDER"'|g' \
+-e 's|\$BITSTORAGE_SCRIPT\$|'"$BITSTORAGE_SCRIPT"'|g' \
+-e 's|\$BITSTORAGE_SERVER\$|'"$BITSTORAGE_SERVER"'|g' \
+<logback.xml.template >$TESTBED_DIR/fedora/server/config/logback.xml
+popd > /dev/null
 
 #
 # Patch fedora.fcfg with values for hooks and identify
@@ -337,12 +340,12 @@ cp $BASEDIR/webservices/*.war $TESTBED_DIR/tomcat/webapps
 #
 # TODO: kill any running tomcats on HTTP port?
 #
-netstat -tnlp 2>&1|grep $TOMCATHTTP|grep -o [0-9]*/java|cut -d/ -f1| xargs kill >/dev/null 2>&1
+# netstat -tnlp 2>&1|grep $TOMCATHTTP|grep -o [0-9]*/java|cut -d/ -f1| xargs kill >/dev/null 2>&1
 
 #
 # Start the tomcat server
 #
-$TESTBED_DIR/tomcat/bin/catalina.sh jpda start
+$TESTBED_DIR/tomcat/bin/startup.sh
 sleep 30
 
 #
