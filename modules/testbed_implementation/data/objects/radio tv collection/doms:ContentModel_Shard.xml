@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<foxml:digitalObject
+        VERSION="1.1"
+        PID="doms:ContentModel_Shard"
+        xmlns:foxml="info:fedora/fedora-system:def/foxml#"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation=
+                "info:fedora/fedora-system:def/foxml#
+                http://www.fedora.info/definitions/1/0/foxml1-1.xsd">
+
+
+    <foxml:objectProperties>
+        <foxml:property
+                NAME="info:fedora/fedora-system:def/model#state"
+                VALUE="A"/>
+        <foxml:property
+                NAME="info:fedora/fedora-system:def/model#label"
+                VALUE="Content Model Shard"/>
+    </foxml:objectProperties>
+
+    <foxml:datastream ID="DC" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+        <foxml:datastreamVersion ID="DC.0" MIMETYPE="text/xml" LABEL="Default Dublin Core Record"
+                                 FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/">
+
+            <foxml:xmlContent>
+                <oai_dc:dc
+                        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/">
+                    <dc:title>Shard</dc:title>
+                    <dc:description>Content Model Shard</dc:description>
+                    <dc:identifier>doms:ContentModel_Shard</dc:identifier>
+                </oai_dc:dc>
+            </foxml:xmlContent>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+
+    <foxml:datastream CONTROL_GROUP="X" ID="RELS-EXT" STATE="A" VERSIONABLE="false">
+        <foxml:datastreamVersion  ID="RELS-EXT.1" LABEL="Relationships"
+                                  FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0"
+                                  MIMETYPE="application/rdf+xml" >
+            <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
+            <foxml:xmlContent>
+                <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                         xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
+                         xmlns:ecm="http://ecm.sourceforge.net/relations/0/2/#"
+                         xmlns:fedora="info:fedora/fedora-system:def/model#">
+                    <rdf:Description rdf:about="info:fedora/doms:ContentModel_Shard">
+                        <fedora:hasModel rdf:resource="info:fedora/fedora-system:ContentModel-3.0"/>
+                        <fedora:hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"/>
+                        <ecm:extendsModel rdf:resource="info:fedora/doms:ContentModel_File" />
+                        <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
+                        <doms:hasLicense rdf:resource="info:fedora/doms:Open_License" />
+                    </rdf:Description>
+                </rdf:RDF>
+            </foxml:xmlContent>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+
+    <foxml:datastream CONTROL_GROUP="X" ID="VIEW" STATE="A" VERSIONABLE="true">
+        <foxml:datastreamVersion ID="VIEW1.0" LABEL="VIEW datastream" MIMETYPE="text/xml">
+            <foxml:xmlContent>
+                <v:views xmlns:v="http://ecm.sourceforge.net/types/view/0/2/#">
+                </v:views>
+            </foxml:xmlContent>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+
+    <foxml:datastream CONTROL_GROUP="X" ID="DS-COMPOSITE-MODEL" STATE="A" VERSIONABLE="true">
+        <foxml:datastreamVersion  ID="DS-COMPOSITE-MODEL.0" LABEL="DS Composite Model"
+                                  MIMETYPE="text/xml"
+                                  FORMAT_URI="info:fedora/fedora-system:FedoraDSCompositeModel-1.0">
+            <foxml:xmlContent>
+                <dsCompositeModel
+                        xmlns="info:fedora/fedora-system:def/dsCompositeModel#"
+                        xmlns:schema="http://doms.statsbiblioteket.dk/types/dscompositeschema/0/1/#">
+                    <dsTypeModel ID="SHARD_METADATA">
+                        <form MIME="text/xml"/>
+                        <extension name="SCHEMA">
+                            <reference type="datastream" value="SHARD_METADATA_SCHEMA"/>
+                        </extension>
+                    </dsTypeModel>
+                </dsCompositeModel>
+            </foxml:xmlContent>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+
+    <foxml:datastream CONTROL_GROUP="X" ID="ONTOLOGY" STATE="A" VERSIONABLE="true">
+        <foxml:datastreamVersion
+                ID="ONTOLOGY.0"
+                LABEL="Local ontology"
+                FORMAT_URI="info:fedora/fedora-system:FedoraOntology-1.0"
+                MIMETYPE="application/rdf+xml">
+            <foxml:xmlContent>
+
+                <rdf:RDF
+                        xmlns:owl="http://www.w3.org/2002/07/owl#"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+                    <owl:Class rdf:about="info:fedora/doms:ContentModel_Shard#class">
+                        <rdfs:subClassOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://doms.statsbiblioteket.dk/relations/default/0/1/#consistsOf"/>
+                                <owl:allValuesFrom rdf:resource="info:fedora/doms:ContentModel_RadioTVFile#class"/>
+                            </owl:Restriction>
+                        </rdfs:subClassOf>
+                        <rdfs:subClassOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://doms.statsbiblioteket.dk/relations/default/0/1/#consistsOf"/>
+                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:minCardinality>
+                            </owl:Restriction>
+                        </rdfs:subClassOf>
+                    </owl:Class>
+
+                    <owl:ObjectProperty rdf:about="http://doms.statsbiblioteket.dk/relations/default/0/1/#consistsOf"/>
+                </rdf:RDF>
+            </foxml:xmlContent>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+
+    <foxml:datastream CONTROL_GROUP="X" ID="SHARD_METADATA_SCHEMA" STATE="A" VERSIONABLE="true">
+        <foxml:datastreamVersion
+                ID="SHARD_METADATA_SCHEMA.0"
+                MIMETYPE="text/xml"
+                LABEL="Shard metadata schema">
+            <foxml:xmlContent>
+                <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                            targetNamespace="http://doms.statsbiblioteket.dk/types/characterisation/0/2/#"
+                            xmlns="http://doms.statsbiblioteket.dk/types/characterisation/0/2/#"
+                            elementFormDefault="qualified"
+                            attributeFormDefault="unqualified">
+                    <xsd:any minOccurs="0" maxOccurs="unbounded" processContents="skip" namespace="##any"/>
+                </xsd:schema>
+            </foxml:xmlContent>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+
+    <foxml:datastream CONTROL_GROUP="E" ID="POLICY" STATE="A" VERSIONABLE="true">
+        <foxml:datastreamVersion
+                ID="POLICY.0"
+                LABEL="License for this object"
+                MIMETYPE="application/rdf+xml"
+                FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0">
+            <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
+            <foxml:contentLocation REF="http://local.fedora.server/fedora/objects/doms:Open_License/datastreams/LICENSE/content" TYPE="URL"/>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+
+</foxml:digitalObject>
