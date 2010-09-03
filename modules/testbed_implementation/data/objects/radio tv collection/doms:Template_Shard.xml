@@ -53,6 +53,16 @@
         </foxml:datastreamVersion>
     </foxml:datastream>
 
+    <foxml:datastream CONTROL_GROUP="X" ID="SHARD_METADATA" STATE="A" VERSIONABLE="true">
+        <foxml:datastreamVersion
+                ID="SHARD_METADATA.0"
+                MIMETYPE="text/xml"
+                LABEL="Shard metadata">
+            <foxml:xmlContent>
+            </foxml:xmlContent>
+        </foxml:datastreamVersion>
+    </foxml:datastream>
+
     <foxml:datastream
             CONTROL_GROUP="E"
             ID="POLICY"
