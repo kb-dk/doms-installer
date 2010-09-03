@@ -188,6 +188,7 @@
                 MIMETYPE="text/xml"
                 LABEL="Ritzau original">
             <foxml:xmlContent>
+                INSERT_RITZAU_ORIGINAL_DUMP
             </foxml:xmlContent>
         </foxml:datastreamVersion>
     </foxml:datastream>
@@ -198,6 +199,7 @@
                 MIMETYPE="text/xml"
                 LABEL="Gallup original">
             <foxml:xmlContent>
+                INSERT_RITZAU_ORIGINAL_DUMP
             </foxml:xmlContent>
         </foxml:datastreamVersion>
     </foxml:datastream>

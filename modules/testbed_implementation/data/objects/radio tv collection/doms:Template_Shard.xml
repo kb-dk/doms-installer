@@ -59,6 +59,7 @@
                 MIMETYPE="text/xml"
                 LABEL="Shard metadata">
             <foxml:xmlContent>
+                INSERT_SHARD_METADATA
             </foxml:xmlContent>
         </foxml:datastreamVersion>
     </foxml:datastream>
