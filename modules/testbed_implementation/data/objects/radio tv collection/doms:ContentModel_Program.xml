@@ -1106,8 +1106,8 @@
             <foxml:xmlContent>
                 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                            targetNamespace="http://doms.statsbiblioteket.dk/types/characterisation/0/2/#"
-                            xmlns="http://doms.statsbiblioteket.dk/types/characterisation/0/2/#"
+                            targetNamespace="http://doms.statsbiblioteket.dk/types/ritzau_original/0/1/#"
+                            xmlns="http://doms.statsbiblioteket.dk/types/ritzau_original/0/1/#"
                             elementFormDefault="qualified"
                             attributeFormDefault="unqualified">
                     <xsd:element name="ritzau_original" type="xsd:string"/>
@@ -1124,8 +1124,8 @@
             <foxml:xmlContent>
                 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                            targetNamespace="http://doms.statsbiblioteket.dk/types/characterisation/0/2/#"
-                            xmlns="http://doms.statsbiblioteket.dk/types/characterisation/0/2/#"
+                            targetNamespace="http://doms.statsbiblioteket.dk/types/gallup_original/0/1/#"
+                            xmlns="http://doms.statsbiblioteket.dk/types/gallup_original/0/1/#"
                             elementFormDefault="qualified"
                             attributeFormDefault="unqualified">
                     <xsd:element name="gallup_original" type="xsd:string"/>

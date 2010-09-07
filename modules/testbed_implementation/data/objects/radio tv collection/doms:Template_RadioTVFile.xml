@@ -21,7 +21,7 @@
     <foxml:datastream CONTROL_GROUP="X" ID="DC" STATE="A" VERSIONABLE="true">
         <foxml:datastreamVersion  ID="DC1.0" LABEL="Dublin Core Metadata"
                                   MIMETYPE="text/xml"
-                FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                                  FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
             <foxml:xmlContent>
                 <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
@@ -40,6 +40,7 @@
             <foxml:xmlContent>
                 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                          xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
+                         xmlns:ecm="http://ecm.sourceforge.net/relations/0/2/#"
                         >
                     <rdf:Description rdf:about="info:fedora/doms:Template_RadioTVFile">
                         <hasModel rdf:resource="info:fedora/doms:ContentModel_RadioTVFile" xmlns="info:fedora/fedora-system:def/model#"/>
@@ -47,6 +48,7 @@
                         <hasModel rdf:resource="info:fedora/doms:ContentModel_File" xmlns="info:fedora/fedora-system:def/model#"/>
                         <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
                         <doms:hasLicense rdf:resource="info:fedora/doms:RadioTV_License" />
+                        <ecm:isTemplateFor rdf:resource="info:fedora/doms:ContentModel_Program"/>
                     </rdf:Description>
                 </rdf:RDF>
             </foxml:xmlContent>
