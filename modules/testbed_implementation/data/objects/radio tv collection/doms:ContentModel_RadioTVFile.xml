@@ -24,7 +24,11 @@
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
             <foxml:xmlContent>
                 <dsCompositeModel
-                        xmlns="info:fedora/fedora-system:def/dsCompositeModel#"/>
+                        xmlns="info:fedora/fedora-system:def/dsCompositeModel#">
+                    <dsTypeModel ID="CONTENTS">
+                        <form FORMAT_URI="info:pronom/x-fmt/386"/>
+                    </dsTypeModel>
+                </dsCompositeModel>
             </foxml:xmlContent>
         </foxml:datastreamVersion>
     </foxml:datastream>
@@ -33,7 +37,7 @@
         <foxml:datastreamVersion  ID="DC1.0"
                                   LABEL="Dublin Core Metadata"
                                   MIMETYPE="text/xml"
-                FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                                  FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
             <foxml:xmlContent>
                 <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/"

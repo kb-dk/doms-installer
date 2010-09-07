@@ -80,8 +80,8 @@
                             <reference type="datastream" value="CHARACTERISATION_SCHEMA"/>
                         </extension>
                     </dsTypeModel>
-                    <dsTypeModel ID="CONTENT">
-                        <form MIME="applicatin/octet-stream"/>
+                    <dsTypeModel ID="CONTENTS">
+                        <form MIME="application/octet-stream"/>
                     </dsTypeModel>
                 </dsCompositeModel>
             </foxml:xmlContent>

@@ -12,7 +12,7 @@
     <foxml:objectProperties>
         <foxml:property
                 NAME="info:fedora/fedora-system:def/model#state"
-                VALUE="Active"/>
+                VALUE="Inactive"/>
         <foxml:property
                 NAME="info:fedora/fedora-system:def/model#label"
                 VALUE="Template Shard"/>

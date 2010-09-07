@@ -63,7 +63,7 @@
             <foxml:xmlContent>
                 <dsCompositeModel
                         xmlns="info:fedora/fedora-system:def/dsCompositeModel#">
-                    <dsTypeModel ID="CONTENT">
+                    <dsTypeModel ID="CONTENTS">
                         <form FORMAT_URI="info:pronom/fmt/10"/>
                     </dsTypeModel>
                 </dsCompositeModel>

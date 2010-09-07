@@ -64,7 +64,7 @@
                 <dsCompositeModel
                         xmlns="info:fedora/fedora-system:def/dsCompositeModel#"
                         xmlns:schema="http://doms.statsbiblioteket.dk/types/dscompositeschema/0/1/#">
-                    <dsTypeModel ID="CONTENT">
+                    <dsTypeModel ID="CONTENTS">
                         <form FORMAT_URI="info:pronom/fmt/96"/>
                         <form FORMAT_URI="info:pronom/x-fmt/16"/>
                     </dsTypeModel>
