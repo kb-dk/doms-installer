@@ -40,10 +40,17 @@
 
     <Rule RuleId="denyChange" Effect="Deny">
         <Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
-            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-is-in">
-                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">I</AttributeValue>
-                <ResourceAttributeDesignator AttributeId="urn:fedora:names:fedora:2.1:resource:object:newState"
-                                             DataType="http://www.w3.org/2001/XMLSchema#string"/>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-is-in">
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">I</AttributeValue>
+                    <ResourceAttributeDesignator AttributeId="urn:fedora:names:fedora:2.1:resource:object:newState"
+                                                 DataType="http://www.w3.org/2001/XMLSchema#string"/>
+                </Apply>
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-is-in">
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">A</AttributeValue>
+                    <ResourceAttributeDesignator AttributeId="urn:fedora:names:fedora:2.1:resource:object:newState"
+                                                 DataType="http://www.w3.org/2001/XMLSchema#string"/>
+                </Apply>
             </Apply>
         </Condition>
     </Rule>
