@@ -50,6 +50,7 @@
             <fileset dir="${modules.checkoutdir}/surveillance/lib">
                 <include name="*log*/jars/*.jar"/>
                 <include name="*util*/jars/*.jar"/>
+                <include name="*slf4j*/jars/*.jar"/>
             </fileset>
             <flattenmapper/>
         </copy>

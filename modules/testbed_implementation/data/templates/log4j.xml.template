@@ -31,7 +31,7 @@
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
                      debug="false">
     <appender name="LowlevelBitstorage"
-              class="dk.statsbiblioteket.doms.surveillance.log4jappender.LogRegistryAppender">
+              class="dk.statsbiblioteket.doms.surveillance.logappender.LogRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
@@ -48,7 +48,7 @@
     </appender>
 
     <appender name="HighlevelBitstorage"
-              class="dk.statsbiblioteket.doms.surveillance.log4jappender.LogRegistryAppender">
+              class="dk.statsbiblioteket.doms.surveillance.logappender.LogRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
@@ -65,7 +65,7 @@
     </appender>
 
     <appender name="Characteriser"
-              class="dk.statsbiblioteket.doms.surveillance.log4jappender.LogRegistryAppender">
+              class="dk.statsbiblioteket.doms.surveillance.logappender.LogRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
@@ -82,7 +82,7 @@
     </appender>
 
     <appender name="Surveyor"
-              class="dk.statsbiblioteket.doms.surveillance.log4jappender.LogRegistryAppender">
+              class="dk.statsbiblioteket.doms.surveillance.logappender.LogRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
@@ -99,7 +99,7 @@
     </appender>
 
     <appender name="Fedora"
-              class="dk.statsbiblioteket.doms.surveillance.log4jappender.LogRegistryAppender">
+              class="dk.statsbiblioteket.doms.surveillance.logappender.LogRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
@@ -125,7 +125,7 @@
     </appender>
 
     <appender name="ECM"
-              class="dk.statsbiblioteket.doms.surveillance.log4jappender.LogRegistryAppender">
+              class="dk.statsbiblioteket.doms.surveillance.logappender.LogRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
