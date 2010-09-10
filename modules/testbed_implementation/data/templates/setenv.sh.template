@@ -1,2 +1,2 @@
 export CATALINA_OPTS="-XX:MaxPermSize=128m -XX:+HeapDumpOnOutOfMemoryError -Dlog4j.configuration=file://$TOMCATHOME$/conf/log4j.xml"
-export FEDORA_HOME=$FEDORAHOM
+export FEDORA_HOME=$FEDORAHOME$
