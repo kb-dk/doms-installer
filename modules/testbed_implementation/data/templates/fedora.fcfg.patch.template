@@ -1,6 +1,6 @@
 --- fedora.fcfg.orig	2010-08-24 13:33:29.664813470 +0200
-+++ fedora.fcfg	2010-09-10 13:32:38.904593426 +0200
-@@ -1,10 +1,10 @@
++++ fedora.fcfg	2010-09-13 16:06:13.611779341 +0200
+@@ -1,25 +1,25 @@
  <?xml version="1.0" encoding="UTF-8"?>
  <server xmlns="http://www.fedora.info/definitions/1/0/config/" class="org.fcrepo.server.BasicServer">
 -  <param name="repositoryName" value="Fedora Repository">
@@ -12,6 +12,25 @@
 +    <param name="adminEmailList" value="doms@statsbiblioteket.dk">
      <comment>Defines one or more email addresses for server administrators; 
  		list is space delimited.</comment>
+   </param>
+-  <param name="fedoraServerPort" value="8080">
++    <param name="fedoraServerPort" value="$TOMCATHTTP$">
+     <comment>Defines the port number on which the Fedora server runs; 
+ 		default is 8080.</comment>
+   </param>
+-  <param name="fedoraShutdownPort" value="8005">
++    <param name="fedoraShutdownPort" value="$TOMCATSHUTDOWN$">
+     <comment>Defines the port number used to shutdown the Fedora sever; 
+ 		default is 8005.</comment>
+   </param>
+-  <param name="fedoraRedirectPort" value="8443">
++    <param name="fedoraRedirectPort" value="$TOMCATSSL$">
+     <comment>Defines the redirect port of the Fedora sever; default is 8443.</comment>
+   </param>
+-  <param name="fedoraServerHost" value="localhost">
++    <param name="fedoraServerHost" value="$TOMCAT_SERVERNAME$">
+     <comment>Defines the host name for the Fedora server, as seen from the 
+ 		outside world.</comment>
    </param>
 @@ -156,7 +156,7 @@
      	context-appropriate DOReaders and DOWriters for reflecting on and 
