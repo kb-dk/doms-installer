@@ -239,6 +239,7 @@ popd > /dev/null
 pushd $BASEDIR/data/policies > /dev/null
 mkdir -p $TESTBED_DIR/fedora/data/fedora-xacml-policies/repository-policies 
 cp * $TESTBED_DIR/fedora/data/fedora-xacml-policies/repository-policies/
+rm $TESTBED_DIR/fedora/data/fedora-xacml-policies/repository-policies/default/deny-apim-if-not-localhost.xml 
 popd > /dev/null
 
 #
