@@ -238,8 +238,7 @@ popd > /dev/null
 # Install custom policies
 pushd $BASEDIR/data/policies > /dev/null
 mkdir -p $TESTBED_DIR/fedora/data/fedora-xacml-policies/repository-policies 
-cp * $TESTBED_DIR/fedora/data/fedora-xacml-policies/repository-policies/
-rm $TESTBED_DIR/fedora/data/fedora-xacml-policies/repository-policies/default/deny-apim-if-not-localhost.xml 
+cp -r * $TESTBED_DIR/fedora/data/fedora-xacml-policies/repository-policies/
 popd > /dev/null
 
 #
