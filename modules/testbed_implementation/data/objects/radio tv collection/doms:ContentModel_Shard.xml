@@ -51,6 +51,7 @@
                         <ecm:extendsModel rdf:resource="info:fedora/doms:ContentModel_File" />
                         <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
                         <doms:hasLicense rdf:resource="info:fedora/doms:Open_License" />
+                        <doms:isControlledByLowLevelBitstorage>false</doms:isControlledByLowLevelBitstorage>
                     </rdf:Description>
                 </rdf:RDF>
             </foxml:xmlContent>
@@ -129,11 +130,18 @@
             <foxml:xmlContent>
                 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                            targetNamespace="http://doms.statsbiblioteket.dk/types/characterisation/0/2/#"
-                            xmlns="http://doms.statsbiblioteket.dk/types/characterisation/0/2/#"
                             elementFormDefault="qualified"
                             attributeFormDefault="unqualified">
-                    <xsd:any minOccurs="0" maxOccurs="unbounded" processContents="skip" namespace="##any"/>
+                    <xsd:element name="shard_metadata">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:any minOccurs="0"
+                                         maxOccurs="unbounded"
+                                         processContents="skip"
+                                         namespace="##any"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
                 </xsd:schema>
             </foxml:xmlContent>
         </foxml:datastreamVersion>
