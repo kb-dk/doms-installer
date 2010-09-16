@@ -80,6 +80,9 @@
                             <reference type="datastream" value="SHARD_METADATA_SCHEMA"/>
                         </extension>
                     </dsTypeModel>
+                    <dsTypeModel ID="CONTENTS">
+                        <form FORMAT_URI="info:pronom/fmt/199"/>
+                    </dsTypeModel>
                 </dsCompositeModel>
             </foxml:xmlContent>
         </foxml:datastreamVersion>
