@@ -162,14 +162,11 @@
                     </pbcorePublisher>
 
                     <pbcoreInstantiation>
-                        <pbcoreFormatID>
-                            <formatIdentifier></formatIdentifier>
-                            <formatIdentifierSource></formatIdentifierSource>
-                        </pbcoreFormatID>
                         <dateCreated>INSERT_PRODUCTION_YEAR</dateCreated>
                         <dateIssued>INSERT_PREMIERE_OR_REPEAT_BROADCAST</dateIssued>
                         <formatLocation></formatLocation>
                         <formatDuration>INSERT_PROGRAM_LENGTH</formatDuration>
+                        <formatAspectRatio>INSERT_SEKSTENNI</formatAspectRatio>
                         <formatColors>INSERT_SH</formatColors>
                         <alternativeModes>INSERT_TEXTED; INSERT_TH; INSERT_TTV
                         </alternativeModes>
@@ -177,6 +174,10 @@
                             <dateAvailableStart>INSERT_START_TIME</dateAvailableStart>
                             <dateAvailableEnd>INSERT_END_TIME</dateAvailableEnd>
                         </pbcoreDateAvailable>
+                        <pbcoreFormatID>
+                            <formatIdentifier></formatIdentifier>
+                            <formatIdentifierSource></formatIdentifierSource>
+                        </pbcoreFormatID>
                         <pbcoreAnnotation>
                             <annotation></annotation>
                         </pbcoreAnnotation>
