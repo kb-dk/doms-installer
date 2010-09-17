@@ -60,7 +60,10 @@
                 MIMETYPE="text/xml"
                 LABEL="PBCore">
             <foxml:xmlContent>
-                <PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
+                <PBCoreDescriptionDocument
+                        xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://www.pbcore.org/PBCore/PBCoreNamespace.html ../../../test/data/pbcore.xsd">
 
                     <pbcoreIdentifier>
                         <identifier>INSERT_PROGRAM_ID</identifier>
@@ -159,21 +162,21 @@
                     </pbcorePublisher>
 
                     <pbcoreInstantiation>
-                        <dateCreated>INSERT_PRODUCTION_YEAR</dateCreated>
-                        <dateIssued>INSERT_PREMIERE_OR_REPEAT_BROADCAST</dateIssued>
-                        <formatLocation></formatLocation>
-                        <formatDuration>INSERT_PROGRAM_LENGTH</formatDuration>
-                        <formatAspectRatio>INSERT_SEKSTENNI</formatAspectRatio>
-                        <formatColors>INSERT_SH</formatColors>
-                        <alternativeModes>INSERT_TEXTED; INSERT_TH; INSERT_TTV</alternativeModes>
-                        <pbcoreDateAvailable>
-                            <dateAvailableStart>INSERT_START_TIME</dateAvailableStart>
-                            <dateAvailableEnd>INSERT_END_TIME</dateAvailableEnd>
-                        </pbcoreDateAvailable>
                         <pbcoreFormatID>
                             <formatIdentifier></formatIdentifier>
                             <formatIdentifierSource></formatIdentifierSource>
                         </pbcoreFormatID>
+                        <dateCreated>INSERT_PRODUCTION_YEAR</dateCreated>
+                        <dateIssued>INSERT_PREMIERE_OR_REPEAT_BROADCAST</dateIssued>
+                        <formatLocation></formatLocation>
+                        <formatDuration>INSERT_PROGRAM_LENGTH</formatDuration>
+                        <formatColors>INSERT_SH</formatColors>
+                        <alternativeModes>INSERT_TEXTED; INSERT_TH; INSERT_TTV
+                        </alternativeModes>
+                        <pbcoreDateAvailable>
+                            <dateAvailableStart>INSERT_START_TIME</dateAvailableStart>
+                            <dateAvailableEnd>INSERT_END_TIME</dateAvailableEnd>
+                        </pbcoreDateAvailable>
                         <pbcoreAnnotation>
                             <annotation></annotation>
                         </pbcoreAnnotation>
