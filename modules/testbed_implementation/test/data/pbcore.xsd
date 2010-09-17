@@ -1,8 +1,9 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
    targetNamespace="http://www.pbcore.org/PBCore/PBCoreNamespace.html"
-   xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html" elementFormDefault="qualified">
+   xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html"
+   elementFormDefault="qualified">
    <xsd:annotation>
-      <xsd:documentation xml:lang="en">"This is the PBCore version 1.2.1 XML schema. All element
+      <xsd:documentation xml:lang="en">"This is the PBCore version 1.1.1.1 XML schema. All element
          descriptions can be found at http://www.pbcore.org"</xsd:documentation>
    </xsd:annotation>
    <!-- optional schema version attribute -->
@@ -222,7 +223,8 @@
             <xsd:element maxOccurs="unbounded" minOccurs="0" name="pbcoreCoverage">
                <xsd:complexType>
                   <xsd:sequence>
-                     <xsd:element maxOccurs="1" minOccurs="0" name="coverage" type="xsd:string">
+                     <xsd:element maxOccurs="1" minOccurs="0" name="coverage"
+                        type="xsd:string">
                         <xsd:annotation>
                            <xsd:documentation xml:lang="en"> "The descriptor coverage uses keywords
                               to identify a span of space or time that is expressed by the
@@ -420,41 +422,8 @@
             <xsd:element maxOccurs="unbounded" minOccurs="1" name="pbcoreInstantiation">
                <xsd:complexType>
                   <xsd:sequence>
-                     <!-- the pbcore format identifier -->
-                     <xsd:element maxOccurs="unbounded" minOccurs="1" name="pbcoreFormatID">
-                        <xsd:complexType>
-                           <xsd:sequence>
-                              <xsd:element maxOccurs="1" minOccurs="1" name="formatIdentifier"
-                                 type="xsd:string">
-                                 <xsd:annotation>
-                                    <xsd:documentation xml:lang="en">"The descriptor
-                                       formatIdentifier employs an unambiguous reference or
-                                       identifier for a particular rendition/instantiation of a
-                                       media item. Best practice is to identify the media item
-                                       (whether analog or digital) by means of a string or number
-                                       corresponding to an established or formal identification
-                                       system if one exists. Otherwise, use an identification method
-                                       that is in use within your agency, station, production
-                                       company, office, or institution."</xsd:documentation>
-                                 </xsd:annotation>
-                              </xsd:element>
-                              <xsd:element maxOccurs="1" minOccurs="1" name="formatIdentifierSource"
-                                 type="pbcore.string.type.base">
-                                 <xsd:annotation>
-                                    <xsd:documentation xml:lang="en">"The descriptor
-                                       formatIdentifierSource is used in combination with the
-                                       unambiguous reference or identifier for a
-                                       rendition/instantiation of a media item as found in the
-                                       descriptor formatIdentifier. Thus PBCore provides not only a
-                                       locator number, but also indicates an agency or institution
-                                       who assigned it."</xsd:documentation>
-                                 </xsd:annotation>
-                              </xsd:element>
-                           </xsd:sequence>
-                        </xsd:complexType>
-                     </xsd:element>
-                     <!-- pbcore date created -->
-                     <xsd:element maxOccurs="1" minOccurs="0" name="dateCreated" type="xsd:string">
+                     <xsd:element maxOccurs="1" minOccurs="0" name="dateCreated"
+                        type="xsd:string">
                         <xsd:annotation>
                            <xsd:documentation xml:lang="en">"Use the descriptor dateCreated to
                               specify the creation date for a particular version or rendition of a
@@ -465,8 +434,8 @@
                               with the date."</xsd:documentation>
                         </xsd:annotation>
                      </xsd:element>
-                     <!-- pbcore date issued -->
-                     <xsd:element maxOccurs="1" minOccurs="0" name="dateIssued" type="xsd:string">
+                     <xsd:element maxOccurs="1" minOccurs="0" name="dateIssued"
+                        type="xsd:string">
                         <xsd:annotation>
                            <xsd:documentation xml:lang="en">"The descriptor dateIssued specifies
                               the formal date for a particular version or rendition of a media item
@@ -540,6 +509,32 @@
                               http://www.utah.edu/cpbmetadata/PBCore/picklists/picklist_formatGenerations.html"</xsd:documentation>
                         </xsd:annotation>
                      </xsd:element>
+                     <!-- the pbcore formatstandard -->
+                     <xsd:element maxOccurs="1" minOccurs="0" name="formatStandard"
+                        type="pbcore.string.type.base">
+                        <xsd:annotation>
+                           <xsd:documentation xml:lang="en">"Use the descriptor formatStandard to
+                              identify a larger technical system/standard or overarching media
+                              architecture under which various media formats exist, e.g., NTSC is a
+                              system/standard under which many video formats exist."</xsd:documentation>
+                           <xsd:documentation xml:lang="en">"Picklist at
+                              http://www.utah.edu/cpbmetadata/PBCore/picklists/picklist_formatStandard.html"</xsd:documentation>
+                        </xsd:annotation>
+                     </xsd:element>
+                     <!--  the pbcore formatencoding -->
+                     <xsd:element maxOccurs="1" minOccurs="0" name="formatEncoding"
+                        type="xsd:string">
+                        <xsd:annotation>
+                           <xsd:documentation xml:lang="en">"The descriptor formatEncoding
+                              identifies how the actual information in a media item is compressed,
+                              interpreted, or formulated using a particular scheme. Identifying the
+                              encoding used is beneficial for a number of reasons, including as a
+                              way to achieve reversible compression; for the construction of
+                              document indices to facilitate searching and access; or for efficient
+                              distribution of the information across data networks with differing
+                              bandwidths or pipeline capacities."</xsd:documentation>
+                        </xsd:annotation>
+                     </xsd:element>
                      <!--  the pbcore formatfilesize -->
                      <xsd:element maxOccurs="1" minOccurs="0" name="formatFileSize"
                         type="xsd:string">
@@ -582,6 +577,70 @@
                               encode a digital file, generally speaking, a larger data rate
                               translates into a better quality playback experience, for example 56
                               kilobits/second vs. 1 megabit/second."</xsd:documentation>
+                        </xsd:annotation>
+                     </xsd:element>
+                     <!-- the pbcore formatbitdepth -->
+                     <xsd:element maxOccurs="1" minOccurs="0" name="formatBitDepth"
+                        type="pbcore.string.type.base">
+                        <xsd:annotation>
+                           <xsd:documentation xml:lang="en">"For a media item (specifically, audio,
+                              video, or image), the descriptor formatBitDepth measures "How Much"
+                              data is sampled when information is digitized, encoded, or converted.
+                              Bit depth is measured in bits and is an indicator of the perceived
+                              viewing or playback quality of a media item (the higher the bit depth,
+                              the greater the fidelity)."</xsd:documentation>
+                           <xsd:documentation xml:lang="en">"Picklist at
+                              http://www.utah.edu/cpbmetadata/PBCore/picklists/picklist_formatBitDepth.html"</xsd:documentation>
+                        </xsd:annotation>
+                     </xsd:element>
+                     <!-- the pbcore formatsamplingrate -->
+                     <xsd:element maxOccurs="1" minOccurs="0" name="formatSamplingRate"
+                        type="pbcore.string.type.base">
+                        <xsd:annotation>
+                           <xsd:documentation xml:lang="en">"For a media item (specifically audio),
+                              the descriptor formatSamplingRate measures "How Often " data is
+                              sampled when information is digitized. For a digital audio signal, the
+                              sampling rate is measured in kiloHertz and is an indicator of the
+                              perceived playback quality of the media item (the higher the sampling
+                              rate, the greater the fidelity)."</xsd:documentation>
+                           <xsd:documentation xml:lang="en">"Picklist at
+                              http://www.utah.edu/cpbmetadata/PBCore/picklists/picklist_formatSampRate.html"</xsd:documentation>
+                        </xsd:annotation>
+                     </xsd:element>
+                     <!-- the pbcore formatframesize -->
+                     <xsd:element maxOccurs="1" minOccurs="0" name="formatFrameSize"
+                        type="pbcore.string.type.base">
+                        <xsd:annotation>
+                           <xsd:documentation xml:lang="en">"The descriptor formatFrameSize
+                              indicates the horizontal and vertical resolution of a format type. It
+                              may be expressed in pixels, pixels per inch, or in the case of ATSC
+                              digital TV, a combination of pixels measured horizontally vs. the
+                              number of pixels of image/resolution data stacked vertically
+                              (interlaced and progressive scan)."</xsd:documentation>
+                           <xsd:documentation xml:lang="en">"Picklist at
+                              http://www.utah.edu/cpbmetadata/PBCore/picklists/picklist_formatFrameSize.html"</xsd:documentation>
+                        </xsd:annotation>
+                     </xsd:element>
+                     <!-- the pbcore formataspectratio -->
+                     <xsd:element maxOccurs="1" minOccurs="0" name="formatAspectRatio"
+                        type="pbcore.string.type.base">
+                        <xsd:annotation>
+                           <xsd:documentation xml:lang="en">"The descriptor formatAspectRatio
+                              indicates the ratio of horizontal to vertical proportions in the
+                              display of an static image or moving image."</xsd:documentation>
+                           <xsd:documentation xml:lang="en">"Picklist at
+                              http://www.utah.edu/cpbmetadata/PBCore/picklists/picklist_FormatAspRatio.html"</xsd:documentation>
+                        </xsd:annotation>
+                     </xsd:element>
+                     <!-- the pbcore formatframerate -->
+                     <xsd:element maxOccurs="1" minOccurs="0" name="formatFrameRate"
+                        type="pbcore.string.type.base">
+                        <xsd:annotation>
+                           <xsd:documentation xml:lang="en">"The descriptor formatFrameRate
+                              indicates the frames per second found in a video, motion sequence,
+                              flash file, or animation's playback or display."</xsd:documentation>
+                           <xsd:documentation xml:lang="en">"Picklist at
+                              http://www.utah.edu/cpbmetadata/PBCore/picklists/picklist_formatFrameRate.html"</xsd:documentation>
                         </xsd:annotation>
                      </xsd:element>
                      <!-- the pbcore formatcolors -->
@@ -647,195 +706,6 @@
                               'Subtitle in French,' 'OpenCaption in Arabic.'"</xsd:documentation>
                         </xsd:annotation>
                      </xsd:element>
-                     <!-- the pbcore essence tracks -->
-                     <xsd:element maxOccurs="unbounded" minOccurs="0" name="pbcoreEssenceTrack">
-                        <xsd:complexType>
-                           <xsd:sequence>
-                              <!-- the pbcore essence tracks -->
-                              <xsd:element maxOccurs="1" minOccurs="0" name="essenceTrackType"
-                                 type="xsd:string">
-                                 <xsd:annotation>
-                                    <xsd:documentation xml:lang="en">""</xsd:documentation>
-                                 </xsd:annotation>
-                              </xsd:element>
-                              <!-- the pbcore essence track identifier -->
-                              <xsd:element maxOccurs="1" minOccurs="0" name="essenceTrackIdentifier"
-                                 type="xsd:string">
-                                 <xsd:annotation>
-                                    <xsd:documentation xml:lang="en">""</xsd:documentation>
-                                 </xsd:annotation>
-                              </xsd:element>
-                              <!-- the pbcore essence track identifier source -->
-                              <xsd:element maxOccurs="1" minOccurs="0"
-                                 name="essenceTrackIdentifierSource" type="xsd:string">
-                                 <xsd:annotation>
-                                    <xsd:documentation xml:lang="en">""</xsd:documentation>
-                                 </xsd:annotation>
-                              </xsd:element>
-                              <!-- the pbcore format standard -->
-                              <xsd:element maxOccurs="1" minOccurs="0" name="essenceTrackStandard"
-                                 type="pbcore.string.type.base">
-                                 <xsd:annotation>
-                                    <xsd:documentation xml:lang="en">"Use the descriptor
-                                       essenceTrackStandard to identify a larger technical
-                                       system/standard or overarching media architecture under which
-                                       various media formats exist, e.g., NTSC is a system/standard
-                                       under which many video formats exist."</xsd:documentation>
-                                    <xsd:documentation xml:lang="en">"Picklist at
-                                       http://www.utah.edu/cpbmetadata/PBCore/picklists/picklist_essenceTrackStandard.html"</xsd:documentation>
-                                 </xsd:annotation>
-                              </xsd:element>
-                              <!--  the pbcore essence track encoding -->
-                              <xsd:element maxOccurs="1" minOccurs="0" name="essenceTrackEncoding"
-                                 type="xsd:string">
-                                 <xsd:annotation>
-                                    <xsd:documentation xml:lang="en">"The descriptor
-                                       essenceEncoding identifies how the actual information in a
-                                       media item is compressed, interpreted, or formulated using a
-                                       particular scheme. Identifying the encoding used is
-                                       beneficial for a number of reasons, including as a way to
-                                       achieve reversible compression; for the construction of
-                                       document indices to facilitate searching and access; or for
-                                       efficient distribution of the information across data
-                                       networks with differing bandwidths or pipeline
-                                    capacities."</xsd:documentation>
-                                 </xsd:annotation>
-                              </xsd:element>
-                              <!--  the pbcore essence track data rate-->
-                              <xsd:element maxOccurs="1" minOccurs="0" name="essenceTrackDataRate"
-                                 type="xsd:string">
-                                 <xsd:annotation>
-                                    <xsd:documentation xml:lang="en">"The descriptor
-                                       essenceTrackDataRate is expresses the amount of data in a
-                                       digital media file that is encoded, delivered or distributed,
-                                       for every second of time. Although optimal data rates are
-                                       often dependent on the codec used to compress and encode a
-                                       digital file, generally speaking, a larger data rate
-                                       translates into a better quality playback experience, for
-                                       example 56 kilobits/second vs. 1
-                                    megabit/second."</xsd:documentation>
-                                 </xsd:annotation>
-                              </xsd:element>
-                              <!--  the pbcore essence time start-->
-                              <xsd:element maxOccurs="1" minOccurs="0" name="essenceTrackTimeStart"
-                                 type="xsd:string">
-                                 <xsd:annotation>
-                                    <xsd:documentation xml:lang="en">"The descriptor
-                                       essenceTrackTimeStart provides a time stamp for the beginning
-                                       point of playback for a time-based media item, such as
-                                       digital video or audio. Use in combination with
-                                       essenceTrackDuration to identify a sequence or segment of a
-                                       media item that has a fixed start time and end
-                                    time."</xsd:documentation>
-                                 </xsd:annotation>
-                              </xsd:element>
-                              <!--  the pbcore essence track duration-->
-                              <xsd:element maxOccurs="1" minOccurs="0" name="essenceTrackDuration"
-                                 type="xsd:string">
-                                 <xsd:annotation>
-                                    <xsd:documentation xml:lang="en">"The descriptor formatDuration
-                                       provides a timestamp for the overall length or duration of a
-                                       time-based media item. It represents the playback
-                                    time."</xsd:documentation>
-                                 </xsd:annotation>
-                              </xsd:element>
-                              <!-- the pbcore essence track bit depth -->
-                              <xsd:element maxOccurs="1" minOccurs="0" name="essenceTrackBitDepth"
-                                 type="pbcore.string.type.base">
-                                 <xsd:annotation>
-                                    <xsd:documentation xml:lang="en">"For a media item
-                                       (specifically, audio, video, or image), the descriptor
-                                       essenceTrackBitDepth measures "How Much" data is sampled when
-                                       information is digitized, encoded, or converted. Bit depth is
-                                       measured in bits and is an indicator of the perceived viewing
-                                       or playback quality of a media item (the higher the bit
-                                       depth, the greater the fidelity)."</xsd:documentation>
-                                    <xsd:documentation xml:lang="en">"Picklist at
-                                       http://www.utah.edu/cpbmetadata/PBCore/picklists/picklist_essenceTrackBitDepth.html"</xsd:documentation>
-                                 </xsd:annotation>
-                              </xsd:element>
-                              <!-- the pbcore essence track sampling rate -->
-                              <xsd:element maxOccurs="1" minOccurs="0"
-                                 name="essenceTrackSamplingRate" type="pbcore.string.type.base">
-                                 <xsd:annotation>
-                                    <xsd:documentation xml:lang="en">"For a media item
-                                       (specifically audio), the descriptor essenceTrackSamplingRate
-                                       measures "How Often " data is sampled when information is
-                                       digitized. For a digital audio signal, the sampling rate is
-                                       measured in kiloHertz and is an indicator of the perceived
-                                       playback quality of the media item (the higher the sampling
-                                       rate, the greater the fidelity)."</xsd:documentation>
-                                    <xsd:documentation xml:lang="en">"Picklist at
-                                       http://www.utah.edu/cpbmetadata/PBCore/picklists/picklist_essenceTrackSamplingRate.html"</xsd:documentation>
-                                 </xsd:annotation>
-                              </xsd:element>
-                              <!-- the pbcore essence track frame size -->
-                              <xsd:element maxOccurs="1" minOccurs="0" name="essenceTrackFrameSize"
-                                 type="pbcore.string.type.base">
-                                 <xsd:annotation>
-                                    <xsd:documentation xml:lang="en">"The descriptor
-                                       essenceTrackFrameSize indicates the horizontal and vertical
-                                       resolution of a format type. It may be expressed in pixels,
-                                       pixels per inch, or in the case of ATSC digital TV, a
-                                       combination of pixels measured horizontally vs. the number of
-                                       pixels of image/resolution data stacked vertically
-                                       (interlaced and progressive scan)."</xsd:documentation>
-                                    <xsd:documentation xml:lang="en">"Picklist at
-                                       http://www.utah.edu/cpbmetadata/PBCore/picklists/picklist_essenceTrackFrameSize.html"</xsd:documentation>
-                                 </xsd:annotation>
-                              </xsd:element>
-                              <!-- the pbcore essence aspect ratio -->
-                              <xsd:element maxOccurs="1" minOccurs="0"
-                                 name="essenceTrackAspectRatio" type="pbcore.string.type.base">
-                                 <xsd:annotation>
-                                    <xsd:documentation xml:lang="en">"The descriptor
-                                       essenceTrackAspectRatio indicates the ratio of horizontal to
-                                       vertical proportions in the display of an static image or
-                                       moving image."</xsd:documentation>
-                                    <xsd:documentation xml:lang="en">"Picklist at
-                                       http://www.utah.edu/cpbmetadata/PBCore/picklists/picklist_essenceTrackAspectRatio.html"</xsd:documentation>
-                                 </xsd:annotation>
-                              </xsd:element>
-                              <!-- the pbcore essense frame rate -->
-                              <xsd:element maxOccurs="1" minOccurs="0" name="essenceTrackFrameRate"
-                                 type="pbcore.string.type.base">
-                                 <xsd:annotation>
-                                    <xsd:documentation xml:lang="en">"The descriptor
-                                       essenceTrackFrameRate indicates the frames per second found
-                                       in a video, motion sequence, flash file, or animation's
-                                       playback or display."</xsd:documentation>
-                                    <xsd:documentation xml:lang="en">"Picklist at
-                                       http://www.utah.edu/cpbmetadata/PBCore/picklists/picklist_essenceTrackFrameRate.html"</xsd:documentation>
-                                 </xsd:annotation>
-                              </xsd:element>
-                              <!-- the pbcore essence track language -->
-                              <xsd:element maxOccurs="1" minOccurs="0" name="essenceTrackLanguage"
-                                 type="pbcore.threeletterstring.type.base">
-                                 <xsd:annotation>
-                                    <xsd:documentation xml:lang="en">"The descriptor
-                                       essenceTrackLanguage identifies the primary language of the
-                                       tracks audio or text. Alternative audio or text tracks and
-                                       their associated languages should be identified using the
-                                       descriptor alternativeModes."</xsd:documentation>
-                                    <xsd:documentation xml:lang="en">"Use reference at
-                                       http://www.utah.edu/cpbmetadata/PBCore/essenceTrackLanguage.html"</xsd:documentation>
-                                 </xsd:annotation>
-                              </xsd:element>
-                              <!-- the pbcore essence track annotation -->
-                              <xsd:element maxOccurs="1" minOccurs="0" name="essenceTrackAnnotation"
-                                 type="xsd:string">
-                                 <xsd:annotation>
-                                    <xsd:documentation xml:lang="en">"The descriptor essenceTrackAnnotation is
-                                       a stand-alone PBCore element where you can catalog any
-                                       supplementary information about a track  or the metadata
-                                       used to describe it. annotation clarifies element values,
-                                       terms, descriptors, and vocabularies that may not be
-                                       otherwise sufficiently understood."</xsd:documentation>
-                                 </xsd:annotation>
-                              </xsd:element>
-                           </xsd:sequence>
-                        </xsd:complexType>
-                     </xsd:element>
                      <!-- the pbcore dateAvailable -->
                      <xsd:element maxOccurs="unbounded" minOccurs="0" name="pbcoreDateAvailable">
                         <xsd:complexType>
@@ -864,6 +734,39 @@
                                        internationally, or for web-based distribution. A specific
                                        time may also be associated with the
                                     date."</xsd:documentation>
+                                 </xsd:annotation>
+                              </xsd:element>
+                           </xsd:sequence>
+                        </xsd:complexType>
+                     </xsd:element>
+                     <!-- the pbcore format identifier -->
+                     <xsd:element maxOccurs="unbounded" minOccurs="1" name="pbcoreFormatID">
+                        <xsd:complexType>
+                           <xsd:sequence>
+                              <xsd:element maxOccurs="1" minOccurs="1" name="formatIdentifier"
+                                 type="xsd:string">
+                                 <xsd:annotation>
+                                    <xsd:documentation xml:lang="en">"The descriptor
+                                       formatIdentifier employs an unambiguous reference or
+                                       identifier for a particular rendition/instantiation of a
+                                       media item. Best practice is to identify the media item
+                                       (whether analog or digital) by means of a string or number
+                                       corresponding to an established or formal identification
+                                       system if one exists. Otherwise, use an identification method
+                                       that is in use within your agency, station, production
+                                       company, office, or institution."</xsd:documentation>
+                                 </xsd:annotation>
+                              </xsd:element>
+                              <xsd:element maxOccurs="1" minOccurs="1" name="formatIdentifierSource"
+                                 type="pbcore.string.type.base">
+                                 <xsd:annotation>
+                                    <xsd:documentation xml:lang="en">"The descriptor
+                                       formatIdentifierSource is used in combination with the
+                                       unambiguous reference or identifier for a
+                                       rendition/instantiation of a media item as found in the
+                                       descriptor formatIdentifier. Thus PBCore provides not only a
+                                       locator number, but also indicates an agency or institution
+                                       who assigned it."</xsd:documentation>
                                  </xsd:annotation>
                               </xsd:element>
                            </xsd:sequence>
@@ -952,3 +855,4 @@
    </xsd:complexType>
 
 </xsd:schema>
+
