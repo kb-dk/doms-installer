@@ -62,8 +62,7 @@
             <foxml:xmlContent>
                 <PBCoreDescriptionDocument
                         xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html"
-                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                        xsi:schemaLocation="http://www.pbcore.org/PBCore/PBCoreNamespace.html ../../../test/data/pbcore.xsd">
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
                     <pbcoreIdentifier>
                         <identifier>INSERT_PROGRAM_ID</identifier>
