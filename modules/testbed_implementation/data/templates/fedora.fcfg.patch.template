@@ -1,5 +1,5 @@
 --- fedora.fcfg.orig	2010-08-24 13:33:29.664813470 +0200
-+++ fedora.fcfg	2010-09-17 14:27:37.828024278 +0200
++++ fedora.fcfg	2010-09-27 15:35:49.520726369 +0200
 @@ -1,25 +1,25 @@
  <?xml version="1.0" encoding="UTF-8"?>
  <server xmlns="http://www.fedora.info/definitions/1/0/config/" class="org.fcrepo.server.BasicServer">
@@ -76,15 +76,6 @@
    </module>
    <module role="org.fcrepo.server.access.Access" class="org.fcrepo.server.access.DefaultAccess">
      <comment>Description: The access subsystem. This implements the methods 
-@@ -362,7 +390,7 @@
-             Name of the triplestore to use. WARNING: changing the 
-             triplestore running the Resource Index Rebuilder.</comment>
-     </param>
--    <param name="syncUpdates" value="false">
-+        <param name="syncUpdates" value="true">
-       <comment>(optional, default is false)
-             Whether to flush the triple buffer before
-             returning from object modification operations.
 @@ -384,10 +412,9 @@
    </module>
    <module role="org.fcrepo.oai.OAIProvider" class="org.fcrepo.server.oai.FedoraOAIProviderModule">
