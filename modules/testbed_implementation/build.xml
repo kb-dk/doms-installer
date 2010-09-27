@@ -7,6 +7,9 @@
     <property file="build-${user.name}.properties" />
 
     <property file="build.properties"/>
+
+
+
     <target name="clean">
         <delete dir="dist"/>
         <delete dir="${modules.checkoutdir}/logappender"/>
@@ -37,6 +40,7 @@
         <mkdir dir="dist"/>
         <unzip dest="${modules.checkoutdir}/webservices">
             <fileset dir="${modules.checkoutdir}" includes="*/dist/*.zip"/>
+            <fileset dir="${newestReleases.dir}" erroronmissingdir="false" includes="*.zip"/>
             <patternset includes="**/*.war"/>
             <flattenmapper/>
         </unzip>
