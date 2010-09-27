@@ -26,6 +26,7 @@
     <Parameter name="dk.statsbiblioteket.doms.central.fedoraLocation" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/fedora" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.central.ecmLocation" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/ecm" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.central.bitstorageWSDL" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/highlevelbitstorage/highlevel/?wsdl" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.central.updateTrackerLocation" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/updatetrackerWebservice/updatetracker/?wsdl" override="false"/>
 
 
 
