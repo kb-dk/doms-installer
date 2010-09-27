@@ -5,7 +5,7 @@ messaging.enabled=true
 apia.auth.required=true
 database.jdbcDriverClass=org.apache.derby.jdbc.EmbeddedDriver
 ssl.available=false
-database.jdbcURL=jdbc\:derby\:$INSTALLDIR$/derby/fedora3;create\=true
+database.jdbcURL=jdbc\:derby\:$INSTALLDIR$/data/derby/fedora3;create\=true
 messaging.uri=vm\:(broker\:(tcp\://localhost\:61616))
 database.password=$FEDORAADMIN$
 database.username=$FEDORAADMINPASS$
