@@ -19,10 +19,11 @@ set -eu    # see http://ss64.com/bash/set.html
 # for to define the SourceForge packages to check-out.
 #
 SOURCEFORGE_DOMS_SVN_URL="https://doms.svn.sourceforge.net/svnroot/doms"
-#PACKAGES="bitstorage/tags/release0.0.2 ecm/tags/release0.0.1 surveillance/trunk pidGenerator/tags/release0.0.1 domsserver/tags/release0.0.1"
-PACKAGES="bitstorage/tags/release0.0.5 ecm/trunk surveillance/tags/release-0.0.4 pidGenerator/tags/release0.0.1 domsserver/trunk updatetracker/trunk"
 
+         
 BASEDIR=$1
+
+PROJECTS=$2
 
 SCRIPT_DIR=$(dirname $0)
 pushd $SCRIPT_DIR > /dev/null
@@ -42,7 +43,6 @@ cd $CHECKOUTDIR
 # (see http://tldp.org/LDP/abs/html/string-manipulation.html)
 # and used as the name of the directory inside the checkouts dir, in which the
 # svn checkout output goes.
-for i in $PACKAGES
-do
-    svn co $SOURCEFORGE_DOMS_SVN_URL/$i $CHECKOUTDIR/${i%%/*}
+cat $SCRIPT_DIR/../$PROJECTS | while read line; do
+    svn co $SOURCEFORGE_DOMS_SVN_URL/$line $CHECKOUTDIR/${line}
 done

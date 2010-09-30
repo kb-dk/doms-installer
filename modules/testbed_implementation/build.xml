@@ -25,14 +25,15 @@
         <exec executable="bash">
             <arg value="build/create_build_environment.sh"/>
             <arg value="${modules.checkoutdir}"/>
+            <arg value="${projects.to.download}"/>
         </exec>
     </target>
 
 
-    <target name="buildDomsServices" depends="getDomsServices">
+    <target name="buildDomsServices"> <!--depends="getDomsServices">-->
         <!--Call the ant file in each of the checkouted services in the ${modules.checkoutdir}-->
-        <subant target="release.bin">
-            <fileset dir="${modules.checkoutdir}" includes="*/build.xml"/>
+        <subant target="release.bin" antfile="build.xml" >
+            <dirset dir="${modules.checkoutdir}" includesfile="${projects.to.download}" />
         </subant>
     </target>
 
@@ -40,6 +41,10 @@
         <mkdir dir="dist"/>
         <unzip dest="${modules.checkoutdir}/webservices">
             <fileset dir="${modules.checkoutdir}" includes="*/dist/*.zip"/>
+            <patternset includes="**/*.war"/>
+            <flattenmapper/>
+        </unzip>
+       <unzip dest="${modules.checkoutdir}/webservices">
             <fileset dir="${newestReleases.dir}" erroronmissingdir="false" includes="*.zip"/>
             <patternset includes="**/*.war"/>
             <flattenmapper/>
@@ -60,11 +65,13 @@
         </copy>
         <unzip dest="${modules.checkoutdir}/fedoralib">
             <fileset dir="${modules.checkoutdir}" includes="*/dist/ecm-*.zip"/>
+            <fileset dir="${newestReleases.dir}" erroronmissingdir="false" includes="ecm-*.zip"/>
             <patternset includes="ecm-*/jars/fedoravalidatorhook.jar"/>
             <flattenmapper/>
         </unzip>
         <unzip dest="${modules.checkoutdir}/fedoralib">
             <fileset dir="${modules.checkoutdir}" includes="*/dist/bitstorage-*.zip"/>
+                        <fileset dir="${newestReleases.dir}" erroronmissingdir="false" includes="bitstorage-*.zip"/>
             <patternset includes="bitstorage-*/jars/hookApprove.jar"/>
             <patternset includes="bitstorage-*/jars/highlevel_interface.jar"/>
             <flattenmapper/>

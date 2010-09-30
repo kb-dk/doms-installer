@@ -1,0 +1,5 @@
+bitstorage/tags/release0.0.5
+ecm/tags/release0.0.1
+surveillance/tags/release-0.0.4
+pidGenerator/tags/release0.0.1
+domsserver/tags/release0.0.5
