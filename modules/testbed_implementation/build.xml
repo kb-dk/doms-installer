@@ -3,11 +3,10 @@
     <!-- TODO If the directory in modules.checkoutdir does not exist,
          then running the clean target produces an error. Please let ant-scripts
          create directory if non-existent. -->
-    
-    <property file="build-${user.name}.properties" />
+
+    <property file="build-${user.name}.properties"/>
 
     <property file="build.properties"/>
-
 
 
     <target name="clean">
@@ -32,46 +31,85 @@
 
     <target name="buildDomsServices"> <!--depends="getDomsServices">-->
         <!--Call the ant file in each of the checkouted services in the ${modules.checkoutdir}-->
-        <subant target="release.bin" antfile="build.xml" >
-            <dirset dir="${modules.checkoutdir}" includesfile="${projects.to.download}" />
+        <subant target="release.bin" antfile="build.xml">
+            <dirset dir="${modules.checkoutdir}"
+                    includesfile="${projects.to.download}"/>
         </subant>
     </target>
 
     <target name="release" depends="getDomsServices, clean, buildDomsServices">
         <mkdir dir="dist"/>
         <unzip dest="${modules.checkoutdir}/webservices">
-            <fileset dir="${modules.checkoutdir}" includes="*/dist/*.zip"/>
+            <fileset dir="${modules.checkoutdir}">
+                <include name="**/dist/*.zip"/>
+                <exclude name="**/modules/**"/>
+                <exclude name="**/lib/**"/>
+
+            </fileset>
+            <fileset dir="${newestReleases.dir}" erroronmissingdir="false"
+                     includes="*.zip"/>
             <patternset includes="**/*.war"/>
             <flattenmapper/>
         </unzip>
-       <unzip dest="${modules.checkoutdir}/webservices">
-            <fileset dir="${newestReleases.dir}" erroronmissingdir="false" includes="*.zip"/>
-            <patternset includes="**/*.war"/>
-            <flattenmapper/>
-        </unzip>
+        <!--
+               <unzip dest="${modules.checkoutdir}/webservices">
+                    <fileset dir="${newestReleases.dir}" erroronmissingdir="false" includes="*.zip"/>
+                    <patternset includes="**/*.war"/>
+                    <flattenmapper/>
+                </unzip>
+        -->
         <unzip dest="${modules.checkoutdir}/logappender">
-            <fileset dir="${modules.checkoutdir}" includes="*/dist/surveillance-*.zip"/>
+            <fileset dir="${modules.checkoutdir}"
+                     includes="surveillance/**/dist/surveillance-*.zip">
+                <exclude name="**/modules/**"/>
+                <exclude name="**/lib/**"/>
+
+            </fileset>
+            <fileset dir="${newestReleases.dir}" erroronmissingdir="false"
+                     includes="*.zip"/>
             <patternset includes="surveillance-*/jars/*.jar"/>
             <flattenmapper/>
         </unzip>
         <!--TODO This is temporary, until buildframework generates reasonable package-->
         <copy todir="${modules.checkoutdir}/logappender">
-            <fileset dir="${modules.checkoutdir}/surveillance/lib">
-                <include name="*log*/jars/*.jar"/>
-                <include name="*util*/jars/*.jar"/>
-                <include name="*slf4j*/jars/*.jar"/>
+            <fileset dir="${modules.checkoutdir}/surveillance">
+                <include name="**/*log*/jars/*.jar"/>
+                <include name="**/*util*/jars/*.jar"/>
+                <include name="**/*slf4j*/jars/*.jar"/>
             </fileset>
             <flattenmapper/>
         </copy>
+
+        <unzip dest="${modules.checkoutdir}/authCheckertemp">
+            <fileset dir="${modules.checkoutdir}" includes="authChecker/**/dist/authChecker*-bin.zip"/>
+        </unzip>
         <unzip dest="${modules.checkoutdir}/fedoralib">
-            <fileset dir="${modules.checkoutdir}" includes="*/dist/ecm-*.zip"/>
-            <fileset dir="${newestReleases.dir}" erroronmissingdir="false" includes="ecm-*.zip"/>
+            <!--    '/home/abr/Projects/checkout/authCheckertemp/authChecker-0.0.1#SNAPSHOT/executables/fedoralogin/fedoralogin-bin.zip' -->
+            <fileset dir="${modules.checkoutdir}/authCheckertemp" includes="authChecker-*/executables/**/*.zip"/>
+            <patternset includes="lib/*.jar" excludes="lib/commons-logging*"/>
+        </unzip>
+        <move overwrite="true" todir="${modules.checkoutdir}/fedoralib">
+            <fileset dir="${modules.checkoutdir}/fedoralib/lib" includes="*"/>
+        </move>
+        <unzip dest="${modules.checkoutdir}/fedoralib">
+            <fileset dir="${modules.checkoutdir}"
+                     includes="ecm/**/dist/ecm-*.zip">
+                <exclude name="**/modules/**"/>
+                <exclude name="**/lib/**"/>
+            </fileset>
+            <fileset dir="${newestReleases.dir}" erroronmissingdir="false"
+                     includes="ecm-*.zip"/>
             <patternset includes="ecm-*/jars/fedoravalidatorhook.jar"/>
             <flattenmapper/>
         </unzip>
         <unzip dest="${modules.checkoutdir}/fedoralib">
-            <fileset dir="${modules.checkoutdir}" includes="*/dist/bitstorage-*.zip"/>
-                        <fileset dir="${newestReleases.dir}" erroronmissingdir="false" includes="bitstorage-*.zip"/>
+            <fileset dir="${modules.checkoutdir}"
+                     includes="bitstorage/**/dist/bitstorage-*.zip">
+                <exclude name="**/modules/**"/>
+                <exclude name="**/lib/**"/>
+            </fileset>
+            <fileset dir="${newestReleases.dir}" erroronmissingdir="false"
+                     includes="bitstorage-*.zip"/>
             <patternset includes="bitstorage-*/jars/hookApprove.jar"/>
             <patternset includes="bitstorage-*/jars/highlevel_interface.jar"/>
             <flattenmapper/>
@@ -85,13 +123,16 @@
             <zipfileset prefix="${release}" dir="${basedir}" filemode="755">
                 <include name="bin/**"/>
             </zipfileset>
-            <zipfileset prefix="${release}/webservices" dir="${modules.checkoutdir}/webservices">
+            <zipfileset prefix="${release}/webservices"
+                        dir="${modules.checkoutdir}/webservices">
                 <include name="*.war"/>
             </zipfileset>
-            <zipfileset prefix="${release}/logappender" dir="${modules.checkoutdir}/logappender">
+            <zipfileset prefix="${release}/logappender"
+                        dir="${modules.checkoutdir}/logappender">
                 <include name="*.jar"/>
             </zipfileset>
-            <zipfileset prefix="${release}/fedoralib" dir="${modules.checkoutdir}/fedoralib">
+            <zipfileset prefix="${release}/fedoralib"
+                        dir="${modules.checkoutdir}/fedoralib">
                 <include name="*.jar"/>
             </zipfileset>
         </zip>

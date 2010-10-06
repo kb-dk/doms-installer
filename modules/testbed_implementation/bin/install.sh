@@ -182,9 +182,11 @@ popd > /dev/null
 pushd $TESTBED_DIR/fedora/install > /dev/null
 mkdir -p WEB-INF/lib
 cp $BASEDIR/fedoralib/* WEB-INF/lib
+zip -d fedora.war WEB-INF/lib/logback-\* WEB-INF/lib/slf4j-api-\* WEB-INF/lib/jersey-\*
 zip -r -m -u fedora.war WEB-INF/lib
-zip -d fedora.war WEB-INF/lib/logback-\* WEB-INF/lib/slf4j-api-\*
 popd > /dev/null
+
+
 
 #
 # Install Fedora
@@ -240,6 +242,27 @@ pushd $BASEDIR/data/policies > /dev/null
 mkdir -p $TESTBED_DIR/fedora/data/fedora-xacml-policies/repository-policies 
 cp -r * $TESTBED_DIR/fedora/data/fedora-xacml-policies/repository-policies/
 popd > /dev/null
+
+
+#
+# Fix jaas.conf so that we use the doms auth checker
+#
+pushd $BASEDIR/data/templates > /dev/null
+sed \
+-e 's|\$FEDORAHOME\$|'"$TESTBED_DIR/fedora"'|g' \
+-e 's|\$TOMCAT_HTTPPORT\$|'"$TOMCAT_HTTPPORT"'|g' \
+-e 's|\$TOMCAT_SHUTDOWNPORT\$|'"$TOMCAT_SHUTDOWNPORT"'|g' \
+-e 's|\$TOMCAT_SSLPORT\$|'"$TOMCAT_SSLPORT"'|g' \
+-e 's|\$TOMCAT_AJPPORT\$|'"$TOMCAT_AJPPORT"'|g' \
+-e 's|\$TOMCAT_SERVERNAME\$|'"$TOMCAT_SERVERNAME"'|g' \
+-e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
+-e 's|\$FEDORAADMINPASS\$|'"$FEDORAADMINPASS"'|g' \
+-e 's|\$BITFINDER\$|'"$BITFINDER"'|g' \
+-e 's|\$BITSTORAGE_SCRIPT\$|'"$BITSTORAGE_SCRIPT"'|g' \
+-e 's|\$BITSTORAGE_SERVER\$|'"$BITSTORAGE_SERVER"'|g' \
+<jaas.conf.template > $TESTBED_DIR/fedora/server/config/jaas.conf
+popd > /dev/null
+
 
 #
 # Install into tomcat: webservices
