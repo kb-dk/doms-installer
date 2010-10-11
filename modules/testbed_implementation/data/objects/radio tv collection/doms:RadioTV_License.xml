@@ -21,7 +21,7 @@
 
     <foxml:datastream ID="DC" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
         <foxml:datastreamVersion ID="DC.0" MIMETYPE="text/xml" LABEL="Default Dublin Core Record"
-                FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/">
+                                 FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/">
 
             <foxml:xmlContent>
                 <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/">
@@ -129,7 +129,44 @@
                             <AnyAction/>
                         </Actions>
                     </Target>
-                    <Rule RuleId="1" Effect="Permit"/>
+                    <Rule RuleId="1" Effect="Deny">
+                        <!--Deny getDatastreamProfile on the CONTENTS datastream, if the user does not have the role inhouse or administrator-->
+                        <Target>
+                            <Subjects>
+                                <AnySubject/>
+                            </Subjects>
+                            <Resources>
+                                <Resource>
+                                    <ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">CONTENTS</AttributeValue>
+                                        <ResourceAttributeDesignator AttributeId="urn:fedora:names:fedora:2.1:resource:datastream:id" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+                                    </ResourceMatch>
+                                </Resource>
+                            </Resources>
+                            <Actions>
+                                <Action>
+                                    <ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">
+                                            urn:fedora:names:fedora:2.1:action:id-getDatastream
+                                        </AttributeValue>
+                                        <ActionAttributeDesignator DataType="http://www.w3.org/2001/XMLSchema#string" AttributeId="urn:fedora:names:fedora:2.1:action:id"/>
+                                    </ActionMatch>
+                                </Action>
+                            </Actions>
+                        </Target>
+                        <Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+                            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
+                                <SubjectAttributeDesignator AttributeId="fedoraRole" MustBePresent="false" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+                                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
+                                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">inhouse</AttributeValue>
+                                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">administrator</AttributeValue>
+                                </Apply>
+                            </Apply>
+                        </Condition>
+                    </Rule>
+                    <Rule RuleId="2" Effect="Permit"/>
+                    <!--Permit everything else-->
+
                 </Policy>
             </foxml:xmlContent>
         </foxml:datastreamVersion>
