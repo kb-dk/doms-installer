@@ -182,7 +182,7 @@ popd > /dev/null
 pushd $TESTBED_DIR/fedora/install > /dev/null
 mkdir -p WEB-INF/lib
 cp $BASEDIR/fedoralib/* WEB-INF/lib
-zip -d fedora.war WEB-INF/lib/logback-\* WEB-INF/lib/slf4j-api-\* WEB-INF/lib/jersey-\*
+zip -d fedora.war WEB-INF/lib/logback-\* WEB-INF/lib/slf4j-api-\*
 zip -r -m -u fedora.war WEB-INF/lib
 popd > /dev/null
 
