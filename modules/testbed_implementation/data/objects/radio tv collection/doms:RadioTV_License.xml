@@ -103,8 +103,8 @@
             <foxml:xmlContent>
 
                 <Policy xmlns="urn:oasis:names:tc:xacml:1.0:policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" PolicyId="RadioTV_License" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
-                    <Description>This is the default policy, if no other is specified. It allows
-                        for all actions on a object by everybody.
+                    <Description>The is the license for the radio tv collection. Complete access is granted, if and only if, the user has the inhouse
+                        or administrator fedoraRole.
                     </Description>
                     <Target>
                         <Subjects>

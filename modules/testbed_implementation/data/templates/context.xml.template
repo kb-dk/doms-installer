@@ -34,7 +34,7 @@
     <!--Auth checker-->
     <Parameter name="dk.statsbiblioteket.doms.authchecker.tickets.timeToLive" value="30000" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.authchecker.users.timeToLive" value="30000" override="false"/>
-    
+    <Parameter name="dk.statsbiblioteket.doms.authchecker.fedoralocation" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/fedora" override="false"/>
 
     <Parameter name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor.fedoraPassword" value="$FEDORAADMINPASS$" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor.fedoraUrl" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/fedora" override="false"/>

@@ -141,6 +141,23 @@
         </layout>
     </appender>
 
+    <appender name="AuthChecker"
+              class="dk.statsbiblioteket.doms.surveillance.logappender.LogRegistryAppender">
+        <param name="Threshold" value="WARN"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="AuthCheckerFile"
+              class="org.apache.log4j.FileAppender">
+        <param name="Threshold" value="DEBUG"/>
+        <param name="File" value="$TESTBEDHOME$/logs/doms-authchecker.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
     <appender name="DomsFile"
               class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="INFO"/>
@@ -206,6 +223,13 @@
         <appender-ref ref="ECM"/>
         <appender-ref ref="ECMFile"/>
     </logger>
+
+    <logger name="dk.statsbiblioteket.doms.authchecker">
+        <level value="ALL"/>
+        <appender-ref ref="AuthChecker"/>
+        <appender-ref ref="AuthCheckerFile"/>
+    </logger>
+
 
     <root>
         <level value="ERROR"/>
