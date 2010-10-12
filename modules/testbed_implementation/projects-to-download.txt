@@ -4,4 +4,4 @@ surveillance/tags/release-0.0.4
 pidGenerator/tags/release0.0.1
 domsserver/tags/release0.0.5
 authChecker/tags/release0.0.1
-roleMapping/ipRoleMapping/trunk
+roleMapping/ipRoleMapping/tags/release0.0.1
