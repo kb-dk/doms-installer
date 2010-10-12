@@ -26,7 +26,7 @@
     <Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
       <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-is-in">
         <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">administrator</AttributeValue>         
-        <SubjectAttributeDesignator AttributeId="fedoraRole" DataType="http://www.w3.org/2001/XMLSchema#string"/>
+        <SubjectAttributeDesignator MustBePresent="false" AttributeId="fedoraRole" DataType="http://www.w3.org/2001/XMLSchema#string"/>
       </Apply>    
     </Condition>
   </Rule>
