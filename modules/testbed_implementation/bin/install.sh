@@ -83,10 +83,7 @@ pushd $BASEDIR/data/templates > /dev/null
 # sed/shell magic below according to  http://www.grymoire.com/Unix/Sed.html
 # See section "Passing arguments into a sed script".
 sed \
--e 's|\$TOMCATHTTP\$|'"$TOMCAT_HTTPPORT"'|g' \
--e 's|\$TOMCATSSL\$|'"$TOMCAT_SSLPORT"'|g' \
--e 's|\$TOMCATAJP\$|'"$TOMCAT_AJPPORT"'|g' \
--e 's|\$TOMCATSHUTDOWN\$|'"$TOMCAT_SHUTDOWNPORT"'|g' \
+-e 's|\$PORTRANGE\$|'"$PORTRANGE"'|g' \
 <server.xml.template >server.xml
 mv server.xml $TESTBED_DIR/tomcat/conf/
 popd  > /dev/null
@@ -97,10 +94,7 @@ popd  > /dev/null
 pushd $BASEDIR/data/templates > /dev/null
 sed \
 -e 's|\$FEDORAHOME\$|'"$TESTBED_DIR/fedora"'|g' \
--e 's|\$TOMCAT_HTTPPORT\$|'"$TOMCAT_HTTPPORT"'|g' \
--e 's|\$TOMCAT_SHUTDOWNPORT\$|'"$TOMCAT_SHUTDOWNPORT"'|g' \
--e 's|\$TOMCAT_SSLPORT\$|'"$TOMCAT_SSLPORT"'|g' \
--e 's|\$TOMCAT_AJPPORT\$|'"$TOMCAT_AJPPORT"'|g' \
+-e 's|\$PORTRANGE\$|'"$PORTRANGE"'|g' \
 -e 's|\$TOMCAT_SERVERNAME\$|'"$TOMCAT_SERVERNAME"'|g' \
 -e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
 -e 's|\$FEDORAADMINPASS\$|'"$FEDORAADMINPASS"'|g' \
@@ -201,10 +195,7 @@ popd > /dev/null
 pushd $BASEDIR/data/templates > /dev/null
 sed \
 -e 's|\$FEDORAHOME\$|'"$TESTBED_DIR/fedora"'|g' \
--e 's|\$TOMCAT_HTTPPORT\$|'"$TOMCAT_HTTPPORT"'|g' \
--e 's|\$TOMCAT_SHUTDOWNPORT\$|'"$TOMCAT_SHUTDOWNPORT"'|g' \
--e 's|\$TOMCAT_SSLPORT\$|'"$TOMCAT_SSLPORT"'|g' \
--e 's|\$TOMCAT_AJPPORT\$|'"$TOMCAT_AJPPORT"'|g' \
+-e 's|\$PORTRANGE\$|'"$PORTRANGE"'|g' \
 -e 's|\$TOMCAT_SERVERNAME\$|'"$TOMCAT_SERVERNAME"'|g' \
 -e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
 -e 's|\$FEDORAADMINPASS\$|'"$FEDORAADMINPASS"'|g' \
@@ -220,10 +211,7 @@ popd > /dev/null
 pushd $BASEDIR/data/templates > /dev/null
 sed \
 -e 's|\$FEDORAHOME\$|'"$TESTBED_DIR/fedora"'|g' \
--e 's|\$TOMCAT_HTTPPORT\$|'"$TOMCAT_HTTPPORT"'|g' \
--e 's|\$TOMCAT_SHUTDOWNPORT\$|'"$TOMCAT_SHUTDOWNPORT"'|g' \
--e 's|\$TOMCAT_SSLPORT\$|'"$TOMCAT_SSLPORT"'|g' \
--e 's|\$TOMCAT_AJPPORT\$|'"$TOMCAT_AJPPORT"'|g' \
+-e 's|\$PORTRANGE\$|'"$PORTRANGE"'|g' \
 -e 's|\$TOMCAT_SERVERNAME\$|'"$TOMCAT_SERVERNAME"'|g' \
 -e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
 -e 's|\$FEDORAADMINPASS\$|'"$FEDORAADMINPASS"'|g' \
@@ -250,10 +238,7 @@ popd > /dev/null
 pushd $BASEDIR/data/templates > /dev/null
 sed \
 -e 's|\$FEDORAHOME\$|'"$TESTBED_DIR/fedora"'|g' \
--e 's|\$TOMCAT_HTTPPORT\$|'"$TOMCAT_HTTPPORT"'|g' \
--e 's|\$TOMCAT_SHUTDOWNPORT\$|'"$TOMCAT_SHUTDOWNPORT"'|g' \
--e 's|\$TOMCAT_SSLPORT\$|'"$TOMCAT_SSLPORT"'|g' \
--e 's|\$TOMCAT_AJPPORT\$|'"$TOMCAT_AJPPORT"'|g' \
+-e 's|\$PORTRANGE\$|'"$PORTRANGE"'|g' \
 -e 's|\$TOMCAT_SERVERNAME\$|'"$TOMCAT_SERVERNAME"'|g' \
 -e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
 -e 's|\$FEDORAADMINPASS\$|'"$FEDORAADMINPASS"'|g' \
@@ -287,7 +272,7 @@ sleep 30
 sh $TESTBED_DIR/fedora/client/bin/fedora-ingest.sh dir \
 $BASEDIR/data/objects \
 'info:fedora/fedora-system:FOXML-1.1' \
-localhost:$TOMCAT_HTTPPORT $FEDORAADMIN $FEDORAADMINPASS http
+localhost:${PORTRANGE}80 $FEDORAADMIN $FEDORAADMINPASS http
 
 
 #
