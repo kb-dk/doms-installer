@@ -2,10 +2,10 @@
 
 
     <!--Highlevel parameters-->
-    <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.characteriserlocation" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/characteriser/characterise/?wsdl" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.lowlevellocation" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/lowlevelbitstorage/lowlevel/?wsdl" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.characteriserlocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/characteriser/characterise/?wsdl" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.lowlevellocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/lowlevelbitstorage/lowlevel/?wsdl" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.fedora.server" value="$TOMCAT_SERVERNAME$" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.fedora.port" value="$TOMCAT_HTTPPORT$" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.fedora.port" value="$PORTRANGE$80" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.fedora.characstream" value="CHARACTERISATION" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.fedora.contentstream" value="CONTENTS" override="false"/>
 
@@ -17,16 +17,16 @@
 
     <!--ECM-->
     <Parameter name="dk.statsbiblioteket.doms.ecm.fedora.connector" value="dk.statsbiblioteket.doms.ecm.repository.fedoraclient.FedoraClientConnector" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.ecm.fedora.location" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/fedora" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.ecm.fedora.location" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.ecm.pidGenerator.client" value="dk.statsbiblioteket.doms.ecm.repository.PidGeneratorImpl" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.ecm.pidgenerator.client.wsdllocation" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/pidgenerator/pidGenerator/?wsdl" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.ecm.pidgenerator.client.wsdllocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator/pidGenerator/?wsdl" override="false"/>
 
     <!--Central-->
 
-    <Parameter name="dk.statsbiblioteket.doms.central.fedoraLocation" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/fedora" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.central.ecmLocation" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/ecm" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.central.bitstorageWSDL" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/highlevelbitstorage/highlevel/?wsdl" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.central.updateTrackerLocation" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/updatetrackerWebservice/updatetracker/?wsdl" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.central.fedoraLocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.central.ecmLocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/ecm" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.central.bitstorageWSDL" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/highlevelbitstorage/highlevel/?wsdl" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.central.updateTrackerLocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/updatetrackerWebservice/updatetracker/?wsdl" override="false"/>
 
     <!--Ip role mapper-->
     <Parameter name="dk.statsbibliopteket.doms.iprolemapping.ipRangeAndRoleConfigurationFile" value="/WEB-INF/ipRangesAndRoles.xml" override="false"/>
@@ -34,14 +34,14 @@
     <!--Auth checker-->
     <Parameter name="dk.statsbiblioteket.doms.authchecker.tickets.timeToLive" value="30000" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.authchecker.users.timeToLive" value="30000" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.authchecker.fedoralocation" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/fedora" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.authchecker.fedoralocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora" override="false"/>
 
     <Parameter name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor.fedoraPassword" value="$FEDORAADMINPASS$" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor.fedoraUrl" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/fedora" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor.fedoraUrl" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor.fedoraUser" value="$FEDORAADMIN$" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.ignoredMessagesFile" value="ignored.txt" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.restUrls" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/surveillance-surveyor/surveyable/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/surveillance-fedorasurveyor/surveyable/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/ecm/surveyable/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/surveillance-planetssurveyor/surveyable/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/surveillance-logregistrywebservice/logregistry/appender/LowlevelBitstorage/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/surveillance-logregistrywebservice/logregistry/appender/HighlevelBitstorage/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/surveillance-logregistrywebservice/logregistry/appender/Characteriser/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/surveillance-logregistrywebservice/logregistry/appender/Surveyor/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/surveillance-logregistrywebservice/logregistry/appender/Fedora/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/surveillance-logregistrywebservice/logregistry/appender/ECM/getStatusSince/{date}" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.soapUrls" value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/lowlevelbitstorage/lowlevelsurveyable/?wsdl;http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/highlevelbitstorage/highlevelsurveyable/?wsdl;http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/characteriser/characterisersurveyable/?wsdl;http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/pidgenerator/pidgeneratorsurveyable/?wsdl" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.restUrls" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-surveyor/surveyable/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-fedorasurveyor/surveyable/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/ecm/surveyable/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-planetssurveyor/surveyable/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/LowlevelBitstorage/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/HighlevelBitstorage/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/Characteriser/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/Surveyor/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/Fedora/getStatusSince/{date};http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/ECM/getStatusSince/{date}" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.soapUrls" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/lowlevelbitstorage/lowlevelsurveyable/?wsdl;http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/highlevelbitstorage/highlevelsurveyable/?wsdl;http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/characteriser/characterisersurveyable/?wsdl;http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator/pidgeneratorsurveyable/?wsdl" override="false"/>
 
     <Parameter name="log4jConfigLocation" value="/WEB-INF/log4j.xml" override="false"/>
 

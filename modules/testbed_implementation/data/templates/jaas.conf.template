@@ -1,7 +1,7 @@
 fedora-auth
 {
 	dk.statsbiblioteket.doms.authchecker.TempDatabaseModule sufficient
-	webserviceLocation="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/authchecker"
+	webserviceLocation="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/authchecker"
 	debug=true;
 	org.fcrepo.server.security.jaas.auth.module.XmlUsersFileModule sufficient
 	debug=true;
