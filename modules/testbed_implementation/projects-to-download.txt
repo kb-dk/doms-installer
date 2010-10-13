@@ -5,3 +5,4 @@ pidGenerator/tags/release0.0.1
 domsserver/tags/release0.0.5
 authChecker/tags/release0.0.1
 roleMapping/ipRoleMapping/tags/release0.0.1
+updatetracker/tags/release0.0.1
