@@ -158,6 +158,40 @@
         </layout>
     </appender>
 
+    <appender name="IPRoleMapper"
+              class="dk.statsbiblioteket.doms.surveillance.logappender.LogRegistryAppender">
+        <param name="Threshold" value="WARN"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="IPRoleMapperFile"
+              class="org.apache.log4j.FileAppender">
+        <param name="Threshold" value="DEBUG"/>
+        <param name="File" value="$TESTBEDHOME$/logs/doms-iprolemapper.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="SummaStorage"
+              class="dk.statsbiblioteket.doms.surveillance.logappender.LogRegistryAppender">
+        <param name="Threshold" value="WARN"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="SummaStorageFile"
+              class="org.apache.log4j.FileAppender">
+        <param name="Threshold" value="DEBUG"/>
+        <param name="File" value="$TESTBEDHOME$/logs/doms-summastorage.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
     <appender name="DomsFile"
               class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="INFO"/>
@@ -229,6 +263,18 @@
         <appender-ref ref="AuthChecker"/>
         <appender-ref ref="AuthCheckerFile"/>
     </logger>
+
+    <logger name="dk.statsbiblioteket.doms.iprolemapper">
+        <level value="ALL"/>
+        <appender-ref ref="IPRoleMapper"/>
+        <appender-ref ref="IPRoleMapperFile"/>
+    </logger>
+
+    <logger name="dk.statsbiblioteket.doms.integration.summa">
+        <level value="ALL"/>
+        <appender-ref ref="SummaStorage"/>
+        <appender-ref ref="SummaStorageFile"/>
+    </logger>    
 
 
     <root>
