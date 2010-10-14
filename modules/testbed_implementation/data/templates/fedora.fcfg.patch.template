@@ -1,5 +1,5 @@
 --- fedora.fcfg.orig	2010-08-24 13:33:29.664813470 +0200
-+++ fedora.fcfg	2010-09-27 15:35:49.520726369 +0200
++++ fedora.fcfg	2010-10-13 14:52:23.139467974 +0200
 @@ -1,25 +1,25 @@
  <?xml version="1.0" encoding="UTF-8"?>
  <server xmlns="http://www.fedora.info/definitions/1/0/config/" class="org.fcrepo.server.BasicServer">
@@ -14,17 +14,17 @@
  		list is space delimited.</comment>
    </param>
 -  <param name="fedoraServerPort" value="8080">
-+    <param name="fedoraServerPort" value="$TOMCAT_HTTPPORT$">
++    <param name="fedoraServerPort" value="$PORTRANGE$80">
      <comment>Defines the port number on which the Fedora server runs; 
  		default is 8080.</comment>
    </param>
 -  <param name="fedoraShutdownPort" value="8005">
-+    <param name="fedoraShutdownPort" value="$TOMCAT_SHUTDOWNPORT$">
++    <param name="fedoraShutdownPort" value="$PORTRANGE$05">
      <comment>Defines the port number used to shutdown the Fedora sever; 
  		default is 8005.</comment>
    </param>
 -  <param name="fedoraRedirectPort" value="8443">
-+    <param name="fedoraRedirectPort" value="$TOMCAT_SSLPORT$">
++    <param name="fedoraRedirectPort" value="$PORTRANGE$43">
      <comment>Defines the redirect port of the Fedora sever; default is 8443.</comment>
    </param>
 -  <param name="fedoraServerHost" value="localhost">
@@ -58,7 +58,7 @@
 +            </comment>
 +        </param>
 +        <param name="dk.statsbiblioteket.doms.bitstorage.highlevel.hookapprove.webservicelocation"
-+               value="http://$TOMCAT_SERVERNAME$:$TOMCAT_HTTPPORT$/highlevelbitstorage/highlevel/?wsdl">
++               value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/highlevelbitstorage/highlevel/?wsdl">
 +            <comment>This specifies the location of the highlevel webservice
 +            </comment>
 +        </param>
