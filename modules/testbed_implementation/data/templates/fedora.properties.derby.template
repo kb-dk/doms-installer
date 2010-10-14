@@ -1,0 +1,4 @@
+database.jdbcDriverClass=org.apache.derby.jdbc.EmbeddedDriver
+database.jdbcURL=jdbc\:derby\:$INSTALLDIR$/data/derby/$DATABASE_NAME$;create\=true
+database=included
+

@@ -148,20 +148,31 @@ popd > /dev/null
 #
 cp $BASEDIR/logappender/*.jar $TESTBED_DIR/tomcat/lib
 
+
 #
-# Prepare fedora.war
+# Fix the fedora properties
 #
 export FEDORA_HOME=$TESTBED_DIR/fedora
 pushd $BASEDIR/data/templates > /dev/null
+if [ $USE_POSTGRESQL == "true" ]; then
+  cat fedora.properties.template fedora.properties.postgresql.template > fedora.properties.temp
+else
+  cat fedora.properties.template fedora.properties.derby.template > fedora.properties.temp
+fi
 sed \
 -e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
 -e 's|\$FEDORAADMINPASS\$|'"$FEDORAADMINPASS"'|g' \
 -e 's|\$INSTALLDIR\$|'"$TESTBED_DIR"'/fedora|g' \
-<fedora.properties.template >fedora.properties
+-e 's|\$DATABASE_NAME\$|'"$DATABASE_NAME"'|g' \
+-e 's|\$DATABASE_USERNAME\$|'"$DATABASE_USERNAME"'|g' \
+-e 's|\$DATABASE_PASSWORD\$|'"$DATABASE_PASSWORD"'|g' \
+-e 's|\$PORTRANGE\$|'"$PORTRANGE"'|g' \
+<fedora.properties.temp >fedora.properties
 popd > /dev/null
 pushd $BASEDIR/data/fedora > /dev/null
 java -jar $FEDORAJAR $BASEDIR/data/templates/fedora.properties
 rm $BASEDIR/data/templates/fedora.properties
+rm $BASEDIR/data/templates/fedora.properties.temp
 popd > /dev/null
 
 #
@@ -222,12 +233,12 @@ sed \
 popd > /dev/null
 pushd $TESTBED_DIR/fedora/server/config > /dev/null
 patch fedora.fcfg < fedora.fcfg.patch
-rm fedora.fcfg.patch 
+rm fedora.fcfg.patch
 popd > /dev/null
 
 # Install custom policies
 pushd $BASEDIR/data/policies > /dev/null
-mkdir -p $TESTBED_DIR/fedora/data/fedora-xacml-policies/repository-policies 
+mkdir -p $TESTBED_DIR/fedora/data/fedora-xacml-policies/repository-policies
 cp -r * $TESTBED_DIR/fedora/data/fedora-xacml-policies/repository-policies/
 popd > /dev/null
 
