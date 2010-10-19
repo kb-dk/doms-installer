@@ -169,6 +169,10 @@ sed \
 -e 's|\$PORTRANGE\$|'"$PORTRANGE"'|g' \
 <fedora.properties.temp >fedora.properties
 popd > /dev/null
+
+#
+# Install Fedora
+#
 pushd $BASEDIR/data/fedora > /dev/null
 java -jar $FEDORAJAR $BASEDIR/data/templates/fedora.properties
 rm $BASEDIR/data/templates/fedora.properties
