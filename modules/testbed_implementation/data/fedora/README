@@ -1,0 +1,2 @@
+The snapshot release above fixes the MIMETypedStream closing error, but is
+otherwise a normal 3.4 release
