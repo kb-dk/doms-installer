@@ -44,7 +44,7 @@ cd $CHECKOUTDIR
 # and used as the name of the directory inside the checkouts dir, in which the
 # svn checkout output goes.
 cat $SCRIPT_DIR/../$PROJECTS | while read line; do
-    if [ -n "$line" ]; then
+    if [ ! -z "$line" ]; then
         echo "Svn getting $line"
         svn co $SOURCEFORGE_DOMS_SVN_URL/$line $CHECKOUTDIR/${line}
     fi
