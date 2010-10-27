@@ -2,7 +2,7 @@ ecm/tags/release0.0.5
 surveillance/tags/release-0.0.4
 pidGenerator/tags/release0.0.2
 authChecker/tags/release0.0.1
-roleMapping/ipRoleMapping/tags/release0.0.1
+roleMapping/ipRoleMapping/tags/release0.0.2
 bitstorage/tags/release0.0.9
 domsserver/tags/release0.0.9
 updatetracker/tags/release0.0.5
