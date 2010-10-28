@@ -1,4 +1,4 @@
-ecm/tags/release0.0.5
+ecm/tags/release0.0.6
 surveillance/tags/release-0.0.4
 pidGenerator/tags/release0.0.2
 authChecker/tags/release0.0.1
