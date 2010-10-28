@@ -13,8 +13,10 @@
         <delete dir="dist"/>
         <delete dir="${modules.checkoutdir}/logappender"/>
         <delete dir="${modules.checkoutdir}/webservices"/>
-        <subant target="distclean">
-            <fileset dir="${modules.checkoutdir}" includes="*/build.xml"/>
+        <subant target="distclean" antfile="build.xml">
+            <fileset dir="${modules.checkoutdir}">
+                <include name="**/build.xml"/>
+            </fileset>
         </subant>
     </target>
 
