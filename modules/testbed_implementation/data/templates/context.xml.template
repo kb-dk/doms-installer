@@ -4,8 +4,7 @@
     <!--Highlevel parameters-->
     <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.characteriserlocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/characteriser/characterise/?wsdl" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.lowlevellocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/lowlevelbitstorage/lowlevel/?wsdl" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.fedora.server" value="$TOMCAT_SERVERNAME$" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.fedora.port" value="$PORTRANGE$80" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.fedora.server" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.fedora.characstream" value="CHARACTERISATION" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.fedora.contentstream" value="CONTENTS" override="false"/>
 
