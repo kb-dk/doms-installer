@@ -31,8 +31,8 @@
     <Parameter name="dk.statsbibliopteket.doms.iprolemapping.ipRangeAndRoleConfigurationFile" value="/WEB-INF/ipRangesAndRoles.xml" override="false"/>
     
     <!--Auth checker-->
-    <Parameter name="dk.statsbiblioteket.doms.authchecker.tickets.timeToLive" value="30000" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.authchecker.users.timeToLive" value="30000" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.authchecker.tickets.timeToLive" value="1200000" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.authchecker.users.timeToLive" value="1200000" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.authchecker.fedoralocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora" override="false"/>
 
     <!--updateTracker-->
