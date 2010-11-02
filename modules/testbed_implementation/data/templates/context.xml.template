@@ -28,8 +28,8 @@
     <Parameter name="dk.statsbiblioteket.doms.central.updateTrackerLocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/updatetrackerWebservice/updatetracker/?wsdl" override="false"/>
 
     <!--Ip role mapper-->
-    <Parameter name="dk.statsbibliopteket.doms.iprolemapping.ipRangeAndRoleConfigurationFile" value="/WEB-INF/ipRangesAndRoles.xml" override="false"/>
-    
+    <Parameter name="dk.statsbiblioteket.iprolemapping.configurationFile" value="$TESTBED_DIR$/tomcat/conf/ipRangesAndRoles.xml" override="false"/>
+
     <!--Auth checker-->
     <Parameter name="dk.statsbiblioteket.doms.authchecker.tickets.timeToLive" value="1200000" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.authchecker.users.timeToLive" value="1200000" override="false"/>

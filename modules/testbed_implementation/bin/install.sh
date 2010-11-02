@@ -94,6 +94,7 @@ popd  > /dev/null
 pushd $BASEDIR/data/templates > /dev/null
 sed \
 -e 's|\$FEDORAHOME\$|'"$TESTBED_DIR/fedora"'|g' \
+-e 's|\$TESTBED_DIR\$|'"$TESTBED_DIR"'|g' \
 -e 's|\$PORTRANGE\$|'"$PORTRANGE"'|g' \
 -e 's|\$TOMCAT_SERVERNAME\$|'"$TOMCAT_SERVERNAME"'|g' \
 -e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
@@ -103,6 +104,13 @@ sed \
 -e 's|\$BITSTORAGE_SERVER\$|'"$BITSTORAGE_SERVER"'|g' \
 <context.xml.template >context.xml
 mv context.xml $TESTBED_DIR/tomcat/conf/
+popd > /dev/null
+
+#
+# Add the iprolemapper config file to the tomcat
+#
+pushd $BASEDIR/data/templates > /dev/null
+cp ipRangesAndRoles.xml.template $TESTBED_DIR/tomcat/conf/ipRangesAndRoles.xml 
 popd > /dev/null
 
 #

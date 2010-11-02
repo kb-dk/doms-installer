@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipranges>
+    <iprange begin="130.225.24.0" end="130.225.25.255">
+        <!--Internt-->
+        <role>inhouse</role>
+    </iprange>
+    <iprange begin="130.225.26.33" end="130.225.26.33">
+        <!--Intern NAT-->
+        <role>inhouse</role>
+    </iprange>
+    <iprange begin="130.255.26.35" end="130.255.26.35">
+        <!--VPN NAT-->
+        <role>inhouse</role>
+    </iprange>
+    <iprange begin="172.16.7.0" end="172.16.7.255">
+        <!--SB NAT-->
+        <role>inhouse</role>
+    </iprange>
+    <iprange begin="172.18.0.0" end="172.18.255.255">
+        <!--Intern NAT-->
+        <role>inhouse</role>
+    </iprange>
+    <iprange begin="127.0.0.1" end="127.0.0.1">
+        <!--Intern NAT-->
+        <role>inhouse</role>
+    </iprange>
+</ipranges>
