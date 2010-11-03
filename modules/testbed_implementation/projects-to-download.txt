@@ -4,7 +4,7 @@ pidGenerator/tags/release0.0.2
 authChecker/tags/release0.0.2
 roleMapping/ipRoleMapping/tags/release0.0.4
 bitstorage/tags/release0.0.9
-domsserver/tags/release0.0.10
+domsserver/tags/release0.0.11
 updatetracker/tags/release0.0.6
 
 
