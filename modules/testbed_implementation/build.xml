@@ -39,7 +39,7 @@
         </subant>
     </target>
 
-    <target name="release" ><!--depends="getDomsServices, clean, buildDomsServices">-->
+    <target name="release" depends="getDomsServices, clean, buildDomsServices">
         <mkdir dir="dist"/>
         <unzip dest="${modules.checkoutdir}/webservices">
             <fileset dir="${modules.checkoutdir}">
