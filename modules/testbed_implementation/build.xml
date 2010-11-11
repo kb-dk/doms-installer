@@ -39,7 +39,7 @@
         </subant>
     </target>
 
-    <target name="release" depends="getDomsServices, clean, buildDomsServices">
+    <target name="release" ><!--depends="getDomsServices, clean, buildDomsServices">-->
         <mkdir dir="dist"/>
         <unzip dest="${modules.checkoutdir}/webservices">
             <fileset dir="${modules.checkoutdir}">
@@ -116,6 +116,11 @@
             <patternset includes="bitstorage-*/jars/highlevel_interface.jar"/>
             <flattenmapper/>
         </unzip>
+        <untar dest="${modules.checkoutdir}/fedoralib" compression="gzip">
+            <fileset dir="data/bugfixes" includes="*.tgz"/>
+            <patternset includes="**/lib/jotm*.jar"/>
+            <flattenmapper/>
+        </untar>
         <zip destfile="dist/${release}.zip">
             <zipfileset prefix="${release}" dir="${basedir}">
                 <include name="config/**"/>
