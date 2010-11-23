@@ -111,7 +111,9 @@ replace $BASEDIR/data/templates/setenv.sh.template            $TESTBED_DIR/confi
 ##
 ##  Set up the tomcat
 ##
-
+echo ""
+echo "TOMCAT INSTALL"
+echo ""
 echo "Unpacking the tomcat server"
 # Unpack a tomcat server
 cp $BASEDIR/data/tomcat/$TOMCATZIP $TESTBED_DIR/
@@ -149,6 +151,9 @@ echo "Tomcat setup is now done"
 ## Tomcat is now done
 
 
+echo ""
+echo "WEBSERVICE INSTALL"
+echo ""
 ##
 ## Install the doms webservices
 ##
@@ -159,7 +164,9 @@ cp -v $BASEDIR/webservices/*.war $TESTBED_DIR/tomcat/webapps
 ##
 ## Install Fedora
 ##
-echo "Installing Fedora"
+echo ""
+echo "INSTALLING FEDORA"
+echo ""
 
 echo "Configuring fedora preinstall"
 # Fix the fedora properties
@@ -217,6 +224,7 @@ echo "Fedora setup complete"
 #
 # Start the tomcat server
 #
+echo ""
 echo "Starting the tomcat server"
 $TESTBED_DIR/tomcat/bin/startup.sh > /dev/null
 echo "Sleep 30"
@@ -232,3 +240,4 @@ $BASEDIR/data/objects \
 'info:fedora/fedora-system:FOXML-1.1' \
 localhost:${PORTRANGE}80 $FEDORAADMIN $FEDORAADMINPASS http
 
+echo "Install complete"
