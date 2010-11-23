@@ -21,7 +21,6 @@
     <Parameter name="dk.statsbiblioteket.doms.ecm.pidgenerator.client.wsdllocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator/pidGenerator/?wsdl" override="false"/>
 
     <!--Central-->
-
     <Parameter name="dk.statsbiblioteket.doms.central.fedoraLocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.central.ecmLocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/ecm" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.central.bitstorageWSDL" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/highlevelbitstorage/highlevel/?wsdl" override="false"/>
