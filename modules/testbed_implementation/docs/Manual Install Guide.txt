@@ -1,0 +1,53 @@
+Okay, here goes
+
+To install the testbed, without the use of the helpful scripts, do as follows
+
+
+TOMCAT
+Set up a tomcat, running on the correct port.
+Have the tomcat running with this parameter
+export FEDORA_HOME=$FEDORAHOME$
+Could be in setenv.sh
+
+Put our context.xml in the correct folder.
+
+Put our log4j.xml in the correct folder
+
+Copy the logappender jars to the tomcat lib folder
+
+
+WEBSERVICE FLAM
+Grap the correct versions of the warfiles for
+ecm/tags/release0.0.8
+surveillance/tags/release-0.0.4
+pidGenerator/tags/release0.0.2
+authChecker/tags/release0.0.2
+bitstorage/tags/release0.0.10
+domsserver/tags/release0.0.13
+updatetracker/tags/release0.0.6
+
+and deploy them in the tomcat
+
+
+FEDORA
+
+Run the Fedora install, with our supplied properties file, and specifying the
+install folder.
+
+add the fedoralib/*.jar files to the fedora war file
+
+Deploy the fedora.war
+
+Replace the fedora.fcfg with our version
+
+ Replace the fedora policies with our versions
+
+ Replace jaas.conf with our version
+
+
+ TOMCAT
+ start the tomcat
+
+
+ Fedora
+ Ingest the base objects
