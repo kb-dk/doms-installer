@@ -50,9 +50,12 @@
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/ecm/surveyable/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/LowlevelBitstorage/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/HighlevelBitstorage/getStatusSince/{date};
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/Characteriser/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/Surveyor/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/Fedora/getStatusSince/{date};
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/DomsCentral/getStatusSince/{date};
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/UpdateTracker/getStatusSince/{date};
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/PidGenerator/getStatusSince/{date};
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/AuthChecker/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/ECM/getStatusSince/{date}"
                override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.soapUrls"

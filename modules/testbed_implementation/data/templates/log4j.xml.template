@@ -41,7 +41,7 @@
     <appender name="LowlevelBitstorageFile"
               class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="DEBUG"/>
-        <param name="File" value="$TESTBEDHOME$/logs/doms-lowlevel.log"/>
+        <param name="File" value="$TESTBED_DIR$/logs/doms-lowlevel.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -58,11 +58,12 @@
     <appender name="HighlevelBitstorageFile"
               class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="DEBUG"/>
-        <param name="File" value="$TESTBEDHOME$/logs/doms-highlevel.log"/>
+        <param name="File" value="$TESTBED_DIR$/logs/doms-highlevel.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
     </appender>
+<!--
 
     <appender name="Characteriser"
               class="dk.statsbiblioteket.doms.surveillance.logappender.LogRegistryAppender">
@@ -75,11 +76,12 @@
     <appender name="CharacteriserFile"
               class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="DEBUG"/>
-        <param name="File" value="$TESTBEDHOME$/logs/doms-characteriser.log"/>
+        <param name="File" value="$TESTBED_DIR$/logs/doms-characteriser.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
     </appender>
+-->
 
     <appender name="Surveyor"
               class="dk.statsbiblioteket.doms.surveillance.logappender.LogRegistryAppender">
@@ -92,7 +94,7 @@
     <appender name="SurveyorFile"
               class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="DEBUG"/>
-        <param name="File" value="$TESTBEDHOME$/logs/doms-surveyor.log"/>
+        <param name="File" value="$TESTBED_DIR$/logs/doms-surveyor.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -109,7 +111,7 @@
     <appender name="FedoraFile"
               class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="DEBUG"/>
-        <param name="File" value="$TESTBEDHOME$/logs/fedora.log"/>
+        <param name="File" value="$TESTBED_DIR$/logs/fedora.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -118,7 +120,7 @@
     <appender name="FedoraSurveyorFile"
               class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="DEBUG"/>
-        <param name="File" value="$TESTBEDHOME$/logs/doms-fedorasurveyor.log"/>
+        <param name="File" value="$TESTBED_DIR$/logs/doms-fedorasurveyor.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -135,7 +137,7 @@
     <appender name="ECMFile"
               class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="DEBUG"/>
-        <param name="File" value="$TESTBEDHOME$/logs/doms-ecm.log"/>
+        <param name="File" value="$TESTBED_DIR$/logs/doms-ecm.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -152,12 +154,12 @@
     <appender name="AuthCheckerFile"
               class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="DEBUG"/>
-        <param name="File" value="$TESTBEDHOME$/logs/doms-authchecker.log"/>
+        <param name="File" value="$TESTBED_DIR$/logs/doms-authchecker.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
     </appender>
-
+<!--
     <appender name="IPRoleMapper"
               class="dk.statsbiblioteket.doms.surveillance.logappender.LogRegistryAppender">
         <param name="Threshold" value="WARN"/>
@@ -169,11 +171,67 @@
     <appender name="IPRoleMapperFile"
               class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="DEBUG"/>
-        <param name="File" value="$TESTBEDHOME$/logs/doms-iprolemapper.log"/>
+        <param name="File" value="$TESTBED_DIR$/logs/doms-iprolemapper.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
     </appender>
+    -->
+
+    <appender name="UpdateTracker"
+              class="dk.statsbiblioteket.doms.surveillance.logappender.LogRegistryAppender">
+        <param name="Threshold" value="WARN"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="UpdateTrackerFile"
+              class="org.apache.log4j.FileAppender">
+        <param name="Threshold" value="DEBUG"/>
+        <param name="File" value="$TESTBED_DIR$/logs/doms-updateTracker.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="DomsCentral"
+              class="dk.statsbiblioteket.doms.surveillance.logappender.LogRegistryAppender">
+        <param name="Threshold" value="WARN"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="DomsCentralFile"
+              class="org.apache.log4j.FileAppender">
+        <param name="Threshold" value="DEBUG"/>
+        <param name="File" value="$TESTBED_DIR$/logs/doms-central.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+
+    <appender name="PidGenerator"
+              class="dk.statsbiblioteket.doms.surveillance.logappender.LogRegistryAppender">
+        <param name="Threshold" value="WARN"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="PidGeneratorFile"
+              class="org.apache.log4j.FileAppender">
+        <param name="Threshold" value="DEBUG"/>
+        <param name="File" value="$TESTBED_DIR$/logs/doms-pidgenerator.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+
+<!--
 
     <appender name="SummaStorage"
               class="dk.statsbiblioteket.doms.surveillance.logappender.LogRegistryAppender">
@@ -186,16 +244,17 @@
     <appender name="SummaStorageFile"
               class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="DEBUG"/>
-        <param name="File" value="$TESTBEDHOME$/logs/doms-summastorage.log"/>
+        <param name="File" value="$TESTBED_DIR$/logs/doms-summastorage.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
     </appender>
+-->
 
     <appender name="DomsFile"
               class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="INFO"/>
-        <param name="File" value="$TESTBEDHOME$/logs/doms.log"/>
+        <param name="File" value="$TESTBED_DIR$/logs/doms.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -221,12 +280,14 @@
         <appender-ref ref="HighlevelBitstorage"/>
         <appender-ref ref="HighlevelBitstorageFile"/>
     </logger>
+<!--
 
     <logger name="dk.statsbiblioteket.doms.bitstorage.characteriser">
         <level value="ALL"/>
         <appender-ref ref="Characteriser"/>
         <appender-ref ref="CharacteriserFile"/>
     </logger>
+-->
 
     <logger name="dk.statsbiblioteket.doms.surveillance.surveyor">
         <level value="ALL"/>
@@ -263,18 +324,42 @@
         <appender-ref ref="AuthChecker"/>
         <appender-ref ref="AuthCheckerFile"/>
     </logger>
+<!--
 
     <logger name="dk.statsbiblioteket.doms.iprolemapper">
         <level value="ALL"/>
         <appender-ref ref="IPRoleMapper"/>
         <appender-ref ref="IPRoleMapperFile"/>
     </logger>
+-->
+<!--
 
     <logger name="dk.statsbiblioteket.doms.integration.summa">
         <level value="ALL"/>
         <appender-ref ref="SummaStorage"/>
         <appender-ref ref="SummaStorageFile"/>
     </logger>    
+-->
+
+    <logger name="dk.statsbiblioteket.doms.updatetracker">
+        <level value="ALL"/>
+        <appender-ref ref="UpdateTracker"/>
+        <appender-ref ref="UpdateTrackerFile"/>
+    </logger>
+
+
+    <logger name="dk.statsbiblioteket.doms.central">
+        <level value="ALL"/>
+        <appender-ref ref="DomsCentral"/>
+        <appender-ref ref="DomsCentralFile"/>
+    </logger>
+
+
+    <logger name="dk.statsbiblioteket.doms.pidgenerator">
+        <level value="ALL"/>
+        <appender-ref ref="PidGenerator"/>
+        <appender-ref ref="PidGeneratorFile"/>
+    </logger>
 
 
     <root>
