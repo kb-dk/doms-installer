@@ -27,6 +27,8 @@
                         xmlns="info:fedora/fedora-system:def/dsCompositeModel#">
                     <dsTypeModel ID="CONTENTS">
                         <form FORMAT_URI="info:pronom/x-fmt/386"/>
+                        <form FORMAT_URI="info:pronom/x-fmt/385"/>
+                        <form FORMAT_URI="info:pronom/fmt/6"/>
                     </dsTypeModel>
                 </dsCompositeModel>
             </foxml:xmlContent>
