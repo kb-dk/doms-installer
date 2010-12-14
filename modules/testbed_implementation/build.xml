@@ -12,6 +12,7 @@
     <target name="clean">
         <delete dir="dist"/>
         <delete dir="${modules.checkoutdir}/logappender"/>
+        <delete dir="${modules.checkoutdir}/fedoralib"/>
         <delete dir="${modules.checkoutdir}/webservices"/>
         <subant target="distclean" antfile="build.xml">
             <fileset dir="${modules.checkoutdir}">
@@ -39,8 +40,9 @@
         </subant>
     </target>
 
-    <target name="release" depends="getDomsServices, clean, buildDomsServices">
+    <target name="release"><!--depends="getDomsServices, clean, buildDomsServices">-->
         <mkdir dir="dist"/>
+        <!--Package the webservices-->
         <unzip dest="${modules.checkoutdir}/webservices">
             <fileset dir="${modules.checkoutdir}">
                 <include name="**/dist/*.zip"/>
@@ -53,46 +55,45 @@
             <patternset includes="**/*.war"/>
             <flattenmapper/>
         </unzip>
-        <!--
-               <unzip dest="${modules.checkoutdir}/webservices">
-                    <fileset dir="${newestReleases.dir}" erroronmissingdir="false" includes="*.zip"/>
-                    <patternset includes="**/*.war"/>
-                    <flattenmapper/>
-                </unzip>
-        -->
-        <unzip dest="${modules.checkoutdir}/logappender">
+
+
+        <!--Use the authchecker package for fedora-->
+        <mkdir dir="${modules.checkoutdir}/authCheckertemp"/>
+        <unzip dest="${modules.checkoutdir}/authCheckertemp">
             <fileset dir="${modules.checkoutdir}"
-                     includes="surveillance/**/dist/surveillance-*.zip">
+                     includes="authChecker/**/dist/authChecker-*.zip">
                 <exclude name="**/modules/**"/>
                 <exclude name="**/lib/**"/>
-
             </fileset>
             <fileset dir="${newestReleases.dir}" erroronmissingdir="false"
-                     includes="*.zip"/>
-            <patternset includes="surveillance-*/jars/*.jar"/>
+                     includes="authChecker-*.zip"/>
+            <patternset includes="authChecker-*/packages/fedoralogin-bin.zip"/>
             <flattenmapper/>
-        </unzip>
-        <!--TODO This is temporary, until buildframework generates reasonable package-->
-        <copy todir="${modules.checkoutdir}/logappender">
-            <fileset dir="${modules.checkoutdir}/surveillance">
-                <include name="**/*log*/jars/*.jar"/>
-                <include name="**/*util*/jars/*.jar"/>
-                <include name="**/*slf4j*/jars/*.jar"/>
-            </fileset>
-            <flattenmapper/>
-        </copy>
-
-        <unzip dest="${modules.checkoutdir}/authCheckertemp">
-            <fileset dir="${modules.checkoutdir}" includes="authChecker/**/dist/authChecker*-bin.zip"/>
         </unzip>
         <unzip dest="${modules.checkoutdir}/fedoralib">
             <!--    '/home/abr/Projects/checkout/authCheckertemp/authChecker-0.0.1#SNAPSHOT/executables/fedoralogin/fedoralogin-bin.zip' -->
-            <fileset dir="${modules.checkoutdir}/authCheckertemp" includes="authChecker-*/executables/**/*.zip"/>
-            <patternset includes="lib/*.jar" excludes="lib/commons-logging*"/>
+            <fileset dir="${modules.checkoutdir}/authCheckertemp"
+                     includes="fedoralogin-bin.zip"/>
+            <patternset includes="lib/*.jar"/>
+            <flattenmapper/>
         </unzip>
-        <move overwrite="true" todir="${modules.checkoutdir}/fedoralib">
-            <fileset dir="${modules.checkoutdir}/fedoralib/lib" includes="*"/>
-        </move>
+        <delete dir="${modules.checkoutdir}/authCheckertemp"/>
+
+
+        <!--Use the log surveillance package from domsutil for fedora-->
+        <unzip dest="${modules.checkoutdir}/fedoralib">
+            <fileset dir="${modules.checkoutdir}"
+                     includes="domsutil/**/dist/domsutil-*.zip">
+                <exclude name="**/modules/**"/>
+                <exclude name="**/lib/**"/>
+            </fileset>
+            <fileset dir="${newestReleases.dir}" erroronmissingdir="false"
+                     includes="domsutil-*.zip"/>
+            <patternset includes="domsutil-*/jars/*.jar"/>
+            <flattenmapper/>
+        </unzip>
+
+        <!--Use the ecm validatorhook for fedora-->
         <unzip dest="${modules.checkoutdir}/fedoralib">
             <fileset dir="${modules.checkoutdir}"
                      includes="ecm/**/dist/ecm-*.zip">
@@ -104,6 +105,8 @@
             <patternset includes="ecm-*/jars/fedoravalidatorhook.jar"/>
             <flattenmapper/>
         </unzip>
+
+        <!--Use the hookapprove and bitstorage interfaces for fedora-->
         <unzip dest="${modules.checkoutdir}/fedoralib">
             <fileset dir="${modules.checkoutdir}"
                      includes="bitstorage/**/dist/bitstorage-*.zip">
@@ -116,11 +119,23 @@
             <patternset includes="bitstorage-*/jars/highlevel_interface.jar"/>
             <flattenmapper/>
         </unzip>
+
+        <!--Use the jotm missing jars for fedora-->
         <untar dest="${modules.checkoutdir}/fedoralib" compression="gzip">
             <fileset dir="data/bugfixes" includes="*.tgz"/>
             <patternset includes="**/lib/jotm*.jar"/>
             <flattenmapper/>
         </untar>
+
+        <!--And other stuff from fedora lib-->
+        <copy todir="${modules.checkoutdir}/fedoralib">
+            <fileset dir="predata/fedoralib">
+                <include name="**/*.jar"/>
+            </fileset>
+            <flattenmapper/>
+        </copy>
+
+
         <zip destfile="dist/${release}.zip">
             <zipfileset prefix="${release}" dir="${basedir}">
                 <include name="config/**"/>
@@ -134,10 +149,12 @@
                         dir="${modules.checkoutdir}/webservices">
                 <include name="*.war"/>
             </zipfileset>
-            <zipfileset prefix="${release}/logappender"
-                        dir="${modules.checkoutdir}/logappender">
-                <include name="*.jar"/>
-            </zipfileset>
+            <!--
+                        <zipfileset prefix="${release}/logappender"
+                                    dir="${modules.checkoutdir}/logappender">
+                            <include name="*.jar"/>
+                        </zipfileset>
+            -->
             <zipfileset prefix="${release}/fedoralib"
                         dir="${modules.checkoutdir}/fedoralib">
                 <include name="*.jar"/>

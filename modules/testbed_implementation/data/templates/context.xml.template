@@ -47,7 +47,19 @@
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-surveyor/surveyable/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-fedorasurveyor/surveyable/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/authchecker/surveyable/getStatusSince/{date};
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/ecm/surveyable/getStatusSince/{date};
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/ecm/surveyable/getStatusSince/{date};"
+               override="false"/>
+
+    <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.soapUrls"
+               value="
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/lowlevelbitstorage/lowlevelsurveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/highlevelbitstorage/highlevelsurveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator/pidgeneratorsurveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/updatetrackerWebservice/updatetrackersurveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/centralDomsWebservice/domsserversurveyable/?wsdl" override="false"/>
+
+
+<!--
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/LowlevelBitstorage/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/HighlevelBitstorage/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/Surveyor/getStatusSince/{date};
@@ -57,15 +69,7 @@
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/PidGenerator/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/AuthChecker/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/ECM/getStatusSince/{date}"
-               override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.soapUrls"
-               value="
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/lowlevelbitstorage/lowlevelsurveyable/?wsdl;
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/highlevelbitstorage/highlevelsurveyable/?wsdl;
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator/pidgeneratorsurveyable/?wsdl;
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/updatetrackerWebservice/updatetrackersurveyable/?wsdl;
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/centralDomsWebservice/domsserversurveyable/?wsdl" override="false"/>
-
+-->
 
     <!-- Default set of monitored resources -->
     <WatchedResource>WEB-INF/web.xml</WatchedResource>

@@ -98,7 +98,7 @@ replace $BASEDIR/data/templates/server.xml.template           $TESTBED_DIR/confi
 replace $BASEDIR/data/templates/context.xml.template          $TESTBED_DIR/config/context.xml
 replace $BASEDIR/data/templates/ipRangesAndRoles.xml.template $TESTBED_DIR/config/ipRangesAndRoles.xml
 replace $BASEDIR/data/templates/tomcat-users.xml.template     $TESTBED_DIR/config/tomcat-users.xml
-replace $BASEDIR/data/templates/log4j.xml.template            $TESTBED_DIR/config/log4j.xml
+#replace $BASEDIR/data/templates/log4j.xml.template            $TESTBED_DIR/config/log4j.xml
 replace $BASEDIR/data/templates/fedora.properties.template    $TESTBED_DIR/config/fedora.properties
 replace $BASEDIR/data/templates/fedora.properties.derby.template $TESTBED_DIR/config/fedora.properties.derby
 replace $BASEDIR/data/templates/fedora.properties.postgresql.template $TESTBED_DIR/config/fedora.properties.postgresql
@@ -106,6 +106,7 @@ replace $BASEDIR/data/templates/logback.xml.template          $TESTBED_DIR/confi
 replace $BASEDIR/data/templates/fedora.fcfg.patch.template    $TESTBED_DIR/config/fedora.fcfg.patch
 replace $BASEDIR/data/templates/jaas.conf.template            $TESTBED_DIR/config/jaas.conf
 replace $BASEDIR/data/templates/setenv.sh.template            $TESTBED_DIR/config/setenv.sh
+replace $BASEDIR/data/templates/fedoraWebXmlInsert.xml.template            $TESTBED_DIR/config/fedoraWebXmlInsert.xml
 
 
 ##
@@ -186,14 +187,22 @@ rm $TESTBED_DIR/config/fedora.properties.temp
 popd > /dev/null
 
 
-# Deploy Fedora validator hook, and approve file on publish
+# Deploy stuff from fedoralib
 echo "Repacking Fedora war files with changes"
-pushd $TESTBED_DIR/fedora/install > /dev/null
+pushd $TESTBED_DIR/fedora/install/fedorawar > /dev/null
 mkdir -p WEB-INF/lib
+
 cp $BASEDIR/fedoralib/* WEB-INF/lib
-zip -d fedora.war WEB-INF/lib/logback-\* WEB-INF/lib/slf4j-api-\* > /dev/null
-zip -r -m -u fedora.war WEB-INF/lib > /dev/null
+sed '/<\/web-app>/d' < WEB-INF/web.xml > /tmp/fedoraweb.xml
+cat $BASEDIR/config/fedoraWebXmlInsert.xml >> /tmp/fedoraweb.xml
+echo "</web-app>" >> /tmp/fedoraweb.xml
+cp /tmp/fedoraweb.xml WEB-INF/web.xml
+
+mv ../fedora.war ../fedora_original.war
+zip -r ../fedora.war * 
 popd > /dev/null
+
+
 
 echo "Install fedora.war into tomcat"
 cp $TESTBED_DIR/fedora/install/fedora.war $TESTBED_DIR/tomcat/webapps

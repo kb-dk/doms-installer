@@ -15,7 +15,7 @@
       <MaxFileSize>20MB</MaxFileSize>
     </triggeringPolicy>
   </appender>
-  <appender name="DOMS" class="dk.statsbiblioteket.doms.surveillance.logappender.LogbackRegistryAppender">
+  <appender name="DOMS" class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.LogbackRegistryAppender">
   </appender>
   <logger name="org.fcrepo" additivity="false" level="INFO">
     <appender-ref ref="FEDORA"/>
