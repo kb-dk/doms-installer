@@ -191,7 +191,7 @@ mkdir -p WEB-INF/lib
 
 cp $BASEDIR/fedoralib/* WEB-INF/lib
 sed '/<\/web-app>/d' < WEB-INF/web.xml > /tmp/fedoraweb.xml
-cat $BASEDIR/config/fedoraWebXmlInsert.xml >> /tmp/fedoraweb.xml
+cat $TESTBED_DIR/config/fedoraWebXmlInsert.xml >> /tmp/fedoraweb.xml
 echo "</web-app>" >> /tmp/fedoraweb.xml
 cp /tmp/fedoraweb.xml WEB-INF/web.xml
 
