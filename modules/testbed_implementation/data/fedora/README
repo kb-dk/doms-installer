@@ -1,2 +1,2 @@
-The snapshot release above fixes the MIMETypedStream closing error, but is
-otherwise a normal 3.4 release
+This is a 3.4 maintenance release done on the 15/12/2010, with the uncommitted
+"" fix for the 822 issue.
