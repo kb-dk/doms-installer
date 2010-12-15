@@ -40,7 +40,7 @@
         </subant>
     </target>
 
-    <target name="release"><!--depends="getDomsServices, clean, buildDomsServices">-->
+    <target name="release" depends="getDomsServices, clean, buildDomsServices">
         <mkdir dir="dist"/>
         <!--Package the webservices-->
         <unzip dest="${modules.checkoutdir}/webservices">

@@ -98,7 +98,7 @@ replace $BASEDIR/data/templates/server.xml.template           $TESTBED_DIR/confi
 replace $BASEDIR/data/templates/context.xml.template          $TESTBED_DIR/config/context.xml
 replace $BASEDIR/data/templates/ipRangesAndRoles.xml.template $TESTBED_DIR/config/ipRangesAndRoles.xml
 replace $BASEDIR/data/templates/tomcat-users.xml.template     $TESTBED_DIR/config/tomcat-users.xml
-#replace $BASEDIR/data/templates/log4j.xml.template            $TESTBED_DIR/config/log4j.xml
+replace $BASEDIR/data/templates/log4j.xml.template            $TESTBED_DIR/config/log4j.xml
 replace $BASEDIR/data/templates/fedora.properties.template    $TESTBED_DIR/config/fedora.properties
 replace $BASEDIR/data/templates/fedora.properties.derby.template $TESTBED_DIR/config/fedora.properties.derby
 replace $BASEDIR/data/templates/fedora.properties.postgresql.template $TESTBED_DIR/config/fedora.properties.postgresql
@@ -144,9 +144,6 @@ chmod +x $TESTBED_DIR/tomcat/bin/*.sh
 
 # Install log4j configuration
 cp $TESTBED_DIR/config/log4j.xml $TESTBED_DIR/tomcat/conf/log4j.xml
-
-# Insert logappender in lib
-cp $BASEDIR/logappender/*.jar $TESTBED_DIR/tomcat/lib
 
 echo "Tomcat setup is now done"
 ## Tomcat is now done
