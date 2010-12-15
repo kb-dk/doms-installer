@@ -45,7 +45,15 @@ cd $CHECKOUTDIR
 # svn checkout output goes.
 cat $SCRIPT_DIR/../$PROJECTS | while read line; do
     if [ ! -z "$line" ]; then
-        echo "Svn getting $line"
-        svn co $SOURCEFORGE_DOMS_SVN_URL/$line $CHECKOUTDIR/${line}
+
+        if [ -d "$CHECKOUTDIR/${line}" ];
+          then
+            echo "Svn updating $line"
+            
+            svn up $CHECKOUTDIR/${line}
+          else
+            echo "Svn getting $line"
+            svn co $SOURCEFORGE_DOMS_SVN_URL/$line $CHECKOUTDIR/${line}
+        fi
     fi
 done
