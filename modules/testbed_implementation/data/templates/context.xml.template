@@ -52,11 +52,12 @@
 
     <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.soapUrls"
                value="
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/lowlevelbitstorage/lowlevelsurveyable/?wsdl;
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/highlevelbitstorage/highlevelsurveyable/?wsdl;
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator/pidgeneratorsurveyable/?wsdl;
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/updatetrackerWebservice/updatetrackersurveyable/?wsdl;
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/centralDomsWebservice/domsserversurveyable/?wsdl" override="false"/>
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/lowlevelbitstorage/surveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/highlevelbitstorage/surveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/characteriser/surveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator/surveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/updatetrackerWebservice/surveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/centralDomsWebservice/surveyable/?wsdl" override="false"/>
 
 
 <!--
