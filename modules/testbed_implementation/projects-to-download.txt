@@ -1,12 +1,12 @@
 domsutil/trunk
-ecm/tags/release0.0.8
+ecm/trunk
 surveillance/trunk
-pidGenerator/tags/release0.0.2
+pidGenerator/trunk
 authChecker/trunk
 roleMapping/ipRoleMapping/tags/release0.0.5
-bitstorage/tags/release0.0.10
-domsserver/tags/release0.0.14
-updatetracker/tags/release0.0.7
+bitstorage/trunk
+domsserver/trunk
+updatetracker/trunk
 
 
 
