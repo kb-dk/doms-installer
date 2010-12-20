@@ -57,7 +57,7 @@
 
 
 
-    <appender name="DomsFedoraSurveyorLogRegistry"
+    <appender name="DomsFedoraSurveyor"
               class="dk.statsbiblioteket.doms.surveillance.logappender.LogRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages" value="100"/>
@@ -77,14 +77,14 @@
 
     <logger name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor">
         <level value="ALL"/>
-        <appender-ref ref="DomsFedoraSurveyorLogRegistry"/>
+        <appender-ref ref="DomsFedoraSurveyor"/>
         <appender-ref ref="DomsFedoraSurveyorFile"/>
     </logger>
 
 
 
 
-    <appender name="DomsSurveyorLogRegistry"
+    <appender name="DomsSurveyor"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages" value="100"/>
@@ -104,7 +104,7 @@
 
     <logger name="dk.statsbiblioteket.doms.surveillance.surveyor">
         <level value="ALL"/>
-        <appender-ref ref="DomsSurveyorLogRegistry"/>
+        <appender-ref ref="DomsSurveyor"/>
         <appender-ref ref="DomsSurveyorFile"/>
     </logger>
 
@@ -112,7 +112,7 @@
 
 
 
-    <appender name="DomsAuthcheckerLogRegistry"
+    <appender name="DomsAuthchecker"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages" value="100"/>
@@ -132,14 +132,14 @@
 
     <logger name="dk.statsbiblioteket.doms.authchecker">
         <level value="ALL"/>
-        <appender-ref ref="DomsAuthcheckerLogRegistry"/>
+        <appender-ref ref="DomsAuthchecker"/>
         <appender-ref ref="DomsAuthcheckerFile"/>
     </logger>
 
 
 
 
-    <appender name="DomsECMLogRegistry"
+    <appender name="DomsECM"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages" value="100"/>
@@ -159,7 +159,7 @@
 
     <logger name="dk.statsbiblioteket.doms.ecm">
         <level value="ALL"/>
-        <appender-ref ref="DomsECMLogRegistry"/>
+        <appender-ref ref="DomsECM"/>
         <appender-ref ref="DomsECMFile"/>
     </logger>
 
@@ -167,7 +167,7 @@
 
 
 
-    <appender name="DomsCentralLogRegistry"
+    <appender name="DomsCentral"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages" value="100"/>
@@ -187,7 +187,7 @@
 
     <logger name="dk.statsbiblioteket.doms.central">
         <level value="ALL"/>
-        <appender-ref ref="DomsCentralLogRegistry"/>
+        <appender-ref ref="DomsCentral"/>
         <appender-ref ref="DomsCentralFile"/>
     </logger>
 
@@ -195,7 +195,7 @@
 
 
 
-    <appender name="DomsPidGeneratorRegistry"
+    <appender name="DomsPidGenerator"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages" value="100"/>
@@ -215,7 +215,7 @@
 
     <logger name="dk.statsbiblioteket.doms.pidgenerator">
         <level value="ALL"/>
-        <appender-ref ref="DomsPidGeneratorRegistry"/>
+        <appender-ref ref="DomsPidGenerator"/>
         <appender-ref ref="DomsPidGeneratorFile"/>
     </logger>
 
@@ -223,7 +223,7 @@
 
 
 
-    <appender name="DomsUpdateTrackerRegistry"
+    <appender name="DomsUpdateTracker"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages" value="100"/>
@@ -243,7 +243,7 @@
 
     <logger name="dk.statsbiblioteket.doms.updatetracker">
         <level value="ALL"/>
-        <appender-ref ref="DomsUpdateTrackerRegistry"/>
+        <appender-ref ref="DomsUpdateTracker"/>
         <appender-ref ref="DomsUpdateTrackerFile"/>
     </logger>
 
@@ -251,7 +251,7 @@
 
 
 
-    <appender name="DomsCharacteriserRegistry"
+    <appender name="DomsCharacteriser"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages"
@@ -274,7 +274,7 @@
 
     <logger name="dk.statsbiblioteket.doms.bitstorage.characteriser">
         <level value="ALL"/>
-        <appender-ref ref="DomsUpdateTrackerRegistry"/>
+        <appender-ref ref="DomsUpdateTracker"/>
         <appender-ref ref="DomsUpdateTrackerFile"/>
     </logger>
 
@@ -282,7 +282,7 @@
 
 
 
-    <appender name="DomsHighlevelBitstorageRegistry"
+    <appender name="DomsHighlevelBitstorage"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages"
@@ -306,7 +306,7 @@
 
     <logger name="dk.statsbiblioteket.doms.bitstorage.highlevel">
         <level value="ALL"/>
-        <appender-ref ref="DomsHighlevelBitstorageRegistry"/>
+        <appender-ref ref="DomsHighlevelBitstorage"/>
         <appender-ref ref="DomsHighlevelBitstorageFile"/>
     </logger>
 
@@ -316,7 +316,7 @@
 
 
 
-    <appender name="DomsLowlevelBitstorageRegistry"
+    <appender name="DomsLowlevelBitstorage"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages"
@@ -340,7 +340,7 @@
 
     <logger name="dk.statsbiblioteket.doms.central">
         <level value="ALL"/>
-        <appender-ref ref="DomsLowlevelBitstorageRegistry"/>
+        <appender-ref ref="DomsLowlevelBitstorage"/>
         <appender-ref ref="DomsLowlevelBitstorageFile"/>
     </logger>
 
