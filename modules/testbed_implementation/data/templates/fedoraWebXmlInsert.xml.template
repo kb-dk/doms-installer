@@ -1,6 +1,6 @@
 <listener>
     <listener-class>
-        dk.statsbiblioteket.doms.webservices.ConfigContextListener
+        dk.statsbiblioteket.doms.webservices.configuration.ConfigContextListener
     </listener-class>
 </listener>
 <servlet>

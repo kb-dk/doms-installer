@@ -58,9 +58,9 @@
 
 
     <appender name="DomsFedoraSurveyor"
-              class="dk.statsbiblioteket.doms.surveillance.logappender.LogRegistryAppender">
+              class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
-        <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages" value="100"/>
+        <param name="numberOfMessages" value="100"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -87,7 +87,7 @@
     <appender name="DomsSurveyor"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
-        <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages" value="100"/>
+        <param name="numberOfMessages" value="100"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -115,7 +115,7 @@
     <appender name="DomsAuthchecker"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
-        <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages" value="100"/>
+        <param name="numberOfMessages" value="100"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -142,7 +142,7 @@
     <appender name="DomsECM"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
-        <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages" value="100"/>
+        <param name="numberOfMessages" value="100"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -170,7 +170,7 @@
     <appender name="DomsCentral"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
-        <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages" value="100"/>
+        <param name="numberOfMessages" value="100"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -198,7 +198,7 @@
     <appender name="DomsPidGenerator"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
-        <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages" value="100"/>
+        <param name="numberOfMessages" value="100"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -226,7 +226,7 @@
     <appender name="DomsUpdateTracker"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
-        <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages" value="100"/>
+        <param name="numberOfMessages" value="100"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -254,7 +254,7 @@
     <appender name="DomsCharacteriser"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
-        <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages"
+        <param name="numberOfMessages"
                value="100"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
@@ -285,7 +285,7 @@
     <appender name="DomsHighlevelBitstorage"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
-        <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages"
+        <param name="numberOfMessages"
                value="100"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
@@ -319,7 +319,7 @@
     <appender name="DomsLowlevelBitstorage"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
-        <param name="dk.statsbiblioteket.doms.surveillance.logappender.numberOfMessages"
+        <param name="numberOfMessages"
                value="100"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
