@@ -338,7 +338,7 @@
 
 
 
-    <logger name="dk.statsbiblioteket.doms.central">
+    <logger name="dk.statsbiblioteket.doms.bitstorage.lowlevel">
         <level value="ALL"/>
         <appender-ref ref="DomsLowlevelBitstorage"/>
         <appender-ref ref="DomsLowlevelBitstorageFile"/>
