@@ -7,7 +7,7 @@
     <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.fedora.server" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.fedora.characstream" value="CHARACTERISATION" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.fedora.contentstream" value="CONTENTS" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.xml" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.highlevel.xml" override="false"/>
 
 
     <!--lowlevel-->
@@ -15,10 +15,10 @@
     <Parameter name="dk.statsbiblioteket.doms.bitstorage.lowlevel.bitfinder" value="$BITFINDER$" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.bitstorage.lowlevel.preferredBytesLeft" value="1000000" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.bitstorage.lowlevel.requiredBytesLeft" value="100000" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.bitstorage.lowlevel.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.xml" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.lowlevel.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.lowlevel.xml" override="false"/>
 
     <!--Characteriser-->
-    <Parameter name="dk.statsbiblioteket.doms.bitstorage.characteriser.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.xml" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.characteriser.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.characteriser.xml" override="false"/>
 
 
     <!--ECM-->
@@ -26,14 +26,14 @@
     <Parameter name="dk.statsbiblioteket.doms.ecm.fedora.location" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.ecm.pidGenerator.client" value="dk.statsbiblioteket.doms.ecm.repository.PidGeneratorImpl" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.ecm.pidgenerator.client.wsdllocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator/pidGenerator/?wsdl" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.ecm.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.xml" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.ecm.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.ecm.xml" override="false"/>
 
     <!--Central-->
     <Parameter name="dk.statsbiblioteket.doms.central.fedoraLocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.central.ecmLocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/ecm" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.central.bitstorageWSDL" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/highlevelbitstorage/highlevel/?wsdl" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.central.updateTrackerLocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/updatetrackerWebservice/updatetracker/?wsdl" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.central.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.xml" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.central.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.central.xml" override="false"/>
 
     <!--Ip role mapper-->
     <Parameter name="dk.statsbiblioteket.iprolemapping.configurationFile" value="$TESTBED_DIR$/tomcat/conf/ipRangesAndRoles.xml" override="false"/>
@@ -42,20 +42,20 @@
     <Parameter name="dk.statsbiblioteket.doms.authchecker.tickets.timeToLive" value="1200000" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.authchecker.users.timeToLive" value="1200000" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.authchecker.fedoralocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.authchecker.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.xml" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.authchecker.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.authchecker.xml" override="false"/>
 
     <!--updateTracker-->
     <Parameter name="dk.statsbiblioteket.doms.updatetracker.fedoralocation" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.updatetracker.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.xml" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.updatetracker.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.updatetracker.xml" override="false"/>
 
     <!--Pidgenerator-->
-    <Parameter name="dk.statsbiblioteket.doms.pidgenerator.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.xml" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.pidgenerator.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.pidgenerator.xml" override="false"/>
 
     <!--Fedora Surveyor-->
     <Parameter name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor.fedoraPassword" value="$FEDORAADMINPASS$" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor.fedoraUrl" value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor.fedoraUser" value="$FEDORAADMIN$" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.xml" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.fedora.xml" override="false"/>
 
 
     <!--Surveyor-->
@@ -77,7 +77,7 @@
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/updatetrackerWebservice/surveyable/?wsdl;
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/centralDomsWebservice/surveyable/?wsdl"
                override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.xml" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.log4jconfig" value="$TESTBED_DIR$/tomcat/conf/log4j.surveyor.xml" override="false"/>
 
 <!--
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-logregistrywebservice/logregistry/appender/LowlevelBitstorage/getStatusSince/{date};

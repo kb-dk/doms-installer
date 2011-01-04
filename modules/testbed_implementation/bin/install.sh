@@ -89,24 +89,18 @@ TESTBED_DIR=$(pwd)
 popd > /dev/null
 echo "Full path destination: $TESTBED_DIR"
 
+
 #
 # Configuring all the doms config files
 #
 echo "Creating config files from conf.sh"
 mkdir $TESTBED_DIR/config
-replace $BASEDIR/data/templates/server.xml.template           $TESTBED_DIR/config/server.xml
-replace $BASEDIR/data/templates/context.xml.template          $TESTBED_DIR/config/context.xml
-replace $BASEDIR/data/templates/ipRangesAndRoles.xml.template $TESTBED_DIR/config/ipRangesAndRoles.xml
-replace $BASEDIR/data/templates/tomcat-users.xml.template     $TESTBED_DIR/config/tomcat-users.xml
-replace $BASEDIR/data/templates/log4j.xml.template            $TESTBED_DIR/config/log4j.xml
-replace $BASEDIR/data/templates/fedora.properties.template    $TESTBED_DIR/config/fedora.properties
-replace $BASEDIR/data/templates/fedora.properties.derby.template $TESTBED_DIR/config/fedora.properties.derby
-replace $BASEDIR/data/templates/fedora.properties.postgresql.template $TESTBED_DIR/config/fedora.properties.postgresql
-replace $BASEDIR/data/templates/logback.xml.template          $TESTBED_DIR/config/logback.xml
-replace $BASEDIR/data/templates/fedora.fcfg.patch.template    $TESTBED_DIR/config/fedora.fcfg.patch
-replace $BASEDIR/data/templates/jaas.conf.template            $TESTBED_DIR/config/jaas.conf
-replace $BASEDIR/data/templates/setenv.sh.template            $TESTBED_DIR/config/setenv.sh
-replace $BASEDIR/data/templates/fedoraWebXmlInsert.xml.template            $TESTBED_DIR/config/fedoraWebXmlInsert.xml
+for file in $BASEDIR/data/templates/*.template ; do
+  newfile1=`basename $file`;
+  newfile2=$TESTBED_DIR/config/${newfile1%.template};
+  replace $file $newfile2
+  echo "Created config file $newfile2 from template file $file"
+done
 
 
 ##
@@ -143,7 +137,7 @@ cp $TESTBED_DIR/config/setenv.sh $TESTBED_DIR/tomcat/bin/setenv.sh
 chmod +x $TESTBED_DIR/tomcat/bin/*.sh
 
 # Install log4j configuration
-cp $TESTBED_DIR/config/log4j.xml $TESTBED_DIR/tomcat/conf/log4j.xml
+cp $TESTBED_DIR/config/log4j.*.xml $TESTBED_DIR/tomcat/conf
 
 echo "Tomcat setup is now done"
 ## Tomcat is now done
