@@ -1,2 +1,2 @@
 export CATALINA_OPTS="-XX:MaxPermSize=256m -XX:+HeapDumpOnOutOfMemoryError"
-export FEDORA_HOME=$FEDORAHOME$
+export FEDORA_HOME=$FEDORA_DIR$/

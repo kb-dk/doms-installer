@@ -4,8 +4,6 @@ ri.enabled=true
 messaging.enabled=true
 apia.auth.required=true
 ssl.available=false
-database.password=$DATABASE_PASSWORD$
-database.username=$DATABASE_PASSWORD$
 database.driver=included
 messaging.uri=vm:(broker:(tcp://localhost:$PORTRANGE$16)?useJmx=false)
 fesl.authz.enabled=false
@@ -15,7 +13,7 @@ fedora.serverHost=localhost
 fedora.serverContext=fedora
 llstore.type=akubra-fs
 fesl.authn.enabled=true
-fedora.home=$INSTALLDIR$
+fedora.home=$FEDORA_DIR$
 install.type=custom
 servlet.engine=other
 fedora.admin.pass=$FEDORAADMINPASS$

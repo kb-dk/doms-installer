@@ -19,16 +19,21 @@ function usage() {
 
 function replace(){
 sed \
--e 's|\$FEDORAHOME\$|'"$TESTBED_DIR/fedora"'|g' \
 -e 's|\$TESTBED_DIR\$|'"$TESTBED_DIR"'|g' \
+-e 's|\$LOG_DIR\$|'"$LOG_DIR"'|g' \
+-e 's|\$TOMCAT_DIR\$|'"$TOMCAT_DIR"'|g' \
+-e 's|\$FEDORA_DIR\$|'"$FEDORA_DIR"'|g' \
 -e 's|\$PORTRANGE\$|'"$PORTRANGE"'|g' \
 -e 's|\$TOMCAT_SERVERNAME\$|'"$TOMCAT_SERVERNAME"'|g' \
+-e 's|\$TOMCATMANAGER\$|'"$TOMCATMANAGER"'|g' \
+-e 's|\$TOMCATMANAGERPASS\$|'"$TOMCATMANAGERPASS"'|g' \
 -e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
 -e 's|\$FEDORAADMINPASS\$|'"$FEDORAADMINPASS"'|g' \
+-e 's|\$FEDORAUSER\$|'"$FEDORAUSER"'|g' \
+-e 's|\$FEDORAUSERPASS\$|'"$FEDORAUSERPASS"'|g' \
 -e 's|\$BITFINDER\$|'"$BITFINDER"'|g' \
 -e 's|\$BITSTORAGE_SCRIPT\$|'"$BITSTORAGE_SCRIPT"'|g' \
 -e 's|\$BITSTORAGE_SERVER\$|'"$BITSTORAGE_SERVER"'|g' \
--e 's|\$INSTALLDIR\$|'"$TESTBED_DIR"'/fedora|g' \
 -e 's|\$DATABASE_NAME\$|'"$DATABASE_NAME"'|g' \
 -e 's|\$DATABASE_USERNAME\$|'"$DATABASE_USERNAME"'|g' \
 -e 's|\$DATABASE_PASSWORD\$|'"$DATABASE_PASSWORD"'|g' \
@@ -51,10 +56,6 @@ BASEDIR=$SCRIPT_DIR/..
 TOMCATZIP=`basename $BASEDIR/data/tomcat/*.zip`
 FEDORAJAR=`basename $BASEDIR/data/fedora/*.jar`
 
-#
-# Import settings
-#
-source $SCRIPT_DIR/../config/conf.sh
 
 #
 # Parse command line arguments.
@@ -88,6 +89,12 @@ pushd $@ > /dev/null
 TESTBED_DIR=$(pwd)
 popd > /dev/null
 echo "Full path destination: $TESTBED_DIR"
+
+#
+# Import settings
+#
+source $SCRIPT_DIR/../config/conf.sh
+
 
 
 #
@@ -190,7 +197,7 @@ echo "</web-app>" >> /tmp/fedoraweb.xml
 cp /tmp/fedoraweb.xml WEB-INF/web.xml
 
 mv ../fedora.war ../fedora_original.war
-zip -r ../fedora.war * 
+zip -r ../fedora.war *    > /dev/null
 popd > /dev/null
 
 
@@ -215,6 +222,10 @@ cp -r $BASEDIR/data/policies/* $TESTBED_DIR/fedora/data/fedora-xacml-policies/re
 
 # Fix jaas.conf so that we use the doms auth checker
 cp $TESTBED_DIR/config/jaas.conf $TESTBED_DIR/fedora/server/config/jaas.conf
+
+# Setup the custom users
+cp $TESTBED_DIR/config/fedora-users.xml $TESTBED_DIR/fedora/server/config/fedora-users.xml
+
 
 echo "Fedora setup complete"
 

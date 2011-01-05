@@ -17,7 +17,7 @@
 -->
 <tomcat-users>
 <role rolename="manager"/>
-<user username="$FEDORAADMIN$" password="$FEDORAADMINPASS$" roles="manager"/>
+<user username="$TOMCATMANAGER$" password="$TOMCATMANAGERPASS$" roles="manager"/>
 <!--
   <role rolename="tomcat"/>
   <role rolename="role1"/>
