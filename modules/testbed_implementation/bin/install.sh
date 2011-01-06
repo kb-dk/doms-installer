@@ -17,31 +17,6 @@ function usage() {
 }
 
 
-function replace(){
-sed \
--e 's|\$TESTBED_DIR\$|'"$TESTBED_DIR"'|g' \
--e 's|\$LOG_DIR\$|'"$LOG_DIR"'|g' \
--e 's|\$TOMCAT_DIR\$|'"$TOMCAT_DIR"'|g' \
--e 's|\$FEDORA_DIR\$|'"$FEDORA_DIR"'|g' \
--e 's|\$PORTRANGE\$|'"$PORTRANGE"'|g' \
--e 's|\$TOMCAT_SERVERNAME\$|'"$TOMCAT_SERVERNAME"'|g' \
--e 's|\$TOMCATMANAGER\$|'"$TOMCATMANAGER"'|g' \
--e 's|\$TOMCATMANAGERPASS\$|'"$TOMCATMANAGERPASS"'|g' \
--e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
--e 's|\$FEDORAADMINPASS\$|'"$FEDORAADMINPASS"'|g' \
--e 's|\$FEDORAUSER\$|'"$FEDORAUSER"'|g' \
--e 's|\$FEDORAUSERPASS\$|'"$FEDORAUSERPASS"'|g' \
--e 's|\$BITFINDER\$|'"$BITFINDER"'|g' \
--e 's|\$BITSTORAGE_SCRIPT\$|'"$BITSTORAGE_SCRIPT"'|g' \
--e 's|\$BITSTORAGE_SERVER\$|'"$BITSTORAGE_SERVER"'|g' \
--e 's|\$DATABASE_NAME\$|'"$DATABASE_NAME"'|g' \
--e 's|\$DATABASE_USERNAME\$|'"$DATABASE_USERNAME"'|g' \
--e 's|\$DATABASE_PASSWORD\$|'"$DATABASE_PASSWORD"'|g' \
-<$1 > $2
-}
-
-
-
 
 
 #
@@ -72,23 +47,6 @@ while getopts h opt
 done
 shift $(expr $OPTIND - 1)
 
-#
-# Check for install-folder and potentially create it.
-#
-TESTBED_DIR=$@
-if [ -z "$TESTBED_DIR" ]; then
-    echo "install-dir not specified. Bailing out." 1>&2
-    usage
-fi
-if [ -d $TESTBED_DIR ]; then
-    echo ""
-else
-    mkdir -p $TESTBED_DIR
-fi
-pushd $@ > /dev/null
-TESTBED_DIR=$(pwd)
-popd > /dev/null
-echo "Full path destination: $TESTBED_DIR"
 
 #
 # Import settings
@@ -96,18 +54,6 @@ echo "Full path destination: $TESTBED_DIR"
 source $SCRIPT_DIR/../config/conf.sh
 
 
-
-#
-# Configuring all the doms config files
-#
-echo "Creating config files from conf.sh"
-mkdir $TESTBED_DIR/config
-for file in $BASEDIR/data/templates/*.template ; do
-  newfile1=`basename $file`;
-  newfile2=$TESTBED_DIR/config/${newfile1%.template};
-  replace $file $newfile2
-  echo "Created config file $newfile2 from template file $file"
-done
 
 
 ##
@@ -118,126 +64,25 @@ echo "TOMCAT INSTALL"
 echo ""
 echo "Unpacking the tomcat server"
 # Unpack a tomcat server
-cp $BASEDIR/data/tomcat/$TOMCATZIP $TESTBED_DIR/
-pushd $TESTBED_DIR > /dev/null
-unzip -q $TOMCATZIP
-mv ${TOMCATZIP%.*} tomcat
-rm $TOMCATZIP
+TEMPDIR=`mktemp -d`
+cp $BASEDIR/data/tomcat/$TOMCATZIP $TEMPDIR
+pushd $TEMPDIR > /dev/null
+unzip -q -n $TOMCATZIP
+mv ${TOMCATZIP%.*} $TOMCAT_DIR
 popd > /dev/null
-
-echo "Configuring the tomcat"
-# Replace the tomcat server.xml with our server.xml
-cp $TESTBED_DIR/config/server.xml $TESTBED_DIR/tomcat/conf/server.xml
-
-# Replace the tomcat context.xml with our context.xml
-cp $TESTBED_DIR/config/context.xml $TESTBED_DIR/tomcat/conf/context.xml
-
-# Add the iprolemapper config file to the tomcat
-cp $TESTBED_DIR/config/ipRangesAndRoles.xml $TESTBED_DIR/tomcat/conf/ipRangesAndRoles.xml
-
-# Update the tomcat tomcat-users.xml to make it possible to log into the tomcat
-# web manager-interface
-cp $TESTBED_DIR/config/tomcat-users.xml $TESTBED_DIR/tomcat/conf/tomcat-users.xml
-
-# Insert tomcat setenv.sh
-cp $TESTBED_DIR/config/setenv.sh $TESTBED_DIR/tomcat/bin/setenv.sh
-chmod +x $TESTBED_DIR/tomcat/bin/*.sh
-
-# Install log4j configuration
-cp $TESTBED_DIR/config/log4j.*.xml $TESTBED_DIR/tomcat/conf
+rm -rf $TEMPDIR > /dev/null
 
 echo "Tomcat setup is now done"
 ## Tomcat is now done
 
-
-echo ""
-echo "WEBSERVICE INSTALL"
-echo ""
-##
-## Install the doms webservices
-##
-echo "Installing the doms webservices into tomcat"
-cp -v $BASEDIR/webservices/*.war $TESTBED_DIR/tomcat/webapps
-
-
-##
-## Install Fedora
-##
-echo ""
-echo "INSTALLING FEDORA"
-echo ""
-
-echo "Configuring fedora preinstall"
-# Fix the fedora properties
-pushd $TESTBED_DIR/config > /dev/null
-if [ $USE_POSTGRESQL == "true" ]; then
-  cat fedora.properties fedora.properties.postgresql > fedora.properties.temp
-else
-  cat fedora.properties fedora.properties.derby > fedora.properties.temp
-fi
-popd > /dev/null
-
-# Install Fedora
-echo "Installing Fedora"
-pushd $BASEDIR/data/fedora > /dev/null
-java -jar $FEDORAJAR $TESTBED_DIR/config/fedora.properties.temp  > /dev/null
-rm $TESTBED_DIR/config/fedora.properties.temp
-popd > /dev/null
-
-
-# Deploy stuff from fedoralib
-echo "Repacking Fedora war files with changes"
-pushd $TESTBED_DIR/fedora/install/fedorawar > /dev/null
-mkdir -p WEB-INF/lib
-
-cp $BASEDIR/fedoralib/* WEB-INF/lib
-sed '/<\/web-app>/d' < WEB-INF/web.xml > /tmp/fedoraweb.xml
-cat $TESTBED_DIR/config/fedoraWebXmlInsert.xml >> /tmp/fedoraweb.xml
-echo "</web-app>" >> /tmp/fedoraweb.xml
-cp /tmp/fedoraweb.xml WEB-INF/web.xml
-
-mv ../fedora.war ../fedora_original.war
-zip -r ../fedora.war *    > /dev/null
-popd > /dev/null
-
-
-
-echo "Install fedora.war into tomcat"
-cp $TESTBED_DIR/fedora/install/fedora.war $TESTBED_DIR/tomcat/webapps
-
-echo "Configuring fedora postinstall"
-# Add logappender to Fedora logback configuration
-cp $TESTBED_DIR/config/logback.xml $TESTBED_DIR/fedora/server/config/logback.xml
-
-# Patch fedora.fcfg with values for hooks and identify
-cp $TESTBED_DIR/config/fedora.fcfg.patch $TESTBED_DIR/fedora/server/config/fedora.fcfg.patch
-pushd $TESTBED_DIR/fedora/server/config > /dev/null
-patch fedora.fcfg < fedora.fcfg.patch
-rm fedora.fcfg.patch
-popd > /dev/null
-
-# Install custom policies
-mkdir -p $TESTBED_DIR/fedora/data/fedora-xacml-policies/repository-policies
-cp -r $BASEDIR/data/policies/* $TESTBED_DIR/fedora/data/fedora-xacml-policies/repository-policies/
-
-# Fix jaas.conf so that we use the doms auth checker
-cp $TESTBED_DIR/config/jaas.conf $TESTBED_DIR/fedora/server/config/jaas.conf
-
-# Setup the custom users
-cp $TESTBED_DIR/config/fedora-users.xml $TESTBED_DIR/fedora/server/config/fedora-users.xml
-
-
-echo "Fedora setup complete"
-
-
-
+$SCRIPT_DIR/package.sh $TESTBED_DIR
 
 #
 # Start the tomcat server
 #
 echo ""
 echo "Starting the tomcat server"
-$TESTBED_DIR/tomcat/bin/startup.sh > /dev/null
+$TOMCAT_DIR/bin/startup.sh > /dev/null
 echo "Sleep 30"
 sleep 30
 
@@ -245,8 +90,8 @@ sleep 30
 # Ingest initial objects
 #
 echo "Ingesting base objects"
-export FEDORA_HOME=$TESTBED_DIR/fedora
-sh $TESTBED_DIR/fedora/client/bin/fedora-ingest.sh dir \
+export FEDORA_HOME=$FEDORA_DIR
+sh $FEDORA_DIR/client/bin/fedora-ingest.sh dir \
 $BASEDIR/data/objects \
 'info:fedora/fedora-system:FOXML-1.1' \
 localhost:${PORTRANGE}80 $FEDORAADMIN $FEDORAADMINPASS http
