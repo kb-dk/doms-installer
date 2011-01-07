@@ -130,6 +130,9 @@ chmod +x $TOMCAT_DIR/bin/*.sh
 cp -v $CONFIG_DIR/log4j.*.xml $TOMCAT_DIR/conf
 
 
+# Set the session timeout to 1 min
+cp -v $CONFIG_DIR/web.xml $TOMCAT_DIR/conf
+
 
 echo "Tomcat setup is now done"
 ## Tomcat is now done
