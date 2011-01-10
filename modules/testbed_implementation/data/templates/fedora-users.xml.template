@@ -8,6 +8,7 @@
     <user name="$FEDORAUSER$" password="$FEDORAUSERPASS$">
         <attribute name="fedoraRole">
             <value>user</value>
+            <value>inhouse</value>
         </attribute>
     </user>
     <user name="fedoraIntCallUser" password="changeme">
