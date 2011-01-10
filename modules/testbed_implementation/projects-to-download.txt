@@ -3,7 +3,6 @@ ecm/trunk
 surveillance/trunk
 pidGenerator/trunk
 authChecker/trunk
-roleMapping/ipRoleMapping/tags/release0.0.5
 bitstorage/trunk
 domsserver/trunk
 updatetracker/trunk
