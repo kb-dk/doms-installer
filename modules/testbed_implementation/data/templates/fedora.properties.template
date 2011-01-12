@@ -18,6 +18,7 @@ servlet.engine=other
 fedora.admin.pass=$FEDORAADMINPASS$
 
 #doesnt matter, we replace the config file anyhow
+database.driver=included
 database.jdbcDriverClass=org.postgresql.Driver
 database.jdbcURL=jdbc\:postgresql\://localhost/$POSTGRESQL_DB$
 database=postgresql

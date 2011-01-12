@@ -1,5 +1,29 @@
 <Context>
 
+    <!--Surveyor-->
+    <Parameter
+            name="dk.statsbiblioteket.doms.surveillance.surveyor.ignoredMessagesFile"
+            value="ignored.txt" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.restUrls"
+               value="
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-surveyor/surveyable/getStatusSince/{date};
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-fedorasurveyor/surveyable/getStatusSince/{date};
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/authchecker/surveyable/getStatusSince/{date};
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/ecm/surveyable/getStatusSince/{date};
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora/surveyable/getStatusSince/{date}"
+               override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.soapUrls"
+               value="
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/lowlevelbitstorage/surveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/highlevelbitstorage/surveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/characteriser/surveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator/surveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/updatetrackerWebservice/surveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/centralDomsWebservice/surveyable/?wsdl"
+               override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.log4jconfig"
+               value="$TOMCAT_DIR$/conf/log4j.surveillance-surveyor.xml"
+               override="false"/>
 
 
     <!-- Default set of monitored resources -->

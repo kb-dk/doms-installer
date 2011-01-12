@@ -1,5 +1,22 @@
 <Context>
 
+    <!--ECM-->
+       <Parameter name="dk.statsbiblioteket.doms.ecm.fedora.connector"
+                  value="dk.statsbiblioteket.doms.ecm.repository.fedoraclient.FedoraClientConnector"
+                  override="false"/>
+       <Parameter name="dk.statsbiblioteket.doms.ecm.fedora.location"
+                  value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora"
+                  override="false"/>
+       <Parameter name="dk.statsbiblioteket.doms.ecm.pidGenerator.client"
+                  value="dk.statsbiblioteket.doms.ecm.repository.PidGeneratorImpl"
+                  override="false"/>
+       <Parameter
+               name="dk.statsbiblioteket.doms.ecm.pidgenerator.client.wsdllocation"
+               value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator/pidGenerator/?wsdl"
+               override="false"/>
+       <Parameter name="dk.statsbiblioteket.doms.ecm.log4jconfig"
+                  value="$TOMCAT_DIR$/conf/log4j.ecm.xml"
+                  override="false"/>
 
 
     <!-- Default set of monitored resources -->

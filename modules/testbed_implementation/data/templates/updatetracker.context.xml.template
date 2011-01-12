@@ -1,8 +1,0 @@
-<Context>
-
-
-
-    <!-- Default set of monitored resources -->
-    <WatchedResource>WEB-INF/web.xml</WatchedResource>
-
-</Context>

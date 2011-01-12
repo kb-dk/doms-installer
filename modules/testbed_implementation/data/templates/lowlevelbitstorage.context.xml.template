@@ -1,6 +1,23 @@
 <Context>
 
 
+    <!--lowlevel-->
+    <Parameter
+            name="dk.statsbiblioteket.doms.bitstorage.lowlevel.scriptimpl.script"
+            value="$BITSTORAGE_SCRIPT$" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.lowlevel.bitfinder"
+               value="$BITFINDER$" override="false"/>
+    <Parameter
+            name="dk.statsbiblioteket.doms.bitstorage.lowlevel.preferredBytesLeft"
+            value="1000000" override="false"/>
+    <Parameter
+            name="dk.statsbiblioteket.doms.bitstorage.lowlevel.requiredBytesLeft"
+            value="100000" override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.bitstorage.lowlevel.log4jconfig"
+               value="$TOMCAT_DIR$/conf/log4j.lowlevelbitstorage.xml"
+               override="false"/>
+
+
 
     <!-- Default set of monitored resources -->
     <WatchedResource>WEB-INF/web.xml</WatchedResource>

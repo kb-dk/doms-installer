@@ -99,6 +99,9 @@ chmod +x $TOMCAT_DIR/bin/*.sh
 # Install log4j configuration
 cp -v $CONFIG_TEMP_DIR/log4j.*.xml $TOMCAT_CONFIG_DIR
 
+# Install log4j configuration
+cp -v $CONFIG_TEMP_DIR/*.context.xml $TOMCAT_CONFIG_DIR
+
 
 # Set the session timeout to 1 min
 mkdir -p $TOMCAT_DIR/conf
@@ -110,8 +113,11 @@ if [ ! $TOMCAT_CONFIG_DIR -ef $TOMCAT_DIR/conf ]; then
 
    #first, link to context.xml into the correct location
    mkdir -p $TOMCAT_DIR/conf/Catalina/localhost
-   ln -s $TOMCAT_CONFIG_DIR/context.xml $TOMCAT_DIR/conf/Catalina/localhost/context.xml
-
+   for contextfile in $TOMCAT_CONFIG_DIR/*.context.xml; do
+      basecontextname=`basename $contextfile`
+      webappname=${basecontextname%.context.xml}
+      ln -s $contextfile $TOMCAT_DIR/conf/Catalina/localhost/${webappname}.xml
+   done
    #then the log config files
    for log4jfile in $TOMCAT_CONFIG_DIR/log4j.*.xml; do
      log4jbasename=`basename $log4jfile`
