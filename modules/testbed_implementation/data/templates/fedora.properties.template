@@ -4,7 +4,6 @@ ri.enabled=true
 messaging.enabled=true
 apia.auth.required=true
 ssl.available=false
-database.driver=included
 messaging.uri=vm:(broker:(tcp://localhost:$PORTRANGE$16)?useJmx=false)
 fesl.authz.enabled=false
 deploy.local.services=false
@@ -18,9 +17,14 @@ install.type=custom
 servlet.engine=other
 fedora.admin.pass=$FEDORAADMINPASS$
 
-#doesnt matter, we replace the config file anyhow        
-database.jdbcDriverClass=org.apache.derby.jdbc.EmbeddedDriver
-database.jdbcURL=jdbc\:derby\:$FEDORA_DIR$//data/derby/fedora3;create\=true
-database=included
-database.password=fedoraAdmin
-database.username=fedoraAdmin
+#doesnt matter, we replace the config file anyhow
+database.jdbcDriverClass=org.postgresql.Driver
+database.jdbcURL=jdbc\:postgresql\://localhost/$POSTGRESQL_DB$
+database=postgresql
+database.postgresql.driver=included
+database.postgresql.jdbcDriverClass=org.postgresql.Driver
+database.postgresql.jdbcURL=jdbc\:postgresql\://localhost/$POSTGRESQL_DB$
+database.password=$POSTGRESQL_PASS$
+database.username=$POSTGRESQL_USER$
+
+

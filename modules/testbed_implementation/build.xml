@@ -138,7 +138,6 @@
 
         <zip destfile="dist/${release}.zip">
             <zipfileset prefix="${release}" dir="${basedir}">
-                <include name="config/**"/>
                 <include name="docs/**"/>
                 <include name="data/**"/>
             </zipfileset>
