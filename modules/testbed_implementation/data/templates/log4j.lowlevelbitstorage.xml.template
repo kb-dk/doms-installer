@@ -31,7 +31,7 @@
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
                      debug="false">
 
-     <!-- A console appender -->
+    <!-- A console appender -->
     <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
         <param name="Threshold" value="ERROR"/>
         <!-- or WARN or DEBUG or INFO -->
@@ -52,7 +52,8 @@
 
 
 
-    <appender name="DomsFedoraSurveyor"
+
+    <appender name="DomsLowlevelBitstorage"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <layout class="org.apache.log4j.PatternLayout">
@@ -60,20 +61,24 @@
         </layout>
     </appender>
 
-    <appender name="DomsFedoraSurveyorFile"
+
+    <appender name="DomsLowlevelBitstorageFile"
               class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="ALL"/>
-        <param name="File" value="$LOG_DIR$/DomsFedoraSurveyor.log"/>
+        <param name="File" value="$LOG_DIR$/lowlevelbitstorage.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
     </appender>
 
-    <logger name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor">
+
+
+    <logger name="dk.statsbiblioteket.doms.bitstorage.lowlevel">
         <level value="ALL"/>
-        <appender-ref ref="DomsFedoraSurveyor"/>
-        <appender-ref ref="DomsFedoraSurveyorFile"/>
+        <appender-ref ref="DomsLowlevelBitstorage"/>
+        <appender-ref ref="DomsLowlevelBitstorageFile"/>
     </logger>
+
 
     <root>
         <level value="ERROR"/>
@@ -81,5 +86,4 @@
         <appender-ref ref="DomsFile"/>
     </root>
     
-
 </log4j:configuration>

@@ -49,7 +49,10 @@
         </layout>
     </appender>
 
-    <appender name="DomsCentral"
+
+
+
+    <appender name="DomsHighlevelBitstorage"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <layout class="org.apache.log4j.PatternLayout">
@@ -57,19 +60,22 @@
         </layout>
     </appender>
 
-    <appender name="DomsCentralFile"
+
+    <appender name="DomsHighlevelBitstorageFile"
               class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="ALL"/>
-        <param name="File" value="$LOG_DIR$/DomsCentral.log"/>
+        <param name="File" value="$LOG_DIR$/highlevelbitstorage.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
     </appender>
 
-    <logger name="dk.statsbiblioteket.doms.central">
+
+
+    <logger name="dk.statsbiblioteket.doms.bitstorage.highlevel">
         <level value="ALL"/>
-        <appender-ref ref="DomsCentral"/>
-        <appender-ref ref="DomsCentralFile"/>
+        <appender-ref ref="DomsHighlevelBitstorage"/>
+        <appender-ref ref="DomsHighlevelBitstorageFile"/>
     </logger>
 
 
@@ -79,7 +85,6 @@
         <appender-ref ref="DomsFile"/>
     </root>
 
-
-
     
+
 </log4j:configuration>

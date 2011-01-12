@@ -1,9 +1,0 @@
-database.jdbcDriverClass=org.postgresql.Driver
-database.jdbcURL=jdbc\:postgresql\://localhost/doms-test$PORTRANGE$
-database=postgresql
-database.postgresql.driver=included
-database.postgresql.jdbcDriverClass=org.postgresql.Driver
-database.postgresql.jdbcURL=jdbc\:postgresql\://localhost/doms-test$PORTRANGE$
-database.password=doms-test$PORTRANGE$
-database.username=doms-test$PORTRANGE$
-

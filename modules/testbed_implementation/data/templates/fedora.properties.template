@@ -17,3 +17,10 @@ fedora.home=$FEDORA_DIR$
 install.type=custom
 servlet.engine=other
 fedora.admin.pass=$FEDORAADMINPASS$
+
+#doesnt matter, we replace the config file anyhow        
+database.jdbcDriverClass=org.apache.derby.jdbc.EmbeddedDriver
+database.jdbcURL=jdbc\:derby\:$FEDORA_DIR$//data/derby/fedora3;create\=true
+database=included
+database.password=fedoraAdmin
+database.username=fedoraAdmin

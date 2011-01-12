@@ -63,7 +63,7 @@
     <appender name="DomsPidGeneratorFile"
               class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="ALL"/>
-        <param name="File" value="$LOG_DIR$/DomsPidgenerator.log"/>
+        <param name="File" value="$LOG_DIR$/pidgenerator.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>

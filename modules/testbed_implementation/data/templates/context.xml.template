@@ -21,7 +21,7 @@
             name="dk.statsbiblioteket.doms.bitstorage.highlevel.fedora.contentstream"
             value="CONTENTS" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.log4jconfig"
-               value="$TOMCAT_DIR$/conf/log4j.highlevel.xml"
+               value="$TOMCAT_DIR$/conf/log4j.highlevelbitstorage.xml"
                override="false"/>
 
 
@@ -38,7 +38,7 @@
             name="dk.statsbiblioteket.doms.bitstorage.lowlevel.requiredBytesLeft"
             value="100000" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.bitstorage.lowlevel.log4jconfig"
-               value="$TOMCAT_DIR$/conf/log4j.lowlevel.xml"
+               value="$TOMCAT_DIR$/conf/log4j.lowlevelbitstorage.xml"
                override="false"/>
 
     <!--Characteriser-->
@@ -80,12 +80,7 @@
                value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/updatetrackerWebservice/updatetracker/?wsdl"
                override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.central.log4jconfig"
-               value="$TOMCAT_DIR$/conf/log4j.central.xml"
-               override="false"/>
-
-    <!--Ip role mapper-->
-    <Parameter name="dk.statsbiblioteket.iprolemapping.configurationFile"
-               value="$TOMCAT_DIR$/conf/ipRangesAndRoles.xml"
+               value="$TOMCAT_DIR$/conf/log4j.centralDomsWebservice.xml"
                override="false"/>
 
     <!--Auth checker-->
@@ -105,7 +100,7 @@
                value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora"
                override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.updatetracker.log4jconfig"
-               value="$TOMCAT_DIR$/conf/log4j.updatetracker.xml"
+               value="$TOMCAT_DIR$/conf/log4j.updatetrackerWebservice.xml"
                override="false"/>
 
     <!--Pidgenerator-->
@@ -126,7 +121,7 @@
             value="$FEDORAUSER$" override="false"/>
     <Parameter
             name="dk.statsbiblioteket.doms.surveillance.fedorasurveyor.log4jconfig"
-            value="$TOMCAT_DIR$/conf/log4j.fedora.xml"
+            value="$TOMCAT_DIR$/conf/log4j.surveillance-fedorasurveyor.xml"
             override="false"/>
 
 
@@ -152,7 +147,7 @@
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/centralDomsWebservice/surveyable/?wsdl"
                override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.log4jconfig"
-               value="$TOMCAT_DIR$/conf/log4j.surveyor.xml"
+               value="$TOMCAT_DIR$/conf/log4j.surveillance-surveyor.xml"
                override="false"/>
 
     <!--

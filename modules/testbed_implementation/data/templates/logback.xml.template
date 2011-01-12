@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="60 seconds">
   <property name="FEDORA_LOG_PATH"
-            value="${fedora.home}/server/logs/fedora${logfile.extension:-.log}"/>
+            value="$LOG_DIR$/fedora${logfile.extension:-.log}"/>
   <appender name="FEDORA" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <File>${FEDORA_LOG_PATH}</File>
     <layout class="ch.qos.logback.classic.PatternLayout">
