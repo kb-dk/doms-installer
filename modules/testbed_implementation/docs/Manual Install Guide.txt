@@ -1,3 +1,6 @@
+EDIT: HORRIBLY OUTDATED. INSTEAD SEE http://wiki.statsbiblioteket.dk/domswiki/Install%20Guide
+
+
 Okay, here goes
 
 To install the testbed, without the use of the helpful scripts, do as follows
