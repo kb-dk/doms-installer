@@ -120,8 +120,8 @@
     </module>
     <module role="org.fcrepo.server.security.Authorization" class="org.fcrepo.server.security.DefaultAuthorization">
         <comment>Builds and manages Fedora's authorization structure.</comment>
-        <param name="REPOSITORY-POLICIES-DIRECTORY" value="$DATA_DIR$/fedora-xacml-policies/repository-policies" isFilePath="true"/>
-        <param name="REPOSITORY-POLICY-GUITOOL-POLICIES-DIRECTORY" value="$DATA_DIR$/fedora-xacml-policies/repository-policies-generated-by-policyguitool" isFilePath="true">
+        <param name="REPOSITORY-POLICIES-DIRECTORY" value="$TOMCAT_CONFIG_DIR$/fedora/fedora-xacml-policies/repository-policies" isFilePath="true"/>
+        <param name="REPOSITORY-POLICY-GUITOOL-POLICIES-DIRECTORY" value="$TOMCAT_CONFIG_DIR$/fedora/fedora-xacml-policies/repository-policies-generated-by-policyguitool" isFilePath="true">
             <comment>This parameter is for future use.</comment>
         </param>
         <param name="XACML-COMBINING-ALGORITHM" value="com.sun.xacml.combine.OrderedDenyOverridesPolicyAlg"/>
