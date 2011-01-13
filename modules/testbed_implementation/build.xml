@@ -128,12 +128,6 @@
             <flattenmapper/>
         </unzip>
 
-        <!--Use the jotm missing jars for fedora-->
-        <untar dest="${modules.checkoutdir}/fedoralib" compression="gzip">
-            <fileset dir="data/bugfixes" includes="*.tgz"/>
-            <patternset includes="**/lib/jotm*.jar"/>
-            <flattenmapper/>
-        </untar>
 
         <!--And other stuff from fedora lib-->
         <copy todir="${modules.checkoutdir}/fedoralib">
