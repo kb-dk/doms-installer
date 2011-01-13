@@ -25,6 +25,8 @@ BASEDIR=$1
 
 PROJECTS=$2
 
+REVISION=$3
+
 SCRIPT_DIR=$(dirname $0)
 pushd $SCRIPT_DIR > /dev/null
 SCRIPT_DIR=$(pwd)
@@ -50,10 +52,10 @@ cat $SCRIPT_DIR/../$PROJECTS | while read line; do
           then
             echo "Svn updating $line"
             
-            svn up $CHECKOUTDIR/${line}
+            svn up $CHECKOUTDIR/${line} -r$REVISION
           else
             echo "Svn getting $line"
-            svn co $SOURCEFORGE_DOMS_SVN_URL/$line $CHECKOUTDIR/${line}
+            svn co $SOURCEFORGE_DOMS_SVN_URL/$line $CHECKOUTDIR/${line} -r$REVISION
         fi
     fi
 done

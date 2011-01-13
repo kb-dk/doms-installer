@@ -21,13 +21,21 @@
         </subant>
     </target>
 
+    <target name="getSubversionRevision">
+        <exec executable="svn" output="build/svn.properties">
+             <arg value="info" />
+        </exec>
+        <property prefix="svn" file="build/svn.properties"/>
+        <echo>Testbed revision: ${svn.Revision}</echo>
+    </target>
 
-    <target name="getDomsServices">
+    <target name="getDomsServices" depends="getSubversionRevision">
         <!-- Checkout the SourceForge packages needed for building the testbed -->
         <exec executable="bash">
             <arg value="build/create_build_environment.sh"/>
             <arg value="${modules.checkoutdir}"/>
             <arg value="${projects.to.download}"/>
+            <arg value="${svn.Revision}"/>
         </exec>
     </target>
 
@@ -140,6 +148,10 @@
             <zipfileset prefix="${release}" dir="${basedir}">
                 <include name="docs/**"/>
                 <include name="data/**"/>
+            </zipfileset>
+            <zipfileset prefix="${release}/versions" dir="${basedir}">
+                <include name="projects-to-download.txt"/>
+                <include name="build/svn.properties"/>
             </zipfileset>
             <zipfileset prefix="${release}" dir="${basedir}" filemode="755">
                 <include name="bin/**"/>
