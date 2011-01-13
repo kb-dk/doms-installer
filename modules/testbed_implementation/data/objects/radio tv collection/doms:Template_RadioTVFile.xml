@@ -15,7 +15,7 @@
                 VALUE="Inactive"/>
         <foxml:property
                 NAME="info:fedora/fedora-system:def/model#label"
-                VALUE="Template RadioTV File"/>
+                VALUE="Radio/TV File"/>
     </foxml:objectProperties>
 
     <foxml:datastream CONTROL_GROUP="X" ID="DC" STATE="A" VERSIONABLE="true">
@@ -25,7 +25,7 @@
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
             <foxml:xmlContent>
                 <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
-                    <dc:title>Template Radio TV File</dc:title>
+                    <dc:title>Radio/TV File</dc:title>
                     <dc:identifier>doms:Template_RadioTVFile</dc:identifier>
                 </oai_dc:dc>
             </foxml:xmlContent>
