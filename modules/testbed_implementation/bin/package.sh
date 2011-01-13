@@ -102,7 +102,6 @@ chmod +x $TOMCAT_DIR/bin/*.sh
 cp -v $CONFIG_TEMP_DIR/log4j.*.xml $TOMCAT_CONFIG_DIR
 
 # Install context.xml configuration
-#cp -v $CONFIG_TEMP_DIR/*.context.xml $TOMCAT_CONFIG_DIR
 cp -v $CONFIG_TEMP_DIR/context.xml.default $TOMCAT_CONFIG_DIR
 
 # Set the session timeout to 1 min
@@ -117,11 +116,6 @@ if [ ! $TOMCAT_CONFIG_DIR -ef $TOMCAT_DIR/conf ]; then
    mkdir -p $TOMCAT_DIR/conf/Catalina/localhost
    ln -s $TOMCAT_CONFIG_DIR/context.xml.default $TOMCAT_DIR/conf/Catalina/localhost/context.xml.default 
 
-   #for contextfile in $TOMCAT_CONFIG_DIR/*.context.xml; do
-   #   basecontextname=`basename $contextfile`
-   #   webappname=${basecontextname%.context.xml}
-   #   ln -s $contextfile $TOMCAT_DIR/conf/Catalina/localhost/${webappname}.xml
-   #done
 fi
 
 echo "Tomcat setup is now done"
@@ -180,33 +174,23 @@ echo "Configuring fedora postinstall"
 mkdir -p $TOMCAT_CONFIG_DIR/fedora
 
 # Add logappender to Fedora logback configuration
-cp -v $CONFIG_TEMP_DIR/logback.xml $TOMCAT_CONFIG_DIR/fedora/logback.xml
-rm $FEDORA_DIR/server/config/logback.xml
-ln -s $TOMCAT_CONFIG_DIR/fedora/logback.xml $FEDORA_DIR/server/config/logback.xml
+cp -v $CONFIG_TEMP_DIR/logback.xml $FEDORA_DIR/server/config/logback.xml
 
 # Add logappender to Fedora logback configuration
-cp -v $CONFIG_TEMP_DIR/fedora.fcfg  $TOMCAT_CONFIG_DIR/fedora/fedora.fcfg
-rm $FEDORA_DIR/server/config/fedora.fcfg
-ln -s $TOMCAT_CONFIG_DIR/fedora/fedora.fcfg $FEDORA_DIR/server/config/fedora.fcfg
+cp -v $CONFIG_TEMP_DIR/fedora.fcfg  $FEDORA_DIR/server/config/fedora.fcfg
 
 # Install custom policies
 mkdir -p $TOMCAT_CONFIG_DIR/fedora/fedora-xacml-policies/repository-policies
 cp -rv $BASEDIR/data/policies/* $TOMCAT_CONFIG_DIR/fedora/fedora-xacml-policies/repository-policies/
 
 # Fix jaas.conf so that we use the doms auth checker
-cp -v $CONFIG_TEMP_DIR/jaas.conf  $TOMCAT_CONFIG_DIR/fedora/jaas.conf
-rm $FEDORA_DIR/server/config/jaas.conf
-ln -s $TOMCAT_CONFIG_DIR/fedora/jaas.conf $FEDORA_DIR/server/config/jaas.conf
+cp -v $CONFIG_TEMP_DIR/jaas.conf  $FEDORA_DIR/server/config/jaas.conf
 
 # Setup the custom users
-cp -v $CONFIG_TEMP_DIR/fedora-users.xml $TOMCAT_CONFIG_DIR/fedora/fedora-users.xml
-rm $FEDORA_DIR/server/config/fedora-users.xml
-ln -s $TOMCAT_CONFIG_DIR/fedora/fedora-users.xml $FEDORA_DIR/server/config/fedora-users.xml
+cp -v $CONFIG_TEMP_DIR/fedora-users.xml $FEDORA_DIR/server/config/fedora-users.xml
 
 # Setup the the lowlevel storage
-cp -v $CONFIG_TEMP_DIR/akubra-llstore.xml  $TOMCAT_CONFIG_DIR/fedora/akubra-llstore.xml
-rm $FEDORA_DIR/server/config/akubra-llstore.xml
-ln -s $TOMCAT_CONFIG_DIR/fedora/akubra-llstore.xml $FEDORA_DIR/server/config/akubra-llstore.xml
+cp -v $CONFIG_TEMP_DIR/akubra-llstore.xml $FEDORA_DIR/server/config/akubra-llstore.xml
 
 
 echo "Fedora setup complete"
