@@ -76,6 +76,7 @@
                     <patternset includes="domsutil-*/jars/sbutil*.jar" />
                     <patternset includes="domsutil-*/jars/webservice-common*.jar" />
                     <patternset includes="domsutil-*/jars/surveillance-logappender*.jar" />
+                                        <patternset includes="domsutil-*/jars/surveyable*.jar" />
                     <flattenmapper/>
                 </unzip>
 
