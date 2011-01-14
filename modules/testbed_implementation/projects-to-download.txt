@@ -1,12 +1,11 @@
-domsutil/tags/release-0.0.15
-ecm/tags/release0.0.10
-surveillance/tags/release-0.0.6
-pidGenerator/tags/release0.0.3
-authChecker/tags/release0.0.4
-bitstorage/tags/release0.0.11
-domsserver/tags/release0.0.15
-updatetracker/tags/release0.0.8
-
+surveillance/tags/release0.0.7
+ecm/tags/release0.0.12
+pidGenerator/tags/release0.0.4
+authChecker/tags/release0.0.6
+domsserver/tags/release0.0.16
+bitstorage/tags/release0.0.14
+updatetracker/tags/release0.0.10
+domsutil/tags/release0.0.16
 
 
 
