@@ -5,7 +5,7 @@ authChecker/tags/release0.0.6
 domsserver/tags/release0.0.16
 bitstorage/tags/release0.0.14
 updatetracker/tags/release0.0.10
-domsutil/tags/release0.0.16
+domsutil/tags/release-0.0.16
 
 
 
