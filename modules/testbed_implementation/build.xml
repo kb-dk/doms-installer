@@ -91,13 +91,13 @@
             </fileset>
             <fileset dir="${newestReleases.dir}" erroronmissingdir="false"
                      includes="authChecker-*.zip"/>
-            <patternset includes="authChecker-*/packages/fedoralogin-bin.zip"/>
+            <patternset includes="authChecker-*/packages/fedoralogin-*-bin.zip"/>
             <flattenmapper/>
         </unzip>
         <unzip dest="${modules.checkoutdir}/fedoralib">
 
             <fileset dir="${modules.checkoutdir}/authCheckertemp"
-                     includes="fedoralogin-bin.zip"/>
+                     includes="fedoralogin-*-bin.zip"/>
             <patternset includes="lib/*.jar"/>
             <flattenmapper/>
         </unzip>
