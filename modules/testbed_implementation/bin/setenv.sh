@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 TOMCATZIP=`basename $BASEDIR/data/tomcat/*.zip`
 FEDORAJAR=`basename $BASEDIR/data/fedora/*.jar`
 
@@ -21,7 +20,7 @@ pushd $@ > /dev/null
 TESTBED_DIR=$(pwd)
 popd > /dev/null
 
-
+# The normal config values
 PORTRANGE=78
 TOMCAT_SERVERNAME=localhost
 
@@ -31,9 +30,10 @@ FEDORAADMINPASS=fedoraAdminPass
 FEDORAUSER=fedoraReadOnlyAdmin
 FEDORAUSERPASS=fedoraReadOnlyPass
 
-LOG_DIR=$TESTBED_DIR/logs
-
+# The folders
 TOMCAT_DIR=$TESTBED_DIR/tomcat
+
+LOG_DIR=$TOMCAT_DIR/logs
 
 FEDORA_DIR=$TESTBED_DIR/services/fedora
 
@@ -45,15 +45,12 @@ TOMCAT_CONFIG_DIR=$TESTBED_DIR/services/conf
 
 WEBAPPS_DIR=$TESTBED_DIR/services/webapps
 
-
-
+#Database
 USE_POSTGRESQL=true
 POSTGRESQL_DB=doms-test$PORTRANGE
 POSTGRESQL_USER=doms-test$PORTRANGE
 POSTGRESQL_PASS=doms-test$PORTRANGE
 
-
-
+#Bitstorage
 BITFINDER=http://bitfinder.statsbiblioteket.dk/
 BITSTORAGE_SCRIPT="ssh doms@stage01 bin/server.sh"
-

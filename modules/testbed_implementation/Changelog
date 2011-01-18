@@ -1,5 +1,7 @@
 
 
+18/1/2011 Removed unneeded things from fedora.fcfg
+
 18/1/2011 Policies moved from TOMCAT_CONF_DIR/fedora to FEDORA_DIR
 
 18/1/2011 Added fedora.home to context.xml
