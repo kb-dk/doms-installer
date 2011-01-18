@@ -1,5 +1,7 @@
 <Context>
 
+    <!-- fedora settings, the only one relevant -->
+    <Parameter name="fedora.home" value="$FEDORA_DIR$" override="false"/>
 
     <!--highlevelbitstorage-->
     <Parameter

@@ -180,8 +180,8 @@ cp -v $CONFIG_TEMP_DIR/logback.xml $FEDORA_DIR/server/config/logback.xml
 cp -v $CONFIG_TEMP_DIR/fedora.fcfg  $FEDORA_DIR/server/config/fedora.fcfg
 
 # Install custom policies
-mkdir -p $TOMCAT_CONFIG_DIR/fedora/fedora-xacml-policies/repository-policies
-cp -rv $BASEDIR/data/policies/* $TOMCAT_CONFIG_DIR/fedora/fedora-xacml-policies/repository-policies/
+mkdir -p $FEDORA_DIR/fedora-xacml-policies/repository-policies/
+cp -rv $BASEDIR/data/policies/* $FEDORA_DIR/fedora-xacml-policies/repository-policies/
 
 # Fix jaas.conf so that we use the doms auth checker
 cp -v $CONFIG_TEMP_DIR/jaas.conf  $FEDORA_DIR/server/config/jaas.conf

@@ -1,0 +1,7 @@
+
+
+18/1/2011 Policies moved from TOMCAT_CONF_DIR/fedora to FEDORA_DIR
+
+18/1/2011 Added fedora.home to context.xml
+
+17/1/2011 Release of version 0.10.16 - First official release, changelog begins here

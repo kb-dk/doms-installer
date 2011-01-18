@@ -23,7 +23,7 @@
 
     <target name="getSubversionRevision">
         <exec executable="svn" output="build/svn.properties">
-             <arg value="info" />
+            <arg value="info"/>
         </exec>
         <property prefix="svn" file="build/svn.properties"/>
         <echo>Testbed revision: ${svn.Revision}</echo>
@@ -61,25 +61,27 @@
             <fileset dir="${newestReleases.dir}" erroronmissingdir="false"
                      includes="*.zip"/>
             <patternset includes="**/*.war"/>
+            
             <flattenmapper/>
+
         </unzip>
 
         <!--Use the sbutils and log surveillance package from domsutil for fedora-->
-                <unzip dest="${modules.checkoutdir}/fedoralib">
-                    <fileset dir="${modules.checkoutdir}"
-                             includes="domsutil/**/dist/domsutil-*.zip">
-                        <exclude name="**/modules/**"/>
-                        <exclude name="**/lib/**"/>
-                    </fileset>
-                    <fileset dir="${newestReleases.dir}" erroronmissingdir="false"
-                             includes="domsutil-*.zip"/>
-                    <patternset includes="domsutil-*/jars/sbutil*.jar" />
-                    <patternset includes="domsutil-*/jars/webservice-common*.jar" />
-                    <patternset includes="domsutil-*/jars/surveillance-logappender*.jar" />
-                                        <patternset includes="domsutil-*/jars/surveyable*.jar" />
-                    <flattenmapper/>
-                </unzip>
-
+        <unzip dest="${modules.checkoutdir}/fedoralib">
+            <fileset dir="${modules.checkoutdir}"
+                     includes="domsutil/**/dist/domsutil-*.zip">
+                <exclude name="**/modules/**"/>
+                <exclude name="**/lib/**"/>
+            </fileset>
+            <fileset dir="${newestReleases.dir}" erroronmissingdir="false"
+                     includes="domsutil-*.zip"/>
+            <patternset includes="domsutil-*/jars/sbutil*.jar"/>
+            <patternset includes="domsutil-*/jars/webservice-common*.jar"/>
+            <patternset
+                    includes="domsutil-*/jars/surveillance-logappender*.jar"/>
+            <patternset includes="domsutil-*/jars/surveyable*.jar"/>
+            <flattenmapper/>
+        </unzip>
 
 
         <!--Use the authchecker package for fedora-->
@@ -92,7 +94,8 @@
             </fileset>
             <fileset dir="${newestReleases.dir}" erroronmissingdir="false"
                      includes="authChecker-*.zip"/>
-            <patternset includes="authChecker-*/packages/fedoralogin-*-bin.zip"/>
+            <patternset
+                    includes="authChecker-*/packages/fedoralogin-*-bin.zip"/>
             <flattenmapper/>
         </unzip>
         <unzip dest="${modules.checkoutdir}/fedoralib">
@@ -103,7 +106,6 @@
             <flattenmapper/>
         </unzip>
         <delete dir="${modules.checkoutdir}/authCheckertemp"/>
-
 
 
         <!--Use the ecm validatorhook for fedora-->
