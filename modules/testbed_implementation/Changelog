@@ -1,4 +1,5 @@
 
+20/1/2011 Updated ECM to version 0.0.13, so that it does not cause "deprecated" warnings in fedora.log
 
 18/1/2011 Removed unneeded things from fedora.fcfg
 
