@@ -1,4 +1,6 @@
 
+24/1/2011 Updated fedora to version 3.4.2. Should not have any incompabilities aas we were using a maintenance snapshot before
+
 20/1/2011 Updated ECM to version 0.0.13, so that it does not cause "deprecated" warnings in fedora.log
 
 18/1/2011 Removed unneeded things from fedora.fcfg
