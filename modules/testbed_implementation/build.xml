@@ -143,6 +143,7 @@
             <zipfileset prefix="${release}/versions" dir="${basedir}">
                 <include name="projects-to-download.txt"/>
                 <include name="build/svn.properties"/>
+                <include name="Changelog"/>
             </zipfileset>
             <zipfileset prefix="${release}" dir="${basedir}" filemode="755">
                 <include name="bin/**"/>

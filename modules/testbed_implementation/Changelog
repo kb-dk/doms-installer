@@ -1,4 +1,6 @@
-26/1/2011 updated the logging configurations, so that we log on INFO in 
+26/1/2011 Release of version 0.10.17 - Second official Release
+
+26/1/2011 updated the logging configurations, so that we log on INFO in
 individuals files, and WARN in the doms.log file.
 
 26/1/2011 Updated base objects so that
