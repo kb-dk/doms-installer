@@ -60,7 +60,7 @@
                 MIMETYPE="text/xml"
                 LABEL="PBCore">
             <foxml:xmlContent>
-                <!--Insert pbcore here-->
+                <PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html"/>
             </foxml:xmlContent>
         </foxml:datastreamVersion>
     </foxml:datastream>
