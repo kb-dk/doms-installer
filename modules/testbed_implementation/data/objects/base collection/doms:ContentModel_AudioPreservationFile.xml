@@ -98,6 +98,7 @@
     </foxml:datastream>
 
 
+<!--
     <foxml:datastream
             CONTROL_GROUP="E"
             ID="POLICY"
@@ -105,10 +106,12 @@
             VERSIONABLE="true">
         <foxml:datastreamVersion
                 ID="POLICY.0"
-                LABEL="License for this object">
+                LABEL="License for this object"
+                MIMETYPE="application/rdf+xml">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
             <foxml:contentLocation REF="http://local.fedora.server/fedora/objects/doms:Open_License/datastreams/LICENSE/content" TYPE="URL"/>
         </foxml:datastreamVersion>
     </foxml:datastream>
+-->
 
 </foxml:digitalObject>

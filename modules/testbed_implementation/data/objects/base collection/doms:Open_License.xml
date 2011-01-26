@@ -28,7 +28,8 @@
             <foxml:xmlContent>
                 <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/">
                     <dc:title>Open License</dc:title>
-                    <dc:description>A license granting unlimited access for all.</dc:description>
+                    <dc:description>A license granting unlimited access for all.
+                        Having this license is the same as not having a license, as it mirrors the default.</dc:description>
                     <dc:identifier>doms:Open_License</dc:identifier>
                 </oai_dc:dc>
             </foxml:xmlContent>
@@ -58,6 +59,7 @@
         </foxml:datastreamVersion>
     </foxml:datastream>
 
+<!--
     <foxml:datastream
             CONTROL_GROUP="X"
             ID="POLICY"
@@ -65,7 +67,8 @@
             VERSIONABLE="true">
         <foxml:datastreamVersion
                 ID="POLICY.0"
-                LABEL="License for this object">
+                LABEL="License for this object"
+                MIMETYPE="application/rdf+xml">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
             <foxml:xmlContent>
                 <Policy xmlns="urn:oasis:names:tc:xacml:1.0:policy"
@@ -77,21 +80,39 @@
                         for all actions on a object by everybody.
                     </Description>
                     <Target>
-                        <!-- *********************************************************************************************************************************************************-->
-                        <!--  This policy is applicable to any Subject. -->
-                        <!-- *********************************************************************************************************************************************************-->
+                        -->
+<!-- *********************************************************************************************************************************************************-->
+<!--
+                        -->
+<!--  This policy is applicable to any Subject. -->
+<!--
+                        -->
+<!-- *********************************************************************************************************************************************************-->
+<!--
                         <Subjects>
                             <AnySubject/>
                         </Subjects>
-                        <!-- *********************************************************************************************************************************************************-->
-                        <!--  This policy is applicable to any resource -->
-                        <!-- *********************************************************************************************************************************************************-->
+                        -->
+<!-- *********************************************************************************************************************************************************-->
+<!--
+                        -->
+<!--  This policy is applicable to any resource -->
+<!--
+                        -->
+<!-- *********************************************************************************************************************************************************-->
+<!--
                         <Resources>
                             <AnyResource/>
                         </Resources>
-                        <!-- *********************************************************************************************************************************************************-->
-                        <!--  This policy is applicable to any action. -->
-                        <!-- *********************************************************************************************************************************************************-->
+                        -->
+<!-- *********************************************************************************************************************************************************-->
+<!--
+                        -->
+<!--  This policy is applicable to any action. -->
+<!--
+                        -->
+<!-- *********************************************************************************************************************************************************-->
+<!--
                         <Actions>
                             <AnyAction/>
                         </Actions>
@@ -101,6 +122,7 @@
             </foxml:xmlContent>
         </foxml:datastreamVersion>
     </foxml:datastream>
+-->
 
     <foxml:datastream ID="LICENSE" CONTROL_GROUP="X">
         <foxml:datastreamVersion ID="LICENSE.0" MIMETYPE="text/xml">

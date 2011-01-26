@@ -16,7 +16,7 @@
                 VALUE="A"/>
         <foxml:property
                 NAME="info:fedora/fedora-system:def/model#label"
-                VALUE="Content Model File"/>
+                VALUE="Content Model for File Objects"/>
     </foxml:objectProperties>
 
     <foxml:datastream ID="DC" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
@@ -166,6 +166,7 @@
         </foxml:datastreamVersion>
     </foxml:datastream>
 
+<!--
     <foxml:datastream
             CONTROL_GROUP="E"
             ID="POLICY"
@@ -173,10 +174,12 @@
             VERSIONABLE="true">
         <foxml:datastreamVersion
                 ID="POLICY.0"
-                LABEL="License for this object">
+                LABEL="License for this object"
+                MIMETYPE="application/rdf+xml">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
             <foxml:contentLocation REF="http://local.fedora.server/fedora/objects/doms:Open_License/datastreams/LICENSE/content" TYPE="URL"/>
         </foxml:datastreamVersion>
     </foxml:datastream>
+-->
 
 </foxml:digitalObject>
