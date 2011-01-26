@@ -52,6 +52,7 @@
         </foxml:datastreamVersion>
     </foxml:datastream>
 
+<!--
     <foxml:datastream
             CONTROL_GROUP="E"
             ID="POLICY"
@@ -65,6 +66,7 @@
             <foxml:contentLocation REF="http://local.fedora.server/fedora/objects/doms:Open_License/datastreams/LICENSE/content" TYPE="URL"/>
         </foxml:datastreamVersion>
     </foxml:datastream>
+-->
 
     <foxml:datastream ID="LICENSE" CONTROL_GROUP="X">
         <foxml:datastreamVersion ID="LICENSE.0" MIMETYPE="text/xml">

@@ -50,6 +50,7 @@
         </foxml:datastreamVersion>
     </foxml:datastream>
 
+<!--
     <foxml:datastream
             CONTROL_GROUP="E"
             ID="POLICY"
@@ -64,6 +65,7 @@
         </foxml:datastreamVersion>
     </foxml:datastream>
 
+-->
 
     <foxml:datastream CONTROL_GROUP="X" ID="ONTOLOGY" STATE="A" VERSIONABLE="true">
         <foxml:datastreamVersion

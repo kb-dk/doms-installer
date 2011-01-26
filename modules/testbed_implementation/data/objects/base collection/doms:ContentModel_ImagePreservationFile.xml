@@ -97,6 +97,7 @@
             </foxml:xmlContent>
         </foxml:datastreamVersion>
     </foxml:datastream>
+<!--
 
     <foxml:datastream
             CONTROL_GROUP="E"
@@ -111,6 +112,7 @@
             <foxml:contentLocation REF="http://local.fedora.server/fedora/objects/doms:Open_License/datastreams/LICENSE/content" TYPE="URL"/>
         </foxml:datastreamVersion>
     </foxml:datastream>
+-->
 
 
 </foxml:digitalObject>
