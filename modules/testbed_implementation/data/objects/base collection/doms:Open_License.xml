@@ -28,7 +28,8 @@
             <foxml:xmlContent>
                 <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/">
                     <dc:title>Open License</dc:title>
-                    <dc:description>A license granting unlimited access for all.</dc:description>
+                    <dc:description>A license granting unlimited access for all.
+                        Having this license is the same as not having a license, as it mirrors the default.</dc:description>
                     <dc:identifier>doms:Open_License</dc:identifier>
                 </oai_dc:dc>
             </foxml:xmlContent>
