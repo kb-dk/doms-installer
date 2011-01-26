@@ -1,4 +1,11 @@
 
+26/1/2011 Updated base objects so that
+ 1. removed the big pbcore placeholder from template_program, as it was clogging up the summa
+ 2. made all RELS-EXT datastreams versionable
+ 3. Split the RadioTV_License into adminOnlyLicense, and inhouseLicense
+ 4. Updated all the objects to use the correct license
+ 5. Fixed the wrong formatURI/mimetype in the POLICY datastreams
+
 24/1/2011 Updated fedora to version 3.4.2. Should not have any incompabilities aas we were using a maintenance snapshot before
 
 20/1/2011 Updated ECM to version 0.0.13, so that it does not cause "deprecated" warnings in fedora.log
