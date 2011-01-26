@@ -2,7 +2,7 @@
 
 <foxml:digitalObject
         VERSION="1.1"
-        PID="doms:RadioTV_License"
+        PID="doms:RadioTV_InhouseLicense"
         xmlns:foxml="info:fedora/fedora-system:def/foxml#"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation=
@@ -26,14 +26,14 @@
             <foxml:xmlContent>
                 <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/">
                     <dc:title>Radio TV License</dc:title>
-                    <dc:description>A license granting some access.</dc:description>
-                    <dc:identifier>doms:RadioTV_License</dc:identifier>
+                    <dc:description>A license granting access to inhouse users</dc:description>
+                    <dc:identifier>doms:RadioTV_InhouseLicense</dc:identifier>
                 </oai_dc:dc>
             </foxml:xmlContent>
         </foxml:datastreamVersion>
     </foxml:datastream>
 
-    <foxml:datastream CONTROL_GROUP="X" ID="RELS-EXT" STATE="A" VERSIONABLE="false">
+    <foxml:datastream CONTROL_GROUP="X" ID="RELS-EXT" STATE="A" VERSIONABLE="true">
         <foxml:datastreamVersion  ID="RELS-EXT.1" LABEL="Relationships"
                                   FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                                   MIMETYPE="application/rdf+xml" >
@@ -41,7 +41,7 @@
             <foxml:xmlContent>
                 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                          xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#">
-                    <rdf:Description rdf:about="info:fedora/doms:RadioTV_License">
+                    <rdf:Description rdf:about="info:fedora/doms:RadioTV_InhouseLicense">
                         <hasModel rdf:resource="info:fedora/doms:ContentModel_License" xmlns="info:fedora/fedora-system:def/model#"/>
                         <hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS" xmlns="info:fedora/fedora-system:def/model#"/>
                         <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
@@ -53,48 +53,15 @@
     </foxml:datastream>
 
     <foxml:datastream
-            CONTROL_GROUP="X"
+            CONTROL_GROUP="E"
             ID="POLICY"
             STATE="A"
             VERSIONABLE="true">
         <foxml:datastreamVersion
                 ID="POLICY.0"
-                LABEL="License for this object"
-                MIMETYPE="application/rdf+xml"
-                FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0">
+                LABEL="License for this object">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
-            <foxml:xmlContent>
-                <Policy xmlns="urn:oasis:names:tc:xacml:1.0:policy"
-                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                        PolicyId="RadioTV_License"
-                        RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
-
-                    <Description>This is the default policy, if no other is specified. It allows
-                        for all actions on a object by everybody.
-                    </Description>
-                    <Target>
-                        <!-- *********************************************************************************************************************************************************-->
-                        <!--  This policy is applicable to any Subject. -->
-                        <!-- *********************************************************************************************************************************************************-->
-                        <Subjects>
-                            <AnySubject/>
-                        </Subjects>
-                        <!-- *********************************************************************************************************************************************************-->
-                        <!--  This policy is applicable to any resource -->
-                        <!-- *********************************************************************************************************************************************************-->
-                        <Resources>
-                            <AnyResource/>
-                        </Resources>
-                        <!-- *********************************************************************************************************************************************************-->
-                        <!--  This policy is applicable to any action. -->
-                        <!-- *********************************************************************************************************************************************************-->
-                        <Actions>
-                            <AnyAction/>
-                        </Actions>
-                    </Target>
-                    <Rule RuleId="1" Effect="Permit"/>
-                </Policy>
-            </foxml:xmlContent>
+            <foxml:contentLocation REF="http://local.fedora.server/fedora/objects/doms:Open_License/datastreams/LICENSE/content" TYPE="URL"/>
         </foxml:datastreamVersion>
     </foxml:datastream>
 
@@ -102,9 +69,9 @@
         <foxml:datastreamVersion ID="LICENSE.0" MIMETYPE="text/xml">
             <foxml:xmlContent>
 
-                <Policy xmlns="urn:oasis:names:tc:xacml:1.0:policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" PolicyId="RadioTV_License" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
+                <Policy xmlns="urn:oasis:names:tc:xacml:1.0:policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" PolicyId="RadioTV_InhouseLicense" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
                     <Description>The is the license for the radio tv collection. Complete access is granted, if and only if, the user has the inhouse
-                        or administrator fedoraRole.
+                        or administrator or readonlyadministrator fedoraRole.
                     </Description>
                     <Target>
                         <Subjects>
@@ -129,7 +96,6 @@
                             </Apply>
                         </Condition>
                     </Rule>
-                    <Rule Effect="Permit" RuleId="2"></Rule>
                 </Policy>
             </foxml:xmlContent>
         </foxml:datastreamVersion>

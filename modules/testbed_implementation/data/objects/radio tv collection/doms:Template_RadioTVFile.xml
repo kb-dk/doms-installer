@@ -32,7 +32,7 @@
         </foxml:datastreamVersion>
     </foxml:datastream>
 
-    <foxml:datastream CONTROL_GROUP="X" ID="RELS-EXT" STATE="A" VERSIONABLE="false">
+    <foxml:datastream CONTROL_GROUP="X" ID="RELS-EXT" STATE="A" VERSIONABLE="true">
         <foxml:datastreamVersion  ID="RELS-EXT.1" LABEL="Relationships"
                                   FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                                   MIMETYPE="application/rdf+xml" >
@@ -47,7 +47,7 @@
                         <hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS" xmlns="info:fedora/fedora-system:def/model#"/>
                         <hasModel rdf:resource="info:fedora/doms:ContentModel_File" xmlns="info:fedora/fedora-system:def/model#"/>
                         <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
-                        <doms:hasLicense rdf:resource="info:fedora/doms:RadioTV_License" />
+                        <doms:hasLicense rdf:resource="info:fedora/doms:RadioTV_adminOnlyLicense" />
                         <ecm:isTemplateFor rdf:resource="info:fedora/doms:ContentModel_Program"/>
                     </rdf:Description>
                 </rdf:RDF>
@@ -62,11 +62,9 @@
             VERSIONABLE="true">
         <foxml:datastreamVersion
                 ID="POLICY.0"
-                LABEL="License for this object"
-                MIMETYPE="application/rdf+xml"
-                FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0">
+                LABEL="License for this object">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
-            <foxml:contentLocation REF="http://local.fedora.server/fedora/objects/doms:RadioTV_License/datastreams/LICENSE/content" TYPE="URL"/>
+            <foxml:contentLocation REF="http://local.fedora.server/fedora/objects/doms:RadioTV_adminOnlyLicense/datastreams/LICENSE/content" TYPE="URL"/>
         </foxml:datastreamVersion>
     </foxml:datastream>
 
