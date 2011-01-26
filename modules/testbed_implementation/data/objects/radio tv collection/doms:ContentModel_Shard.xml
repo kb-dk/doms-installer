@@ -16,7 +16,7 @@
                 VALUE="A"/>
         <foxml:property
                 NAME="info:fedora/fedora-system:def/model#label"
-                VALUE="Content Model Shard"/>
+                VALUE="Radio/TV Shard"/>
     </foxml:objectProperties>
 
     <foxml:datastream ID="DC" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
@@ -150,7 +150,8 @@
     <foxml:datastream CONTROL_GROUP="E" ID="POLICY" STATE="A" VERSIONABLE="true">
         <foxml:datastreamVersion
                 ID="POLICY.0"
-                LABEL="License for this object">
+                LABEL="License for this object"
+                MIMETYPE="text/xml">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
             <foxml:contentLocation REF="http://local.fedora.server/fedora/objects/doms:Open_License/datastreams/LICENSE/content" TYPE="URL"/>
         </foxml:datastreamVersion>

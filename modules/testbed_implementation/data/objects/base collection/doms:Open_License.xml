@@ -65,7 +65,8 @@
             VERSIONABLE="true">
         <foxml:datastreamVersion
                 ID="POLICY.0"
-                LABEL="License for this object">
+                LABEL="License for this object"
+                MIMETYPE="text/xml">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
             <foxml:xmlContent>
                 <Policy xmlns="urn:oasis:names:tc:xacml:1.0:policy"

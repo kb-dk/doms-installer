@@ -15,7 +15,7 @@
                 VALUE="Active"/>
         <foxml:property
                 NAME="info:fedora/fedora-system:def/model#label"
-                VALUE="RadioTV Collection"/>
+                VALUE="Radio/TV Collection"/>
     </foxml:objectProperties>
 
     <foxml:datastream CONTROL_GROUP="X" ID="DC" STATE="A" VERSIONABLE="true">
@@ -59,7 +59,8 @@
             VERSIONABLE="true">
         <foxml:datastreamVersion
                 ID="POLICY.0"
-                LABEL="License for this object">
+                LABEL="License for this object"
+                MIMETYPE="text/xml">
             <foxml:contentDigest DIGEST="none" TYPE="DISABLED"/>
             <foxml:contentLocation REF="http://local.fedora.server/fedora/objects/doms:Open_License/datastreams/LICENSE/content" TYPE="URL"/>
         </foxml:datastreamVersion>
