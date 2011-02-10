@@ -1,0 +1,48 @@
+<assembly>
+    <id>testbed</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+
+    <dependencySets>
+
+        <dependencySet>
+            <outputDirectory>webservices</outputDirectory>
+            <includes>
+                <include>dk.statsbiblioteket.doms.*:*:war:*:*</include>
+            </includes>
+        </dependencySet>
+
+        <dependencySet>
+            <outputDirectory>fedoralib</outputDirectory>
+            <useTransitiveFiltering>true</useTransitiveFiltering>
+            <includes>
+                <include>dk.statsbiblioteket.doms.domsutil:*:jar:*</include>
+                <include>dk.statsbiblioteket.sbutil:sbutil</include>
+                <include>dk.statsbiblioteket.doms.authchecker:fedoralogin</include>
+                <include>dk.statsbiblioteket.doms.ecm:fedoravalidatorhook</include>
+            </includes>
+        </dependencySet>
+        <dependencySet>
+            <outputDirectory>fedora</outputDirectory>
+            <includes>
+                <include>org.fcrepo:fcrepo-installer</include>
+            </includes>
+        </dependencySet>
+
+    </dependencySets>
+    <fileSets>
+       <fileSet>
+         <outputDirectory></outputDirectory>
+         <directory>data</directory>
+       </fileSet>
+        <fileSet>
+              <outputDirectory>bin</outputDirectory>
+              <directory>bin</directory>
+              <fileMode>0755</fileMode>
+        </fileSet>
+     </fileSets>
+
+
+</assembly>
+
