@@ -2,14 +2,6 @@
 <project version="4">
   <component name="AntConfiguration">
     <defaultAnt bundledAnt="true" />
-    <buildFile url="file://$PROJECT_DIR$/build.xml">
-      <additionalClassPath />
-      <antReference projectDefault="true" />
-      <customJdkName value="" />
-      <maximumHeapSize value="128" />
-      <maximumStackSize value="32" />
-      <properties />
-    </buildFile>
   </component>
   <component name="Archetypes.Configuration">
     <option name="archetypesFileLocation" value="archetypes.xml" />
@@ -86,7 +78,7 @@
         <option name="downloadSourcesEnabled" value="false" />
         <option name="downloadJavadocEnabled" value="false" />
         <option name="generateSourcesEnabled" value="false" />
-        <option name="settingsPath" value="$PROJECT_DIR$/../../../../../jeppe/.m2/settings.xml" />
+        <option name="settingsPath" value="/jeppe/.m2/settings.xml" />
         <option name="searchFilter" value="" />
         <option name="disabledPoms">
           <value>
@@ -104,7 +96,7 @@
   </component>
   <component name="MavenBuildProjectComponent">
     <option name="mavenExecutable" value="" />
-    <option name="Settings File" value="$PROJECT_DIR$/../../../../../jeppe/.m2/settings.xml" />
+    <option name="Settings File" value="/jeppe/.m2/settings.xml" />
     <option name="mavenCommandLineParams" value="" />
     <option name="vmOptions" value="" />
     <option name="useMavenEmbedder" value="false" />
@@ -815,180 +807,180 @@
         <root url="jar://$MAVEN_REPOSITORY$/commons-pool/commons-pool/1.2/commons-pool-1.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.authchecker:authutils:0.0.7">
+    <library name="Maven: dk.statsbiblioteket.doms.authchecker:authchecker-authutils:0.0.7">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authutils/0.0.7/authutils-0.0.7.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-authutils/0.0.7/authchecker-authutils-0.0.7.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authutils/0.0.7/authutils-0.0.7-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-authutils/0.0.7/authchecker-authutils-0.0.7-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authutils/0.0.7/authutils-0.0.7-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-authutils/0.0.7/authchecker-authutils-0.0.7-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.authchecker:fedoralogin:0.0.7">
+    <library name="Maven: dk.statsbiblioteket.doms.authchecker:authchecker-fedoralogin:0.0.7">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/fedoralogin/0.0.7/fedoralogin-0.0.7.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-fedoralogin/0.0.7/authchecker-fedoralogin-0.0.7.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/fedoralogin/0.0.7/fedoralogin-0.0.7-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-fedoralogin/0.0.7/authchecker-fedoralogin-0.0.7-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/fedoralogin/0.0.7/fedoralogin-0.0.7-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-fedoralogin/0.0.7/authchecker-fedoralogin-0.0.7-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.authchecker:webservice:war:0.0.7">
+    <library name="Maven: dk.statsbiblioteket.doms.authchecker:authchecker-service:war:0.0.7">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/webservice/0.0.7/webservice-0.0.7.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-service/0.0.7/authchecker-service-0.0.7.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/webservice/0.0.7/webservice-0.0.7-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-service/0.0.7/authchecker-service-0.0.7-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/webservice/0.0.7/webservice-0.0.7-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-service/0.0.7/authchecker-service-0.0.7-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.characteriser:characteriser_impl:war:0.0.15">
+    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.characteriser:bitstorage-characteriser-service:war:0.0.15">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/characteriser/characteriser_impl/0.0.15/characteriser_impl-0.0.15.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/characteriser/bitstorage-characteriser-service/0.0.15/bitstorage-characteriser-service-0.0.15.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/characteriser/characteriser_impl/0.0.15/characteriser_impl-0.0.15-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/characteriser/bitstorage-characteriser-service/0.0.15/bitstorage-characteriser-service-0.0.15-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/characteriser/characteriser_impl/0.0.15/characteriser_impl-0.0.15-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/characteriser/bitstorage-characteriser-service/0.0.15/bitstorage-characteriser-service-0.0.15-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.highlevel:highlevel_impl:war:0.0.15">
+    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.highlevel:bitstorage-highlevel-hookApprove:0.0.15">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/highlevel_impl/0.0.15/highlevel_impl-0.0.15.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-hookApprove/0.0.15/bitstorage-highlevel-hookApprove-0.0.15.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/highlevel_impl/0.0.15/highlevel_impl-0.0.15-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-hookApprove/0.0.15/bitstorage-highlevel-hookApprove-0.0.15-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/highlevel_impl/0.0.15/highlevel_impl-0.0.15-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-hookApprove/0.0.15/bitstorage-highlevel-hookApprove-0.0.15-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.highlevel:highlevel_interface:0.0.15">
+    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.highlevel:bitstorage-highlevel-interface:0.0.15">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/highlevel_interface/0.0.15/highlevel_interface-0.0.15.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-interface/0.0.15/bitstorage-highlevel-interface-0.0.15.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/highlevel_interface/0.0.15/highlevel_interface-0.0.15-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-interface/0.0.15/bitstorage-highlevel-interface-0.0.15-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/highlevel_interface/0.0.15/highlevel_interface-0.0.15-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-interface/0.0.15/bitstorage-highlevel-interface-0.0.15-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.highlevel:hookApprove:0.0.15">
+    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.highlevel:bitstorage-highlevel-service:war:0.0.15">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/hookApprove/0.0.15/hookApprove-0.0.15.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-service/0.0.15/bitstorage-highlevel-service-0.0.15.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/hookApprove/0.0.15/hookApprove-0.0.15-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-service/0.0.15/bitstorage-highlevel-service-0.0.15-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/hookApprove/0.0.15/hookApprove-0.0.15-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-service/0.0.15/bitstorage-highlevel-service-0.0.15-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.lowlevel:lowlevel_impl:war:0.0.15">
+    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.lowlevel:bitstorage-lowlevel-service:war:0.0.15">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/lowlevel/lowlevel_impl/0.0.15/lowlevel_impl-0.0.15.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/lowlevel/bitstorage-lowlevel-service/0.0.15/bitstorage-lowlevel-service-0.0.15.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/lowlevel/lowlevel_impl/0.0.15/lowlevel_impl-0.0.15-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/lowlevel/bitstorage-lowlevel-service/0.0.15/bitstorage-lowlevel-service-0.0.15-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/lowlevel/lowlevel_impl/0.0.15/lowlevel_impl-0.0.15-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/lowlevel/bitstorage-lowlevel-service/0.0.15/bitstorage-lowlevel-service-0.0.15-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.domsutil:bundle:0.0.17">
+    <library name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-service:war:0.0.17">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/bundle/0.0.17/bundle-0.0.17.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.17/centralWebservice-service-0.0.17.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/bundle/0.0.17/bundle-0.0.17-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.17/centralWebservice-service-0.0.17-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/bundle/0.0.17/bundle-0.0.17-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.17/centralWebservice-service-0.0.17-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.domsutil:logappender:0.0.17">
+    <library name="Maven: dk.statsbiblioteket.doms.domsutil:domsutil-logappender:0.0.17">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/logappender/0.0.17/logappender-0.0.17.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-logappender/0.0.17/domsutil-logappender-0.0.17.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/logappender/0.0.17/logappender-0.0.17-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-logappender/0.0.17/domsutil-logappender-0.0.17-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/logappender/0.0.17/logappender-0.0.17-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-logappender/0.0.17/domsutil-logappender-0.0.17-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.domsutil:surveyable_impl:0.0.17">
+    <library name="Maven: dk.statsbiblioteket.doms.domsutil:domsutil-surveyable_impl:0.0.17">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/surveyable_impl/0.0.17/surveyable_impl-0.0.17.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-surveyable_impl/0.0.17/domsutil-surveyable_impl-0.0.17.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/surveyable_impl/0.0.17/surveyable_impl-0.0.17-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-surveyable_impl/0.0.17/domsutil-surveyable_impl-0.0.17-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/surveyable_impl/0.0.17/surveyable_impl-0.0.17-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-surveyable_impl/0.0.17/domsutil-surveyable_impl-0.0.17-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.domsutil:surveyable_interface:0.0.17">
+    <library name="Maven: dk.statsbiblioteket.doms.domsutil:domsutil-surveyable_interface:0.0.17">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/surveyable_interface/0.0.17/surveyable_interface-0.0.17.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-surveyable_interface/0.0.17/domsutil-surveyable_interface-0.0.17.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/surveyable_interface/0.0.17/surveyable_interface-0.0.17-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-surveyable_interface/0.0.17/domsutil-surveyable_interface-0.0.17-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/surveyable_interface/0.0.17/surveyable_interface-0.0.17-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-surveyable_interface/0.0.17/domsutil-surveyable_interface-0.0.17-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.domsutil:webservice-common:0.0.17">
+    <library name="Maven: dk.statsbiblioteket.doms.domsutil:domsutil-webservice-common:0.0.17">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/webservice-common/0.0.17/webservice-common-0.0.17.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-webservice-common/0.0.17/domsutil-webservice-common-0.0.17.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/webservice-common/0.0.17/webservice-common-0.0.17-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-webservice-common/0.0.17/domsutil-webservice-common-0.0.17-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/webservice-common/0.0.17/webservice-common-0.0.17-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-webservice-common/0.0.17/domsutil-webservice-common-0.0.17-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.ecm:fedoravalidatorhook:0.0.14#SNAPSHOT">
+    <library name="Maven: dk.statsbiblioteket.doms.ecm:ecm-fedoravalidatorhook:0.0.14#SNAPSHOT">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/fedoravalidatorhook/0.0.14#SNAPSHOT/fedoravalidatorhook-0.0.14#SNAPSHOT.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/ecm-fedoravalidatorhook/0.0.14#SNAPSHOT/ecm-fedoravalidatorhook-0.0.14#SNAPSHOT.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/fedoravalidatorhook/0.0.14#SNAPSHOT/fedoravalidatorhook-0.0.14#SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/ecm-fedoravalidatorhook/0.0.14#SNAPSHOT/ecm-fedoravalidatorhook-0.0.14#SNAPSHOT-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/fedoravalidatorhook/0.0.14#SNAPSHOT/fedoravalidatorhook-0.0.14#SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/ecm-fedoravalidatorhook/0.0.14#SNAPSHOT/ecm-fedoravalidatorhook-0.0.14#SNAPSHOT-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.ecm:webservice:war:0.0.14#SNAPSHOT">
+    <library name="Maven: dk.statsbiblioteket.doms.ecm:ecm-webservice:war:0.0.14#SNAPSHOT">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/webservice/0.0.14#SNAPSHOT/webservice-0.0.14#SNAPSHOT.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/ecm-webservice/0.0.14#SNAPSHOT/ecm-webservice-0.0.14#SNAPSHOT.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/webservice/0.0.14#SNAPSHOT/webservice-0.0.14#SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/ecm-webservice/0.0.14#SNAPSHOT/ecm-webservice-0.0.14#SNAPSHOT-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/webservice/0.0.14#SNAPSHOT/webservice-0.0.14#SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/ecm-webservice/0.0.14#SNAPSHOT/ecm-webservice-0.0.14#SNAPSHOT-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.pidgenerator:implementation:war:0.0.6#SNAPSHOT">
+    <library name="Maven: dk.statsbiblioteket.doms.pidgenerator:pidgenerator-service:war:0.0.6#SNAPSHOT">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/pidgenerator/implementation/0.0.6#SNAPSHOT/implementation-0.0.6#SNAPSHOT.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/pidgenerator/pidgenerator-service/0.0.6#SNAPSHOT/pidgenerator-service-0.0.6#SNAPSHOT.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/pidgenerator/implementation/0.0.6#SNAPSHOT/implementation-0.0.6#SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/pidgenerator/pidgenerator-service/0.0.6#SNAPSHOT/pidgenerator-service-0.0.6#SNAPSHOT-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/pidgenerator/implementation/0.0.6#SNAPSHOT/implementation-0.0.6#SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/pidgenerator/pidgenerator-service/0.0.6#SNAPSHOT/pidgenerator-service-0.0.6#SNAPSHOT-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: dk.statsbiblioteket.sbutil:sbutil:0.5.2">
@@ -1178,15 +1170,15 @@
         <root url="jar://$MAVEN_REPOSITORY$/javax/transaction/jta/1.1/jta-1.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: javax.ws.rs:jsr311-api:1.1.1">
+    <library name="Maven: javax.ws.rs:jsr311-api:1.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/javax/ws/rs/jsr311-api/1.0/jsr311-api-1.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/javax/ws/rs/jsr311-api/1.0/jsr311-api-1.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/javax/ws/rs/jsr311-api/1.0/jsr311-api-1.0-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: javax.xml.bind:jaxb-api:2.1">
@@ -1310,15 +1302,15 @@
         <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.5/junit-4.5-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: log4j:log4j:1.2.16">
+    <library name="Maven: log4j:log4j:1.2.6">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.16/log4j-1.2.16.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.6/log4j-1.2.6.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.16/log4j-1.2.16-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.6/log4j-1.2.6-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.16/log4j-1.2.16-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.6/log4j-1.2.6-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: mckoi:mckoi:1.0.2">

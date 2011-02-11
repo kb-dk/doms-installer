@@ -242,7 +242,7 @@
             </comment>
         </param>
         <param name="dk.statsbiblioteket.doms.bitstorage.highlevel.hookapprove.webservicelocation"
-               value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/highlevelbitstorage/highlevel/?wsdl">
+               value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/bitstorage-highlevel-service/highlevel/?wsdl">
             <comment>This specifies the location of the highlevel webservice
             </comment>
         </param>

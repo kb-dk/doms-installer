@@ -130,7 +130,14 @@ echo ""
 ##
 echo "Installing the doms webservices into tomcat"
 mkdir -p $WEBAPPS_DIR
-cp -v $BASEDIR/webservices/*.war $WEBAPPS_DIR
+mkdir -p $TOMCAT_APPS_DIR
+cp -v $BASEDIR/webservices/*.war $TOMCAT_APPS_DIR
+for file in $TOMCAT_APPS_DIR/*.war ; do
+     newname=`basename $file`
+     newname=`expr match "$newname" '\([^0-9]*\)'`;
+     newname=${newname%-}.war;
+     ln -s $file $WEBAPPS_DIR/$newname
+done
 
 
 ##

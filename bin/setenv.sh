@@ -44,6 +44,8 @@ CACHE_DIR=$TESTBED_DIR/cache
 TOMCAT_CONFIG_DIR=$TESTBED_DIR/services/conf
 
 WEBAPPS_DIR=$TESTBED_DIR/services/webapps
+TOMCAT_APPS_DIR=$TESTBED_DIR/services/tomcatapps
+
 
 #Database
 USE_POSTGRESQL=true

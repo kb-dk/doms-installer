@@ -19,12 +19,13 @@
             <includes>
                 <include>dk.statsbiblioteket.doms.domsutil:*:jar:*</include>
                 <include>dk.statsbiblioteket.sbutil:sbutil</include>
-                <include>dk.statsbiblioteket.doms.authchecker:fedoralogin</include>
-                <include>dk.statsbiblioteket.doms.ecm:fedoravalidatorhook</include>
+                <include>dk.statsbiblioteket.doms.authchecker:authchecker-fedoralogin</include>
+                <include>dk.statsbiblioteket.doms.ecm:ecm-fedoravalidatorhook</include>
+                <include>dk.statsbiblioteket.doms.bitstorage.highlevel:bitstorage-highlevel-hookApprove</include>
             </includes>
         </dependencySet>
         <dependencySet>
-            <outputDirectory>fedora</outputDirectory>
+            <outputDirectory>data/fedora</outputDirectory>
             <includes>
                 <include>org.fcrepo:fcrepo-installer</include>
             </includes>
@@ -32,16 +33,16 @@
 
     </dependencySets>
     <fileSets>
-       <fileSet>
-         <outputDirectory></outputDirectory>
-         <directory>data</directory>
-       </fileSet>
         <fileSet>
-              <outputDirectory>bin</outputDirectory>
-              <directory>bin</directory>
-              <fileMode>0755</fileMode>
+            <outputDirectory>data</outputDirectory>
+            <directory>src/main/resources</directory>
         </fileSet>
-     </fileSets>
+        <fileSet>
+            <outputDirectory>bin</outputDirectory>
+            <directory>bin</directory>
+            <fileMode>0755</fileMode>
+        </fileSet>
+    </fileSets>
 
 
 </assembly>

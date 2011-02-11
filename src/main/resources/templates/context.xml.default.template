@@ -6,11 +6,11 @@
     <!--highlevelbitstorage-->
     <Parameter
             name="dk.statsbiblioteket.doms.bitstorage.highlevel.characteriserlocation"
-            value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/characteriser/characterise/?wsdl"
+            value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/bitstorage-characteriser-service/characterise/?wsdl"
             override="false"/>
     <Parameter
             name="dk.statsbiblioteket.doms.bitstorage.highlevel.lowlevellocation"
-            value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/lowlevelbitstorage/lowlevel/?wsdl"
+            value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/bitstorage-lowlevel-service/lowlevel/?wsdl"
             override="false"/>
     <Parameter
             name="dk.statsbiblioteket.doms.bitstorage.highlevel.fedora.server"
@@ -62,7 +62,7 @@
                override="false"/>
     <Parameter
             name="dk.statsbiblioteket.doms.ecm.pidgenerator.client.wsdllocation"
-            value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator/pidGenerator/?wsdl"
+            value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator-service/pidGenerator/?wsdl"
             override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.ecm.log4jconfig"
                value="$TOMCAT_CONFIG_DIR$/log4j.ecm.xml"
@@ -73,13 +73,13 @@
                value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora"
                override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.central.ecmLocation"
-               value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/ecm"
+               value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/ecm-service"
                override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.central.bitstorageWSDL"
-               value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/highlevelbitstorage/highlevel/?wsdl"
+               value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/bitstorage-highlevel-service/highlevel/?wsdl"
                override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.central.updateTrackerLocation"
-               value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/updatetrackerWebservice/updatetracker/?wsdl"
+               value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/updatetracker-service/updatetracker/?wsdl"
                override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.central.log4jconfig"
                value="$TOMCAT_CONFIG_DIR$/log4j.centralDomsWebservice.xml"
@@ -135,18 +135,18 @@
                value="
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-surveyor/surveyable/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-fedorasurveyor/surveyable/getStatusSince/{date};
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/authchecker/surveyable/getStatusSince/{date};
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/ecm/surveyable/getStatusSince/{date};
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/authchecker-service/surveyable/getStatusSince/{date};
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/ecm-service/surveyable/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora/surveyable/getStatusSince/{date}"
                override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.soapUrls"
                value="
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/lowlevelbitstorage/surveyable/?wsdl;
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/highlevelbitstorage/surveyable/?wsdl;
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/characteriser/surveyable/?wsdl;
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator/surveyable/?wsdl;
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/updatetrackerWebservice/surveyable/?wsdl;
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/centralDomsWebservice/surveyable/?wsdl"
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/bitstorage-lowlevel-service/surveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/bitstorage-highlevel-service/surveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/bitstorage-characteriser-service/surveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator-service/surveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/updatetracker-service/surveyable/?wsdl;
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/centralWebservice-service/surveyable/?wsdl"
                override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.log4jconfig"
                value="$TOMCAT_CONFIG_DIR$/log4j.surveillance-surveyor.xml"
