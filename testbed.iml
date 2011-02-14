@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" relativePaths="true" type="JAVA_MODULE" version="4">
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
@@ -184,7 +184,7 @@
     <orderEntry type="library" name="Maven: org.fcrepo:fcrepo-client-messaging:3.4.2-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.fcrepo:fcrepo-webapp-fedora:war:3.4.2-SNAPSHOT" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: postgresql:postgresql:8.3-603.jdbc3" level="project" />
-    <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.ecm:ecm-webservice:war:0.0.14#SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.ecm:ecm-service:war:0.0.14#SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.pidgenerator:pidgenerator-service:war:0.0.6#SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.authchecker:authchecker-service:war:0.0.7" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.bitstorage.lowlevel:bitstorage-lowlevel-service:war:0.0.15" level="project" />

@@ -75,7 +75,7 @@
         <!--Webservices-->
         <dependency>
             <groupId>dk.statsbiblioteket.doms.ecm</groupId>
-            <artifactId>ecm-webservice</artifactId>
+            <artifactId>ecm-service</artifactId>
             <version>0.0.14#SNAPSHOT</version>
             <type>war</type>
         </dependency>
