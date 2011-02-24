@@ -14,6 +14,13 @@
 
     <packaging>pom</packaging>
 
+    <scm>
+        <connection>scm:svn:https://doms.svn.sourceforge.net/svnroot/doms/testbed/trunk</connection>
+        <developerConnection>scm:svn:https://doms.svn.sourceforge.net/svnroot/doms/testbed/trunk</developerConnection>
+        <url>http://doms.svn.sourceforge.net/viewvc/doms/testbed/trunk</url>
+    </scm>
+
+
     <build>
         <plugins>
             <plugin>
@@ -56,12 +63,12 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.ecm</groupId>
             <artifactId>ecm-fedoravalidatorhook</artifactId>
-            <version>0.0.15</version>
+            <version>0.0.16</version>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.highlevel</groupId>
             <artifactId>bitstorage-highlevel-hookApprove</artifactId>
-            <version>0.0.16</version>
+            <version>0.0.17</version>
         </dependency>
 
 
@@ -76,13 +83,13 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.ecm</groupId>
             <artifactId>ecm-service</artifactId>
-            <version>0.0.15</version>
+            <version>0.0.16</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.pidgenerator</groupId>
             <artifactId>pidgenerator-service</artifactId>
-            <version>0.0.7</version>
+            <version>0.0.8</version>
             <type>war</type>
         </dependency>
 
@@ -95,27 +102,46 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.lowlevel</groupId>
             <artifactId>bitstorage-lowlevel-service</artifactId>
-            <version>0.0.16</version>
+            <version>0.0.17</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.characteriser</groupId>
             <artifactId>bitstorage-characteriser-service</artifactId>
-            <version>0.0.16</version>
+            <version>0.0.17</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.highlevel</groupId>
             <artifactId>bitstorage-highlevel-service</artifactId>
-            <version>0.0.16</version>
+            <version>0.0.17</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.central</groupId>
             <artifactId>centralWebservice-service</artifactId>
-            <version>0.0.18</version>
+            <version>0.0.19</version>
             <type>war</type>
         </dependency>
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.updatetracker</groupId>
+            <artifactId>updatetracker-service</artifactId>
+            <version>0.0.13</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.surveillance</groupId>
+            <artifactId>surveillance-fedorasurveyor-service</artifactId>
+            <version>0.0.8-SNAPSHOT</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.surveillance</groupId>
+            <artifactId>surveillance-surveyor-service</artifactId>
+            <version>0.0.8-SNAPSHOT</version>
+            <type>war</type>
+        </dependency>
+
 
     </dependencies>
 
