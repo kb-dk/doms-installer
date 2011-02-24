@@ -881,180 +881,180 @@
         <root url="jar://$MAVEN_REPOSITORY$/commons-pool/commons-pool/1.2/commons-pool-1.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.authchecker:authchecker-authutils:0.0.7">
+    <library name="Maven: dk.statsbiblioteket.doms.authchecker:authchecker-authutils:0.0.8">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-authutils/0.0.7/authchecker-authutils-0.0.7.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-authutils/0.0.8/authchecker-authutils-0.0.8.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-authutils/0.0.7/authchecker-authutils-0.0.7-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-authutils/0.0.8/authchecker-authutils-0.0.8-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-authutils/0.0.7/authchecker-authutils-0.0.7-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-authutils/0.0.8/authchecker-authutils-0.0.8-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.authchecker:authchecker-fedoralogin:0.0.7">
+    <library name="Maven: dk.statsbiblioteket.doms.authchecker:authchecker-fedoralogin:0.0.8">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-fedoralogin/0.0.7/authchecker-fedoralogin-0.0.7.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-fedoralogin/0.0.8/authchecker-fedoralogin-0.0.8.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-fedoralogin/0.0.7/authchecker-fedoralogin-0.0.7-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-fedoralogin/0.0.8/authchecker-fedoralogin-0.0.8-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-fedoralogin/0.0.7/authchecker-fedoralogin-0.0.7-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-fedoralogin/0.0.8/authchecker-fedoralogin-0.0.8-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.authchecker:authchecker-service:war:0.0.7">
+    <library name="Maven: dk.statsbiblioteket.doms.authchecker:authchecker-service:war:0.0.8">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-service/0.0.7/authchecker-service-0.0.7.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-service/0.0.8/authchecker-service-0.0.8.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-service/0.0.7/authchecker-service-0.0.7-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-service/0.0.8/authchecker-service-0.0.8-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-service/0.0.7/authchecker-service-0.0.7-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-service/0.0.8/authchecker-service-0.0.8-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.characteriser:bitstorage-characteriser-service:war:0.0.15">
+    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.characteriser:bitstorage-characteriser-service:war:0.0.16">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/characteriser/bitstorage-characteriser-service/0.0.15/bitstorage-characteriser-service-0.0.15.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/characteriser/bitstorage-characteriser-service/0.0.16/bitstorage-characteriser-service-0.0.16.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/characteriser/bitstorage-characteriser-service/0.0.15/bitstorage-characteriser-service-0.0.15-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/characteriser/bitstorage-characteriser-service/0.0.16/bitstorage-characteriser-service-0.0.16-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/characteriser/bitstorage-characteriser-service/0.0.15/bitstorage-characteriser-service-0.0.15-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/characteriser/bitstorage-characteriser-service/0.0.16/bitstorage-characteriser-service-0.0.16-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.highlevel:bitstorage-highlevel-hookApprove:0.0.15">
+    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.highlevel:bitstorage-highlevel-hookApprove:0.0.16">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-hookApprove/0.0.15/bitstorage-highlevel-hookApprove-0.0.15.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-hookApprove/0.0.16/bitstorage-highlevel-hookApprove-0.0.16.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-hookApprove/0.0.15/bitstorage-highlevel-hookApprove-0.0.15-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-hookApprove/0.0.16/bitstorage-highlevel-hookApprove-0.0.16-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-hookApprove/0.0.15/bitstorage-highlevel-hookApprove-0.0.15-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-hookApprove/0.0.16/bitstorage-highlevel-hookApprove-0.0.16-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.highlevel:bitstorage-highlevel-interface:0.0.15">
+    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.highlevel:bitstorage-highlevel-interface:0.0.16">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-interface/0.0.15/bitstorage-highlevel-interface-0.0.15.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-interface/0.0.16/bitstorage-highlevel-interface-0.0.16.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-interface/0.0.15/bitstorage-highlevel-interface-0.0.15-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-interface/0.0.16/bitstorage-highlevel-interface-0.0.16-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-interface/0.0.15/bitstorage-highlevel-interface-0.0.15-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-interface/0.0.16/bitstorage-highlevel-interface-0.0.16-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.highlevel:bitstorage-highlevel-service:war:0.0.15">
+    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.highlevel:bitstorage-highlevel-service:war:0.0.16">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-service/0.0.15/bitstorage-highlevel-service-0.0.15.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-service/0.0.16/bitstorage-highlevel-service-0.0.16.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-service/0.0.15/bitstorage-highlevel-service-0.0.15-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-service/0.0.16/bitstorage-highlevel-service-0.0.16-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-service/0.0.15/bitstorage-highlevel-service-0.0.15-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/highlevel/bitstorage-highlevel-service/0.0.16/bitstorage-highlevel-service-0.0.16-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.lowlevel:bitstorage-lowlevel-service:war:0.0.15">
+    <library name="Maven: dk.statsbiblioteket.doms.bitstorage.lowlevel:bitstorage-lowlevel-service:war:0.0.16">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/lowlevel/bitstorage-lowlevel-service/0.0.15/bitstorage-lowlevel-service-0.0.15.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/lowlevel/bitstorage-lowlevel-service/0.0.16/bitstorage-lowlevel-service-0.0.16.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/lowlevel/bitstorage-lowlevel-service/0.0.15/bitstorage-lowlevel-service-0.0.15-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/lowlevel/bitstorage-lowlevel-service/0.0.16/bitstorage-lowlevel-service-0.0.16-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/lowlevel/bitstorage-lowlevel-service/0.0.15/bitstorage-lowlevel-service-0.0.15-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/lowlevel/bitstorage-lowlevel-service/0.0.16/bitstorage-lowlevel-service-0.0.16-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-service:war:0.0.17">
+    <library name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-service:war:0.0.18">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.17/centralWebservice-service-0.0.17.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.18/centralWebservice-service-0.0.18.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.17/centralWebservice-service-0.0.17-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.18/centralWebservice-service-0.0.18-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.17/centralWebservice-service-0.0.17-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.18/centralWebservice-service-0.0.18-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.domsutil:domsutil-logappender:0.0.17">
+    <library name="Maven: dk.statsbiblioteket.doms.domsutil.surveyable:domsutil-logappender:0.0.20">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-logappender/0.0.17/domsutil-logappender-0.0.17.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/surveyable/domsutil-logappender/0.0.20/domsutil-logappender-0.0.20.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-logappender/0.0.17/domsutil-logappender-0.0.17-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/surveyable/domsutil-logappender/0.0.20/domsutil-logappender-0.0.20-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-logappender/0.0.17/domsutil-logappender-0.0.17-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/surveyable/domsutil-logappender/0.0.20/domsutil-logappender-0.0.20-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.domsutil:domsutil-surveyable_impl:0.0.17">
+    <library name="Maven: dk.statsbiblioteket.doms.domsutil.surveyable:domsutil-surveyable-impl:0.0.20">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-surveyable_impl/0.0.17/domsutil-surveyable_impl-0.0.17.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/surveyable/domsutil-surveyable-impl/0.0.20/domsutil-surveyable-impl-0.0.20.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-surveyable_impl/0.0.17/domsutil-surveyable_impl-0.0.17-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/surveyable/domsutil-surveyable-impl/0.0.20/domsutil-surveyable-impl-0.0.20-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-surveyable_impl/0.0.17/domsutil-surveyable_impl-0.0.17-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/surveyable/domsutil-surveyable-impl/0.0.20/domsutil-surveyable-impl-0.0.20-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.domsutil:domsutil-surveyable_interface:0.0.17">
+    <library name="Maven: dk.statsbiblioteket.doms.domsutil.surveyable:domsutil-surveyable-interface:0.0.20">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-surveyable_interface/0.0.17/domsutil-surveyable_interface-0.0.17.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/surveyable/domsutil-surveyable-interface/0.0.20/domsutil-surveyable-interface-0.0.20.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-surveyable_interface/0.0.17/domsutil-surveyable_interface-0.0.17-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/surveyable/domsutil-surveyable-interface/0.0.20/domsutil-surveyable-interface-0.0.20-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-surveyable_interface/0.0.17/domsutil-surveyable_interface-0.0.17-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/surveyable/domsutil-surveyable-interface/0.0.20/domsutil-surveyable-interface-0.0.20-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.domsutil:domsutil-webservice-common:0.0.17">
+    <library name="Maven: dk.statsbiblioteket.doms.domsutil:domsutil-webservice-common:0.0.20">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-webservice-common/0.0.17/domsutil-webservice-common-0.0.17.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-webservice-common/0.0.20/domsutil-webservice-common-0.0.20.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-webservice-common/0.0.17/domsutil-webservice-common-0.0.17-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-webservice-common/0.0.20/domsutil-webservice-common-0.0.20-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-webservice-common/0.0.17/domsutil-webservice-common-0.0.17-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/domsutil/domsutil-webservice-common/0.0.20/domsutil-webservice-common-0.0.20-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.ecm:ecm-fedoravalidatorhook:0.0.14#SNAPSHOT">
+    <library name="Maven: dk.statsbiblioteket.doms.ecm:ecm-fedoravalidatorhook:0.0.15">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/ecm-fedoravalidatorhook/0.0.14#SNAPSHOT/ecm-fedoravalidatorhook-0.0.14#SNAPSHOT.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/ecm-fedoravalidatorhook/0.0.15/ecm-fedoravalidatorhook-0.0.15.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/ecm-fedoravalidatorhook/0.0.14#SNAPSHOT/ecm-fedoravalidatorhook-0.0.14#SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/ecm-fedoravalidatorhook/0.0.15/ecm-fedoravalidatorhook-0.0.15-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/ecm-fedoravalidatorhook/0.0.14#SNAPSHOT/ecm-fedoravalidatorhook-0.0.14#SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/ecm-fedoravalidatorhook/0.0.15/ecm-fedoravalidatorhook-0.0.15-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.ecm:ecm-service:war:0.0.14#SNAPSHOT">
+    <library name="Maven: dk.statsbiblioteket.doms.ecm:ecm-service:war:0.0.15">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/ecm-service/0.0.14#SNAPSHOT/ecm-service-0.0.14#SNAPSHOT.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/ecm-service/0.0.15/ecm-service-0.0.15.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/ecm-service/0.0.14#SNAPSHOT/ecm-service-0.0.14#SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/ecm-service/0.0.15/ecm-service-0.0.15-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/ecm-service/0.0.14#SNAPSHOT/ecm-service-0.0.14#SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/ecm/ecm-service/0.0.15/ecm-service-0.0.15-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.pidgenerator:pidgenerator-service:war:0.0.6#SNAPSHOT">
+    <library name="Maven: dk.statsbiblioteket.doms.pidgenerator:pidgenerator-service:war:0.0.7">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/pidgenerator/pidgenerator-service/0.0.6#SNAPSHOT/pidgenerator-service-0.0.6#SNAPSHOT.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/pidgenerator/pidgenerator-service/0.0.7/pidgenerator-service-0.0.7.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/pidgenerator/pidgenerator-service/0.0.6#SNAPSHOT/pidgenerator-service-0.0.6#SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/pidgenerator/pidgenerator-service/0.0.7/pidgenerator-service-0.0.7-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/pidgenerator/pidgenerator-service/0.0.6#SNAPSHOT/pidgenerator-service-0.0.6#SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/pidgenerator/pidgenerator-service/0.0.7/pidgenerator-service-0.0.7-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: dk.statsbiblioteket.sbutil:sbutil:0.5.2">
@@ -1200,15 +1200,15 @@
         <root url="jar://$MAVEN_REPOSITORY$/info/aduna/commons/aduna-commons-xml/2.1/aduna-commons-xml-2.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: javax.activation:activation:1.1.1">
+    <library name="Maven: javax.activation:activation:1.1">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1.1/activation-1.1.1.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1/activation-1.1.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1.1/activation-1.1.1-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1/activation-1.1-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1.1/activation-1.1.1-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1/activation-1.1-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: javax.mail:mail:1.4.1">
@@ -1739,147 +1739,147 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/emory-util-remote/2.1/emory-util-remote-2.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.fcrepo:fcrepo-client-admin:3.4.2-SNAPSHOT">
+    <library name="Maven: org.fcrepo:fcrepo-client-admin:3.4.2">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-client-admin/3.4.2-SNAPSHOT/fcrepo-client-admin-3.4.2-SNAPSHOT.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-client-admin/3.4.2/fcrepo-client-admin-3.4.2.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-client-admin/3.4.2-SNAPSHOT/fcrepo-client-admin-3.4.2-SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-client-admin/3.4.2/fcrepo-client-admin-3.4.2-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-client-admin/3.4.2-SNAPSHOT/fcrepo-client-admin-3.4.2-SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-client-admin/3.4.2/fcrepo-client-admin-3.4.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.fcrepo:fcrepo-client-messaging:3.4.2-SNAPSHOT">
+    <library name="Maven: org.fcrepo:fcrepo-client-messaging:3.4.2">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-client-messaging/3.4.2-SNAPSHOT/fcrepo-client-messaging-3.4.2-SNAPSHOT.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-client-messaging/3.4.2/fcrepo-client-messaging-3.4.2.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-client-messaging/3.4.2-SNAPSHOT/fcrepo-client-messaging-3.4.2-SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-client-messaging/3.4.2/fcrepo-client-messaging-3.4.2-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-client-messaging/3.4.2-SNAPSHOT/fcrepo-client-messaging-3.4.2-SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-client-messaging/3.4.2/fcrepo-client-messaging-3.4.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.fcrepo:fcrepo-common:3.4.2-SNAPSHOT">
+    <library name="Maven: org.fcrepo:fcrepo-common:3.4.2">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-common/3.4.2-SNAPSHOT/fcrepo-common-3.4.2-SNAPSHOT.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-common/3.4.2/fcrepo-common-3.4.2.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-common/3.4.2-SNAPSHOT/fcrepo-common-3.4.2-SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-common/3.4.2/fcrepo-common-3.4.2-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-common/3.4.2-SNAPSHOT/fcrepo-common-3.4.2-SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-common/3.4.2/fcrepo-common-3.4.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.fcrepo:fcrepo-generate:3.4.2-SNAPSHOT">
+    <library name="Maven: org.fcrepo:fcrepo-generate:3.4.2">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-generate/3.4.2-SNAPSHOT/fcrepo-generate-3.4.2-SNAPSHOT.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-generate/3.4.2/fcrepo-generate-3.4.2.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-generate/3.4.2-SNAPSHOT/fcrepo-generate-3.4.2-SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-generate/3.4.2/fcrepo-generate-3.4.2-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-generate/3.4.2-SNAPSHOT/fcrepo-generate-3.4.2-SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-generate/3.4.2/fcrepo-generate-3.4.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.fcrepo:fcrepo-installer:3.4.2-SNAPSHOT">
+    <library name="Maven: org.fcrepo:fcrepo-installer:3.4.2">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-installer/3.4.2-SNAPSHOT/fcrepo-installer-3.4.2-SNAPSHOT.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-installer/3.4.2/fcrepo-installer-3.4.2.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-installer/3.4.2-SNAPSHOT/fcrepo-installer-3.4.2-SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-installer/3.4.2/fcrepo-installer-3.4.2-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-installer/3.4.2-SNAPSHOT/fcrepo-installer-3.4.2-SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-installer/3.4.2/fcrepo-installer-3.4.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.fcrepo:fcrepo-security-pdp:3.4.2-SNAPSHOT">
+    <library name="Maven: org.fcrepo:fcrepo-security-pdp:3.4.2">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-security-pdp/3.4.2-SNAPSHOT/fcrepo-security-pdp-3.4.2-SNAPSHOT.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-security-pdp/3.4.2/fcrepo-security-pdp-3.4.2.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-security-pdp/3.4.2-SNAPSHOT/fcrepo-security-pdp-3.4.2-SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-security-pdp/3.4.2/fcrepo-security-pdp-3.4.2-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-security-pdp/3.4.2-SNAPSHOT/fcrepo-security-pdp-3.4.2-SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-security-pdp/3.4.2/fcrepo-security-pdp-3.4.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.fcrepo:fcrepo-server:3.4.2-SNAPSHOT">
+    <library name="Maven: org.fcrepo:fcrepo-server:3.4.2">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-server/3.4.2-SNAPSHOT/fcrepo-server-3.4.2-SNAPSHOT.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-server/3.4.2/fcrepo-server-3.4.2.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-server/3.4.2-SNAPSHOT/fcrepo-server-3.4.2-SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-server/3.4.2/fcrepo-server-3.4.2-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-server/3.4.2-SNAPSHOT/fcrepo-server-3.4.2-SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-server/3.4.2/fcrepo-server-3.4.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.fcrepo:fcrepo-server:cli-loader-main:3.4.2-SNAPSHOT">
+    <library name="Maven: org.fcrepo:fcrepo-server:cli-loader-main:3.4.2">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-server/3.4.2-SNAPSHOT/fcrepo-server-3.4.2-SNAPSHOT-cli-loader-main.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-server/3.4.2/fcrepo-server-3.4.2-cli-loader-main.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-server/3.4.2-SNAPSHOT/fcrepo-server-3.4.2-SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-server/3.4.2/fcrepo-server-3.4.2-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-server/3.4.2-SNAPSHOT/fcrepo-server-3.4.2-SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-server/3.4.2/fcrepo-server-3.4.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.fcrepo:fcrepo-webapp-democontent:war:3.4.2-SNAPSHOT">
+    <library name="Maven: org.fcrepo:fcrepo-webapp-democontent:war:3.4.2">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-democontent/3.4.2-SNAPSHOT/fcrepo-webapp-democontent-3.4.2-SNAPSHOT.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-democontent/3.4.2/fcrepo-webapp-democontent-3.4.2.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-democontent/3.4.2-SNAPSHOT/fcrepo-webapp-democontent-3.4.2-SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-democontent/3.4.2/fcrepo-webapp-democontent-3.4.2-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-democontent/3.4.2-SNAPSHOT/fcrepo-webapp-democontent-3.4.2-SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-democontent/3.4.2/fcrepo-webapp-democontent-3.4.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.fcrepo:fcrepo-webapp-fedora:war:3.4.2-SNAPSHOT">
+    <library name="Maven: org.fcrepo:fcrepo-webapp-fedora:war:3.4.2">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-fedora/3.4.2-SNAPSHOT/fcrepo-webapp-fedora-3.4.2-SNAPSHOT.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-fedora/3.4.2/fcrepo-webapp-fedora-3.4.2.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-fedora/3.4.2-SNAPSHOT/fcrepo-webapp-fedora-3.4.2-SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-fedora/3.4.2/fcrepo-webapp-fedora-3.4.2-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-fedora/3.4.2-SNAPSHOT/fcrepo-webapp-fedora-3.4.2-SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-fedora/3.4.2/fcrepo-webapp-fedora-3.4.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.fcrepo:fcrepo-webapp-fop:war:3.4.2-SNAPSHOT">
+    <library name="Maven: org.fcrepo:fcrepo-webapp-fop:war:3.4.2">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-fop/3.4.2-SNAPSHOT/fcrepo-webapp-fop-3.4.2-SNAPSHOT.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-fop/3.4.2/fcrepo-webapp-fop-3.4.2.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-fop/3.4.2-SNAPSHOT/fcrepo-webapp-fop-3.4.2-SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-fop/3.4.2/fcrepo-webapp-fop-3.4.2-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-fop/3.4.2-SNAPSHOT/fcrepo-webapp-fop-3.4.2-SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-fop/3.4.2/fcrepo-webapp-fop-3.4.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.fcrepo:fcrepo-webapp-imagemanip:war:3.4.2-SNAPSHOT">
+    <library name="Maven: org.fcrepo:fcrepo-webapp-imagemanip:war:3.4.2">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-imagemanip/3.4.2-SNAPSHOT/fcrepo-webapp-imagemanip-3.4.2-SNAPSHOT.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-imagemanip/3.4.2/fcrepo-webapp-imagemanip-3.4.2.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-imagemanip/3.4.2-SNAPSHOT/fcrepo-webapp-imagemanip-3.4.2-SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-imagemanip/3.4.2/fcrepo-webapp-imagemanip-3.4.2-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-imagemanip/3.4.2-SNAPSHOT/fcrepo-webapp-imagemanip-3.4.2-SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-imagemanip/3.4.2/fcrepo-webapp-imagemanip-3.4.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.fcrepo:fcrepo-webapp-saxon:war:3.4.2-SNAPSHOT">
+    <library name="Maven: org.fcrepo:fcrepo-webapp-saxon:war:3.4.2">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-saxon/3.4.2-SNAPSHOT/fcrepo-webapp-saxon-3.4.2-SNAPSHOT.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-saxon/3.4.2/fcrepo-webapp-saxon-3.4.2.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-saxon/3.4.2-SNAPSHOT/fcrepo-webapp-saxon-3.4.2-SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-saxon/3.4.2/fcrepo-webapp-saxon-3.4.2-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-saxon/3.4.2-SNAPSHOT/fcrepo-webapp-saxon-3.4.2-SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/fcrepo/fcrepo-webapp-saxon/3.4.2/fcrepo-webapp-saxon-3.4.2-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.fcrepo:jai_codec:1.1.2_01">

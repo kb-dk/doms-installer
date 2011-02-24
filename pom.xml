@@ -1,14 +1,15 @@
 <project>
+
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>dk.statsbiblioteket.doms</groupId>
         <artifactId>doms</artifactId>
-        <version>0.0.1</version>
+        <version>0.1.1</version>
     </parent>
 
     <groupId>dk.statsbiblioteket.doms.testbed</groupId>
     <artifactId>testbed</artifactId>
-    <version>0.10.18</version>
+    <version>0.10.18-SNAPSHOT</version>
 
 
     <packaging>pom</packaging>
@@ -42,25 +43,25 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.domsutil</groupId>
             <artifactId>domsutil-bundle</artifactId>
-            <version>0.0.17</version>
+            <version>0.0.20</version>
             <type>pom</type>
         </dependency>
 
         <dependency>
             <groupId>dk.statsbiblioteket.doms.authchecker</groupId>
             <artifactId>authchecker-fedoralogin</artifactId>
-            <version>0.0.7</version>
+            <version>0.0.8</version>
         </dependency>
 
         <dependency>
             <groupId>dk.statsbiblioteket.doms.ecm</groupId>
             <artifactId>ecm-fedoravalidatorhook</artifactId>
-            <version>0.0.14#SNAPSHOT</version>
+            <version>0.0.15</version>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.highlevel</groupId>
             <artifactId>bitstorage-highlevel-hookApprove</artifactId>
-            <version>0.0.15</version>
+            <version>0.0.16</version>
         </dependency>
 
 
@@ -68,52 +69,51 @@
         <dependency>
             <groupId>org.fcrepo</groupId>
             <artifactId>fcrepo-installer</artifactId>
-            <version>${fcrepo.version}</version>
-            <type>jar</type>
+            <version>3.4.2</version>
         </dependency>
 
         <!--Webservices-->
         <dependency>
             <groupId>dk.statsbiblioteket.doms.ecm</groupId>
             <artifactId>ecm-service</artifactId>
-            <version>0.0.14#SNAPSHOT</version>
+            <version>0.0.15</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.pidgenerator</groupId>
             <artifactId>pidgenerator-service</artifactId>
-            <version>0.0.6#SNAPSHOT</version>
+            <version>0.0.7</version>
             <type>war</type>
         </dependency>
 
         <dependency>
             <groupId>dk.statsbiblioteket.doms.authchecker</groupId>
             <artifactId>authchecker-service</artifactId>
-            <version>0.0.7</version>
+            <version>0.0.8</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.lowlevel</groupId>
             <artifactId>bitstorage-lowlevel-service</artifactId>
-            <version>0.0.15</version>
+            <version>0.0.16</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.characteriser</groupId>
             <artifactId>bitstorage-characteriser-service</artifactId>
-            <version>0.0.15</version>
+            <version>0.0.16</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.highlevel</groupId>
             <artifactId>bitstorage-highlevel-service</artifactId>
-            <version>0.0.15</version>
+            <version>0.0.16</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.central</groupId>
             <artifactId>centralWebservice-service</artifactId>
-            <version>0.0.17</version>
+            <version>0.0.18</version>
             <type>war</type>
         </dependency>
 
