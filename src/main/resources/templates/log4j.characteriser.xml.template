@@ -31,25 +31,6 @@
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
                      debug="false">
 
-    <!-- A console appender -->
-    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
-        <param name="Threshold" value="ERROR"/>
-        <!-- or WARN or DEBUG or INFO -->
-        <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
-        </layout>
-    </appender>
-
-    <appender name="DomsFile"
-              class="org.apache.log4j.FileAppender">
-        <param name="Threshold" value="WARN"/>
-        <param name="File" value="$LOG_DIR$/doms.log"/>
-        <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
-        </layout>
-    </appender>
-
-
     <appender name="DomsCharacteriser"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
@@ -59,7 +40,7 @@
     </appender>
 
     <appender name="DomsCharacteriserFile"
-              class="org.apache.log4j.FileAppender">
+              class="org.apache.log4j.RollingFileAppender">
         <param name="Threshold" value="INFO"/>
         <param name="File" value="$LOG_DIR$/characteriser.log"/>
         <layout class="org.apache.log4j.PatternLayout">
@@ -68,8 +49,7 @@
     </appender>
 
 
-
-    <logger name="dk.statsbiblioteket.doms.bitstorage.characteriser">
+    <logger name="dk.statsbiblioteket.doms.bitstorage.characteriser" additivity="false">
         <level value="ALL"/>
         <appender-ref ref="DomsCharacteriser"/>
         <appender-ref ref="DomsCharacteriserFile"/>
@@ -77,9 +57,9 @@
 
 
     <root>
-        <level value="ERROR"/>
-        <appender-ref ref="CONSOLE"/>
-        <appender-ref ref="DomsFile"/>
+        <level value="WARN"/>
+        <appender-ref ref="DomsCharacteriser"/>
+        <appender-ref ref="DomsCharacteriserFile"/>
     </root>
 
     
