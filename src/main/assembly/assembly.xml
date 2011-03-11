@@ -31,6 +31,14 @@
             </includes>
         </dependencySet>
 
+        <dependencySet>
+            <outputDirectory>ingester</outputDirectory>
+            <includes>
+                <include>dk.statsbiblioteket.doms.ingesters:radio-tv</include>
+            </includes>
+        </dependencySet>
+
+
     </dependencySets>
 
     <fileSets>

@@ -27,15 +27,18 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
                     <descriptors>
-                        <descriptor>assembly.xml</descriptor>
+                        <descriptor>src/main/assembly/assembly.xml</descriptor>
                     </descriptors>
                 </configuration>
                 <executions>
                     <execution>
-                        <id>make-assembly</id> <!-- this is used for inheritance merges -->
-                        <phase>package</phase> <!-- append to the packaging phase. -->
+                        <id>make-assembly</id>
+                        <!-- this is used for inheritance merges -->
+                        <phase>package</phase>
+                        <!-- append to the packaging phase. -->
                         <goals>
-                            <goal>single</goal> <!-- goals == mojos -->
+                            <goal>single</goal>
+                            <!-- goals == mojos -->
                         </goals>
                     </execution>
                 </executions>
@@ -140,6 +143,16 @@
             <artifactId>surveillance-surveyor-service</artifactId>
             <version>0.0.8-SNAPSHOT</version>
             <type>war</type>
+        </dependency>
+
+
+        <!--Ingesters-->
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.ingesters</groupId>
+            <artifactId>radio-tv</artifactId>
+            <version>0.0.4</version>
+            <classifier>ingester</classifier>
+            <type>zip</type>
         </dependency>
 
 

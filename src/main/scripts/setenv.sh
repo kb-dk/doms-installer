@@ -2,6 +2,7 @@
 
 TOMCATZIP=`basename $BASEDIR/data/tomcat/*.zip`
 FEDORAJAR=`basename $BASEDIR/data/fedora/*.jar`
+INGESTERZIP=`basename $BASEDIR/ingester/*.zip`
 
 #
 # Check for install-folder and potentially create it.
@@ -46,9 +47,11 @@ TOMCAT_CONFIG_DIR=$TESTBED_DIR/services/conf
 WEBAPPS_DIR=$TESTBED_DIR/services/webapps
 TOMCAT_APPS_DIR=$TESTBED_DIR/services/tomcatapps
 
+INGEST_DIR=$TESTBED_DIR/ingester
+
 
 #Database
-USE_POSTGRESQL=true
+#USE_POSTGRESQL=true
 POSTGRESQL_DB=doms-test$PORTRANGE
 POSTGRESQL_USER=doms-test$PORTRANGE
 POSTGRESQL_PASS=doms-test$PORTRANGE
