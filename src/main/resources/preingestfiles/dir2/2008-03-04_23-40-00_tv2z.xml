@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<program xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="preingestedRadioTVProgram.xsd">
+    <pbcore>
+        <PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
+
+            <pbcoreIdentifier>
+                <identifier><![CDATA[2397092RitzauProgram]]></identifier>
+                <identifierSource><![CDATA[id]]></identifierSource>
+            </pbcoreIdentifier>
+
+            <pbcoreTitle>
+                <title><![CDATA[Langt fra Las Vegas]]></title>
+                <titleType><![CDATA[titel]]></titleType>
+            </pbcoreTitle>
+
+            <pbcoreTitle>
+                <title><![CDATA[Langt fra Las Vegas]]></title>
+                <titleType><![CDATA[originaltitel]]></titleType>
+            </pbcoreTitle>
+
+            <pbcoreTitle>
+                <title><![CDATA["Trillekød".]]></title>
+                <titleType><![CDATA[episodetitel]]></titleType>
+            </pbcoreTitle>
+
+            <pbcoreDescription>
+                <description>
+                    <![CDATA[Kan man forestille sig noget bedre end at sidde i en gyngestol og babbe på en merskumspibe? Casper kan ikke. "Jumpstarts" tv-vært føler alderen trykke både på krop og sjæl. Han er blevet gammel og har det, som gamle mennesker flest, pragtfuldt med det.]]>
+                </description>
+                <descriptionType><![CDATA[langomtale1]]></descriptionType>
+            </pbcoreDescription>
+
+            <pbcoreDescription>
+                <description>
+                    <![CDATA[Naturligvis frygter han sædernes forfald og bakker derfor 100 procent op om "Høj moral" uge - et nyt udspil fra redaktionschef Kim Dorowsky, som er bekymret for medarbejdernes værdinormer. Men netop som Casper er allermest støvet og afklaret med dødens komme, sker der noget forunderligt. Kims niece Trille kommer i en uges praktik på redaktionen. Der er ikke noget som en 14-årig pige, der kan puste liv i et hensygnende legeme. Feel the disaster. Kenny får en idé, der skal gøre en ende på hans evindelige pengeproblemer. Hans koncept er lige så enkelt, som det er genialt. Nøgleordene er målrettet pop. Og så får "Jumpstart" en ny nabo, idet Kenyas ambassade flytter ind. Niels og Robert udgør den selvbestaltede velkomstkomité - enhver nabos mareridt.]]>
+                </description>
+                <descriptionType><![CDATA[langomtale2]]></descriptionType>
+            </pbcoreDescription>
+
+            <pbcoreDescription>
+                <description>
+                    <![CDATA[Dansk sitcom om livet på en tv-station.]]>
+                </description>
+                <descriptionType><![CDATA[kortomtale]]></descriptionType>
+            </pbcoreDescription>
+
+            <pbcoreGenre>
+                <genre>hovedgenre: <![CDATA[Underholdning]]></genre>
+            </pbcoreGenre>
+
+            <pbcoreGenre>
+                <genre>undergenre: <![CDATA[Sit-com]]></genre>
+            </pbcoreGenre>
+
+            
+            <pbcoreCreator>
+                <creator><![CDATA[]]></creator>
+                <creatorRole><![CDATA[forfatter]]></creatorRole>
+            </pbcoreCreator>
+
+
+            
+            <pbcoreContributor>
+                <contributor><![CDATA[Kim Dorowsky: Sofie Stougaard]]></contributor>
+                <contributorRole><![CDATA[medvirkende]]></contributorRole>
+            </pbcoreContributor>
+
+            <pbcoreContributor>
+                <contributor><![CDATA[Kenny: Frank Hvam]]></contributor>
+                <contributorRole><![CDATA[medvirkende]]></contributorRole>
+            </pbcoreContributor>
+
+            <pbcoreContributor>
+                <contributor><![CDATA[Casper: Casper Christensen]]></contributor>
+                <contributorRole><![CDATA[medvirkende]]></contributorRole>
+            </pbcoreContributor>
+
+
+            
+            <pbcoreContributor>
+                <contributor><![CDATA[]]></contributor>
+                <contributorRole><![CDATA[instruktion]]></contributorRole>
+            </pbcoreContributor>
+
+
+            <pbcorePublisher>
+                <publisher><![CDATA[tv2z]]></publisher>
+                <publisherRole><![CDATA[channel_name]]></publisherRole>
+            </pbcorePublisher>
+
+            <pbcorePublisher>
+                <publisher><![CDATA[TV 2 Zulu]]></publisher>
+                <publisherRole><![CDATA[kanalnavn]]></publisherRole>
+            </pbcorePublisher>
+
+            <pbcoreInstantiation>
+                <dateCreated><![CDATA[2001]]></dateCreated>
+                <dateIssued></dateIssued>
+                <formatLocation></formatLocation>
+                <formatMediaType><![CDATA[Moving Image]]></formatMediaType>
+                <formatStandard><![CDATA[ikke hd]]></formatStandard>
+                <formatDuration><![CDATA[0]]></formatDuration>
+                <formatAspectRatio><![CDATA[]]>, </formatAspectRatio>
+                <formatColors><![CDATA[farve]]></formatColors>
+                <formatChannelConfiguration><![CDATA[ikke surround]]></formatChannelConfiguration>
+                <pbcoreDateAvailable>
+                    <dateAvailableStart><![CDATA[2008-03-04T23:40:00+0100]]></dateAvailableStart>
+                    <dateAvailableEnd><![CDATA[2008-03-05T00:15:00+0100]]></dateAvailableEnd>
+                </pbcoreDateAvailable>
+                <pbcoreFormatID>
+                    <formatIdentifier>[INSERT_PBC_FORMAT_ID]</formatIdentifier>
+                    <formatIdentifierSource>[INSERT_PBC_FORMAT_ID_SOURCE]</formatIdentifierSource>
+                </pbcoreFormatID>
+                <pbcoreAnnotation>
+                    <annotation><![CDATA[]]></annotation>
+                </pbcoreAnnotation>
+            </pbcoreInstantiation>
+
+            <pbcoreExtension>
+                <extension>antalepisoder:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>episodenr:<![CDATA[2]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>premiere:<![CDATA[ikke premiere]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>genudsendelse:<![CDATA[genudsendelse]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>hovedgenre_id:<![CDATA[10]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>kanalid:<![CDATA[7]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>live:<![CDATA[ikke live]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>lydlink:<![CDATA[]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>produktionsland:<![CDATA[Dansk]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>produktionsland_id:<![CDATA[1]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>program_id:<![CDATA[10198718]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>program_ophold:<![CDATA[ikke program ophold]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>undergenre_id:<![CDATA[743]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>urllink:<![CDATA[]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>afsnit_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>saeson_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>serie_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>tekstet:<![CDATA[ikke tekstet]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>th:<![CDATA[ikke tekstet for hørehæmmede]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>ttv:<![CDATA[ikke tekst-tv]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>showviewcode:<![CDATA[61341568]]></extension>
+            </pbcoreExtension>
+
+        </PBCoreDescriptionDocument>
+    </pbcore>
+
+    <originals>
+        <ritzau_original>
+            <![CDATA[RitzauProgram{Id=2397092, channel_name='tv2z', kanalId=7, starttid=2008-03-04 23:40:00.0, sluttid=2008-03-05 00:15:00.0, annotation='null', originaltitel='Langt fra Las Vegas', kanalnavn='TV 2 Zulu', titel='Langt fra Las Vegas', hovedgenre='Underholdning', undergenre='Sit-com', kortomtale='Dansk sitcom om livet på en tv-station.', langomtale1='Kan man forestille sig noget bedre end at sidde i en gyngestol og babbe på en merskumspibe? Casper kan ikke. "Jumpstarts" tv-vært føler alderen trykke både på krop og sjæl. Han er blevet gammel og har det, som gamle mennesker flest, pragtfuldt med det.', langomtale2='Naturligvis frygter han sædernes forfald og bakker derfor 100 procent op om "Høj moral" uge - et nyt udspil fra redaktionschef Kim Dorowsky, som er bekymret for medarbejdernes værdinormer. Men netop som Casper er allermest støvet og afklaret med dødens komme, sker der noget forunderligt. Kims niece Trille kommer i en uges praktik på redaktionen. Der er ikke noget som en 14-årig pige, der kan puste liv i et hensygnende legeme. Feel the disaster. Kenny får en idé, der skal gøre en ende på hans evindelige pengeproblemer. Hans koncept er lige så enkelt, som det er genialt. Nøgleordene er målrettet pop. Og så får "Jumpstart" en ny nabo, idet Kenyas ambassade flytter ind. Niels og Robert udgør den selvbestaltede velkomstkomité - enhver nabos mareridt.', urllink='null', lydlink='null', episodetitel='"Trillekød".', instruktion='null', forfatter='null', produktionsland='Dansk', medvirkende='Casper: Casper Christensen, Kenny: Frank Hvam og Kim Dorowsky: Sofie Stougaard.', programlaengde=0, produktionsaar=2001, episodenr=2, antalepisoder=0, showviewcode=61341568, surround=false, genudsendelse=true, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=10198718, hovedgenre_id=10, undergenre_id=743, program_ophold=false, produktionsland_id=1, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
+        </ritzau_original>
+
+        <gallup_original>
+            <![CDATA[]]>
+        </gallup_original>
+    </originals>
+
+    <program_recording_files>
+        <file>
+            <file_url>http://bitfinder.statsbiblioteket.dk/bart/tv2z_839.250_K67-TV2-Zulu_mpeg1_20080304065601_20080305045501_encoder3-1.mpeg</file_url>
+            <program_start_offset>60149</program_start_offset>
+            <program_clip_length>2280</program_clip_length>
+            <file_name>tv2z_839.250_K67-TV2-Zulu_mpeg1_20080304065601_20080305045501_encoder3-1.mpeg</file_name>
+            <format_uri>info:pronom/x-fmt/385</format_uri>
+        </file><file>
+            <file_url>http://bitfinder.statsbiblioteket.dk/bart/tv2z_839.250_K67-TV2-Zulu_mpeg1_20080304182002_20080305045502_encoder3-2.mpeg</file_url>
+            <program_start_offset>19108</program_start_offset>
+            <program_clip_length>2280</program_clip_length>
+            <file_name>tv2z_839.250_K67-TV2-Zulu_mpeg1_20080304182002_20080305045502_encoder3-2.mpeg</file_name>
+            <format_uri>info:pronom/x-fmt/385</format_uri>
+        </file>
+    </program_recording_files>
+</program>
