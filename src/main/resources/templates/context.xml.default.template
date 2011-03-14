@@ -133,8 +133,8 @@
             value="ignored.txt" override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.restUrls"
                value="
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-surveyor/surveyable/getStatusSince/{date};
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-fedorasurveyor/surveyable/getStatusSince/{date};
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-surveyor-service/surveyable/getStatusSince/{date};
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-fedorasurveyor-service/surveyable/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/authchecker-service/surveyable/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/ecm-service/surveyable/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora/surveyable/getStatusSince/{date}"
