@@ -982,37 +982,37 @@
         <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/lowlevel/bitstorage-lowlevel-service/0.0.17/bitstorage-lowlevel-service-0.0.17-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-interface:0.0.19">
+    <library name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-interface:0.0.20">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-interface/0.0.19/centralWebservice-interface-0.0.19.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-interface/0.0.20/centralWebservice-interface-0.0.20.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-interface/0.0.19/centralWebservice-interface-0.0.19-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-interface/0.0.20/centralWebservice-interface-0.0.20-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-interface/0.0.19/centralWebservice-interface-0.0.19-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-interface/0.0.20/centralWebservice-interface-0.0.20-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-service:war:0.0.19">
+    <library name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-service:war:0.0.20">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.19/centralWebservice-service-0.0.19.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.20/centralWebservice-service-0.0.20.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.19/centralWebservice-service-0.0.19-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.20/centralWebservice-service-0.0.20-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.19/centralWebservice-service-0.0.19-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.20/centralWebservice-service-0.0.20-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.client:domsclient:0.0.6">
+    <library name="Maven: dk.statsbiblioteket.doms.client:domsclient:0.0.7-SNAPSHOT">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/client/domsclient/0.0.6/domsclient-0.0.6.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/client/domsclient/0.0.7-SNAPSHOT/domsclient-0.0.7-SNAPSHOT.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/client/domsclient/0.0.6/domsclient-0.0.6-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/client/domsclient/0.0.7-SNAPSHOT/domsclient-0.0.7-SNAPSHOT-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/client/domsclient/0.0.6/domsclient-0.0.6-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/client/domsclient/0.0.7-SNAPSHOT/domsclient-0.0.7-SNAPSHOT-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: dk.statsbiblioteket.doms.domsutil.surveyable:domsutil-logappender:0.0.20">
