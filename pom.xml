@@ -71,7 +71,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.highlevel</groupId>
             <artifactId>bitstorage-highlevel-hookApprove</artifactId>
-            <version>0.0.17</version>
+            <version>0.0.18</version>
         </dependency>
 
 
@@ -86,7 +86,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.ecm</groupId>
             <artifactId>ecm-service</artifactId>
-            <version>0.0.16</version>
+            <version>0.0.17</version>
             <type>war</type>
         </dependency>
         <dependency>
@@ -105,25 +105,25 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.lowlevel</groupId>
             <artifactId>bitstorage-lowlevel-service</artifactId>
-            <version>0.0.17</version>
+            <version>0.0.18</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.characteriser</groupId>
             <artifactId>bitstorage-characteriser-service</artifactId>
-            <version>0.0.17</version>
+            <version>0.0.18</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.highlevel</groupId>
             <artifactId>bitstorage-highlevel-service</artifactId>
-            <version>0.0.17</version>
+            <version>0.0.18</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.central</groupId>
             <artifactId>centralWebservice-service</artifactId>
-            <version>0.0.20</version>
+            <version>0.0.21</version>
             <type>war</type>
         </dependency>
         <dependency>
@@ -150,7 +150,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.ingesters</groupId>
             <artifactId>radio-tv</artifactId>
-            <version>0.0.5</version>
+            <version>0.0.6</version>
             <classifier>ingester</classifier>
             <type>zip</type>
         </dependency>
