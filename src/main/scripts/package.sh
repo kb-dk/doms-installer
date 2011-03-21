@@ -208,10 +208,8 @@ mkdir -p $INGEST_DIR
 unzip -q -n $BASEDIR/ingester/$INGESTERZIP -d $INGEST_DIR
 pushd `dirname $INGEST_DIR/radio-tv-*/bin` > /dev/null
 cp $CONFIG_TEMP_DIR/ingest_config.sh bin/
-mkdir -p files/hotfolder1 files/hotfolder2 files/hotfolder3
-cp $BASEDIR/data/preingestfiles/dir1/*.xml files/hotfolder1/
-cp $BASEDIR/data/preingestfiles/dir2/*.xml files/hotfolder2/
-cp $BASEDIR/data/preingestfiles/dir3/*.xml files/hotfolder3/
+mkdir -p files
+cp -r $BASEDIR/data/preingestfiles/ files/
 popd > /dev/null
 
 rm -rf $CONFIG_TEMP_DIR > /dev/null
