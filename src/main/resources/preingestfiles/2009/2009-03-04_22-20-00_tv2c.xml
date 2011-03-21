@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<program xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="preingestedRadioTVProgram.xsd">
+    <pbcore>
+        <PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
+
+            <pbcoreIdentifier>
+                <identifier><![CDATA[3402069RitzauProgram]]></identifier>
+                <identifierSource><![CDATA[id]]></identifierSource>
+            </pbcoreIdentifier>
+
+            <pbcoreTitle>
+                <title><![CDATA[Schimanski]]></title>
+                <titleType><![CDATA[titel]]></titleType>
+            </pbcoreTitle>
+
+            <pbcoreTitle>
+                <title><![CDATA[Schimanski]]></title>
+                <titleType><![CDATA[originaltitel]]></titleType>
+            </pbcoreTitle>
+
+            <pbcoreTitle>
+                <title><![CDATA[]]></title>
+                <titleType><![CDATA[episodetitel]]></titleType>
+            </pbcoreTitle>
+
+            <pbcoreDescription>
+                <description>
+                    <![CDATA[Statsanklager Ilse Bonner henvender sig til den tidligere kriminalkommissær Schimanski med en ny opgave. Han skal eskortere storforbryderen og narkohandleren Mandel fra et fængsel i Belgien til Tyskland, hvor han skal vidne i en uopklaret mordsag.]]>
+                </description>
+                <descriptionType><![CDATA[langomtale1]]></descriptionType>
+            </pbcoreDescription>
+
+            <pbcoreDescription>
+                <description>
+                    <![CDATA[Faktisk blev Mandel arresteret af Schimanski for år tilbage for det selvsamme mord, men han gik fri på grund af nogle retsmæssige teknikaliteter. På vej til Tyskland bliver deres bil imidlertid udsat for et attentat, og Schimanski tror, at angriberne vil befri Mandel. Men i virkeligheden vil de slå ham ihjel - og så er Schimanski nødt til at slå sig sammen med forbryderen og flygte over hals og hoved.]]>
+                </description>
+                <descriptionType><![CDATA[langomtale2]]></descriptionType>
+            </pbcoreDescription>
+
+            <pbcoreDescription>
+                <description>
+                    <![CDATA[Tysk krimiserie.]]>
+                </description>
+                <descriptionType><![CDATA[kortomtale]]></descriptionType>
+            </pbcoreDescription>
+
+            <pbcoreGenre>
+                <genre>hovedgenre: <![CDATA[Serier]]></genre>
+            </pbcoreGenre>
+
+            <pbcoreGenre>
+                <genre>undergenre: <![CDATA[Krimiserie]]></genre>
+            </pbcoreGenre>
+
+
+            <pbcoreCreator>
+                <creator><![CDATA[Hansjörg Thurn]]></creator>
+                <creatorRole><![CDATA[forfatter]]></creatorRole>
+            </pbcoreCreator>
+
+
+            <pbcoreContributor>
+                <contributor><![CDATA[Ilse Bonner: Geno Lechner]]></contributor>
+                <contributorRole><![CDATA[medvirkende]]></contributorRole>
+            </pbcoreContributor>
+
+            <pbcoreContributor>
+                <contributor><![CDATA[Klaus Mandel: Christoph Waltz]]></contributor>
+                <contributorRole><![CDATA[medvirkende]]></contributorRole>
+            </pbcoreContributor>
+
+            <pbcoreContributor>
+                <contributor><![CDATA[Horst Schimanski: Götz George]]></contributor>
+                <contributorRole><![CDATA[medvirkende]]></contributorRole>
+            </pbcoreContributor>
+
+
+            <pbcoreContributor>
+                <contributor><![CDATA[Hajo Gies]]></contributor>
+                <contributorRole><![CDATA[instruktion]]></contributorRole>
+            </pbcoreContributor>
+
+
+            <pbcorePublisher>
+                <publisher><![CDATA[tv2c]]></publisher>
+                <publisherRole><![CDATA[channel_name]]></publisherRole>
+            </pbcorePublisher>
+
+            <pbcorePublisher>
+                <publisher><![CDATA[TV 2 Charlie]]></publisher>
+                <publisherRole><![CDATA[kanalnavn]]></publisherRole>
+            </pbcorePublisher>
+
+            <pbcoreInstantiation>
+                <dateCreated><![CDATA[1997]]></dateCreated>
+                <dateIssued></dateIssued>
+                <formatLocation></formatLocation>
+                <formatMediaType><![CDATA[Moving Image]]></formatMediaType>
+                <formatStandard><![CDATA[ikke hd]]></formatStandard>
+                <formatDuration><![CDATA[0]]></formatDuration>
+                <formatAspectRatio><![CDATA[]]>,</formatAspectRatio>
+                <formatColors><![CDATA[farve]]></formatColors>
+                <formatChannelConfiguration><![CDATA[ikke surround]]></formatChannelConfiguration>
+                <pbcoreDateAvailable>
+                    <dateAvailableStart><![CDATA[2009-03-04T22:20:00+0100]]></dateAvailableStart>
+                    <dateAvailableEnd><![CDATA[2009-03-04T23:55:00+0100]]></dateAvailableEnd>
+                </pbcoreDateAvailable>
+                <pbcoreFormatID>
+                    <formatIdentifier>[INSERT_PBC_FORMAT_ID]</formatIdentifier>
+                    <formatIdentifierSource>[INSERT_PBC_FORMAT_ID_SOURCE]</formatIdentifierSource>
+                </pbcoreFormatID>
+                <pbcoreAnnotation>
+                    <annotation><![CDATA[]]></annotation>
+                </pbcoreAnnotation>
+            </pbcoreInstantiation>
+
+            <pbcoreExtension>
+                <extension>antalepisoder:<![CDATA[15]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>episodenr:<![CDATA[2]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>premiere:<![CDATA[ikke premiere]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>genudsendelse:<![CDATA[ikke genudsendelse]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>hovedgenre_id:<![CDATA[4]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>kanalid:<![CDATA[216]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>live:<![CDATA[ikke live]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>lydlink:<![CDATA[]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>produktionsland:<![CDATA[Tysk]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>produktionsland_id:<![CDATA[4]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>program_id:<![CDATA[11485969]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>program_ophold:<![CDATA[ikke program ophold]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>undergenre_id:<![CDATA[693]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>urllink:<![CDATA[]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>afsnit_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>saeson_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>serie_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>tekstet:<![CDATA[ikke tekstet]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>th:<![CDATA[ikke tekstet for hørehæmmede]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>ttv:<![CDATA[ikke tekst-tv]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>showviewcode:<![CDATA[85369162]]></extension>
+            </pbcoreExtension>
+
+        </PBCoreDescriptionDocument>
+    </pbcore>
+
+    <originals>
+        <ritzau_original>
+            <![CDATA[RitzauProgram{Id=3402069, channel_name='tv2c', kanalId=216, starttid=2009-03-04 22:20:00.0, sluttid=2009-03-04 23:55:00.0, annotation='null', originaltitel='Schimanski', kanalnavn='TV 2 Charlie', titel='Schimanski', hovedgenre='Serier', undergenre='Krimiserie', kortomtale='Tysk krimiserie.', langomtale1='Statsanklager Ilse Bonner henvender sig til den tidligere kriminalkommissær Schimanski med en ny opgave. Han skal eskortere storforbryderen og narkohandleren Mandel fra et fængsel i Belgien til Tyskland, hvor han skal vidne i en uopklaret mordsag.', langomtale2='Faktisk blev Mandel arresteret af Schimanski for år tilbage for det selvsamme mord, men han gik fri på grund af nogle retsmæssige teknikaliteter. På vej til Tyskland bliver deres bil imidlertid udsat for et attentat, og Schimanski tror, at angriberne vil befri Mandel. Men i virkeligheden vil de slå ham ihjel - og så er Schimanski nødt til at slå sig sammen med forbryderen og flygte over hals og hoved.', urllink='null', lydlink='null', episodetitel='null', instruktion='Hajo Gies', forfatter='Hansjörg Thurn', produktionsland='Tysk', medvirkende='Horst Schimanski: Götz George, Klaus Mandel: Christoph Waltz og Ilse Bonner: Geno Lechner.', programlaengde=0, produktionsaar=1997, episodenr=2, antalepisoder=15, showviewcode=85369162, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=11485969, hovedgenre_id=4, undergenre_id=693, program_ophold=false, produktionsland_id=4, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
+        </ritzau_original>
+
+        <gallup_original>
+            <![CDATA[]]>
+        </gallup_original>
+    </originals>
+
+    <program_recording_files>
+        <file>
+            <file_url>
+                http://bitfinder.statsbiblioteket.dk/bart/tv2c_623.250_K40-TV2-Charlie_mpeg1_20090304195601_20090304230601_encoder3-2.mpeg
+            </file_url>
+            <program_start_offset>8549</program_start_offset>
+            <program_clip_length>2851</program_clip_length>
+            <file_name>tv2c_623.250_K40-TV2-Charlie_mpeg1_20090304195601_20090304230601_encoder3-2.mpeg</file_name>
+            <format_uri>info:pronom/x-fmt/385</format_uri>
+        </file>
+    </program_recording_files>
+</program>

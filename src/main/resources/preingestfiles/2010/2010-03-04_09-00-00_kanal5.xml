@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<program xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="preingestedRadioTVProgram.xsd">
+    <pbcore>
+        <PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
+
+            <pbcoreIdentifier>
+                <identifier><![CDATA[576693RitzauProgram]]></identifier>
+                <identifierSource><![CDATA[id]]></identifierSource>
+            </pbcoreIdentifier>
+
+            <pbcoreTitle>
+                <title><![CDATA[House]]></title>
+                <titleType><![CDATA[titel]]></titleType>
+            </pbcoreTitle>
+
+            <pbcoreTitle>
+                <title><![CDATA[House M.D.]]></title>
+                <titleType><![CDATA[originaltitel]]></titleType>
+            </pbcoreTitle>
+
+            <pbcoreTitle>
+                <title><![CDATA[]]></title>
+                <titleType><![CDATA[episodetitel]]></titleType>
+            </pbcoreTitle>
+
+            <pbcoreDescription>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <descriptionType><![CDATA[langomtale1]]></descriptionType>
+            </pbcoreDescription>
+
+            <pbcoreDescription>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <descriptionType><![CDATA[langomtale2]]></descriptionType>
+            </pbcoreDescription>
+
+            <pbcoreDescription>
+                <description>
+                    <![CDATA[Amerikansk dramaserie.]]>
+                </description>
+                <descriptionType><![CDATA[kortomtale]]></descriptionType>
+            </pbcoreDescription>
+
+            <pbcoreGenre>
+                <genre>hovedgenre: <![CDATA[Serier]]></genre>
+            </pbcoreGenre>
+
+            <pbcoreGenre>
+                <genre>undergenre: <![CDATA[Dramaserie]]></genre>
+            </pbcoreGenre>
+
+
+            <pbcoreCreator>
+                <creator><![CDATA[]]></creator>
+                <creatorRole><![CDATA[forfatter]]></creatorRole>
+            </pbcoreCreator>
+
+
+            <pbcoreContributor>
+                <contributor><![CDATA[]]></contributor>
+                <contributorRole><![CDATA[medvirkende]]></contributorRole>
+            </pbcoreContributor>
+
+
+            <pbcoreContributor>
+                <contributor><![CDATA[]]></contributor>
+                <contributorRole><![CDATA[instruktion]]></contributorRole>
+            </pbcoreContributor>
+
+
+            <pbcorePublisher>
+                <publisher><![CDATA[kanal5]]></publisher>
+                <publisherRole><![CDATA[channel_name]]></publisherRole>
+            </pbcorePublisher>
+
+            <pbcorePublisher>
+                <publisher><![CDATA[Kanal 5]]></publisher>
+                <publisherRole><![CDATA[kanalnavn]]></publisherRole>
+            </pbcorePublisher>
+
+            <pbcoreInstantiation>
+                <dateCreated><![CDATA[0]]></dateCreated>
+                <dateIssued></dateIssued>
+                <formatLocation></formatLocation>
+                <formatMediaType><![CDATA[Moving Image]]></formatMediaType>
+                <formatStandard><![CDATA[hd]]></formatStandard>
+                <formatDuration><![CDATA[0]]></formatDuration>
+                <formatAspectRatio><![CDATA[]]>,</formatAspectRatio>
+                <formatColors><![CDATA[farve]]></formatColors>
+                <formatChannelConfiguration><![CDATA[ikke surround]]></formatChannelConfiguration>
+                <pbcoreDateAvailable>
+                    <dateAvailableStart><![CDATA[2010-03-04T09:00:00+0100]]></dateAvailableStart>
+                    <dateAvailableEnd><![CDATA[2010-03-04T09:55:00+0100]]></dateAvailableEnd>
+                </pbcoreDateAvailable>
+                <pbcoreFormatID>
+                    <formatIdentifier>[INSERT_PBC_FORMAT_ID]</formatIdentifier>
+                    <formatIdentifierSource>[INSERT_PBC_FORMAT_ID_SOURCE]</formatIdentifierSource>
+                </pbcoreFormatID>
+                <pbcoreAnnotation>
+                    <annotation><![CDATA[]]></annotation>
+                </pbcoreAnnotation>
+            </pbcoreInstantiation>
+
+            <pbcoreExtension>
+                <extension>antalepisoder:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>episodenr:<![CDATA[3]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>premiere:<![CDATA[ikke premiere]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>genudsendelse:<![CDATA[genudsendelse]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>hovedgenre_id:<![CDATA[4]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>kanalid:<![CDATA[15]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>live:<![CDATA[ikke live]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>lydlink:<![CDATA[]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>produktionsland:<![CDATA[]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>produktionsland_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>program_id:<![CDATA[13235801]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>program_ophold:<![CDATA[ikke program ophold]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>undergenre_id:<![CDATA[684]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>urllink:<![CDATA[]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>afsnit_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>saeson_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>serie_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>tekstet:<![CDATA[ikke tekstet]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>th:<![CDATA[ikke tekstet for hørehæmmede]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>ttv:<![CDATA[ikke tekst-tv]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>showviewcode:<![CDATA[93460742]]></extension>
+            </pbcoreExtension>
+
+        </PBCoreDescriptionDocument>
+    </pbcore>
+
+    <originals>
+        <ritzau_original>
+            <![CDATA[RitzauProgram{Id=576693, channel_name='kanal5', kanalId=15, starttid=2010-03-04 09:00:00.0, sluttid=2010-03-04 09:55:00.0, annotation='null', originaltitel='House M.D.', kanalnavn='Kanal 5', titel='House', hovedgenre='Serier', undergenre='Dramaserie', kortomtale='Amerikansk dramaserie.', langomtale1='null', langomtale2='null', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=0, episodenr=3, antalepisoder=0, showviewcode=93460742, surround=false, genudsendelse=true, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=13235801, hovedgenre_id=4, undergenre_id=684, program_ophold=false, produktionsland_id=0, live=false, hd=true, afsnit_id=0, saeson_id=0, serie_id=0}]]>
+        </ritzau_original>
+
+        <gallup_original>
+            <![CDATA[]]>
+        </gallup_original>
+    </originals>
+
+    <program_recording_files>
+        <file>
+            <file_url>
+                http://bitfinder.statsbiblioteket.dk/bart/kanal5_671.250_K46-Kanal5_mpeg1_20100304065201_20100304092202_encoder4-1.mpeg
+            </file_url>
+            <program_start_offset>7589</program_start_offset>
+            <program_clip_length>1412</program_clip_length>
+            <file_name>kanal5_671.250_K46-Kanal5_mpeg1_20100304065201_20100304092202_encoder4-1.mpeg</file_name>
+            <format_uri>info:pronom/x-fmt/385</format_uri>
+        </file>
+    </program_recording_files>
+</program>

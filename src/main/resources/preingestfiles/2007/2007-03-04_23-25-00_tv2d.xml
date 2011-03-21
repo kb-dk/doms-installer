@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<program xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="preingestedRadioTVProgram.xsd">
+    <pbcore>
+        <PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
+
+            <pbcoreIdentifier>
+                <identifier><![CDATA[1414457RitzauProgram]]></identifier>
+                <identifierSource><![CDATA[id]]></identifierSource>
+            </pbcoreIdentifier>
+
+            <pbcoreTitle>
+                <title><![CDATA[Langt fra Las Vegas]]></title>
+                <titleType><![CDATA[titel]]></titleType>
+            </pbcoreTitle>
+
+            <pbcoreTitle>
+                <title><![CDATA[Langt fra Las Vegas]]></title>
+                <titleType><![CDATA[originaltitel]]></titleType>
+            </pbcoreTitle>
+
+            <pbcoreTitle>
+                <title><![CDATA["Heidi del 1".]]></title>
+                <titleType><![CDATA[episodetitel]]></titleType>
+            </pbcoreTitle>
+
+            <pbcoreDescription>
+                <description>
+                    <![CDATA[Hele "Jumpstart"-redaktionen kommer hjem fra skiferie og opdager, at ting ikke er, som de plejer at være. "De kendtes tømrer" Thor Fintasdottir har svigtet, og København har fået en superhelt: Den maskerede Sunnyboy, hvis identitet ingen kender. Skiferien har taget hårdt på alle. Casper forsøger at lægge en hed affære med en tysk pige bag sig. Han vil nu koncentrere sig 100 procent om Anne. Derfor er det meget ubelejligt, da affæren dukker uventet op.]]>
+                </description>
+                <descriptionType><![CDATA[langomtale1]]></descriptionType>
+            </pbcoreDescription>
+
+            <pbcoreDescription>
+                <description>
+                    <![CDATA[Tyske Heidi viser sig snart at være i besiddelse af et seksuelt 12. gear. Det er naturligvis ikke noget, der skræmmer en mand med appetit på tilværelsen, men det kan støde andre. Kenny og Lisa har tilbragt adskillige timer sammen i en defekt skilift i 3000 meters højde. Det har forandret dem begge. Robert er desværre som han plejer. Til gengæld har han været udsat for en ulykke, som nok er slem for Robert, men som er decideret grufuld for hans omgivelser. Casper finder i sin postbunke en invitation til et royalt bal for musikere og tv-folk. Det er derfor med ekstra bitterhed, at royalisten Niels Buckingham må konstatere, at han ikke er inviteret. Det er der heldigvis råd for, hvis man er parat til at sælge ud.]]>
+                </description>
+                <descriptionType><![CDATA[langomtale2]]></descriptionType>
+            </pbcoreDescription>
+
+            <pbcoreDescription>
+                <description>
+                    <![CDATA[Dansk sitcom om livet på en tv-station.]]>
+                </description>
+                <descriptionType><![CDATA[kortomtale]]></descriptionType>
+            </pbcoreDescription>
+
+            <pbcoreGenre>
+                <genre>hovedgenre: <![CDATA[Underholdning]]></genre>
+            </pbcoreGenre>
+
+            <pbcoreGenre>
+                <genre>undergenre: <![CDATA[Sit-com]]></genre>
+            </pbcoreGenre>
+
+
+            <pbcoreCreator>
+                <creator><![CDATA[Casper Christensen]]></creator>
+                <creatorRole><![CDATA[forfatter]]></creatorRole>
+            </pbcoreCreator>
+
+
+            <pbcoreContributor>
+                <contributor><![CDATA[Kim Dorowsky: Sofie Stougaard]]></contributor>
+                <contributorRole><![CDATA[medvirkende]]></contributorRole>
+            </pbcoreContributor>
+
+            <pbcoreContributor>
+                <contributor><![CDATA[Kenny: Frank Hvam]]></contributor>
+                <contributorRole><![CDATA[medvirkende]]></contributorRole>
+            </pbcoreContributor>
+
+            <pbcoreContributor>
+                <contributor><![CDATA[Casper: Casper Christensen]]></contributor>
+                <contributorRole><![CDATA[medvirkende]]></contributorRole>
+            </pbcoreContributor>
+
+
+            <pbcoreContributor>
+                <contributor><![CDATA[]]></contributor>
+                <contributorRole><![CDATA[instruktion]]></contributorRole>
+            </pbcoreContributor>
+
+
+            <pbcorePublisher>
+                <publisher><![CDATA[tv2d]]></publisher>
+                <publisherRole><![CDATA[channel_name]]></publisherRole>
+            </pbcorePublisher>
+
+            <pbcorePublisher>
+                <publisher><![CDATA[TV 2]]></publisher>
+                <publisherRole><![CDATA[kanalnavn]]></publisherRole>
+            </pbcorePublisher>
+
+            <pbcoreInstantiation>
+                <dateCreated><![CDATA[2001]]></dateCreated>
+                <dateIssued></dateIssued>
+                <formatLocation></formatLocation>
+                <formatMediaType><![CDATA[Moving Image]]></formatMediaType>
+                <formatStandard><![CDATA[ikke hd]]></formatStandard>
+                <formatDuration><![CDATA[0]]></formatDuration>
+                <formatAspectRatio><![CDATA[]]>,</formatAspectRatio>
+                <formatColors><![CDATA[farve]]></formatColors>
+                <formatChannelConfiguration><![CDATA[ikke surround]]></formatChannelConfiguration>
+                <pbcoreDateAvailable>
+                    <dateAvailableStart><![CDATA[2007-03-04T23:25:00+0100]]></dateAvailableStart>
+                    <dateAvailableEnd><![CDATA[2007-03-05T00:00:00+0100]]></dateAvailableEnd>
+                </pbcoreDateAvailable>
+                <pbcoreFormatID>
+                    <formatIdentifier>[INSERT_PBC_FORMAT_ID]</formatIdentifier>
+                    <formatIdentifierSource>[INSERT_PBC_FORMAT_ID_SOURCE]</formatIdentifierSource>
+                </pbcoreFormatID>
+                <pbcoreAnnotation>
+                    <annotation><![CDATA[]]></annotation>
+                </pbcoreAnnotation>
+            </pbcoreInstantiation>
+
+            <pbcoreExtension>
+                <extension>antalepisoder:<![CDATA[53]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>episodenr:<![CDATA[9]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>premiere:<![CDATA[ikke premiere]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>genudsendelse:<![CDATA[ikke genudsendelse]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>hovedgenre_id:<![CDATA[10]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>kanalid:<![CDATA[6]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>live:<![CDATA[ikke live]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>lydlink:<![CDATA[]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>produktionsland:<![CDATA[Dansk]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>produktionsland_id:<![CDATA[1]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>program_id:<![CDATA[8870980]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>program_ophold:<![CDATA[ikke program ophold]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>undergenre_id:<![CDATA[743]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>urllink:<![CDATA[]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>afsnit_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>saeson_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>serie_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>tekstet:<![CDATA[ikke tekstet]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>th:<![CDATA[ikke tekstet for hørehæmmede]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>ttv:<![CDATA[ikke tekst-tv]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>showviewcode:<![CDATA[5440029]]></extension>
+            </pbcoreExtension>
+
+        </PBCoreDescriptionDocument>
+    </pbcore>
+
+    <originals>
+        <ritzau_original>
+            <![CDATA[RitzauProgram{Id=1414457, channel_name='tv2d', kanalId=6, starttid=2007-03-04 23:25:00.0, sluttid=2007-03-05 00:00:00.0, annotation='null', originaltitel='Langt fra Las Vegas', kanalnavn='TV 2', titel='Langt fra Las Vegas', hovedgenre='Underholdning', undergenre='Sit-com', kortomtale='Dansk sitcom om livet på en tv-station.', langomtale1='Hele "Jumpstart"-redaktionen kommer hjem fra skiferie og opdager, at ting ikke er, som de plejer at være. "De kendtes tømrer" Thor Fintasdottir har svigtet, og København har fået en superhelt: Den maskerede Sunnyboy, hvis identitet ingen kender. Skiferien har taget hårdt på alle. Casper forsøger at lægge en hed affære med en tysk pige bag sig. Han vil nu koncentrere sig 100 procent om Anne. Derfor er det meget ubelejligt, da affæren dukker uventet op.', langomtale2='Tyske Heidi viser sig snart at være i besiddelse af et seksuelt 12. gear. Det er naturligvis ikke noget, der skræmmer en mand med appetit på tilværelsen, men det kan støde andre. Kenny og Lisa har tilbragt adskillige timer sammen i en defekt skilift i 3000 meters højde. Det har forandret dem begge. Robert er desværre som han plejer. Til gengæld har han været udsat for en ulykke, som nok er slem for Robert, men som er decideret grufuld for hans omgivelser. Casper finder i sin postbunke en invitation til et royalt bal for musikere og tv-folk. Det er derfor med ekstra bitterhed, at royalisten Niels Buckingham må konstatere, at han ikke er inviteret. Det er der heldigvis råd for, hvis man er parat til at sælge ud.', urllink='null', lydlink='null', episodetitel='"Heidi del 1".', instruktion='null', forfatter='Casper Christensen', produktionsland='Dansk', medvirkende='Casper: Casper Christensen, Kenny: Frank Hvam og Kim Dorowsky: Sofie Stougaard.', programlaengde=0, produktionsaar=2001, episodenr=9, antalepisoder=53, showviewcode=5440029, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=8870980, hovedgenre_id=10, undergenre_id=743, program_ophold=false, produktionsland_id=1, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
+        </ritzau_original>
+
+        <gallup_original>
+            <![CDATA[]]>
+        </gallup_original>
+    </originals>
+
+    <program_recording_files>
+        <file>
+            <file_url>
+                http://bitfinder.statsbiblioteket.dk/bart/tv2d_511.250_K10-TV2-Danmark_mpeg2_20070304062601_20070305045502_encoder1-1.mpeg
+            </file_url>
+            <program_start_offset>61049</program_start_offset>
+            <program_clip_length>2280</program_clip_length>
+            <file_name>tv2d_511.250_K10-TV2-Danmark_mpeg2_20070304062601_20070305045502_encoder1-1.mpeg</file_name>
+            <format_uri>info:pronom/x-fmt/386</format_uri>
+        </file>
+    </program_recording_files>
+</program>

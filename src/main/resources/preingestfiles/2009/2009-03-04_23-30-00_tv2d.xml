@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<program xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="preingestedRadioTVProgram.xsd">
+    <pbcore>
+        <PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
+
+            <pbcoreIdentifier>
+                <identifier><![CDATA[3402231RitzauProgram]]></identifier>
+                <identifierSource><![CDATA[id]]></identifierSource>
+            </pbcoreIdentifier>
+
+            <pbcoreTitle>
+                <title><![CDATA[Gamle bøsser ruster aldrig]]></title>
+                <titleType><![CDATA[titel]]></titleType>
+            </pbcoreTitle>
+
+            <pbcoreTitle>
+                <title><![CDATA[Queer as Old Folk]]></title>
+                <titleType><![CDATA[originaltitel]]></titleType>
+            </pbcoreTitle>
+
+            <pbcoreTitle>
+                <title><![CDATA[]]></title>
+                <titleType><![CDATA[episodetitel]]></titleType>
+            </pbcoreTitle>
+
+            <pbcoreDescription>
+                <description>
+                    <![CDATA[Før 1967 var homoseksualitet forbudt i Storbritannien, og det gjorde livet temmelig besværligt for datidens bøsser. 73-årige Alan, 58-årige Clive og Roger på 64 ved alle, hvad det vil sige at være tvunget til at leve på en løgn. Alans mor sagde, at det var okay at være bøsse, når bare han var forelsket og ikke kyssede på munden.]]>
+                </description>
+                <descriptionType><![CDATA[langomtale1]]></descriptionType>
+            </pbcoreDescription>
+
+            <pbcoreDescription>
+                <description>
+                    <![CDATA[Clive giftede sig i et forsøg på at undertrykke sine lyster, mens Roger giftede sig, selv om han var 100 procent homo. I dag lever de alle tre livet for fuld skrue - og i overensstemmelse med deres seksualitet. Og selv om de er oppe i årene, er der intet, der tyder på, at de har tænkt sig at gå i stå eller i frø sådan inden for en overskuelig fremtid. Alan har været sammen med Jimmy i 40 år, Clive er stadig gift, men har masser af sex med mænd, og Roger nåede at være gift i 30 år og få to børn, før han som 58-årig mødte den 18-årige mandestripper Ian, som han har været sammen med i seks år nu, og hvis karriere han holder snor i.]]>
+                </description>
+                <descriptionType><![CDATA[langomtale2]]></descriptionType>
+            </pbcoreDescription>
+
+            <pbcoreDescription>
+                <description>
+                    <![CDATA[- når bøsser lever livet for fuld skrue!]]>
+                </description>
+                <descriptionType><![CDATA[kortomtale]]></descriptionType>
+            </pbcoreDescription>
+
+            <pbcoreGenre>
+                <genre>hovedgenre: <![CDATA[Dokumentar]]></genre>
+            </pbcoreGenre>
+
+            <pbcoreGenre>
+                <genre>undergenre: <![CDATA[Dokumentarfilm]]></genre>
+            </pbcoreGenre>
+
+
+            <pbcoreCreator>
+                <creator><![CDATA[]]></creator>
+                <creatorRole><![CDATA[forfatter]]></creatorRole>
+            </pbcoreCreator>
+
+
+            <pbcoreContributor>
+                <contributor><![CDATA[]]></contributor>
+                <contributorRole><![CDATA[medvirkende]]></contributorRole>
+            </pbcoreContributor>
+
+
+            <pbcoreContributor>
+                <contributor><![CDATA[]]></contributor>
+                <contributorRole><![CDATA[instruktion]]></contributorRole>
+            </pbcoreContributor>
+
+
+            <pbcorePublisher>
+                <publisher><![CDATA[tv2d]]></publisher>
+                <publisherRole><![CDATA[channel_name]]></publisherRole>
+            </pbcorePublisher>
+
+            <pbcorePublisher>
+                <publisher><![CDATA[TV 2]]></publisher>
+                <publisherRole><![CDATA[kanalnavn]]></publisherRole>
+            </pbcorePublisher>
+
+            <pbcoreInstantiation>
+                <dateCreated><![CDATA[2007]]></dateCreated>
+                <dateIssued></dateIssued>
+                <formatLocation></formatLocation>
+                <formatMediaType><![CDATA[Moving Image]]></formatMediaType>
+                <formatStandard><![CDATA[ikke hd]]></formatStandard>
+                <formatDuration><![CDATA[0]]></formatDuration>
+                <formatAspectRatio><![CDATA[]]>,</formatAspectRatio>
+                <formatColors><![CDATA[farve]]></formatColors>
+                <formatChannelConfiguration><![CDATA[ikke surround]]></formatChannelConfiguration>
+                <pbcoreDateAvailable>
+                    <dateAvailableStart><![CDATA[2009-03-04T23:30:00+0100]]></dateAvailableStart>
+                    <dateAvailableEnd><![CDATA[2009-03-05T00:25:00+0100]]></dateAvailableEnd>
+                </pbcoreDateAvailable>
+                <pbcoreFormatID>
+                    <formatIdentifier>[INSERT_PBC_FORMAT_ID]</formatIdentifier>
+                    <formatIdentifierSource>[INSERT_PBC_FORMAT_ID_SOURCE]</formatIdentifierSource>
+                </pbcoreFormatID>
+                <pbcoreAnnotation>
+                    <annotation><![CDATA[]]></annotation>
+                </pbcoreAnnotation>
+            </pbcoreInstantiation>
+
+            <pbcoreExtension>
+                <extension>antalepisoder:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>episodenr:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>premiere:<![CDATA[ikke premiere]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>genudsendelse:<![CDATA[ikke genudsendelse]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>hovedgenre_id:<![CDATA[13]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>kanalid:<![CDATA[6]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>live:<![CDATA[ikke live]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>lydlink:<![CDATA[]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>produktionsland:<![CDATA[]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>produktionsland_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>program_id:<![CDATA[11485756]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>program_ophold:<![CDATA[ikke program ophold]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>undergenre_id:<![CDATA[597]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>urllink:<![CDATA[]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>afsnit_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>saeson_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>serie_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>tekstet:<![CDATA[ikke tekstet]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>th:<![CDATA[ikke tekstet for hørehæmmede]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>ttv:<![CDATA[ikke tekst-tv]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>showviewcode:<![CDATA[13487]]></extension>
+            </pbcoreExtension>
+
+        </PBCoreDescriptionDocument>
+    </pbcore>
+
+    <originals>
+        <ritzau_original>
+            <![CDATA[RitzauProgram{Id=3402231, channel_name='tv2d', kanalId=6, starttid=2009-03-04 23:30:00.0, sluttid=2009-03-05 00:25:00.0, annotation='null', originaltitel='Queer as Old Folk', kanalnavn='TV 2', titel='Gamle bøsser ruster aldrig', hovedgenre='Dokumentar', undergenre='Dokumentarfilm', kortomtale='- når bøsser lever livet for fuld skrue!', langomtale1='Før 1967 var homoseksualitet forbudt i Storbritannien, og det gjorde livet temmelig besværligt for datidens bøsser. 73-årige Alan, 58-årige Clive og Roger på 64 ved alle, hvad det vil sige at være tvunget til at leve på en løgn. Alans mor sagde, at det var okay at være bøsse, når bare han var forelsket og ikke kyssede på munden.', langomtale2='Clive giftede sig i et forsøg på at undertrykke sine lyster, mens Roger giftede sig, selv om han var 100 procent homo. I dag lever de alle tre livet for fuld skrue - og i overensstemmelse med deres seksualitet. Og selv om de er oppe i årene, er der intet, der tyder på, at de har tænkt sig at gå i stå eller i frø sådan inden for en overskuelig fremtid. Alan har været sammen med Jimmy i 40 år, Clive er stadig gift, men har masser af sex med mænd, og Roger nåede at være gift i 30 år og få to børn, før han som 58-årig mødte den 18-årige mandestripper Ian, som han har været sammen med i seks år nu, og hvis karriere han holder snor i.', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=2007, episodenr=0, antalepisoder=0, showviewcode=13487, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=11485756, hovedgenre_id=13, undergenre_id=597, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
+        </ritzau_original>
+
+        <gallup_original>
+            <![CDATA[]]>
+        </gallup_original>
+    </originals>
+
+    <program_recording_files>
+        <file>
+            <file_url>
+                http://bitfinder.statsbiblioteket.dk/bart/tv2d_511.250_K10-TV2-Danmark_mpeg2_20090304045601_20090305045502_encoder1-2.mpeg
+            </file_url>
+            <program_start_offset>66749</program_start_offset>
+            <program_clip_length>3480</program_clip_length>
+            <file_name>tv2d_511.250_K10-TV2-Danmark_mpeg2_20090304045601_20090305045502_encoder1-2.mpeg</file_name>
+            <format_uri>info:pronom/x-fmt/386</format_uri>
+        </file>
+    </program_recording_files>
+</program>
