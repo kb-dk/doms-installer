@@ -17,6 +17,7 @@ sed \
 -e 's|\$FEDORA_DIR\$|'"$FEDORA_DIR"'|g' \
 -e 's|\$DATA_DIR\$|'"$DATA_DIR"'|g' \
 -e 's|\$CACHE_DIR\$|'"$CACHE_DIR"'|g' \
+-e 's|\$SCHEMA_DIR\$|'"$SCHEMA_DIR"'|g' \
 -e 's|\$TOMCAT_CONFIG_DIR\$|'"$TOMCAT_CONFIG_DIR"'|g' \
 -e 's|\$WEBAPPS_DIR\$|'"$WEBAPPS_DIR"'|g' \
 -e 's|\$PORTRANGE\$|'"$PORTRANGE"'|g' \
@@ -104,6 +105,9 @@ cp -v $CONFIG_TEMP_DIR/log4j.*.xml $TOMCAT_CONFIG_DIR
 # Install context.xml configuration
 cp -v $CONFIG_TEMP_DIR/context.xml.default $TOMCAT_CONFIG_DIR
 
+# Install schemaStore "webservice" configuration
+cp -v $CONFIG_TEMP_DIR/schemaStore.xml $TOMCAT_CONFIG_DIR
+
 # Set the session timeout to 1 min
 mkdir -p $TOMCAT_DIR/conf
 cp -v $CONFIG_TEMP_DIR/web.xml $TOMCAT_DIR/conf/web.xml
@@ -114,7 +118,9 @@ if [ ! $TOMCAT_CONFIG_DIR -ef $TOMCAT_DIR/conf ]; then
 
    #first, link to context.xml into the correct location
    mkdir -p $TOMCAT_DIR/conf/Catalina/localhost
-   ln -s $TOMCAT_CONFIG_DIR/context.xml.default $TOMCAT_DIR/conf/Catalina/localhost/context.xml.default 
+   ln -s $TOMCAT_CONFIG_DIR/context.xml.default $TOMCAT_DIR/conf/Catalina/localhost/context.xml.default
+
+   ln -s $TOMCAT_CONFIG_DIR/schemaStore.xml $TOMCAT_DIR/conf/Catalina/localhost/schemaStore.xml
 
 fi
 
@@ -201,6 +207,12 @@ cp -v $CONFIG_TEMP_DIR/akubra-llstore.xml $FEDORA_DIR/server/config/akubra-llsto
 
 
 echo "Fedora setup complete"
+
+echo "Installing Doms Schemas"
+mkdir -p $SCHEMA_DIR
+cp $BASEDIR/data/schemas/* $SCHEMA_DIR/
+
+
 
 echo "Installing doms Radio-tv ingester"
 
