@@ -44,6 +44,8 @@ CACHE_DIR=$TESTBED_DIR/cache
 
 SCHEMA_DIR=$TESTBED_DIR/schemas
 
+BASEOBJS_DIR=$TESTBED_DIR/baseObjectsIngest
+
 TOMCAT_CONFIG_DIR=$TESTBED_DIR/services/conf
 
 WEBAPPS_DIR=$TESTBED_DIR/services/webapps

@@ -39,7 +39,6 @@ echo "Sleep 30"
 sleep 30
 
 # Do the ingest of the base objects
-$SCRIPT_DIR/ingest_base_objects.sh $TESTBED_DIR
-
+$BASEOBJS_DIR/bin/createOrUpdateBasicObjects.sh
 
 echo "Install complete"

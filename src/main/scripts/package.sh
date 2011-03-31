@@ -214,6 +214,19 @@ cp $BASEDIR/data/schemas/* $SCHEMA_DIR/
 
 
 
+mkdir -p $BASEOBJS_DIR/bin
+mkdir -p $BASEOBJS_DIR/scripts
+for file in $BASEDIR/data/objects/batch/*.xml ; do
+  replace $file $BASEOBJS_DIR/scripts/`basename $file`
+  echo "Created batch file $BASEOBJS_DIR/scripts/`basename $file` from template file $file"
+done
+
+for file in $BASEDIR/data/objects/batch/*.sh ; do
+  replace $file $BASEOBJS_DIR/bin/`basename $file`
+  chmod a+x $BASEOBJS_DIR/bin/`basename $file`
+  echo "Created batch file $BASEOBJS_DIR/bin/`basename $file` from template file $file"
+done
+
 echo "Installing doms Radio-tv ingester"
 
 mkdir -p $INGEST_DIR
