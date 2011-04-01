@@ -11,7 +11,7 @@ BASEDIR=$SCRIPT_DIR/..
 
 source $SCRIPT_DIR/setenv.sh
 
-mkdir $BASEDIR/logs
+mkdir $BASEDIR/logs >/dev/null 2>&1
 
 #
 # Ingest initial objects

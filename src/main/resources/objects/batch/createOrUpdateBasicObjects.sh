@@ -13,7 +13,7 @@ BASEDIR=$SCRIPT_DIR/..
 source $SCRIPT_DIR/setenv.sh
 
 
-mkdir $BASEDIR/logs
+mkdir $BASEDIR/logs  >/dev/null 2>&1
 
 #
 # Ingest initial objects
@@ -54,9 +54,11 @@ $BASEDIR/logs/updateRadioTVobjects.log \
 http false
 
 echo "There should be no errors in this result. If there are, something have failed."
+echo ""
+echo ""
 
 
-updateRadioTVLicense.sh
+bash $SCRIPT_DIR/updateRadioTVLicense.sh
 
 
 
