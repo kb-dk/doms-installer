@@ -4,18 +4,20 @@
 
     <!--Program-->
     <def:addObject pid="doms:ContentModel_Program" label="Radio/TV program"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_Program" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:ContentModel_Program" dsID="DS-COMPOSITE-MODEL"
                        dsLabel=""
                        dsMIME="text/xml"
                        formatURI="info:fedora/fedora-system:FedoraDSCompositeModel-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:ContentModel_Program" dsID="RELS-EXT"
                        dsLabel="Relationships"
@@ -23,9 +25,24 @@
                        formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                     xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
+                     xmlns:ecm="http://ecm.sourceforge.net/relations/0/2/#">
+                <rdf:Description rdf:about="info:fedora/doms:ContentModel_Program">
+                    <hasModel rdf:resource="info:fedora/fedora-system:ContentModel-3.0"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <ecm:extendsModel rdf:resource="info:fedora/doms:ContentModel_DOMS"/>
+                    <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
+                    <ecm:isEntryForViewAngle>SummaVisible</ecm:isEntryForViewAngle>
+                    <doms:hasLicense rdf:resource="info:fedora/doms:Open_License"/>
+                </rdf:Description>
+            </rdf:RDF>
+        </def:xmlData>
 
     </def:addDatastream>
     <def:addDatastream pid="doms:ContentModel_Program" dsID="VIEW"
@@ -33,9 +50,11 @@
                        dsMIME="application/rdf+xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
 
     </def:addDatastream>
     <def:addDatastream pid="doms:ContentModel_Program" dsID="ONTOLOGY"
@@ -44,9 +63,11 @@
                        formatURI="info:fedora/fedora-system:FedoraOntology-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
 
     </def:addDatastream>
     <def:addDatastream pid="doms:ContentModel_Program" dsID="PBCORE_SCHEMA"
@@ -54,9 +75,11 @@
                        dsMIME="text/xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
 
     </def:addDatastream>
     <def:addDatastream pid="doms:ContentModel_Program" dsID="RITZAU_ORIGINAL_SCHEMA"
@@ -64,33 +87,39 @@
                        dsMIME="text/xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:ContentModel_Program" dsID="GALLUP_ORIGINAL_SCHEMA"
                        dsLabel="Gallup original schema"
                        dsMIME="text/xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
     </def:addDatastream>
 
     <def:addObject pid="doms:ContentModel_Shard" label="Radio/TV Shard"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_Shard" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:ContentModel_Shard" dsID="DS-COMPOSITE-MODEL"
                        dsLabel=""
                        dsMIME="text/xml"
                        formatURI="info:fedora/fedora-system:FedoraDSCompositeModel-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:ContentModel_Shard" dsID="RELS-EXT"
                        dsLabel="Relationships"
@@ -98,18 +127,34 @@
                        formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                     xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
+                     xmlns:ecm="http://ecm.sourceforge.net/relations/0/2/#"
+                     xmlns:fedora="info:fedora/fedora-system:def/model#">
+                <rdf:Description rdf:about="info:fedora/doms:ContentModel_Shard">
+                    <fedora:hasModel rdf:resource="info:fedora/fedora-system:ContentModel-3.0"/>
+                    <fedora:hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"/>
+                    <ecm:extendsModel rdf:resource="info:fedora/doms:ContentModel_File"/>
+                    <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
+                    <doms:hasLicense rdf:resource="info:fedora/doms:Open_License"/>
+                    <doms:isControlledByLowLevelBitstorage>false</doms:isControlledByLowLevelBitstorage>
+                </rdf:Description>
+            </rdf:RDF>
+        </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:ContentModel_Shard" dsID="VIEW"
                        dsLabel="VIEW datastream"
                        dsMIME="application/rdf+xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:ContentModel_Shard" dsID="ONTOLOGY"
                        dsLabel="Local ontology"
@@ -117,34 +162,40 @@
                        formatURI="info:fedora/fedora-system:FedoraOntology-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:ContentModel_Shard" dsID="SHARD_METADATA_SCHEMA"
                        dsLabel="Shard metadata schema"
                        dsMIME="text/xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
     </def:addDatastream>
 
 
     <def:addObject pid="doms:ContentModel_RadioTVFile" label="Radio/TV File"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_RadioTVFile" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:ContentModel_RadioTVFile" dsID="DS-COMPOSITE-MODEL"
                        dsLabel=""
                        dsMIME="text/xml"
                        formatURI="info:fedora/fedora-system:FedoraDSCompositeModel-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:ContentModel_RadioTVFile" dsID="RELS-EXT"
                        dsLabel="Relationships"
@@ -152,18 +203,34 @@
                        formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                     xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
+                     xmlns:ecm="http://ecm.sourceforge.net/relations/0/2/#"
+                     xmlns:fedora="info:fedora/fedora-system:def/model#">
+                <rdf:Description rdf:about="info:fedora/doms:ContentModel_RadioTVFile">
+                    <fedora:hasModel rdf:resource="info:fedora/fedora-system:ContentModel-3.0"/>
+                    <fedora:hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"/>
+                    <ecm:extendsModel rdf:resource="info:fedora/doms:ContentModel_File"/>
+                    <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
+                    <doms:hasLicense rdf:resource="info:fedora/doms:Open_License"/>
+                    <doms:isControlledByLowLevelBitstorage>false</doms:isControlledByLowLevelBitstorage>
+                </rdf:Description>
+            </rdf:RDF>
+        </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:ContentModel_RadioTVFile" dsID="VIEW"
                        dsLabel="VIEW datastream"
                        dsMIME="application/rdf+xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:ContentModel_RadioTVFile" dsID="ONTOLOGY"
                        dsLabel="Local ontology"
@@ -171,198 +238,367 @@
                        formatURI="info:fedora/fedora-system:FedoraOntology-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
     </def:addDatastream>
 
 
     <def:addObject pid="doms:RadioTV_Collection" label="Radio/TV Collection"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:RadioTV_Collection" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:RadioTV_Collection" dsID="RELS-EXT"
                        dsLabel="Relationships"
                        dsMIME="application/rdf+xml"
                        formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                     xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
+                    >
+                <rdf:Description rdf:about="info:fedora/doms:RadioTV_Collection">
+                    <hasModel rdf:resource="info:fedora/doms:ContentModel_Collection"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <doms:isPartOfCollection rdf:resource="info:fedora/doms:Root_Collection"/>
+                    <doms:hasLicense rdf:resource="info:fedora/doms:Open_License"/>
+                </rdf:Description>
+            </rdf:RDF>
+        </def:xmlData>
     </def:addDatastream>
 
 
     <def:addObject pid="doms:RadioTV_InhouseLicense" label="Radio/TV License for inhouse users"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:RadioTV_InhouseLicense" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:RadioTV_InhouseLicense" dsID="RELS-EXT"
                        dsLabel="Relationships"
                        dsMIME="application/rdf+xml"
                        formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                     xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#">
+                <rdf:Description rdf:about="info:fedora/doms:RadioTV_InhouseLicense">
+                    <hasModel rdf:resource="info:fedora/doms:ContentModel_License"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
+                    <doms:hasLicense rdf:resource="info:fedora/doms:Open_License"/>
+                </rdf:Description>
+            </rdf:RDF>
+        </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:RadioTV_InhouseLicense" dsID="LICENSE"
                        dsLabel="LICENSE datastream"
                        dsMIME="text/xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <Policy xmlns="urn:oasis:names:tc:xacml:1.0:policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    PolicyId="RadioTV_adminOnlyLicense"
+                    RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
+                <Description>The is the license for the radio tv collection. Complete access is granted, if and only if,
+                    the user has the
+                    administrator or readonlyadministrator fedoraRole.
+                </Description>
+                <Target>
+                    <Subjects>
+                        <AnySubject></AnySubject>
+                    </Subjects>
+                    <Resources>
+                        <AnyResource></AnyResource>
+                    </Resources>
+                    <Actions>
+                        <AnyAction></AnyAction>
+                    </Actions>
+                </Target>
+                <Rule Effect="Deny" RuleId="1">
+                    <Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
+                            <SubjectAttributeDesignator AttributeId="fedoraRole"
+                                                        DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                        MustBePresent="false"></SubjectAttributeDesignator>
+                            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
+                                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                            >administrator
+                                    </AttributeValue>
+                                </Apply>
+                                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                            >readonlyadministrator
+                                    </AttributeValue>
+                                </Apply>
+                            </Apply>
+
+                        </Apply>
+                    </Condition>
+                </Rule>
+            </Policy>
+        </def:xmlData>
     </def:addDatastream>
 
     <def:addObject pid="doms:RadioTV_adminOnlyLicense" label="Radio TV License for admin users"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:RadioTV_adminOnlyLicense" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:RadioTV_adminOnlyLicense" dsID="RELS-EXT"
                        dsLabel="Relationships"
                        dsMIME="application/rdf+xml"
                        formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                     xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#">
+                <rdf:Description rdf:about="info:fedora/doms:RadioTV_adminOnlyLicense">
+                    <hasModel rdf:resource="info:fedora/doms:ContentModel_License"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
+                    <doms:hasLicense rdf:resource="info:fedora/doms:Open_License"/>
+                </rdf:Description>
+            </rdf:RDF>
+
+
+        </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:RadioTV_adminOnlyLicense" dsID="LICENSE"
                        dsLabel="LICENSE datastream"
                        dsMIME="text/xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <Policy xmlns="urn:oasis:names:tc:xacml:1.0:policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    PolicyId="RadioTV_adminOnlyLicense"
+                    RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
+                <Description>The is the license for the radio tv collection. Complete access is granted, if and only if,
+                    the user has the
+                    administrator or readonlyadministrator fedoraRole.
+                </Description>
+                <Target>
+                    <Subjects>
+                        <AnySubject></AnySubject>
+                    </Subjects>
+                    <Resources>
+                        <AnyResource></AnyResource>
+                    </Resources>
+                    <Actions>
+                        <AnyAction></AnyAction>
+                    </Actions>
+                </Target>
+                <Rule Effect="Deny" RuleId="1">
+                    <Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
+                            <SubjectAttributeDesignator AttributeId="fedoraRole"
+                                                        DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                        MustBePresent="false"></SubjectAttributeDesignator>
+                            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
+                                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                            >administrator
+                                    </AttributeValue>
+                                </Apply>
+                                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                            >readonlyadministrator
+                                    </AttributeValue>
+                                </Apply>
+                            </Apply>
+                        </Apply>
+                    </Condition>
+                </Rule>
+            </Policy>
+
+        </def:xmlData>
     </def:addDatastream>
 
 
     <!--Templates-->
     <def:addObject pid="doms:Template_Program" label="Radio/TV Program"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:Template_Program" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:Template_Program" dsID="RELS-EXT"
                        dsLabel="Relationships"
                        dsMIME="application/rdf+xml"
                        formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                     xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
+                     xmlns:ecm="http://ecm.sourceforge.net/relations/0/2/#"
+                    >
+                <rdf:Description rdf:about="info:fedora/doms:Template_Program">
+                    <hasModel rdf:resource="info:fedora/doms:ContentModel_Program"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
+                    <doms:hasLicense rdf:resource="info:fedora/doms:RadioTV_InhouseLicense"/>
+                    <ecm:isTemplateFor rdf:resource="info:fedora/doms:ContentModel_Program"/>
+                </rdf:Description>
+            </rdf:RDF>
+        </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:Template_Program" dsID="PBCORE"
                        dsLabel="PBCore datastream"
                        dsMIME="text/xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:Template_Program" dsID="RITZAU_ORIGINAL"
                        dsLabel="Ritzau datastream"
                        dsMIME="text/xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:Template_Program" dsID="GALLUP_ORIGINAL"
                        dsLabel="PBCore datastream"
                        dsMIME="text/xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:Template_Program" dsID="POLICY"
                        dsLabel="Policy"
                        dsMIME="application/rdf+xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="E" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string"
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade"
                        dsLocation="http://local.fedora.server/fedora/objects/doms:RadioTV_InhouseLicense/datastreams/LICENSE/content">
     </def:addDatastream>
 
     <def:addObject pid="doms:Template_Shard" label="Radio/TV Shard"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:Template_Shard" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:Template_Shard" dsID="RELS-EXT"
                        dsLabel="Relationships"
                        dsMIME="application/rdf+xml"
                        formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                     xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
+                     xmlns:ecm="http://ecm.sourceforge.net/relations/0/2/#"
+                    >
+                <rdf:Description rdf:about="info:fedora/doms:Template_Shard">
+                    <hasModel rdf:resource="info:fedora/doms:ContentModel_Shard"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <hasModel rdf:resource="info:fedora/doms:ContentModel_File"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
+                    <doms:hasLicense rdf:resource="info:fedora/doms:RadioTV_InhouseLicense"/>
+                    <ecm:isTemplateFor rdf:resource="info:fedora/doms:ContentModel_Program"/>
+                </rdf:Description>
+            </rdf:RDF>
+
+        </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:Template_Shard" dsID="SHARD_METADATA"
                        dsLabel="PBCore datastream"
                        dsMIME="text/xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:Template_Shard" dsID="POLICY"
                        dsLabel="Policy"
                        dsMIME="application/rdf+xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="E" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string"
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade"
                        dsLocation="http://local.fedora.server/fedora/objects/doms:RadioTV_InhouseLicense/datastreams/LICENSE/content">
     </def:addDatastream>
 
     <def:addObject pid="doms:Template_RadioTVFile" label="Radio/TV Program"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:Template_RadioTVFile" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:Template_RadioTVFile" dsID="RELS-EXT"
                        dsLabel="Relationships"
                        dsMIME="application/rdf+xml"
                        formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string">
-        <def:xmlData/>
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                     xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
+                     xmlns:ecm="http://ecm.sourceforge.net/relations/0/2/#"
+                    >
+                <rdf:Description rdf:about="info:fedora/doms:Template_RadioTVFile">
+                    <hasModel rdf:resource="info:fedora/doms:ContentModel_RadioTVFile"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <hasModel rdf:resource="info:fedora/doms:ContentModel_File"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
+                    <doms:hasLicense rdf:resource="info:fedora/doms:RadioTV_adminOnlyLicense"/>
+                    <ecm:isTemplateFor rdf:resource="info:fedora/doms:ContentModel_Program"/>
+                </rdf:Description>
+            </rdf:RDF>
+        </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:Template_RadioTVFile" dsID="POLICY"
                        dsLabel="Policy"
                        dsMIME="application/rdf+xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="E" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="string"
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade"
                        dsLocation="http://local.fedora.server/fedora/objects/doms:RadioTV_InhouseLicense/datastreams/LICENSE/content">
     </def:addDatastream>
 
-
-    <!--Publish-->
-    <def:modifyObject pid="doms:ContentModel_Program" state="A"
-                      logMessage="string"/>
-    <def:modifyObject pid="doms:ContentModel_Shard" state="A"
-                      logMessage="string"/>
-    <def:modifyObject pid="doms:ContentModel_License" state="A"
-                      logMessage="string"/>
-    <def:modifyObject pid="doms:RadioTV_Collection" state="A"
-                      logMessage="string"/>
-    <def:modifyObject pid="doms:RadioTV_InhouseLicense" state="A"
-                      logMessage="string"/>
-    <def:modifyObject pid="doms:RadioTV_adminOnlyLicense" state="A"
-                      logMessage="string"/>
 </def:batchModify>

@@ -2,9 +2,9 @@
                  xsi:schemaLocation="http://www.fedora.info/definitions/ http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/schemaStore/batchModifySchema.xsd">
 
     <def:addObject pid="doms:ContentModel_DOMS" label="Root content model for all objects"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_DOMS" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:ContentModel_DOMS" dsID="DS-COMPOSITE-MODEL"
                        dsLabel=""
                        dsMIME="text/xml"
@@ -12,7 +12,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <dsCompositeModel
                     xmlns="info:fedora/fedora-system:def/dsCompositeModel#">
@@ -29,7 +29,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                      xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#">
@@ -50,7 +50,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <v:views xmlns:v="http://ecm.sourceforge.net/types/view/0/2/#">
             </v:views>
@@ -63,7 +63,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
 
             <rdf:RDF
@@ -136,9 +136,9 @@
 
 
     <def:addObject pid="doms:ContentModel_File" label="Content Model for File Objects"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_File" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:ContentModel_File" dsID="DS-COMPOSITE-MODEL"
                        dsLabel=""
                        dsMIME="text/xml"
@@ -146,7 +146,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <dsCompositeModel
                     xmlns="info:fedora/fedora-system:def/dsCompositeModel#"
@@ -170,7 +170,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                      xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
@@ -192,7 +192,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <v:views xmlns:v="http://ecm.sourceforge.net/types/view/0/2/#">
             </v:views>
@@ -206,7 +206,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
 
             <rdf:RDF
@@ -234,7 +234,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <xs:schema xmlns:tns="http://doms.statsbiblioteket.dk/types/characterisation/0/2/#"
                        xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0"
@@ -264,9 +264,9 @@
 
 
     <def:addObject pid="doms:ContentModel_License" label="Content Model for License Objects"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_License" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:ContentModel_License" dsID="DS-COMPOSITE-MODEL"
                        dsLabel=""
                        dsMIME="text/xml"
@@ -274,7 +274,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <dsCompositeModel
                     xmlns="info:fedora/fedora-system:def/dsCompositeModel#">
@@ -294,7 +294,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                      xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
@@ -318,7 +318,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <v:views xmlns:v="http://ecm.sourceforge.net/types/view/0/2/#">
             </v:views>
@@ -332,7 +332,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF
                     xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -348,7 +348,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <xs:schema
                     targetNamespace="urn:oasis:names:tc:xacml:1.0:policy"
@@ -611,9 +611,9 @@
 
 
     <def:addObject pid="doms:ContentModel_Collection" label="Content Model for collection objects"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_Collection" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:ContentModel_Collection" dsID="DS-COMPOSITE-MODEL"
                        dsLabel=""
                        dsMIME="text/xml"
@@ -621,7 +621,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <dsCompositeModel
                     xmlns="info:fedora/fedora-system:def/dsCompositeModel#"/>
@@ -634,7 +634,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                      xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
@@ -659,7 +659,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <v:views xmlns:v="http://ecm.sourceforge.net/types/view/0/2/#">
                 <v:viewangle name="GUI">
@@ -680,7 +680,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
 
             <rdf:RDF
@@ -698,9 +698,9 @@
 
     <def:addObject pid="doms:ContentModel_VideoPreservationFile"
                    label="Content Model Video Preservation File. Subclasses are preservation files for the Video objects"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_VideoPreservationFile" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:ContentModel_VideoPreservationFile" dsID="DS-COMPOSITE-MODEL"
                        dsLabel=""
                        dsMIME="text/xml"
@@ -708,7 +708,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <dsCompositeModel
                     xmlns="info:fedora/fedora-system:def/dsCompositeModel#"
@@ -728,7 +728,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                      xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
@@ -752,7 +752,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <v:views xmlns:v="http://ecm.sourceforge.net/types/view/0/2/#">
             </v:views>
@@ -767,7 +767,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF
                     xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -781,9 +781,9 @@
 
     <def:addObject pid="doms:ContentModel_TextPreservationFile"
                    label="Content Model Text Preservation File. Subclasses are preservation files for the Video objects"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_TextPreservationFile" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:ContentModel_TextPreservationFile" dsID="DS-COMPOSITE-MODEL"
                        dsLabel=""
                        dsMIME="text/xml"
@@ -791,7 +791,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <dsCompositeModel
                     xmlns="info:fedora/fedora-system:def/dsCompositeModel#"
@@ -811,7 +811,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                      xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
@@ -835,7 +835,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <v:views xmlns:v="http://ecm.sourceforge.net/types/view/0/2/#">
             </v:views>
@@ -850,7 +850,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF
                     xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -865,9 +865,9 @@
 
     <def:addObject pid="doms:ContentModel_ImagePreservationFile"
                    label="Content Model Image Preservation File. Subclasses are preservation files for the Video objects"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_ImagePreservationFile" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:ContentModel_ImagePreservationFile" dsID="DS-COMPOSITE-MODEL"
                        dsLabel=""
                        dsMIME="text/xml"
@@ -875,7 +875,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <dsCompositeModel
                     xmlns="info:fedora/fedora-system:def/dsCompositeModel#"
@@ -895,7 +895,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                      xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
@@ -919,7 +919,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <v:views xmlns:v="http://ecm.sourceforge.net/types/view/0/2/#">
             </v:views>
@@ -934,7 +934,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF
                     xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -950,9 +950,9 @@
 
     <def:addObject pid="doms:ContentModel_AudioPreservationFile"
                    label="Content Model Audio Preservation File. Subclasses are preservation files for the Video objects"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_AudioPreservationFile" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:ContentModel_AudioPreservationFile" dsID="DS-COMPOSITE-MODEL"
                        dsLabel=""
                        dsMIME="text/xml"
@@ -960,7 +960,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <dsCompositeModel
                     xmlns="info:fedora/fedora-system:def/dsCompositeModel#">
@@ -979,7 +979,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                      xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
@@ -1003,7 +1003,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <v:views xmlns:v="http://ecm.sourceforge.net/types/view/0/2/#">
             </v:views>
@@ -1018,7 +1018,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF
                     xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -1032,9 +1032,9 @@
 
 
     <def:addObject pid="doms:Root_Collection" label="Root Collection"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:Root_Collection" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:Root_Collection" dsID="RELS-EXT"
                        dsLabel="Relationships"
                        dsMIME="application/rdf+xml"
@@ -1042,7 +1042,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                      xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
@@ -1061,9 +1061,9 @@
 
 
     <def:addObject pid="doms:DOMS_Base_Collection" label="DOMS Base Collection"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:DOMS_Base_Collection" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:DOMS_Base_Collection" dsID="RELS-EXT"
                        dsLabel="Relationships"
                        dsMIME="application/rdf+xml"
@@ -1071,7 +1071,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                      xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
@@ -1090,9 +1090,9 @@
     </def:addDatastream>
 
     <def:addObject pid="doms:Open_License" label="Root Collection"
-                   contentModel="string" logMessage="string"/>
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:Open_License" state="I"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:addDatastream pid="doms:Open_License" dsID="RELS-EXT"
                        dsLabel="Relationships"
                        dsMIME="application/rdf+xml"
@@ -1100,7 +1100,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                      xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#">
@@ -1121,7 +1121,7 @@
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
                        checksumType="DISABLED"
-                       logMessage="string">
+                       logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <Policy xmlns="urn:oasis:names:tc:xacml:1.0:policy"
                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -1157,25 +1157,25 @@
     </def:addDatastream>
 
     <def:modifyObject pid="doms:ContentModel_DOMS" state="A"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_File" state="A"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_License" state="A"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_Collection" state="A"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_VideoPreservationFile" state="A"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_TextPreservationFile" state="A"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_ImagePreservationFile" state="A"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_AudioPreservationFile" state="A"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:Root_Collection" state="A"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:DOMS_Base_Collection" state="A"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:Open_License" state="A"
-                      logMessage="string"/>
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
 </def:batchModify>

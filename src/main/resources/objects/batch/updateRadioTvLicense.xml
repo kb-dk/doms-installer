@@ -1,7 +1,7 @@
 <def:batchModify xmlns:def="http://www.fedora.info/definitions/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xsi:schemaLocation="http://www.fedora.info/definitions/ http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/schemaStore/batchModifySchema.xsd">
 
-    <def:modifyObject pid="doms:ContentModel_Program" state="I"
+    <def:modifyObject pid="doms:RadioTV_InhouseLicense" state="I"
                       logMessage="Updating The radio/tv license"/>
 
     <def:modifyDatastream pid="doms:RadioTV_InhouseLicense" dsID="LICENSE"
@@ -34,13 +34,25 @@
                     <Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
                         <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
                             <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
-                                <SubjectAttributeDesignator AttributeId="sbRole"
+                                <SubjectAttributeDesignator AttributeId="eduPersonScopedAffiliation"
                                                             DataType="http://www.w3.org/2001/XMLSchema#string"
                                                             MustBePresent="false"/>
                                 <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
-                                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
-                                            >inhouse
-                                    </AttributeValue>
+                                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                >student@hum.au.dk
+                                        </AttributeValue>
+                                    </Apply>
+                                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                >employee@hum.au.dk
+                                        </AttributeValue>
+                                    </Apply>
+                                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                >inhouse@ip.roles.statsbiblioteket.dk
+                                        </AttributeValue>
+                                    </Apply>
                                 </Apply>
                             </Apply>
                             <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
@@ -48,12 +60,16 @@
                                                             DataType="http://www.w3.org/2001/XMLSchema#string"
                                                             MustBePresent="false"/>
                                 <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
-                                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
-                                            >administrator
-                                    </AttributeValue>
-                                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
-                                            >readonlyadministrator
-                                    </AttributeValue>
+                                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                >administrator
+                                        </AttributeValue>
+                                    </Apply>
+                                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                >readonlyadministrator
+                                        </AttributeValue>
+                                    </Apply>
                                 </Apply>
                             </Apply>
                         </Apply>
@@ -63,7 +79,7 @@
         </def:xmlData>
     </def:modifyDatastream>
 
-    <def:modifyObject pid="doms:ContentModel_Program" state="A"
+    <def:modifyObject pid="doms:RadioTV_InhouseLicense" state="A"
                       logMessage="Updating The radio/tv license"/>
 
 </def:batchModify>

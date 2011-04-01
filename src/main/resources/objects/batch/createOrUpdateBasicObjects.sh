@@ -1,12 +1,6 @@
 #!/bin/bash
 
 
-USER=$FEDORAADMIN$
-PASS=$FEDORAADMINPASS$
-SERVER=$TOMCAT_SERVERNAME$:$PORTRANGE$80
-FEDORA_DIR=$FEDORA_DIR$
-
-
 #
 # Set up basic variables
 #
@@ -16,13 +10,15 @@ SCRIPT_DIR=$(pwd)
 popd > /dev/null
 BASEDIR=$SCRIPT_DIR/..
 
+source $SCRIPT_DIR/setenv.sh
+
+
 mkdir $BASEDIR/logs
 
 #
 # Ingest initial objects
 #
-echo "Ingesting base doms objects"
-export FEDORA_HOME=$FEDORA_DIR
+echo "INGESTING base doms objects"
 
 sh $FEDORA_DIR/client/bin/fedora-modify.sh \
 $SERVER $USER $PASS \
@@ -31,10 +27,11 @@ $BASEDIR/logs/createBasicObjects.log \
 http false
 
 echo "If the objects were already there, this should have a lot of errors"
+echo ""
+echo ""
 
 
-echo "Ingesting base radioTV objects"
-export FEDORA_HOME=$FEDORA_DIR
+echo "INGESTING base radioTV objects"
 
 sh $FEDORA_DIR/client/bin/fedora-modify.sh \
 $SERVER $USER $PASS \
@@ -43,10 +40,12 @@ $BASEDIR/logs/createRadioTVobjects.log \
 http false
 
 echo "If the objects were already there, this should have a lot of errors"
+echo ""
+echo ""
 
 
-echo "Updating radioTV objects"
-export FEDORA_HOME=$FEDORA_DIR
+echo "UPDATING radioTV objects"
+
 
 sh $FEDORA_DIR/client/bin/fedora-modify.sh \
 $SERVER $USER $PASS \
@@ -57,7 +56,7 @@ http false
 echo "There should be no errors in this result. If there are, something have failed."
 
 
-
+updateRadioTVLicense.sh
 
 
 

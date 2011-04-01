@@ -1,12 +1,5 @@
 #!/bin/bash
 
-
-USER=$FEDORAADMIN$
-PASS=$FEDORAADMINPASS$
-SERVER=$TOMCAT_SERVERNAME$:$PORTRANGE$80
-FEDORA_DIR=$FEDORA_DIR$
-
-
 #
 # Set up basic variables
 #
@@ -16,13 +9,15 @@ SCRIPT_DIR=$(pwd)
 popd > /dev/null
 BASEDIR=$SCRIPT_DIR/..
 
+source $SCRIPT_DIR/setenv.sh
+
 mkdir $BASEDIR/logs
 
 #
 # Ingest initial objects
 #
-echo "Updating Radio Tv License object from $BASEDIR/scripts/updateRadioTVLicense.xml"
-export FEDORA_HOME=$FEDORA_DIR
+echo "UPDATING Radio Tv License object from $BASEDIR/scripts/updateRadioTVLicense.xml"
+
 
 sh $FEDORA_DIR/client/bin/fedora-modify.sh \
 $SERVER $USER $PASS \

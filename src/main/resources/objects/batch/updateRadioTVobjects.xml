@@ -1445,11 +1445,11 @@
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <Policy xmlns="urn:oasis:names:tc:xacml:1.0:policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                    PolicyId="RadioTV_InhouseLicense"
+                    PolicyId="RadioTV_adminOnlyLicense"
                     RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
                 <Description>The is the license for the radio tv collection. Complete access is granted, if and only if,
-                    the user has the inhouse
-                    or administrator or readonlyadministrator fedoraRole.
+                    the user has the
+                    administrator or readonlyadministrator fedoraRole.
                 </Description>
                 <Target>
                     <Subjects>
@@ -1464,32 +1464,28 @@
                 </Target>
                 <Rule Effect="Deny" RuleId="1">
                     <Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
-                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
-                            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
-                                <SubjectAttributeDesignator AttributeId="sbRole"
-                                                            DataType="http://www.w3.org/2001/XMLSchema#string"
-                                                            MustBePresent="false"/>
-                                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
-                                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">inhouse
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
+                            <SubjectAttributeDesignator AttributeId="fedoraRole"
+                                                        DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                        MustBePresent="false"></SubjectAttributeDesignator>
+                            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
+                                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                            >administrator
+                                    </AttributeValue>
+                                </Apply>
+                                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                            >readonlyadministrator
                                     </AttributeValue>
                                 </Apply>
                             </Apply>
-                            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
-                                <SubjectAttributeDesignator AttributeId="fedoraRole"
-                                                            DataType="http://www.w3.org/2001/XMLSchema#string"
-                                                            MustBePresent="false"/>
-                                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
-                                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">administrator
-                                    </AttributeValue>
-                                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">
-                                        readonlyadministrator
-                                    </AttributeValue>
-                                </Apply>
-                            </Apply>
+
                         </Apply>
                     </Condition>
                 </Rule>
             </Policy>
+
         </def:xmlData>
     </def:modifyDatastream>
 
@@ -1551,15 +1547,23 @@
                                                         DataType="http://www.w3.org/2001/XMLSchema#string"
                                                         MustBePresent="false"></SubjectAttributeDesignator>
                             <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
-                                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">administrator
-                                </AttributeValue>
-                                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">readonlyadministrator
-                                </AttributeValue>
+                                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                            >administrator
+                                    </AttributeValue>
+                                </Apply>
+                                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                            >readonlyadministrator
+                                    </AttributeValue>
+                                </Apply>
                             </Apply>
+
                         </Apply>
                     </Condition>
                 </Rule>
             </Policy>
+
         </def:xmlData>
     </def:modifyDatastream>
 
@@ -1629,15 +1633,6 @@
             </gallup_original>
         </def:xmlData>
     </def:modifyDatastream>
-    <def:modifyDatastream pid="doms:Template_Program" dsID="POLICY"
-                          dsLabel="Policy"
-                          dsMIME="application/rdf+xml"
-                          versionable="true"
-                          altIDs="" dsControlGroupType="E" dsState="A"
-                          checksumType="MD5"
-                          logMessage="Updating objects as part of a doms install/upgrade"
-                          dsLocation="http://local.fedora.server/fedora/objects/doms:RadioTV_InhouseLicense/datastreams/LICENSE/content">
-    </def:modifyDatastream>
 
     <def:modifyObject pid="doms:Template_Shard" state="I"
                       logMessage="Updating objects as part of a doms install/upgrade"/>
@@ -1683,15 +1678,6 @@
 
         </def:xmlData>
     </def:modifyDatastream>
-    <def:modifyDatastream pid="doms:Template_Shard" dsID="POLICY"
-                          dsLabel="Policy"
-                          dsMIME="application/rdf+xml"
-                          versionable="true"
-                          altIDs="" dsControlGroupType="E" dsState="A"
-                          checksumType="MD5"
-                          logMessage="Updating objects as part of a doms install/upgrade"
-                          dsLocation="http://local.fedora.server/fedora/objects/doms:RadioTV_InhouseLicense/datastreams/LICENSE/content">
-    </def:modifyDatastream>
 
     <def:modifyObject pid="doms:Template_RadioTVFile" state="I"
                       logMessage="Updating objects as part of a doms install/upgrade"/>
@@ -1722,15 +1708,6 @@
             </rdf:RDF>
 
         </def:xmlData>
-    </def:modifyDatastream>
-    <def:modifyDatastream pid="doms:Template_RadioTVFile" dsID="POLICY"
-                          dsLabel="Policy"
-                          dsMIME="application/rdf+xml"
-                          versionable="true"
-                          altIDs="" dsControlGroupType="E" dsState="A"
-                          checksumType="MD5"
-                          logMessage="Updating objects as part of a doms install/upgrade"
-                          dsLocation="http://local.fedora.server/fedora/objects/doms:RadioTV_InhouseLicense/datastreams/LICENSE/content">
     </def:modifyDatastream>
 
 
