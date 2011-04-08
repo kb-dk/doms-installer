@@ -41,7 +41,7 @@
 
     <appender name="DomsAuthcheckerFile"
               class="org.apache.log4j.RollingFileAppender">
-        <param name="Threshold" value="INFO"/>
+        <param name="Threshold" value="DEBUG"/>
         <param name="File" value="$LOG_DIR$/authchecker.log"/>
         <param name="MaxFileSize" value="10MB" />
         <param name="MaxBackupIndex" value="10" />
@@ -52,7 +52,7 @@
     
 
     <logger name="dk.statsbiblioteket.doms.authchecker" additivity="false">
-        <level value="INFO"/>
+        <level value="DEBUG"/>
         <appender-ref ref="DomsAuthchecker"/>
         <appender-ref ref="DomsAuthcheckerFile"/>
     </logger>
