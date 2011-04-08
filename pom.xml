@@ -9,15 +9,15 @@
 
     <groupId>dk.statsbiblioteket.doms.testbed</groupId>
     <artifactId>testbed</artifactId>
-    <version>0.10.20</version>
+    <version>0.10.21-SNAPSHOT</version>
 
 
     <packaging>pom</packaging>
 
     <scm>
-        <connection>scm:svn:https://doms.svn.sourceforge.net/svnroot/doms/testbed/tags/testbed-0.10.20</connection>
-        <developerConnection>scm:svn:https://doms.svn.sourceforge.net/svnroot/doms/testbed/tags/testbed-0.10.20</developerConnection>
-        <url>http://doms.svn.sourceforge.net/viewvc/doms/testbed/tags/testbed-0.10.20</url>
+        <connection>scm:svn:https://doms.svn.sourceforge.net/svnroot/doms/testbed/trunk</connection>
+        <developerConnection>scm:svn:https://doms.svn.sourceforge.net/svnroot/doms/testbed/trunk</developerConnection>
+        <url>http://doms.svn.sourceforge.net/viewvc/doms/testbed/trunk</url>
     </scm>
 
 
