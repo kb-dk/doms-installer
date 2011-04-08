@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <parent>
@@ -21,10 +22,54 @@
     </scm>
 
 
+    <profiles>
+        <profile>
+            <id>withRadioTVIngester</id>
+
+            <dependencies>
+                <!--Ingesters-->
+                <dependency>
+                    <groupId>dk.statsbiblioteket.doms.ingesters</groupId>
+                    <artifactId>radio-tv</artifactId>
+                    <version>0.0.6</version>
+                    <classifier>ingester</classifier>
+                    <type>zip</type>
+                </dependency>
+
+            </dependencies>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-assembly-plugin</artifactId>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>src/main/assembly/assemblyWithIngest.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>make-assembly</id>
+                                <!-- this is used for inheritance merges -->
+                                <phase>package</phase>
+                                <!-- append to the packaging phase. -->
+                                <goals>
+                                    <goal>single</goal>
+                                    <!-- goals == mojos -->
+                                </goals>
+                            </execution>
+                        </executions>
+
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
     <build>
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
+
                 <configuration>
                     <descriptors>
                         <descriptor>src/main/assembly/assembly.xml</descriptor>
@@ -143,16 +188,6 @@
             <artifactId>surveillance-surveyor-service</artifactId>
             <version>0.0.8</version>
             <type>war</type>
-        </dependency>
-
-
-        <!--Ingesters-->
-        <dependency>
-            <groupId>dk.statsbiblioteket.doms.ingesters</groupId>
-            <artifactId>radio-tv</artifactId>
-            <version>0.0.6</version>
-            <classifier>ingester</classifier>
-            <type>zip</type>
         </dependency>
 
 

@@ -88,8 +88,6 @@ mkdir -p $TOMCAT_DIR/conf
 cp -v $CONFIG_TEMP_DIR/server.xml $TOMCAT_DIR/conf/server.xml
 
 
-# Replace the tomcat context.xml with our context.xml
-cp -v $CONFIG_TEMP_DIR/context.xml $TOMCAT_CONFIG_DIR/context.xml
 
 # Insert tomcat setenv.sh
 mkdir -p $TOMCAT_DIR/bin/
@@ -103,10 +101,11 @@ chmod +x $TOMCAT_DIR/bin/*.sh
 cp -v $CONFIG_TEMP_DIR/log4j.*.xml $TOMCAT_CONFIG_DIR
 
 # Install context.xml configuration
-cp -v $CONFIG_TEMP_DIR/context.xml.default $TOMCAT_CONFIG_DIR
+cp -v $CONFIG_TEMP_DIR/context.xml.default $TOMCAT_CONFIG_DIR/tomcat-context-params.xml
 
 # Install schemaStore "webservice" configuration
-cp -v $CONFIG_TEMP_DIR/schemaStore.xml $TOMCAT_CONFIG_DIR
+mkdir $TOMCAT_APPS_DIR
+cp -v $CONFIG_TEMP_DIR/schemaStore.xml $TOMCAT_APPS_DIR/schemaStore.xml
 
 # Set the session timeout to 1 min
 mkdir -p $TOMCAT_DIR/conf
@@ -118,10 +117,9 @@ if [ ! $TOMCAT_CONFIG_DIR -ef $TOMCAT_DIR/conf ]; then
 
    #first, link to context.xml into the correct location
    mkdir -p $TOMCAT_DIR/conf/Catalina/localhost
-   ln -s $TOMCAT_CONFIG_DIR/context.xml.default $TOMCAT_DIR/conf/Catalina/localhost/context.xml.default
+   ln -s $TOMCAT_CONFIG_DIR/tomcat-context-params.xml $TOMCAT_DIR/conf/Catalina/localhost/context.xml.default
 
-   ln -s $TOMCAT_CONFIG_DIR/schemaStore.xml $TOMCAT_DIR/conf/Catalina/localhost/schemaStore.xml
-
+   ln -s $TOMCAT_APPS_DIR/schemaStore.xml $TOMCAT_DIR/conf/Catalina/localhost/schemaStore.xml
 fi
 
 echo "Tomcat setup is now done"
@@ -136,14 +134,14 @@ echo ""
 ##
 echo "Installing the doms webservices into tomcat"
 mkdir -p $WEBAPPS_DIR
-mkdir -p $TOMCAT_APPS_DIR
-cp -v $BASEDIR/webservices/*.war $TOMCAT_APPS_DIR
-for file in $TOMCAT_APPS_DIR/*.war ; do
+
+for file in $BASEDIR/webservices/*.war ; do
      newname=`basename $file`
      newname=`expr match "$newname" '\([^0-9]*\)'`;
      newname=${newname%-}.war;
-     ln -s $file $WEBAPPS_DIR/$newname
+     cp -v $file $WEBAPPS_DIR/$newname
 done
+chmod 644 $WEBAPPS_DIR/*.war
 
 
 ##
@@ -205,8 +203,11 @@ cp -v $CONFIG_TEMP_DIR/fedora-users.xml $FEDORA_DIR/server/config/fedora-users.x
 # Setup the the lowlevel storage
 cp -v $CONFIG_TEMP_DIR/akubra-llstore.xml $FEDORA_DIR/server/config/akubra-llstore.xml
 
+rm -rf $FEDORA_DIR/install
 
 echo "Fedora setup complete"
+
+
 
 echo "Installing Doms Schemas"
 mkdir -p $SCHEMA_DIR
@@ -227,16 +228,16 @@ for file in $BASEDIR/data/objects/batch/*.sh ; do
   echo "Created batch file $BASEOBJS_DIR/bin/`basename $file` from template file $file"
 done
 
-echo "Installing doms Radio-tv ingester"
-
-mkdir -p $INGEST_DIR
-unzip -q -n $BASEDIR/ingester/$INGESTERZIP -d $INGEST_DIR
-pushd `dirname $INGEST_DIR/radio-tv-*/bin` > /dev/null
-cp $CONFIG_TEMP_DIR/ingest_config.sh bin/
-mkdir -p files
-cp -r $BASEDIR/data/preingestfiles/ files/
-popd > /dev/null
-
-rm -rf $CONFIG_TEMP_DIR > /dev/null
+if [ -f $BASEDIR/ingester/$INGESTERZIP ]; then
+  echo "Installing doms Radio-tv ingester"
+  mkdir -p $INGEST_DIR
+  unzip -q -n $BASEDIR/ingester/$INGESTERZIP -d $INGEST_DIR
+  pushd `dirname $INGEST_DIR/radio-tv-*/bin` > /dev/null
+  cp $CONFIG_TEMP_DIR/ingest_config.sh bin/
+  mkdir -p files
+  cp -r $BASEDIR/data/preingestfiles/ files/
+  popd > /dev/null
+  rm -rf $CONFIG_TEMP_DIR > /dev/null
+fi
 
 echo "Install complete"
