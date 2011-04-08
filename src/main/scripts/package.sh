@@ -125,6 +125,12 @@ fi
 echo "Tomcat setup is now done"
 ## Tomcat is now done
 
+echo "Installing docs"
+mkdir -p $DOCS_DIR
+cp -r $BASEDIR/docs/* $DOCS_DIR
+echo "Docs installed"
+
+
 
 echo ""
 echo "WEBSERVICE INSTALL"

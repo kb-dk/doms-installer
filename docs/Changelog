@@ -1,3 +1,38 @@
+xxxx Release of version 0.10.20
+
+Made the doms ingester optional, so it will not be bundled in the release
+
+Fixed the errors in the log4j config files
+
+Removed the version numbers from the war files, and removed the symlink stuff
+
+Moved schemas to live in services/
+
+Moved schemaStore.xml to live in services/tomcat-apps
+
+Removed the services/tomcatapps folder. The warfiles are now in services/webapps
+
+Brought the changelog up2date
+
+1/4/2011 Release of version 0.10.19
+
+Changed the build system to maven, instead of ant
+
+Renamed the doms webservices (rather, a natural consequence of maven)
+
+Updated log4j config files to use rolling file appenders
+
+Added the ingester as an dependency, and some example preingest files
+
+Updated the system to create basic objects, to use the fedora batch process
+
+Added the SchemaStore pseudo process
+
+Updated the authchecker service to 0.0.10
+  - changed the interface
+  - Made the tickets carry more info
+
+
 28/1/2011 Release of version 0.10.18
 
 Changed logging levels back to DEBUG

@@ -60,6 +60,11 @@
             <directory>src/main/scripts</directory>
             <fileMode>0755</fileMode>
         </fileSet>
+        <fileSet>
+            <outputDirectory>docs</outputDirectory>
+            <directory>docs</directory>
+        </fileSet>
+
     </fileSets>
 
 
