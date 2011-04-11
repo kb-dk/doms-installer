@@ -54,7 +54,7 @@ source $SCRIPT_DIR/setenv.sh
 
 CONFIG_TEMP_DIR=`mktemp -d`
 
-if [ $USE_POSTGRESQL == true ]; then
+if [ "$USE_POSTGRESQL" = "true" ]; then
   DATABASE_SYSTEM=localPostgreSQLPool
 else
   DATABASE_SYSTEM=localDerbyPool
