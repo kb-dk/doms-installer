@@ -50,9 +50,15 @@
                                     </Apply>
                                     <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
                                         <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                >staff@hum.au.dk
+                                        </AttributeValue>
+                                    </Apply>
+                                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
                                                 >inhouse@ip.roles.statsbiblioteket.dk
                                         </AttributeValue>
                                     </Apply>
+
                                 </Apply>
                             </Apply>
                             <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">

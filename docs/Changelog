@@ -1,3 +1,9 @@
+Removed the default // stuff in paths
+
+Removed the empty services/conf/fedora dir, that was not used any more
+
+Added the staff@hum.au.dk role to the radio tv license
+
 8/4/2011 Release of version 0.10.20
 
 Made the doms ingester optional, so it will not be bundled in the release

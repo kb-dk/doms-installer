@@ -188,8 +188,6 @@ cp -v $FEDORA_DIR/install/fedora.war $WEBAPPS_DIR
 
 echo "Configuring fedora postinstall"
 
-mkdir -p $TOMCAT_CONFIG_DIR/fedora
-
 # Add logappender to Fedora logback configuration
 cp -v $CONFIG_TEMP_DIR/logback.xml $FEDORA_DIR/server/config/logback.xml
 
