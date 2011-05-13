@@ -1,8 +1,13 @@
+
 Removed the default // stuff in paths
 
 Removed the empty services/conf/fedora dir, that was not used any more
 
 Added the staff@hum.au.dk role to the radio tv license
+
+11/4/2011 Release of version 0.10.20.1
+
+Fixed a very minor bug in package.sh that prevented install with postgresql database
 
 8/4/2011 Release of version 0.10.20
 

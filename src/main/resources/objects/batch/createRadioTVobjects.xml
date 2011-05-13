@@ -445,7 +445,6 @@
                        formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="MD5"
                        logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -502,7 +501,6 @@
                        dsMIME="application/rdf+xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="E" dsState="A"
-                       checksumType="MD5"
                        logMessage="Updating objects as part of a doms install/upgrade"
                        dsLocation="http://local.fedora.server/fedora/objects/doms:RadioTV_InhouseLicense/datastreams/LICENSE/content">
     </def:addDatastream>
@@ -517,7 +515,6 @@
                        formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="MD5"
                        logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -533,7 +530,7 @@
                               xmlns="info:fedora/fedora-system:def/model#"/>
                     <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
                     <doms:hasLicense rdf:resource="info:fedora/doms:RadioTV_InhouseLicense"/>
-                    <ecm:isTemplateFor rdf:resource="info:fedora/doms:ContentModel_Program"/>
+                    <ecm:isTemplateFor rdf:resource="info:fedora/doms:ContentModel_Shard"/>
                 </rdf:Description>
             </rdf:RDF>
 
@@ -544,7 +541,6 @@
                        dsMIME="text/xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="MD5"
                        logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <placeholder/>
@@ -555,7 +551,6 @@
                        dsMIME="application/rdf+xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="E" dsState="A"
-                       checksumType="MD5"
                        logMessage="Updating objects as part of a doms install/upgrade"
                        dsLocation="http://local.fedora.server/fedora/objects/doms:RadioTV_InhouseLicense/datastreams/LICENSE/content">
     </def:addDatastream>
@@ -570,7 +565,6 @@
                        formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="MD5"
                        logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -586,7 +580,7 @@
                               xmlns="info:fedora/fedora-system:def/model#"/>
                     <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
                     <doms:hasLicense rdf:resource="info:fedora/doms:RadioTV_adminOnlyLicense"/>
-                    <ecm:isTemplateFor rdf:resource="info:fedora/doms:ContentModel_Program"/>
+                    <ecm:isTemplateFor rdf:resource="info:fedora/doms:ContentModel_RadioTVFile"/>
                 </rdf:Description>
             </rdf:RDF>
         </def:xmlData>
@@ -596,7 +590,6 @@
                        dsMIME="application/rdf+xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="E" dsState="A"
-                       checksumType="MD5"
                        logMessage="Updating objects as part of a doms install/upgrade"
                        dsLocation="http://local.fedora.server/fedora/objects/doms:RadioTV_InhouseLicense/datastreams/LICENSE/content">
     </def:addDatastream>

@@ -1441,7 +1441,6 @@
                           dsMIME="text/xml"
                           versionable="true"
                           altIDs="" dsControlGroupType="X" dsState="A"
-                          checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <Policy xmlns="urn:oasis:names:tc:xacml:1.0:policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -1519,7 +1518,6 @@
                           dsMIME="text/xml"
                           versionable="true"
                           altIDs="" dsControlGroupType="X" dsState="A"
-                          checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <Policy xmlns="urn:oasis:names:tc:xacml:1.0:policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -1577,7 +1575,6 @@
                           formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                           versionable="true"
                           altIDs="" dsControlGroupType="X" dsState="A"
-                          checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -1642,7 +1639,6 @@
                           formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                           versionable="true"
                           altIDs="" dsControlGroupType="X" dsState="A"
-                          checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -1687,7 +1683,6 @@
                           formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                           versionable="true"
                           altIDs="" dsControlGroupType="X" dsState="A"
-                          checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
