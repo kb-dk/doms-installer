@@ -111,7 +111,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.ecm</groupId>
             <artifactId>ecm-fedoravalidatorhook</artifactId>
-            <version>0.0.16</version>
+            <version>0.0.17</version>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.highlevel</groupId>
@@ -131,7 +131,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.ecm</groupId>
             <artifactId>ecm-service</artifactId>
-            <version>0.0.18-SNAPSHOT</version>
+            <version>LATEST</version>
             <type>war</type>
         </dependency>
         <dependency>

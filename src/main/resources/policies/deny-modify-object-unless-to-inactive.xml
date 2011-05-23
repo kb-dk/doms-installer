@@ -4,7 +4,8 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <Description>This policy will DENY modify object calls for active objects,
-        if they do not change the state to inactive</Description>
+        if they do not change the state to inactive
+    </Description>
 
     <Target>
 
@@ -17,7 +18,6 @@
                 <ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
                     <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">A</AttributeValue>
                     <ResourceAttributeDesignator AttributeId="urn:fedora:names:fedora:2.1:resource:object:state"
-                                                 MustBePresent="false"
                                                  DataType="http://www.w3.org/2001/XMLSchema#string"/>
                 </ResourceMatch>
             </Resource>
@@ -28,7 +28,8 @@
             <Action>
                 <ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
                     <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
-                            >urn:fedora:names:fedora:2.1:action:id-modifyObject</AttributeValue>
+                            >urn:fedora:names:fedora:2.1:action:id-modifyObject
+                    </AttributeValue>
                     <ActionAttributeDesignator
                             AttributeId="urn:fedora:names:fedora:2.1:action:id"
                             DataType="http://www.w3.org/2001/XMLSchema#string"/>

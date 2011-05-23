@@ -1654,7 +1654,7 @@
                               xmlns="info:fedora/fedora-system:def/model#"/>
                     <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
                     <doms:hasLicense rdf:resource="info:fedora/doms:RadioTV_InhouseLicense"/>
-                    <ecm:isTemplateFor rdf:resource="info:fedora/doms:ContentModel_Program"/>
+                    <ecm:isTemplateFor rdf:resource="info:fedora/doms:ContentModel_Shard"/>
                 </rdf:Description>
             </rdf:RDF>
 
@@ -1698,7 +1698,7 @@
                               xmlns="info:fedora/fedora-system:def/model#"/>
                     <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
                     <doms:hasLicense rdf:resource="info:fedora/doms:RadioTV_adminOnlyLicense"/>
-                    <ecm:isTemplateFor rdf:resource="info:fedora/doms:ContentModel_Program"/>
+                    <ecm:isTemplateFor rdf:resource="info:fedora/doms:ContentModel_RadioTVFile"/>
                 </rdf:Description>
             </rdf:RDF>
 
