@@ -1441,6 +1441,7 @@
                           dsMIME="text/xml"
                           versionable="true"
                           altIDs="" dsControlGroupType="X" dsState="A"
+                          checksumType="DISABLED"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <Policy xmlns="urn:oasis:names:tc:xacml:1.0:policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -1518,6 +1519,7 @@
                           dsMIME="text/xml"
                           versionable="true"
                           altIDs="" dsControlGroupType="X" dsState="A"
+                          checksumType="DISABLED"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <Policy xmlns="urn:oasis:names:tc:xacml:1.0:policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -1575,6 +1577,7 @@
                           formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                           versionable="true"
                           altIDs="" dsControlGroupType="X" dsState="A"
+                          checksumType="DISABLED"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -1618,7 +1621,7 @@
         </def:xmlData>
     </def:modifyDatastream>
     <def:modifyDatastream pid="doms:Template_Program" dsID="GALLUP_ORIGINAL"
-                          dsLabel="PBCore datastream"
+                          dsLabel="Gallup datastream"
                           dsMIME="text/xml"
                           versionable="true"
                           altIDs="" dsControlGroupType="X" dsState="A"
@@ -1626,7 +1629,7 @@
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <gallup_original xmlns="http://doms.statsbiblioteket.dk/types/gallup_original/0/1/#">
-                INSERT_RITZAU_ORIGINAL_DUMP
+                INSERT_GALLUP_ORIGINAL_DUMP
             </gallup_original>
         </def:xmlData>
     </def:modifyDatastream>
@@ -1639,6 +1642,7 @@
                           formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                           versionable="true"
                           altIDs="" dsControlGroupType="X" dsState="A"
+                          checksumType="DISABLED"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -1661,7 +1665,7 @@
         </def:xmlData>
     </def:modifyDatastream>
     <def:modifyDatastream pid="doms:Template_Shard" dsID="SHARD_METADATA"
-                          dsLabel="PBCore datastream"
+                          dsLabel="Shard datastream"
                           dsMIME="text/xml"
                           versionable="true"
                           altIDs="" dsControlGroupType="X" dsState="A"
@@ -1683,6 +1687,7 @@
                           formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                           versionable="true"
                           altIDs="" dsControlGroupType="X" dsState="A"
+                          checksumType="DISABLED"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"

@@ -1,3 +1,14 @@
+Actually fixed the things that made the ingester go boom (remove checksum checking from template datastreams with IDs).
+
+20/6/2011 Release version 0.10.21
+
+Updated to use the newest ECM (0.0.18). The previous one had a bug when cloning files.
+
+Updated the batch objects, there were numerous errors in these.
+
+Updated the radio tv policy to include the faculty group and other fixes to license..
+
+Fixed some things that made the ingester go boom.
 
 Removed the default // stuff in paths
 
