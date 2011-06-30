@@ -445,6 +445,7 @@
                        formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="DISABLED"
                        logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -486,7 +487,7 @@
         </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:Template_Program" dsID="GALLUP_ORIGINAL"
-                       dsLabel="PBCore datastream"
+                       dsLabel="Gallup datastream"
                        dsMIME="text/xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
@@ -501,6 +502,7 @@
                        dsMIME="application/rdf+xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="E" dsState="A"
+                       checksumType="DISABLED"
                        logMessage="Updating objects as part of a doms install/upgrade"
                        dsLocation="http://local.fedora.server/fedora/objects/doms:RadioTV_InhouseLicense/datastreams/LICENSE/content">
     </def:addDatastream>
@@ -515,6 +517,7 @@
                        formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="DISABLED"
                        logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -537,10 +540,11 @@
         </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:Template_Shard" dsID="SHARD_METADATA"
-                       dsLabel="PBCore datastream"
+                       dsLabel="Shard datastream"
                        dsMIME="text/xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="DISABLED"
                        logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <placeholder/>
@@ -551,6 +555,7 @@
                        dsMIME="application/rdf+xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="E" dsState="A"
+                       checksumType="DISABLED"
                        logMessage="Updating objects as part of a doms install/upgrade"
                        dsLocation="http://local.fedora.server/fedora/objects/doms:RadioTV_InhouseLicense/datastreams/LICENSE/content">
     </def:addDatastream>
@@ -565,6 +570,7 @@
                        formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="DISABLED"
                        logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -590,6 +596,7 @@
                        dsMIME="application/rdf+xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="E" dsState="A"
+                       checksumType="DISABLED"
                        logMessage="Updating objects as part of a doms install/upgrade"
                        dsLocation="http://local.fedora.server/fedora/objects/doms:RadioTV_InhouseLicense/datastreams/LICENSE/content">
     </def:addDatastream>
