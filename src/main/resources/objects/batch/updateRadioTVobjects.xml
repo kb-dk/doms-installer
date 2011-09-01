@@ -18,21 +18,27 @@
                     xmlns="info:fedora/fedora-system:def/dsCompositeModel#">
                 <dsTypeModel ID="PBCORE">
                     <form MIME="text/xml"/>
-                    <extension name="GUI" presentAs="editable"/>
+                    <extension name="GUI">
+                        <presentAs type="editable"/>
+                    </extension>
                     <extension name="SCHEMA">
                         <reference type="datastream" value="PBCORE_SCHEMA"/>
                     </extension>
                 </dsTypeModel>
                 <dsTypeModel ID="RITZAU_ORIGINAL">
                     <form MIME="text/xml"/>
-                    <extension name="GUI" presentAs="readonly"/>
+                    <extension name="GUI">
+                        <presentAs type="readonly"/>
+                    </extension>
                     <extension name="SCHEMA">
                         <reference type="datastream" value="RITZAU_ORIGINAL_SCHEMA"/>
                     </extension>
                 </dsTypeModel>
                 <dsTypeModel ID="GALLUP_ORIGINAL">
                     <form MIME="text/xml"/>
-                    <extension name="GUI" presentAs="readonly"/>
+                    <extension name="GUI">
+                        <presentAs type="readonly"/>
+                    </extension>
                     <extension name="SCHEMA">
                         <reference type="datastream" value="GALLUP_ORIGINAL_SCHEMA"/>
                     </extension>
@@ -1197,7 +1203,9 @@
                     xmlns:schema="http://doms.statsbiblioteket.dk/types/dscompositeschema/0/1/#">
                 <dsTypeModel ID="SHARD_METADATA">
                     <form MIME="text/xml"/>
-                    <extension name="GUI" presentAs="editable"/>
+                    <extension name="GUI">
+                        <presentAs type="editable"/>
+                    </extension>
                     <extension name="SCHEMA">
                         <reference type="datastream" value="SHARD_METADATA_SCHEMA"/>
                     </extension>
@@ -1338,7 +1346,9 @@
                     <form FORMAT_URI="info:pronom/fmt/6"/>
                 </dsTypeModel>
                 <dsTypeModel ID="DC">
-                    <extension name="GUI" presentAs="editable"/>
+                    <extension name="GUI">
+                        <presentAs type="editable"/>
+                    </extension>
                 </dsTypeModel>
             </dsCompositeModel>
 
