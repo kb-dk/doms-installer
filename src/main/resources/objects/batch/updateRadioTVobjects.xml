@@ -18,18 +18,21 @@
                     xmlns="info:fedora/fedora-system:def/dsCompositeModel#">
                 <dsTypeModel ID="PBCORE">
                     <form MIME="text/xml"/>
+                    <extension name="GUI" presentAs="editable"/>
                     <extension name="SCHEMA">
                         <reference type="datastream" value="PBCORE_SCHEMA"/>
                     </extension>
                 </dsTypeModel>
                 <dsTypeModel ID="RITZAU_ORIGINAL">
                     <form MIME="text/xml"/>
+                    <extension name="GUI" presentAs="readonly"/>
                     <extension name="SCHEMA">
                         <reference type="datastream" value="RITZAU_ORIGINAL_SCHEMA"/>
                     </extension>
                 </dsTypeModel>
                 <dsTypeModel ID="GALLUP_ORIGINAL">
                     <form MIME="text/xml"/>
+                    <extension name="GUI" presentAs="readonly"/>
                     <extension name="SCHEMA">
                         <reference type="datastream" value="GALLUP_ORIGINAL_SCHEMA"/>
                     </extension>
@@ -58,6 +61,7 @@
                     <ecm:extendsModel rdf:resource="info:fedora/doms:ContentModel_DOMS"/>
                     <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
                     <ecm:isEntryForViewAngle>SummaVisible</ecm:isEntryForViewAngle>
+                    <ecm:isEntryForViewAngle>GUI</ecm:isEntryForViewAngle>
                     <doms:hasLicense rdf:resource="info:fedora/doms:Open_License"/>
                 </rdf:Description>
             </rdf:RDF>
@@ -79,6 +83,13 @@
                     </v:relations>
                     <v:inverseRelations/>
                 </v:viewangle>
+                <v:viewangle name="GUI">
+                    <v:relations xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#">
+                        <doms:hasShard/>
+                    </v:relations>
+                    <v:inverseRelations/>
+                </v:viewangle>
+
             </v:views>
 
         </def:xmlData>
@@ -1186,6 +1197,7 @@
                     xmlns:schema="http://doms.statsbiblioteket.dk/types/dscompositeschema/0/1/#">
                 <dsTypeModel ID="SHARD_METADATA">
                     <form MIME="text/xml"/>
+                    <extension name="GUI" presentAs="editable"/>
                     <extension name="SCHEMA">
                         <reference type="datastream" value="SHARD_METADATA_SCHEMA"/>
                     </extension>
@@ -1231,6 +1243,13 @@
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
             <v:views xmlns:v="http://ecm.sourceforge.net/types/view/0/2/#">
+                <v:viewangle name="GUI">
+                    <v:relations xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#">
+                        <doms:consistsOf/>
+                    </v:relations>
+                    <v:inverseRelations/>
+                </v:viewangle>
+
             </v:views>
 
 
@@ -1317,6 +1336,9 @@
                     <form FORMAT_URI="info:pronom/x-fmt/386"/>
                     <form FORMAT_URI="info:pronom/x-fmt/385"/>
                     <form FORMAT_URI="info:pronom/fmt/6"/>
+                </dsTypeModel>
+                <dsTypeModel ID="DC">
+                    <extension name="GUI" presentAs="editable"/>
                 </dsTypeModel>
             </dsCompositeModel>
 
