@@ -903,15 +903,15 @@
         <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-fedoralogin/0.0.10/authchecker-fedoralogin-0.0.10-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.authchecker:authchecker-service:war:0.0.11-SNAPSHOT">
+    <library name="Maven: dk.statsbiblioteket.doms.authchecker:authchecker-service:war:0.0.11">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-service/0.0.11-SNAPSHOT/authchecker-service-0.0.11-SNAPSHOT.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-service/0.0.11/authchecker-service-0.0.11.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-service/0.0.11-SNAPSHOT/authchecker-service-0.0.11-SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-service/0.0.11/authchecker-service-0.0.11-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-service/0.0.11-SNAPSHOT/authchecker-service-0.0.11-SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/authchecker/authchecker-service/0.0.11/authchecker-service-0.0.11-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: dk.statsbiblioteket.doms.bitstorage.characteriser:bitstorage-characteriser-service:war:0.0.18">
@@ -980,15 +980,15 @@
         <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-interface/0.0.21/centralWebservice-interface-0.0.21-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-service:war:0.0.22-SNAPSHOT">
+    <library name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-service:war:0.0.22">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.22-SNAPSHOT/centralWebservice-service-0.0.22-SNAPSHOT.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.22/centralWebservice-service-0.0.22.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.22-SNAPSHOT/centralWebservice-service-0.0.22-SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.22/centralWebservice-service-0.0.22-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.22-SNAPSHOT/centralWebservice-service-0.0.22-SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.22/centralWebservice-service-0.0.22-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: dk.statsbiblioteket.doms.client:domsclient:0.0.8">
