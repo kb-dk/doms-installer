@@ -81,6 +81,9 @@
     <Parameter name="dk.statsbiblioteket.doms.central.updateTrackerLocation"
                value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/updatetracker-service/updatetracker/?wsdl"
                override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.central.authCheckerLocation"
+               value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/authchecker-service"
+               override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.central.log4jconfig"
                value="$TOMCAT_CONFIG_DIR$/log4j.centralDomsWebservice.xml"
                override="false"/>

@@ -186,7 +186,7 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: postgresql:postgresql:8.3-603.jdbc3" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.ecm:ecm-service:war:0.0.18" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.pidgenerator:pidgenerator-service:war:0.0.8" level="project" />
-    <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.authchecker:authchecker-service:war:0.0.10" level="project" />
+    <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.authchecker:authchecker-service:war:0.0.11-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.bitstorage.lowlevel:bitstorage-lowlevel-service:war:0.0.18" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.bitstorage.characteriser:bitstorage-characteriser-service:war:0.0.18" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.bitstorage.highlevel:bitstorage-highlevel-service:war:0.0.18" level="project" />
