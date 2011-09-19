@@ -83,6 +83,19 @@
                                     </Apply>
                                 </Apply>
                             </Apply>
+                            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
+                                <SubjectAttributeDesignator AttributeId="sbAdGroups"
+                                                            DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                            MustBePresent="false"/>
+                                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
+                                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                >digitale ressourcer
+                                        </AttributeValue>
+                                    </Apply>
+                                </Apply>
+                            </Apply>
+
                         </Apply>
                     </Condition>
                 </Rule>
