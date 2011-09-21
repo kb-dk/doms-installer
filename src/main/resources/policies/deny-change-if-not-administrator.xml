@@ -238,14 +238,34 @@
 
         </Actions>
     </Target>
-    <Rule RuleId="1" Effect="Deny">
+    <Rule Effect="Deny" RuleId="1">
         <Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
-            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-is-in">
-                <AttributeValue
-                        DataType="http://www.w3.org/2001/XMLSchema#string">administrator</AttributeValue>
-                <SubjectAttributeDesignator AttributeId="fedoraRole"
-                                            MustBePresent="false"
-                                            DataType="http://www.w3.org/2001/XMLSchema#string"/>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
+                    <SubjectAttributeDesignator AttributeId="fedoraRole"
+                                                DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                MustBePresent="false"></SubjectAttributeDesignator>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                    >administrator
+                            </AttributeValue>
+                        </Apply>
+                    </Apply>
+                </Apply>
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
+                    <SubjectAttributeDesignator AttributeId="sbAdGroups"
+                                                DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                MustBePresent="false"/>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                    >domsadmin_devel
+                            </AttributeValue>
+                        </Apply>
+                    </Apply>
+                </Apply>
+
             </Apply>
         </Condition>
     </Rule>
