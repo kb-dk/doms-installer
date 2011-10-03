@@ -191,7 +191,7 @@
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.bitstorage.characteriser:bitstorage-characteriser-service:war:0.0.18" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.bitstorage.highlevel:bitstorage-highlevel-service:war:0.0.18" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-service:war:0.0.22" level="project" />
-    <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.updatetracker:updatetracker-service:war:0.0.13" level="project" />
+    <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.updatetracker:updatetracker-service:war:0.0.13-BRANCH" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.surveillance:surveillance-fedorasurveyor-service:war:0.0.8" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.surveillance:surveillance-surveyor-service:war:0.0.8" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.client:domsclient:0.0.8" level="project" />

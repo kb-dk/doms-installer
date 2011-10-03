@@ -174,7 +174,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.updatetracker</groupId>
             <artifactId>updatetracker-service</artifactId>
-            <version>0.0.13</version>
+            <version>0.0.13-BRANCH</version>
             <type>war</type>
         </dependency>
         <dependency>

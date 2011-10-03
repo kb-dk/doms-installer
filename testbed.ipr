@@ -1101,15 +1101,15 @@
         <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/surveillance/surveillance-surveyor-service/0.0.8/surveillance-surveyor-service-0.0.8-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.updatetracker:updatetracker-service:war:0.0.13">
+    <library name="Maven: dk.statsbiblioteket.doms.updatetracker:updatetracker-service:war:0.0.13-BRANCH">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/updatetracker/updatetracker-service/0.0.13/updatetracker-service-0.0.13.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/updatetracker/updatetracker-service/0.0.13-BRANCH/updatetracker-service-0.0.13-BRANCH.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/updatetracker/updatetracker-service/0.0.13/updatetracker-service-0.0.13-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/updatetracker/updatetracker-service/0.0.13-BRANCH/updatetracker-service-0.0.13-BRANCH-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/updatetracker/updatetracker-service/0.0.13/updatetracker-service-0.0.13-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/updatetracker/updatetracker-service/0.0.13-BRANCH/updatetracker-service-0.0.13-BRANCH-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: dk.statsbiblioteket.sbutil:sbutil:0.5.2">
