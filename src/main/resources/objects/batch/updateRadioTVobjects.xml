@@ -1307,21 +1307,21 @@
                           checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-            <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-                <xs:element name="shard_metadata" type="shard_metadataType"/>
+            <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+                <xs:element name="shard_metadata" type="shard_metadataType"></xs:element>
                 <xs:complexType name="fileType">
                     <xs:sequence>
-                        <xs:element name="file_url" type="xs:string"/>
-                        <xs:element name="channel_id" type="xs:string"/>
-                        <xs:element name="program_start_offset" type="xs:long"/>
-                        <xs:element name="program_clip_length" type="xs:long"/>
-                        <xs:element name="file_name" type="xs:string"/>
-                        <xs:element  name="format_uri" type="xs:string"/>
+                        <xs:element name="file_url" type="xs:string"></xs:element>
+                        <xs:element minOccurs="0" name="channel_id" type="xs:string"></xs:element>
+                        <xs:element name="program_start_offset" type="xs:long"></xs:element>
+                        <xs:element name="program_clip_length" type="xs:long"></xs:element>
+                        <xs:element name="file_name" type="xs:string"></xs:element>
+                        <xs:element name="format_uri" type="xs:string"></xs:element>
                     </xs:sequence>
                 </xs:complexType>
                 <xs:complexType name="shard_metadataType">
                     <xs:sequence>
-                        <xs:element type="fileType" name="file" maxOccurs="unbounded" minOccurs="0"/>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="file" type="fileType"></xs:element>
                     </xs:sequence>
                 </xs:complexType>
             </xs:schema>
