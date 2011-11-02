@@ -1212,9 +1212,6 @@
                     </extension>
                 </dsTypeModel>
                 <dsTypeModel ID="CONTENTS">
-                    <extension name="GUI">
-                        <presentAs type="uploadable"/>
-                    </extension>
                     <form FORMAT_URI="info:pronom/fmt/199"/>
                 </dsTypeModel>
             </dsCompositeModel>
