@@ -1238,6 +1238,7 @@
                     <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
                     <doms:hasLicense rdf:resource="info:fedora/doms:Open_License"/>
                     <doms:isControlledByLowLevelBitstorage>false</doms:isControlledByLowLevelBitstorage>
+                    <ecm:isEntryForViewAngle>BES</ecm:isEntryForViewAngle>
                 </rdf:Description>
             </rdf:RDF>
 
@@ -1258,7 +1259,6 @@
                     </v:relations>
                     <v:inverseRelations/>
                 </v:viewangle>
-
             </v:views>
 
 
