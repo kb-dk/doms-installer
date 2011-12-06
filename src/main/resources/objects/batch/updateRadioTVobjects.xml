@@ -1353,10 +1353,172 @@
                         <presentAs type="editable"/>
                     </extension>
                 </dsTypeModel>
+                <dsTypeModel ID="FFPROBE" optional="true">
+                    <extension name="GUI">
+                        <presentAs type="readonly"/>
+                    </extension>
+                    <extension name="SCHEMA">
+                        <reference type="datastream" value="FFPROBE_SCHEMA"/>
+                    </extension>
+                </dsTypeModel>
             </dsCompositeModel>
 
         </def:xmlData>
     </def:modifyDatastream>
+
+    <def:modifyDatastream pid="doms:ContentModel_RadioTVFile" dsID="FFPROBE_SCHEMA"
+                          dsLabel="FFPROBE metadata schema"
+                          dsMIME="text/xml"
+                          versionable="true"
+                          altIDs="" dsControlGroupType="X" dsState="A"
+                          checksumType="MD5"
+                          logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+
+                <xsd:element name="ffprobe" type="ffprobeType"/>
+
+                <xsd:complexType name="ffprobeType">
+                    <xsd:sequence>
+                        <xsd:element name="packets"  type="packetsType" minOccurs="0" maxOccurs="1" />
+                        <xsd:element name="streams"  type="streamsType" minOccurs="0" maxOccurs="1" />
+                        <xsd:element name="format"   type="formatType"  minOccurs="0" maxOccurs="1" />
+                    </xsd:sequence>
+                </xsd:complexType>
+
+                <xsd:complexType name="packetsType">
+                    <xsd:sequence>
+                        <xsd:element name="packet" type="packetType" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+
+                <xsd:complexType name="packetType">
+                    <xsd:attribute name="codec_type"    type="xsd:string"  use="required" />
+                    <xsd:attribute name="stream_index"  type="xsd:int"     use="required" />
+                    <xsd:attribute name="pts"           type="xsd:long"  />
+                    <xsd:attribute name="pts_time"      type="xsd:float" />
+                    <xsd:attribute name="dts"           type="xsd:long"  />
+                    <xsd:attribute name="dts_time"      type="xsd:float" />
+                    <xsd:attribute name="duration"      type="xsd:string"  />
+                    <xsd:attribute name="duration_time" type="xsd:float" />
+                    <xsd:attribute name="size"          type="xsd:decimal" use="required" />
+                    <xsd:attribute name="pos"           type="xsd:long"  />
+                    <xsd:attribute name="flags"         type="xsd:string"  use="required" />
+                </xsd:complexType>
+
+                <xsd:complexType name="streamsType">
+                    <xsd:sequence>
+                        <xsd:element name="stream" type="streamType" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+
+
+
+                <xsd:complexType name="streamType">
+                    <xsd:sequence>
+                        <xsd:element name="tag" type="tagType" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                    <xsd:attributeGroup ref="streamGeneral"/>
+                    <xsd:attributeGroup ref="videoAttributes"/>
+                    <xsd:attributeGroup ref="audioAttributes"/>
+                    <xsd:attributeGroup ref="streamPrivateAttributes"/>
+                </xsd:complexType>
+
+
+                <xsd:complexType name="formatType">
+                    <xsd:sequence>
+                        <xsd:element name="tag" type="tagType" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                    <xsd:attributeGroup ref="formatGeneralAttributes"/>
+                </xsd:complexType>
+
+                <xsd:complexType name="tagType">
+                    <xsd:attribute name="key"   type="xsd:string" use="required"/>
+                    <xsd:attribute name="value" type="xsd:string" use="required"/>
+                </xsd:complexType>
+
+
+                <xsd:attributeGroup name="streamGeneral">
+                    <xsd:attribute name="index"            type="xsd:int" use="required"/>
+                    <xsd:attribute name="codec_name"       type="xsd:string" />
+                    <xsd:attribute name="codec_long_name"  type="xsd:string" />
+                    <xsd:attribute name="codec_type"       type="xsd:string" />
+                    <xsd:attribute name="codec_time_base"  type="ratio"  use="required"/>
+                    <xsd:attribute name="codec_tag"        type="xsd:string"  use="required"/>
+                    <xsd:attribute name="codec_tag_string" type="xsd:string"  use="required"/>
+                </xsd:attributeGroup>
+
+                <xsd:attributeGroup name="videoAttributes">
+                    <!-- video attributes -->
+                    <xsd:attribute name="width"                type="xsd:int" />
+                    <xsd:attribute name="height"               type="xsd:int" />
+                    <xsd:attribute name="has_b_frames"         type="xsd:int" />
+                    <xsd:attribute name="sample_aspect_ratio"  type="aspectRatio" />
+                    <xsd:attribute name="display_aspect_ratio" type="aspectRatio" />
+                    <xsd:attribute name="pix_fmt"              type="xsd:string" />
+                    <xsd:attribute name="level"                type="xsd:int" />
+                </xsd:attributeGroup>
+
+
+                <xsd:attributeGroup name="audioAttributes">
+                    <!-- audio attributes -->
+                    <xsd:attribute name="sample_fmt"       type="xsd:string" />
+                    <xsd:attribute name="sample_rate"      type="xsd:int" />
+                    <xsd:attribute name="channels"         type="xsd:int"/>
+                    <xsd:attribute name="bits_per_sample"  type="xsd:int"/>
+                </xsd:attributeGroup>
+
+                <xsd:attributeGroup name="streamPrivateAttributes">
+                    <xsd:attribute name="id"               type="xsd:string" />
+                    <xsd:attribute name="r_frame_rate"     type="ratio" use="required"/>
+                    <xsd:attribute name="avg_frame_rate"   type="ratio" use="required"/>
+                    <xsd:attribute name="time_base"        type="ratio" use="required"/>
+                    <xsd:attribute name="nb_frames"        type="xsd:int" />
+                    <xsd:attributeGroup ref="generalAttributes"/>
+                    <xsd:anyAttribute namespace="##targetNamespace" processContents="lax"/>
+                </xsd:attributeGroup>
+
+
+                <xsd:attributeGroup name="formatGeneralAttributes">
+                    <xsd:attribute name="filename"         type="xsd:string" use="required"/>
+                    <xsd:attribute name="nb_streams"       type="xsd:int"    use="required"/>
+                    <xsd:attribute name="format_name"      type="xsd:string" use="required"/>
+                    <xsd:attribute name="format_long_name" type="xsd:string" use="required"/>
+                    <xsd:attribute name="size"             type="xsd:long"   use="required"/>
+                    <xsd:attribute name="bit_rate"         type="xsd:long"   use="required"/>
+                    <xsd:attributeGroup ref="generalAttributes"/>
+                </xsd:attributeGroup>
+
+
+                <xsd:attributeGroup name="generalAttributes">
+                    <xsd:attribute name="start_time"       type="floatOrNA" />
+                    <xsd:attribute name="duration"         type="floatOrNA" />
+                </xsd:attributeGroup>
+
+                <xsd:simpleType name="floatOrNA">
+                    <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="N/A|\d*(.\d*)?"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+
+                <xsd:simpleType name="aspectRatio">
+                    <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="\d+:\d+"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+
+                <xsd:simpleType name="ratio">
+                    <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="\d+/\d+|\d+"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+
+
+            </xsd:schema>
+        </def:xmlData>
+    </def:modifyDatastream>
+
+
     <def:modifyDatastream pid="doms:ContentModel_RadioTVFile" dsID="RELS-EXT"
                           dsLabel="Relationships"
                           dsMIME="application/rdf+xml"
@@ -1713,6 +1875,7 @@
 
         </def:xmlData>
     </def:modifyDatastream>
+
 
     <def:modifyObject pid="doms:Template_RadioTVFile" state="I"
                       logMessage="Updating objects as part of a doms install/upgrade"/>

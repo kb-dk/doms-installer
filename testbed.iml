@@ -13,7 +13,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.domsutil.surveyable:domsutil-logappender:0.0.20" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.domsutil:domsutil-webservice-common:0.0.20" level="project" />
-    <orderEntry type="library" name="Maven: dk.statsbiblioteket.sbutil:sbutil:0.5.2" level="project" />
+    <orderEntry type="library" name="Maven: dk.statsbiblioteket.sbutil:sbutil:0.5.5" level="project" />
     <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.1.1" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.domsutil.surveyable:domsutil-surveyable-interface:0.0.20" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.domsutil.surveyable:domsutil-surveyable-impl:0.0.20" level="project" />
@@ -64,7 +64,7 @@
     <orderEntry type="library" name="Maven: joda-time:joda-time:1.5.2" level="project" />
     <orderEntry type="library" name="Maven: jotm:jotm:2.0.10" level="project" />
     <orderEntry type="library" name="Maven: jotm:jotm_jrmp_stubs:2.0.10" level="project" />
-    <orderEntry type="library" name="Maven: log4j:log4j:1.2.6" level="project" />
+    <orderEntry type="library" name="Maven: log4j:log4j:1.2.14" level="project" />
     <orderEntry type="library" name="Maven: javax.transaction:jta:1.1" level="project" />
     <orderEntry type="library" name="Maven: org.objectweb.carol:carol:2.0.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.lucene:lucene-core:2.4.0" level="project" />
@@ -191,11 +191,13 @@
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.bitstorage.characteriser:bitstorage-characteriser-service:war:0.0.18" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.bitstorage.highlevel:bitstorage-highlevel-service:war:0.0.18" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-service:war:0.0.23" level="project" />
-    <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.updatetracker:updatetracker-service:war:0.0.13-BRANCH" level="project" />
+    <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.updatetracker:updatetracker-service:war:0.0.14" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.surveillance:surveillance-fedorasurveyor-service:war:0.0.8" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.surveillance:surveillance-surveyor-service:war:0.0.8" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.client:domsclient:0.0.8" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-interface:0.0.21" level="project" />
+    <orderEntry type="library" name="Maven: commons-cli:commons-cli:1.1" level="project" />
+    <orderEntry type="library" name="Maven: com.thoughtworks.xstream:xstream:1.2.2" level="project" />
   </component>
 </module>
 

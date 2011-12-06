@@ -232,6 +232,17 @@
             <placeholder/>
         </def:xmlData>
     </def:addDatastream>
+    <def:addDatastream pid="doms:ContentModel_RadioTVFile" dsID="FFPROBE_SCHEMA"
+                       dsLabel="FFPROBE SCHEMA datastream"
+                       dsMIME="text/xml"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
+    </def:addDatastream>
     <def:addDatastream pid="doms:ContentModel_RadioTVFile" dsID="ONTOLOGY"
                        dsLabel="Local ontology"
                        dsMIME="application/rdf+xml"
@@ -589,6 +600,17 @@
                     <ecm:isTemplateFor rdf:resource="info:fedora/doms:ContentModel_RadioTVFile"/>
                 </rdf:Description>
             </rdf:RDF>
+        </def:xmlData>
+    </def:addDatastream>
+    <def:addDatastream pid="doms:Template_RadioTVFile" dsID="FFPROBE"
+                       dsLabel="FFProbe datastream"
+                       dsMIME="text/xml"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="DISABLED"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
         </def:xmlData>
     </def:addDatastream>
     <def:addDatastream pid="doms:Template_RadioTVFile" dsID="POLICY"

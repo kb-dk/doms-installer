@@ -4,7 +4,7 @@
     <parent>
         <groupId>dk.statsbiblioteket.doms</groupId>
         <artifactId>doms</artifactId>
-        <version>0.1.1</version>
+        <version>0.1.4</version>
     </parent>
 
     <groupId>dk.statsbiblioteket.doms.testbed</groupId>
@@ -174,7 +174,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.updatetracker</groupId>
             <artifactId>updatetracker-service</artifactId>
-            <version>0.0.13-BRANCH</version>
+            <version>0.0.14</version>
             <type>war</type>
         </dependency>
         <dependency>
