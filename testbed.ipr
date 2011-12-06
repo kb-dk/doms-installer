@@ -1036,15 +1036,15 @@
         <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-interface/0.0.21/centralWebservice-interface-0.0.21-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-service:war:0.0.23">
+    <library name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-service:war:0.0.24-SNAPSHOT">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.23/centralWebservice-service-0.0.23.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.24-SNAPSHOT/centralWebservice-service-0.0.24-SNAPSHOT.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.23/centralWebservice-service-0.0.23-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.24-SNAPSHOT/centralWebservice-service-0.0.24-SNAPSHOT-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.23/centralWebservice-service-0.0.23-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.24-SNAPSHOT/centralWebservice-service-0.0.24-SNAPSHOT-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: dk.statsbiblioteket.doms.client:domsclient:0.0.8">
