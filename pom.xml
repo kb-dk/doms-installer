@@ -168,7 +168,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.central</groupId>
             <artifactId>centralWebservice-service</artifactId>
-            <version>0.0.24-SNAPSHOT</version>
+            <version>0.0.24</version>
             <type>war</type>
         </dependency>
         <dependency>

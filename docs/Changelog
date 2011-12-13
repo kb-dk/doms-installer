@@ -1,3 +1,5 @@
+13/12/2011 Release version 0.11.0
+
 Added the FFPROBE datastream to radiotv file objects
 
 Use updatetracker 0.0.14
@@ -5,13 +7,13 @@ Use updatetracker 0.0.14
 
 Shard is not entry content model for view BES
 
-DomsCentral 0.0.23-SNAPSHOT
+DomsCentral 0.0.24
   Use the 0.0.14 updatetracker
 
 
 
 
-11/2/2011 Release version 0.10.24
+2/11/2011 Release version 0.10.24
 
 Updated Radio TV Program Schema with GUI annotations
 
