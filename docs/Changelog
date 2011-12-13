@@ -1,8 +1,15 @@
 Added the FFPROBE datastream to radiotv file objects
 
-Pulled better revert of the update tracker in list of webservices
+Use updatetracker 0.0.14
+ * Cleaned up the branch/revert naming problems, and renamed some modules
 
 Shard is not entry content model for view BES
+
+DomsCentral 0.0.23-SNAPSHOT
+  Use the 0.0.14 updatetracker
+
+
+
 
 11/2/2011 Release version 0.10.24
 
@@ -14,19 +21,36 @@ ShardMetadata - channelId optional
 
 Added schema for Shard metadata
 
-Reverted to the old version of the updatetracker
+Reverted to the old working version of the updatetracker
 
 Integrated with AD system - completed
 
+New version of DomsCentral 0.0.23
+  * Updated to newest doms.pom
+  * fixed broken methods (relation add/remove)
+  * ObjectProfile with support for more types of objects (Collections, File objects)
+  * GetObjectsInCollection
+
+
+
 19/9/2011 Release version 0.10.23
 
-Pulled in new releases of doms webservices
+Updated authchecker to version 0.0.11
+ * Creating Added admin user
+ * Admin users remain for 2 days
+ * Fixed a Rest interface problem
 
 Integrated with AD system - begun
 
 Updated base objects with GUI annotations
 
-New version of DomsCentral with fedora fieldsearch support (to be removed when summa integration is complete)
+New version of DomsCentral 0.0.22
+ * with fedora fieldsearch support (to be removed when summa integration is complete)
+ * DatastreamProfile method
+ * ObjectProfile method
+ * Inverse relations
+ * Temp Usercreation - AD stuff
+
 
 30/6/2011 Release version 0.10.22
 
