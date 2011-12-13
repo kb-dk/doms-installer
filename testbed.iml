@@ -194,8 +194,6 @@
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.updatetracker:updatetracker-service:war:0.0.14" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.surveillance:surveillance-fedorasurveyor-service:war:0.0.8" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.surveillance:surveillance-surveyor-service:war:0.0.8" level="project" />
-    <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.client:domsclient:0.0.8" level="project" />
-    <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-interface:0.0.21" level="project" />
     <orderEntry type="library" name="Maven: commons-cli:commons-cli:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.thoughtworks.xstream:xstream:1.2.2" level="project" />
   </component>

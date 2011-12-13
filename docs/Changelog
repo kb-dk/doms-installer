@@ -1,3 +1,37 @@
+Added the FFPROBE datastream to radiotv file objects
+
+Pulled better revert of the update tracker in list of webservices
+
+Shard is not entry content model for view BES
+
+11/2/2011 Release version 0.10.24
+
+Updated Radio TV Program Schema with GUI annotations
+
+Pulled in new releases of doms webservices
+
+ShardMetadata - channelId optional
+
+Added schema for Shard metadata
+
+Reverted to the old version of the updatetracker
+
+Integrated with AD system - completed
+
+19/9/2011 Release version 0.10.23
+
+Pulled in new releases of doms webservices
+
+Integrated with AD system - begun
+
+Updated base objects with GUI annotations
+
+New version of DomsCentral with fedora fieldsearch support (to be removed when summa integration is complete)
+
+30/6/2011 Release version 0.10.22
+
+Disabled checksum checking on template datastreams that are updated
+
 Actually fixed the things that made the ingester go boom (remove checksum checking from template datastreams with IDs).
 
 20/6/2011 Release version 0.10.21
