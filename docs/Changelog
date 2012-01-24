@@ -1,3 +1,10 @@
+
+24/1/2012 Release version 0.11.1
+
+Updated to 0.26 central webservice , fixing a memory bug when loading content model labels
+
+Updated the shard metadata schema
+
 13/12/2011 Release version 0.11.0
 
 Added the FFPROBE datastream to radiotv file objects
