@@ -356,6 +356,37 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchMap">
+                <map>
+                  <entry key="https://doms.svn.sourceforge.net/svnroot/doms/testbed/branches">
+                    <value>
+                      <list />
+                    </value>
+                  </entry>
+                  <entry key="https://doms.svn.sourceforge.net/svnroot/doms/testbed/tags">
+                    <value>
+                      <list />
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="branchUrls">
+                <list>
+                  <option value="https://doms.svn.sourceforge.net/svnroot/doms/testbed/branches" />
+                  <option value="https://doms.svn.sourceforge.net/svnroot/doms/testbed/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="https://doms.svn.sourceforge.net/svnroot/doms/testbed/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500">
@@ -986,15 +1017,15 @@
         <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/lowlevel/bitstorage-lowlevel-service/0.0.18/bitstorage-lowlevel-service-0.0.18-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-service:war:0.0.24-SNAPSHOT">
+    <library name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-service:war:0.0.26">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.24-SNAPSHOT/centralWebservice-service-0.0.24-SNAPSHOT.war!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.26/centralWebservice-service-0.0.26.war!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.24-SNAPSHOT/centralWebservice-service-0.0.24-SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.26/centralWebservice-service-0.0.26-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.24-SNAPSHOT/centralWebservice-service-0.0.24-SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.26/centralWebservice-service-0.0.26-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: dk.statsbiblioteket.doms.domsutil.surveyable:domsutil-logappender:0.0.20">
