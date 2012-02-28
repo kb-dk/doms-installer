@@ -16,6 +16,9 @@
     </triggeringPolicy>
   </appender>
   <appender name="DOMS" class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.LogbackRegistryAppender">
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>WARN</level>
+    </filter>
   </appender>
   <logger name="org.fcrepo" additivity="false" level="INFO">
     <appender-ref ref="FEDORA"/>
@@ -45,7 +48,7 @@
   </logger>
   end FeSL logging -->
 
-  <root additivity="false" level="WARN">
+  <root additivity="false" level="INFO">
     <appender-ref ref="FEDORA"/>
     <appender-ref ref="DOMS"/>
   </root>
