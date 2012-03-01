@@ -23,6 +23,9 @@
                 <include>dk.statsbiblioteket.doms.ecm:ecm-fedoravalidatorhook</include>
                 <include>dk.statsbiblioteket.doms.bitstorage.highlevel:bitstorage-highlevel-hookApprove</include>
             </includes>
+            <excludes>
+                <exclude>log4j:log4j</exclude>
+            </excludes>
         </dependencySet>
         <dependencySet>
             <outputDirectory>data/fedora</outputDirectory>
