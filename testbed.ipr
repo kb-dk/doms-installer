@@ -86,6 +86,24 @@
     <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
     <option name="UPDATE_CHANGES_POLICY" value="STASH" />
   </component>
+  <component name="IdProvider" IDEtalkID="AC64BF920D44D25D20ABEDBB8A33CD3F" />
+  <component name="InspectionProjectProfileManager">
+    <profiles>
+      <profile version="1.0" is_locked="false">
+        <option name="myName" value="Project Default" />
+        <option name="myLocal" value="false" />
+        <inspection_tool class="DuplicateThrows" enabled="false" level="WARNING" enabled_by_default="false" />
+        <inspection_tool class="SynchronizationOnLocalVariableOrMethodParameter" enabled="false" level="WARNING" enabled_by_default="false">
+          <option name="reportLocalVariables" value="true" />
+          <option name="reportMethodParameters" value="true" />
+        </inspection_tool>
+        <inspection_tool class="UNCHECKED_WARNING" enabled="false" level="WARNING" enabled_by_default="false" />
+      </profile>
+    </profiles>
+    <option name="PROJECT_PROFILE" value="Project Default" />
+    <option name="USE_PROJECT_PROFILE" value="true" />
+    <version value="1.0" />
+  </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-target 1.6" />
   </component>
@@ -411,6 +429,23 @@
     <mapping directory="" vcs="svn" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
+  <component name="ideadoc.IdeaDocConfigurationGUI">
+    <doccer class="nl.piraya.ideadoc.doccer.DoccerForOverridingMethod" enabled="true">
+      <template>/**$s${@inheritDoc}$s$*/</template>
+    </doccer>
+    <doccer class="nl.piraya.ideadoc.doccer.DoccerForGetter" enabled="true">
+      <template>/**$n$$s$*$s$Getter$s$for$s$property$s$'${PROPERTY_NAME}'.$n$$s$*$n$$s$*$s$@return$s$Value$s$for$s$property$s$'${PROPERTY_NAME}'.$n$$s$*/</template>
+    </doccer>
+    <doccer class="nl.piraya.ideadoc.doccer.DoccerForSetter" enabled="true">
+      <template>/**$n$$s$*$s$Setter$s$for$s$property$s$'${PROPERTY_NAME}'.$n$$s$*$n$$s$*$s$@param$s$${PARAM_NAME}$s$Value$s$to$s$set$s$for$s$property$s$'${PROPERTY_NAME}'.$n$$s$*/</template>
+    </doccer>
+    <doccer class="nl.piraya.ideadoc.doccer.DoccerForDefaultConstructor" enabled="true">
+      <template>/**$s$Constructs$s$a$s$new$s$${CLASS_NAME}.$s$*/</template>
+    </doccer>
+    <doccer class="nl.piraya.ideadoc.doccer.DoccerForPrivateDefaultConstructor" enabled="true">
+      <template>/**$s$Do$s$not$s$instantiate$s$${CLASS_NAME}.$s$*/</template>
+    </doccer>
+  </component>
   <component name="libraryTable">
     <library name="Maven: antlr:antlr:2.7.5">
       <CLASSES>
