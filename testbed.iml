@@ -11,10 +11,12 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.domsutil.surveyable:domsutil-logappender:0.0.20" level="project" />
-    <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.domsutil:domsutil-webservice-common:0.0.20" level="project" />
+    <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.client:domsclient:0.0.8" level="project" />
+    <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-interface:0.0.21" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.sbutil:sbutil:0.5.5" level="project" />
     <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.1.1" level="project" />
+    <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.domsutil.surveyable:domsutil-logappender:0.0.20" level="project" />
+    <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.domsutil:domsutil-webservice-common:0.0.20" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.domsutil.surveyable:domsutil-surveyable-interface:0.0.20" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.domsutil.surveyable:domsutil-surveyable-impl:0.0.20" level="project" />
     <orderEntry type="library" name="Maven: dk.statsbiblioteket.doms.authchecker:authchecker-fedoralogin:0.0.10" level="project" />

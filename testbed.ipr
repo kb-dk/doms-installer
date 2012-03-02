@@ -1017,6 +1017,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/bitstorage/lowlevel/bitstorage-lowlevel-service/0.0.18/bitstorage-lowlevel-service-0.0.18-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-interface:0.0.21">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-interface/0.0.21/centralWebservice-interface-0.0.21.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-interface/0.0.21/centralWebservice-interface-0.0.21-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-interface/0.0.21/centralWebservice-interface-0.0.21-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: dk.statsbiblioteket.doms.central:centralWebservice-service:war:0.0.26">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.26/centralWebservice-service-0.0.26.war!/" />
@@ -1026,6 +1037,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/central/centralWebservice-service/0.0.26/centralWebservice-service-0.0.26-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: dk.statsbiblioteket.doms.client:domsclient:0.0.8">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/client/domsclient/0.0.8/domsclient-0.0.8.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/client/domsclient/0.0.8/domsclient-0.0.8-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/dk/statsbiblioteket/doms/client/domsclient/0.0.8/domsclient-0.0.8-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: dk.statsbiblioteket.doms.domsutil.surveyable:domsutil-logappender:0.0.20">
