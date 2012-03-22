@@ -1,0 +1,160 @@
+2/5/2011 Release version 0.11.2
+
+Build both packages with and wothout ingesters when packaging.
+Fix logging configuration issues.
+
+24/1/2012 Release version 0.11.1
+
+Updated to 0.26 central webservice , fixing a memory bug when loading content model labels
+
+Updated the shard metadata schema
+
+13/12/2011 Release version 0.11.0
+
+Added the FFPROBE datastream to radiotv file objects
+
+Use updatetracker 0.0.14
+ * Cleaned up the branch/revert naming problems, and renamed some modules
+
+Shard is not entry content model for view BES
+
+DomsCentral 0.0.24
+  Use the 0.0.14 updatetracker
+
+
+
+
+2/11/2011 Release version 0.10.24
+
+Updated Radio TV Program Schema with GUI annotations
+
+Pulled in new releases of doms webservices
+
+ShardMetadata - channelId optional
+
+Added schema for Shard metadata
+
+Reverted to the old working version of the updatetracker
+
+Integrated with AD system - completed
+
+New version of DomsCentral 0.0.23
+  * Updated to newest doms.pom
+  * fixed broken methods (relation add/remove)
+  * ObjectProfile with support for more types of objects (Collections, File objects)
+  * GetObjectsInCollection
+
+
+
+19/9/2011 Release version 0.10.23
+
+Updated authchecker to version 0.0.11
+ * Creating Added admin user
+ * Admin users remain for 2 days
+ * Fixed a Rest interface problem
+
+Integrated with AD system - begun
+
+Updated base objects with GUI annotations
+
+New version of DomsCentral 0.0.22
+ * with fedora fieldsearch support (to be removed when summa integration is complete)
+ * DatastreamProfile method
+ * ObjectProfile method
+ * Inverse relations
+ * Temp Usercreation - AD stuff
+
+
+30/6/2011 Release version 0.10.22
+
+Disabled checksum checking on template datastreams that are updated
+
+Actually fixed the things that made the ingester go boom (remove checksum checking from template datastreams with IDs).
+
+20/6/2011 Release version 0.10.21
+
+Updated to use the newest ECM (0.0.18). The previous one had a bug when cloning files.
+
+Updated the batch objects, there were numerous errors in these.
+
+Updated the radio tv policy to include the faculty group and other fixes to license..
+
+Fixed some things that made the ingester go boom.
+
+Removed the default // stuff in paths
+
+Removed the empty services/conf/fedora dir, that was not used any more
+
+Added the staff@hum.au.dk role to the radio tv license
+
+11/4/2011 Release of version 0.10.20.1
+
+Fixed a very minor bug in package.sh that prevented install with postgresql database
+
+8/4/2011 Release of version 0.10.20
+
+Made the doms ingester optional, so it will not be bundled in the release
+
+Fixed the errors in the log4j config files
+
+Removed the version numbers from the war files, and removed the symlink stuff
+
+Moved schemas to live in services/
+
+Moved schemaStore.xml to live in services/tomcat-apps
+
+Removed the services/tomcatapps folder. The warfiles are now in services/webapps
+
+Brought the changelog up2date
+
+1/4/2011 Release of version 0.10.19
+
+Changed the build system to maven, instead of ant
+
+Renamed the doms webservices (rather, a natural consequence of maven)
+
+Updated log4j config files to use rolling file appenders
+
+Added the ingester as an dependency, and some example preingest files
+
+Updated the system to create basic objects, to use the fedora batch process
+
+Added the SchemaStore pseudo process
+
+Updated the authchecker service to 0.0.10
+  - changed the interface
+  - Made the tickets carry more info
+
+
+28/1/2011 Release of version 0.10.18
+
+Changed logging levels back to DEBUG
+
+Upgraded all services, so that they include the proper surveillance libs
+
+Fixed the xacml path problem in fedora.fcfg
+
+26/1/2011 Release of version 0.10.17 - Second official Release
+
+26/1/2011 updated the logging configurations, so that we log on INFO in
+individuals files, and WARN in the doms.log file.
+
+26/1/2011 Updated base objects so that
+ 1. removed the big pbcore placeholder from template_program, as it was clogging up the summa
+ 2. made all RELS-EXT datastreams versionable
+ 3. Split the RadioTV_License into adminOnlyLicense, and inhouseLicense
+ 4. Updated all the objects to not use POLICY datastreams, if they were only
+ referring to the default open License. This speeds up ingests x2.
+ 5. Fixed the wrong formatURI/mimetype in the POLICY datastreams
+
+24/1/2011 Updated fedora to version 3.4.2. Should not have any incompabilities aas we were using a maintenance snapshot before
+
+20/1/2011 Updated ECM to version 0.0.13, so that it does not cause "deprecated" warnings in fedora.log
+
+18/1/2011 Removed unneeded things from fedora.fcfg
+
+18/1/2011 Policies moved from TOMCAT_CONF_DIR/fedora to FEDORA_DIR
+
+18/1/2011 Added fedora.home to context.xml
+
+17/1/2011 Release of version 0.10.16 - First official release, changelog begins here

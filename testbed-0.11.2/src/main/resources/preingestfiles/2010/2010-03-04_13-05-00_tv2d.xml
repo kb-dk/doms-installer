@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<program xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="preingestedRadioTVProgram.xsd">
+    <pbcore>
+        <PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
+
+            <pbcoreIdentifier>
+                <identifier><![CDATA[578598RitzauProgram]]></identifier>
+                <identifierSource><![CDATA[id]]></identifierSource>
+            </pbcoreIdentifier>
+
+            <pbcoreTitle>
+                <title><![CDATA[Det lille hus på prærien]]></title>
+                <titleType><![CDATA[titel]]></titleType>
+            </pbcoreTitle>
+
+            <pbcoreTitle>
+                <title><![CDATA[Little House on the Prarie]]></title>
+                <titleType><![CDATA[originaltitel]]></titleType>
+            </pbcoreTitle>
+
+            <pbcoreTitle>
+                <title><![CDATA[]]></title>
+                <titleType><![CDATA[episodetitel]]></titleType>
+            </pbcoreTitle>
+
+            <pbcoreDescription>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <descriptionType><![CDATA[langomtale1]]></descriptionType>
+            </pbcoreDescription>
+
+            <pbcoreDescription>
+                <description>
+                    <![CDATA[]]>
+                </description>
+                <descriptionType><![CDATA[langomtale2]]></descriptionType>
+            </pbcoreDescription>
+
+            <pbcoreDescription>
+                <description>
+                    <![CDATA[Amerikansk familieserie.]]>
+                </description>
+                <descriptionType><![CDATA[kortomtale]]></descriptionType>
+            </pbcoreDescription>
+
+            <pbcoreGenre>
+                <genre>hovedgenre: <![CDATA[Serier]]></genre>
+            </pbcoreGenre>
+
+            <pbcoreGenre>
+                <genre>undergenre: <![CDATA[Familieserie]]></genre>
+            </pbcoreGenre>
+
+
+            <pbcoreCreator>
+                <creator><![CDATA[]]></creator>
+                <creatorRole><![CDATA[forfatter]]></creatorRole>
+            </pbcoreCreator>
+
+
+            <pbcoreContributor>
+                <contributor><![CDATA[Laura: Melissa Gilbert]]></contributor>
+                <contributorRole><![CDATA[medvirkende]]></contributorRole>
+            </pbcoreContributor>
+
+            <pbcoreContributor>
+                <contributor><![CDATA[Caroline: Karen Crassle]]></contributor>
+                <contributorRole><![CDATA[medvirkende]]></contributorRole>
+            </pbcoreContributor>
+
+            <pbcoreContributor>
+                <contributor><![CDATA[Charles: Michael Landon]]></contributor>
+                <contributorRole><![CDATA[medvirkende]]></contributorRole>
+            </pbcoreContributor>
+
+
+            <pbcoreContributor>
+                <contributor><![CDATA[]]></contributor>
+                <contributorRole><![CDATA[instruktion]]></contributorRole>
+            </pbcoreContributor>
+
+
+            <pbcorePublisher>
+                <publisher><![CDATA[tv2d]]></publisher>
+                <publisherRole><![CDATA[channel_name]]></publisherRole>
+            </pbcorePublisher>
+
+            <pbcorePublisher>
+                <publisher><![CDATA[TV 2]]></publisher>
+                <publisherRole><![CDATA[kanalnavn]]></publisherRole>
+            </pbcorePublisher>
+
+            <pbcoreInstantiation>
+                <dateCreated><![CDATA[1974]]></dateCreated>
+                <dateIssued></dateIssued>
+                <formatLocation></formatLocation>
+                <formatMediaType><![CDATA[Moving Image]]></formatMediaType>
+                <formatStandard><![CDATA[ikke hd]]></formatStandard>
+                <formatDuration><![CDATA[0]]></formatDuration>
+                <formatAspectRatio><![CDATA[]]>,</formatAspectRatio>
+                <formatColors><![CDATA[farve]]></formatColors>
+                <formatChannelConfiguration><![CDATA[ikke surround]]></formatChannelConfiguration>
+                <pbcoreDateAvailable>
+                    <dateAvailableStart><![CDATA[2010-03-04T13:05:00+0100]]></dateAvailableStart>
+                    <dateAvailableEnd><![CDATA[2010-03-04T14:00:00+0100]]></dateAvailableEnd>
+                </pbcoreDateAvailable>
+                <pbcoreFormatID>
+                    <formatIdentifier>[INSERT_PBC_FORMAT_ID]</formatIdentifier>
+                    <formatIdentifierSource>[INSERT_PBC_FORMAT_ID_SOURCE]</formatIdentifierSource>
+                </pbcoreFormatID>
+                <pbcoreAnnotation>
+                    <annotation><![CDATA[]]></annotation>
+                </pbcoreAnnotation>
+            </pbcoreInstantiation>
+
+            <pbcoreExtension>
+                <extension>antalepisoder:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>episodenr:<![CDATA[19]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>premiere:<![CDATA[ikke premiere]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>genudsendelse:<![CDATA[ikke genudsendelse]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>hovedgenre_id:<![CDATA[4]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>kanalid:<![CDATA[6]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>live:<![CDATA[ikke live]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>lydlink:<![CDATA[]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>produktionsland:<![CDATA[Amerikansk]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>produktionsland_id:<![CDATA[3]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>program_id:<![CDATA[13262039]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>program_ophold:<![CDATA[ikke program ophold]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>undergenre_id:<![CDATA[687]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>urllink:<![CDATA[]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>afsnit_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>saeson_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>serie_id:<![CDATA[0]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>tekstet:<![CDATA[ikke tekstet]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>th:<![CDATA[ikke tekstet for hørehæmmede]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>ttv:<![CDATA[ikke tekst-tv]]></extension>
+            </pbcoreExtension>
+
+            <pbcoreExtension>
+                <extension>showviewcode:<![CDATA[589988]]></extension>
+            </pbcoreExtension>
+
+        </PBCoreDescriptionDocument>
+    </pbcore>
+
+    <originals>
+        <ritzau_original>
+            <![CDATA[RitzauProgram{Id=578598, channel_name='tv2d', kanalId=6, starttid=2010-03-04 13:05:00.0, sluttid=2010-03-04 14:00:00.0, annotation='null', originaltitel='Little House on the Prarie', kanalnavn='TV 2', titel='Det lille hus på prærien', hovedgenre='Serier', undergenre='Familieserie', kortomtale='Amerikansk familieserie.', langomtale1='null', langomtale2='null', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='Amerikansk', medvirkende='Charles: Michael Landon, Caroline: Karen Crassle og Laura: Melissa Gilbert.', programlaengde=0, produktionsaar=1974, episodenr=19, antalepisoder=0, showviewcode=589988, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=13262039, hovedgenre_id=4, undergenre_id=687, program_ophold=false, produktionsland_id=3, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
+        </ritzau_original>
+
+        <gallup_original>
+            <![CDATA[]]>
+        </gallup_original>
+    </originals>
+
+    <program_recording_files>
+        <file>
+            <file_url>
+                http://bitfinder.statsbiblioteket.dk/bart/mux1.1267704000-2010-03-04-13.00.00_1267707600-2010-03-04-14.00.00_dvb1-1.ts
+            </file_url>
+            <channel_id>213</channel_id>
+            <program_start_offset>210</program_start_offset>
+            <program_clip_length>3390</program_clip_length>
+            <file_name>mux1.1267704000-2010-03-04-13.00.00_1267707600-2010-03-04-14.00.00_dvb1-1.ts</file_name>
+            <format_uri>info:pronom/x-fmt/386</format_uri>
+        </file>
+        <file>
+            <file_url>
+                http://bitfinder.statsbiblioteket.dk/bart/mux1.1267707600-2010-03-04-14.00.00_1267711200-2010-03-04-15.00.00_dvb1-2.ts
+            </file_url>
+            <channel_id>213</channel_id>
+            <program_start_offset>0</program_start_offset>
+            <program_clip_length>90</program_clip_length>
+            <file_name>mux1.1267707600-2010-03-04-14.00.00_1267711200-2010-03-04-15.00.00_dvb1-2.ts</file_name>
+            <format_uri>info:pronom/x-fmt/386</format_uri>
+        </file>
+    </program_recording_files>
+</program>

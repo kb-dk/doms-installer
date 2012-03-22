@@ -1,0 +1,182 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>dk.statsbiblioteket.doms</groupId>
+        <artifactId>doms</artifactId>
+        <version>0.1.4</version>
+    </parent>
+
+    <groupId>dk.statsbiblioteket.doms.testbed</groupId>
+    <artifactId>testbed</artifactId>
+    <version>0.11.2</version>
+
+
+    <packaging>pom</packaging>
+
+    <scm>
+        <connection>scm:svn:https://doms.svn.sourceforge.net/svnroot/doms/testbed/tags/testbed-0.11.2</connection>
+        <developerConnection>scm:svn:https://doms.svn.sourceforge.net/svnroot/doms/testbed/tags/testbed-0.11.2</developerConnection>
+        <url>http://doms.svn.sourceforge.net/viewvc/doms/testbed/tags/testbed-0.11.2</url>
+    </scm>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.2-beta-4</version>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>src/main/assembly/assembly.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+
+                        <!-- this is used for inheritance merges -->
+                        <phase>package</phase>
+                        <!-- append to the packaging phase. -->
+                        <goals>
+                            <goal>single</goal>
+                            <!-- goals == mojos -->
+                        </goals>
+                    </execution>
+
+                    <execution>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>src/main/assembly/assemblyWithIngest.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+
+                        <id>make-assembly-with-ingester</id>
+                        <!-- this is used for inheritance merges -->
+                        <phase>package</phase>
+                        <!-- append to the packaging phase. -->
+                        <goals>
+                            <goal>single</goal>
+                            <!-- goals == mojos -->
+                        </goals>
+
+                    </execution>
+
+
+                </executions>
+
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+
+        <!--Ingesters-->
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.ingesters</groupId>
+            <artifactId>radio-tv</artifactId>
+            <version>0.0.6</version>
+            <classifier>ingester</classifier>
+            <type>zip</type>
+        </dependency>
+
+        <!--Stuff for fedora libs-->
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.domsutil</groupId>
+            <artifactId>domsutil-bundle</artifactId>
+            <version>0.0.20</version>
+            <type>pom</type>
+        </dependency>
+
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.authchecker</groupId>
+            <artifactId>authchecker-fedoralogin</artifactId>
+            <version>0.0.10</version>
+        </dependency>
+
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.ecm</groupId>
+            <artifactId>ecm-fedoravalidatorhook</artifactId>
+            <version>0.0.18</version>
+        </dependency>
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.bitstorage.highlevel</groupId>
+            <artifactId>bitstorage-highlevel-hookApprove</artifactId>
+            <version>0.0.18</version>
+        </dependency>
+
+
+        <!--Fedora itself-->
+        <dependency>
+            <groupId>org.fcrepo</groupId>
+            <artifactId>fcrepo-installer</artifactId>
+            <version>3.4.2</version>
+        </dependency>
+
+        <!--Webservices-->
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.ecm</groupId>
+            <artifactId>ecm-service</artifactId>
+            <version>0.0.18</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.pidgenerator</groupId>
+            <artifactId>pidgenerator-service</artifactId>
+            <version>0.0.8</version>
+            <type>war</type>
+        </dependency>
+
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.authchecker</groupId>
+            <artifactId>authchecker-service</artifactId>
+            <version>0.0.11</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.bitstorage.lowlevel</groupId>
+            <artifactId>bitstorage-lowlevel-service</artifactId>
+            <version>0.0.18</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.bitstorage.characteriser</groupId>
+            <artifactId>bitstorage-characteriser-service</artifactId>
+            <version>0.0.18</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.bitstorage.highlevel</groupId>
+            <artifactId>bitstorage-highlevel-service</artifactId>
+            <version>0.0.18</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.central</groupId>
+            <artifactId>centralWebservice-service</artifactId>
+            <version>0.0.26</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.updatetracker</groupId>
+            <artifactId>updatetracker-service</artifactId>
+            <version>0.0.14</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.surveillance</groupId>
+            <artifactId>surveillance-fedorasurveyor-service</artifactId>
+            <version>0.0.8</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.surveillance</groupId>
+            <artifactId>surveillance-surveyor-service</artifactId>
+            <version>0.0.8</version>
+            <type>war</type>
+        </dependency>
+
+
+    </dependencies>
+
+</project>
