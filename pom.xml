@@ -99,13 +99,12 @@
             <artifactId>ecm-fedoravalidatorhook</artifactId>
             <version>0.0.18</version>
         </dependency>
-<!--
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.highlevel</groupId>
             <artifactId>bitstorage-highlevel-hookApprove</artifactId>
             <version>0.0.18</version>
         </dependency>
--->
+
 
 
         <!--Fedora itself-->
@@ -116,12 +115,12 @@
         </dependency>
 
         <!--Webservices-->
-        <!--<dependency>
+        <dependency>
             <groupId>dk.statsbiblioteket.doms.ecm</groupId>
             <artifactId>ecm-service</artifactId>
             <version>0.0.18</version>
             <type>war</type>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.pidgenerator</groupId>
             <artifactId>pidgenerator-service</artifactId>
@@ -135,7 +134,6 @@
             <version>0.0.11</version>
             <type>war</type>
         </dependency>
-<!--
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.lowlevel</groupId>
             <artifactId>bitstorage-lowlevel-service</artifactId>
@@ -154,11 +152,10 @@
             <version>0.0.18</version>
             <type>war</type>
         </dependency>
--->
         <dependency>
             <groupId>dk.statsbiblioteket.doms.central</groupId>
             <artifactId>centralWebservice-service</artifactId>
-            <version>0.0.27-SNAPSHOT</version>
+            <version>0.0.26</version>
             <type>war</type>
         </dependency>
         <dependency>

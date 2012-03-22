@@ -31,7 +31,7 @@
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
                      debug="false">
 
-    <appender name="DomsCentral"
+    <appender name="DomsLowlevelBitstorage"
               class="dk.statsbiblioteket.doms.domsutil.surveillance.logappender.Log4jRegistryAppender">
         <param name="Threshold" value="WARN"/>
         <layout class="org.apache.log4j.PatternLayout">
@@ -39,30 +39,30 @@
         </layout>
     </appender>
 
-    <appender name="DomsCentralFile"
+    <appender name="DomsLowlevelBitstorageFile"
               class="org.apache.log4j.RollingFileAppender">
         <param name="Threshold" value="DEBUG"/>
-        <param name="File" value="$LOG_DIR$/centralDomsWebservice.log"/>
-        <param name="MaxFileSize" value="10MB" />
-        <param name="MaxBackupIndex" value="10" />
+        <param name="File" value="$LOG_DIR$/lowlevelbitstorage.log"/>
+                <param name="MaxFileSize" value="10MB" />
+                <param name="MaxBackupIndex" value="10" />
+
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
     </appender>
 
 
-    <logger name="dk.statsbiblioteket.doms.central" additivity="false">
+    <logger name="dk.statsbiblioteket.doms.bitstorage.lowlevel" additivity="false">
         <level value="ALL"/>
-        <appender-ref ref="DomsCentral"/>
-        <appender-ref ref="DomsCentralFile"/>
+        <appender-ref ref="DomsLowlevelBitstorage"/>
+        <appender-ref ref="DomsLowlevelBitstorageFile"/>
     </logger>
 
 
     <root>
         <level value="WARN"/>
-        <appender-ref ref="DomsCentral"/>
-        <appender-ref ref="DomsCentralFile"/>
+        <appender-ref ref="DomsLowlevelBitstorage"/>
+        <appender-ref ref="DomsLowlevelBitstorageFile"/>
     </root>
-
     
 </log4j:configuration>

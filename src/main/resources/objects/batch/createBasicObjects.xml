@@ -163,30 +163,6 @@
             </dsCompositeModel>
         </def:xmlData>
     </def:addDatastream>
-    <def:modifyDatastream pid="doms:ContentModel_File" dsID="DS-COMPOSITE-MODEL"
-                       dsLabel=""
-                       dsMIME="text/xml"
-                       formatURI="info:fedora/fedora-system:FedoraDSCompositeModel-1.0"
-                       versionable="true"
-                       altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="DISABLED"
-                       logMessage="Updating objects as part of a doms install/upgrade">
-        <def:xmlData>
-            <dsCompositeModel
-                    xmlns="info:fedora/fedora-system:def/dsCompositeModel#"
-                    xmlns:schema="http://doms.statsbiblioteket.dk/types/dscompositeschema/0/1/#">
-                <dsTypeModel ID="CHARACTERISATION" optional="true">
-                    <form MIME="text/xml"/>
-                    <extension name="SCHEMA">
-                        <reference type="datastream" value="CHARACTERISATION_SCHEMA"/>
-                    </extension>
-                </dsTypeModel>
-                <dsTypeModel ID="CONTENTS">
-                    <form MIME="application/octet-stream"/>
-                </dsTypeModel>
-            </dsCompositeModel>
-        </def:xmlData>
-    </def:modifyDatastream>
     <def:addDatastream pid="doms:ContentModel_File" dsID="RELS-EXT"
                        dsLabel="Relationships"
                        dsMIME="application/rdf+xml"

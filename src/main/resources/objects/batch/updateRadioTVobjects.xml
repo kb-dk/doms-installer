@@ -1997,7 +1997,7 @@
     </def:modifyDatastream>
 
 
-    <def:modifyObject pid="doms:Template_RadioTVFile" state="I" label="Radio/TV archive File"
+    <def:modifyObject pid="doms:Template_RadioTVFile" state="I"
                       logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyDatastream pid="doms:Template_RadioTVFile" dsID="RELS-EXT"
                           dsLabel="Relationships"
