@@ -9,15 +9,15 @@
 
     <groupId>dk.statsbiblioteket.doms.testbed</groupId>
     <artifactId>testbed</artifactId>
-    <version>0.11.2</version>
+    <version>0.11.2.1</version>
 
 
     <packaging>pom</packaging>
 
     <scm>
-        <connection>scm:svn:https://doms.svn.sourceforge.net/svnroot/doms/testbed/tags/testbed-0.11.2</connection>
-        <developerConnection>scm:svn:https://doms.svn.sourceforge.net/svnroot/doms/testbed/tags/testbed-0.11.2</developerConnection>
-        <url>http://doms.svn.sourceforge.net/viewvc/doms/testbed/tags/testbed-0.11.2</url>
+        <connection>scm:svn:https://doms.svn.sourceforge.net/svnroot/doms/testbed/tags/testbed-0.11.2.1</connection>
+        <developerConnection>scm:svn:https://doms.svn.sourceforge.net/svnroot/doms/testbed/tags/testbed-0.11.2.1</developerConnection>
+        <url>http://doms.svn.sourceforge.net/viewvc/doms/testbed/tags/testbed-0.11.2.1</url>
     </scm>
 
 
@@ -102,7 +102,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.highlevel</groupId>
             <artifactId>bitstorage-highlevel-hookApprove</artifactId>
-            <version>0.0.18</version>
+            <version>0.0.18.1</version>
         </dependency>
 
 
@@ -136,19 +136,19 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.lowlevel</groupId>
             <artifactId>bitstorage-lowlevel-service</artifactId>
-            <version>0.0.18</version>
+            <version>0.0.18.1</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.characteriser</groupId>
             <artifactId>bitstorage-characteriser-service</artifactId>
-            <version>0.0.18</version>
+            <version>0.0.18.1</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.highlevel</groupId>
             <artifactId>bitstorage-highlevel-service</artifactId>
-            <version>0.0.18</version>
+            <version>0.0.18.1</version>
             <type>war</type>
         </dependency>
         <dependency>
