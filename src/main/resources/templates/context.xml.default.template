@@ -3,60 +3,16 @@
     <!-- fedora settings, the only one relevant -->
     <Parameter name="fedora.home" value="$FEDORA_DIR$" override="false"/>
 
-    <!--highlevelbitstorage-->
-    <Parameter
-            name="dk.statsbiblioteket.doms.bitstorage.highlevel.characteriserlocation"
-            value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/bitstorage-characteriser-service/characterise/?wsdl"
-            override="false"/>
-    <Parameter
-            name="dk.statsbiblioteket.doms.bitstorage.highlevel.lowlevellocation"
-            value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/bitstorage-lowlevel-service/lowlevel/?wsdl"
-            override="false"/>
-    <Parameter
-            name="dk.statsbiblioteket.doms.bitstorage.highlevel.fedora.server"
-            value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora"
-            override="false"/>
-    <Parameter
-            name="dk.statsbiblioteket.doms.bitstorage.highlevel.fedora.characstream"
-            value="CHARACTERISATION" override="false"/>
-    <Parameter
-            name="dk.statsbiblioteket.doms.bitstorage.highlevel.fedora.contentstream"
-            value="CONTENTS" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.bitstorage.highlevel.log4jconfig"
-               value="$TOMCAT_CONFIG_DIR$/log4j.highlevelbitstorage.xml"
-               override="false"/>
 
 
-    <!--lowlevelbitstorage-->
-    <Parameter
-            name="dk.statsbiblioteket.doms.bitstorage.lowlevel.scriptimpl.script"
-            value="$BITSTORAGE_SCRIPT$" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.bitstorage.lowlevel.bitfinder"
-               value="$BITFINDER$" override="false"/>
-    <Parameter
-            name="dk.statsbiblioteket.doms.bitstorage.lowlevel.preferredBytesLeft"
-            value="1000000" override="false"/>
-    <Parameter
-            name="dk.statsbiblioteket.doms.bitstorage.lowlevel.requiredBytesLeft"
-            value="100000" override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.bitstorage.lowlevel.log4jconfig"
-               value="$TOMCAT_CONFIG_DIR$/log4j.lowlevelbitstorage.xml"
-               override="false"/>
 
-    <!--characteriser-->
-    <Parameter
-            name="dk.statsbiblioteket.doms.bitstorage.characteriser.log4jconfig"
-            value="$TOMCAT_CONFIG_DIR$/log4j.characteriser.xml"
-            override="false"/>
 
 
     <!--ecm-->
     <Parameter name="dk.statsbiblioteket.doms.ecm.fedora.connector"
                value="dk.statsbiblioteket.doms.ecm.repository.fedoraclient.FedoraClientConnector"
                override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.ecm.fedora.location"
-               value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora"
-               override="false"/>
+
     <Parameter name="dk.statsbiblioteket.doms.ecm.pidGenerator.client"
                value="dk.statsbiblioteket.doms.ecm.repository.PidGeneratorImpl"
                override="false"/>
@@ -64,9 +20,6 @@
             name="dk.statsbiblioteket.doms.ecm.pidgenerator.client.wsdllocation"
             value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator-service/pidGenerator/?wsdl"
             override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.ecm.log4jconfig"
-               value="$TOMCAT_CONFIG_DIR$/log4j.ecm.xml"
-               override="false"/>
 
     <!--centralDomsWebservice-->
     <Parameter name="dk.statsbiblioteket.doms.central.fedoraLocation"

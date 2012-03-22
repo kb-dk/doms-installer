@@ -582,7 +582,7 @@
                        dsLocation="http://local.fedora.server/fedora/objects/doms:RadioTV_InhouseLicense/datastreams/LICENSE/content">
     </def:addDatastream>
 
-    <def:addObject pid="doms:Template_RadioTVFile" label="Radio/TV Program"
+    <def:addObject pid="doms:Template_RadioTVFile" label="Radio/TV File"
                    contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:Template_RadioTVFile" state="I"
                       logMessage="Updating objects as part of a doms install/upgrade"/>
