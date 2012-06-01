@@ -1406,6 +1406,13 @@
                     <form FORMAT_URI="info:pronom/x-fmt/386"/>
                     <form FORMAT_URI="info:pronom/x-fmt/385"/>
                     <form FORMAT_URI="info:pronom/fmt/6"/>
+
+                    <form FORMAT_URI="info:mime/video/MP2T;codecs=&quot;aac_latm,dvbsub,h264&quot;"></form>
+                    <form FORMAT_URI="info:mime/video/MP2T;codecs=&quot;aac_latm,dvbsub,h264,mp1&quot;"></form>
+                    <form FORMAT_URI="info:mime/video/MP2T;codecs=&quot;dvbsub,mp1,mp2,mpeg2video&quot;"></form>
+                    <form FORMAT_URI="info:mime/video/MP2T;codecs=&quot;mp2,mpeg2video&quot;"></form>
+                    <form FORMAT_URI="info:mime/video/MP2T;codecs=&quot;dvbsub,mp2,mpeg2video&quot;"></form>
+
                 </dsTypeModel>
                 <dsTypeModel ID="DC">
                     <extension name="GUI">
@@ -1418,6 +1425,22 @@
                     </extension>
                     <extension name="SCHEMA">
                         <reference type="datastream" value="FFPROBE_SCHEMA"/>
+                    </extension>
+                </dsTypeModel>
+                <dsTypeModel ID="CROSSCHECK" optional="true">
+                    <extension name="GUI">
+                        <presentAs type="readonly"/>
+                    </extension>
+                    <extension name="SCHEMA">
+                        <reference type="datastream" value="CROSSCHECK_SCHEMA"/>
+                    </extension>
+                </dsTypeModel>
+                <dsTypeModel ID="BROADCAST_METADATA" optional="true">
+                    <extension name="GUI">
+                        <presentAs type="readonly"/>
+                    </extension>
+                    <extension name="SCHEMA">
+                        <reference type="datastream" value="BROADCAST_METADATA_SCHEMA"/>
                     </extension>
                 </dsTypeModel>
                 <dsTypeModel ID="BART_ORIGINAL" optional="true">
@@ -1606,6 +1629,1294 @@
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:schema>
+        </def:xmlData>
+    </def:modifyDatastream>
+
+    <def:modifyDatastream pid="doms:ContentModel_RadioTVFile" dsID="CROSSCHECK_SCHEMA"
+                          dsLabel="CROSSCHECK metadata schema"
+                          dsMIME="text/xml"
+                          versionable="true"
+                          altIDs="" dsControlGroupType="X" dsState="A"
+                          checksumType="MD5"
+                          logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+                       xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <xs:element name="tsa-report" type="tsa-reportType">
+                    <xs:annotation>
+                        <xs:documentation>Created by Manzanita CrossCheck</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:complexType name="version_numberType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="errorsType">
+                    <xs:sequence>
+                        <xs:element type="errorType" name="error" maxOccurs="unbounded"
+                                    minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="average-payload-rateType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="final-timecodeType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="video_stream_descriptorType">
+                    <xs:sequence>
+                        <xs:element type="tagType" name="tag"/>
+                        <xs:element type="lengthType" name="length"/>
+                        <xs:element type="multiple_frame_rate_flagType"
+                                    name="multiple_frame_rate_flag"/>
+                        <xs:element type="frame_rate_codeType" name="frame_rate_code"/>
+                        <xs:element type="mpeg_1_only_flagType" name="mpeg_1_only_flag"/>
+                        <xs:element type="constrained_parameter_flagType"
+                                    name="constrained_parameter_flag"/>
+                        <xs:element type="still_picture_flagType" name="still_picture_flag"/>
+                        <xs:element type="profile_and_level_indicationType"
+                                    name="profile_and_level_indication"/>
+                        <xs:element type="chroma_formatType" name="chroma_format"/>
+                        <xs:element type="frame_rate_extension_flagType"
+                                    name="frame_rate_extension_flag"/>
+                        <xs:element type="reservedType" name="reserved"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="bit-rateType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="constrained_parameter_flagType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="chroma_formatType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="mpeg-2-video-profileType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="progressive-sequenceType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="vbv-sizeType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="video-frame-rateType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="percent-of-all-pictures-that-are-b-picturesType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="closed-caption-types-detectedType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="durationType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="number-of-packets-pes_priority-is-1Type">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="number-of-ptss-seenType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="configurationType" mixed="true">
+                    <xs:sequence>
+                        <xs:element type="analysis-modeType" name="analysis-mode"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="pidType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="iso_639_language_codeType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="number-of-video-access-units-seenType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="mpeg-2-video-levelType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="adaptation-field-informationType">
+                    <xs:sequence>
+                        <xs:element type="number-of-packets-discontinuity_indicator-is-1Type"
+
+                                    name="number-of-packets-discontinuity_indicator-is-1"/>
+                        <xs:element type="number-of-packets-random_access_indicator-is-1Type"
+
+                                    name="number-of-packets-random_access_indicator-is-1"/>
+                        <xs:element type="splice_countdown-fields-seenType"
+                                    name="splice_countdown-fields-seen"/>
+                        <xs:element type="noemptyafType" name="noemptyaf" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="patType">
+                    <xs:sequence>
+                        <xs:element type="programType" name="program"/>
+                    </xs:sequence>
+                    <xs:attribute type="xs:string" name="version"/>
+                    <xs:attribute type="xs:string" name="pid"/>
+                </xs:complexType>
+                <xs:complexType name="maximum-packet-spacingType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="pes-copyright-setType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="pcr-jitter-magnitudeType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="program-association-table-informationType">
+                    <xs:sequence>
+                        <xs:element type="table_idType" name="table_id"/>
+                        <xs:element type="version_numberType" name="version_number"/>
+                        <xs:element type="transport_stream_idType" name="transport_stream_id"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="maximum-packet-spacing-ends-inclusiveType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="total-errorsType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="last-seen-in-packet-numberType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                            <xs:attribute type="xs:string" name="time" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="section_lengthType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="audio_typeType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="pesalignType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="pmtType">
+                    <xs:sequence>
+                        <xs:element type="streamType" name="stream" maxOccurs="unbounded"
+                                    minOccurs="0"/>
+                    </xs:sequence>
+                    <xs:attribute type="xs:string" name="version"/>
+                    <xs:attribute type="xs:string" name="pcr-pid"/>
+                </xs:complexType>
+                <xs:complexType name="packet-number-at-maximum-pcr-intervalType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                            <xs:attribute type="xs:string" name="time"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="file-sizeType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="analysis-modeType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="frame_rate_extension_flagType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="associated-pcr-pidType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="first-seen-in-packet-numberType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                            <xs:attribute type="xs:string" name="time" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="nominal-frame-sizeType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="vertical-sizeType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="multiplex-summaryType">
+                    <xs:sequence>
+                        <xs:element type="patType" name="pat"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="sample-rateType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="total-warningsType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="video-elementary-stream-informationType">
+                    <xs:sequence>
+                        <xs:element type="mpeg-2-video-profileType" name="mpeg-2-video-profile"/>
+                        <xs:element type="mpeg-2-video-levelType" name="mpeg-2-video-level"/>
+                        <xs:element type="mpeg-chroma-formatType" name="mpeg-chroma-format"/>
+                        <xs:element type="closed-caption-types-detectedType"
+                                    name="closed-caption-types-detected"/>
+                        <xs:element type="number-of-video-access-units-seenType"
+                                    name="number-of-video-access-units-seen"/>
+                        <xs:element
+                                type="minimum-number-of-non-i-pictures-between-two-i-picturesType"
+
+                                name="minimum-number-of-non-i-pictures-between-two-i-pictures"/>
+                        <xs:element
+                                type="maximum-number-of-non-i-pictures-between-two-i-picturesType"
+
+                                name="maximum-number-of-non-i-pictures-between-two-i-pictures"/>
+                        <xs:element
+                                type="average-number-of-non-i-pictures-between-two-i-picturesType"
+
+                                name="average-number-of-non-i-pictures-between-two-i-pictures"/>
+                        <xs:element type="percent-of-all-pictures-that-are-p-picturesType"
+
+                                    name="percent-of-all-pictures-that-are-p-pictures"/>
+                        <xs:element type="percent-of-all-pictures-that-are-b-picturesType"
+
+                                    name="percent-of-all-pictures-that-are-b-pictures"/>
+                        <xs:element type="maximum-number-of-b-frames-between-i-or-p-framesType"
+
+                                    name="maximum-number-of-b-frames-between-i-or-p-frames"/>
+                        <xs:element type="video-bit-rateType" name="video-bit-rate"/>
+                        <xs:element type="vbv-methodType" name="vbv-method"/>
+                        <xs:element type="vbv-sizeType" name="vbv-size"/>
+                        <xs:element type="video-multiplexing-buffer-sizeType"
+                                    name="video-multiplexing-buffer-size"/>
+                        <xs:element type="video-es-buffer-sizeType" name="video-es-buffer-size"/>
+                        <xs:element type="minimum-decode-delayType" name="minimum-decode-delay"/>
+                        <xs:element type="maximum-decode-delayType" name="maximum-decode-delay"/>
+                        <xs:element type="mb-to-eb-transfer-methodType"
+                                    name="mb-to-eb-transfer-method"/>
+                        <xs:element type="video-frame-rateType" name="video-frame-rate"/>
+                        <xs:element type="video-in-film-modeType" name="video-in-film-mode"/>
+                        <xs:element type="progressive-sequenceType" name="progressive-sequence"/>
+                        <xs:element type="horizontal-sizeType" name="horizontal-size"/>
+                        <xs:element type="vertical-sizeType" name="vertical-size"/>
+                        <xs:element type="aspect-ratioType" name="aspect-ratio"/>
+                        <xs:element type="sample-aspect-ratioType" name="sample-aspect-ratio"/>
+                        <xs:element type="quadbyteType" name="quadbyte"/>
+                        <xs:element type="initial-timecodeType" name="initial-timecode"/>
+                        <xs:element type="timecode-discontinuityType"
+                                    name="timecode-discontinuity"/>
+                        <xs:element type="final-timecodeType" name="final-timecode"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="average-packet-spacingType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="main-audio-buffer-sizeType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="mb-to-eb-transfer-methodType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="splice_countdown-fields-seenType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="maximum-number-of-b-frames-between-i-or-p-framesType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="pcr-pidType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="member-of-program_numberType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="private-descriptorType">
+                    <xs:sequence>
+                        <xs:element type="tagType" name="tag"/>
+                        <xs:element type="lengthType" name="length"/>
+                        <xs:element type="dataType" name="data"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType
+                        name="maximum-number-of-non-i-pictures-between-two-i-picturesType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="minimum-pcr-intervalType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="average-es-buffer-levelType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="audio-typeType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="aspect-ratioType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="packet-number-at-maximum-es-buffer-levelType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                            <xs:attribute type="xs:string" name="time" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="number-of-continuity-counter-errors-seenType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="average-pcr-intervalType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="number-of-packetsType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="program_numberType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="listed-in-pmt-version_numberType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="number-of-packets-transport_error_indicator-is-1Type">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="minimum-decode-delayType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="pes-informationType">
+                    <xs:sequence>
+                        <xs:element type="number-of-pes-headers-seenType"
+                                    name="number-of-pes-headers-seen"/>
+                        <xs:element type="pes-stream_idType" name="pes-stream_id"/>
+                        <xs:element type="number-of-packets-pes_scrambling_control-is-00Type"
+
+                                    name="number-of-packets-pes_scrambling_control-is-00"/>
+                        <xs:element type="pes-copyright-setType" name="pes-copyright-set"/>
+                        <xs:element type="number-of-packets-pes_priority-is-1Type"
+                                    name="number-of-packets-pes_priority-is-1"/>
+                        <xs:element type="number-of-ptss-seenType" name="number-of-ptss-seen"/>
+                        <xs:element type="average-pts-intervalType" name="average-pts-interval"/>
+                        <xs:element type="average-es-buffer-levelType"
+                                    name="average-es-buffer-level" minOccurs="0"/>
+                        <xs:element type="minimum-es-buffer-levelType"
+                                    name="minimum-es-buffer-level" minOccurs="0"/>
+                        <xs:element type="packet-number-at-minimum-es-buffer-levelType"
+                                    name="packet-number-at-minimum-es-buffer-level"
+                                    minOccurs="0"/>
+                        <xs:element type="maximum-es-buffer-levelType"
+                                    name="maximum-es-buffer-level" minOccurs="0"/>
+                        <xs:element type="packet-number-at-maximum-es-buffer-levelType"
+                                    name="packet-number-at-maximum-es-buffer-level"
+                                    minOccurs="0"/>
+                        <xs:element type="pesalignType" name="pesalign" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="initial-timecodeType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="layerType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType
+                        name="number-of-packets-transport_scrambling_control-is-00Type">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="program-informationType">
+                    <xs:sequence>
+                        <xs:element type="pmt-pid-for-program_numberType"
+                                    name="pmt-pid-for-program_number" minOccurs="0"/>
+                        <xs:element type="listed-in-pat-version_numberType"
+                                    name="listed-in-pat-version_number" minOccurs="0"/>
+                        <xs:element type="member-of-program_numberType"
+                                    name="member-of-program_number" minOccurs="0"/>
+                        <xs:element type="listed-in-pmt-version_numberType"
+                                    name="listed-in-pmt-version_number" minOccurs="0"/>
+                        <xs:element type="stream_typeType" name="stream_type" minOccurs="0"/>
+                        <xs:element type="listed-as-pcr-pidType" name="listed-as-pcr-pid"
+                                    minOccurs="0"/>
+                        <xs:element type="video_stream_descriptorType"
+                                    name="video_stream_descriptor" minOccurs="0"/>
+                        <xs:element type="associated-pcr-pidType" name="associated-pcr-pid"
+                                    minOccurs="0"/>
+                        <xs:element type="iso_639_language_descriptorType"
+                                    name="iso_639_language_descriptor" minOccurs="0"/>
+                        <xs:element type="private-descriptorType" name="private-descriptor"
+                                    minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="number-of-packets-transport_priority-is-1Type">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="listed-as-pcr-pidType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="average-number-of-audio-frames-per-pes-packetType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="pid-infoType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="pid" use="optional"/>
+                            <xs:attribute type="xs:string" name="content" use="optional"/>
+                            <xs:attribute type="xs:string" name="npkt" use="optional"/>
+                            <xs:attribute type="xs:string" name="pkt-rate" use="optional"/>
+                            <xs:attribute type="xs:string" name="payld-rate" use="optional"/>
+                            <xs:attribute type="xs:string" name="programs" use="optional"/>
+                            <xs:attribute type="xs:string" name="errors" use="optional"/>
+                            <xs:attribute type="xs:string" name="warnings" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="contentType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType
+                        name="minimum-number-of-non-i-pictures-between-two-i-picturesType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="transport-header-informationType">
+                    <xs:sequence>
+                        <xs:element type="number-of-packets-transport_error_indicator-is-1Type"
+
+                                    name="number-of-packets-transport_error_indicator-is-1"/>
+                        <xs:element type="number-of-packets-transport_priority-is-1Type"
+                                    name="number-of-packets-transport_priority-is-1"/>
+                        <xs:element type="number-of-packets-transport_scrambling_control-is-00Type"
+
+                                    name="number-of-packets-transport_scrambling_control-is-00"/>
+                        <xs:element type="number-of-duplicate-packets-seenType"
+                                    name="number-of-duplicate-packets-seen"/>
+                        <xs:element type="number-of-continuity-counter-errors-seenType"
+                                    name="number-of-continuity-counter-errors-seen"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="minimum-transport-rateType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="number-of-audio-access-units-seenType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="maximum-decode-delayType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="frame_rate_codeType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="reservedType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="descriptorType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="tag" use="optional"/>
+                            <xs:attribute type="xs:string" name="name" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="program-map-table-informationType">
+                    <xs:sequence>
+                        <xs:element type="table_idType" name="table_id"/>
+                        <xs:element type="program_numberType" name="program_number"/>
+                        <xs:element type="version_numberType" name="version_number"/>
+                        <xs:element type="pcr-pidType" name="pcr-pid"/>
+                        <xs:element type="section_lengthType" name="section_length"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="mpeg-chroma-formatType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="stream_typeType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="number-of-pes-headers-seenType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="timecode-discontinuityType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="noemptyafType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="horizontal-sizeType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="iso_639_language_descriptorType">
+                    <xs:sequence>
+                        <xs:element type="tagType" name="tag"/>
+                        <xs:element type="lengthType" name="length"/>
+                        <xs:element type="iso_639_language_codeType" name="iso_639_language_code"/>
+                        <xs:element type="audio_typeType" name="audio_type"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="number-of-packets-discontinuity_indicator-is-1Type">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="average-transport-rateType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="minimum-packet-spacingType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="average-pts-intervalType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="number-of-packets-random_access_indicator-is-1Type">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType
+                        name="average-number-of-non-i-pictures-between-two-i-picturesType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="streamType">
+                    <xs:sequence>
+                        <xs:element type="descriptorType" name="descriptor"/>
+                    </xs:sequence>
+                    <xs:attribute type="xs:string" name="pid" use="optional"/>
+                    <xs:attribute type="xs:string" name="type" use="optional"/>
+                </xs:complexType>
+                <xs:complexType name="pid-propertiesType">
+                    <xs:sequence>
+                        <xs:element type="pidType" name="pid"/>
+                        <xs:element type="contentType" name="content"/>
+                        <xs:element type="total-errorsType" name="total-errors"/>
+                        <xs:element type="total-warningsType" name="total-warnings"/>
+                        <xs:element type="program-association-table-informationType"
+                                    name="program-association-table-information"
+                                    minOccurs="0"/>
+                        <xs:element type="program-informationType" name="program-information"
+                                    minOccurs="0"/>
+                        <xs:element type="program-map-table-informationType"
+                                    name="program-map-table-information" minOccurs="0"/>
+                        <xs:element type="pcr-statisticsType" name="pcr-statistics" minOccurs="0"/>
+                        <xs:element type="packet-statisticsType" name="packet-statistics"/>
+                        <xs:element type="transport-header-informationType"
+                                    name="transport-header-information"/>
+                        <xs:element type="adaptation-field-informationType"
+                                    name="adaptation-field-information"/>
+                        <xs:element type="pes-informationType" name="pes-information"
+                                    minOccurs="0"/>
+                        <xs:element type="video-elementary-stream-informationType"
+                                    name="video-elementary-stream-information"
+                                    minOccurs="0"/>
+                        <xs:element type="audio-elementary-stream-informationType"
+                                    name="audio-elementary-stream-information"
+                                    minOccurs="0"/>
+                        <xs:element type="errorsType" name="errors" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="number-of-pcrs-seenType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="table_idType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="tsa-reportType">
+                    <xs:sequence>
+                        <xs:element type="configurationType" name="configuration"/>
+                        <xs:element type="stream-informationType" name="stream-information"/>
+                        <xs:element type="multiplex-summaryType" name="multiplex-summary"/>
+                        <xs:element type="pid-summaryType" name="pid-summary"/>
+                        <xs:element type="pid-propertiesType" name="pid-properties"
+                                    maxOccurs="unbounded" minOccurs="0"/>
+                        <xs:element type="errorsType" name="errors"/>
+                    </xs:sequence>
+                    <xs:attribute type="xs:string" name="version"/>
+                    <xs:attribute type="xs:string" name="license-serno"/>
+                    <xs:attribute type="xs:string" name="license-username"/>
+                    <xs:attribute type="xs:string" name="date"/>
+                    <xs:attribute type="xs:string" name="file"/>
+                </xs:complexType>
+                <xs:complexType name="pid-summaryType">
+                    <xs:sequence>
+                        <xs:element type="pid-infoType" name="pid-info" maxOccurs="unbounded"
+                                    minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="video-es-buffer-sizeType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="maximum-pcr-intervalType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="packet-number-at-minimum-pcr-intervalType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                            <xs:attribute type="xs:string" name="time"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="packet-number-at-minimum-es-buffer-levelType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                            <xs:attribute type="xs:string" name="time" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="video-in-film-modeType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="listed-in-pat-version_numberType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="stream-informationType">
+                    <xs:sequence>
+                        <xs:element type="average-transport-rateType"
+                                    name="average-transport-rate"/>
+                        <xs:element type="minimum-transport-rateType"
+                                    name="minimum-transport-rate"/>
+                        <xs:element type="maximum-transport-rateType"
+                                    name="maximum-transport-rate"/>
+                        <xs:element type="durationType" name="duration"/>
+                        <xs:element type="file-sizeType" name="file-size"/>
+                        <xs:element type="transport-packet-intervalType"
+                                    name="transport-packet-interval"/>
+                        <xs:element type="packets-analyzedType" name="packets-analyzed"/>
+                        <xs:element type="total-errorsType" name="total-errors"/>
+                        <xs:element type="total-warningsType" name="total-warnings"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="profile_and_level_indicationType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="multiple_frame_rate_flagType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="pmt-pid-for-program_numberType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="programType">
+                    <xs:sequence>
+                        <xs:element type="pmtType" name="pmt"/>
+                    </xs:sequence>
+                    <xs:attribute type="xs:string" name="program_number"/>
+                    <xs:attribute type="xs:string" name="pid"/>
+                </xs:complexType>
+                <xs:complexType name="packet-statisticsType">
+                    <xs:sequence>
+                        <xs:element type="number-of-packetsType" name="number-of-packets"/>
+                        <xs:element type="first-seen-in-packet-numberType"
+                                    name="first-seen-in-packet-number"/>
+                        <xs:element type="last-seen-in-packet-numberType"
+                                    name="last-seen-in-packet-number"/>
+                        <xs:element type="average-transport-packet-rateType"
+                                    name="average-transport-packet-rate"/>
+                        <xs:element type="average-payload-rateType" name="average-payload-rate"/>
+                        <xs:element type="average-packet-spacingType"
+                                    name="average-packet-spacing"/>
+                        <xs:element type="minimum-packet-spacingType"
+                                    name="minimum-packet-spacing"/>
+                        <xs:element type="packet-number-at-minimum-spacingType"
+                                    name="packet-number-at-minimum-spacing"/>
+                        <xs:element type="maximum-packet-spacingType"
+                                    name="maximum-packet-spacing"/>
+                        <xs:element type="packet-number-at-maximum-spacingType"
+                                    name="packet-number-at-maximum-spacing"/>
+                        <xs:element type="minimum-packet-spacing-ends-inclusiveType"
+                                    name="minimum-packet-spacing-ends-inclusive"/>
+                        <xs:element type="maximum-packet-spacing-ends-inclusiveType"
+                                    name="maximum-packet-spacing-ends-inclusive"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="minimum-packet-spacing-ends-inclusiveType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="audio-elementary-stream-informationType">
+                    <xs:sequence>
+                        <xs:element type="audio-typeType" name="audio-type"/>
+                        <xs:element type="number-of-audio-access-units-seenType"
+                                    name="number-of-audio-access-units-seen"/>
+                        <xs:element type="average-number-of-audio-frames-per-pes-packetType"
+
+                                    name="average-number-of-audio-frames-per-pes-packet"/>
+                        <xs:element type="layerType" name="layer"/>
+                        <xs:element type="sample-rateType" name="sample-rate"/>
+                        <xs:element type="bit-rateType" name="bit-rate"/>
+                        <xs:element type="number-and-location-of-channelsType"
+                                    name="number-and-location-of-channels"/>
+                        <xs:element type="nominal-frame-sizeType" name="nominal-frame-size"/>
+                        <xs:element type="main-audio-buffer-sizeType"
+                                    name="main-audio-buffer-size"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="transport_stream_idType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="number-of-packets-pes_scrambling_control-is-00Type">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="packets-analyzedType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="errorType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="pid" use="optional"/>
+                            <xs:attribute type="xs:string" name="packet" use="optional"/>
+                            <xs:attribute type="xs:string" name="time" use="optional"/>
+                            <xs:attribute type="xs:string" name="code" use="optional"/>
+                            <xs:attribute type="xs:string" name="msg" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="packet-number-at-maximum-spacingType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                            <xs:attribute type="xs:string" name="time" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="minimum-es-buffer-levelType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="maximum-es-buffer-levelType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="quadbyteType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="vbv-methodType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="percent-of-all-pictures-that-are-p-picturesType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="transport-packet-intervalType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="lengthType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="packet-number-at-minimum-spacingType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                            <xs:attribute type="xs:string" name="time" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="pes-stream_idType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="dataType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="tagType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="still_picture_flagType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="number-and-location-of-channelsType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="sample-aspect-ratioType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="average-transport-packet-rateType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="maximum-transport-rateType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="number-of-duplicate-packets-seenType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="pcr-statisticsType">
+                    <xs:sequence>
+                        <xs:element type="number-of-pcrs-seenType" name="number-of-pcrs-seen"/>
+                        <xs:element type="average-pcr-intervalType" name="average-pcr-interval"/>
+                        <xs:element type="minimum-pcr-intervalType" name="minimum-pcr-interval"/>
+                        <xs:element type="packet-number-at-minimum-pcr-intervalType"
+                                    name="packet-number-at-minimum-pcr-interval"/>
+                        <xs:element type="maximum-pcr-intervalType" name="maximum-pcr-interval"/>
+                        <xs:element type="packet-number-at-maximum-pcr-intervalType"
+                                    name="packet-number-at-maximum-pcr-interval"/>
+                        <xs:element type="pcr-jitter-magnitudeType" name="pcr-jitter-magnitude"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="video-bit-rateType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="mpeg_1_only_flagType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType name="video-multiplexing-buffer-sizeType">
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="value"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:schema>
+        </def:xmlData>
+    </def:modifyDatastream>
+
+    <def:modifyDatastream pid="doms:ContentModel_RadioTVFile" dsID="BROADCAST_METADATA_SCHEMA"
+                          dsLabel="BROADCAST_METADATA metadata schema"
+                          dsMIME="text/xml"
+                          versionable="true"
+                          altIDs="" dsControlGroupType="X" dsState="A"
+                          checksumType="MD5"
+                          logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <xs:schema attributeFormDefault="unqualified"
+                       elementFormDefault="qualified"
+                       targetNamespace="http://doms.statsbiblioteket.dk/types/broadcastMetadata/0/1/#"
+                       xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <xs:element name="BroadcastFileDescriptiveMetadata"
+                            type="ns:BroadcastFileDescriptiveMetadataType"
+                            xmlns:ns="http://doms.statsbiblioteket.dk/types/broadcastMetadata/0/1/#"/>
+                <xs:complexType name="BroadcastFileDescriptiveMetadataType">
+                    <xs:sequence>
+                        <xs:element type="ns:channelIDsType" name="channelIDs"
+                                    xmlns:ns="http://doms.statsbiblioteket.dk/types/broadcastMetadata/0/1/#"/>
+                        <xs:element type="xs:string" name="format"/>
+                        <xs:element type="xs:string" name="startTimeDate"/>
+                        <xs:element type="xs:string" name="endTimeDate"/>
+                        <xs:element type="xs:string" name="filename"/>
+                        <xs:element type="xs:string" name="checksum"/>
+                        <xs:element type="xs:string" name="recorder"/>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:complexType name="channelIDsType">
+                    <xs:sequence>
+                        <xs:element type="xs:string" name="channelID"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:schema>
         </def:xmlData>
     </def:modifyDatastream>
 
