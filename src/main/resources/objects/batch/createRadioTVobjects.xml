@@ -243,6 +243,28 @@
             <placeholder/>
         </def:xmlData>
     </def:addDatastream>
+    <def:addDatastream pid="doms:ContentModel_RadioTVFile" dsID="CROSSCHECK_SCHEMA"
+                       dsLabel="CROSSCHECK SCHEMA datastream"
+                       dsMIME="text/xml"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
+    </def:addDatastream>
+    <def:addDatastream pid="doms:ContentModel_RadioTVFile" dsID="BROADCAST_METADATA_SCHEMA"
+                       dsLabel="BROADCAST METADATA SCHEMA datastream"
+                       dsMIME="text/xml"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
+    </def:addDatastream>
     <def:addDatastream pid="doms:ContentModel_RadioTVFile" dsID="BART_ORIGINAL_SCHEMA"
                        dsLabel="BART ORIGINAL SCHEMA datastream"
                        dsMIME="text/xml"
@@ -266,6 +288,8 @@
             <placeholder/>
         </def:xmlData>
     </def:addDatastream>
+
+
 
 
     <def:addObject pid="doms:RadioTV_Collection" label="Radio/TV Collection"
