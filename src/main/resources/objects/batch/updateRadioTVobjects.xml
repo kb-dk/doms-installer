@@ -1987,57 +1987,57 @@
                     </xs:simpleContent>
                 </xs:complexType>
                 <xs:complexType name="video-elementary-stream-informationType">
-                    <xs:sequence>
-                        <xs:element type="mpeg-2-video-profileType" name="mpeg-2-video-profile"/>
-                        <xs:element type="mpeg-2-video-levelType" name="mpeg-2-video-level"/>
-                        <xs:element type="mpeg-chroma-formatType" name="mpeg-chroma-format"/>
+                    <xs:sequence minOccurs="0">
+                        <xs:element type="mpeg-2-video-profileType" name="mpeg-2-video-profile" minOccurs="0"/>
+                        <xs:element type="mpeg-2-video-levelType" name="mpeg-2-video-level" minOccurs="0"/>
+                        <xs:element type="mpeg-chroma-formatType" name="mpeg-chroma-format" minOccurs="0"/>
                         <xs:element type="closed-caption-types-detectedType"
-                                    name="closed-caption-types-detected"/>
+                                    name="closed-caption-types-detected" minOccurs="0"/>
                         <xs:element type="number-of-video-access-units-seenType"
-                                    name="number-of-video-access-units-seen"/>
+                                    name="number-of-video-access-units-seen" minOccurs="0"/>
                         <xs:element
                                 type="minimum-number-of-non-i-pictures-between-two-i-picturesType"
 
-                                name="minimum-number-of-non-i-pictures-between-two-i-pictures"/>
+                                name="minimum-number-of-non-i-pictures-between-two-i-pictures" minOccurs="0"/>
                         <xs:element
                                 type="maximum-number-of-non-i-pictures-between-two-i-picturesType"
 
-                                name="maximum-number-of-non-i-pictures-between-two-i-pictures"/>
+                                name="maximum-number-of-non-i-pictures-between-two-i-pictures" minOccurs="0"/>
                         <xs:element
                                 type="average-number-of-non-i-pictures-between-two-i-picturesType"
 
-                                name="average-number-of-non-i-pictures-between-two-i-pictures"/>
+                                name="average-number-of-non-i-pictures-between-two-i-pictures" minOccurs="0"/>
                         <xs:element type="percent-of-all-pictures-that-are-p-picturesType"
 
-                                    name="percent-of-all-pictures-that-are-p-pictures"/>
+                                    name="percent-of-all-pictures-that-are-p-pictures" minOccurs="0"/>
                         <xs:element type="percent-of-all-pictures-that-are-b-picturesType"
 
-                                    name="percent-of-all-pictures-that-are-b-pictures"/>
+                                    name="percent-of-all-pictures-that-are-b-pictures" minOccurs="0"/>
                         <xs:element type="maximum-number-of-b-frames-between-i-or-p-framesType"
 
-                                    name="maximum-number-of-b-frames-between-i-or-p-frames"/>
-                        <xs:element type="video-bit-rateType" name="video-bit-rate"/>
-                        <xs:element type="vbv-methodType" name="vbv-method"/>
-                        <xs:element type="vbv-sizeType" name="vbv-size"/>
+                                    name="maximum-number-of-b-frames-between-i-or-p-frames" minOccurs="0"/>
+                        <xs:element type="video-bit-rateType" name="video-bit-rate" minOccurs="0"/>
+                        <xs:element type="vbv-methodType" name="vbv-method" minOccurs="0"/>
+                        <xs:element type="vbv-sizeType" name="vbv-size" minOccurs="0"/>
                         <xs:element type="video-multiplexing-buffer-sizeType"
-                                    name="video-multiplexing-buffer-size"/>
-                        <xs:element type="video-es-buffer-sizeType" name="video-es-buffer-size"/>
-                        <xs:element type="minimum-decode-delayType" name="minimum-decode-delay"/>
-                        <xs:element type="maximum-decode-delayType" name="maximum-decode-delay"/>
+                                    name="video-multiplexing-buffer-size" minOccurs="0"/>
+                        <xs:element type="video-es-buffer-sizeType" name="video-es-buffer-size" minOccurs="0"/>
+                        <xs:element type="minimum-decode-delayType" name="minimum-decode-delay" minOccurs="0"/>
+                        <xs:element type="maximum-decode-delayType" name="maximum-decode-delay" minOccurs="0"/>
                         <xs:element type="mb-to-eb-transfer-methodType"
-                                    name="mb-to-eb-transfer-method"/>
-                        <xs:element type="video-frame-rateType" name="video-frame-rate"/>
-                        <xs:element type="video-in-film-modeType" name="video-in-film-mode"/>
-                        <xs:element type="progressive-sequenceType" name="progressive-sequence"/>
-                        <xs:element type="horizontal-sizeType" name="horizontal-size"/>
-                        <xs:element type="vertical-sizeType" name="vertical-size"/>
-                        <xs:element type="aspect-ratioType" name="aspect-ratio"/>
-                        <xs:element type="sample-aspect-ratioType" name="sample-aspect-ratio"/>
-                        <xs:element type="quadbyteType" name="quadbyte"/>
-                        <xs:element type="initial-timecodeType" name="initial-timecode"/>
+                                    name="mb-to-eb-transfer-method" minOccurs="0"/>
+                        <xs:element type="video-frame-rateType" name="video-frame-rate" minOccurs="0"/>
+                        <xs:element type="video-in-film-modeType" name="video-in-film-mode" minOccurs="0"/>
+                        <xs:element type="progressive-sequenceType" name="progressive-sequence" minOccurs="0"/>
+                        <xs:element type="horizontal-sizeType" name="horizontal-size" minOccurs="0"/>
+                        <xs:element type="vertical-sizeType" name="vertical-size" minOccurs="0"/>
+                        <xs:element type="aspect-ratioType" name="aspect-ratio" minOccurs="0"/>
+                        <xs:element type="sample-aspect-ratioType" name="sample-aspect-ratio" minOccurs="0"/>
+                        <xs:element type="quadbyteType" name="quadbyte" minOccurs="0"/>
+                        <xs:element type="initial-timecodeType" name="initial-timecode" minOccurs="0"/>
                         <xs:element type="timecode-discontinuityType"
-                                    name="timecode-discontinuity"/>
-                        <xs:element type="final-timecodeType" name="final-timecode"/>
+                                    name="timecode-discontinuity" minOccurs="0"/>
+                        <xs:element type="final-timecodeType" name="final-timecode" minOccurs="0"/>
                     </xs:sequence>
                 </xs:complexType>
                 <xs:complexType name="average-packet-spacingType">
