@@ -119,15 +119,15 @@
                     <rdfs:subClassOf>
                         <owl:Restriction>
                             <owl:onProperty
-                                    rdf:resource="http://doms.statsbiblioteket.dk/relations/default/0/1/#hasShard"/>
+                                    rdf:resource="http://doms.statsbiblioteket.dk/relations/default/0/1/#hasFile"/>
                             <owl:allValuesFrom
-                                    rdf:resource="info:fedora/doms:ContentModel_Shard#class"/>
+                                    rdf:resource="info:fedora/doms:ContentModel_RadioTVFile#class"/>
                         </owl:Restriction>
                     </rdfs:subClassOf>
 
                 </owl:Class>
 
-                <owl:ObjectProperty rdf:about="http://doms.statsbiblioteket.dk/relations/default/0/1/#hasShard"/>
+                <owl:ObjectProperty rdf:about="http://doms.statsbiblioteket.dk/relations/default/0/1/#hasFile"/>
             </rdf:RDF>
         </def:xmlData>
     </def:modifyDatastream>
