@@ -53,7 +53,7 @@ $BASEDIR/scripts/updateRadioTVobjects.xml \
 $BASEDIR/logs/updateRadioTVobjects.log \
 http false
 
-echo "There should be no errors in this result. If there are, something have failed."
+echo "There should be no errors in this result. If there are, something has failed."
 echo ""
 echo ""
 

@@ -1,7 +1,6 @@
 <def:batchModify xmlns:def="http://www.fedora.info/definitions/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xsi:schemaLocation="http://www.fedora.info/definitions/ http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/schemaStore/batchModifySchema.xsd">
 
-
     <!--Program-->
     <def:addObject pid="doms:ContentModel_Program" label="Radio/TV program"
                    contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
@@ -290,8 +289,6 @@
     </def:addDatastream>
 
 
-
-
     <def:addObject pid="doms:RadioTV_Collection" label="Radio/TV Collection"
                    contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:RadioTV_Collection" state="I"
@@ -319,7 +316,6 @@
             </rdf:RDF>
         </def:xmlData>
     </def:addDatastream>
-
 
     <def:addObject pid="doms:RadioTV_InhouseLicense" label="Radio/TV License for inhouse users"
                    contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
