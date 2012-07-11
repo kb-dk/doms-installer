@@ -287,6 +287,17 @@
             <placeholder/>
         </def:xmlData>
     </def:addDatastream>
+    <def:addDatastream pid="doms:ContentModel_RadioTVFile" dsID="CHANNELS_SCHEMA"
+                       dsLabel="CHANNELS datastream schema"
+                       dsMIME="text/xml"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
+    </def:addDatastream>
 
 
     <def:addObject pid="doms:RadioTV_Collection" label="Radio/TV Collection"
