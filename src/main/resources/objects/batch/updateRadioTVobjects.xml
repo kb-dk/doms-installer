@@ -1186,6 +1186,72 @@
             </xsd:schema>
         </def:xmlData>
     </def:modifyDatastream>
+    <def:modifyDatastream pid="doms:ContentModel_Shard" dsID="PROGRAM_STRUCTURE_SCHEMA"
+                          dsLabel="Program structure schema"
+                          dsMIME="text/xml"
+                          versionable="true"
+                          altIDs="" dsControlGroupType="X" dsState="A"
+                          checksumType="MD5"
+                          logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+               <xs:element name="program_structure" type="programStructure"/>
+
+                <xs:complexType name="programStructure">
+                    <xs:sequence>
+                        <xs:element name="holes">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="hole" type="hole" minOccurs="0" maxOccurs="unbounded"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="missingEnd" type="missingEnd" minOccurs="0"/>
+                        <xs:element name="missingStart" type="missingStart" minOccurs="0"/>
+                        <xs:element name="overlaps">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="overlap" type="overlap" minOccurs="0"
+                                                maxOccurs="unbounded"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+
+                <xs:complexType name="hole">
+                    <xs:sequence>
+                        <xs:element name="file1UUID" type="xs:string" minOccurs="0"/>
+                        <xs:element name="file2UUID" type="xs:string" minOccurs="0"/>
+                        <xs:element name="holeLength" type="xs:long"/>
+                    </xs:sequence>
+                </xs:complexType>
+
+                <xs:complexType name="missingEnd">
+                    <xs:sequence>
+                        <xs:element name="missingSeconds" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+
+                <xs:complexType name="missingStart">
+                    <xs:sequence>
+                        <xs:element name="missingSeconds" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+
+                <xs:complexType name="overlap">
+                    <xs:sequence>
+                        <xs:element name="file1UUId" type="xs:string" minOccurs="0"/>
+                        <xs:element name="file2UUID" type="xs:string" minOccurs="0"/>
+                        <xs:element name="overlapLength" type="xs:long"/>
+                        <xs:element name="overlapType" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:schema>
+
+        </def:xmlData>
+    </def:modifyDatastream>
 
     <!--Shard-->
     <def:modifyObject pid="doms:ContentModel_Shard" state="I"
