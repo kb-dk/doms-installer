@@ -42,6 +42,15 @@
                         <reference type="datastream" value="GALLUP_ORIGINAL_SCHEMA"/>
                     </extension>
                 </dsTypeModel>
+                <dsTypeModel ID="PROGRAM_STRUCTURE">
+                    <form MIME="text/xml"/>
+                    <extension name="GUI">
+                        <presentAs type="editable"/>
+                    </extension>
+                    <extension name="SCHEMA">
+                        <reference type="datastream" value="PROGRAM_STRUCTURE_SCHEMA"/>
+                    </extension>
+                </dsTypeModel>
             </dsCompositeModel>
 
         </def:xmlData>
@@ -90,7 +99,7 @@
                 </v:viewangle>
                 <v:viewangle name="GUI">
                     <v:relations xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#">
-                        <doms:hasShard/>
+                        <doms:hasFile/>
                     </v:relations>
                     <v:inverseRelations/>
                 </v:viewangle>
@@ -1515,6 +1524,14 @@
                     </extension>
                     <extension name="SCHEMA">
                         <reference type="datastream" value="BART_ORIGINAL_SCHEMA"/>
+                    </extension>
+                </dsTypeModel>
+                <dsTypeModel ID="CHANNELS" optional="true">
+                    <extension name="GUI">
+                        <presentAs type="editable"/>
+                    </extension>
+                    <extension name="SCHEMA">
+                        <reference type="datastream" value="CHANNELS_SCHEMA"/>
                     </extension>
                 </dsTypeModel>
             </dsCompositeModel>
