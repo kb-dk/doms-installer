@@ -1195,7 +1195,7 @@
             </xsd:schema>
         </def:xmlData>
     </def:modifyDatastream>
-    <def:modifyDatastream pid="doms:ContentModel_Shard" dsID="PROGRAM_STRUCTURE_SCHEMA"
+    <def:modifyDatastream pid="doms:ContentModel_Program" dsID="PROGRAM_STRUCTURE_SCHEMA"
                           dsLabel="Program structure schema"
                           dsMIME="text/xml"
                           versionable="true"
