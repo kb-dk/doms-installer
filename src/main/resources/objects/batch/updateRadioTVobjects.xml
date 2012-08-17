@@ -51,6 +51,15 @@
                         <reference type="datastream" value="PROGRAM_STRUCTURE_SCHEMA"/>
                     </extension>
                 </dsTypeModel>
+                <dsTypeModel ID="PROGRAM_BROADCAST">
+                    <form MIME="text/xml"/>
+                    <extension name="GUI">
+                        <presentAs type="editable"/>
+                    </extension>
+                    <extension name="SCHEMA">
+                        <reference type="datastream" value="PROGRAM_BROADCAST_SCHEMA"/>
+                    </extension>
+                </dsTypeModel>
             </dsCompositeModel>
 
         </def:xmlData>
