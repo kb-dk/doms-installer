@@ -114,6 +114,17 @@
             <placeholder/>
         </def:xmlData>
     </def:addDatastream>
+    <def:addDatastream pid="doms:ContentModel_Program" dsID="PROGRAM_BROADCAST_SCHEMA"
+                       dsLabel="Program broadcast schema"
+                       dsMIME="text/xml"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
+    </def:addDatastream>
 
     <def:addObject pid="doms:ContentModel_Shard" label="Radio/TV Shard"
                    contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>

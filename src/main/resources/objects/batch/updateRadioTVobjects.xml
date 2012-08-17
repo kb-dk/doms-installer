@@ -1261,6 +1261,26 @@
 
         </def:xmlData>
     </def:modifyDatastream>
+    <def:modifyDatastream pid="doms:ContentModel_Program" dsID="PROGRAM_BROADCAST_SCHEMA"
+                          dsLabel="Program broadcast schema"
+                          dsMIME="text/xml"
+                          versionable="true"
+                          altIDs="" dsControlGroupType="X" dsState="A"
+                          checksumType="MD5"
+                          logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <xs:element name="programBroadcast" type="programBroadcast"/>
+                <xs:complexType name="programBroadcast">
+                <xs:sequence>
+                    <xs:element name="timeStart" type="xs:dateTime"/>
+                    <xs:element name="timeStop" type="xs:dateTime"/>
+                    <xs:element name="channelId" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+            </xs:schema>
+        </def:xmlData>
+    </def:modifyDatastream>
 
     <!--Shard-->
     <def:modifyObject pid="doms:ContentModel_Shard" state="I"
