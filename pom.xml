@@ -15,9 +15,9 @@
     <packaging>pom</packaging>
 
     <scm>
-        <connection>scm:svn:https://doms.svn.sourceforge.net/svnroot/doms/testbed/trunk</connection>
-        <developerConnection>scm:svn:https://doms.svn.sourceforge.net/svnroot/doms/testbed/trunk</developerConnection>
-        <url>http://doms.svn.sourceforge.net/viewvc/doms/testbed/trunk</url>
+        <connection>scm:git:git://github.com/statsbiblioteket/doms-installer.git</connection>
+        <developerConnection>scm:git:git@github.com:statsbiblioteket/doms-installer.git</developerConnection>
+        <url>https://github.com/statsbiblioteket/doms-installer</url>
     </scm>
 
 
