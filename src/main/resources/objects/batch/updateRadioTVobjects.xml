@@ -3126,7 +3126,13 @@
         <def:xmlData>
             <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-                <xs:element name="channels" type="channel"/>
+                <xs:element name="channels" type="channels"/>
+
+				<xs:complexType name="channels">
+					<xs:sequence>
+						<xs:element type="channel" name="channel" minOccurs="1" maxOccurs="unbounded"></xs:element>
+					</xs:sequence>
+				</xs:complexType>
 
                 <xs:complexType name="channel">
                     <xs:sequence>
@@ -3134,6 +3140,13 @@
                         <xs:element name="start_time" type="xs:long" minOccurs="0"/>
                         <xs:element name="stop_time" type="xs:long" minOccurs="0"/>
                         <xs:element name="format_uri" type="xs:string"/>
+                        <xs:element name="channel_quality" type="xs:int">
+                        	<xs:annotation>
+                        		<xs:documentation>
+                        			Quality indicator on the Rosenthal scale
+                        		</xs:documentation>
+                        	</xs:annotation>
+                        </xs:element>
                     </xs:sequence>
                 </xs:complexType>
 
