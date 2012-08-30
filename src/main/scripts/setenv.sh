@@ -23,6 +23,7 @@ popd > /dev/null
 
 # The normal config values
 PORTRANGE=78
+SUMMA_PORTRANGE=576
 TOMCAT_SERVERNAME=localhost
 
 FEDORAADMIN=fedoraAdmin

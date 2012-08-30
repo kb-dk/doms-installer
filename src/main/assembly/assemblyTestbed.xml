@@ -79,6 +79,10 @@
             <outputDirectory>docs</outputDirectory>
             <directory>docs</directory>
         </fileSet>
+        <fileSet>
+            <outputDirectory>data/summarise</outputDirectory>
+            <directory>${project.build.directory}/summarise</directory>
+        </fileSet>
     </fileSets>
 
 

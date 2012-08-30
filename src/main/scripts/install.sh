@@ -41,4 +41,20 @@ sleep 30
 # Do the ingest of the base objects
 $BASEOBJS_DIR/bin/createOrUpdateBasicObjects.sh
 
+SUMMARISE_SOURCE_DIR="$BASEDIR/data/summarise"
+SUMMARISE_DIR="$TESTBED_DIR/summarise"
+
+if [ -e "$SUMMARISE_SOURCE_DIR" ] ; then
+    echo "Installing Summa"
+    unzip -q "$SUMMARISE_SOURCE_DIR/domsgui-*-test.zip" -d "$SUMMARISE_DIR"
+    mkdir -p "$SUMMARISE_DIR/index"
+    mkdir -p "$SUMMARISE_DIR/suggest"
+    cp "$SUMMARISE_SOURCE_DIR"/summix-*.zip "$SUMMARISE_DIR/summix-storage/"
+    cp "$BASEDIR/data/tomcat/"apache-tomcat-*.zip "$SUMMARISE_DIR/"
+    echo "Configuring Summa"
+    sed -ie "s/^site.portrange=576$/site.portrange=$SUMMA_PORTRANGE/" "$SUMMARISE_DIR/site.properties"
+    echo "Running Summa installer"
+    VERBOSE=1 "$SUMMARISE_DIR"/bin/all.sh
+fi
+
 echo "Install complete"
