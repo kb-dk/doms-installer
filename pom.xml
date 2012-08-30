@@ -7,8 +7,8 @@
         <version>0.1.4</version>
     </parent>
 
-    <groupId>dk.statsbiblioteket.doms.testbed</groupId>
-    <artifactId>testbed</artifactId>
+    <groupId>dk.statsbiblioteket.doms.installer</groupId>
+    <artifactId>installer</artifactId>
     <version>0.11.3-SNAPSHOT</version>
 
 
@@ -47,11 +47,11 @@
                     <execution>
                         <configuration>
                             <descriptors>
-                                <descriptor>src/main/assembly/assemblyWithIngest.xml</descriptor>
+                                <descriptor>src/main/assembly/assemblyTestbed.xml</descriptor>
                             </descriptors>
                         </configuration>
 
-                        <id>make-assembly-with-ingester</id>
+                        <id>make-assembly-testbed</id>
                         <!-- this is used for inheritance merges -->
                         <phase>package</phase>
                         <!-- append to the packaging phase. -->
