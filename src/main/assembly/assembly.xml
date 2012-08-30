@@ -67,9 +67,6 @@
             <outputDirectory>docs</outputDirectory>
             <directory>docs</directory>
         </fileSet>
-
     </fileSets>
-
-
 </assembly>
 
