@@ -42,7 +42,7 @@
                         <reference type="datastream" value="GALLUP_ORIGINAL_SCHEMA"/>
                     </extension>
                 </dsTypeModel>
-                <dsTypeModel ID="PROGRAM_STRUCTURE">
+                <dsTypeModel ID="PROGRAM_STRUCTURE" optional="true">
                     <form MIME="text/xml"/>
                     <extension name="GUI">
                         <presentAs type="editable"/>
@@ -51,7 +51,7 @@
                         <reference type="datastream" value="PROGRAM_STRUCTURE_SCHEMA"/>
                     </extension>
                 </dsTypeModel>
-                <dsTypeModel ID="PROGRAM_BROADCAST">
+                <dsTypeModel ID="PROGRAM_BROADCAST" optional="true">
                     <form MIME="text/xml"/>
                     <extension name="GUI">
                         <presentAs type="editable"/>
