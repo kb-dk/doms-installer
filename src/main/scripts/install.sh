@@ -8,6 +8,13 @@
 #
 
 #
+# Check whether $1 is set
+#
+if [ -z "$1" ] ; then
+    echo "Usage: $0 <install_dir>"
+    exit 1
+fi
+
 # Set up basic variables
 #
 SCRIPT_DIR=$(dirname $0)
