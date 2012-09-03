@@ -15,6 +15,24 @@ if [ -z "$1" ] ; then
     exit 1
 fi
 
+#
+# Detect Java version
+#
+if [ -z "$JAVA_HOME" ] ; then
+    JAVA_EXEC=java
+else
+    JAVA_EXEC="$JAVA_HOME/bin/java"
+fi
+
+"$JAVA_EXEC" -version 2>&1|grep "1\.6\.0" > /dev/null
+
+if [ $? -ne 0 ] ; then
+    echo "This package only supports Java 1.6"
+    exit 2
+fi
+
+
+#
 # Set up basic variables
 #
 SCRIPT_DIR=$(dirname $0)
