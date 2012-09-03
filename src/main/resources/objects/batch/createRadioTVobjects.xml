@@ -374,6 +374,8 @@
             <placeholder/>
         </def:xmlData>
     </def:addDatastream>
+
+    <!--TODO, again, remove this-->
     <def:addDatastream pid="doms:ContentModel_VHSFile" dsID="CROSSCHECK_SCHEMA"
                        dsLabel="CROSSCHECK SCHEMA datastream"
                        dsMIME="text/xml"
@@ -385,6 +387,8 @@
             <placeholder/>
         </def:xmlData>
     </def:addDatastream>
+
+
     <def:addDatastream pid="doms:ContentModel_VHSFile" dsID="BROADCAST_METADATA_SCHEMA"
                        dsLabel="BROADCAST METADATA SCHEMA datastream"
                        dsMIME="text/xml"
@@ -396,6 +400,8 @@
             <placeholder/>
         </def:xmlData>
     </def:addDatastream>
+
+    <!--TODO Again remove this-->
     <def:addDatastream pid="doms:ContentModel_VHSFile" dsID="BART_ORIGINAL_SCHEMA"
                        dsLabel="BART ORIGINAL SCHEMA datastream"
                        dsMIME="text/xml"
