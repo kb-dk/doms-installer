@@ -4735,6 +4735,44 @@
 
         </def:xmlData>
     </def:modifyDatastream>
+    <def:modifyDatastream pid="doms:ContentModel_RadioTVFile" dsID="CHANNELS_SCHEMA"
+                          dsLabel="CHANNELS datastream schema"
+                          dsMIME="text/xml"
+                          versionable="true"
+                          altIDs="" dsControlGroupType="X" dsState="A"
+                          checksumType="MD5"
+                          logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+                <xs:element name="channels" type="channels"/>
+
+				<xs:complexType name="channels">
+					<xs:sequence>
+						<xs:element type="channel" name="channel" minOccurs="1" maxOccurs="unbounded"></xs:element>
+					</xs:sequence>
+				</xs:complexType>
+
+                <xs:complexType name="channel">
+                    <xs:sequence>
+                        <xs:element name="channel_id" type="xs:int" minOccurs="0"/>
+                        <xs:element name="start_time" type="xs:long" minOccurs="0"/>
+                        <xs:element name="stop_time" type="xs:long" minOccurs="0"/>
+                        <xs:element name="format_uri" type="xs:string"/>
+                        <xs:element name="channel_quality" type="xs:int">
+                        	<xs:annotation>
+                        		<xs:documentation>
+                        			Quality indicator on the Rosenthal scale
+                        		</xs:documentation>
+                        	</xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+
+            </xs:schema>
+        </def:xmlData>
+    </def:modifyDatastream>
+
 
     <!--RadioTV_Collection-->
     <def:modifyObject pid="doms:RadioTV_Collection" state="I"
