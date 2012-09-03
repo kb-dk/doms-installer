@@ -1,5 +1,5 @@
 <assembly>
-    <id>testbed</id>
+    <id>installer</id>
     <formats>
         <format>zip</format>
     </formats>
@@ -67,9 +67,6 @@
             <outputDirectory>docs</outputDirectory>
             <directory>docs</directory>
         </fileSet>
-
     </fileSets>
-
-
 </assembly>
 
