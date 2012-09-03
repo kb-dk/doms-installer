@@ -82,4 +82,9 @@ if [ -e "$SUMMARISE_SOURCE_DIR" ] ; then
     VERBOSE=1 "$SUMMARISE_DIR"/bin/all.sh
 fi
 
+BIN_DIR="$TESTBED_DIR/bin"
+echo "Creating control script in $BIN_DIR"
+mkdir -p "$BIN_DIR"
+cp "$SCRIPT_DIR"/doms.sh "$BIN_DIR/"
+
 echo "Install complete"
