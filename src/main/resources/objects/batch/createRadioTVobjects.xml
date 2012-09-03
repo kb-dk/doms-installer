@@ -126,6 +126,7 @@
         </def:xmlData>
     </def:addDatastream>
 
+    <!--Shard-->
     <def:addObject pid="doms:ContentModel_Shard" label="Radio/TV Shard"
                    contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_Shard" state="I"
@@ -201,7 +202,7 @@
         </def:xmlData>
     </def:addDatastream>
 
-
+    <!--RadioTVFile-->
     <def:addObject pid="doms:ContentModel_RadioTVFile" label="Radio/TV File"
                    contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:ContentModel_RadioTVFile" state="I"
@@ -309,8 +310,61 @@
             <placeholder/>
         </def:xmlData>
     </def:addDatastream>
-    <def:addDatastream pid="doms:ContentModel_RadioTVFile" dsID="CHANNELS_SCHEMA"
-                       dsLabel="CHANNELS datastream schema"
+
+    <!--VHSFile-->
+    <def:addObject pid="doms:ContentModel_VHSFile" label="VHS File"
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
+    <def:modifyObject pid="doms:ContentModel_VHSFile" state="I"
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
+    <def:addDatastream pid="doms:ContentModel_VHSFile" dsID="DS-COMPOSITE-MODEL"
+                       dsLabel=""
+                       dsMIME="text/xml"
+                       formatURI="info:fedora/fedora-system:FedoraDSCompositeModel-1.0"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
+    </def:addDatastream>
+    <def:addDatastream pid="doms:ContentModel_VHSFile" dsID="RELS-EXT"
+                       dsLabel="Relationships"
+                       dsMIME="application/rdf+xml"
+                       formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                     xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
+                     xmlns:ecm="http://ecm.sourceforge.net/relations/0/2/#"
+                     xmlns:fedora="info:fedora/fedora-system:def/model#">
+                <rdf:Description rdf:about="info:fedora/doms:ContentModel_VHSFile">
+                    <fedora:hasModel rdf:resource="info:fedora/fedora-system:ContentModel-3.0"/>
+                    <fedora:hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"/>
+                    <ecm:extendsModel rdf:resource="info:fedora/doms:ContentModel_File"/>
+                    <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
+                    <doms:hasLicense rdf:resource="info:fedora/doms:Open_License"/>
+                    <doms:isControlledByLowLevelBitstorage>false</doms:isControlledByLowLevelBitstorage>
+                </rdf:Description>
+            </rdf:RDF>
+        </def:xmlData>
+    </def:addDatastream>
+    <def:addDatastream pid="doms:ContentModel_VHSFile" dsID="VIEW"
+                       dsLabel="VIEW datastream"
+                       dsMIME="application/rdf+xml"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
+    </def:addDatastream>
+    <def:addDatastream pid="doms:ContentModel_VHSFile" dsID="FFPROBE_SCHEMA"
+                       dsLabel="FFPROBE SCHEMA datastream"
                        dsMIME="text/xml"
                        versionable="true"
                        altIDs="" dsControlGroupType="X" dsState="A"
@@ -320,8 +374,53 @@
             <placeholder/>
         </def:xmlData>
     </def:addDatastream>
+    <def:addDatastream pid="doms:ContentModel_VHSFile" dsID="CROSSCHECK_SCHEMA"
+                       dsLabel="CROSSCHECK SCHEMA datastream"
+                       dsMIME="text/xml"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
+    </def:addDatastream>
+    <def:addDatastream pid="doms:ContentModel_VHSFile" dsID="BROADCAST_METADATA_SCHEMA"
+                       dsLabel="BROADCAST METADATA SCHEMA datastream"
+                       dsMIME="text/xml"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
+    </def:addDatastream>
+    <def:addDatastream pid="doms:ContentModel_VHSFile" dsID="BART_ORIGINAL_SCHEMA"
+                       dsLabel="BART ORIGINAL SCHEMA datastream"
+                       dsMIME="text/xml"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
+    </def:addDatastream>
+    <def:addDatastream pid="doms:ContentModel_VHSFile" dsID="ONTOLOGY"
+                       dsLabel="Local ontology"
+                       dsMIME="application/rdf+xml"
+                       formatURI="info:fedora/fedora-system:FedoraOntology-1.0"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
+    </def:addDatastream>
 
-
+    <!--RadioTV_Collection-->
     <def:addObject pid="doms:RadioTV_Collection" label="Radio/TV Collection"
                    contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:RadioTV_Collection" state="I"
@@ -350,6 +449,7 @@
         </def:xmlData>
     </def:addDatastream>
 
+    <!--RadioTV_InhouseLicense-->
     <def:addObject pid="doms:RadioTV_InhouseLicense" label="Radio/TV License for inhouse users"
                    contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:RadioTV_InhouseLicense" state="I"
@@ -428,6 +528,7 @@
         </def:xmlData>
     </def:addDatastream>
 
+    <!--RadioTV_adminOnlyLicense-->
     <def:addObject pid="doms:RadioTV_adminOnlyLicense" label="Radio TV License for admin users"
                    contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:RadioTV_adminOnlyLicense" state="I"
@@ -635,7 +736,7 @@
                        dsLocation="http://local.fedora.server/fedora/objects/doms:RadioTV_InhouseLicense/datastreams/LICENSE/content">
     </def:addDatastream>
 
-    <def:addObject pid="doms:Template_RadioTVFile" label="Radio/TV Program"
+    <def:addObject pid="doms:Template_RadioTVFile" label="Radio/TV File"
                    contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
     <def:modifyObject pid="doms:Template_RadioTVFile" state="I"
                       logMessage="Updating objects as part of a doms install/upgrade"/>
@@ -675,5 +776,48 @@
                        logMessage="Updating objects as part of a doms install/upgrade"
                        dsLocation="http://local.fedora.server/fedora/objects/doms:RadioTV_InhouseLicense/datastreams/LICENSE/content">
     </def:addDatastream>
+
+    <def:addObject pid="doms:Template_VHSFile" label="VHS File"
+                   contentModel="string" logMessage="Updating objects as part of a doms install/upgrade"/>
+    <def:modifyObject pid="doms:Template_VHSFile" state="I"
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
+    <def:addDatastream pid="doms:Template_VHSFile" dsID="RELS-EXT"
+                       dsLabel="Relationships"
+                       dsMIME="application/rdf+xml"
+                       formatURI="info:fedora/fedora-system:FedoraRELSExt-1.0"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="DISABLED"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                     xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
+                     xmlns:ecm="http://ecm.sourceforge.net/relations/0/2/#"
+                    >
+                <rdf:Description rdf:about="info:fedora/doms:Template_VHSFile">
+                    <hasModel rdf:resource="info:fedora/doms:ContentModel_VHSFile"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <hasModel rdf:resource="info:fedora/doms:ContentModel_File"
+                              xmlns="info:fedora/fedora-system:def/model#"/>
+                    <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
+                    <doms:hasLicense rdf:resource="info:fedora/doms:RadioTV_adminOnlyLicense"/>
+                    <ecm:isTemplateFor rdf:resource="info:fedora/doms:ContentModel_VHSFile"/>
+                </rdf:Description>
+            </rdf:RDF>
+        </def:xmlData>
+    </def:addDatastream>
+    <def:addDatastream pid="doms:Template_VHSFile" dsID="POLICY"
+                       dsLabel="Policy"
+                       dsMIME="application/rdf+xml"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="E" dsState="A"
+                       checksumType="DISABLED"
+                       logMessage="Updating objects as part of a doms install/upgrade"
+                       dsLocation="http://local.fedora.server/fedora/objects/doms:RadioTV_InhouseLicense/datastreams/LICENSE/content">
+    </def:addDatastream>
+
+
 
 </def:batchModify>
