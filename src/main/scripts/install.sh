@@ -78,6 +78,8 @@ if [ -e "$SUMMARISE_SOURCE_DIR" ] ; then
     cp "$BASEDIR/data/tomcat/"apache-tomcat-*.zip "$SUMMARISE_DIR/"
     echo "Configuring Summa"
     sed -ie "s/^site.portrange=576$/site.portrange=$SUMMA_PORTRANGE/" "$SUMMARISE_DIR/site.properties"
+    sed -ie "s%http://localhost:7880/centralWebservice-service/central/?wsdl%http://localhost:${PORTRANGE}80/centralWebservice-service/central/?wsdl%g" \
+            "$SUMMARISE_DIR/config/storage_domsgui.xml"
     echo "Running Summa installer"
     VERBOSE=1 "$SUMMARISE_DIR"/bin/all.sh
 fi
