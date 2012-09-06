@@ -3346,32 +3346,29 @@
                           checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-            <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
-                <xs:element name="vhs_metadata" type="vhs_metadata"/>
-
-                <xs:complexType name="vhs_metadata">
-                    <xs:sequence>
-                       <xs:element name="filename" type="xs:string"/>
-                       <xs:element name="checksum" type="xs:string"/>
-                       <xs:element name="recorder" type="xs:string"/>
-                       <xs:element name="vhs_label" type="xs:string"/>
-                       <xs:element name="channel_id" type="xs:string"/>
-                       <xs:element name="vhs_start_time" type="xs:dateTime" minOccurs="0"/>
-                       <xs:element name="vhs_stop_time" type="xs:dateTime" minOccurs="0"/>
-                       <xs:element name="format_uri" type="xs:string"/>
-                       <xs:element name="quality" type="xs:int">
-                          <xs:annotation>
-                             <xs:documentation>
-                       		    Quality indicator on the Rosenthal scale (1,...,10)
-                             </xs:documentation>
-                          </xs:annotation>
-                       </xs:element>
-                       <xs:element name="recorded_duration" type="xs:time" minOccurs="0"/>
-                    </xs:sequence>
-                </xs:complexType>
-
-            </xs:schema>
+        	<xs:schema xmlns:tns="http://doms.statsbiblioteket.dk/types/vhs_metadata/0/1/#" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://doms.statsbiblioteket.dk/types/vhs_metadata/0/1/#" version="1.0">
+  				<xs:element name="vhs_metadata" type="tns:vhs_metadata"></xs:element>
+  			 	<xs:complexType name="vhs_metadata">
+    				<xs:sequence>
+    					<xs:element name="filename" type="xs:string"></xs:element>
+      					<xs:element name="checksum" type="xs:string"></xs:element>
+      					<xs:element name="recorder" type="xs:string"></xs:element>
+      					<xs:element name="vhs_label" type="xs:string"></xs:element>
+      					<xs:element name="channel_id" type="xs:string"></xs:element>
+      					<xs:element minOccurs="0" name="vhs_start_time" type="xs:dateTime"></xs:element>
+      					<xs:element minOccurs="0" name="vhs_stop_time" type="xs:dateTime"></xs:element>
+      					<xs:element name="format_uri" type="xs:string"></xs:element>
+      					<xs:element name="quality" type="xs:int">
+        					<xs:annotation>
+          						<xs:documentation>
+                                    Quality indicator on the Rosenthal scale (1,...,10)
+                             	</xs:documentation>
+					        </xs:annotation>
+      					</xs:element>
+      					<xs:element minOccurs="0" name="recorded_duration" type="xs:time"></xs:element>
+    				</xs:sequence>
+  				</xs:complexType>
+			</xs:schema>
         </def:xmlData>
     </def:modifyDatastream>
     <def:modifyDatastream pid="doms:ContentModel_VHSFile" dsID="RELS-EXT"
