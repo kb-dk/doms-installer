@@ -21,6 +21,7 @@ sed \
 -e 's|\$TOMCAT_CONFIG_DIR\$|'"$TOMCAT_CONFIG_DIR"'|g' \
 -e 's|\$WEBAPPS_DIR\$|'"$WEBAPPS_DIR"'|g' \
 -e 's|\$PORTRANGE\$|'"$PORTRANGE"'|g' \
+-e 's|\$SUMMA_PORTRANGE\$|'"$SUMMA_PORTRANGE"'|g' \
 -e 's|\$TOMCAT_SERVERNAME\$|'"$TOMCAT_SERVERNAME"'|g' \
 -e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
 -e 's|\$FEDORAADMINPASS\$|'"$FEDORAADMINPASS"'|g' \

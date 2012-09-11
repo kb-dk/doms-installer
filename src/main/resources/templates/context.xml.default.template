@@ -87,6 +87,9 @@
     <Parameter name="dk.statsbiblioteket.doms.central.log4jconfig"
                value="$TOMCAT_CONFIG_DIR$/log4j.centralDomsWebservice.xml"
                override="false"/>
+    <Parameter name="dk.statsbiblioteket.doms.central.summaWSDL"
+                   value="http://localhost:$SUMMA_PORTRANGE$08/domsgui/search/services/SearchWS?wsdl"
+                   override="false"/>
 
     <!--authchecker-->
     <Parameter name="dk.statsbiblioteket.doms.authchecker.tickets.timeToLive"
