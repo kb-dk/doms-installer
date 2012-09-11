@@ -31,6 +31,21 @@ echo ""
 echo ""
 
 
+echo "UPDATING base doms objects"
+
+
+sh $FEDORA_DIR/client/bin/fedora-modify.sh \
+$SERVER $USER $PASS \
+$BASEDIR/scripts/updateBasicObjects.xml \
+$BASEDIR/logs/updateBasicObjects.log \
+http false
+
+echo "There should be no errors in this result. If there are, something has failed."
+echo ""
+echo ""
+
+
+
 echo "INGESTING base radioTV objects"
 
 sh $FEDORA_DIR/client/bin/fedora-modify.sh \
