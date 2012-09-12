@@ -3388,6 +3388,7 @@
                     <fedora:hasModel rdf:resource="info:fedora/fedora-system:ContentModel-3.0"/>
                     <fedora:hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"/>
                     <ecm:extendsModel rdf:resource="info:fedora/doms:ContentModel_File"/>
+                    <ecm:isEntryForViewAngle>GUI</ecm:isEntryForViewAngle>
                     <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
                     <doms:hasLicense rdf:resource="info:fedora/doms:Open_License"/>
                     <doms:isControlledByLowLevelBitstorage>false</doms:isControlledByLowLevelBitstorage>
