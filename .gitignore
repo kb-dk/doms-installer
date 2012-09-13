@@ -2,3 +2,6 @@ target/
 .project
 .settings/*
 .idea/
+*.iws
+*.iml
+*.ipr
