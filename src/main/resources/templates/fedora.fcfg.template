@@ -229,12 +229,14 @@
                 This specifies the minimum amount of time that each uploaded
                 file should be kept in temporary storage.</comment>
         </param>
+        <!--
         <param name="decorator2"
                value="dk.statsbiblioteket.doms.bitstorage.highlevel.HookApprove">
             <comment>This is the hook that ensures that when a file object is
                 marked active, the corresponding file is approved in bitstorage
             </comment>
         </param>
+        -->
         <param name="dk.statsbiblioteket.doms.bitstorage.highlevel.hookapprove.filecmodel"
                value="doms:ContentModel_File">
             <comment>This is the content model an object must have to be considered
