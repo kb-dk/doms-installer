@@ -3163,6 +3163,69 @@
             </dsCompositeModel>
         </def:xmlData>
     </def:modifyDatastream>
+    <def:addDatastream pid="doms:ContentModel_VHSFile" dsID="METHODS"
+                       dsLabel="Methods datastream"
+                       dsMIME="application/xml"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <ns:methods xmlns:ns="http://ecm.sourceforge.net/types/methods/0/2/#">
+                <ns:method>
+                    <ns:name>Ole_Import</ns:name>
+                    <ns:command>echo %%domsUser%% %%domsPassword%% %%domsLocation%% %%quality%% %%file%% %%channelID%% %%timeStart%% %%timeEnd%% %%vhs-label%% %%recorder%%</ns:command>
+                    <ns:parameters>
+                        <ns:parameter>
+                            <ns:name>quality</ns:name>
+                            <ns:required>true</ns:required>
+                            <ns:repeatable>false</ns:repeatable>
+                            <ns:type>Integer</ns:type>
+                        </ns:parameter>
+                        <ns:parameter>
+                            <ns:name>file</ns:name>
+                            <ns:required>true</ns:required>
+                            <ns:repeatable>false</ns:repeatable>
+                            <ns:type>ServerFile</ns:type>
+                            <ns:config>/home/fedora</ns:config>
+                        </ns:parameter>
+                        <ns:parameter>
+                            <ns:name>channelID</ns:name>
+                            <ns:required>true</ns:required>
+                            <ns:repeatable>false</ns:repeatable>
+                            <ns:type>Text</ns:type>
+                            <ns:default>dr1</ns:default>
+                        </ns:parameter>
+                        <ns:parameter>
+                            <ns:name>timeStart</ns:name>
+                            <ns:required>true</ns:required>
+                            <ns:repeatable>false</ns:repeatable>
+                            <ns:type>Datetime</ns:type>
+                        </ns:parameter>
+                        <ns:parameter>
+                            <ns:name>timeEnd</ns:name>
+                            <ns:required>true</ns:required>
+                            <ns:repeatable>false</ns:repeatable>
+                            <ns:type>Datetime</ns:type>
+                        </ns:parameter>
+                        <ns:parameter>
+                            <ns:name>vhs-label</ns:name>
+                            <ns:required>true</ns:required>
+                            <ns:repeatable>false</ns:repeatable>
+                            <ns:type>TextBox</ns:type>
+                        </ns:parameter>
+                        <ns:parameter>
+                            <ns:name>recorder</ns:name>
+                            <ns:required>true</ns:required>
+                            <ns:repeatable>false</ns:repeatable>
+                            <ns:type>Text</ns:type>
+                        </ns:parameter>
+                    </ns:parameters>
+                </ns:method>
+            </ns:methods>
+        </def:xmlData>
+    </def:addDatastream>
+
     <def:modifyDatastream pid="doms:ContentModel_VHSFile" dsID="FFPROBE_SCHEMA"
                           dsLabel="FFPROBE metadata schema"
                           dsMIME="text/xml"
