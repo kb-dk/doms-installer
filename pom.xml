@@ -128,12 +128,13 @@
             <artifactId>ecm-fedoravalidatorhook</artifactId>
             <version>0.0.18</version>
         </dependency>
+	<!--
         <dependency>
             <groupId>dk.statsbiblioteket.doms.bitstorage.highlevel</groupId>
             <artifactId>bitstorage-highlevel-hookApprove</artifactId>
             <version>0.0.18</version>
         </dependency>
-
+	-->
 
 
         <!--Fedora itself-->
