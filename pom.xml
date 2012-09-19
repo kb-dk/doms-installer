@@ -24,6 +24,19 @@
         <url>https://github.com/statsbiblioteket/doms-installer</url>
     </scm>
 
+    <profiles>
+        <profile>
+            <id>sshkey</id>
+            <activation>
+                <property>
+                    <name>!env.SSH_KEY</name>
+                </property>
+            </activation>
+            <properties>
+                <env.SSH_KEY>${user.home}/.ssh/id_rsa_headless</env.SSH_KEY>
+            </properties>
+        </profile>
+    </profiles>
 
     <build>
         <plugins>
@@ -39,7 +52,7 @@
                         <configuration>
                             <target>
                                 <mkdir dir="${project.build.directory}/summarise/" />
-                                <scp file="fedora@alhena:/fedora/SummariseReleases/domsgui-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${user.home}/.ssh/id_rsa_headless" />
+                                <scp file="fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domsgui-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${env.SSH_KEY}" />
                             </target>
                         </configuration>
                     </execution>
