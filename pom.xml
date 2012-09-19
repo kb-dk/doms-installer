@@ -52,7 +52,12 @@
                         <configuration>
                             <target>
                                 <mkdir dir="${project.build.directory}/summarise/" />
+                                <!--
                                 <scp knownhosts="${project.basedir}/known_hosts" file="fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domsgui-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${env.SSH_KEY}" />
+                                -->
+                                <exec executable="rsync">
+                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domsgui-${summarise.version}/* &quot;${project.build.directory}/summarise/&quot;"/>
+                                </exec>
                             </target>
                         </configuration>
                     </execution>
