@@ -33,7 +33,7 @@
                 </property>
             </activation>
             <properties>
-                <env.SSH_KEY>${user.home}/.ssh/id_rsa_headless</env.SSH_KEY>
+                <env.SSH_KEY>${user.home}/.ssh/id_rsa</env.SSH_KEY>
             </properties>
         </profile>
     </profiles>
