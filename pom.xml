@@ -52,7 +52,7 @@
                         <configuration>
                             <target>
                                 <mkdir dir="${project.build.directory}/summarise/" />
-                                <scp file="fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domsgui-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${env.SSH_KEY}" />
+                                <scp knownhosts="${project.basedir}/known_hosts" file="fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domsgui-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${env.SSH_KEY}" />
                             </target>
                         </configuration>
                     </execution>
