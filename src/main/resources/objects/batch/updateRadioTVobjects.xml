@@ -3220,7 +3220,7 @@
             </dsCompositeModel>
         </def:xmlData>
     </def:modifyDatastream>
-    <def:addDatastream pid="doms:ContentModel_VHSFile" dsID="METHODS"
+    <def:modifyDatastream pid="doms:ContentModel_VHSFile" dsID="METHODS"
                        dsLabel="Methods datastream"
                        dsMIME="application/xml"
                        versionable="true"
@@ -3281,7 +3281,7 @@
                 </ns:method>
             </ns:methods>
         </def:xmlData>
-    </def:addDatastream>
+    </def:modifyDatastream>
 
     <def:modifyDatastream pid="doms:ContentModel_VHSFile" dsID="FFPROBE_SCHEMA"
                           dsLabel="FFPROBE metadata schema"
