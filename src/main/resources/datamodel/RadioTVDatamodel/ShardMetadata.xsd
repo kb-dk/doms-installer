@@ -1,0 +1,76 @@
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="shard_metadata" type="shardMetadata"/>
+
+    <xs:element name="shard_structure" type="shardStructure"/>
+
+    <xs:complexType name="shardMetadata">
+        <xs:sequence>
+            <xs:element name="file" type="shardFile" minOccurs="0"
+                        maxOccurs="unbounded"/>
+            <xs:element name="shardStructure" type="shardStructure" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="shardFile">
+        <xs:sequence>
+            <xs:element name="file_url" type="xs:string"/>
+            <xs:element name="channel_id" type="xs:int" minOccurs="0"/>
+            <xs:element name="program_start_offset" type="xs:long" minOccurs="0"/>
+            <xs:element name="program_clip_length" type="xs:long" minOccurs="0"/>
+            <xs:element name="file_name" type="xs:string"/>
+            <xs:element name="format_uri" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="shardStructure">
+        <xs:sequence>
+            <xs:element name="holes">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="hole" type="hole" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="missingEnd" type="missingEnd" minOccurs="0"/>
+            <xs:element name="missingStart" type="missingStart" minOccurs="0"/>
+            <xs:element name="overlaps">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="overlap" type="overlap" minOccurs="0"
+                                    maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="hole">
+        <xs:sequence>
+            <xs:element name="filePath1" type="xs:string" minOccurs="0"/>
+            <xs:element name="filePath2" type="xs:string" minOccurs="0"/>
+            <xs:element name="holeLength" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="missingEnd">
+        <xs:sequence>
+            <xs:element name="missingSeconds" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="missingStart">
+        <xs:sequence>
+            <xs:element name="missingSeconds" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="overlap">
+        <xs:sequence>
+            <xs:element name="filePath1" type="xs:string" minOccurs="0"/>
+            <xs:element name="filePath2" type="xs:string" minOccurs="0"/>
+            <xs:element name="overlapLength" type="xs:long"/>
+            <xs:element name="overlapType" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -21,7 +21,6 @@
                 <include>dk.statsbiblioteket.sbutil:sbutil</include>
                 <include>dk.statsbiblioteket.doms.authchecker:authchecker-fedoralogin</include>
                 <include>dk.statsbiblioteket.doms.ecm:ecm-fedoravalidatorhook</include>
-                <include>dk.statsbiblioteket.doms.bitstorage.highlevel:bitstorage-highlevel-hookApprove</include>
             </includes>
             <excludes>
                 <exclude>log4j:log4j</exclude>
@@ -57,6 +56,7 @@
         <fileSet>
             <outputDirectory>data/objects/batch</outputDirectory>
             <directory>src/main/resources/objects/batch</directory>
+            <filtered>true</filtered>
         </fileSet>
         <fileSet>
             <outputDirectory>bin</outputDirectory>

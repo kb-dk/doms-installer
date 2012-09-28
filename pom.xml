@@ -13,6 +13,18 @@
 
     <properties>
         <summarise.version>0.2-SNAPSHOT</summarise.version>
+        <schema.folder>src/main/resources/datamodel/RadioTVDatamodel</schema.folder>
+        <BartOriginal_file>${schema.folder}/BartOriginal.xsd</BartOriginal_file>
+        <BroadcastMetadata_file>${schema.folder}/BroadcastMetadata.xsd</BroadcastMetadata_file>
+        <Crosscheck_file>${schema.folder}/Crosscheck.xsd</Crosscheck_file>
+        <FFProbe_file>${schema.folder}/FFProbe.xsd</FFProbe_file>
+        <GallupOriginal_file>${schema.folder}/GallupOriginal.xsd</GallupOriginal_file>
+        <PBCore_file>${schema.folder}/PBCore.xsd</PBCore_file>
+        <ProgramBroadcast_file>${schema.folder}/ProgramBroadCast.xsd</ProgramBroadcast_file>
+        <ProgramStructure_file>${schema.folder}/ProgramStructure.xsd</ProgramStructure_file>
+        <RitzauOriginal_file>${schema.folder}/RitzauOriginal.xsd</RitzauOriginal_file>
+        <ShardMetadata_file>${schema.folder}/ShardMetadata.xsd</ShardMetadata_file>
+        <VHSMetadata_file>${schema.folder}/VHSMetadata.xsd</VHSMetadata_file>
     </properties>
 
 
@@ -113,6 +125,38 @@
                 </executions>
 
             </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.gmaven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+                <version>1.4</version>
+                <executions>
+                    <execution>
+                        <id>ReadSchemas</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <configuration>
+                            <source>
+                                <![CDATA[
+                                mapOut = project.properties.clone()
+
+                                for (property in mapOut) {
+                                    if (property.key.endsWith("file")){
+                                        def file = new File(property.value)
+                                        //println file.getText()
+                                        println property
+                                        project.properties[property.key+'_contents'] = file.getText()
+                                    }
+                                }
+                                ]]>
+                            </source>
+                        </configuration>
+                    </execution>
+
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
@@ -146,13 +190,13 @@
             <artifactId>ecm-fedoravalidatorhook</artifactId>
             <version>0.0.18</version>
         </dependency>
-	<!--
-        <dependency>
-            <groupId>dk.statsbiblioteket.doms.bitstorage.highlevel</groupId>
-            <artifactId>bitstorage-highlevel-hookApprove</artifactId>
-            <version>0.0.18</version>
-        </dependency>
-	-->
+        <!--
+          <dependency>
+              <groupId>dk.statsbiblioteket.doms.bitstorage.highlevel</groupId>
+              <artifactId>bitstorage-highlevel-hookApprove</artifactId>
+              <version>0.0.18</version>
+          </dependency>
+      -->
 
 
         <!--Fedora itself-->
@@ -163,14 +207,14 @@
         </dependency>
 
         <!--Webservices-->
-<!--
-        <dependency>
-            <groupId>dk.statsbiblioteket.doms.ecm</groupId>
-            <artifactId>ecm-service</artifactId>
-            <version>0.0.18</version>
-            <type>war</type>
-        </dependency>
--->
+        <!--
+                <dependency>
+                    <groupId>dk.statsbiblioteket.doms.ecm</groupId>
+                    <artifactId>ecm-service</artifactId>
+                    <version>0.0.18</version>
+                    <type>war</type>
+                </dependency>
+        -->
         <dependency>
             <groupId>dk.statsbiblioteket.doms.pidgenerator</groupId>
             <artifactId>pidgenerator-service</artifactId>
@@ -184,26 +228,26 @@
             <version>0.0.11</version>
             <type>war</type>
         </dependency>
-<!--
-        <dependency>
-            <groupId>dk.statsbiblioteket.doms.bitstorage.lowlevel</groupId>
-            <artifactId>bitstorage-lowlevel-service</artifactId>
-            <version>0.0.18</version>
-            <type>war</type>
-        </dependency>
-        <dependency>
-            <groupId>dk.statsbiblioteket.doms.bitstorage.characteriser</groupId>
-            <artifactId>bitstorage-characteriser-service</artifactId>
-            <version>0.0.18</version>
-            <type>war</type>
-        </dependency>
-        <dependency>
-            <groupId>dk.statsbiblioteket.doms.bitstorage.highlevel</groupId>
-            <artifactId>bitstorage-highlevel-service</artifactId>
-            <version>0.0.18</version>
-            <type>war</type>
-        </dependency>
--->
+        <!--
+                <dependency>
+                    <groupId>dk.statsbiblioteket.doms.bitstorage.lowlevel</groupId>
+                    <artifactId>bitstorage-lowlevel-service</artifactId>
+                    <version>0.0.18</version>
+                    <type>war</type>
+                </dependency>
+                <dependency>
+                    <groupId>dk.statsbiblioteket.doms.bitstorage.characteriser</groupId>
+                    <artifactId>bitstorage-characteriser-service</artifactId>
+                    <version>0.0.18</version>
+                    <type>war</type>
+                </dependency>
+                <dependency>
+                    <groupId>dk.statsbiblioteket.doms.bitstorage.highlevel</groupId>
+                    <artifactId>bitstorage-highlevel-service</artifactId>
+                    <version>0.0.18</version>
+                    <type>war</type>
+                </dependency>
+        -->
         <dependency>
             <groupId>dk.statsbiblioteket.doms.central</groupId>
             <artifactId>centralWebservice-service</artifactId>

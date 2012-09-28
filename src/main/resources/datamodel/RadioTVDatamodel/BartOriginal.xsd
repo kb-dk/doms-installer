@@ -1,0 +1,19 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://doms.statsbiblioteket.dk/types/bart_original/0/1/#">
+    <xs:element name="RadioTVFileDescriptiveMetadata">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="channelCode" type="xs:string"/>
+                <xs:element name="frequency" type="xs:string" minOccurs="0"/>
+                <xs:element name="channelName" type="xs:string" minOccurs="0"/>
+                <xs:element name="channelKey" type="xs:string" minOccurs="0"/>
+                <xs:element name="format" type="xs:string"/>
+                <xs:element name="startTimeDate" type="xs:dateTime"/>
+                <xs:element name="endTimeDate" type="xs:dateTime"/>
+                <xs:element name="recorder" type="xs:string"/>
+                <xs:element name="filename" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
