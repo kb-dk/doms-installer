@@ -346,7 +346,7 @@
                 Name of the triplestore to use. WARNING: changing the
                 triplestore running the Resource Index Rebuilder.</comment>
         </param>
-        <param name="syncUpdates" value="false">
+        <param name="syncUpdates" value="true">
             <comment>(optional, default is false)
                 Whether to flush the triple buffer before
                 returning from object modification operations.
