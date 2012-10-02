@@ -13,18 +13,52 @@
 
     <properties>
         <summarise.version>0.2-SNAPSHOT</summarise.version>
+
+
         <schema.folder>src/main/resources/datamodel/RadioTVDatamodel</schema.folder>
-        <BartOriginal_file>${schema.folder}/BartOriginal.xsd</BartOriginal_file>
-        <BroadcastMetadata_file>${schema.folder}/BroadcastMetadata.xsd</BroadcastMetadata_file>
-        <Crosscheck_file>${schema.folder}/Crosscheck.xsd</Crosscheck_file>
-        <FFProbe_file>${schema.folder}/FFProbe.xsd</FFProbe_file>
-        <GallupOriginal_file>${schema.folder}/GallupOriginal.xsd</GallupOriginal_file>
-        <PBCore_file>${schema.folder}/PBCore.xsd</PBCore_file>
-        <ProgramBroadcast_file>${schema.folder}/ProgramBroadCast.xsd</ProgramBroadcast_file>
-        <ProgramStructure_file>${schema.folder}/ProgramStructure.xsd</ProgramStructure_file>
-        <RitzauOriginal_file>${schema.folder}/RitzauOriginal.xsd</RitzauOriginal_file>
-        <ShardMetadata_file>${schema.folder}/ShardMetadata.xsd</ShardMetadata_file>
-        <VHSMetadata_file>${schema.folder}/VHSMetadata.xsd</VHSMetadata_file>
+        <program.object.folder>${schema.folder}/Program</program.object.folder>
+        <radioTVFile.object.folder>${schema.folder}/RadioTVFile</radioTVFile.object.folder>
+        <shard.object.folder>${schema.folder}/Shard</shard.object.folder>
+        <vhsFile.object.folder>${schema.folder}/VHSFile</vhsFile.object.folder>
+
+        <RadioTVFile_DSCOMP_file>${radioTVFile.object.folder}/DS-COMPOSITE-MODEL.xml</RadioTVFile_DSCOMP_file>
+        <!--<RadioTVFile_METHODS_file>${radioTVFile.object.folder}/METHODS.xml</RadioTVFile_METHODS_file>-->
+        <RadioTVFile_ONTOLOGY_file>${radioTVFile.object.folder}/ONTOLOGY.xml</RadioTVFile_ONTOLOGY_file>
+        <RadioTVFile_RELS-EXT_file>${radioTVFile.object.folder}/RELS-EXT.xml</RadioTVFile_RELS-EXT_file>
+        <RadioTVFile_VIEW_file>${radioTVFile.object.folder}/VIEW.xml</RadioTVFile_VIEW_file>
+        <BroadcastMetadata_file>${radioTVFile.object.folder}/BroadcastMetadata.xsd</BroadcastMetadata_file>
+        <Crosscheck_file>${radioTVFile.object.folder}/Crosscheck.xsd</Crosscheck_file>
+
+
+        <Program_DSCOMP_file>${program.object.folder}/DS-COMPOSITE-MODEL.xml</Program_DSCOMP_file>
+        <Program_METHODS_file>${program.object.folder}/METHODS.xml</Program_METHODS_file>
+        <Program_ONTOLOGY_file>${program.object.folder}/ONTOLOGY.xml</Program_ONTOLOGY_file>
+        <Program_RELS-EXT_file>${program.object.folder}/RELS-EXT.xml</Program_RELS-EXT_file>
+        <Program_VIEW_file>${program.object.folder}/VIEW.xml</Program_VIEW_file>
+        <BartOriginal_file>${program.object.folder}/BartOriginal.xsd</BartOriginal_file>
+        <FFProbe_file>${radioTVFile.object.folder}/FFProbe.xsd</FFProbe_file>
+        <GallupOriginal_file>${program.object.folder}/GallupOriginal.xsd</GallupOriginal_file>
+        <PBCore_file>${program.object.folder}/PBCore.xsd</PBCore_file>
+        <ProgramBroadcast_file>${program.object.folder}/ProgramBroadCast.xsd</ProgramBroadcast_file>
+        <ProgramStructure_file>${program.object.folder}/ProgramStructure.xsd</ProgramStructure_file>
+        <RitzauOriginal_file>${program.object.folder}/RitzauOriginal.xsd</RitzauOriginal_file>
+
+        <Shard_DSCOMP_file>${shard.object.folder}/DS-COMPOSITE-MODEL.xml</Shard_DSCOMP_file>
+        <!--<Shard_METHODS_file>${shard.object.folder}/METHODS.xml</Shard_METHODS_file>-->
+        <Shard_ONTOLOGY_file>${shard.object.folder}/ONTOLOGY.xml</Shard_ONTOLOGY_file>
+        <Shard_RELS-EXT_file>${shard.object.folder}/RELS-EXT.xml</Shard_RELS-EXT_file>
+        <Shard_VIEW_file>${shard.object.folder}/VIEW.xml</Shard_VIEW_file>
+        <ShardMetadata_file>${shard.object.folder}/ShardMetadata.xsd</ShardMetadata_file>
+
+
+        <VHSFile_DSCOMP_file>${vhsFile.object.folder}/DS-COMPOSITE-MODEL.xml</VHSFile_DSCOMP_file>
+        <VHSFile_METHODS_file>${vhsFile.object.folder}/METHODS.xml</VHSFile_METHODS_file>
+        <VHSFile_ONTOLOGY_file>${vhsFile.object.folder}/ONTOLOGY.xml</VHSFile_ONTOLOGY_file>
+        <VHSFile_RELS-EXT_file>${vhsFile.object.folder}/RELS-EXT.xml</VHSFile_RELS-EXT_file>
+        <VHSFile_VIEW_file>${vhsFile.object.folder}/VIEW.xml</VHSFile_VIEW_file>
+        <VHSMetadata_file>${vhsFile.object.folder}/VHSMetadata.xsd</VHSMetadata_file>
+
+
     </properties>
 
 

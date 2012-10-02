@@ -1,0 +1,30 @@
+<dsCompositeModel
+        xmlns="info:fedora/fedora-system:def/dsCompositeModel#">
+    <dsTypeModel ID="CONTENTS">
+        <form FORMAT_URI="info:pronom/x-fmt/386"/><!--MPEG 2-->
+        <form FORMAT_URI="info:pronom/x-fmt/385"/><!--MPEG 1-->
+    </dsTypeModel>
+    <dsTypeModel ID="DC">
+        <extension name="GUI">
+            <!--TODO No, should be ignored somehow-->
+            <presentAs type="readonly"/>
+        </extension>
+    </dsTypeModel>
+    <dsTypeModel ID="FFPROBE" optional="true">
+        <extension name="GUI">
+            <presentAs type="readonly"/>
+        </extension>
+        <extension name="SCHEMA">
+            <reference type="datastream" value="FFPROBE_SCHEMA"/>
+        </extension>
+    </dsTypeModel>
+    <dsTypeModel ID="VHS_METADATA" optional="true">
+        <extension name="GUI">
+            <presentAs type="editable"/>
+        </extension>
+        <extension name="SCHEMA">
+            <reference type="datastream" value="VHS_METADATA_SCHEMA"/>
+        </extension>
+    </dsTypeModel>
+
+</dsCompositeModel>

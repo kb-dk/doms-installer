@@ -1,0 +1,17 @@
+<dsCompositeModel
+        xmlns="info:fedora/fedora-system:def/dsCompositeModel#"
+        xmlns:schema="http://doms.statsbiblioteket.dk/types/dscompositeschema/0/1/#">
+    <dsTypeModel ID="SHARD_METADATA">
+        <form MIME="text/xml"/>
+        <extension name="GUI">
+            <presentAs type="editable"/>
+        </extension>
+        <extension name="SCHEMA">
+            <reference type="datastream" value="SHARD_METADATA_SCHEMA"/>
+        </extension>
+    </dsTypeModel>
+    <dsTypeModel ID="CONTENTS">
+        <form FORMAT_URI="info:pronom/fmt/199"/>
+    </dsTypeModel>
+</dsCompositeModel>
+

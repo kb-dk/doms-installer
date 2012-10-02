@@ -13,55 +13,7 @@
                           checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-            <dsCompositeModel
-                    xmlns="info:fedora/fedora-system:def/dsCompositeModel#">
-                <dsTypeModel ID="PBCORE">
-                    <form MIME="text/xml"/>
-                    <extension name="GUI">
-                        <presentAs type="editable"/>
-                    </extension>
-                    <extension name="SCHEMA">
-                        <reference type="datastream" value="PBCORE_SCHEMA"/>
-                    </extension>
-                </dsTypeModel>
-                <dsTypeModel ID="RITZAU_ORIGINAL">
-                    <form MIME="text/xml"/>
-                    <extension name="GUI">
-                        <presentAs type="readonly"/>
-                    </extension>
-                    <extension name="SCHEMA">
-                        <reference type="datastream" value="RITZAU_ORIGINAL_SCHEMA"/>
-                    </extension>
-                </dsTypeModel>
-                <dsTypeModel ID="GALLUP_ORIGINAL">
-                    <form MIME="text/xml"/>
-                    <extension name="GUI">
-                        <presentAs type="readonly"/>
-                    </extension>
-                    <extension name="SCHEMA">
-                        <reference type="datastream" value="GALLUP_ORIGINAL_SCHEMA"/>
-                    </extension>
-                </dsTypeModel>
-                <dsTypeModel ID="PROGRAM_STRUCTURE" optional="true">
-                    <form MIME="text/xml"/>
-                    <extension name="GUI">
-                        <presentAs type="editable"/>
-                    </extension>
-                    <extension name="SCHEMA">
-                        <reference type="datastream" value="PROGRAM_STRUCTURE_SCHEMA"/>
-                    </extension>
-                </dsTypeModel>
-                <dsTypeModel ID="PROGRAM_BROADCAST" optional="true">
-                    <form MIME="text/xml"/>
-                    <extension name="GUI">
-                        <presentAs type="editable"/>
-                    </extension>
-                    <extension name="SCHEMA">
-                        <reference type="datastream" value="PROGRAM_BROADCAST_SCHEMA"/>
-                    </extension>
-                </dsTypeModel>
-            </dsCompositeModel>
-
+            ${Program_DSCOMP_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
     <def:modifyDatastream pid="doms:ContentModel_Program" dsID="RELS-EXT"
@@ -73,22 +25,7 @@
                           checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                     xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
-                     xmlns:ecm="http://ecm.sourceforge.net/relations/0/2/#">
-                <rdf:Description rdf:about="info:fedora/doms:ContentModel_Program">
-                    <hasModel rdf:resource="info:fedora/fedora-system:ContentModel-3.0"
-                              xmlns="info:fedora/fedora-system:def/model#"/>
-                    <hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"
-                              xmlns="info:fedora/fedora-system:def/model#"/>
-                    <ecm:extendsModel rdf:resource="info:fedora/doms:ContentModel_DOMS"/>
-                    <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
-                    <ecm:isEntryForViewAngle>SummaVisible</ecm:isEntryForViewAngle>
-                    <ecm:isEntryForViewAngle>GUI</ecm:isEntryForViewAngle>
-                    <doms:hasLicense rdf:resource="info:fedora/doms:Open_License"/>
-                </rdf:Description>
-            </rdf:RDF>
-
+            ${Program_RELS-EXT_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
     <def:modifyDatastream pid="doms:ContentModel_Program" dsID="VIEW"
@@ -99,22 +36,7 @@
                           checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-            <v:views xmlns:v="http://ecm.sourceforge.net/types/view/0/2/#">
-                <v:viewangle name="SummaVisible">
-                    <v:relations xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#">
-                        <doms:hasShard/>
-                    </v:relations>
-                    <v:inverseRelations/>
-                </v:viewangle>
-                <v:viewangle name="GUI">
-                    <v:relations xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#">
-                        <doms:hasFile/>
-                    </v:relations>
-                    <v:inverseRelations/>
-                </v:viewangle>
-
-            </v:views>
-
+            ${Program_VIEW_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
     <def:modifyDatastream pid="doms:ContentModel_Program" dsID="ONTOLOGY"
@@ -126,27 +48,7 @@
                           checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-
-            <rdf:RDF
-                    xmlns:owl="http://www.w3.org/2002/07/owl#"
-                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-
-                <owl:Class rdf:about="info:fedora/doms:ContentModel_Program#class">
-
-                    <rdfs:subClassOf>
-                        <owl:Restriction>
-                            <owl:onProperty
-                                    rdf:resource="http://doms.statsbiblioteket.dk/relations/default/0/1/#hasFile"/>
-                            <owl:allValuesFrom
-                                    rdf:resource="info:fedora/doms:ContentModel_RadioTVFile#class"/>
-                        </owl:Restriction>
-                    </rdfs:subClassOf>
-
-                </owl:Class>
-
-                <owl:ObjectProperty rdf:about="http://doms.statsbiblioteket.dk/relations/default/0/1/#hasFile"/>
-            </rdf:RDF>
+            ${Program_ONTOLOGY_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
     <def:modifyDatastream pid="doms:ContentModel_Program" dsID="PBCORE_SCHEMA"
@@ -213,58 +115,7 @@
                        checksumType="MD5"
                        logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-            <ns:methods xmlns:ns="http://ecm.sourceforge.net/types/methods/0/2/#">
-                <ns:method>
-                  <ns:name>VHS clip import</ns:name>
-                  <ns:command>echo %%domsPid%% %%domsUser%% %%domsPassword%% %%quality%% %%file%% %%channelID%% %%timeStart%% %%timeEnd%% %%vhs-label%% %%recorder%%</ns:command>
-                  <ns:type>dynamic</ns:type>
-                  <ns:parameters>
-                    <ns:parameter>
-                      <ns:name>quality</ns:name>
-                      <ns:required>true</ns:required>
-                      <ns:repeatable>false</ns:repeatable>
-                      <ns:type>Integer</ns:type>
-                    </ns:parameter>
-                    <ns:parameter>
-                      <ns:name>file</ns:name>
-                      <ns:required>true</ns:required>
-                      <ns:repeatable>false</ns:repeatable>
-                      <ns:type>ServerFile</ns:type>
-                      <ns:config>/fedora/vhssamplefiles</ns:config>
-                    </ns:parameter>
-                    <ns:parameter>
-                      <ns:name>channelID</ns:name>
-                      <ns:required>true</ns:required>
-                      <ns:repeatable>false</ns:repeatable>
-                      <ns:type>Text</ns:type>
-                    </ns:parameter>
-                    <ns:parameter>
-                      <ns:name>timeStart</ns:name>
-                      <ns:required>true</ns:required>
-                      <ns:repeatable>false</ns:repeatable>
-                      <ns:type>Datetime</ns:type>
-                    </ns:parameter>
-                    <ns:parameter>
-                      <ns:name>timeEnd</ns:name>
-                      <ns:required>true</ns:required>
-                      <ns:repeatable>false</ns:repeatable>
-                      <ns:type>Datetime</ns:type>
-                    </ns:parameter>
-                    <ns:parameter>
-                      <ns:name>vhs-label</ns:name>
-                      <ns:required>true</ns:required>
-                      <ns:repeatable>false</ns:repeatable>
-                      <ns:type>TextBox</ns:type>
-                    </ns:parameter>
-                    <ns:parameter>
-                      <ns:name>recorder</ns:name>
-                      <ns:required>true</ns:required>
-                      <ns:repeatable>false</ns:repeatable>
-                      <ns:type>Text</ns:type>
-                    </ns:parameter>
-                  </ns:parameters>
-                </ns:method>
-            </ns:methods>
+            ${Program_METHODS_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
 
@@ -281,23 +132,7 @@
                           checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-            <dsCompositeModel
-                    xmlns="info:fedora/fedora-system:def/dsCompositeModel#"
-                    xmlns:schema="http://doms.statsbiblioteket.dk/types/dscompositeschema/0/1/#">
-                <dsTypeModel ID="SHARD_METADATA">
-                    <form MIME="text/xml"/>
-                    <extension name="GUI">
-                        <presentAs type="editable"/>
-                    </extension>
-                    <extension name="SCHEMA">
-                        <reference type="datastream" value="SHARD_METADATA_SCHEMA"/>
-                    </extension>
-                </dsTypeModel>
-                <dsTypeModel ID="CONTENTS">
-                    <form FORMAT_URI="info:pronom/fmt/199"/>
-                </dsTypeModel>
-            </dsCompositeModel>
-
+            ${Shard_DSCOMP_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
     <def:modifyDatastream pid="doms:ContentModel_Shard" dsID="RELS-EXT"
@@ -309,21 +144,7 @@
                           checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                     xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
-                     xmlns:ecm="http://ecm.sourceforge.net/relations/0/2/#"
-                     xmlns:fedora="info:fedora/fedora-system:def/model#">
-                <rdf:Description rdf:about="info:fedora/doms:ContentModel_Shard">
-                    <fedora:hasModel rdf:resource="info:fedora/fedora-system:ContentModel-3.0"/>
-                    <fedora:hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"/>
-                    <ecm:extendsModel rdf:resource="info:fedora/doms:ContentModel_File"/>
-                    <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
-                    <doms:hasLicense rdf:resource="info:fedora/doms:Open_License"/>
-                    <doms:isControlledByLowLevelBitstorage>false</doms:isControlledByLowLevelBitstorage>
-                    <ecm:isEntryForViewAngle>BES</ecm:isEntryForViewAngle>
-                </rdf:Description>
-            </rdf:RDF>
-
+            ${Shard_RELS-EXT_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
     <def:modifyDatastream pid="doms:ContentModel_Shard" dsID="VIEW"
@@ -334,17 +155,8 @@
                           checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-            <v:views xmlns:v="http://ecm.sourceforge.net/types/view/0/2/#">
-                <v:viewangle name="GUI">
-                    <v:relations xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#">
-                        <doms:consistsOf/>
-                    </v:relations>
-                    <v:inverseRelations/>
-                </v:viewangle>
-            </v:views>
-
-
-        </def:xmlData>
+            ${Shard_VIEW_file_contents}
+       </def:xmlData>
     </def:modifyDatastream>
     <def:modifyDatastream pid="doms:ContentModel_Shard" dsID="ONTOLOGY"
                           dsLabel="Local ontology"
@@ -355,31 +167,7 @@
                           checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-
-            <rdf:RDF
-                    xmlns:owl="http://www.w3.org/2002/07/owl#"
-                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-                <owl:Class rdf:about="info:fedora/doms:ContentModel_Shard#class">
-                    <rdfs:subClassOf>
-                        <owl:Restriction>
-                            <owl:onProperty
-                                    rdf:resource="http://doms.statsbiblioteket.dk/relations/default/0/1/#consistsOf"/>
-                            <owl:allValuesFrom rdf:resource="info:fedora/doms:ContentModel_RadioTVFile#class"/>
-                        </owl:Restriction>
-                    </rdfs:subClassOf>
-                    <rdfs:subClassOf>
-                        <owl:Restriction>
-                            <owl:onProperty
-                                    rdf:resource="http://doms.statsbiblioteket.dk/relations/default/0/1/#consistsOf"/>
-                            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1
-                            </owl:minCardinality>
-                        </owl:Restriction>
-                    </rdfs:subClassOf>
-                </owl:Class>
-
-                <owl:ObjectProperty rdf:about="http://doms.statsbiblioteket.dk/relations/default/0/1/#consistsOf"/>
-            </rdf:RDF>
+            ${Shard_ONTOLOGY_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
     <def:modifyDatastream pid="doms:ContentModel_Shard" dsID="SHARD_METADATA_SCHEMA"
@@ -406,58 +194,7 @@
                           checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-            <dsCompositeModel
-                    xmlns="info:fedora/fedora-system:def/dsCompositeModel#">
-                <dsTypeModel ID="CONTENTS">
-                    <form FORMAT_URI="info:pronom/x-fmt/386"/>
-                    <form FORMAT_URI="info:pronom/x-fmt/385"/>
-                    <form FORMAT_URI="info:pronom/fmt/6"/>
-
-                    <form FORMAT_URI="info:mime/video/MP2T;codecs=&quot;aac_latm,dvbsub,h264&quot;"></form>
-                    <form FORMAT_URI="info:mime/video/MP2T;codecs=&quot;aac_latm,dvbsub,h264,mp1&quot;"></form>
-                    <form FORMAT_URI="info:mime/video/MP2T;codecs=&quot;dvbsub,mp1,mp2,mpeg2video&quot;"></form>
-                    <form FORMAT_URI="info:mime/video/MP2T;codecs=&quot;mp2,mpeg2video&quot;"></form>
-                    <form FORMAT_URI="info:mime/video/MP2T;codecs=&quot;dvbsub,mp2,mpeg2video&quot;"></form>
-
-                </dsTypeModel>
-                <dsTypeModel ID="DC">
-                    <extension name="GUI">
-                        <presentAs type="editable"/>
-                    </extension>
-                </dsTypeModel>
-                <dsTypeModel ID="FFPROBE" optional="true">
-                    <extension name="GUI">
-                        <presentAs type="readonly"/>
-                    </extension>
-                    <extension name="SCHEMA">
-                        <reference type="datastream" value="FFPROBE_SCHEMA"/>
-                    </extension>
-                </dsTypeModel>
-                <dsTypeModel ID="CROSSCHECK" optional="true">
-                    <extension name="GUI">
-                        <presentAs type="readonly"/>
-                    </extension>
-                    <extension name="SCHEMA">
-                        <reference type="datastream" value="CROSSCHECK_SCHEMA"/>
-                    </extension>
-                </dsTypeModel>
-                <dsTypeModel ID="BROADCAST_METADATA" optional="true">
-                    <extension name="GUI">
-                        <presentAs type="editable"/>
-                    </extension>
-                    <extension name="SCHEMA">
-                        <reference type="datastream" value="BROADCAST_METADATA_SCHEMA"/>
-                    </extension>
-                </dsTypeModel>
-                <dsTypeModel ID="BART_ORIGINAL" optional="true">
-                    <extension name="GUI">
-                        <presentAs type="editable"/>
-                    </extension>
-                    <extension name="SCHEMA">
-                        <reference type="datastream" value="BART_ORIGINAL_SCHEMA"/>
-                    </extension>
-                </dsTypeModel>
-            </dsCompositeModel>
+            ${RadioTVFile_DSCOMP_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
     <def:modifyDatastream pid="doms:ContentModel_RadioTVFile" dsID="FFPROBE_SCHEMA"
@@ -513,21 +250,7 @@
                           checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                     xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
-                     xmlns:ecm="http://ecm.sourceforge.net/relations/0/2/#"
-                     xmlns:fedora="info:fedora/fedora-system:def/model#">
-                <rdf:Description rdf:about="info:fedora/doms:ContentModel_RadioTVFile">
-                    <fedora:hasModel rdf:resource="info:fedora/fedora-system:ContentModel-3.0"/>
-                    <fedora:hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"/>
-                    <ecm:extendsModel rdf:resource="info:fedora/doms:ContentModel_File"/>
-                    <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
-                    <doms:hasLicense rdf:resource="info:fedora/doms:Open_License"/>
-                    <doms:isControlledByLowLevelBitstorage>false</doms:isControlledByLowLevelBitstorage>
-                </rdf:Description>
-            </rdf:RDF>
-
-
+            ${RadioTVFile_RELS-EXT_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
     <def:modifyDatastream pid="doms:ContentModel_RadioTVFile" dsID="VIEW"
@@ -538,10 +261,7 @@
                           checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-            <v:views xmlns:v="http://ecm.sourceforge.net/types/view/0/2/#">
-            </v:views>
-
-
+            ${RadioTVFile_VIEW_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
     <def:modifyDatastream pid="doms:ContentModel_RadioTVFile" dsID="ONTOLOGY"
@@ -553,14 +273,7 @@
                           checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-            <rdf:RDF
-                    xmlns:owl="http://www.w3.org/2002/07/owl#"
-                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-
-                <owl:Class rdf:about="info:fedora/doms:ContentModel_RadioTVFile#class"/>
-            </rdf:RDF>
-
+            ${RadioTVFile_ONTOLOGY_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
 
@@ -576,36 +289,7 @@
                           checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-            <dsCompositeModel
-                    xmlns="info:fedora/fedora-system:def/dsCompositeModel#">
-                <dsTypeModel ID="CONTENTS">
-                    <form FORMAT_URI="info:pronom/x-fmt/386"/><!--MPEG 2-->
-                    <form FORMAT_URI="info:pronom/x-fmt/385"/><!--MPEG 1-->
-                </dsTypeModel>
-                <dsTypeModel ID="DC">
-                    <extension name="GUI">
-                        <!--TODO No, should be ignored somehow-->
-                        <presentAs type="readonly"/>
-                    </extension>
-                </dsTypeModel>
-                <dsTypeModel ID="FFPROBE" optional="true">
-                    <extension name="GUI">
-                        <presentAs type="readonly"/>
-                    </extension>
-                    <extension name="SCHEMA">
-                        <reference type="datastream" value="FFPROBE_SCHEMA"/>
-                    </extension>
-                </dsTypeModel>
-                <dsTypeModel ID="VHS_METADATA" optional="true">
-                    <extension name="GUI">
-                        <presentAs type="editable"/>
-                    </extension>
-                    <extension name="SCHEMA">
-                        <reference type="datastream" value="VHS_METADATA_SCHEMA"/>
-                    </extension>
-                </dsTypeModel>
-
-            </dsCompositeModel>
+            ${VHSFile_DSCOMP_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
     <def:modifyDatastream pid="doms:ContentModel_VHSFile" dsID="METHODS"
@@ -616,58 +300,7 @@
                        checksumType="MD5"
                        logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-            <ns:methods xmlns:ns="http://ecm.sourceforge.net/types/methods/0/2/#">
-                <ns:method>
-                    <ns:name>Ole_Import</ns:name>
-                    <ns:command>echo %%domsUser%% %%domsPassword%% %%domsLocation%% %%quality%% %%file%% %%channelID%% %%timeStart%% %%timeEnd%% %%vhs-label%% %%recorder%%</ns:command>
-                    <ns:parameters>
-                        <ns:parameter>
-                            <ns:name>quality</ns:name>
-                            <ns:required>true</ns:required>
-                            <ns:repeatable>false</ns:repeatable>
-                            <ns:type>Integer</ns:type>
-                        </ns:parameter>
-                        <ns:parameter>
-                            <ns:name>file</ns:name>
-                            <ns:required>true</ns:required>
-                            <ns:repeatable>false</ns:repeatable>
-                            <ns:type>ServerFile</ns:type>
-                            <ns:config>/home/fedora</ns:config>
-                        </ns:parameter>
-                        <ns:parameter>
-                            <ns:name>channelID</ns:name>
-                            <ns:required>true</ns:required>
-                            <ns:repeatable>false</ns:repeatable>
-                            <ns:type>Text</ns:type>
-                            <ns:default>dr1</ns:default>
-                        </ns:parameter>
-                        <ns:parameter>
-                            <ns:name>timeStart</ns:name>
-                            <ns:required>true</ns:required>
-                            <ns:repeatable>false</ns:repeatable>
-                            <ns:type>Datetime</ns:type>
-                        </ns:parameter>
-                        <ns:parameter>
-                            <ns:name>timeEnd</ns:name>
-                            <ns:required>true</ns:required>
-                            <ns:repeatable>false</ns:repeatable>
-                            <ns:type>Datetime</ns:type>
-                        </ns:parameter>
-                        <ns:parameter>
-                            <ns:name>vhs-label</ns:name>
-                            <ns:required>true</ns:required>
-                            <ns:repeatable>false</ns:repeatable>
-                            <ns:type>TextBox</ns:type>
-                        </ns:parameter>
-                        <ns:parameter>
-                            <ns:name>recorder</ns:name>
-                            <ns:required>true</ns:required>
-                            <ns:repeatable>false</ns:repeatable>
-                            <ns:type>Text</ns:type>
-                        </ns:parameter>
-                    </ns:parameters>
-                </ns:method>
-            </ns:methods>
+            ${VHSFile_METHODS_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
 
@@ -702,22 +335,7 @@
                           checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                     xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
-                     xmlns:ecm="http://ecm.sourceforge.net/relations/0/2/#"
-                     xmlns:fedora="info:fedora/fedora-system:def/model#">
-                <rdf:Description rdf:about="info:fedora/doms:ContentModel_VHSFile">
-                    <fedora:hasModel rdf:resource="info:fedora/fedora-system:ContentModel-3.0"/>
-                    <fedora:hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"/>
-                    <ecm:extendsModel rdf:resource="info:fedora/doms:ContentModel_File"/>
-                    <ecm:isEntryForViewAngle>GUI</ecm:isEntryForViewAngle>
-                    <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
-                    <doms:hasLicense rdf:resource="info:fedora/doms:Open_License"/>
-                    <doms:isControlledByLowLevelBitstorage>false</doms:isControlledByLowLevelBitstorage>
-                </rdf:Description>
-            </rdf:RDF>
-
-
+            ${VHSFile_RELS-EXT_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
     <def:modifyDatastream pid="doms:ContentModel_VHSFile" dsID="VIEW"
@@ -728,10 +346,7 @@
                           checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-            <v:views xmlns:v="http://ecm.sourceforge.net/types/view/0/2/#">
-            </v:views>
-
-
+            ${VHSFile_VIEW_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
     <def:modifyDatastream pid="doms:ContentModel_VHSFile" dsID="ONTOLOGY"
@@ -753,72 +368,6 @@
 
         </def:xmlData>
     </def:modifyDatastream>
-
-    <def:modifyDatastream pid="doms:ContentModel_VHSFile" dsID="METHODS"
-                       dsLabel="Methods datastream"
-                       dsMIME="application/xml"
-                       versionable="true"
-                       altIDs="" dsControlGroupType="X" dsState="A"
-                       checksumType="MD5"
-                       logMessage="Updating objects as part of a doms install/upgrade">
-        <def:xmlData>
-
-            <ns:methods xmlns:ns="http://ecm.sourceforge.net/types/methods/0/2/#">
-              <ns:method>
-                <ns:name>VHS import</ns:name>
-                <ns:command>/home/fedora/ingester-workflow/invoke.sh %%domsUser%% %%domsPassword%% %%quality%% %%file%% %%channelID%% %%timeStart%% %%timeEnd%% %%vhs-label%% %%recorder%%</ns:command>
-                <ns:type>static</ns:type>
-                <ns:parameters>
-                  <ns:parameter>
-                    <ns:name>quality</ns:name>
-                    <ns:required>true</ns:required>
-                    <ns:repeatable>false</ns:repeatable>
-                    <ns:type>Integer</ns:type>
-                  </ns:parameter>
-                  <ns:parameter>
-                    <ns:name>file</ns:name>
-                    <ns:required>true</ns:required>
-                    <ns:repeatable>false</ns:repeatable>
-                    <ns:type>ServerFile</ns:type>
-                    <ns:config>/fedora/vhssamplefiles</ns:config>
-                  </ns:parameter>
-                  <ns:parameter>
-                    <ns:name>channelID</ns:name>
-                    <ns:required>true</ns:required>
-                    <ns:repeatable>false</ns:repeatable>
-                    <ns:type>Text</ns:type>
-                  </ns:parameter>
-                  <ns:parameter>
-                    <ns:name>timeStart</ns:name>
-                    <ns:required>true</ns:required>
-                    <ns:repeatable>false</ns:repeatable>
-                    <ns:type>Datetime</ns:type>
-                  </ns:parameter>
-                  <ns:parameter>
-                    <ns:name>timeEnd</ns:name>
-                    <ns:required>true</ns:required>
-                    <ns:repeatable>false</ns:repeatable>
-                    <ns:type>Datetime</ns:type>
-                  </ns:parameter>
-                  <ns:parameter>
-                    <ns:name>vhs-label</ns:name>
-                    <ns:required>true</ns:required>
-                    <ns:repeatable>false</ns:repeatable>
-                    <ns:type>TextBox</ns:type>
-                  </ns:parameter>
-                  <ns:parameter>
-                    <ns:name>recorder</ns:name>
-                    <ns:required>true</ns:required>
-                    <ns:repeatable>false</ns:repeatable>
-                    <ns:type>Text</ns:type>
-                  </ns:parameter>
-                </ns:parameters>
-              </ns:method>
-            </ns:methods>
-        </def:xmlData>
-    </def:modifyDatastream>
-
-
 
     <!--RadioTV_Collection-->
     <def:modifyObject pid="doms:RadioTV_Collection" state="I"

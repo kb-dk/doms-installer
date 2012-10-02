@@ -1,0 +1,54 @@
+<dsCompositeModel
+        xmlns="info:fedora/fedora-system:def/dsCompositeModel#">
+    <dsTypeModel ID="CONTENTS">
+        <form FORMAT_URI="info:pronom/x-fmt/386"/>
+        <form FORMAT_URI="info:pronom/x-fmt/385"/>
+        <form FORMAT_URI="info:pronom/fmt/6"/>
+        <form FORMAT_URI="info:pronom/fmt/133"/>
+
+
+        <form FORMAT_URI="info:mime/video/MP2T;codecs=&quot;aac_latm,dvbsub,h264&quot;"></form>
+        <form FORMAT_URI="info:mime/video/MP2T;codecs=&quot;aac_latm,dvbsub,h264,mp1&quot;"></form>
+        <form FORMAT_URI="info:mime/video/MP2T;codecs=&quot;dvbsub,mp1,mp2,mpeg2video&quot;"></form>
+        <form FORMAT_URI="info:mime/video/MP2T;codecs=&quot;mp2,mpeg2video&quot;"></form>
+        <form FORMAT_URI="info:mime/video/MP2T;codecs=&quot;dvbsub,mp2,mpeg2video&quot;"></form>
+
+    </dsTypeModel>
+    <dsTypeModel ID="DC">
+        <extension name="GUI">
+            <presentAs type="editable"/>
+        </extension>
+    </dsTypeModel>
+    <dsTypeModel ID="FFPROBE" optional="true">
+        <extension name="GUI">
+            <presentAs type="readonly"/>
+        </extension>
+        <extension name="SCHEMA">
+            <reference type="datastream" value="FFPROBE_SCHEMA"/>
+        </extension>
+    </dsTypeModel>
+    <dsTypeModel ID="CROSSCHECK" optional="true">
+        <extension name="GUI">
+            <presentAs type="readonly"/>
+        </extension>
+        <extension name="SCHEMA">
+            <reference type="datastream" value="CROSSCHECK_SCHEMA"/>
+        </extension>
+    </dsTypeModel>
+    <dsTypeModel ID="BROADCAST_METADATA" optional="true">
+        <extension name="GUI">
+            <presentAs type="editable"/>
+        </extension>
+        <extension name="SCHEMA">
+            <reference type="datastream" value="BROADCAST_METADATA_SCHEMA"/>
+        </extension>
+    </dsTypeModel>
+    <dsTypeModel ID="BART_ORIGINAL" optional="true">
+        <extension name="GUI">
+            <presentAs type="editable"/>
+        </extension>
+        <extension name="SCHEMA">
+            <reference type="datastream" value="BART_ORIGINAL_SCHEMA"/>
+        </extension>
+    </dsTypeModel>
+</dsCompositeModel>

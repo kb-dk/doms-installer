@@ -1,0 +1,14 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:doms="http://doms.statsbiblioteket.dk/relations/default/0/1/#"
+         xmlns:ecm="http://ecm.sourceforge.net/relations/0/2/#"
+         xmlns:fedora="info:fedora/fedora-system:def/model#">
+    <rdf:Description rdf:about="info:fedora/doms:ContentModel_Shard">
+        <fedora:hasModel rdf:resource="info:fedora/fedora-system:ContentModel-3.0"/>
+        <fedora:hasModel rdf:resource="info:fedora/doms:ContentModel_DOMS"/>
+        <ecm:extendsModel rdf:resource="info:fedora/doms:ContentModel_File"/>
+        <doms:isPartOfCollection rdf:resource="info:fedora/doms:RadioTV_Collection"/>
+        <doms:hasLicense rdf:resource="info:fedora/doms:Open_License"/>
+        <doms:isControlledByLowLevelBitstorage>false</doms:isControlledByLowLevelBitstorage>
+        <ecm:isEntryForViewAngle>BES</ecm:isEntryForViewAngle>
+    </rdf:Description>
+</rdf:RDF>

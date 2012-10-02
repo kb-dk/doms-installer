@@ -1,0 +1,49 @@
+<dsCompositeModel
+        xmlns="info:fedora/fedora-system:def/dsCompositeModel#">
+    <dsTypeModel ID="PBCORE">
+        <form MIME="text/xml"/>
+        <extension name="GUI">
+            <presentAs type="editable"/>
+        </extension>
+        <extension name="SCHEMA">
+            <reference type="datastream" value="PBCORE_SCHEMA"/>
+        </extension>
+    </dsTypeModel>
+    <dsTypeModel ID="RITZAU_ORIGINAL">
+        <form MIME="text/xml"/>
+        <extension name="GUI">
+            <presentAs type="readonly"/>
+        </extension>
+        <extension name="SCHEMA">
+            <reference type="datastream" value="RITZAU_ORIGINAL_SCHEMA"/>
+        </extension>
+    </dsTypeModel>
+    <dsTypeModel ID="GALLUP_ORIGINAL">
+        <form MIME="text/xml"/>
+        <extension name="GUI">
+            <presentAs type="readonly"/>
+        </extension>
+        <extension name="SCHEMA">
+            <reference type="datastream" value="GALLUP_ORIGINAL_SCHEMA"/>
+        </extension>
+    </dsTypeModel>
+    <dsTypeModel ID="PROGRAM_STRUCTURE" optional="true">
+        <form MIME="text/xml"/>
+        <extension name="GUI">
+            <presentAs type="editable"/>
+        </extension>
+        <extension name="SCHEMA">
+            <reference type="datastream" value="PROGRAM_STRUCTURE_SCHEMA"/>
+        </extension>
+    </dsTypeModel>
+    <dsTypeModel ID="PROGRAM_BROADCAST" optional="true">
+        <form MIME="text/xml"/>
+        <extension name="GUI">
+            <presentAs type="editable"/>
+        </extension>
+        <extension name="SCHEMA">
+            <reference type="datastream" value="PROGRAM_BROADCAST_SCHEMA"/>
+        </extension>
+    </dsTypeModel>
+</dsCompositeModel>
+
