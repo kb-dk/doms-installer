@@ -267,6 +267,19 @@
             <placeholder/>
         </def:xmlData>
     </def:addDatastream>
+
+    <def:addDatastream pid="doms:ContentModel_RadioTVFile" dsID="FFPROBE_ERROR_LOG_SCHEMA"
+                       dsLabel="FFPROBE error log metadata schema"
+                       dsMIME="text/xml"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
+    </def:addDatastream>
+
     <def:addDatastream pid="doms:ContentModel_RadioTVFile" dsID="FFPROBE_SCHEMA"
                        dsLabel="FFPROBE SCHEMA datastream"
                        dsMIME="text/xml"
@@ -365,6 +378,19 @@
             </rdf:RDF>
         </def:xmlData>
     </def:addDatastream>
+
+    <def:addDatastream pid="doms:ContentModel_VHSFile" dsID="FFPROBE_ERROR_LOG_SCHEMA"
+                       dsLabel="FFPROBE error log metadata schema"
+                       dsMIME="text/xml"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="MD5"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <placeholder/>
+        </def:xmlData>
+    </def:addDatastream>
+
     <def:addDatastream pid="doms:ContentModel_VHSFile" dsID="VIEW"
                        dsLabel="VIEW datastream"
                        dsMIME="application/rdf+xml"
