@@ -173,10 +173,12 @@ pushd $FEDORA_DIR/install/fedorawar > /dev/null
 mkdir -p WEB-INF/lib
 
 cp $BASEDIR/fedoralib/* WEB-INF/lib
-sed '/<\/web-app>/d' < WEB-INF/web.xml > /tmp/fedoraweb.xml
-cat $CONFIG_TEMP_DIR/fedoraWebXmlInsert.xml >> /tmp/fedoraweb.xml
-echo "</web-app>" >> /tmp/fedoraweb.xml
-cp /tmp/fedoraweb.xml WEB-INF/web.xml
+FEDORAWEBXML=`mktemp`
+sed '/<\/web-app>/d' < WEB-INF/web.xml > $FEDORAWEBXML
+cat $CONFIG_TEMP_DIR/fedoraWebXmlInsert.xml >> $FEDORAWEBXML
+echo "</web-app>" >> $FEDORAWEBXML
+cp $FEDORAWEBXML WEB-INF/web.xml
+rm $FEDORAWEBXML
 
 mv ../fedora.war ../fedora_original.war
 zip -r ../fedora.war *    > /dev/null
