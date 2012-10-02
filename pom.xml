@@ -28,6 +28,9 @@
         <RadioTVFile_VIEW_file>${radioTVFile.object.folder}/VIEW.xml</RadioTVFile_VIEW_file>
         <BroadcastMetadata_file>${radioTVFile.object.folder}/BroadcastMetadata.xsd</BroadcastMetadata_file>
         <Crosscheck_file>${radioTVFile.object.folder}/Crosscheck.xsd</Crosscheck_file>
+        <FFProbe_file>${radioTVFile.object.folder}/FFProbe.xsd</FFProbe_file>
+        <FFProbe_error_log_file>${radioTVFile.object.folder}/FFProbeError.xsd</FFProbe_error_log_file>
+
 
 
         <Program_DSCOMP_file>${program.object.folder}/DS-COMPOSITE-MODEL.xml</Program_DSCOMP_file>
@@ -36,7 +39,6 @@
         <Program_RELS-EXT_file>${program.object.folder}/RELS-EXT.xml</Program_RELS-EXT_file>
         <Program_VIEW_file>${program.object.folder}/VIEW.xml</Program_VIEW_file>
         <BartOriginal_file>${program.object.folder}/BartOriginal.xsd</BartOriginal_file>
-        <FFProbe_file>${radioTVFile.object.folder}/FFProbe.xsd</FFProbe_file>
         <GallupOriginal_file>${program.object.folder}/GallupOriginal.xsd</GallupOriginal_file>
         <PBCore_file>${program.object.folder}/PBCore.xsd</PBCore_file>
         <ProgramBroadcast_file>${program.object.folder}/ProgramBroadCast.xsd</ProgramBroadcast_file>

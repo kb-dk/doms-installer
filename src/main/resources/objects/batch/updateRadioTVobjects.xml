@@ -208,6 +208,19 @@
             ${FFProbe_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
+
+    <def:modifyDatastream pid="doms:ContentModel_RadioTVFile" dsID="FFPROBE_ERROR_LOG_SCHEMA"
+                          dsLabel="FFPROBE error log metadata schema"
+                          dsMIME="text/xml"
+                          versionable="true"
+                          altIDs="" dsControlGroupType="X" dsState="A"
+                          checksumType="MD5"
+                          logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            ${FFProbe_error_log_file_contents}
+        </def:xmlData>
+    </def:modifyDatastream>
+
     <def:modifyDatastream pid="doms:ContentModel_RadioTVFile" dsID="CROSSCHECK_SCHEMA"
                           dsLabel="CROSSCHECK metadata schema"
                           dsMIME="text/xml"
@@ -315,6 +328,18 @@
             ${FFProbe_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
+    <def:modifyDatastream pid="doms:ContentModel_VHSFile" dsID="FFPROBE_ERROR_LOG_SCHEMA"
+                          dsLabel="FFPROBE error log metadata schema"
+                          dsMIME="text/xml"
+                          versionable="true"
+                          altIDs="" dsControlGroupType="X" dsState="A"
+                          checksumType="MD5"
+                          logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            ${FFProbe_error_log_file_contents}
+        </def:xmlData>
+    </def:modifyDatastream>
+
     <def:modifyDatastream pid="doms:ContentModel_VHSFile" dsID="VHS_METADATA_SCHEMA"
                           dsLabel="VHS_METADATA datastream schema"
                           dsMIME="text/xml"
@@ -358,14 +383,7 @@
                           checksumType="MD5"
                           logMessage="Updating objects as part of a doms install/upgrade">
         <def:xmlData>
-            <rdf:RDF
-                    xmlns:owl="http://www.w3.org/2002/07/owl#"
-                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-
-                <owl:Class rdf:about="info:fedora/doms:ContentModel_VHSFile#class"/>
-            </rdf:RDF>
-
+            ${VHSFile_ONTOLOGY_file_contents}
         </def:xmlData>
     </def:modifyDatastream>
 

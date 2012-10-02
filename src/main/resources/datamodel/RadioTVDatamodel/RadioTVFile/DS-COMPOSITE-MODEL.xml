@@ -27,6 +27,15 @@
             <reference type="datastream" value="FFPROBE_SCHEMA"/>
         </extension>
     </dsTypeModel>
+    <dsTypeModel ID="FFPROBE_ERROR_LOG" optional="true">
+        <extension name="GUI">
+            <presentAs type="readonly"/>
+        </extension>
+        <extension name="SCHEMA">
+            <reference type="datastream" value="FFPROBE_ERROR_LOG_SCHEMA"/>
+        </extension>
+    </dsTypeModel>
+
     <dsTypeModel ID="CROSSCHECK" optional="true">
         <extension name="GUI">
             <presentAs type="readonly"/>
@@ -41,14 +50,6 @@
         </extension>
         <extension name="SCHEMA">
             <reference type="datastream" value="BROADCAST_METADATA_SCHEMA"/>
-        </extension>
-    </dsTypeModel>
-    <dsTypeModel ID="BART_ORIGINAL" optional="true">
-        <extension name="GUI">
-            <presentAs type="editable"/>
-        </extension>
-        <extension name="SCHEMA">
-            <reference type="datastream" value="BART_ORIGINAL_SCHEMA"/>
         </extension>
     </dsTypeModel>
 </dsCompositeModel>

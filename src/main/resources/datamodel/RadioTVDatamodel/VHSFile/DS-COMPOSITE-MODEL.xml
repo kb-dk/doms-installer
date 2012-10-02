@@ -18,6 +18,15 @@
             <reference type="datastream" value="FFPROBE_SCHEMA"/>
         </extension>
     </dsTypeModel>
+    <dsTypeModel ID="FFPROBE_ERROR_LOG" optional="true">
+        <extension name="GUI">
+            <presentAs type="readonly"/>
+        </extension>
+        <extension name="SCHEMA">
+            <reference type="datastream" value="FFPROBE_ERROR_LOG_SCHEMA"/>
+        </extension>
+    </dsTypeModel>
+
     <dsTypeModel ID="VHS_METADATA" optional="true">
         <extension name="GUI">
             <presentAs type="editable"/>

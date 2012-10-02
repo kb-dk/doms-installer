@@ -12,9 +12,17 @@
                 <owl:allValuesFrom
                         rdf:resource="info:fedora/doms:ContentModel_RadioTVFile#class"/>
             </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty
+                        rdf:resource="http://doms.statsbiblioteket.dk/relations/default/0/1/#hasShard"/>
+                <owl:allValuesFrom
+                        rdf:resource="info:fedora/doms:ContentModel_Shard#class"/>
+            </owl:Restriction>
+
         </rdfs:subClassOf>
 
     </owl:Class>
 
     <owl:ObjectProperty rdf:about="http://doms.statsbiblioteket.dk/relations/default/0/1/#hasFile"/>
+    <owl:ObjectProperty rdf:about="http://doms.statsbiblioteket.dk/relations/default/0/1/#hasShard"/>
 </rdf:RDF>
