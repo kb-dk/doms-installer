@@ -25,6 +25,8 @@ sed \
 -e 's|\$TOMCAT_SERVERNAME\$|'"$TOMCAT_SERVERNAME"'|g' \
 -e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
 -e 's|\$FEDORAADMINPASS\$|'"$FEDORAADMINPASS"'|g' \
+-e 's|\$YOUSEEUSER\$|'"$YOUSEEUSER"'|g' \
+-e 's|\$YOUSEEUSERPASS\$|'"$YOUSEEUSERPASS"'|g' \
 -e 's|\$FEDORAUSER\$|'"$FEDORAUSER"'|g' \
 -e 's|\$FEDORAUSERPASS\$|'"$FEDORAUSERPASS"'|g' \
 -e 's|\$BITFINDER\$|'"$BITFINDER"'|g' \

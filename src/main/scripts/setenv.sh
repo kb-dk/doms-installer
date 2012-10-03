@@ -29,6 +29,10 @@ TOMCAT_SERVERNAME=localhost
 FEDORAADMIN=fedoraAdmin
 FEDORAADMINPASS=fedoraAdminPass
 
+YOUSEEUSER=youseeIngester
+YOUSEEUSERPASS=youseeIngesterPass
+
+
 FEDORAUSER=fedoraReadOnlyAdmin
 FEDORAUSERPASS=fedoraReadOnlyPass
 
