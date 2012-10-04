@@ -1,0 +1,184 @@
+<def:batchModify xmlns:def="http://www.fedora.info/definitions/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://www.fedora.info/definitions/ http://naiad:7880/schemaStore/batchModifySchema.xsd">
+
+    <def:modifyObject pid="doms:RadioTV_InhouseLicense" state="I"
+                      logMessage="Updating The radio/tv license"/>
+
+    <def:modifyDatastream pid="doms:RadioTV_InhouseLicense" dsID="LICENSE"
+                          dsLabel="LICENSE datastream"
+                          dsMIME="text/xml"
+                          versionable="true"
+                          altIDs="" dsControlGroupType="X" dsState="A"
+                          checksumType="MD5"
+                          logMessage="Updating The radio/tv license">
+        <def:xmlData>
+            <Policy xmlns="urn:oasis:names:tc:xacml:1.0:policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    PolicyId="RadioTV_InhouseLicense"
+                    RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
+                <Description>The is the license for the radio tv collection. Complete access is granted, if and only if,
+                    the user has the inhouse
+                    or administrator or readonlyadministrator fedoraRole.
+                </Description>
+                <Target>
+                    <Subjects>
+                        <AnySubject></AnySubject>
+                    </Subjects>
+                    <Resources>
+                        <AnyResource></AnyResource>
+                    </Resources>
+                    <Actions>
+                        <AnyAction></AnyAction>
+                    </Actions>
+                </Target>
+                <Rule Effect="Deny" RuleId="1">
+                    <Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+                            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
+                                <SubjectAttributeDesignator AttributeId="eduPersonScopedAffiliation"
+                                                            DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                            MustBePresent="false"/>
+                                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
+                                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                >student@hum.au.dk
+                                        </AttributeValue>
+                                    </Apply>
+                                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                >employee@hum.au.dk
+                                        </AttributeValue>
+                                    </Apply>
+                                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                >staff@hum.au.dk
+                                        </AttributeValue>
+                                    </Apply>
+                                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                >faculty@hum.au.dk
+                                        </AttributeValue>
+                                    </Apply>
+                                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                >inhouse@ip.roles.statsbiblioteket.dk
+                                        </AttributeValue>
+                                    </Apply>
+
+                                </Apply>
+                            </Apply>
+                            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
+                                <SubjectAttributeDesignator AttributeId="fedoraRole"
+                                                            DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                            MustBePresent="false"/>
+                                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
+                                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                >administrator
+                                        </AttributeValue>
+                                    </Apply>
+                                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                >readonlyadministrator
+                                        </AttributeValue>
+                                    </Apply>
+                                </Apply>
+                            </Apply>
+                            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
+                                <SubjectAttributeDesignator AttributeId="sbAdGroups"
+                                                            DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                            MustBePresent="false"/>
+                                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
+                                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                >domsadmin_devel
+                                        </AttributeValue>
+                                    </Apply>
+                                </Apply>
+                            </Apply>
+
+                        </Apply>
+                    </Condition>
+                </Rule>
+            </Policy>
+        </def:xmlData>
+    </def:modifyDatastream>
+
+    <def:modifyObject pid="doms:RadioTV_InhouseLicense" state="A"
+                      logMessage="Updating The radio/tv license"/>
+
+    <def:modifyObject pid="doms:RadioTV_adminOnlyLicense" state="I"
+                      logMessage="Updating the radio TV license"/>
+
+    <def:modifyDatastream pid="doms:RadioTV_adminOnlyLicense" dsID="LICENSE"
+                          dsLabel="LICENSE datastream"
+                          dsMIME="text/xml"
+                          versionable="true"
+                          altIDs="" dsControlGroupType="X" dsState="A"
+                          checksumType="DISABLED"
+                          logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <Policy xmlns="urn:oasis:names:tc:xacml:1.0:policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    PolicyId="RadioTV_adminOnlyLicense"
+                    RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
+                <Description>The is the license for the radio tv collection. Complete access is granted, if and only if,
+                    the user has the
+                    administrator or readonlyadministrator fedoraRole.
+                </Description>
+                <Target>
+                    <Subjects>
+                        <AnySubject></AnySubject>
+                    </Subjects>
+                    <Resources>
+                        <AnyResource></AnyResource>
+                    </Resources>
+                    <Actions>
+                        <AnyAction></AnyAction>
+                    </Actions>
+                </Target>
+                <Rule Effect="Deny" RuleId="1">
+                    <Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+                            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
+                                <SubjectAttributeDesignator AttributeId="fedoraRole"
+                                                            DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                            MustBePresent="false"></SubjectAttributeDesignator>
+                                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
+                                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                >administrator
+                                        </AttributeValue>
+                                    </Apply>
+                                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                >readonlyadministrator
+                                        </AttributeValue>
+                                    </Apply>
+                                </Apply>
+                            </Apply>
+                            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
+                                <SubjectAttributeDesignator AttributeId="sbAdGroups"
+                                                            DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                            MustBePresent="false"/>
+                                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
+                                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
+                                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+                                                >domsadmin_devel
+                                        </AttributeValue>
+                                    </Apply>
+                                </Apply>
+                            </Apply>
+
+                        </Apply>
+                    </Condition>
+                </Rule>
+            </Policy>
+
+        </def:xmlData>
+    </def:modifyDatastream>
+
+    <def:modifyObject pid="doms:RadioTV_adminOnlyLicense" state="A"
+                      logMessage="Updating the radio TV license"/>
+
+
+</def:batchModify>
+

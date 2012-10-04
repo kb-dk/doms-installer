@@ -1,0 +1,43 @@
+<def:batchModify xmlns:def="http://www.fedora.info/definitions/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://www.fedora.info/definitions/ http://naiad:7880/schemaStore/batchModifySchema.xsd">
+
+
+    <def:modifyObject pid="doms:ContentModel_File" state="I"
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
+    <!--remove CHARACTERISATION from dsComp model -->
+    <def:modifyDatastream pid="doms:ContentModel_File" dsID="DS-COMPOSITE-MODEL"
+                       dsLabel=""
+                       dsMIME="text/xml"
+                       formatURI="info:fedora/fedora-system:FedoraDSCompositeModel-1.0"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="A"
+                       checksumType="DISABLED"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <dsCompositeModel
+                    xmlns="info:fedora/fedora-system:def/dsCompositeModel#"
+                    xmlns:schema="http://doms.statsbiblioteket.dk/types/dscompositeschema/0/1/#">
+                <dsTypeModel ID="CONTENTS">
+                    <form MIME="application/octet-stream"/>
+                </dsTypeModel>
+            </dsCompositeModel>
+        </def:xmlData>
+    </def:modifyDatastream>
+
+    <!--remove the CHARACTERISATION_SCHEMA, not used anymore-->
+    <def:modifyDatastream pid="doms:ContentModel_File" dsID="CHARACTERISATION_SCHEMA"
+                       dsLabel="CHARACTERISATION schema"
+                       dsMIME="text/xml"
+                       versionable="true"
+                       altIDs="" dsControlGroupType="X" dsState="D"
+                       checksumType="DISABLED"
+                       logMessage="Updating objects as part of a doms install/upgrade">
+        <def:xmlData>
+            <unused />
+        </def:xmlData>
+    </def:modifyDatastream>
+
+    <def:modifyObject pid="doms:ContentModel_File" state="A"
+                      logMessage="Updating objects as part of a doms install/upgrade"/>
+
+</def:batchModify>
