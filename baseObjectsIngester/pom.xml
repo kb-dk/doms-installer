@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>dk.statsbiblioteket.doms.installer</groupId>
+        <artifactId>installer</artifactId>
+        <version>0.11.3-SNAPSHOT</version>
+    </parent>
+
+    <groupId>dk.statsbiblioteket.doms.installer</groupId>
+    <artifactId>baseObjectsIngester</artifactId>
+    <version>0.11.3-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <properties>
+
+
+        <schema.folder>${project.basedir}/src/main/resources/datamodel/RadioTVDatamodel</schema.folder>
+        <program.object.folder>${schema.folder}/Program</program.object.folder>
+        <radioTVFile.object.folder>${schema.folder}/RadioTVFile</radioTVFile.object.folder>
+        <shard.object.folder>${schema.folder}/Shard</shard.object.folder>
+        <vhsFile.object.folder>${schema.folder}/VHSFile</vhsFile.object.folder>
+
+        <RadioTVFile_DSCOMP_file>${radioTVFile.object.folder}/DS-COMPOSITE-MODEL.xml</RadioTVFile_DSCOMP_file>
+        <!--<RadioTVFile_METHODS_file>${radioTVFile.object.folder}/METHODS.xml</RadioTVFile_METHODS_file>-->
+        <RadioTVFile_ONTOLOGY_file>${radioTVFile.object.folder}/ONTOLOGY.xml</RadioTVFile_ONTOLOGY_file>
+        <RadioTVFile_RELS-EXT_file>${radioTVFile.object.folder}/RELS-EXT.xml</RadioTVFile_RELS-EXT_file>
+        <RadioTVFile_VIEW_file>${radioTVFile.object.folder}/VIEW.xml</RadioTVFile_VIEW_file>
+        <BroadcastMetadata_file>${radioTVFile.object.folder}/BroadcastMetadata.xsd</BroadcastMetadata_file>
+        <Crosscheck_file>${radioTVFile.object.folder}/Crosscheck.xsd</Crosscheck_file>
+        <FFProbe_file>${radioTVFile.object.folder}/FFProbe.xsd</FFProbe_file>
+        <FFProbe_error_log_file>${radioTVFile.object.folder}/FFProbeError.xsd</FFProbe_error_log_file>
+
+
+
+        <Program_DSCOMP_file>${program.object.folder}/DS-COMPOSITE-MODEL.xml</Program_DSCOMP_file>
+        <Program_METHODS_file>${program.object.folder}/METHODS.xml</Program_METHODS_file>
+        <Program_ONTOLOGY_file>${program.object.folder}/ONTOLOGY.xml</Program_ONTOLOGY_file>
+        <Program_RELS-EXT_file>${program.object.folder}/RELS-EXT.xml</Program_RELS-EXT_file>
+        <Program_VIEW_file>${program.object.folder}/VIEW.xml</Program_VIEW_file>
+        <GallupOriginal_file>${program.object.folder}/GallupOriginal.xsd</GallupOriginal_file>
+        <PBCore_file>${program.object.folder}/PBCore.xsd</PBCore_file>
+        <ProgramBroadcast_file>${program.object.folder}/ProgramBroadCast.xsd</ProgramBroadcast_file>
+        <ProgramStructure_file>${program.object.folder}/ProgramStructure.xsd</ProgramStructure_file>
+        <RitzauOriginal_file>${program.object.folder}/RitzauOriginal.xsd</RitzauOriginal_file>
+
+        <Shard_DSCOMP_file>${shard.object.folder}/DS-COMPOSITE-MODEL.xml</Shard_DSCOMP_file>
+        <!--<Shard_METHODS_file>${shard.object.folder}/METHODS.xml</Shard_METHODS_file>-->
+        <Shard_ONTOLOGY_file>${shard.object.folder}/ONTOLOGY.xml</Shard_ONTOLOGY_file>
+        <Shard_RELS-EXT_file>${shard.object.folder}/RELS-EXT.xml</Shard_RELS-EXT_file>
+        <Shard_VIEW_file>${shard.object.folder}/VIEW.xml</Shard_VIEW_file>
+        <ShardMetadata_file>${shard.object.folder}/ShardMetadata.xsd</ShardMetadata_file>
+
+
+        <VHSFile_DSCOMP_file>${vhsFile.object.folder}/DS-COMPOSITE-MODEL.xml</VHSFile_DSCOMP_file>
+        <VHSFile_METHODS_file>${vhsFile.object.folder}/METHODS.xml</VHSFile_METHODS_file>
+        <VHSFile_ONTOLOGY_file>${vhsFile.object.folder}/ONTOLOGY.xml</VHSFile_ONTOLOGY_file>
+        <VHSFile_RELS-EXT_file>${vhsFile.object.folder}/RELS-EXT.xml</VHSFile_RELS-EXT_file>
+        <VHSFile_VIEW_file>${vhsFile.object.folder}/VIEW.xml</VHSFile_VIEW_file>
+        <VHSMetadata_file>${vhsFile.object.folder}/VHSMetadata.xsd</VHSMetadata_file>
+
+
+    </properties>
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.codehaus.gmaven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+                <version>1.4</version>
+                <executions>
+                    <execution>
+                        <id>ReadSchemas</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <configuration>
+                            <source>
+                                <![CDATA[
+                                mapOut = project.properties.clone()
+
+                                for (property in mapOut) {
+                                    if (property.key.endsWith("file")){
+                                        def file = new File(property.value)
+                                        //println file.getText()
+                                        println property
+                                        project.properties[property.key+'_contents'] = file.getText()
+                                    }
+                                }
+                                ]]>
+                            </source>
+                        </configuration>
+                    </execution>
+
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.2-beta-4</version>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>src/main/assembly/assembly.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+
+                        <!-- this is used for inheritance merges -->
+                        <phase>package</phase>
+                        <!-- append to the packaging phase. -->
+                        <goals>
+                            <goal>single</goal>
+                            <!-- goals == mojos -->
+                        </goals>
+                    </execution>
+                </executions>
+
+            </plugin>
+
+
+        </plugins>
+    </build>
+</project>

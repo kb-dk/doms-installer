@@ -1,12 +1,7 @@
 #!/bin/bash
 
-#
-# Set up basic variables
-#
-SCRIPT_DIR=$(dirname $0)
-pushd $SCRIPT_DIR > /dev/null
-SCRIPT_DIR=$(pwd)
-popd > /dev/null
+SCRIPT_DIR=$(dirname $(readlink -f $0))
+
 BASEDIR=$SCRIPT_DIR/..
 
 source $SCRIPT_DIR/setenv.sh

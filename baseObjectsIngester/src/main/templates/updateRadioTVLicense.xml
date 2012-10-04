@@ -1,5 +1,5 @@
 <def:batchModify xmlns:def="http://www.fedora.info/definitions/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xsi:schemaLocation="http://www.fedora.info/definitions/ http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/schemaStore/batchModifySchema.xsd">
+                 xsi:schemaLocation="http://www.fedora.info/definitions/ http://naiad:7880/schemaStore/batchModifySchema.xsd">
 
     <def:modifyObject pid="doms:RadioTV_InhouseLicense" state="I"
                       logMessage="Updating The radio/tv license"/>
