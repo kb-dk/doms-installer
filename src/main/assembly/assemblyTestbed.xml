@@ -41,6 +41,22 @@
             </includes>
         </dependencySet>
 
+
+        <dependencySet>
+            <outputDirectory>extras</outputDirectory>
+            <includes>
+                <include>dk.statsbiblioteket.doms.installer:baseObjectsIngester</include>
+            </includes>
+            <!--<outputFileNameMapping>${artifact.artifactId}-${artifact.version}${dashClassifier?}.${artifact.extension}</outputFileNameMapping>-->
+           <!-- <outputFileNameMapping>${artifact.artifactId}</outputFileNameMapping>-->
+            <unpack>true</unpack>
+            <unpackOptions>
+                <filtered>true</filtered>
+            </unpackOptions>
+        </dependencySet>
+
+
+
     </dependencySets>
 
     <fileSets>
@@ -64,11 +80,6 @@
         <fileSet>
             <outputDirectory>data/tomcat</outputDirectory>
             <directory>src/main/resources/tomcat</directory>
-        </fileSet>
-        <fileSet>
-            <outputDirectory>data/objects/batch</outputDirectory>
-            <directory>src/main/resources/objects/batch</directory>
-            <filtered>true</filtered>
         </fileSet>
         <fileSet>
             <outputDirectory>bin</outputDirectory>

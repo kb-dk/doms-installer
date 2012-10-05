@@ -226,12 +226,12 @@ cp $BASEDIR/data/schemas/* $SCHEMA_DIR/
 
 mkdir -p $BASEOBJS_DIR/bin
 mkdir -p $BASEOBJS_DIR/scripts
-for file in $BASEDIR/data/objects/batch/*.xml ; do
+for file in $BASEDIR/extras/baseObjectsIngester-*/scripts/*.xml ; do
   replace $file $BASEOBJS_DIR/scripts/`basename $file`
   echo "Created batch file $BASEOBJS_DIR/scripts/`basename $file` from template file $file"
 done
 
-for file in $BASEDIR/data/objects/batch/*.sh ; do
+for file in $BASEDIR/extras/baseObjectsIngester-*/bin/*.sh ; do
   replace $file $BASEOBJS_DIR/bin/`basename $file`
   chmod a+x $BASEOBJS_DIR/bin/`basename $file`
   echo "Created batch file $BASEOBJS_DIR/bin/`basename $file` from template file $file"
@@ -250,3 +250,5 @@ if [ -f $BASEDIR/ingester/$INGESTERZIP ]; then
 fi
 
 echo "Install complete"
+
+

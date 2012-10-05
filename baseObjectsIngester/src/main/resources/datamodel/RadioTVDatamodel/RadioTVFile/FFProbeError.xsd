@@ -1,6 +1,0 @@
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://www.ffmpeg.org/schema/ffprobe"
-        >
-
-    <xsd:element name="ffprobeStdErrorOutput" type="xsd:string"/>
-</xsd:schema>
