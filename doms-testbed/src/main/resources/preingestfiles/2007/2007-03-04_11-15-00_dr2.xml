@@ -5,12 +5,12 @@
         <PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
 
             <pbcoreIdentifier>
-                <identifier><![CDATA[1412629RitzauProgram]]></identifier>
+                <identifier><![CDATA[1413035RitzauProgram]]></identifier>
                 <identifierSource><![CDATA[id]]></identifierSource>
             </pbcoreIdentifier>
 
             <pbcoreTitle>
-                <title><![CDATA[Den Lille Røde Traktor]]></title>
+                <title><![CDATA[Atletik: EM indendørs, direkte]]></title>
                 <titleType><![CDATA[titel]]></titleType>
             </pbcoreTitle>
 
@@ -26,7 +26,7 @@
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Farvel, Blå Boss. Den Lille Røde Traktor giver aldrig op, for man behøver nemlig ikke være den største for at være den bedste.]]>
+                    <![CDATA[Sidstedagen ved EM i Birmingham byder på lutter finaler. 14 medaljesæt skal deles ud. EMs hurtigste mænd og kvinder skal findes i 60 m-finalerne, syvkampen skal afgøres og så er der store forventninger til mændenes højdespringsfinale, der har svenskerne Stefan Holm og Linus Törnblad som favoritter.<BR>Kommentatorer: Christian Munk Petersen og Jakob Larsen.]]>
                 </description>
                 <descriptionType><![CDATA[langomtale1]]></descriptionType>
             </pbcoreDescription>
@@ -40,17 +40,17 @@
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Dukkefilm.]]>
+                    <![CDATA[]]>
                 </description>
                 <descriptionType><![CDATA[kortomtale]]></descriptionType>
             </pbcoreDescription>
 
             <pbcoreGenre>
-                <genre>hovedgenre: <![CDATA[Børn & Ungdom]]></genre>
+                <genre>hovedgenre: <![CDATA[Sport]]></genre>
             </pbcoreGenre>
 
             <pbcoreGenre>
-                <genre>undergenre: <![CDATA[For de mindste]]></genre>
+                <genre>undergenre: <![CDATA[Atletik]]></genre>
             </pbcoreGenre>
 
 
@@ -73,12 +73,12 @@
 
 
             <pbcorePublisher>
-                <publisher><![CDATA[dr1]]></publisher>
+                <publisher><![CDATA[dr2]]></publisher>
                 <publisherRole><![CDATA[channel_name]]></publisherRole>
             </pbcorePublisher>
 
             <pbcorePublisher>
-                <publisher><![CDATA[DR1]]></publisher>
+                <publisher><![CDATA[DR2]]></publisher>
                 <publisherRole><![CDATA[kanalnavn]]></publisherRole>
             </pbcorePublisher>
 
@@ -89,12 +89,12 @@
                 <formatMediaType><![CDATA[Moving Image]]></formatMediaType>
                 <formatStandard><![CDATA[ikke hd]]></formatStandard>
                 <formatDuration><![CDATA[0]]></formatDuration>
-                <formatAspectRatio><![CDATA[16:9]]>,</formatAspectRatio>
+                <formatAspectRatio><![CDATA[]]>,</formatAspectRatio>
                 <formatColors><![CDATA[farve]]></formatColors>
                 <formatChannelConfiguration><![CDATA[ikke surround]]></formatChannelConfiguration>
                 <pbcoreDateAvailable>
-                    <dateAvailableStart><![CDATA[2007-03-04T07:55:00+0100]]></dateAvailableStart>
-                    <dateAvailableEnd><![CDATA[2007-03-04T08:05:00+0100]]></dateAvailableEnd>
+                    <dateAvailableStart><![CDATA[2007-03-04T11:15:00+0100]]></dateAvailableStart>
+                    <dateAvailableEnd><![CDATA[2007-03-04T17:55:00+0100]]></dateAvailableEnd>
                 </pbcoreDateAvailable>
                 <pbcoreFormatID>
                     <formatIdentifier>[INSERT_PBC_FORMAT_ID]</formatIdentifier>
@@ -122,11 +122,11 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>hovedgenre_id:<![CDATA[16]]></extension>
+                <extension>hovedgenre_id:<![CDATA[1]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>kanalid:<![CDATA[3]]></extension>
+                <extension>kanalid:<![CDATA[11]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -146,7 +146,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>program_id:<![CDATA[8861640]]></extension>
+                <extension>program_id:<![CDATA[8865529]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -154,7 +154,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>undergenre_id:<![CDATA[591]]></extension>
+                <extension>undergenre_id:<![CDATA[709]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -186,7 +186,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>showviewcode:<![CDATA[4415723]]></extension>
+                <extension>showviewcode:<![CDATA[22731891]]></extension>
             </pbcoreExtension>
 
         </PBCoreDescriptionDocument>
@@ -194,7 +194,7 @@
 
     <originals>
         <ritzau_original>
-            <![CDATA[RitzauProgram{Id=1412629, channel_name='dr1', kanalId=3, starttid=2007-03-04 07:55:00.0, sluttid=2007-03-04 08:05:00.0, annotation='null', originaltitel='null', kanalnavn='DR1', titel='Den Lille Røde Traktor', hovedgenre='Børn & Ungdom', undergenre='For de mindste', kortomtale='Dukkefilm.', langomtale1='Farvel, Blå Boss. Den Lille Røde Traktor giver aldrig op, for man behøver nemlig ikke være den største for at være den bedste.', langomtale2='null', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=0, episodenr=0, antalepisoder=0, showviewcode=4415723, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=true, bredformat=false, premiere=false, th=false, program_id=8861640, hovedgenre_id=16, undergenre_id=591, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
+            <![CDATA[RitzauProgram{Id=1413035, channel_name='dr2', kanalId=11, starttid=2007-03-04 11:15:00.0, sluttid=2007-03-04 17:55:00.0, annotation='null', originaltitel='null', kanalnavn='DR2', titel='Atletik: EM indendørs, direkte', hovedgenre='Sport', undergenre='Atletik', kortomtale='null', langomtale1='Sidstedagen ved EM i Birmingham byder på lutter finaler. 14 medaljesæt skal deles ud. EMs hurtigste mænd og kvinder skal findes i 60 m-finalerne, syvkampen skal afgøres og så er der store forventninger til mændenes højdespringsfinale, der har svenskerne Stefan Holm og Linus Törnblad som favoritter.<BR>Kommentatorer: Christian Munk Petersen og Jakob Larsen.', langomtale2='null', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=0, episodenr=0, antalepisoder=0, showviewcode=22731891, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=8865529, hovedgenre_id=1, undergenre_id=709, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
         </ritzau_original>
 
         <gallup_original>
@@ -205,11 +205,11 @@
     <program_recording_files>
         <file>
             <file_url>
-                http://bitfinder.statsbiblioteket.dk/bart/dr1_196.250_K11-DR1_mpeg2_20070304072601_20070305015002_encoder2-1.mpeg
+                http://bitfinder.statsbiblioteket.dk/bart/dr2_203.250_K9-DR2_mpeg2_20070304110601_20070305015001_encoder3-1.mpeg
             </file_url>
-            <program_start_offset>1649</program_start_offset>
-            <program_clip_length>780</program_clip_length>
-            <file_name>dr1_196.250_K11-DR1_mpeg2_20070304072601_20070305015002_encoder2-1.mpeg</file_name>
+            <program_start_offset>449</program_start_offset>
+            <program_clip_length>24180</program_clip_length>
+            <file_name>dr2_203.250_K9-DR2_mpeg2_20070304110601_20070305015001_encoder3-1.mpeg</file_name>
             <format_uri>info:pronom/x-fmt/386</format_uri>
         </file>
     </program_recording_files>

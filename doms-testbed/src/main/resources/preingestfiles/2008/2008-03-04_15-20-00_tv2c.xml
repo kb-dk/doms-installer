@@ -5,12 +5,12 @@
         <PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
 
             <pbcoreIdentifier>
-                <identifier><![CDATA[578240RitzauProgram]]></identifier>
+                <identifier><![CDATA[2395899RitzauProgram]]></identifier>
                 <identifierSource><![CDATA[id]]></identifierSource>
             </pbcoreIdentifier>
 
             <pbcoreTitle>
-                <title><![CDATA[Rabatten]]></title>
+                <title><![CDATA[Emmerdale]]></title>
                 <titleType><![CDATA[titel]]></titleType>
             </pbcoreTitle>
 
@@ -26,31 +26,31 @@
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Kan din cykellås modstå tyvenes hårdhændede metoder? Sidste år blev der anmeldt 79.000 cykeltyverier, og tallet er stigende! Derfor undersøger programmet, hvilken lås man skal vælge, og får professionelle til at bryde låsene op på tid! Hvor længe kan låsene modstå presset?<BR>www.dr.dk/rabatten.]]>
+                    <![CDATA[]]>
                 </description>
                 <descriptionType><![CDATA[langomtale1]]></descriptionType>
             </pbcoreDescription>
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Sendes også 5. og 9.3.]]>
+                    <![CDATA[]]>
                 </description>
                 <descriptionType><![CDATA[langomtale2]]></descriptionType>
             </pbcoreDescription>
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Til kamp mod cykeltyven!]]>
+                    <![CDATA[]]>
                 </description>
                 <descriptionType><![CDATA[kortomtale]]></descriptionType>
             </pbcoreDescription>
 
             <pbcoreGenre>
-                <genre>hovedgenre: <![CDATA[Forbruger]]></genre>
+                <genre>hovedgenre: <![CDATA[Serier]]></genre>
             </pbcoreGenre>
 
             <pbcoreGenre>
-                <genre>undergenre: <![CDATA[Oplysning]]></genre>
+                <genre>undergenre: <![CDATA[Alle]]></genre>
             </pbcoreGenre>
 
 
@@ -73,17 +73,17 @@
 
 
             <pbcorePublisher>
-                <publisher><![CDATA[dr1]]></publisher>
+                <publisher><![CDATA[tv2c]]></publisher>
                 <publisherRole><![CDATA[channel_name]]></publisherRole>
             </pbcorePublisher>
 
             <pbcorePublisher>
-                <publisher><![CDATA[DR1]]></publisher>
+                <publisher><![CDATA[TV 2 Charlie]]></publisher>
                 <publisherRole><![CDATA[kanalnavn]]></publisherRole>
             </pbcorePublisher>
 
             <pbcoreInstantiation>
-                <dateCreated><![CDATA[2010]]></dateCreated>
+                <dateCreated><![CDATA[0]]></dateCreated>
                 <dateIssued></dateIssued>
                 <formatLocation></formatLocation>
                 <formatMediaType><![CDATA[Moving Image]]></formatMediaType>
@@ -93,8 +93,8 @@
                 <formatColors><![CDATA[farve]]></formatColors>
                 <formatChannelConfiguration><![CDATA[ikke surround]]></formatChannelConfiguration>
                 <pbcoreDateAvailable>
-                    <dateAvailableStart><![CDATA[2010-03-04T19:30:00+0100]]></dateAvailableStart>
-                    <dateAvailableEnd><![CDATA[2010-03-04T20:00:00+0100]]></dateAvailableEnd>
+                    <dateAvailableStart><![CDATA[2008-03-04T15:20:00+0100]]></dateAvailableStart>
+                    <dateAvailableEnd><![CDATA[2008-03-04T15:45:00+0100]]></dateAvailableEnd>
                 </pbcoreDateAvailable>
                 <pbcoreFormatID>
                     <formatIdentifier>[INSERT_PBC_FORMAT_ID]</formatIdentifier>
@@ -106,11 +106,11 @@
             </pbcoreInstantiation>
 
             <pbcoreExtension>
-                <extension>antalepisoder:<![CDATA[20]]></extension>
+                <extension>antalepisoder:<![CDATA[0]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>episodenr:<![CDATA[9]]></extension>
+                <extension>episodenr:<![CDATA[0]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -122,11 +122,11 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>hovedgenre_id:<![CDATA[20]]></extension>
+                <extension>hovedgenre_id:<![CDATA[4]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>kanalid:<![CDATA[3]]></extension>
+                <extension>kanalid:<![CDATA[216]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -146,7 +146,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>program_id:<![CDATA[13256821]]></extension>
+                <extension>program_id:<![CDATA[10198150]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -154,7 +154,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>undergenre_id:<![CDATA[636]]></extension>
+                <extension>undergenre_id:<![CDATA[678]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -182,11 +182,11 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>ttv:<![CDATA[tekst-tv]]></extension>
+                <extension>ttv:<![CDATA[ikke tekst-tv]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>showviewcode:<![CDATA[704]]></extension>
+                <extension>showviewcode:<![CDATA[52707891]]></extension>
             </pbcoreExtension>
 
         </PBCoreDescriptionDocument>
@@ -194,7 +194,7 @@
 
     <originals>
         <ritzau_original>
-            <![CDATA[RitzauProgram{Id=578240, channel_name='dr1', kanalId=3, starttid=2010-03-04 19:30:00.0, sluttid=2010-03-04 20:00:00.0, annotation='null', originaltitel='null', kanalnavn='DR1', titel='Rabatten', hovedgenre='Forbruger', undergenre='Oplysning', kortomtale='Til kamp mod cykeltyven!', langomtale1='Kan din cykellås modstå tyvenes hårdhændede metoder? Sidste år blev der anmeldt 79.000 cykeltyverier, og tallet er stigende! Derfor undersøger programmet, hvilken lås man skal vælge, og får professionelle til at bryde låsene op på tid! Hvor længe kan låsene modstå presset?<BR>www.dr.dk/rabatten.', langomtale2='Sendes også 5. og 9.3.', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=2010, episodenr=9, antalepisoder=20, showviewcode=704, surround=false, genudsendelse=false, ttv=true, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=13256821, hovedgenre_id=20, undergenre_id=636, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
+            <![CDATA[RitzauProgram{Id=2395899, channel_name='tv2c', kanalId=216, starttid=2008-03-04 15:20:00.0, sluttid=2008-03-04 15:45:00.0, annotation='null', originaltitel='null', kanalnavn='TV 2 Charlie', titel='Emmerdale', hovedgenre='Serier', undergenre='Alle', kortomtale='null', langomtale1='null', langomtale2='null', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=0, episodenr=0, antalepisoder=0, showviewcode=52707891, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=10198150, hovedgenre_id=4, undergenre_id=678, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
         </ritzau_original>
 
         <gallup_original>
@@ -205,23 +205,12 @@
     <program_recording_files>
         <file>
             <file_url>
-                http://bitfinder.statsbiblioteket.dk/bart/mux1.1267725600-2010-03-04-19.00.00_1267729200-2010-03-04-20.00.00_dvb1-1.ts
+                http://bitfinder.statsbiblioteket.dk/bart/tv2c_623.250_K40-TV2-Charlie_mpeg1_20080304122001_20080305025001_encoder3-2.mpeg
             </file_url>
-            <channel_id>101</channel_id>
-            <program_start_offset>1710</program_start_offset>
-            <program_clip_length>1890</program_clip_length>
-            <file_name>mux1.1267725600-2010-03-04-19.00.00_1267729200-2010-03-04-20.00.00_dvb1-1.ts</file_name>
-            <format_uri>info:pronom/x-fmt/386</format_uri>
-        </file>
-        <file>
-            <file_url>
-                http://bitfinder.statsbiblioteket.dk/bart/mux1.1267729200-2010-03-04-20.00.00_1267732800-2010-03-04-21.00.00_dvb1-1.ts
-            </file_url>
-            <channel_id>101</channel_id>
-            <program_start_offset>0</program_start_offset>
-            <program_clip_length>90</program_clip_length>
-            <file_name>mux1.1267729200-2010-03-04-20.00.00_1267732800-2010-03-04-21.00.00_dvb1-1.ts</file_name>
-            <format_uri>info:pronom/x-fmt/386</format_uri>
+            <program_start_offset>10709</program_start_offset>
+            <program_clip_length>1680</program_clip_length>
+            <file_name>tv2c_623.250_K40-TV2-Charlie_mpeg1_20080304122001_20080305025001_encoder3-2.mpeg</file_name>
+            <format_uri>info:pronom/x-fmt/385</format_uri>
         </file>
     </program_recording_files>
 </program>

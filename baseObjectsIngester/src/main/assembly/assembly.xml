@@ -1,0 +1,22 @@
+<assembly>
+
+    <formats>
+        <format>zip</format>
+    </formats>
+
+
+    <fileSets>
+        <fileSet>
+            <outputDirectory>bin</outputDirectory>
+            <directory>src/main/scripts</directory>
+            <filtered>true</filtered>
+        </fileSet>
+        <fileSet>
+            <outputDirectory>scripts</outputDirectory>
+            <directory>src/main/templates</directory>
+            <filtered>true</filtered>
+        </fileSet>
+
+    </fileSets>
+</assembly>
+

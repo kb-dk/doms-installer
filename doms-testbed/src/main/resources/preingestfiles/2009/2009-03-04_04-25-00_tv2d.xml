@@ -5,17 +5,17 @@
         <PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
 
             <pbcoreIdentifier>
-                <identifier><![CDATA[588314RitzauProgram]]></identifier>
+                <identifier><![CDATA[3399554RitzauProgram]]></identifier>
                 <identifierSource><![CDATA[id]]></identifierSource>
             </pbcoreIdentifier>
 
             <pbcoreTitle>
-                <title><![CDATA[Rejsemagasinet]]></title>
+                <title><![CDATA[Kongen af Queens]]></title>
                 <titleType><![CDATA[titel]]></titleType>
             </pbcoreTitle>
 
             <pbcoreTitle>
-                <title><![CDATA[]]></title>
+                <title><![CDATA[The King of Queens]]></title>
                 <titleType><![CDATA[originaltitel]]></titleType>
             </pbcoreTitle>
 
@@ -40,17 +40,17 @@
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Live Ferie for Alle 2010.]]>
+                    <![CDATA[Amerikansk komedieserie.]]>
                 </description>
                 <descriptionType><![CDATA[kortomtale]]></descriptionType>
             </pbcoreDescription>
 
             <pbcoreGenre>
-                <genre>hovedgenre: <![CDATA[Fritid & Livsstil]]></genre>
+                <genre>hovedgenre: <![CDATA[Serier]]></genre>
             </pbcoreGenre>
 
             <pbcoreGenre>
-                <genre>undergenre: <![CDATA[Ferie & Rejser]]></genre>
+                <genre>undergenre: <![CDATA[Komedieserie]]></genre>
             </pbcoreGenre>
 
 
@@ -61,7 +61,17 @@
 
 
             <pbcoreContributor>
-                <contributor><![CDATA[]]></contributor>
+                <contributor><![CDATA[Arthur Spooner: Jerry Stiller]]></contributor>
+                <contributorRole><![CDATA[medvirkende]]></contributorRole>
+            </pbcoreContributor>
+
+            <pbcoreContributor>
+                <contributor><![CDATA[Carrie Heffernan: Leah Remini]]></contributor>
+                <contributorRole><![CDATA[medvirkende]]></contributorRole>
+            </pbcoreContributor>
+
+            <pbcoreContributor>
+                <contributor><![CDATA[Doug Heffernan: Kevin James]]></contributor>
                 <contributorRole><![CDATA[medvirkende]]></contributorRole>
             </pbcoreContributor>
 
@@ -73,17 +83,17 @@
 
 
             <pbcorePublisher>
-                <publisher><![CDATA[dk4]]></publisher>
+                <publisher><![CDATA[tv2d]]></publisher>
                 <publisherRole><![CDATA[channel_name]]></publisherRole>
             </pbcorePublisher>
 
             <pbcorePublisher>
-                <publisher><![CDATA[dk4]]></publisher>
+                <publisher><![CDATA[TV 2]]></publisher>
                 <publisherRole><![CDATA[kanalnavn]]></publisherRole>
             </pbcorePublisher>
 
             <pbcoreInstantiation>
-                <dateCreated><![CDATA[0]]></dateCreated>
+                <dateCreated><![CDATA[2004]]></dateCreated>
                 <dateIssued></dateIssued>
                 <formatLocation></formatLocation>
                 <formatMediaType><![CDATA[Moving Image]]></formatMediaType>
@@ -93,8 +103,8 @@
                 <formatColors><![CDATA[farve]]></formatColors>
                 <formatChannelConfiguration><![CDATA[ikke surround]]></formatChannelConfiguration>
                 <pbcoreDateAvailable>
-                    <dateAvailableStart><![CDATA[2010-03-04T10:00:00+0100]]></dateAvailableStart>
-                    <dateAvailableEnd><![CDATA[2010-03-04T11:00:00+0100]]></dateAvailableEnd>
+                    <dateAvailableStart><![CDATA[2009-03-04T04:25:00+0100]]></dateAvailableStart>
+                    <dateAvailableEnd><![CDATA[2009-03-04T05:00:00+0100]]></dateAvailableEnd>
                 </pbcoreDateAvailable>
                 <pbcoreFormatID>
                     <formatIdentifier>[INSERT_PBC_FORMAT_ID]</formatIdentifier>
@@ -110,7 +120,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>episodenr:<![CDATA[0]]></extension>
+                <extension>episodenr:<![CDATA[152]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -118,15 +128,15 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>genudsendelse:<![CDATA[ikke genudsendelse]]></extension>
+                <extension>genudsendelse:<![CDATA[genudsendelse]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>hovedgenre_id:<![CDATA[3]]></extension>
+                <extension>hovedgenre_id:<![CDATA[4]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>kanalid:<![CDATA[20]]></extension>
+                <extension>kanalid:<![CDATA[6]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -138,15 +148,15 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>produktionsland:<![CDATA[]]></extension>
+                <extension>produktionsland:<![CDATA[Amerikansk]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>produktionsland_id:<![CDATA[0]]></extension>
+                <extension>produktionsland_id:<![CDATA[3]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>program_id:<![CDATA[13233339]]></extension>
+                <extension>program_id:<![CDATA[11543193]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -154,7 +164,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>undergenre_id:<![CDATA[639]]></extension>
+                <extension>undergenre_id:<![CDATA[691]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -186,7 +196,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>showviewcode:<![CDATA[4234636]]></extension>
+                <extension>showviewcode:<![CDATA[97697742]]></extension>
             </pbcoreExtension>
 
         </PBCoreDescriptionDocument>
@@ -194,7 +204,7 @@
 
     <originals>
         <ritzau_original>
-            <![CDATA[RitzauProgram{Id=588314, channel_name='dk4', kanalId=20, starttid=2010-03-04 10:00:00.0, sluttid=2010-03-04 11:00:00.0, annotation='null', originaltitel='null', kanalnavn='dk4', titel='Rejsemagasinet', hovedgenre='Fritid & Livsstil', undergenre='Ferie & Rejser', kortomtale='Live Ferie for Alle 2010.', langomtale1='null', langomtale2='null', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=0, episodenr=0, antalepisoder=0, showviewcode=4234636, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=13233339, hovedgenre_id=3, undergenre_id=639, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
+            <![CDATA[RitzauProgram{Id=3399554, channel_name='tv2d', kanalId=6, starttid=2009-03-04 04:25:00.0, sluttid=2009-03-04 05:00:00.0, annotation='null', originaltitel='The King of Queens', kanalnavn='TV 2', titel='Kongen af Queens', hovedgenre='Serier', undergenre='Komedieserie', kortomtale='Amerikansk komedieserie.', langomtale1='null', langomtale2='null', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='Amerikansk', medvirkende='Doug Heffernan: Kevin James, Carrie Heffernan: Leah Remini og Arthur Spooner: Jerry Stiller.', programlaengde=0, produktionsaar=2004, episodenr=152, antalepisoder=0, showviewcode=97697742, surround=false, genudsendelse=true, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=11543193, hovedgenre_id=4, undergenre_id=691, program_ophold=false, produktionsland_id=3, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
         </ritzau_original>
 
         <gallup_original>
@@ -205,12 +215,21 @@
     <program_recording_files>
         <file>
             <file_url>
-                http://bitfinder.statsbiblioteket.dk/bart/dk4_391.250_K63-DK4_mpeg1_20100304055601_20100305001602_encoder2-2.mpeg
+                http://bitfinder.statsbiblioteket.dk/bart/tv2d_511.250_K10-TV2-Danmark_mpeg2_20090303045601_20090304045502_encoder1-2.mpeg
             </file_url>
-            <program_start_offset>14549</program_start_offset>
-            <program_clip_length>3780</program_clip_length>
-            <file_name>dk4_391.250_K63-DK4_mpeg1_20100304055601_20100305001602_encoder2-2.mpeg</file_name>
-            <format_uri>info:pronom/x-fmt/385</format_uri>
+            <program_start_offset>84449</program_start_offset>
+            <program_clip_length>1892</program_clip_length>
+            <file_name>tv2d_511.250_K10-TV2-Danmark_mpeg2_20090303045601_20090304045502_encoder1-2.mpeg</file_name>
+            <format_uri>info:pronom/x-fmt/386</format_uri>
+        </file>
+        <file>
+            <file_url>
+                http://bitfinder.statsbiblioteket.dk/bart/tv2d_511.250_K10-TV2-Danmark_mpeg2_20090304045601_20090305045502_encoder1-2.mpeg
+            </file_url>
+            <program_start_offset>0</program_start_offset>
+            <program_clip_length>329</program_clip_length>
+            <file_name>tv2d_511.250_K10-TV2-Danmark_mpeg2_20090304045601_20090305045502_encoder1-2.mpeg</file_name>
+            <format_uri>info:pronom/x-fmt/386</format_uri>
         </file>
     </program_recording_files>
 </program>

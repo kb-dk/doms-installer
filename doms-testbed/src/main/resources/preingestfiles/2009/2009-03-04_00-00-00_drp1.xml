@@ -5,12 +5,12 @@
         <PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
 
             <pbcoreIdentifier>
-                <identifier><![CDATA[2394692RitzauProgram]]></identifier>
+                <identifier><![CDATA[3399139RitzauProgram]]></identifier>
                 <identifierSource><![CDATA[id]]></identifierSource>
             </pbcoreIdentifier>
 
             <pbcoreTitle>
-                <title><![CDATA[Danmark Kort]]></title>
+                <title><![CDATA[Radioavis]]></title>
                 <titleType><![CDATA[titel]]></titleType>
             </pbcoreTitle>
 
@@ -33,7 +33,7 @@
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Tilrettelæggelse: Carsten Wiedemann.<BR>www.dr.dk/danmarkkort.<BR>(Genudsendelse fra i går).]]>
+                    <![CDATA[]]>
                 </description>
                 <descriptionType><![CDATA[langomtale2]]></descriptionType>
             </pbcoreDescription>
@@ -93,8 +93,8 @@
                 <formatColors><![CDATA[farve]]></formatColors>
                 <formatChannelConfiguration><![CDATA[ikke surround]]></formatChannelConfiguration>
                 <pbcoreDateAvailable>
-                    <dateAvailableStart><![CDATA[2008-03-04T05:55:00+0100]]></dateAvailableStart>
-                    <dateAvailableEnd><![CDATA[2008-03-04T06:00:00+0100]]></dateAvailableEnd>
+                    <dateAvailableStart><![CDATA[2009-03-04T00:00:00+0100]]></dateAvailableStart>
+                    <dateAvailableEnd><![CDATA[2009-03-04T00:05:00+0100]]></dateAvailableEnd>
                 </pbcoreDateAvailable>
                 <pbcoreFormatID>
                     <formatIdentifier>[INSERT_PBC_FORMAT_ID]</formatIdentifier>
@@ -146,7 +146,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>program_id:<![CDATA[10215178]]></extension>
+                <extension>program_id:<![CDATA[11506470]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -194,7 +194,7 @@
 
     <originals>
         <ritzau_original>
-            <![CDATA[RitzauProgram{Id=2394692, channel_name='drp1', kanalId=80, starttid=2008-03-04 05:55:00.0, sluttid=2008-03-04 06:00:00.0, annotation='null', originaltitel='null', kanalnavn='DR P1', titel='Danmark Kort', hovedgenre='Radio', undergenre='Alle', kortomtale='null', langomtale1='null', langomtale2='Tilrettelæggelse: Carsten Wiedemann.<BR>www.dr.dk/danmarkkort.<BR>(Genudsendelse fra i går).', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=0, episodenr=0, antalepisoder=0, showviewcode=0, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=10215178, hovedgenre_id=24, undergenre_id=674, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
+            <![CDATA[RitzauProgram{Id=3399139, channel_name='drp1', kanalId=80, starttid=2009-03-04 00:00:00.0, sluttid=2009-03-04 00:05:00.0, annotation='null', originaltitel='null', kanalnavn='DR P1', titel='Radioavis', hovedgenre='Radio', undergenre='Alle', kortomtale='null', langomtale1='null', langomtale2='null', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=0, episodenr=0, antalepisoder=0, showviewcode=0, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=11506470, hovedgenre_id=24, undergenre_id=674, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
         </ritzau_original>
 
         <gallup_original>
@@ -205,11 +205,11 @@
     <program_recording_files>
         <file>
             <file_url>
-                http://bitfinder.statsbiblioteket.dk/bart/drp1_88.100_DR-P1_pcm_20080304045601_20080305045501_encoder5-2.wav
+                http://bitfinder.statsbiblioteket.dk/bart/drp1_88.100_DR-P1_pcm_20090303045601_20090304045502_encoder5-2.wav
             </file_url>
-            <program_start_offset>3449</program_start_offset>
+            <program_start_offset>68549</program_start_offset>
             <program_clip_length>480</program_clip_length>
-            <file_name>drp1_88.100_DR-P1_pcm_20080304045601_20080305045501_encoder5-2.wav</file_name>
+            <file_name>drp1_88.100_DR-P1_pcm_20090303045601_20090304045502_encoder5-2.wav</file_name>
             <format_uri>info:pronom/fmt/6</format_uri>
         </file>
     </program_recording_files>

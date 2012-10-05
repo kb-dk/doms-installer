@@ -5,12 +5,12 @@
         <PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
 
             <pbcoreIdentifier>
-                <identifier><![CDATA[581225RitzauProgram]]></identifier>
+                <identifier><![CDATA[3399755RitzauProgram]]></identifier>
                 <identifierSource><![CDATA[id]]></identifierSource>
             </pbcoreIdentifier>
 
             <pbcoreTitle>
-                <title><![CDATA[Den lille prinsesse]]></title>
+                <title><![CDATA[Go Morgen P3 med Morgenholdet]]></title>
                 <titleType><![CDATA[titel]]></titleType>
             </pbcoreTitle>
 
@@ -26,31 +26,31 @@
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Den lille prinsesses grandtante er gammel og krumrygget, og så har hun hår på hagen, der stikker, når man kysser hende. Så hvordan kan prinsessen slippe for det?]]>
+                    <![CDATA[- musik, nyheder, journalistik, satire og sport starter den nye dag.]]>
                 </description>
                 <descriptionType><![CDATA[langomtale1]]></descriptionType>
             </pbcoreDescription>
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[]]>
+                    <![CDATA[Værter: Julie Bundgaard, Henrik Povlsen og Kanonkongen.]]>
                 </description>
                 <descriptionType><![CDATA[langomtale2]]></descriptionType>
             </pbcoreDescription>
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Jeg vil ikke kysse grandtante!]]>
+                    <![CDATA[]]>
                 </description>
                 <descriptionType><![CDATA[kortomtale]]></descriptionType>
             </pbcoreDescription>
 
             <pbcoreGenre>
-                <genre>hovedgenre: <![CDATA[Børn & Ungdom]]></genre>
+                <genre>hovedgenre: <![CDATA[Radio]]></genre>
             </pbcoreGenre>
 
             <pbcoreGenre>
-                <genre>undergenre: <![CDATA[For de mindste]]></genre>
+                <genre>undergenre: <![CDATA[Alle]]></genre>
             </pbcoreGenre>
 
 
@@ -73,12 +73,12 @@
 
 
             <pbcorePublisher>
-                <publisher><![CDATA[drram]]></publisher>
+                <publisher><![CDATA[drp3]]></publisher>
                 <publisherRole><![CDATA[channel_name]]></publisherRole>
             </pbcorePublisher>
 
             <pbcorePublisher>
-                <publisher><![CDATA[DR Ramasjang]]></publisher>
+                <publisher><![CDATA[DR P3]]></publisher>
                 <publisherRole><![CDATA[kanalnavn]]></publisherRole>
             </pbcorePublisher>
 
@@ -86,15 +86,15 @@
                 <dateCreated><![CDATA[0]]></dateCreated>
                 <dateIssued></dateIssued>
                 <formatLocation></formatLocation>
-                <formatMediaType><![CDATA[Moving Image]]></formatMediaType>
+                <formatMediaType><![CDATA[Sound]]></formatMediaType>
                 <formatStandard><![CDATA[ikke hd]]></formatStandard>
                 <formatDuration><![CDATA[0]]></formatDuration>
-                <formatAspectRatio><![CDATA[16:9]]>,</formatAspectRatio>
+                <formatAspectRatio><![CDATA[]]>,</formatAspectRatio>
                 <formatColors><![CDATA[farve]]></formatColors>
                 <formatChannelConfiguration><![CDATA[ikke surround]]></formatChannelConfiguration>
                 <pbcoreDateAvailable>
-                    <dateAvailableStart><![CDATA[2010-03-04T11:20:00+0100]]></dateAvailableStart>
-                    <dateAvailableEnd><![CDATA[2010-03-04T11:30:00+0100]]></dateAvailableEnd>
+                    <dateAvailableStart><![CDATA[2009-03-04T06:05:00+0100]]></dateAvailableStart>
+                    <dateAvailableEnd><![CDATA[2009-03-04T09:05:00+0100]]></dateAvailableEnd>
                 </pbcoreDateAvailable>
                 <pbcoreFormatID>
                     <formatIdentifier>[INSERT_PBC_FORMAT_ID]</formatIdentifier>
@@ -122,11 +122,11 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>hovedgenre_id:<![CDATA[16]]></extension>
+                <extension>hovedgenre_id:<![CDATA[24]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>kanalid:<![CDATA[325]]></extension>
+                <extension>kanalid:<![CDATA[82]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -146,7 +146,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>program_id:<![CDATA[13261873]]></extension>
+                <extension>program_id:<![CDATA[11507614]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -154,7 +154,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>undergenre_id:<![CDATA[591]]></extension>
+                <extension>undergenre_id:<![CDATA[674]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -186,7 +186,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>showviewcode:<![CDATA[61699278]]></extension>
+                <extension>showviewcode:<![CDATA[0]]></extension>
             </pbcoreExtension>
 
         </PBCoreDescriptionDocument>
@@ -194,7 +194,7 @@
 
     <originals>
         <ritzau_original>
-            <![CDATA[RitzauProgram{Id=581225, channel_name='drram', kanalId=325, starttid=2010-03-04 11:20:00.0, sluttid=2010-03-04 11:30:00.0, annotation='null', originaltitel='null', kanalnavn='DR Ramasjang', titel='Den lille prinsesse', hovedgenre='Børn & Ungdom', undergenre='For de mindste', kortomtale='Jeg vil ikke kysse grandtante!', langomtale1='Den lille prinsesses grandtante er gammel og krumrygget, og så har hun hår på hagen, der stikker, når man kysser hende. Så hvordan kan prinsessen slippe for det?', langomtale2='null', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=0, episodenr=0, antalepisoder=0, showviewcode=61699278, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=true, bredformat=false, premiere=false, th=false, program_id=13261873, hovedgenre_id=16, undergenre_id=591, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
+            <![CDATA[RitzauProgram{Id=3399755, channel_name='drp3', kanalId=82, starttid=2009-03-04 06:05:00.0, sluttid=2009-03-04 09:05:00.0, annotation='null', originaltitel='null', kanalnavn='DR P3', titel='Go Morgen P3 med Morgenholdet', hovedgenre='Radio', undergenre='Alle', kortomtale='null', langomtale1='- musik, nyheder, journalistik, satire og sport starter den nye dag.', langomtale2='Værter: Julie Bundgaard, Henrik Povlsen og Kanonkongen.', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=0, episodenr=0, antalepisoder=0, showviewcode=0, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=11507614, hovedgenre_id=24, undergenre_id=674, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
         </ritzau_original>
 
         <gallup_original>
@@ -205,13 +205,12 @@
     <program_recording_files>
         <file>
             <file_url>
-                http://bitfinder.statsbiblioteket.dk/bart/mux2.1267696800-2010-03-04-11.00.00_1267700400-2010-03-04-12.00.00_dvb1-1.ts
+                http://bitfinder.statsbiblioteket.dk/bart/drp3_91.700_DR-P3_pcm_20090304045601_20090305045502_encoder1-2.wav
             </file_url>
-            <channel_id>2005</channel_id>
-            <program_start_offset>1110</program_start_offset>
-            <program_clip_length>780</program_clip_length>
-            <file_name>mux2.1267696800-2010-03-04-11.00.00_1267700400-2010-03-04-12.00.00_dvb1-1.ts</file_name>
-            <format_uri>info:pronom/x-fmt/386</format_uri>
+            <program_start_offset>4049</program_start_offset>
+            <program_clip_length>10980</program_clip_length>
+            <file_name>drp3_91.700_DR-P3_pcm_20090304045601_20090305045502_encoder1-2.wav</file_name>
+            <format_uri>info:pronom/fmt/6</format_uri>
         </file>
     </program_recording_files>
 </program>

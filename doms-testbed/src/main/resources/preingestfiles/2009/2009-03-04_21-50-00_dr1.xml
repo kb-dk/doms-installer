@@ -5,12 +5,12 @@
         <PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
 
             <pbcoreIdentifier>
-                <identifier><![CDATA[580463RitzauProgram]]></identifier>
+                <identifier><![CDATA[3401964RitzauProgram]]></identifier>
                 <identifierSource><![CDATA[id]]></identifierSource>
             </pbcoreIdentifier>
 
             <pbcoreTitle>
-                <title><![CDATA[Debatten]]></title>
+                <title><![CDATA[HåndboldOnsdag: Danmark-Rumænien (k), direkte]]></title>
                 <titleType><![CDATA[titel]]></titleType>
             </pbcoreTitle>
 
@@ -26,31 +26,31 @@
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Clement Kjersgaard er vært, når landets magthavere diskuterer tidens sværeste valg foran et publikum.]]>
+                    <![CDATA[Jan Pytlick er i fuldt sving med at opbygge sit landshold frem mod de vigtige VM-kvalifikationskampe mod Portugal. Onsdag aften pudses formbarometret så af mod et af verdens bedste mandskaber nemlig det rumænske. Se, hvordan det går Karin Mortensen og hendes unge holdkammerater, når de løber ind på gulvet i Forum Horsens.]]>
                 </description>
                 <descriptionType><![CDATA[langomtale1]]></descriptionType>
             </pbcoreDescription>
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Sendes også 6. og 9.3.]]>
+                    <![CDATA[]]>
                 </description>
                 <descriptionType><![CDATA[langomtale2]]></descriptionType>
             </pbcoreDescription>
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[]]>
+                    <![CDATA[1. halvleg.]]>
                 </description>
                 <descriptionType><![CDATA[kortomtale]]></descriptionType>
             </pbcoreDescription>
 
             <pbcoreGenre>
-                <genre>hovedgenre: <![CDATA[Nyheder & Aktualitet]]></genre>
+                <genre>hovedgenre: <![CDATA[Sport]]></genre>
             </pbcoreGenre>
 
             <pbcoreGenre>
-                <genre>undergenre: <![CDATA[Debat]]></genre>
+                <genre>undergenre: <![CDATA[Håndbold]]></genre>
             </pbcoreGenre>
 
 
@@ -73,28 +73,28 @@
 
 
             <pbcorePublisher>
-                <publisher><![CDATA[dr2]]></publisher>
+                <publisher><![CDATA[dr1]]></publisher>
                 <publisherRole><![CDATA[channel_name]]></publisherRole>
             </pbcorePublisher>
 
             <pbcorePublisher>
-                <publisher><![CDATA[DR2]]></publisher>
+                <publisher><![CDATA[DR1]]></publisher>
                 <publisherRole><![CDATA[kanalnavn]]></publisherRole>
             </pbcorePublisher>
 
             <pbcoreInstantiation>
-                <dateCreated><![CDATA[2010]]></dateCreated>
+                <dateCreated><![CDATA[0]]></dateCreated>
                 <dateIssued></dateIssued>
                 <formatLocation></formatLocation>
                 <formatMediaType><![CDATA[Moving Image]]></formatMediaType>
                 <formatStandard><![CDATA[ikke hd]]></formatStandard>
                 <formatDuration><![CDATA[0]]></formatDuration>
-                <formatAspectRatio><![CDATA[]]>,</formatAspectRatio>
+                <formatAspectRatio><![CDATA[16:9]]>,</formatAspectRatio>
                 <formatColors><![CDATA[farve]]></formatColors>
                 <formatChannelConfiguration><![CDATA[ikke surround]]></formatChannelConfiguration>
                 <pbcoreDateAvailable>
-                    <dateAvailableStart><![CDATA[2010-03-04T20:00:00+0100]]></dateAvailableStart>
-                    <dateAvailableEnd><![CDATA[2010-03-04T20:40:00+0100]]></dateAvailableEnd>
+                    <dateAvailableStart><![CDATA[2009-03-04T21:50:00+0100]]></dateAvailableStart>
+                    <dateAvailableEnd><![CDATA[2009-03-04T22:30:00+0100]]></dateAvailableEnd>
                 </pbcoreDateAvailable>
                 <pbcoreFormatID>
                     <formatIdentifier>[INSERT_PBC_FORMAT_ID]</formatIdentifier>
@@ -122,11 +122,11 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>hovedgenre_id:<![CDATA[9]]></extension>
+                <extension>hovedgenre_id:<![CDATA[1]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>kanalid:<![CDATA[11]]></extension>
+                <extension>kanalid:<![CDATA[3]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -146,7 +146,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>program_id:<![CDATA[13257017]]></extension>
+                <extension>program_id:<![CDATA[11509813]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -154,7 +154,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>undergenre_id:<![CDATA[662]]></extension>
+                <extension>undergenre_id:<![CDATA[722]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -186,7 +186,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>showviewcode:<![CDATA[8890810]]></extension>
+                <extension>showviewcode:<![CDATA[5067182]]></extension>
             </pbcoreExtension>
 
         </PBCoreDescriptionDocument>
@@ -194,7 +194,7 @@
 
     <originals>
         <ritzau_original>
-            <![CDATA[RitzauProgram{Id=580463, channel_name='dr2', kanalId=11, starttid=2010-03-04 20:00:00.0, sluttid=2010-03-04 20:40:00.0, annotation='null', originaltitel='null', kanalnavn='DR2', titel='Debatten', hovedgenre='Nyheder & Aktualitet', undergenre='Debat', kortomtale='null', langomtale1='Clement Kjersgaard er vært, når landets magthavere diskuterer tidens sværeste valg foran et publikum.', langomtale2='Sendes også 6. og 9.3.', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=2010, episodenr=0, antalepisoder=0, showviewcode=8890810, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=13257017, hovedgenre_id=9, undergenre_id=662, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
+            <![CDATA[RitzauProgram{Id=3401964, channel_name='dr1', kanalId=3, starttid=2009-03-04 21:50:00.0, sluttid=2009-03-04 22:30:00.0, annotation='null', originaltitel='null', kanalnavn='DR1', titel='HåndboldOnsdag: Danmark-Rumænien (k), direkte', hovedgenre='Sport', undergenre='Håndbold', kortomtale='1. halvleg.', langomtale1='Jan Pytlick er i fuldt sving med at opbygge sit landshold frem mod de vigtige VM-kvalifikationskampe mod Portugal. Onsdag aften pudses formbarometret så af mod et af verdens bedste mandskaber nemlig det rumænske. Se, hvordan det går Karin Mortensen og hendes unge holdkammerater, når de løber ind på gulvet i Forum Horsens.', langomtale2='null', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=0, episodenr=0, antalepisoder=0, showviewcode=5067182, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=true, bredformat=false, premiere=false, th=false, program_id=11509813, hovedgenre_id=1, undergenre_id=722, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
         </ritzau_original>
 
         <gallup_original>
@@ -205,22 +205,11 @@
     <program_recording_files>
         <file>
             <file_url>
-                http://bitfinder.statsbiblioteket.dk/bart/mux1.1267725600-2010-03-04-19.00.00_1267729200-2010-03-04-20.00.00_dvb1-1.ts
+                http://bitfinder.statsbiblioteket.dk/bart/dr1_196.250_K11-DR1_mpeg2_20090304055602_20090305012201_encoder2-2.mpeg
             </file_url>
-            <channel_id>102</channel_id>
-            <program_start_offset>3510</program_start_offset>
-            <program_clip_length>90</program_clip_length>
-            <file_name>mux1.1267725600-2010-03-04-19.00.00_1267729200-2010-03-04-20.00.00_dvb1-1.ts</file_name>
-            <format_uri>info:pronom/x-fmt/386</format_uri>
-        </file>
-        <file>
-            <file_url>
-                http://bitfinder.statsbiblioteket.dk/bart/mux1.1267729200-2010-03-04-20.00.00_1267732800-2010-03-04-21.00.00_dvb1-1.ts
-            </file_url>
-            <channel_id>102</channel_id>
-            <program_start_offset>0</program_start_offset>
-            <program_clip_length>2490</program_clip_length>
-            <file_name>mux1.1267729200-2010-03-04-20.00.00_1267732800-2010-03-04-21.00.00_dvb1-1.ts</file_name>
+            <program_start_offset>57148</program_start_offset>
+            <program_clip_length>2580</program_clip_length>
+            <file_name>dr1_196.250_K11-DR1_mpeg2_20090304055602_20090305012201_encoder2-2.mpeg</file_name>
             <format_uri>info:pronom/x-fmt/386</format_uri>
         </file>
     </program_recording_files>

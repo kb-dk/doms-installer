@@ -5,12 +5,12 @@
         <PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
 
             <pbcoreIdentifier>
-                <identifier><![CDATA[578226RitzauProgram]]></identifier>
+                <identifier><![CDATA[581205RitzauProgram]]></identifier>
                 <identifierSource><![CDATA[id]]></identifierSource>
             </pbcoreIdentifier>
 
             <pbcoreTitle>
-                <title><![CDATA[Aftenshowet]]></title>
+                <title><![CDATA[Oggy og kakerlakkerne]]></title>
                 <titleType><![CDATA[titel]]></titleType>
             </pbcoreTitle>
 
@@ -26,7 +26,7 @@
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[]]>
+                    <![CDATA[Om katten Oggy og dens tre uvenner kakerlakkerne.]]>
                 </description>
                 <descriptionType><![CDATA[langomtale1]]></descriptionType>
             </pbcoreDescription>
@@ -40,13 +40,13 @@
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[]]>
+                    <![CDATA[Tegnefilm.]]>
                 </description>
                 <descriptionType><![CDATA[kortomtale]]></descriptionType>
             </pbcoreDescription>
 
             <pbcoreGenre>
-                <genre>hovedgenre: <![CDATA[Nyheder & Aktualitet]]></genre>
+                <genre>hovedgenre: <![CDATA[Børn & Ungdom]]></genre>
             </pbcoreGenre>
 
             <pbcoreGenre>
@@ -73,12 +73,12 @@
 
 
             <pbcorePublisher>
-                <publisher><![CDATA[dr1]]></publisher>
+                <publisher><![CDATA[drram]]></publisher>
                 <publisherRole><![CDATA[channel_name]]></publisherRole>
             </pbcorePublisher>
 
             <pbcorePublisher>
-                <publisher><![CDATA[DR1]]></publisher>
+                <publisher><![CDATA[DR Ramasjang]]></publisher>
                 <publisherRole><![CDATA[kanalnavn]]></publisherRole>
             </pbcorePublisher>
 
@@ -93,8 +93,8 @@
                 <formatColors><![CDATA[farve]]></formatColors>
                 <formatChannelConfiguration><![CDATA[ikke surround]]></formatChannelConfiguration>
                 <pbcoreDateAvailable>
-                    <dateAvailableStart><![CDATA[2010-03-04T12:35:00+0100]]></dateAvailableStart>
-                    <dateAvailableEnd><![CDATA[2010-03-04T13:00:00+0100]]></dateAvailableEnd>
+                    <dateAvailableStart><![CDATA[2010-03-04T06:00:00+0100]]></dateAvailableStart>
+                    <dateAvailableEnd><![CDATA[2010-03-04T06:10:00+0100]]></dateAvailableEnd>
                 </pbcoreDateAvailable>
                 <pbcoreFormatID>
                     <formatIdentifier>[INSERT_PBC_FORMAT_ID]</formatIdentifier>
@@ -118,15 +118,15 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>genudsendelse:<![CDATA[genudsendelse]]></extension>
+                <extension>genudsendelse:<![CDATA[ikke genudsendelse]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>hovedgenre_id:<![CDATA[9]]></extension>
+                <extension>hovedgenre_id:<![CDATA[16]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>kanalid:<![CDATA[3]]></extension>
+                <extension>kanalid:<![CDATA[325]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -146,7 +146,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>program_id:<![CDATA[13256805]]></extension>
+                <extension>program_id:<![CDATA[13261853]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -154,7 +154,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>undergenre_id:<![CDATA[661]]></extension>
+                <extension>undergenre_id:<![CDATA[590]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -186,7 +186,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>showviewcode:<![CDATA[64810]]></extension>
+                <extension>showviewcode:<![CDATA[49324013]]></extension>
             </pbcoreExtension>
 
         </PBCoreDescriptionDocument>
@@ -194,7 +194,7 @@
 
     <originals>
         <ritzau_original>
-            <![CDATA[RitzauProgram{Id=578226, channel_name='dr1', kanalId=3, starttid=2010-03-04 12:35:00.0, sluttid=2010-03-04 13:00:00.0, annotation='null', originaltitel='null', kanalnavn='DR1', titel='Aftenshowet', hovedgenre='Nyheder & Aktualitet', undergenre='Alle', kortomtale='null', langomtale1='null', langomtale2='null', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=0, episodenr=0, antalepisoder=0, showviewcode=64810, surround=false, genudsendelse=true, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=13256805, hovedgenre_id=9, undergenre_id=661, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
+            <![CDATA[RitzauProgram{Id=581205, channel_name='drram', kanalId=325, starttid=2010-03-04 06:00:00.0, sluttid=2010-03-04 06:10:00.0, annotation='null', originaltitel='null', kanalnavn='DR Ramasjang', titel='Oggy og kakerlakkerne', hovedgenre='Børn & Ungdom', undergenre='Alle', kortomtale='Tegnefilm.', langomtale1='Om katten Oggy og dens tre uvenner kakerlakkerne.', langomtale2='null', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=0, episodenr=0, antalepisoder=0, showviewcode=49324013, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=13261853, hovedgenre_id=16, undergenre_id=590, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
         </ritzau_original>
 
         <gallup_original>
@@ -205,22 +205,22 @@
     <program_recording_files>
         <file>
             <file_url>
-                http://bitfinder.statsbiblioteket.dk/bart/mux1.1267700400-2010-03-04-12.00.00_1267704000-2010-03-04-13.00.00_dvb1-1.ts
+                http://bitfinder.statsbiblioteket.dk/bart/mux2.1267675200-2010-03-04-05.00.00_1267678800-2010-03-04-06.00.00_dvb1-1.ts
             </file_url>
-            <channel_id>101</channel_id>
-            <program_start_offset>2010</program_start_offset>
-            <program_clip_length>1590</program_clip_length>
-            <file_name>mux1.1267700400-2010-03-04-12.00.00_1267704000-2010-03-04-13.00.00_dvb1-1.ts</file_name>
+            <channel_id>2005</channel_id>
+            <program_start_offset>3510</program_start_offset>
+            <program_clip_length>90</program_clip_length>
+            <file_name>mux2.1267675200-2010-03-04-05.00.00_1267678800-2010-03-04-06.00.00_dvb1-1.ts</file_name>
             <format_uri>info:pronom/x-fmt/386</format_uri>
         </file>
         <file>
             <file_url>
-                http://bitfinder.statsbiblioteket.dk/bart/mux1.1267704000-2010-03-04-13.00.00_1267707600-2010-03-04-14.00.00_dvb1-1.ts
+                http://bitfinder.statsbiblioteket.dk/bart/mux2.1267678800-2010-03-04-06.00.00_1267682400-2010-03-04-07.00.00_dvb1-2.ts
             </file_url>
-            <channel_id>101</channel_id>
+            <channel_id>2005</channel_id>
             <program_start_offset>0</program_start_offset>
-            <program_clip_length>90</program_clip_length>
-            <file_name>mux1.1267704000-2010-03-04-13.00.00_1267707600-2010-03-04-14.00.00_dvb1-1.ts</file_name>
+            <program_clip_length>690</program_clip_length>
+            <file_name>mux2.1267678800-2010-03-04-06.00.00_1267682400-2010-03-04-07.00.00_dvb1-2.ts</file_name>
             <format_uri>info:pronom/x-fmt/386</format_uri>
         </file>
     </program_recording_files>

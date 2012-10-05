@@ -5,12 +5,12 @@
         <PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
 
             <pbcoreIdentifier>
-                <identifier><![CDATA[3399300RitzauProgram]]></identifier>
+                <identifier><![CDATA[577048RitzauProgram]]></identifier>
                 <identifierSource><![CDATA[id]]></identifierSource>
             </pbcoreIdentifier>
 
             <pbcoreTitle>
-                <title><![CDATA[Sex med Victor]]></title>
+                <title><![CDATA[Max Musik]]></title>
                 <titleType><![CDATA[titel]]></titleType>
             </pbcoreTitle>
 
@@ -26,7 +26,7 @@
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Victor har sat sig for at ville undersøge det almindelige. Han tager til Gøteborg og taler med et par om normerne inden for heteroseksualiten, og han finder ud af, at det er til fester i byen, at rigtig mange finder hinanden. Og så får Victor lyst til at afprøve noget!<BR>Nordvision fra Sverige.]]>
+                    <![CDATA[]]>
                 </description>
                 <descriptionType><![CDATA[langomtale1]]></descriptionType>
             </pbcoreDescription>
@@ -40,17 +40,17 @@
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Aftenens tema er: Det almindelige.]]>
+                    <![CDATA[]]>
                 </description>
                 <descriptionType><![CDATA[kortomtale]]></descriptionType>
             </pbcoreDescription>
 
             <pbcoreGenre>
-                <genre>hovedgenre: <![CDATA[Dokumentar]]></genre>
+                <genre>hovedgenre: <![CDATA[Radio]]></genre>
             </pbcoreGenre>
 
             <pbcoreGenre>
-                <genre>undergenre: <![CDATA[Dokumentarserie]]></genre>
+                <genre>undergenre: <![CDATA[Alle]]></genre>
             </pbcoreGenre>
 
 
@@ -73,12 +73,12 @@
 
 
             <pbcorePublisher>
-                <publisher><![CDATA[dr2]]></publisher>
+                <publisher><![CDATA[voice]]></publisher>
                 <publisherRole><![CDATA[channel_name]]></publisherRole>
             </pbcorePublisher>
 
             <pbcorePublisher>
-                <publisher><![CDATA[DR2]]></publisher>
+                <publisher><![CDATA[Radio The Voice Århus]]></publisher>
                 <publisherRole><![CDATA[kanalnavn]]></publisherRole>
             </pbcorePublisher>
 
@@ -86,15 +86,15 @@
                 <dateCreated><![CDATA[0]]></dateCreated>
                 <dateIssued></dateIssued>
                 <formatLocation></formatLocation>
-                <formatMediaType><![CDATA[Moving Image]]></formatMediaType>
+                <formatMediaType><![CDATA[Sound]]></formatMediaType>
                 <formatStandard><![CDATA[ikke hd]]></formatStandard>
                 <formatDuration><![CDATA[0]]></formatDuration>
-                <formatAspectRatio><![CDATA[16:9]]>,</formatAspectRatio>
+                <formatAspectRatio><![CDATA[]]>,</formatAspectRatio>
                 <formatColors><![CDATA[farve]]></formatColors>
                 <formatChannelConfiguration><![CDATA[ikke surround]]></formatChannelConfiguration>
                 <pbcoreDateAvailable>
-                    <dateAvailableStart><![CDATA[2009-03-04T01:10:00+0100]]></dateAvailableStart>
-                    <dateAvailableEnd><![CDATA[2009-03-04T01:40:00+0100]]></dateAvailableEnd>
+                    <dateAvailableStart><![CDATA[2010-03-04T10:00:00+0100]]></dateAvailableStart>
+                    <dateAvailableEnd><![CDATA[2010-03-04T13:00:00+0100]]></dateAvailableEnd>
                 </pbcoreDateAvailable>
                 <pbcoreFormatID>
                     <formatIdentifier>[INSERT_PBC_FORMAT_ID]</formatIdentifier>
@@ -106,11 +106,11 @@
             </pbcoreInstantiation>
 
             <pbcoreExtension>
-                <extension>antalepisoder:<![CDATA[8]]></extension>
+                <extension>antalepisoder:<![CDATA[0]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>episodenr:<![CDATA[8]]></extension>
+                <extension>episodenr:<![CDATA[0]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -122,11 +122,11 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>hovedgenre_id:<![CDATA[13]]></extension>
+                <extension>hovedgenre_id:<![CDATA[24]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>kanalid:<![CDATA[11]]></extension>
+                <extension>kanalid:<![CDATA[96]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -146,7 +146,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>program_id:<![CDATA[11510059]]></extension>
+                <extension>program_id:<![CDATA[13113966]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -154,7 +154,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>undergenre_id:<![CDATA[753]]></extension>
+                <extension>undergenre_id:<![CDATA[674]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -186,7 +186,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>showviewcode:<![CDATA[38447839]]></extension>
+                <extension>showviewcode:<![CDATA[0]]></extension>
             </pbcoreExtension>
 
         </PBCoreDescriptionDocument>
@@ -194,7 +194,7 @@
 
     <originals>
         <ritzau_original>
-            <![CDATA[RitzauProgram{Id=3399300, channel_name='dr2', kanalId=11, starttid=2009-03-04 01:10:00.0, sluttid=2009-03-04 01:40:00.0, annotation='null', originaltitel='null', kanalnavn='DR2', titel='Sex med Victor', hovedgenre='Dokumentar', undergenre='Dokumentarserie', kortomtale='Aftenens tema er: Det almindelige.', langomtale1='Victor har sat sig for at ville undersøge det almindelige. Han tager til Gøteborg og taler med et par om normerne inden for heteroseksualiten, og han finder ud af, at det er til fester i byen, at rigtig mange finder hinanden. Og så får Victor lyst til at afprøve noget!<BR>Nordvision fra Sverige.', langomtale2='null', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=0, episodenr=8, antalepisoder=8, showviewcode=38447839, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=true, bredformat=false, premiere=false, th=false, program_id=11510059, hovedgenre_id=13, undergenre_id=753, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
+            <![CDATA[RitzauProgram{Id=577048, channel_name='voice', kanalId=96, starttid=2010-03-04 10:00:00.0, sluttid=2010-03-04 13:00:00.0, annotation='null', originaltitel='null', kanalnavn='Radio The Voice Århus', titel='Max Musik', hovedgenre='Radio', undergenre='Alle', kortomtale='null', langomtale1='null', langomtale2='null', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=0, episodenr=0, antalepisoder=0, showviewcode=0, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=13113966, hovedgenre_id=24, undergenre_id=674, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
         </ritzau_original>
 
         <gallup_original>
@@ -205,12 +205,21 @@
     <program_recording_files>
         <file>
             <file_url>
-                http://bitfinder.statsbiblioteket.dk/bart/dr2_203.250_K9-DR2_mpeg2_20090303125601_20090304020002_encoder3-2.mpeg
+                http://bitfinder.statsbiblioteket.dk/bart/voice_www_The-Voice_pcm_20100304055601_20100304182201_encoder5-1.wav
             </file_url>
-            <program_start_offset>43949</program_start_offset>
-            <program_clip_length>1980</program_clip_length>
-            <file_name>dr2_203.250_K9-DR2_mpeg2_20090303125601_20090304020002_encoder3-2.mpeg</file_name>
-            <format_uri>info:pronom/x-fmt/386</format_uri>
+            <program_start_offset>14549</program_start_offset>
+            <program_clip_length>10980</program_clip_length>
+            <file_name>voice_www_The-Voice_pcm_20100304055601_20100304182201_encoder5-1.wav</file_name>
+            <format_uri>info:pronom/fmt/6</format_uri>
+        </file>
+        <file>
+            <file_url>
+                http://bitfinder.statsbiblioteket.dk/bart/voice_www_The-Voice_pcm_20100304090201_20100304182202_encoder5-2.wav
+            </file_url>
+            <program_start_offset>3389</program_start_offset>
+            <program_clip_length>10980</program_clip_length>
+            <file_name>voice_www_The-Voice_pcm_20100304090201_20100304182202_encoder5-2.wav</file_name>
+            <format_uri>info:pronom/fmt/6</format_uri>
         </file>
     </program_recording_files>
 </program>

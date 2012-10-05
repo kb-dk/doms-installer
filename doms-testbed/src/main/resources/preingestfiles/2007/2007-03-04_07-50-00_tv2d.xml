@@ -5,12 +5,12 @@
         <PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
 
             <pbcoreIdentifier>
-                <identifier><![CDATA[3399171RitzauProgram]]></identifier>
+                <identifier><![CDATA[1412626RitzauProgram]]></identifier>
                 <identifierSource><![CDATA[id]]></identifierSource>
             </pbcoreIdentifier>
 
             <pbcoreTitle>
-                <title><![CDATA[Klovn]]></title>
+                <title><![CDATA[Pippi Langstrømpe]]></title>
                 <titleType><![CDATA[titel]]></titleType>
             </pbcoreTitle>
 
@@ -20,53 +20,48 @@
             </pbcoreTitle>
 
             <pbcoreTitle>
-                <title><![CDATA[]]></title>
+                <title><![CDATA["Pippi finder nogle mystiske fodspor".]]></title>
                 <titleType><![CDATA[episodetitel]]></titleType>
             </pbcoreTitle>
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Længe leve demokratiet. Et Folketingsvalg står for døren, og Frank hjælper loyalt sin svigerfar i hans valgkamp for CD. Det bringer Frank på kant med enhedslisten. Ølklubben har indgået et samarbejde med Carlsberg om produktionen af en ny øl.]]>
+                    <![CDATA[Pippi er ude at stå på ski. Hun morer sig herligt, men så opdager hun, at hr. Nilsson er blevet væk. Da hun leder efter ham, løber hun bogstavelig talt ind i en mand, der er forsker. Han er fodsporolog. Pippi viser manden nogle mystiske, store fodspor, hun har fundet.]]>
                 </description>
                 <descriptionType><![CDATA[langomtale1]]></descriptionType>
             </pbcoreDescription>
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Indkøbet af et par alt for små sko giver uheldigvis Frank problemer med at gennemføre et vigtigt møde med Carlsbergs bestyrelse. Desuden når Claires nyreligiøsitet nye pinagtige højder. Franks eneste lyspunkt er en dejlig champagnesabel.]]>
+                    <![CDATA[Manden er sikker på, at de tilhører et dyr, ingen nogensinde har set. Han er meget begejstret og sikker på, at nu bliver han berømt.]]>
                 </description>
                 <descriptionType><![CDATA[langomtale2]]></descriptionType>
             </pbcoreDescription>
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Dansk sitcom baseret på virkelige hændelser.]]>
+                    <![CDATA[Svensk-tysk-canadisk tegnefilm for børn.]]>
                 </description>
                 <descriptionType><![CDATA[kortomtale]]></descriptionType>
             </pbcoreDescription>
 
             <pbcoreGenre>
-                <genre>hovedgenre: <![CDATA[Underholdning]]></genre>
+                <genre>hovedgenre: <![CDATA[Børn & Ungdom]]></genre>
             </pbcoreGenre>
 
             <pbcoreGenre>
-                <genre>undergenre: <![CDATA[Sit-com]]></genre>
+                <genre>undergenre: <![CDATA[Tegnefilm]]></genre>
             </pbcoreGenre>
 
 
             <pbcoreCreator>
-                <creator><![CDATA[Casper Christensen og Frank Hvam]]></creator>
+                <creator><![CDATA[]]></creator>
                 <creatorRole><![CDATA[forfatter]]></creatorRole>
             </pbcoreCreator>
 
 
             <pbcoreContributor>
-                <contributor><![CDATA[Casper: Casper Christensen]]></contributor>
-                <contributorRole><![CDATA[medvirkende]]></contributorRole>
-            </pbcoreContributor>
-
-            <pbcoreContributor>
-                <contributor><![CDATA[Frank: Frank Hvam]]></contributor>
+                <contributor><![CDATA[]]></contributor>
                 <contributorRole><![CDATA[medvirkende]]></contributorRole>
             </pbcoreContributor>
 
@@ -88,7 +83,7 @@
             </pbcorePublisher>
 
             <pbcoreInstantiation>
-                <dateCreated><![CDATA[2005]]></dateCreated>
+                <dateCreated><![CDATA[1997]]></dateCreated>
                 <dateIssued></dateIssued>
                 <formatLocation></formatLocation>
                 <formatMediaType><![CDATA[Moving Image]]></formatMediaType>
@@ -98,8 +93,8 @@
                 <formatColors><![CDATA[farve]]></formatColors>
                 <formatChannelConfiguration><![CDATA[ikke surround]]></formatChannelConfiguration>
                 <pbcoreDateAvailable>
-                    <dateAvailableStart><![CDATA[2009-03-04T00:05:00+0100]]></dateAvailableStart>
-                    <dateAvailableEnd><![CDATA[2009-03-04T00:35:00+0100]]></dateAvailableEnd>
+                    <dateAvailableStart><![CDATA[2007-03-04T07:50:00+0100]]></dateAvailableStart>
+                    <dateAvailableEnd><![CDATA[2007-03-04T08:15:00+0100]]></dateAvailableEnd>
                 </pbcoreDateAvailable>
                 <pbcoreFormatID>
                     <formatIdentifier>[INSERT_PBC_FORMAT_ID]</formatIdentifier>
@@ -115,7 +110,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>episodenr:<![CDATA[27]]></extension>
+                <extension>episodenr:<![CDATA[9]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -127,7 +122,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>hovedgenre_id:<![CDATA[10]]></extension>
+                <extension>hovedgenre_id:<![CDATA[16]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -143,15 +138,15 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>produktionsland:<![CDATA[Dansk]]></extension>
+                <extension>produktionsland:<![CDATA[]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>produktionsland_id:<![CDATA[1]]></extension>
+                <extension>produktionsland_id:<![CDATA[0]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>program_id:<![CDATA[11485715]]></extension>
+                <extension>program_id:<![CDATA[8865763]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -159,7 +154,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>undergenre_id:<![CDATA[743]]></extension>
+                <extension>undergenre_id:<![CDATA[593]]></extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
@@ -191,7 +186,7 @@
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>showviewcode:<![CDATA[91094]]></extension>
+                <extension>showviewcode:<![CDATA[6806839]]></extension>
             </pbcoreExtension>
 
         </PBCoreDescriptionDocument>
@@ -199,7 +194,7 @@
 
     <originals>
         <ritzau_original>
-            <![CDATA[RitzauProgram{Id=3399171, channel_name='tv2d', kanalId=6, starttid=2009-03-04 00:05:00.0, sluttid=2009-03-04 00:35:00.0, annotation='null', originaltitel='null', kanalnavn='TV 2', titel='Klovn', hovedgenre='Underholdning', undergenre='Sit-com', kortomtale='Dansk sitcom baseret på virkelige hændelser.', langomtale1='Længe leve demokratiet. Et Folketingsvalg står for døren, og Frank hjælper loyalt sin svigerfar i hans valgkamp for CD. Det bringer Frank på kant med enhedslisten. Ølklubben har indgået et samarbejde med Carlsberg om produktionen af en ny øl.', langomtale2='Indkøbet af et par alt for små sko giver uheldigvis Frank problemer med at gennemføre et vigtigt møde med Carlsbergs bestyrelse. Desuden når Claires nyreligiøsitet nye pinagtige højder. Franks eneste lyspunkt er en dejlig champagnesabel.', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='Casper Christensen og Frank Hvam', produktionsland='Dansk', medvirkende='Frank: Frank Hvam og Casper: Casper Christensen.', programlaengde=0, produktionsaar=2005, episodenr=27, antalepisoder=0, showviewcode=91094, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=11485715, hovedgenre_id=10, undergenre_id=743, program_ophold=false, produktionsland_id=1, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
+            <![CDATA[RitzauProgram{Id=1412626, channel_name='tv2d', kanalId=6, starttid=2007-03-04 07:50:00.0, sluttid=2007-03-04 08:15:00.0, annotation='null', originaltitel='null', kanalnavn='TV 2', titel='Pippi Langstrømpe', hovedgenre='Børn & Ungdom', undergenre='Tegnefilm', kortomtale='Svensk-tysk-canadisk tegnefilm for børn.', langomtale1='Pippi er ude at stå på ski. Hun morer sig herligt, men så opdager hun, at hr. Nilsson er blevet væk. Da hun leder efter ham, løber hun bogstavelig talt ind i en mand, der er forsker. Han er fodsporolog. Pippi viser manden nogle mystiske, store fodspor, hun har fundet.', langomtale2='Manden er sikker på, at de tilhører et dyr, ingen nogensinde har set. Han er meget begejstret og sikker på, at nu bliver han berømt.', urllink='null', lydlink='null', episodetitel='"Pippi finder nogle mystiske fodspor".', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=1997, episodenr=9, antalepisoder=0, showviewcode=6806839, surround=false, genudsendelse=false, ttv=false, sh=false, tekstet=false, sekstenni=false, bredformat=false, premiere=false, th=false, program_id=8865763, hovedgenre_id=16, undergenre_id=593, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
         </ritzau_original>
 
         <gallup_original>
@@ -210,11 +205,11 @@
     <program_recording_files>
         <file>
             <file_url>
-                http://bitfinder.statsbiblioteket.dk/bart/tv2d_511.250_K10-TV2-Danmark_mpeg2_20090303045601_20090304045502_encoder1-2.mpeg
+                http://bitfinder.statsbiblioteket.dk/bart/tv2d_511.250_K10-TV2-Danmark_mpeg2_20070304062601_20070305045502_encoder1-1.mpeg
             </file_url>
-            <program_start_offset>68849</program_start_offset>
-            <program_clip_length>1980</program_clip_length>
-            <file_name>tv2d_511.250_K10-TV2-Danmark_mpeg2_20090303045601_20090304045502_encoder1-2.mpeg</file_name>
+            <program_start_offset>4949</program_start_offset>
+            <program_clip_length>1680</program_clip_length>
+            <file_name>tv2d_511.250_K10-TV2-Danmark_mpeg2_20070304062601_20070305045502_encoder1-1.mpeg</file_name>
             <format_uri>info:pronom/x-fmt/386</format_uri>
         </file>
     </program_recording_files>
