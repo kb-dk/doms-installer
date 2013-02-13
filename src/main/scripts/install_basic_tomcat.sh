@@ -13,8 +13,15 @@ BASEDIR=$SCRIPT_DIR/..
 #
 # Import settings
 #
-source $SCRIPT_DIR/setenv.sh
+pushd $SCRIPT_DIR > /dev/null
+source common.sh
+popd > /dev/null
 
+parseTestbedDir "$@"
+
+pushd $SCRIPT_DIR > /dev/null
+source setenv.sh
+popd > /dev/null
 
 
 ##

@@ -37,7 +37,7 @@
         <dependencySet>
             <outputDirectory>extras</outputDirectory>
             <includes>
-                <include>dk.statsbiblioteket.doms.installer:baseObjectsIngester</include>
+                <include>dk.statsbiblioteket.doms.installer:base-objects-ingester</include>
             </includes>
             <!--<outputFileNameMapping>${artifact.artifactId}-${artifact.version}${dashClassifier?}.${artifact.extension}</outputFileNameMapping>-->
            <!-- <outputFileNameMapping>${artifact.artifactId}</outputFileNameMapping>-->

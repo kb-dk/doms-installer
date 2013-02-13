@@ -4,22 +4,6 @@ TOMCATZIP=`basename $BASEDIR/data/tomcat/*.zip`
 FEDORAJAR=`basename $BASEDIR/data/fedora/*.jar`
 INGESTERZIP=`basename $BASEDIR/ingester/*.zip`
 
-#
-# Check for install-folder and potentially create it.
-#
-TESTBED_DIR=$@
-if [ -z "$TESTBED_DIR" ]; then
-    echo "install-dir not specified. Bailing out." 1>&2
-    usage
-fi
-if [ -d $TESTBED_DIR ]; then
-    echo ""
-else
-    mkdir -p $TESTBED_DIR
-fi
-pushd $@ > /dev/null
-TESTBED_DIR=$(pwd)
-popd > /dev/null
 
 # The normal config values
 PORTRANGE=78
@@ -61,12 +45,13 @@ DATA_DIR=$TESTBED_DIR/data
 
 CACHE_DIR=$TESTBED_DIR/cache
 
-BASEOBJS_DIR=$TESTBED_DIR/baseObjectsIngest
+BASEOBJS_DIR=$TESTBED_DIR/base-objects-ingester
 
 DOCS_DIR=$TESTBED_DIR/docs
 
 #Database
 #USE_POSTGRESQL=true
+USE_POSTGRESQL=false
 POSTGRESQL_DB=doms-test$PORTRANGE
 POSTGRESQL_USER=doms-test$PORTRANGE
 POSTGRESQL_PASS=doms-test$PORTRANGE

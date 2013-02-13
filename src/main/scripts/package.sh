@@ -9,6 +9,31 @@
 # USAGE: After unpacking, edit setenv.sh to suit your needs, run
 # then run this script.
 
+#
+# Set up basic variables
+#
+SCRIPT_DIR=$(dirname $0)
+pushd $SCRIPT_DIR > /dev/null
+SCRIPT_DIR=$(pwd)
+popd > /dev/null
+BASEDIR=$SCRIPT_DIR/..
+
+
+
+
+#
+# Import settings
+#
+pushd $SCRIPT_DIR > /dev/null
+source common.sh
+popd > /dev/null
+
+parseTestbedDir "$@"
+
+pushd $SCRIPT_DIR > /dev/null
+source setenv.sh
+popd > /dev/null
+
 
 function replace(){
 sed \
@@ -38,21 +63,6 @@ sed \
 <$1 > $2
 }
 
-#
-# Set up basic variables
-#
-SCRIPT_DIR=$(dirname $0)
-pushd $SCRIPT_DIR > /dev/null
-SCRIPT_DIR=$(pwd)
-popd > /dev/null
-BASEDIR=$SCRIPT_DIR/..
-
-
-
-#
-# Import settings
-#
-source $SCRIPT_DIR/setenv.sh
 
 
 CONFIG_TEMP_DIR=`mktemp -d`
@@ -226,12 +236,9 @@ cp $BASEDIR/data/schemas/* $SCHEMA_DIR/
 
 mkdir -p $BASEOBJS_DIR/bin
 mkdir -p $BASEOBJS_DIR/scripts
-for file in $BASEDIR/extras/baseObjectsIngester-*/scripts/*.xml ; do
-  replace $file $BASEOBJS_DIR/scripts/`basename $file`
-  echo "Created batch file $BASEOBJS_DIR/scripts/`basename $file` from template file $file"
-done
+cp -r $BASEDIR/extras/base-objects-ingester-*/scripts/*  $BASEOBJS_DIR/scripts
 
-for file in $BASEDIR/extras/baseObjectsIngester-*/bin/*.sh ; do
+for file in $BASEDIR/extras/base-objects-ingester-*/bin/*.sh ; do
   replace $file $BASEOBJS_DIR/bin/`basename $file`
   chmod a+x $BASEOBJS_DIR/bin/`basename $file`
   echo "Created batch file $BASEOBJS_DIR/bin/`basename $file` from template file $file"

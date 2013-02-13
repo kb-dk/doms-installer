@@ -24,13 +24,6 @@ else
     JAVA_EXEC="$JAVA_HOME/bin/java"
 fi
 
-"$JAVA_EXEC" -version 2>&1|grep "1\.6\.0" > /dev/null
-
-if [ $? -ne 0 ] ; then
-    echo "This package only supports Java 1.6"
-    exit 2
-fi
-
 
 #
 # Set up basic variables
@@ -46,7 +39,16 @@ BASEDIR=$SCRIPT_DIR/..
 #
 # Import settings
 #
-source $SCRIPT_DIR/setenv.sh
+pushd $SCRIPT_DIR > /dev/null
+source common.sh
+popd > /dev/null
+
+parseTestbedDir "$@"
+
+pushd $SCRIPT_DIR > /dev/null
+source setenv.sh
+popd > /dev/null
+
 
 # Do the ingest of the base objects
 $SCRIPT_DIR/install_basic_tomcat.sh $TESTBED_DIR
@@ -64,7 +66,9 @@ echo "Sleep 30"
 sleep 30
 
 # Do the ingest of the base objects
-$BASEOBJS_DIR/bin/createOrUpdateBasicObjects.sh
+$BASEOBJS_DIR/bin/createBasicObjects.sh
+$BASEOBJS_DIR/bin/createRadioTVObjects.sh
+
 
 SUMMARISE_SOURCE_DIR="$BASEDIR/data/summarise"
 SUMMARISE_DIR="$TESTBED_DIR/summarise"
