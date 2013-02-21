@@ -45,10 +45,41 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.ingesters</groupId>
             <artifactId>radio-tv</artifactId>
-            <version>0.0.8-SNAPSHOT</version>
+            <version>0.0.6</version>
             <classifier>ingester</classifier>
             <type>zip</type>
         </dependency>
+
+        <dependency>
+            <groupId>dk.statsbiblioteket.medieplatform</groupId>
+            <artifactId>yousee-doms-ingester</artifactId>
+            <version>0.1.5</version>
+            <classifier>bundle</classifier>
+            <type>zip</type>
+        </dependency>
+
+
+<!--
+        <dependency>
+            <groupId>dk.statsbiblioteket.medieplatform</groupId>
+            <artifactId>vhs-doms-ingester</artifactId>
+            <version>0.1.5</version>
+            <classifier>bundle</classifier>
+            <type>tar.gz</type>
+        </dependency>
+-->
+
+
+        <dependency>
+            <groupId>dk.statsbiblioteket.medieplatform</groupId>
+            <artifactId>reklame-doms-ingester</artifactId>
+            <version>0.1.5</version>
+            <classifier>bundle</classifier>
+            <type>tar.gz</type>
+        </dependency>
+
+
+
 
         <dependency>
             <groupId>dk.statsbiblioteket.doms.installer</groupId>

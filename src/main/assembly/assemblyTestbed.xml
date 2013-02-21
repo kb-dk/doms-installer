@@ -37,9 +37,32 @@
 
 
         <dependencySet>
-            <outputDirectory>ingester</outputDirectory>
+            <outputDirectory>ingesters/digitv</outputDirectory>
             <includes>
                 <include>dk.statsbiblioteket.doms.ingesters:radio-tv</include>
+            </includes>
+        </dependencySet>
+
+        <dependencySet>
+            <outputDirectory>ingesters/yousee</outputDirectory>
+            <includes>
+                <include>dk.statsbiblioteket.medieplatform:yousee-doms-ingester</include>
+            </includes>
+        </dependencySet>
+
+<!--
+        <dependencySet>
+            <outputDirectory>ingesters/vhs</outputDirectory>
+            <includes>
+                <include>dk.statsbiblioteket.medieplatform:vhs-doms-ingester</include>
+            </includes>
+        </dependencySet>
+-->
+
+        <dependencySet>
+            <outputDirectory>ingesters/reklame</outputDirectory>
+            <includes>
+                <include>dk.statsbiblioteket.medieplatform:reklame-doms-ingester</include>
             </includes>
         </dependencySet>
 
