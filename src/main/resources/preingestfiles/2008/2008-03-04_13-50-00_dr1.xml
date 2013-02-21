@@ -1,216 +1,207 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<program xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="preingestedRadioTVProgram.xsd">
+<?xml version="1.0"?>
+<program xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../exportedRadioTVProgram.xsd">
     <pbcore>
         <PBCoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
 
             <pbcoreIdentifier>
-                <identifier><![CDATA[2395660RitzauProgram]]></identifier>
-                <identifierSource><![CDATA[id]]></identifierSource>
+                <identifier>2395660RitzauProgram</identifier>
+                <identifierSource>id</identifierSource>
             </pbcoreIdentifier>
 
             <pbcoreTitle>
-                <title><![CDATA[Søren og Søren]]></title>
-                <titleType><![CDATA[titel]]></titleType>
+                <title>Søren og Søren</title>
+                <titleType>titel</titleType>
             </pbcoreTitle>
 
             <pbcoreTitle>
-                <title><![CDATA[]]></title>
-                <titleType><![CDATA[originaltitel]]></titleType>
+                <title></title>
+                <titleType>originaltitel</titleType>
             </pbcoreTitle>
 
             <pbcoreTitle>
-                <title><![CDATA[]]></title>
-                <titleType><![CDATA[episodetitel]]></titleType>
+                <title></title>
+                <titleType>episodetitel</titleType>
             </pbcoreTitle>
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Søren Gericke er atter på besøg i Søren Ryges køkken, og denne gang er opgaven at stege fiskefileter på andre måder, end Søren Ryge og alle andre altid gør. Det blev til et orgie af fisk!]]>
+                    Søren Gericke er atter på besøg i Søren Ryges køkken, og denne gang er opgaven at stege fiskefileter på andre måder, end Søren Ryge og alle andre altid gør. Det blev til et orgie af fisk!
                 </description>
-                <descriptionType><![CDATA[langomtale1]]></descriptionType>
+                <descriptionType>langomtale1</descriptionType>
             </pbcoreDescription>
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Sendt første gang 19.9.07.]]>
+                    Sendt første gang 19.9.07.
                 </description>
-                <descriptionType><![CDATA[langomtale2]]></descriptionType>
+                <descriptionType>langomtale2</descriptionType>
             </pbcoreDescription>
 
             <pbcoreDescription>
                 <description>
-                    <![CDATA[Søren laver fisk.]]>
+                    Søren laver fisk.
                 </description>
-                <descriptionType><![CDATA[kortomtale]]></descriptionType>
+                <descriptionType>kortomtale</descriptionType>
             </pbcoreDescription>
 
             <pbcoreGenre>
-                <genre>hovedgenre: <![CDATA[Sundhed & Mad]]></genre>
+                <genre>hovedgenre: Sundhed &amp; Mad</genre>
             </pbcoreGenre>
 
             <pbcoreGenre>
-                <genre>undergenre: <![CDATA[Mad]]></genre>
+                <genre>undergenre: Mad</genre>
             </pbcoreGenre>
 
 
             <pbcoreCreator>
-                <creator><![CDATA[]]></creator>
-                <creatorRole><![CDATA[forfatter]]></creatorRole>
+                <creator></creator>
+                <creatorRole>forfatter</creatorRole>
             </pbcoreCreator>
 
 
             <pbcoreContributor>
-                <contributor><![CDATA[]]></contributor>
-                <contributorRole><![CDATA[medvirkende]]></contributorRole>
+                <contributor></contributor>
+                <contributorRole>medvirkende</contributorRole>
             </pbcoreContributor>
 
 
             <pbcoreContributor>
-                <contributor><![CDATA[]]></contributor>
-                <contributorRole><![CDATA[instruktion]]></contributorRole>
+                <contributor></contributor>
+                <contributorRole>instruktion</contributorRole>
             </pbcoreContributor>
 
 
             <pbcorePublisher>
-                <publisher><![CDATA[dr1]]></publisher>
-                <publisherRole><![CDATA[channel_name]]></publisherRole>
+                <publisher>dr1</publisher>
+                <publisherRole>channel_name</publisherRole>
             </pbcorePublisher>
 
             <pbcorePublisher>
-                <publisher><![CDATA[DR1]]></publisher>
-                <publisherRole><![CDATA[kanalnavn]]></publisherRole>
+                <publisher>DR1</publisher>
+                <publisherRole>kanalnavn</publisherRole>
             </pbcorePublisher>
 
             <pbcoreInstantiation>
-                <dateCreated><![CDATA[2007]]></dateCreated>
-                <dateIssued></dateIssued>
-                <formatLocation></formatLocation>
-                <formatMediaType><![CDATA[Moving Image]]></formatMediaType>
-                <formatStandard><![CDATA[ikke hd]]></formatStandard>
-                <formatDuration><![CDATA[0]]></formatDuration>
-                <formatAspectRatio><![CDATA[16:9]]>,</formatAspectRatio>
-                <formatColors><![CDATA[farve]]></formatColors>
-                <formatChannelConfiguration><![CDATA[ikke surround]]></formatChannelConfiguration>
+                <dateCreated>2007</dateCreated>
+                <dateIssued/>
+                <formatLocation/>
+                <formatMediaType>Moving Image</formatMediaType>
+                <formatStandard>ikke hd</formatStandard>
+                <formatDuration>0</formatDuration>
+                <formatAspectRatio>16:9,</formatAspectRatio>
+                <formatColors>farve</formatColors>
+                <formatChannelConfiguration>ikke surround</formatChannelConfiguration>
                 <pbcoreDateAvailable>
-                    <dateAvailableStart><![CDATA[2008-03-04T13:50:00+0100]]></dateAvailableStart>
-                    <dateAvailableEnd><![CDATA[2008-03-04T14:20:00+0100]]></dateAvailableEnd>
+                    <dateAvailableStart>2008-03-04T13:50:00+0100</dateAvailableStart>
+                    <dateAvailableEnd>2008-03-04T14:20:00+0100</dateAvailableEnd>
                 </pbcoreDateAvailable>
                 <pbcoreFormatID>
                     <formatIdentifier>[INSERT_PBC_FORMAT_ID]</formatIdentifier>
                     <formatIdentifierSource>[INSERT_PBC_FORMAT_ID_SOURCE]</formatIdentifierSource>
                 </pbcoreFormatID>
                 <pbcoreAnnotation>
-                    <annotation><![CDATA[]]></annotation>
+                    <annotation></annotation>
                 </pbcoreAnnotation>
             </pbcoreInstantiation>
 
             <pbcoreExtension>
-                <extension>antalepisoder:<![CDATA[0]]></extension>
+                <extension>antalepisoder:0</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>episodenr:<![CDATA[0]]></extension>
+                <extension>episodenr:0</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>premiere:<![CDATA[ikke premiere]]></extension>
+                <extension>premiere:ikke premiere</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>genudsendelse:<![CDATA[genudsendelse]]></extension>
+                <extension>genudsendelse:genudsendelse</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>hovedgenre_id:<![CDATA[30]]></extension>
+                <extension>hovedgenre_id:30</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>kanalid:<![CDATA[3]]></extension>
+                <extension>kanalid:3</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>live:<![CDATA[ikke live]]></extension>
+                <extension>live:ikke live</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>lydlink:<![CDATA[]]></extension>
+                <extension>lydlink:</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>produktionsland:<![CDATA[]]></extension>
+                <extension>produktionsland:</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>produktionsland_id:<![CDATA[0]]></extension>
+                <extension>produktionsland_id:0</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>program_id:<![CDATA[10219637]]></extension>
+                <extension>program_id:10219637</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>program_ophold:<![CDATA[ikke program ophold]]></extension>
+                <extension>program_ophold:ikke program ophold</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>undergenre_id:<![CDATA[640]]></extension>
+                <extension>undergenre_id:640</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>urllink:<![CDATA[]]></extension>
+                <extension>urllink:</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>afsnit_id:<![CDATA[0]]></extension>
+                <extension>afsnit_id:0</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>saeson_id:<![CDATA[0]]></extension>
+                <extension>saeson_id:0</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>serie_id:<![CDATA[0]]></extension>
+                <extension>serie_id:0</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>tekstet:<![CDATA[ikke tekstet]]></extension>
+                <extension>tekstet:ikke tekstet</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>th:<![CDATA[tekstet for hørehæmmede]]></extension>
+                <extension>th:tekstet for hørehæmmede</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>ttv:<![CDATA[ikke tekst-tv]]></extension>
+                <extension>ttv:ikke tekst-tv</extension>
             </pbcoreExtension>
 
             <pbcoreExtension>
-                <extension>showviewcode:<![CDATA[759549]]></extension>
+                <extension>showviewcode:759549</extension>
             </pbcoreExtension>
 
         </PBCoreDescriptionDocument>
     </pbcore>
 
     <originals>
-        <ritzau_original>
-            <![CDATA[RitzauProgram{Id=2395660, channel_name='dr1', kanalId=3, starttid=2008-03-04 13:50:00.0, sluttid=2008-03-04 14:20:00.0, annotation='null', originaltitel='null', kanalnavn='DR1', titel='Søren og Søren', hovedgenre='Sundhed & Mad', undergenre='Mad', kortomtale='Søren laver fisk.', langomtale1='Søren Gericke er atter på besøg i Søren Ryges køkken, og denne gang er opgaven at stege fiskefileter på andre måder, end Søren Ryge og alle andre altid gør. Det blev til et orgie af fisk!', langomtale2='Sendt første gang 19.9.07.', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=2007, episodenr=0, antalepisoder=0, showviewcode=759549, surround=false, genudsendelse=true, ttv=false, sh=false, tekstet=false, sekstenni=true, bredformat=false, premiere=false, th=true, program_id=10219637, hovedgenre_id=30, undergenre_id=640, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}]]>
+        <ritzau_original xmlns="http://doms.statsbiblioteket.dk/types/ritzau_original/0/1/#" xmlns:pb="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
+            RitzauProgram{Id=2395660, channel_name='dr1', kanalId=3, starttid=2008-03-04 13:50:00.0, sluttid=2008-03-04 14:20:00.0, annotation='null', originaltitel='null', kanalnavn='DR1', titel='Søren og Søren', hovedgenre='Sundhed &amp; Mad', undergenre='Mad', kortomtale='Søren laver fisk.', langomtale1='Søren Gericke er atter på besøg i Søren Ryges køkken, og denne gang er opgaven at stege fiskefileter på andre måder, end Søren Ryge og alle andre altid gør. Det blev til et orgie af fisk!', langomtale2='Sendt første gang 19.9.07.', urllink='null', lydlink='null', episodetitel='null', instruktion='null', forfatter='null', produktionsland='null', medvirkende='null', programlaengde=0, produktionsaar=2007, episodenr=0, antalepisoder=0, showviewcode=759549, surround=false, genudsendelse=true, ttv=false, sh=false, tekstet=false, sekstenni=true, bredformat=false, premiere=false, th=true, program_id=10219637, hovedgenre_id=30, undergenre_id=640, program_ophold=false, produktionsland_id=0, live=false, hd=false, afsnit_id=0, saeson_id=0, serie_id=0}
         </ritzau_original>
 
-        <gallup_original>
-            <![CDATA[]]>
+        <gallup_original xmlns="http://doms.statsbiblioteket.dk/types/gallup_original/0/1/#" xmlns:pb="http://www.pbcore.org/PBCore/PBCoreNamespace.html">
+            
         </gallup_original>
-    </originals>
-
-    <program_recording_files>
-        <file>
-            <file_url>
+    </originals><programBroadcast xmlns="http://doms.statsbiblioteket.dk/types/program_broadcast/0/1/#" xmlns:pb="http://www.pbcore.org/PBCore/PBCoreNamespace.html"><timeStart>2008-03-04T13:50:00+01:00</timeStart><timeStop>2008-03-04T14:20:00+01:00</timeStop><channelId>dr1</channelId></programBroadcast><fileUrls xmlns:pb="http://www.pbcore.org/PBCore/PBCoreNamespace.html"><fileUrl>
                 http://bitfinder.statsbiblioteket.dk/bart/dr1_196.250_K11-DR1_mpeg2_20080304055601_20080305012201_encoder2-1.mpeg
-            </file_url>
-            <program_start_offset>28349</program_start_offset>
-            <program_clip_length>1980</program_clip_length>
-            <file_name>dr1_196.250_K11-DR1_mpeg2_20080304055601_20080305012201_encoder2-1.mpeg</file_name>
-            <format_uri>info:pronom/x-fmt/386</format_uri>
-        </file>
-    </program_recording_files>
+            </fileUrl></fileUrls>
+
+    
 </program>
