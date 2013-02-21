@@ -9,6 +9,9 @@ else
     JAVA_EXEC="$JAVA_HOME/bin/java"
 fi
 
+#TODO
+# status method to check if running
+
 #
 # Setup environment
 #
