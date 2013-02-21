@@ -85,7 +85,9 @@ if [ -e "$SUMMARISE_SOURCE_DIR" ] ; then
     sed -i -e "s%http://localhost:7880/centralWebservice-service/central/?wsdl%http://localhost:${PORTRANGE}80/centralWebservice-service/central/?wsdl%g" \
             "$SUMMARISE_DIR/config/storage_domsgui.xml"
     echo "Running Summa installer"
+    pushd "$SUMMARISE_DIR" > /dev/null
     VERBOSE=1 "$SUMMARISE_DIR"/bin/all.sh
+    popd > /dev/null
 fi
 
 BIN_DIR="$TESTBED_DIR/bin"
