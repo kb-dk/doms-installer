@@ -18,3 +18,18 @@ function parseTestbedDir(){
     TESTBED_DIR=$(pwd)
     popd > /dev/null
 }
+
+#
+# Check for install-folder and potentially create it.
+#
+function parseDataDir(){
+    DATA_DIR=$2
+    if [ -d $DATA_DIR ]; then
+        echo ""
+    else
+        mkdir -p $DATA_DIR
+    fi
+    pushd $DATA_DIR > /dev/null
+    DATA_DIR=$(pwd)
+    popd > /dev/null
+}

@@ -11,7 +11,7 @@
 # Check whether $1 is set
 #
 if [ -z "$1" ] ; then
-    echo "Usage: $0 <install_dir>"
+    echo "Usage: $0 <install_dir> [<data_dir>]"
     exit 1
 fi
 
@@ -45,6 +45,9 @@ popd > /dev/null
 
 parseTestbedDir "$@"
 
+parseDataDir "$@"
+
+
 pushd $SCRIPT_DIR > /dev/null
 source setenv.sh
 popd > /dev/null
@@ -55,6 +58,19 @@ $SCRIPT_DIR/install_basic_tomcat.sh $TESTBED_DIR
 
 # Do the big package procedure
 $SCRIPT_DIR/package.sh $TESTBED_DIR
+
+#Relink the data dir
+
+if [ -z "$DATA_DIR" ]; then
+    rm -r $TESTBED_DIR/data
+    mkdir -p $DATA_DIR/data
+    ln -s $DATA_DIR/data $TESTBED_DIR/data
+
+    rm -r $TESTBED_DIR/cache
+    mkdir -p $DATA_DIR/cache
+    ln -s $DATA_DIR/cache $TESTBED_DIR/cache
+fi
+
 
 #
 # Start the tomcat server
