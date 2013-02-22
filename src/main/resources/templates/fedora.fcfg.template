@@ -569,7 +569,7 @@
         <param name="dbPassword" value="$POSTGRESQL_PASS$">
             <comment>The database password.</comment>
         </param>
-        <param name="jdbcURL" value="jdbc:postgresql://localhost/$POSTGRESQL_DB$">
+        <param name="jdbcURL" value="jdbc:postgresql://$POSTGRESQL_SERVER$/$POSTGRESQL_DB$">
             <comment>The JDBC connection URL.</comment>
         </param>
         <param name="jdbcDriverClass" value="org.postgresql.Driver">
