@@ -141,17 +141,11 @@
                value="
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-surveyor-service/surveyable/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-fedorasurveyor-service/surveyable/getStatusSince/{date};
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/authchecker-service/surveyable/getStatusSince/{date};
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/ecm-service/surveyable/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora/surveyable/getStatusSince/{date}"
                override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.soapUrls"
                value="
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/bitstorage-lowlevel-service/surveyable/?wsdl;
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/bitstorage-highlevel-service/surveyable/?wsdl;
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/bitstorage-characteriser-service/surveyable/?wsdl;
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator-service/surveyable/?wsdl;
-               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/updatetracker-service/surveyable/?wsdl;
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/centralWebservice-service/surveyable/?wsdl"
                override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.log4jconfig"
