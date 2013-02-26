@@ -141,6 +141,7 @@
                value="
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-surveyor-service/surveyable/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/surveillance-fedorasurveyor-service/surveyable/getStatusSince/{date};
+               http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/authchecker-service/surveyable/getStatusSince/{date};
                http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora/surveyable/getStatusSince/{date}"
                override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.surveillance.surveyor.soapUrls"
