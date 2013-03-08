@@ -77,8 +77,6 @@ function update {
     $SUMMA_BIN/ingest_update.sh
     echo "Updating the index .."
     $SUMMA_BIN/index_update.sh
-    echo "Restarting summa .."
-    start_summa
 }
 
 case $1 in
