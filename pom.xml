@@ -45,7 +45,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.ingesters</groupId>
             <artifactId>radio-tv</artifactId>
-            <version>0.0.6</version>
+            <version>0.0.7</version>
             <classifier>ingester</classifier>
             <type>zip</type>
         </dependency>
@@ -84,7 +84,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.installer</groupId>
             <artifactId>base-objects-ingester</artifactId>
-            <version>0.11.6</version>
+            <version>0.11.8-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
 
@@ -100,7 +100,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.authchecker</groupId>
             <artifactId>authchecker-fedoralogin</artifactId>
-            <version>0.0.10</version>
+            <version>0.0.12</version>
         </dependency>
 
         <dependency>
@@ -172,12 +172,14 @@
             <version>0.0.27-SNAPSHOT</version>
             <type>war</type>
         </dependency>
+        <!--
         <dependency>
             <groupId>dk.statsbiblioteket.doms.updatetracker</groupId>
             <artifactId>updatetracker-service</artifactId>
             <version>0.0.14.2</version>
             <type>war</type>
         </dependency>
+        -->
         <dependency>
             <groupId>dk.statsbiblioteket.doms.surveillance</groupId>
             <artifactId>surveillance-fedorasurveyor-service</artifactId>
