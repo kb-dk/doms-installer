@@ -158,6 +158,13 @@
                value="$TOMCAT_CONFIG_DIR$/log4j.surveillance-surveyor.xml"
                override="false"/>
 
+    <!--Settings for links from DOMS-->
+
+    <Parameter name="contextParam.BTAWebservice.location" value="http://iapetus.statsbiblioteket.dk:9641/bta-ws"
+               override="false"/>
+    <Parameter name="contextParam.digitv.bartlocation" value="http://rigel:8370/bart2"
+               override="false"/>
+
 
     <!-- Default set of monitored resources -->
     <WatchedResource>WEB-INF/web.xml</WatchedResource>
