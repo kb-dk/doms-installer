@@ -57,6 +57,3 @@ POSTGRESQL_DB=doms-test
 POSTGRESQL_USER=doms
 POSTGRESQL_PASS=faeTh9xa
 
-#Bitstorage
-BITFINDER=http://bitfinder.statsbiblioteket.dk/
-BITSTORAGE_SCRIPT="ssh doms@stage01 bin/server.sh"
