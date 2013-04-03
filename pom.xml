@@ -9,7 +9,7 @@
 
     <groupId>dk.statsbiblioteket.doms.installer</groupId>
     <artifactId>installer</artifactId>
-    <version>0.12.0</version>
+    <version>0.12.1-SNAPSHOT</version>
 
     <properties>
         <summarise.version>0.2-SNAPSHOT</summarise.version>
