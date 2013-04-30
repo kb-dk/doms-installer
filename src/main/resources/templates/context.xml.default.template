@@ -15,7 +15,7 @@
                override="false"/>
     <Parameter
             name="dk.statsbiblioteket.doms.ecm.pidgenerator.client.wsdllocation"
-            value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator-service/pidGenerator/?wsdl"
+            value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator-service"
             override="false"/>
 
     <!--centralDomsWebservice-->

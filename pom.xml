@@ -136,7 +136,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.pidgenerator</groupId>
             <artifactId>pidgenerator-service</artifactId>
-            <version>0.0.8</version>
+            <version>0.0.9-SNAPSHOT</version>
             <type>war</type>
         </dependency>
 
@@ -169,7 +169,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.central</groupId>
             <artifactId>centralWebservice-service</artifactId>
-            <version>0.0.27</version>
+            <version>0.0.28-SNAPSHOT</version>
             <type>war</type>
         </dependency>
         <!--
