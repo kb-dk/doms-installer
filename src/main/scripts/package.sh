@@ -50,8 +50,6 @@ sed \
 -e 's|\$TOMCAT_SERVERNAME\$|'"$TOMCAT_SERVERNAME"'|g' \
 -e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
 -e 's|\$FEDORAADMINPASS\$|'"$FEDORAADMINPASS"'|g' \
--e 's|\$YOUSEEUSER\$|'"$YOUSEEUSER"'|g' \
--e 's|\$YOUSEEUSERPASS\$|'"$YOUSEEUSERPASS"'|g' \
 -e 's|\$FEDORAUSER\$|'"$FEDORAUSER"'|g' \
 -e 's|\$FEDORAUSERPASS\$|'"$FEDORAUSERPASS"'|g' \
 -e 's|\$POSTGRESQL_DB\$|'"$POSTGRESQL_DB"'|g' \
@@ -220,6 +218,9 @@ cp -v $CONFIG_TEMP_DIR/fedora-users.xml $FEDORA_DIR/server/config/fedora-users.x
 
 # Setup the the lowlevel storage
 cp -v $CONFIG_TEMP_DIR/akubra-llstore.xml $FEDORA_DIR/server/config/akubra-llstore.xml
+
+# Webapps are in non-standard place
+cp -v $CONFIG_TEMP_DIR/env-server.sh $FEDORA_DIR/server/bin/env-server.sh
 
 rm -rf $FEDORA_DIR/install
 
