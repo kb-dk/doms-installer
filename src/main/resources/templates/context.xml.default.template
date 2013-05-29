@@ -15,11 +15,8 @@
                override="false"/>
     <Parameter
             name="dk.statsbiblioteket.doms.ecm.pidgenerator.client.wsdllocation"
-            value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator-service/pidGenerator/?wsdl"
+            value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/pidgenerator-service"
             override="false"/>
-    <Parameter name="dk.statsbiblioteket.doms.ecm.log4jconfig"
-               value="$TOMCAT_CONFIG_DIR$/log4j.ecm.xml"
-               override="false"/>
 
     <!--centralDomsWebservice-->
     <Parameter name="dk.statsbiblioteket.doms.central.fedoraLocation"

@@ -20,6 +20,9 @@
       <level>WARN</level>
     </filter>
   </appender>
+  <logger name="org.mulgara.store.xa" additivity="false" level="WARN">
+    <appender-ref ref="FEDORA"/>
+  </logger>
   <logger name="org.fcrepo" additivity="false" level="INFO">
     <appender-ref ref="FEDORA"/>
   </logger>
