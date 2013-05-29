@@ -91,7 +91,7 @@ SUMMARISE_DIR="$TESTBED_DIR/summarise"
 
 if [ -e "$SUMMARISE_SOURCE_DIR" ] ; then
     echo "Installing Summa"
-    unzip -q "$SUMMARISE_SOURCE_DIR/domsgui-*-test.zip" -d "$SUMMARISE_DIR"
+    unzip -q "$SUMMARISE_SOURCE_DIR/domsgui-*.zip" -d "$SUMMARISE_DIR"
     mkdir -p "$SUMMARISE_DIR/index"
     mkdir -p "$SUMMARISE_DIR/suggest"
     cp "$SUMMARISE_SOURCE_DIR"/summix-*.zip "$SUMMARISE_DIR/summix-storage/"
