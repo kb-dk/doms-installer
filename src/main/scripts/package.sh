@@ -172,13 +172,14 @@ echo "Configuring fedora preinstall"
 # Install Fedora
 echo "Installing Fedora"
 pushd $BASEDIR/data/fedora > /dev/null
-java -jar $FEDORAJAR $CONFIG_TEMP_DIR/fedora.properties  > /dev/null
+java -jar $FEDORAJAR $CONFIG_TEMP_DIR/fedora.properties
 popd > /dev/null
-
 
 # Deploy stuff from fedoralib
 echo "Repacking Fedora war files with changes"
-pushd $FEDORA_DIR/install/fedorawar > /dev/null
+pushd $FEDORA_DIR/install > /dev/null
+unzip fedora.war -d fedorawar
+cd fedorawar
 mkdir -p WEB-INF/lib
 
 cp $BASEDIR/fedoralib/* WEB-INF/lib
@@ -257,5 +258,4 @@ if [ -f $BASEDIR/ingester/$INGESTERZIP ]; then
 fi
 
 echo "Install complete"
-
 
