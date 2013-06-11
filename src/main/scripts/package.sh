@@ -188,12 +188,6 @@ mkdir -p WEB-INF/lib
 #TODO install mulgara conf i WEB-INF/classes
 
 cp $BASEDIR/fedoralib/* WEB-INF/lib
-
-#TODO clean older versions of libraries here
-
-#TODO disable policy checking on objects
-
-
 FEDORAWEBXML=`mktemp`
 sed '/<\/web-app>/d' < WEB-INF/web.xml > $FEDORAWEBXML
 cat $CONFIG_TEMP_DIR/fedoraWebXmlInsert.xml >> $FEDORAWEBXML
@@ -230,6 +224,9 @@ cp -v $CONFIG_TEMP_DIR/fedora-users.xml $FEDORA_DIR/server/config/fedora-users.x
 
 # Setup the the lowlevel storage
 cp -v $CONFIG_TEMP_DIR/akubra-llstore.xml $FEDORA_DIR/server/config/spring/akubra-llstore.xml
+
+# Install the "No object policy" rule
+cp -v $CONFIG_TEMP_DIR/policy-enforcement.xml $FEDORA_DIR/server/config/spring/policy-enforcement.xml
 
 # Webapps are in non-standard place
 cp -v $CONFIG_TEMP_DIR/env-server.sh $FEDORA_DIR/server/bin/env-server.sh
