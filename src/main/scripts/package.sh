@@ -57,6 +57,9 @@ sed \
 -e 's|\$POSTGRESQL_USER\$|'"$POSTGRESQL_USER"'|g' \
 -e 's|\$POSTGRESQL_PASS\$|'"$POSTGRESQL_PASS"'|g' \
 -e 's|\$DATABASE_SYSTEM\$|'"$DATABASE_SYSTEM"'|g' \
+-e 's|\$REDIS_HOST\$|'"$REDIS_HOST"'|g' \
+-e 's|\$REDIS_PORT\$|'"$REDIS_PORT"'|g' \
+-e 's|\$REDIS_DATABASE\$|'"$REDIS_DATABASE"'|g' \
 <$1 > $2
 }
 
@@ -182,7 +185,15 @@ unzip fedora.war -d fedorawar
 cd fedorawar
 mkdir -p WEB-INF/lib
 
+#TODO install mulgara conf i WEB-INF/classes
+
 cp $BASEDIR/fedoralib/* WEB-INF/lib
+
+#TODO clean older versions of libraries here
+
+#TODO disable policy checking on objects
+
+
 FEDORAWEBXML=`mktemp`
 sed '/<\/web-app>/d' < WEB-INF/web.xml > $FEDORAWEBXML
 cat $CONFIG_TEMP_DIR/fedoraWebXmlInsert.xml >> $FEDORAWEBXML
@@ -218,7 +229,7 @@ cp -v $CONFIG_TEMP_DIR/jaas.conf  $FEDORA_DIR/server/config/jaas.conf
 cp -v $CONFIG_TEMP_DIR/fedora-users.xml $FEDORA_DIR/server/config/fedora-users.xml
 
 # Setup the the lowlevel storage
-cp -v $CONFIG_TEMP_DIR/akubra-llstore.xml $FEDORA_DIR/server/config/akubra-llstore.xml
+cp -v $CONFIG_TEMP_DIR/akubra-llstore.xml $FEDORA_DIR/server/config/spring/akubra-llstore.xml
 
 # Webapps are in non-standard place
 cp -v $CONFIG_TEMP_DIR/env-server.sh $FEDORA_DIR/server/bin/env-server.sh
