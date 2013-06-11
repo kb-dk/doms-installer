@@ -59,15 +59,15 @@
         </dependency>
 
 
-<!--
-        <dependency>
-            <groupId>dk.statsbiblioteket.medieplatform</groupId>
-            <artifactId>vhs-doms-ingester</artifactId>
-            <version>0.1.5</version>
-            <classifier>bundle</classifier>
-            <type>tar.gz</type>
-        </dependency>
--->
+        <!--
+                <dependency>
+                    <groupId>dk.statsbiblioteket.medieplatform</groupId>
+                    <artifactId>vhs-doms-ingester</artifactId>
+                    <version>0.1.5</version>
+                    <classifier>bundle</classifier>
+                    <type>tar.gz</type>
+                </dependency>
+        -->
 
 
         <dependency>
@@ -107,6 +107,12 @@
             <groupId>dk.statsbiblioteket.doms.ecm</groupId>
             <artifactId>ecm-fedoravalidatorhook</artifactId>
             <version>0.0.18</version>
+        </dependency>
+
+        <dependency>
+            <groupId>dk.statsbiblioteket.metadatarepository</groupId>
+            <artifactId>xmltapes</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <!--
             <dependency>
