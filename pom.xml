@@ -45,9 +45,9 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.ingesters</groupId>
             <artifactId>radio-tv</artifactId>
-            <version>0.0.8-SNAPSHOT</version>
+            <version>0.0.9-SNAPSHOT</version>
             <classifier>ingester</classifier>
-            <type>zip</type>
+            <type>tar.gz</type>
         </dependency>
 
         <dependency>
