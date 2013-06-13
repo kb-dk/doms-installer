@@ -185,9 +185,15 @@ unzip fedora.war -d fedorawar
 cd fedorawar
 mkdir -p WEB-INF/lib
 
-#TODO install mulgara conf i WEB-INF/classes
+# The mulgara timeout config
+cp -v $CONFIG_TEMP_DIR/mulgara-x-config.xml WEB-INF/classes/
 
-cp $BASEDIR/fedoralib/* WEB-INF/lib
+# The fedora libs
+for file in $(find "$BASEDIR/fedoralib/" -type f ); do
+   cp "$file" WEB-INF/lib
+done
+
+#Update the web.xml
 FEDORAWEBXML=`mktemp`
 sed '/<\/web-app>/d' < WEB-INF/web.xml > $FEDORAWEBXML
 cat $CONFIG_TEMP_DIR/fedoraWebXmlInsert.xml >> $FEDORAWEBXML
@@ -195,6 +201,7 @@ echo "</web-app>" >> $FEDORAWEBXML
 cp $FEDORAWEBXML WEB-INF/web.xml
 rm $FEDORAWEBXML
 
+#repackage
 mv ../fedora.war ../fedora_original.war
 zip -r ../fedora.war *    > /dev/null
 popd > /dev/null

@@ -16,15 +16,35 @@
 
         <dependencySet>
             <outputDirectory>fedoralib</outputDirectory>
+            <useTransitiveFiltering>false</useTransitiveFiltering>
+            <includes>
+                <include>dk.statsbiblioteket.doms.authchecker:authchecker-fedoralogin</include>
+                <include>dk.statsbiblioteket.metadatarepository:xmltapes</include>
+            </includes>
+            <unpack>true</unpack>
+            <unpackOptions>
+                <includes>
+                    <include>*/lib/*</include>
+                </includes>
+                <excludes>
+                    <exclude>**/sbutil-*</exclude>
+                    <exclude>**/log4j-*</exclude>
+                    <exclude>**/commons-*</exclude>
+                    <exclude>**/xstream-*</exclude>
+                    <exclude>**/xpp3_min-*</exclude>
+                </excludes>
+            </unpackOptions>
+
+        </dependencySet>
+
+        <dependencySet>
+            <outputDirectory>fedoralib</outputDirectory>
             <useTransitiveFiltering>true</useTransitiveFiltering>
             <includes>
+                <include>dk.statsbiblioteket.doms.ecm:ecm-fedoravalidatorhook</include>
                 <include>dk.statsbiblioteket.doms.domsutil:*:jar:*</include>
                 <include>dk.statsbiblioteket.sbutil:sbutil</include>
-                <include>dk.statsbiblioteket.doms.authchecker:authchecker-fedoralogin</include>
-                <include>dk.statsbiblioteket.doms.ecm:ecm-fedoravalidatorhook</include>
-                <include>dk.statsbiblioteket.metadatarepository:xmltapes</include>
                 <include>dk.statsbiblioteket.metadatarepository.fedoraNoObjectPolicy:fedoraNoObjectPolicy</include>
-
             </includes>
             <excludes>
                 <exclude>log4j:log4j</exclude>
@@ -33,6 +53,8 @@
                 <exclude>com.thoughtworks.xstream:*</exclude>
             </excludes>
         </dependencySet>
+
+
         <dependencySet>
             <outputDirectory>data/fedora</outputDirectory>
             <includes>
