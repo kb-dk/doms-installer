@@ -1,3 +1,21 @@
+3/4/2013 Release version 0.12.0
+
+Update docs and configuration
+
+22/3/2013 Release version 0.11.3
+
+Remove web services for obsolete bit repository
+Remove web services for update tracker and ecm, now integrated as libraries in central doms web service
+Update authchecker dependency to version 0.0.12 
+  - support for authorization on object pids rather than URL's
+Update doms central webservice dependency to 0.0.27 
+  - use a Summa indexing engine for searching
+  - support for object behaviours (methods and links)
+  - support for historic views of object bundles
+  - remove old bit repository webservice dependencies
+  - Internalize ecm and update tracker dependencies as libraries, rather than use them as web services
+Require a Summa indexing engine
+
 2/5/2011 Release version 0.11.2
 
 Build both packages with and wothout ingesters when packaging.

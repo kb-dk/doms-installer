@@ -9,10 +9,10 @@
 
     <groupId>dk.statsbiblioteket.doms.installer</groupId>
     <artifactId>installer</artifactId>
-    <version>0.11.3-SNAPSHOT</version>
+    <version>0.12.1-SNAPSHOT</version>
 
     <properties>
-        <summarise.version>0.2-SNAPSHOT</summarise.version>
+        <summarise.version>0.3</summarise.version>
 
     </properties>
 
@@ -45,9 +45,9 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.ingesters</groupId>
             <artifactId>radio-tv</artifactId>
-            <version>0.0.7</version>
+            <version>0.0.9-SNAPSHOT</version>
             <classifier>ingester</classifier>
-            <type>zip</type>
+            <type>tar.gz</type>
         </dependency>
 
         <dependency>
@@ -59,15 +59,7 @@
         </dependency>
 
 
-<!--
-        <dependency>
-            <groupId>dk.statsbiblioteket.medieplatform</groupId>
-            <artifactId>vhs-doms-ingester</artifactId>
-            <version>0.1.5</version>
-            <classifier>bundle</classifier>
-            <type>tar.gz</type>
-        </dependency>
--->
+
 
 
         <dependency>
@@ -84,7 +76,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.installer</groupId>
             <artifactId>base-objects-ingester</artifactId>
-            <version>0.11.8-SNAPSHOT</version>
+            <version>0.11.10</version>
             <type>zip</type>
         </dependency>
 
@@ -100,13 +92,29 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.authchecker</groupId>
             <artifactId>authchecker-fedoralogin</artifactId>
-            <version>0.0.12</version>
+            <version>0.0.13-SNAPSHOT</version>
+            <classifier>bundle</classifier>
+            <type>tar.gz</type>
         </dependency>
 
         <dependency>
             <groupId>dk.statsbiblioteket.doms.ecm</groupId>
             <artifactId>ecm-fedoravalidatorhook</artifactId>
             <version>0.0.18</version>
+        </dependency>
+
+        <dependency>
+            <groupId>dk.statsbiblioteket.metadatarepository</groupId>
+            <artifactId>xmltapes</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <classifier>bundle</classifier>
+            <type>tar.gz</type>
+        </dependency>
+
+        <dependency>
+            <groupId>dk.statsbiblioteket.metadatarepository.fedoraNoObjectPolicy</groupId>
+            <artifactId>fedoraNoObjectPolicy</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <!--
             <dependency>
@@ -121,7 +129,7 @@
         <dependency>
             <groupId>org.fcrepo</groupId>
             <artifactId>fcrepo-installer</artifactId>
-            <version>3.4.2</version>
+            <version>3.6.2</version>
         </dependency>
 
         <!--Webservices-->
@@ -136,14 +144,14 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.pidgenerator</groupId>
             <artifactId>pidgenerator-service</artifactId>
-            <version>0.0.8</version>
+            <version>0.0.9-SNAPSHOT</version>
             <type>war</type>
         </dependency>
 
         <dependency>
             <groupId>dk.statsbiblioteket.doms.authchecker</groupId>
             <artifactId>authchecker-service</artifactId>
-            <version>0.0.12</version>
+            <version>0.0.13-SNAPSHOT</version>
             <type>war</type>
         </dependency>
         <!--
@@ -169,7 +177,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.central</groupId>
             <artifactId>centralWebservice-service</artifactId>
-            <version>0.0.27-SNAPSHOT</version>
+            <version>0.0.28-SNAPSHOT</version>
             <type>war</type>
         </dependency>
         <!--
@@ -212,7 +220,7 @@
                                 <scp knownhosts="${project.basedir}/known_hosts" file="fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domsgui-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${env.SSH_KEY}" />
                                 -->
                                 <exec failonerror="true" executable="rsync">
-                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domsgui-${summarise.version}/* &quot;${project.build.directory}/summarise/&quot;"/>
+                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domsgui-${summarise.version}/* &quot;${project.build.directory}/summarise/&quot;" />
                                 </exec>
                             </target>
                         </configuration>

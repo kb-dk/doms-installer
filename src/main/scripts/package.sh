@@ -50,17 +50,16 @@ sed \
 -e 's|\$TOMCAT_SERVERNAME\$|'"$TOMCAT_SERVERNAME"'|g' \
 -e 's|\$FEDORAADMIN\$|'"$FEDORAADMIN"'|g' \
 -e 's|\$FEDORAADMINPASS\$|'"$FEDORAADMINPASS"'|g' \
--e 's|\$YOUSEEUSER\$|'"$YOUSEEUSER"'|g' \
--e 's|\$YOUSEEUSERPASS\$|'"$YOUSEEUSERPASS"'|g' \
 -e 's|\$FEDORAUSER\$|'"$FEDORAUSER"'|g' \
 -e 's|\$FEDORAUSERPASS\$|'"$FEDORAUSERPASS"'|g' \
--e 's|\$BITFINDER\$|'"$BITFINDER"'|g' \
--e 's|\$BITSTORAGE_SCRIPT\$|'"$BITSTORAGE_SCRIPT"'|g' \
 -e 's|\$POSTGRESQL_DB\$|'"$POSTGRESQL_DB"'|g' \
 -e 's|\$POSTGRESQL_SERVER\$|'"$POSTGRESQL_SERVER"'|g' \
 -e 's|\$POSTGRESQL_USER\$|'"$POSTGRESQL_USER"'|g' \
 -e 's|\$POSTGRESQL_PASS\$|'"$POSTGRESQL_PASS"'|g' \
 -e 's|\$DATABASE_SYSTEM\$|'"$DATABASE_SYSTEM"'|g' \
+-e 's|\$REDIS_HOST\$|'"$REDIS_HOST"'|g' \
+-e 's|\$REDIS_PORT\$|'"$REDIS_PORT"'|g' \
+-e 's|\$REDIS_DATABASE\$|'"$REDIS_DATABASE"'|g' \
 <$1 > $2
 }
 
@@ -176,16 +175,25 @@ echo "Configuring fedora preinstall"
 # Install Fedora
 echo "Installing Fedora"
 pushd $BASEDIR/data/fedora > /dev/null
-java -jar $FEDORAJAR $CONFIG_TEMP_DIR/fedora.properties  > /dev/null
+java -jar $FEDORAJAR $CONFIG_TEMP_DIR/fedora.properties
 popd > /dev/null
-
 
 # Deploy stuff from fedoralib
 echo "Repacking Fedora war files with changes"
-pushd $FEDORA_DIR/install/fedorawar > /dev/null
+pushd $FEDORA_DIR/install > /dev/null
+unzip fedora.war -d fedorawar
+cd fedorawar
 mkdir -p WEB-INF/lib
 
-cp $BASEDIR/fedoralib/* WEB-INF/lib
+# The mulgara timeout config
+cp -v $CONFIG_TEMP_DIR/mulgara-x-config.xml WEB-INF/classes/
+
+# The fedora libs
+for file in $(find "$BASEDIR/fedoralib/" -type f ); do
+   cp "$file" WEB-INF/lib
+done
+
+#Update the web.xml
 FEDORAWEBXML=`mktemp`
 sed '/<\/web-app>/d' < WEB-INF/web.xml > $FEDORAWEBXML
 cat $CONFIG_TEMP_DIR/fedoraWebXmlInsert.xml >> $FEDORAWEBXML
@@ -193,6 +201,7 @@ echo "</web-app>" >> $FEDORAWEBXML
 cp $FEDORAWEBXML WEB-INF/web.xml
 rm $FEDORAWEBXML
 
+#repackage
 mv ../fedora.war ../fedora_original.war
 zip -r ../fedora.war *    > /dev/null
 popd > /dev/null
@@ -221,7 +230,13 @@ cp -v $CONFIG_TEMP_DIR/jaas.conf  $FEDORA_DIR/server/config/jaas.conf
 cp -v $CONFIG_TEMP_DIR/fedora-users.xml $FEDORA_DIR/server/config/fedora-users.xml
 
 # Setup the the lowlevel storage
-cp -v $CONFIG_TEMP_DIR/akubra-llstore.xml $FEDORA_DIR/server/config/akubra-llstore.xml
+cp -v $CONFIG_TEMP_DIR/akubra-llstore.xml $FEDORA_DIR/server/config/spring/akubra-llstore.xml
+
+# Install the "No object policy" rule
+cp -v $CONFIG_TEMP_DIR/policy-enforcement.xml $FEDORA_DIR/server/config/spring/policy-enforcement.xml
+
+# Webapps are in non-standard place
+cp -v $CONFIG_TEMP_DIR/env-server.sh $FEDORA_DIR/server/bin/env-server.sh
 
 rm -rf $FEDORA_DIR/install
 
@@ -258,5 +273,4 @@ if [ -f $BASEDIR/ingester/$INGESTERZIP ]; then
 fi
 
 echo "Install complete"
-
 

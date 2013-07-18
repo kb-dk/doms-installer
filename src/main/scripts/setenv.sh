@@ -13,10 +13,6 @@ TOMCAT_SERVERNAME=localhost
 FEDORAADMIN=fedoraAdmin
 FEDORAADMINPASS=fedoraAdminPass
 
-YOUSEEUSER=youseeIngester
-YOUSEEUSERPASS=youseeIngesterPass
-
-
 FEDORAUSER=fedoraReadOnlyAdmin
 FEDORAUSERPASS=fedoraReadOnlyPass
 
@@ -57,6 +53,7 @@ POSTGRESQL_DB=doms-test
 POSTGRESQL_USER=doms
 POSTGRESQL_PASS=faeTh9xa
 
-#Bitstorage
-BITFINDER=http://bitfinder.statsbiblioteket.dk/
-BITSTORAGE_SCRIPT="ssh doms@stage01 bin/server.sh"
+
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_DATABASE=0

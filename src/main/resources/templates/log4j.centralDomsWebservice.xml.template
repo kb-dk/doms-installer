@@ -51,7 +51,7 @@
     </appender>
 
 
-    <logger name="dk.statsbiblioteket.doms.central" additivity="false">
+    <logger name="dk.statsbiblioteket.doms" additivity="false">
         <level value="ALL"/>
         <appender-ref ref="DomsCentral"/>
         <appender-ref ref="DomsCentralFile"/>
