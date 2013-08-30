@@ -94,6 +94,7 @@ if [ -e "$SUMMARISE_SOURCE_DIR" ] ; then
     unzip -q "$SUMMARISE_SOURCE_DIR/domsgui-*.zip" -d "$SUMMARISE_DIR"
     mkdir -p "$SUMMARISE_DIR/index"
     mkdir -p "$SUMMARISE_DIR/suggest"
+    mkdir "$SUMMARISE_DIR/summix-storage/"
     cp "$SUMMARISE_SOURCE_DIR"/summix-*.zip "$SUMMARISE_DIR/summix-storage/"
     cp "$BASEDIR/data/tomcat/"apache-tomcat-*.zip "$SUMMARISE_DIR/"
     echo "Configuring Summa"
