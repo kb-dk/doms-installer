@@ -30,7 +30,6 @@
                 <excludes>
                     <exclude>**/sbutil-*</exclude>
                     <exclude>**/log4j-*</exclude>
-                    <exclude>**/commons-*</exclude>
                     <exclude>**/xstream-*</exclude>
                     <exclude>**/xpp3_min-*</exclude>
                 </excludes>
