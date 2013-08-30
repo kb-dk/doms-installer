@@ -2,101 +2,155 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
 
+    <!--Standard-->
     <bean name="org.fcrepo.server.storage.lowlevel.ILowlevelStorage"
           class="org.fcrepo.server.storage.lowlevel.akubra.AkubraLowlevelStorageModule">
         <constructor-arg index="0">
-            <map />
+            <map/>
         </constructor-arg>
-        <constructor-arg index="1" ref="org.fcrepo.server.Server" />
+        <constructor-arg index="1" ref="org.fcrepo.server.Server"/>
         <constructor-arg index="2" type="java.lang.String"
-                         value="org.fcrepo.server.storage.lowlevel.ILowlevelStorage" />
+                         value="org.fcrepo.server.storage.lowlevel.ILowlevelStorage"/>
         <property name="impl"
-                  ref="org.fcrepo.server.storage.lowlevel.akubra.AkubraLowlevelStorage" />
+                  ref="org.fcrepo.server.storage.lowlevel.akubra.AkubraLowlevelStorage"/>
     </bean>
 
-    <bean
-            name="org.fcrepo.server.storage.lowlevel.akubra.AkubraLowlevelStorage"
-            class="org.fcrepo.server.storage.lowlevel.akubra.AkubraLowlevelStorage"
-            singleton="true">
-        <constructor-arg>
+    <bean name="org.fcrepo.server.storage.lowlevel.akubra.AkubraLowlevelStorage"
+          class="org.fcrepo.server.storage.lowlevel.akubra.AkubraLowlevelStorage"
+          singleton="true">
+        <constructor-arg ref="tapeObjectStore">
             <description>The store of serialized Fedora objects</description>
-            <ref bean="tapeObjectStore" />
+            <!--Here we reference our tape system-->
         </constructor-arg>
-        <constructor-arg>
+        <constructor-arg ref="datastreamStore">
             <description>The store of datastream content</description>
-            <ref bean="datastreamStore" />
-        </constructor-arg>
-        <constructor-arg value="false">
+            </constructor-arg>
+        <constructor-arg value="false"><!--This is set to false, as we do not ever delete stuff-->
             <description>if true, replaceObject calls will be done in a way
                 that
                 ensures the old content is not deleted until the new content is safely
                 written. If the objectStore already does this, this should be
                 given as
-                false</description>
+                false
+            </description>
         </constructor-arg>
         <constructor-arg value="true">
             <description>save as above, but for datastreamStore</description>
         </constructor-arg>
     </bean>
-    <!--
-      <bean name="objectStore" class="org.akubraproject.map.IdMappingBlobStore"
-        singleton="true">
-        <constructor-arg value="urn:example.org:objectStore" />
-        <constructor-arg>
-          <ref bean="tapeObjectStore" />
-        </constructor-arg>
-        <constructor-arg>
-          <ref bean="fsObjectStoreMapper" />
-        </constructor-arg>
-      </bean>
-    -->
 
-
-    <bean name="tapeObjectStore" class="dk.statsbiblioteket.metadatarepository.xmltapes.XmlTapesBlobStore"
+    <!--This is the tape store Akubra Implementation-->
+    <bean name="tapeObjectStore"
+          class="dk.statsbiblioteket.metadatarepository.xmltapes.akubra.XmlTapesBlobStore"
           singleton="true">
-        <constructor-arg value="urn:example.org:tapeObjectStore" />
-        <property name="archive" ref="tarTapeObjectStore"/>
+        <constructor-arg value="urn:example.org:tapeObjectStore"/>
+        <!--This parameter is the name of the storage. -->
+        <property name="archive" ref="cacheTapeObjectStore"/>
+        <!--And this is the reference to the actual implementation-->
 
     </bean>
 
-    <bean name="tarTapeObjectStore" class="dk.statsbiblioteket.metadatarepository.xmltapes.TapeArchive" init-method="init"
+
+    <!--The cache tape object store holds the objects while it is being written and until the taper is ready
+    to tape the object-->
+    <bean name="cacheTapeObjectStore"
+          class="dk.statsbiblioteket.metadatarepository.xmltapes.cache.CacheForDeferringTaper"
           singleton="true">
+        <!--Where to store files until the taper is ready to tape them-->
+        <constructor-arg value="/CHANGEME/cacheObjectStore" index="0"/>
+        <!--Where to store files while they are still being written-->
+        <constructor-arg value="/CHANGEME/cacheTempObjectStore" index="1"/>
+        <!--The two adresses above must be on the same file system as we rely on atomic moves-->
+
+        <!--The delegate for read operations-->
+        <property name="delegate" ref="tapingTapeObjectStore"/>
+
+    </bean>
+
+
+    <!--The cache tape object store holds the objects while it is being written and until the taper is ready
+     to tape the object-->
+    <bean name="tapingTapeObjectStore"
+          class="dk.statsbiblioteket.metadatarepository.xmltapes.taper.DeferringTaper"
+          init-method="init"
+          singleton="true">
+         <!--Where to store files until the taper is ready to tape them-->
+        <constructor-arg value="/CHANGEME/tapingObjectStore" index="0"/>
+
+        <!--The allowed age of an file before it is taped, in ms-->
+        <property name="tapeDelay" value="600000"/>
+        <!--The delay between invocations of the taper-->
+        <property name="delay" value="100"/>
+
+         <property name="delegate" ref="tarTapeObjectStore"/>
+
+        <!--The cache, to get the objects ready for writing-->
+        <property name="parent" ref="cacheTapeObjectStore"/>
+     </bean>
+
+
+    <!--The guts of the tape system-->
+    <bean name="tarTapeObjectStore"
+          class="dk.statsbiblioteket.metadatarepository.xmltapes.tarfiles.TapeArchiveImpl"
+          init-method="init"
+          singleton="true">
+        <!--Change the init-method to init, if you do not want to rebuild the redis index on server startup -->
+
+
+        <!--This constructor argument specifies the tape store location. -->
         <constructor-arg value="file://$DATA_DIR$/objectStore" type="java.net.URI"/>
-        <constructor-arg value="10485760" type="long"/>  <!--10 MB-->
+        <!--This specifies the maximum length a tape can be before a new tape is started-->
+        <constructor-arg value="10485760" type="long"/>
+        <!--10 MB-->
+        <!--This is the reference to the index-->
         <property name="index" ref="redisIndex"/>
+        <!--Remove broken records from the newest tape when initialising-->
+        <property name="fixErrors" value="false"/>
+        <!--Reindex all the tape files when initialising-->
+        <property name="rebuild" value="true"/>
     </bean>
 
 
+    <!--This is our Redis index-->
     <bean name="redisIndex" class="dk.statsbiblioteket.metadatarepository.xmltapes.redis.RedisIndex"
           singleton="true">
+
+        <!--The redis server-->
         <constructor-arg value="$REDIS_HOST$" />
+        <!--The port it is running on-->
         <constructor-arg value="$REDIS_PORT$"/>
+        <!--The database name. Redis databases are always identified by integers-->
         <constructor-arg value="$REDIS_DATABASE$"/><!--Database name-->
     </bean>
 
 
+    <!--Standard storage for managed datastreams. We do not use managed datastreams-->
     <bean name="datastreamStore" class="org.akubraproject.map.IdMappingBlobStore"
           singleton="true">
-        <constructor-arg value="urn:fedora:datastreamStore" />
+        <constructor-arg value="urn:fedora:datastreamStore"/>
         <constructor-arg>
-            <ref bean="fsDatastreamStore" />
+            <ref bean="fsDatastreamStore"/>
         </constructor-arg>
         <constructor-arg>
-            <ref bean="fsDatastreamStoreMapper" />
+            <ref bean="fsDatastreamStoreMapper"/>
         </constructor-arg>
     </bean>
 
+    <!--Standard storage for managed datastreams. We do not use managed datastreams-->
     <bean name="fsDatastreamStore" class="org.akubraproject.fs.FSBlobStore"
           singleton="true">
-        <constructor-arg value="urn:example.org:fsDatastreamStore" />
-    <constructor-arg value="$DATA_DIR$/datastreamStore"/>
+        <constructor-arg value="urn:example.org:fsDatastreamStore"/>
+        <constructor-arg value="$DATA_DIR$/datastreamStore"/>
+
     </bean>
 
+    <!--Standard storage for managed datastreams. We do not use managed datastreams-->
     <bean name="fsDatastreamStoreMapper"
           class="org.fcrepo.server.storage.lowlevel.akubra.HashPathIdMapper"
           singleton="true">
-        <constructor-arg value="##" />
+        <constructor-arg value="##"/>
     </bean>
+
 
     <bean name="fedoraStorageHintProvider"
           class="org.fcrepo.server.storage.NullStorageHintsProvider"
@@ -104,3 +158,4 @@
     </bean>
 
 </beans>
+
