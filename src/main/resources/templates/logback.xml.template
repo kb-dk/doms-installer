@@ -3,7 +3,7 @@
     <property name="FEDORA_LOG_PATH"
               value="$LOG_DIR$/fedora${logfile.extension:-.log}"/>
 
-    <property name="pattern" value="%p %d{yyyy-MM-dd' 'HH:mm:ss.SSS} [%t] \(%c{0}\) %m%n"/>
+    <property name="pattern" value="%p %d{yyyy-MM-dd' 'HH:mm:ss.SSS} [%t] \\(%c{0}\\) %m%n"/>
     <appender name="FEDORA" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <File>${FEDORA_LOG_PATH}</File>
         <layout class="ch.qos.logback.classic.PatternLayout">
