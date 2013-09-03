@@ -94,12 +94,10 @@ if [ -e "$SUMMARISE_SOURCE_DIR" ] ; then
     unzip -q "$SUMMARISE_SOURCE_DIR/domsgui-*.zip" -d "$SUMMARISE_DIR"
     mkdir -p "$SUMMARISE_DIR/index"
     mkdir -p "$SUMMARISE_DIR/suggest"
+    mkdir -p "$SUMMARISE_DIR/data"
     mkdir -p "$SUMMARISE_DIR/summix-storage/"
-    mkdir -p "$SUMMARISE_DIR/data/"
-    mkdir -p "$SUMMARISE_DIR/summa-integration/"
     cp "$SUMMARISE_SOURCE_DIR"/summix-*.zip "$SUMMARISE_DIR/summix-storage/"
     cp "$BASEDIR/data/tomcat/"apache-tomcat-*.zip "$SUMMARISE_DIR/"
-    cp -r "$BASEDIR"/summa-integration/summaStorage-*/* "$SUMMARISE_DIR"/summa-integration/
     echo "Configuring Summa"
     sed -i -e "s/^site.portrange=576$/site.portrange=$SUMMA_PORTRANGE/" "$SUMMARISE_DIR/site.properties"
     sed -i -e "s%http://localhost:7880/centralWebservice-service/central/?wsdl%http://localhost:${PORTRANGE}80/centralWebservice-service/central/?wsdl%g" \

@@ -55,15 +55,6 @@
         </dependencySet>
 
         <dependencySet>
-            <outputDirectory>summa-integration</outputDirectory>
-            <includes>
-                <include>dk.statsbiblioteket.doms.summa:summaStorage</include>
-            </includes>
-            <unpack>true</unpack>
-
-        </dependencySet>
-
-        <dependencySet>
             <outputDirectory>data/fedora</outputDirectory>
             <includes>
                 <include>org.fcrepo:fcrepo-installer</include>
