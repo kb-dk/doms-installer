@@ -10,6 +10,7 @@
 
         <dependencySet>
             <outputDirectory>webservices</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
             <includes>
                 <include>dk.statsbiblioteket.doms.*:*:war:*:*</include>
             </includes>
@@ -17,6 +18,7 @@
 
         <dependencySet>
             <outputDirectory>fedoralib</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
             <useTransitiveFiltering>false</useTransitiveFiltering>
             <includes>
                 <include>dk.statsbiblioteket.doms.authchecker:authchecker-fedoralogin</include>
@@ -39,6 +41,7 @@
 
         <dependencySet>
             <outputDirectory>fedoralib</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
             <useTransitiveFiltering>true</useTransitiveFiltering>
             <includes>
                 <include>dk.statsbiblioteket.doms.ecm:ecm-fedoravalidatorhook</include>
@@ -56,6 +59,7 @@
 
         <dependencySet>
             <outputDirectory>data/fedora</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
             <includes>
                 <include>org.fcrepo:fcrepo-installer</include>
             </includes>
@@ -64,6 +68,7 @@
 
         <dependencySet>
             <outputDirectory>ingesters/digitv</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
             <includes>
                 <include>dk.statsbiblioteket.doms.ingesters:radio-tv</include>
             </includes>
@@ -71,6 +76,7 @@
 
         <dependencySet>
             <outputDirectory>ingesters/yousee</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
             <includes>
                 <include>dk.statsbiblioteket.medieplatform:yousee-doms-ingester</include>
             </includes>
@@ -87,6 +93,7 @@
 
         <dependencySet>
             <outputDirectory>ingesters/reklame</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
             <includes>
                 <include>dk.statsbiblioteket.medieplatform:reklame-doms-ingester</include>
             </includes>
@@ -95,6 +102,7 @@
 
         <dependencySet>
             <outputDirectory>extras</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
             <includes>
                 <include>dk.statsbiblioteket.doms.installer:base-objects-ingester</include>
             </includes>
