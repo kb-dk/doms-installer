@@ -252,7 +252,15 @@ cp $BASEDIR/data/schemas/* $SCHEMA_DIR/
 
 mkdir -p $BASEOBJS_DIR/bin
 mkdir -p $BASEOBJS_DIR/scripts
+
+
+
 cp -r $BASEDIR/extras/base-objects-ingester-*/scripts/*  $BASEOBJS_DIR/scripts
+
+for file in $(find $BASEOBJS_DIR/scripts -type f ); do
+  sed -i -e "s|http://naiad:7880/schemaStore/|http://${TOMCAT_SERVERNAME}:${PORTRANGE}80/schemaStore/|" "$file"
+done
+
 
 for file in $BASEDIR/extras/base-objects-ingester-*/bin/*.sh ; do
   replace $file $BASEOBJS_DIR/bin/`basename $file`
