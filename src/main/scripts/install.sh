@@ -78,8 +78,10 @@ fi
 echo ""
 echo "Starting the tomcat server"
 $TOMCAT_DIR/bin/startup.sh > /dev/null
-echo "Sleep 30"
-sleep 30
+sleepSeconds=10
+echo "Sleep $sleepSeconds"
+sleep $sleepSeconds
+
 
 # Do the ingest of the base objects
 $BASEOBJS_DIR/bin/createBasicObjects.sh
