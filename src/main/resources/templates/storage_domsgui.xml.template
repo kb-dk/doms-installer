@@ -116,8 +116,7 @@ This is not strictly necessary, but provides some optimization -->
 
         <entry>
             <key>DOMSWebserviceURL</key>
-            <value class="string">http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/centralWebservice-service/central
-                /?wsdl</value>
+            <value class="string">http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/centralWebservice-service/central/?wsdl</value>
         </entry>
 
         <entry>
