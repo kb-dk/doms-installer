@@ -59,18 +59,6 @@ $SCRIPT_DIR/install_basic_tomcat.sh $TESTBED_DIR
 # Do the big package procedure
 $SCRIPT_DIR/package.sh $TESTBED_DIR
 
-#Relink the data dir
-
-if [ -z "$DATA_DIR" ]; then
-    rm -r $TESTBED_DIR/data
-    mkdir -p $DATA_DIR/data
-    ln -s $DATA_DIR/data $TESTBED_DIR/data
-
-    rm -r $TESTBED_DIR/cache
-    mkdir -p $DATA_DIR/cache
-    ln -s $DATA_DIR/cache $TESTBED_DIR/cache
-fi
-
 
 #
 # Start the tomcat server
@@ -84,12 +72,12 @@ sleep $sleepSeconds
 
 
 # Do the ingest of the base objects
-$BASEOBJS_DIR/bin/createBasicObjects.sh
-$BASEOBJS_DIR/bin/createRadioTVObjects.sh
+$BASEOBJS_DIR/bin/createAll.sh
 
 
 SUMMARISE_SOURCE_DIR="$BASEDIR/data/summarise"
 SUMMARISE_DIR="$TESTBED_DIR/summarise"
+CONFIG_TEMP_DIR=$TESTBED_DIR/tmp/config
 
 if [ -e "$SUMMARISE_SOURCE_DIR" ] ; then
     echo "Installing Summa"
@@ -102,7 +90,7 @@ if [ -e "$SUMMARISE_SOURCE_DIR" ] ; then
     cp "$BASEDIR/data/tomcat/"apache-tomcat-*.zip "$SUMMARISE_DIR/"
     echo "Configuring Summa"
     sed -i -e "s/^site.portrange=576$/site.portrange=$SUMMA_PORTRANGE/" "$SUMMARISE_DIR/site.properties"
-    cp -v $CONFIG_TEMP_DIR/storage_domsgui.xml $SUMMARISE_DIR/config/storage_domsgui.xml
+    cp -v "$CONFIG_TEMP_DIR/storage_domsgui.xml" "$SUMMARISE_DIR/config/storage_domsgui.xml"
     echo "Running Summa installer"
     pushd "$SUMMARISE_DIR" > /dev/null
     VERBOSE=1 "$SUMMARISE_DIR"/bin/all.sh

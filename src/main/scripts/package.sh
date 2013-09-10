@@ -65,7 +65,8 @@ sed \
 
 
 
-CONFIG_TEMP_DIR=`mktemp -d`
+CONFIG_TEMP_DIR=$TESTBED_DIR/tmp/config
+mkdir -p $CONFIG_TEMP_DIR
 
 if [ "$USE_POSTGRESQL" = "true" ]; then
   DATABASE_SYSTEM=localPostgreSQLPool
