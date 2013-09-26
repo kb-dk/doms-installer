@@ -29,7 +29,7 @@
 
         <!-- Port for RMI communications for Storage interface -->
         <entry>
-            <key>summa.storage.rmi.service.port</key>
+            <key>summa.storage.service.port</key>
             <value class="string">${site.portrange}10</value>
         </entry>
 
@@ -160,6 +160,32 @@ This is not strictly necessary, but provides some optimization -->
                     <entry>
                         <key>State</key>
                         <value class="string">NotDeleted</value>
+                    </entry>
+		            <entry>
+                        <key>MaxSizePerRetrieval</key>
+                        <value class="string">1000000000</value>
+		            </entry>
+                </xproperties>
+                <xproperties>
+                    <entry>
+                        <key>collectionBaseID</key>
+                        <value class="string">doms_sboiCollection</value>
+                    </entry>
+                    <entry>
+                        <key>collectionPID</key>
+                        <value class="string">doms:Newspaper_Collection</value>
+                    </entry>
+                    <entry>
+                        <key>viewID</key>
+                        <value class="string">SBOI</value>
+                    </entry>
+                    <entry>
+                        <key>State</key>
+                        <value class="string">NotDeleted</value>
+                    </entry>
+                    <entry>
+                        <key>MaxSizePerRetrieval</key>
+                        <value class="string">1000000000</value>
                     </entry>
                 </xproperties>
             </value>
