@@ -12,8 +12,9 @@
     <version>0.12.1-SNAPSHOT</version>
 
     <properties>
+        <!-- Note: Releases of Summarise for SBOI are generated from the Summarise branch
+        https://svn.statsbiblioteket.dk/svn/summarise/branches/newspapr -->
         <summarise.version>0.6-SBOI-SNAPSHOT</summarise.version>
-
     </properties>
 
 
