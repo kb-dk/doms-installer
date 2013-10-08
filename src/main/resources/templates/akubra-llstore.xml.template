@@ -22,7 +22,7 @@
             <description>The store of serialized Fedora objects</description>
             <!--Here we reference our tape system-->
         </constructor-arg>
-        <constructor-arg ref="datastreamStore">
+        <constructor-arg ref="tapeDatastreamStore">
             <description>The store of datastream content</description>
             </constructor-arg>
         <constructor-arg value="false"><!--This is set to false, as we do not ever delete stuff-->
@@ -47,6 +47,16 @@
         <!--This parameter is the name of the storage. -->
         <property name="archive" ref="cacheTapeObjectStore"/>
         <!--And this is the reference to the actual implementation-->
+    </bean>
+
+    <!--This is the tape store Akubra Implementation-->
+    <bean name="tapeDatastreamStore"
+          class="dk.statsbiblioteket.metadatarepository.xmltapes.akubra.XmlTapesBlobStore"
+          singleton="true">
+        <constructor-arg value="urn:example.org:tapeDatastreamStore"/>
+        <!--This parameter is the name of the storage. -->
+        <property name="archive" ref="cacheTapeDatastreamStore"/>
+        <!--And this is the reference to the actual implementation-->
 
     </bean>
 
@@ -67,9 +77,24 @@
 
     </bean>
 
+    <!--The cache tape datastreams store holds the datastreams while it is being written and until the taper is ready
+    to tape the datastream-->
+    <bean name="cacheTapeDatastreamStore"
+          class="dk.statsbiblioteket.metadatarepository.xmltapes.cache.CacheForDeferringTaper"
+          singleton="true">
+        <!--Where to store files until the taper is ready to tape them-->
+        <constructor-arg value="$DATA_DIR$/cacheDatastreamStore" index="0"/>
+        <!--Where to store files while they are still being written-->
+        <constructor-arg value="$DATA_DIR$/cacheTempDatastreamStore" index="1"/>
+        <!--The two adresses above must be on the same file system as we rely on atomic moves-->
 
-    <!--The cache tape object store holds the objects while it is being written and until the taper is ready
-     to tape the object-->
+        <!--The delegate for read operations-->
+        <property name="delegate" ref="tapingTapeDatastreamStore"/>
+
+    </bean>
+
+
+
     <bean name="tapingTapeObjectStore"
           class="dk.statsbiblioteket.metadatarepository.xmltapes.taper.DeferringTaper"
           init-method="init"
@@ -88,6 +113,26 @@
         <property name="parent" ref="cacheTapeObjectStore"/>
      </bean>
 
+    <bean name="tapingTapeDatastreamStore"
+          class="dk.statsbiblioteket.metadatarepository.xmltapes.taper.DeferringTaper"
+          init-method="init"
+          singleton="true">
+         <!--Where to store files until the taper is ready to tape them-->
+        <constructor-arg value="$DATA_DIR$/tapingDatastreamStore" index="0"/>
+
+        <!--The allowed age of an file before it is taped, in ms-->
+        <property name="tapeDelay" value="600000"/>
+        <!--The delay between invocations of the taper-->
+        <property name="delay" value="100"/>
+
+         <property name="delegate" ref="tarTapeDatastreamStore"/>
+
+        <!--The cache, to get the objects ready for writing-->
+        <property name="parent" ref="cacheTapeDatastreamStore"/>
+     </bean>
+
+
+
 
     <!--The guts of the tape system-->
     <bean name="tarTapeObjectStore"
@@ -99,6 +144,28 @@
 
         <!--This constructor argument specifies the tape store location. -->
         <constructor-arg value="file://$DATA_DIR$/objectStore" type="java.net.URI"/>
+        <!--This specifies the maximum length a tape can be before a new tape is started-->
+        <constructor-arg value="10485760" type="long"/>
+        <!--10 MB-->
+        <!--This is the reference to the index-->
+        <property name="index" ref="redisIndex"/>
+        <!--Remove broken records from the newest tape when initialising-->
+        <property name="fixErrors" value="false"/>
+        <!--Reindex all the tape files when initialising-->
+        <property name="rebuild" value="true"/>
+    </bean>
+
+
+    <!--The guts of the tape system-->
+    <bean name="tarTapeDatastreamStore"
+          class="dk.statsbiblioteket.metadatarepository.xmltapes.tarfiles.TapeArchiveImpl"
+          init-method="init"
+          singleton="true">
+        <!--Change the init-method to init, if you do not want to rebuild the redis index on server startup -->
+
+
+        <!--This constructor argument specifies the tape store location. -->
+        <constructor-arg value="file://$DATA_DIR$/datastreamStore" type="java.net.URI"/>
         <!--This specifies the maximum length a tape can be before a new tape is started-->
         <constructor-arg value="10485760" type="long"/>
         <!--10 MB-->
