@@ -148,7 +148,7 @@
         <constructor-arg value="10485760" type="long"/>
         <!--10 MB-->
         <!--This is the reference to the index-->
-        <property name="index" ref="redisIndex"/>
+        <property name="index" ref="redisObjectsIndex"/>
         <!--Remove broken records from the newest tape when initialising-->
         <property name="fixErrors" value="false"/>
         <!--Reindex all the tape files when initialising-->
@@ -170,7 +170,7 @@
         <constructor-arg value="10485760" type="long"/>
         <!--10 MB-->
         <!--This is the reference to the index-->
-        <property name="index" ref="redisIndex"/>
+        <property name="index" ref="redisDatastreamIndex"/>
         <!--Remove broken records from the newest tape when initialising-->
         <property name="fixErrors" value="false"/>
         <!--Reindex all the tape files when initialising-->
@@ -178,8 +178,8 @@
     </bean>
 
 
-    <!--This is our Redis index-->
-    <bean name="redisIndex" class="dk.statsbiblioteket.metadatarepository.xmltapes.redis.RedisIndex"
+    <!--This is our objects Redis index-->
+    <bean name="redisObjectsIndex" class="dk.statsbiblioteket.metadatarepository.xmltapes.redis.RedisIndex"
           singleton="true">
 
         <!--The redis server-->
@@ -187,8 +187,21 @@
         <!--The port it is running on-->
         <constructor-arg value="$REDIS_PORT$"/>
         <!--The database name. Redis databases are always identified by integers-->
-        <constructor-arg value="$REDIS_DATABASE$"/><!--Database name-->
+        <constructor-arg value="0"/><!--Database name-->
     </bean>
+
+    <!--This is our datastream Redis index-->
+    <bean name="redisDatastreamIndex" class="dk.statsbiblioteket.metadatarepository.xmltapes.redis.RedisIndex"
+          singleton="true">
+
+        <!--The redis server-->
+        <constructor-arg value="$REDIS_HOST$" />
+        <!--The port it is running on-->
+        <constructor-arg value="$REDIS_PORT$"/>
+        <!--The database name. Redis databases are always identified by integers-->
+        <constructor-arg value="1"/><!--Database name-->
+    </bean>
+
 
 
     <!--Standard storage for managed datastreams. We do not use managed datastreams-->
