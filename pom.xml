@@ -101,7 +101,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.ecm</groupId>
             <artifactId>ecm-fedoravalidatorhook</artifactId>
-            <version>0.0.18</version>
+            <version>0.0.19-SNAPSHOT</version>
         </dependency>
 
         <dependency>
