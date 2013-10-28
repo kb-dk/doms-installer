@@ -12,7 +12,7 @@
 #
 # Set up basic variables
 #
-SCRIPT_DIR=$(dirname $0)
+SCRIPT_DIR=$(dirname $(readlink -f $BASH_SOURCE[0]))
 pushd $SCRIPT_DIR > /dev/null
 SCRIPT_DIR=$(pwd)
 popd > /dev/null
