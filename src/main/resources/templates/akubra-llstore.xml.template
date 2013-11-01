@@ -34,7 +34,7 @@
                 false
             </description>
         </constructor-arg>
-        <constructor-arg value="true">
+        <constructor-arg value="false">
             <description>save as above, but for datastreamStore</description>
         </constructor-arg>
     </bean>
@@ -123,7 +123,7 @@
         <!--The allowed age of an file before it is taped, in ms-->
         <property name="tapeDelay" value="600000"/>
         <!--The delay between invocations of the taper-->
-        <property name="delay" value="100"/>
+        <property name="delay" value="10000"/>
 
          <property name="delegate" ref="tarTapeDatastreamStore"/>
 
