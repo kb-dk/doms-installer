@@ -49,7 +49,7 @@
                 <include>dk.statsbiblioteket.doms.ecm:ecm-fedoravalidatorhook</include>
                 <include>dk.statsbiblioteket.doms.domsutil:*:jar:*</include>
                 <include>dk.statsbiblioteket.sbutil:sbutil</include>
-                <include>dk.statsbiblioteket.metadatarepository.fedoraNoObjectPolicy:fedoraNoObjectPolicy</include>
+                <include>dk.statsbiblioteket.metadatarepository:fedoraNoObjectPolicy</include>
             </includes>
             <excludes>
                 <exclude>log4j:log4j</exclude>
