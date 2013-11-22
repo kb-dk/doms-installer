@@ -1,3 +1,35 @@
+2013-11-22 Release 1.0
+
+Versions:
+Update all dependencies to 1.0 released versions
+Use the newer 0.0.9 radio tv ingester
+Removed the "deny change of published objects" and the "deny purge" policy
+
+Summarise:
+Comment where to find summarise repo
+Update Summarise config template to include SBOI
+Update Summarise dependency
+Should bundle and install the summa integration now
+Updated to version 0.5 of domsgui summarise
+New summarise domsgui site
+
+Bugs:
+Fix the cannot install problem when outside SB
+Hopefully fixed the logback no line break error
+Create the summix storage folder before using it
+Log all doms events, not just the ones from central
+Don't sync updates
+Included the mulgara timeout fix
+
+XmlTapes:
+The datastream store is also taped now, as we will use managed datastreams
+Use Xml Tapes
+
+General:
+Updated to use fedora 3.6.2
+Update scripts to match production
+
+
 3/4/2013 Release version 0.12.0
 
 Update docs and configuration
