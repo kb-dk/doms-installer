@@ -4,7 +4,7 @@
     <parent>
         <groupId>dk.statsbiblioteket.doms</groupId>
         <artifactId>doms</artifactId>
-        <version>0.1.6</version>
+        <version>1.0</version>
     </parent>
 
     <groupId>dk.statsbiblioteket.doms.installer</groupId>
@@ -14,7 +14,7 @@
     <properties>
         <!-- Note: Releases of Summarise for SBOI are generated from the Summarise branch
         https://svn.statsbiblioteket.dk/svn/summarise/branches/newspapr -->
-        <summarise.version>0.6-SBOI-SNAPSHOT</summarise.version>
+        <summarise.version>1.0-SBOI</summarise.version>
     </properties>
 
 
@@ -130,14 +130,14 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.pidgenerator</groupId>
             <artifactId>pidgenerator-service</artifactId>
-            <version>1.0</version>
+            <version>1.0.1</version>
             <type>war</type>
         </dependency>
 
         <dependency>
             <groupId>dk.statsbiblioteket.doms.authchecker</groupId>
             <artifactId>authchecker-service</artifactId>
-            <version>1.0</version>
+            <version>1.0.1</version>
             <type>war</type>
         </dependency>
         <dependency>
@@ -149,13 +149,13 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.surveillance</groupId>
             <artifactId>surveillance-fedorasurveyor-service</artifactId>
-            <version>0.0.8</version>
+            <version>1.0</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.surveillance</groupId>
             <artifactId>surveillance-surveyor-service</artifactId>
-            <version>0.0.8</version>
+            <version>1.0</version>
             <type>war</type>
         </dependency>
     </dependencies>
