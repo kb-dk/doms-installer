@@ -113,7 +113,7 @@
         </dependency>
 
         <dependency>
-            <groupId>dk.statsbiblioteket.metadatarepository.</groupId>
+            <groupId>dk.statsbiblioteket.metadatarepository</groupId>
             <artifactId>fedoraNoObjectPolicy</artifactId>
             <version>1.0.1</version>
         </dependency>
