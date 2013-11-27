@@ -14,7 +14,7 @@
     <properties>
         <!-- Note: Releases of Summarise for SBOI are generated from the Summarise branch
         https://svn.statsbiblioteket.dk/svn/summarise/branches/newspapr -->
-        <summarise.version>0.6-SBOI-SNAPSHOT</summarise.version>
+        <summarise.version>1.0.1-SBOI</summarise.version>
     </properties>
 
 
@@ -46,7 +46,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.ingesters</groupId>
             <artifactId>radio-tv</artifactId>
-            <version>0.0.9</version>
+            <version>1.0</version>
             <classifier>ingester</classifier>
             <type>tar.gz</type>
         </dependency>
@@ -54,7 +54,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.medieplatform</groupId>
             <artifactId>yousee-doms-ingester</artifactId>
-            <version>0.1.5</version>
+            <version>1.0</version>
             <classifier>bundle</classifier>
             <type>zip</type>
         </dependency>
@@ -66,7 +66,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.medieplatform</groupId>
             <artifactId>reklame-doms-ingester</artifactId>
-            <version>0.1.5</version>
+            <version>1.0</version>
             <classifier>bundle</classifier>
             <type>tar.gz</type>
         </dependency>
@@ -77,7 +77,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.installer</groupId>
             <artifactId>base-objects-ingester</artifactId>
-            <version>1.0</version>
+            <version>1.1</version>
             <type>zip</type>
         </dependency>
 
@@ -86,14 +86,14 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.domsutil</groupId>
             <artifactId>domsutil-bundle</artifactId>
-            <version>0.0.20</version>
+            <version>1.0</version>
             <type>pom</type>
         </dependency>
 
         <dependency>
             <groupId>dk.statsbiblioteket.doms.authchecker</groupId>
             <artifactId>authchecker-fedoralogin</artifactId>
-            <version>1.0</version>
+            <version>1.0.1</version>
             <classifier>bundle</classifier>
             <type>tar.gz</type>
         </dependency>
@@ -107,7 +107,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.metadatarepository</groupId>
             <artifactId>xmltapes</artifactId>
-            <version>1.0</version>
+            <version>1.0.1</version>
             <classifier>bundle</classifier>
             <type>tar.gz</type>
         </dependency>
@@ -115,7 +115,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.metadatarepository.</groupId>
             <artifactId>fedoraNoObjectPolicy</artifactId>
-            <version>1.0</version>
+            <version>1.0.1</version>
         </dependency>
 
 
@@ -130,32 +130,32 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.pidgenerator</groupId>
             <artifactId>pidgenerator-service</artifactId>
-            <version>1.0</version>
+            <version>1.0.1</version>
             <type>war</type>
         </dependency>
 
         <dependency>
             <groupId>dk.statsbiblioteket.doms.authchecker</groupId>
             <artifactId>authchecker-service</artifactId>
-            <version>1.0</version>
+            <version>1.0.1</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.central</groupId>
             <artifactId>centralWebservice-service</artifactId>
-            <version>1.0</version>
+            <version>1.0.1</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.surveillance</groupId>
             <artifactId>surveillance-fedorasurveyor-service</artifactId>
-            <version>0.0.8</version>
+            <version>1.0</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.doms.surveillance</groupId>
             <artifactId>surveillance-surveyor-service</artifactId>
-            <version>0.0.8</version>
+            <version>1.0</version>
             <type>war</type>
         </dependency>
     </dependencies>
