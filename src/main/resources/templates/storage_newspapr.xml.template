@@ -128,47 +128,6 @@ This is not strictly necessary, but provides some optimization -->
                 <xproperties>
                     <entry>
                         <key>collectionBaseID</key>
-                        <value class="string">doms_radioTVCollection</value>
-                    </entry>
-                    <entry>
-                        <key>collectionPID</key>
-                        <value class="string">doms:RadioTV_Collection</value>
-                    </entry>
-                    <entry>
-                        <key>viewID</key>
-                        <value class="string">GUI</value>
-                    </entry>
-                    <entry>
-                        <key>State</key>
-                        <value class="string">NotDeleted</value>
-                    </entry>
-                </xproperties>
-                <xproperties>
-                    <entry>
-                        <key>collectionBaseID</key>
-                        <value class="string">doms_reklamefilm</value>
-                    </entry>
-                    <entry>
-                        <key>collectionPID</key>
-                        <value class="string">doms:Collection_Reklamefilm</value>
-                        <!--                        <value class="string">doms:Reklamefilm_Collection</value>-->
-                    </entry>
-                    <entry>
-                        <key>viewID</key>
-                        <value class="string">GUI</value>
-                    </entry>
-                    <entry>
-                        <key>State</key>
-                        <value class="string">NotDeleted</value>
-                    </entry>
-		            <entry>
-                        <key>MaxSizePerRetrieval</key>
-                        <value class="string">1000000000</value>
-		            </entry>
-                </xproperties>
-                <xproperties>
-                    <entry>
-                        <key>collectionBaseID</key>
                         <value class="string">doms_sboiCollection</value>
                     </entry>
                     <entry>
