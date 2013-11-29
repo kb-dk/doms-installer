@@ -14,7 +14,7 @@
     <properties>
         <!-- Note: Releases of Summarise for SBOI are generated from the Summarise branch
         https://svn.statsbiblioteket.dk/svn/summarise/branches/newspapr -->
-        <summarise.version>1.0.1-SBOI</summarise.version>
+        <summarise.version>1.1-SNAPSHOT</summarise.version>
     </properties>
 
 
@@ -175,10 +175,10 @@
                             <target>
                                 <mkdir dir="${project.build.directory}/summarise/" />
                                 <!--
-                                <scp knownhosts="${project.basedir}/known_hosts" file="fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domsgui-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${env.SSH_KEY}" />
+                                <scp knownhosts="${project.basedir}/known_hosts" file="fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${env.SSH_KEY}" />
                                 -->
                                 <exec failonerror="true" executable="rsync">
-                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domsgui-${summarise.version}/* &quot;${project.build.directory}/summarise/&quot;" />
+                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${summarise.version}/* &quot;${project.build.directory}/summarise/&quot;" />
                                 </exec>
                             </target>
                         </configuration>

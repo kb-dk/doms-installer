@@ -81,7 +81,7 @@ CONFIG_TEMP_DIR=$TESTBED_DIR/tmp/config
 
 if [ -e "$SUMMARISE_SOURCE_DIR" ] ; then
     echo "Installing Summa"
-    unzip -q "$SUMMARISE_SOURCE_DIR/domsgui-*.zip" -d "$SUMMARISE_DIR"
+    unzip -q "$SUMMARISE_SOURCE_DIR/newspapr-*.zip" -d "$SUMMARISE_DIR"
     mkdir -p "$SUMMARISE_DIR/index"
     mkdir -p "$SUMMARISE_DIR/suggest"
     mkdir -p "$SUMMARISE_DIR/data"
@@ -89,8 +89,8 @@ if [ -e "$SUMMARISE_SOURCE_DIR" ] ; then
     cp "$SUMMARISE_SOURCE_DIR"/summix-*.zip "$SUMMARISE_DIR/summix-storage/"
     cp "$BASEDIR/data/tomcat/"apache-tomcat-*.zip "$SUMMARISE_DIR/"
     echo "Configuring Summa"
-    sed -i -e "s/^site.portrange=576$/site.portrange=$SUMMA_PORTRANGE/" "$SUMMARISE_DIR/site.properties"
-    cp -v "$CONFIG_TEMP_DIR/storage_domsgui.xml" "$SUMMARISE_DIR/config/storage_domsgui.xml"
+    sed -i -e "s/^site.portrange=586$/site.portrange=$SUMMA_PORTRANGE/" "$SUMMARISE_DIR/site.properties"
+    cp -v "$CONFIG_TEMP_DIR/storage_newspapr.xml" "$SUMMARISE_DIR/config/storage_newspapr.xml"
     echo "Running Summa installer"
     pushd "$SUMMARISE_DIR" > /dev/null
     VERBOSE=1 "$SUMMARISE_DIR"/bin/all.sh

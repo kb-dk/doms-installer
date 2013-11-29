@@ -7,7 +7,7 @@ INGESTERZIP=`basename $BASEDIR/ingester/*.zip`
 
 # The normal config values
 PORTRANGE=78
-SUMMA_PORTRANGE=576
+SUMMA_PORTRANGE=586
 TOMCAT_SERVERNAME=localhost
 
 FEDORAADMIN=fedoraAdmin
