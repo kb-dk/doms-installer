@@ -91,6 +91,12 @@ if [ -e "$SUMMARISE_SOURCE_DIR" ] ; then
     mkdir -p "$SUMMA_STORAGE_DIR/suggest"
     ln -s "$SUMMA_STORAGE_DIR/suggest" "$SUMMARISE_DIR/suggest"
 
+    mkdir -p "$SUMMA_STORAGE_DIR/storage"
+    ln -s "$SUMMA_STORAGE_DIR/storage" "$SUMMARISE_DIR/storage"
+
+    mkdir -p "$SUMMA_STORAGE_DIR/dump"
+    ln -s "$SUMMA_STORAGE_DIR/dump" "$SUMMARISE_DIR/dump"
+
     mkdir -p "$SUMMARISE_DIR/summix-storage/"
     cp "$SUMMARISE_SOURCE_DIR"/summix-*.zip "$SUMMARISE_DIR/summix-storage/"
     cp "$BASEDIR/data/tomcat/"apache-tomcat-*.zip "$SUMMARISE_DIR/"
