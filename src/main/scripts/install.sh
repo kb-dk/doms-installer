@@ -76,15 +76,21 @@ $BASEOBJS_DIR/bin/createAll.sh
 
 
 SUMMARISE_SOURCE_DIR="$BASEDIR/data/summarise"
-SUMMARISE_DIR="$TESTBED_DIR/summarise"
 CONFIG_TEMP_DIR=$TESTBED_DIR/tmp/config
 
 if [ -e "$SUMMARISE_SOURCE_DIR" ] ; then
     echo "Installing Summa"
     unzip -q "$SUMMARISE_SOURCE_DIR/newspapr-*.zip" -d "$SUMMARISE_DIR"
-    mkdir -p "$SUMMARISE_DIR/index"
-    mkdir -p "$SUMMARISE_DIR/suggest"
-    mkdir -p "$SUMMARISE_DIR/data"
+
+    mkdir -p "$SUMMA_STORAGE_DIR/data"
+    ln -s "$SUMMA_STORAGE_DIR/data" "$SUMMARISE_DIR/data"
+
+    mkdir -p "$SUMMA_STORAGE_DIR/index"
+    ln -s "$SUMMA_STORAGE_DIR/index" "$SUMMARISE_DIR/index"
+
+    mkdir -p "$SUMMA_STORAGE_DIR/suggest"
+    ln -s "$SUMMA_STORAGE_DIR/suggest" "$SUMMARISE_DIR/suggest"
+
     mkdir -p "$SUMMARISE_DIR/summix-storage/"
     cp "$SUMMARISE_SOURCE_DIR"/summix-*.zip "$SUMMARISE_DIR/summix-storage/"
     cp "$BASEDIR/data/tomcat/"apache-tomcat-*.zip "$SUMMARISE_DIR/"
