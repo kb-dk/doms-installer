@@ -14,7 +14,7 @@
     <properties>
         <!-- Note: Releases of Summarise for SBOI are generated from the Summarise branch
         https://svn.statsbiblioteket.dk/svn/summarise/branches/newspapr -->
-        <summarise.version>1.2-SNAPSHOT</summarise.version>
+        <summarise.version>1.2</summarise.version>
     </properties>
 
 
@@ -107,7 +107,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.metadatarepository</groupId>
             <artifactId>xmltapes</artifactId>
-            <version>1.0.1</version>
+            <version>1.0.2</version>
             <classifier>bundle</classifier>
             <type>tar.gz</type>
         </dependency>
@@ -143,7 +143,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.central</groupId>
             <artifactId>centralWebservice-service</artifactId>
-            <version>1.0.1</version>
+            <version>1.0.2</version>
             <type>war</type>
         </dependency>
         <dependency>
