@@ -1,3 +1,14 @@
+2014-01-16 Release 1.2
+
+Upgraded to version 1.0.3 of CentralWebservice. This should fix the bug for summa indexing of objects
+with managed datastreams
+Updated to Summa newspapr 1.2
+
+2014-01-08 Release 1.1
+Updated to Summa newspapr 1.1.1
+Updated to XmlTapes v. 1.0.2
+Summa folders (dump,storage,index...) is no longer created in the install dir, but rather in the data dir
+
 2013-11-22 Release 1.0
 
 Versions:
