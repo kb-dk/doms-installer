@@ -80,5 +80,6 @@ sleep $sleepSeconds
 
 
 # Do the ingest of the base objects
-source $BASEOBJS_DIR/bin/createAll.sh
+source $BASEOBJS_DIR/bin/createBasicObjects.sh
+source $BASEOBJS_DIR/bin/createNewspaperObjects.sh
 
