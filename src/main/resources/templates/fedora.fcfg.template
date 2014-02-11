@@ -229,7 +229,7 @@
                 This specifies the minimum amount of time that each uploaded
                 file should be kept in temporary storage.</comment>
         </param>
-        <param name="decorator3" value="dk.statsbiblioteket.doms.ecm.fedoravalidatorhook.FedoraModifyObjectHook"/>
+        $MODIFY_OBJECT_HOOK$
     </module>
     <module role="org.fcrepo.server.access.Access" class="org.fcrepo.server.access.DefaultAccess">
         <comment>Description: The access subsystem. This implements the methods

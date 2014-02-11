@@ -20,7 +20,9 @@ popd > /dev/null
 parseTestbedDir "$@"
 
 pushd $SCRIPT_DIR > /dev/null
-source setenv.sh
+if [ -z "$SETENV_SOURCED" ]; then
+    source setenv.sh
+fi
 popd > /dev/null
 
 

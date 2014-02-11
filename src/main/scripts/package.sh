@@ -31,10 +31,14 @@ popd > /dev/null
 parseTestbedDir "$@"
 
 pushd $SCRIPT_DIR > /dev/null
-source setenv.sh
+if [ -z "$SETENV_SOURCED" ]; then
+    source setenv.sh
+fi
 popd > /dev/null
 
-
+if [ "USE_VALIDATOR_HOOK" == "true" ]; then
+    MODIFY_OBJECT_HOOK='<param name="decorator3" value="dk.statsbiblioteket.doms.ecm.fedoravalidatorhook.FedoraModifyObjectHook"/>'
+fi
 function replace(){
 sed \
 -e 's|\$LOG_DIR\$|'"$LOG_DIR"'|g' \
@@ -60,6 +64,7 @@ sed \
 -e 's|\$REDIS_HOST\$|'"$REDIS_HOST"'|g' \
 -e 's|\$REDIS_PORT\$|'"$REDIS_PORT"'|g' \
 -e 's|\$REDIS_DATABASE\$|'"$REDIS_DATABASE"'|g' \
+-e 's|\$MODIFY_OBJECT_HOOK\$|'"$MODIFY_OBJECT_HOOK"'|g' \
 <$1 > $2
 }
 
@@ -87,6 +92,7 @@ for file in $BASEDIR/data/templates/*.template ; do
 done
 
 
+
 ##
 ##  Set up the tomcat
 ##
@@ -111,8 +117,7 @@ ln -s $TOMCAT_CONFIG_DIR/setenv.sh $TOMCAT_DIR/bin/setenv.sh
 chmod +x $TOMCAT_DIR/bin/*.sh
 
 
-# Install log4j configuration
-cp -v $CONFIG_TEMP_DIR/log4j.*.xml $TOMCAT_CONFIG_DIR
+
 
 # Install context.xml configuration
 cp -v $CONFIG_TEMP_DIR/context.xml.default $TOMCAT_CONFIG_DIR/tomcat-context-params.xml
@@ -155,11 +160,43 @@ echo ""
 echo "Installing the doms webservices into tomcat"
 mkdir -p $WEBAPPS_DIR
 
-for file in $BASEDIR/webservices/*.war ; do
+if [ "$USE_LDAP" == "true" ]; then
+    for file in $BASEDIR/webservices/authchecker-service-*.war ; do
+         newname=`basename $file`
+         newname=`expr match "$newname" '\([^0-9]*\)'`;
+         newname=${newname%-}.war;
+         cp -v $file $WEBAPPS_DIR/$newname
+         cp -v $CONFIG_TEMP_DIR/log4j.authchecker.xml $TOMCAT_CONFIG_DIR
+
+    done
+fi
+
+if [ "$USE_CENTRAL" == "true" ]; then
+    for file in $BASEDIR/webservices/centralWebservice-service-*.war ; do
+         newname=`basename $file`
+         newname=`expr match "$newname" '\([^0-9]*\)'`;
+         newname=${newname%-}.war;
+         cp -v $file $WEBAPPS_DIR/$newname
+         cp -v $CONFIG_TEMP_DIR/log4j.centralDomsWebservice.xml $TOMCAT_CONFIG_DIR
+    done
+fi
+
+if [ "$USE_SURVEILANCE" == "true" ]; then
+    for file in $BASEDIR/webservices/surveillance-*.war ; do
+         newname=`basename $file`
+         newname=`expr match "$newname" '\([^0-9]*\)'`;
+         newname=${newname%-}.war;
+         cp -v $file $WEBAPPS_DIR/$newname
+    done
+    cp -v $CONFIG_TEMP_DIR/log4j.surveillance-*.xml $TOMCAT_CONFIG_DIR
+fi
+
+for file in $BASEDIR/webservices/pidgenerator-service-*.war ; do
      newname=`basename $file`
      newname=`expr match "$newname" '\([^0-9]*\)'`;
      newname=${newname%-}.war;
      cp -v $file $WEBAPPS_DIR/$newname
+     cp -v $CONFIG_TEMP_DIR/log4j.pidgenerator.xml $TOMCAT_CONFIG_DIR
 done
 chmod 644 $WEBAPPS_DIR/*.war
 
@@ -190,17 +227,48 @@ mkdir -p WEB-INF/lib
 cp -v $CONFIG_TEMP_DIR/mulgara-x-config.xml WEB-INF/classes/
 
 # The fedora libs
-for file in $(find "$BASEDIR/fedoralib/" -type f ); do
+USE_CENTRAL=true
+
+if [ "$USE_VALIDATOR_HOOK" == "true" ]; then
+    for file in $(find "$BASEDIR/fedoralib/validatorhook/" -type f ); do
+       cp "$file" WEB-INF/lib
+    done
+fi
+
+if [ "$USE_NO_OBJECT_POLICY" == "true" ]; then
+    for file in $(find "$BASEDIR/fedoralib/noObjectPolicy/" -type f ); do
+       cp "$file" WEB-INF/lib
+    done
+fi
+
+if [ "$USE_LDAP" == "true" ]; then
+    for file in $(find "$BASEDIR/fedoralib/fedoralogin/" -type f ); do
+       cp "$file" WEB-INF/lib
+    done
+fi
+
+
+if [ "$USE_XMLTAPES" == "true" ]; then
+    for file in $(find "$BASEDIR/fedoralib/xmltapes/" -type f ); do
+       cp "$file" WEB-INF/lib
+    done
+fi
+
+# Utils is not optional at this time
+for file in $(find "$BASEDIR/fedoralib/utils/" -type f ); do
    cp "$file" WEB-INF/lib
 done
 
-#Update the web.xml
-FEDORAWEBXML=`mktemp`
-sed '/<\/web-app>/d' < WEB-INF/web.xml > $FEDORAWEBXML
-cat $CONFIG_TEMP_DIR/fedoraWebXmlInsert.xml >> $FEDORAWEBXML
-echo "</web-app>" >> $FEDORAWEBXML
-cp $FEDORAWEBXML WEB-INF/web.xml
-rm $FEDORAWEBXML
+
+if [ "$USE_SURVEILANCE" == "true" ]; then
+    #Update the web.xml
+    FEDORAWEBXML=`mktemp`
+    sed '/<\/web-app>/d' < WEB-INF/web.xml > $FEDORAWEBXML
+    cat $CONFIG_TEMP_DIR/fedoraWebXmlInsert.xml >> $FEDORAWEBXML
+    echo "</web-app>" >> $FEDORAWEBXML
+    cp $FEDORAWEBXML WEB-INF/web.xml
+    rm $FEDORAWEBXML
+fi
 
 #repackage
 mv ../fedora.war ../fedora_original.war
@@ -210,12 +278,17 @@ popd > /dev/null
 
 
 echo "Install fedora.war into tomcat"
+mkdir -p $WEBAPPS_DIR
 cp -v $FEDORA_DIR/install/fedora.war $WEBAPPS_DIR
 
 echo "Configuring fedora postinstall"
 
 # Add logappender to Fedora logback configuration
-cp -v $CONFIG_TEMP_DIR/logback.xml $FEDORA_DIR/server/config/logback.xml
+if [ "$USE_SURVEILANCE" == "true" ]; then
+    cp -v $CONFIG_TEMP_DIR/logback.xml $FEDORA_DIR/server/config/logback.xml
+else
+    cp -v $CONFIG_TEMP_DIR/logback_unsurveyed.xml $FEDORA_DIR/server/config/logback.xml
+fi
 
 # Add logappender to Fedora logback configuration
 cp -v $CONFIG_TEMP_DIR/fedora.fcfg  $FEDORA_DIR/server/config/fedora.fcfg
@@ -224,17 +297,22 @@ cp -v $CONFIG_TEMP_DIR/fedora.fcfg  $FEDORA_DIR/server/config/fedora.fcfg
 mkdir -p $FEDORA_DIR/fedora-xacml-policies/repository-policies/
 cp -rv $BASEDIR/data/policies/* $FEDORA_DIR/fedora-xacml-policies/repository-policies/
 
-# Fix jaas.conf so that we use the doms auth checker
-cp -v $CONFIG_TEMP_DIR/jaas.conf  $FEDORA_DIR/server/config/jaas.conf
-
+if [ "$USE_LDAP" == "true" ]; then
+    # Fix jaas.conf so that we use the doms auth checker
+    cp -v $CONFIG_TEMP_DIR/jaas.conf  $FEDORA_DIR/server/config/jaas.conf
+fi
 # Setup the custom users
 cp -v $CONFIG_TEMP_DIR/fedora-users.xml $FEDORA_DIR/server/config/fedora-users.xml
 
 # Setup the the lowlevel storage
-cp -v $CONFIG_TEMP_DIR/akubra-llstore.xml $FEDORA_DIR/server/config/spring/akubra-llstore.xml
+if [ "$USE_XMLTAPES" == "true" ]; then
+    cp -v $CONFIG_TEMP_DIR/akubra-llstore_xmltapes.xml $FEDORA_DIR/server/config/spring/akubra-llstore.xml
+fi
 
 # Install the "No object policy" rule
-cp -v $CONFIG_TEMP_DIR/policy-enforcement.xml $FEDORA_DIR/server/config/spring/policy-enforcement.xml
+if [ "$USE_NO_OBJECT_POLICY" == "true" ]; then
+    cp -v $CONFIG_TEMP_DIR/policy-enforcement.xml $FEDORA_DIR/server/config/spring/policy-enforcement.xml
+fi
 
 # Webapps are in non-standard place
 cp -v $CONFIG_TEMP_DIR/env-server.sh $FEDORA_DIR/server/bin/env-server.sh

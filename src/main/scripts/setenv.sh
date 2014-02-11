@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SETENV_SOURCED=true
+
 TOMCATZIP=`basename $BASEDIR/data/tomcat/*.zip`
 FEDORAJAR=`basename $BASEDIR/data/fedora/*.jar`
 INGESTERZIP=`basename $BASEDIR/ingester/*.zip`
@@ -57,6 +59,13 @@ POSTGRESQL_DB=doms-test
 POSTGRESQL_USER=doms
 POSTGRESQL_PASS=faeTh9xa
 
+
+USE_SURVEILANCE=true
+USE_LDAP=true
+USE_CENTRAL=true
+USE_VALIDATOR_HOOK=true
+USE_NO_OBJECT_POLICY=true
+USE_XMLTAPES=true
 
 REDIS_HOST=localhost
 REDIS_PORT=6379
