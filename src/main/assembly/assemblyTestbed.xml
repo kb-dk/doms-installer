@@ -16,12 +16,13 @@
             </includes>
         </dependencySet>
 
+
+
         <dependencySet>
-            <outputDirectory>fedoralib</outputDirectory>
+            <outputDirectory>fedoralib/xmltapes</outputDirectory>
             <useProjectArtifact>false</useProjectArtifact>
             <useTransitiveFiltering>false</useTransitiveFiltering>
             <includes>
-                <include>dk.statsbiblioteket.doms.authchecker:authchecker-fedoralogin</include>
                 <include>dk.statsbiblioteket.metadatarepository:xmltapes</include>
             </includes>
             <unpack>true</unpack>
@@ -40,13 +41,66 @@
         </dependencySet>
 
         <dependencySet>
-            <outputDirectory>fedoralib</outputDirectory>
+            <outputDirectory>fedoralib/fedoralogin</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
+            <useTransitiveFiltering>false</useTransitiveFiltering>
+            <includes>
+                <include>dk.statsbiblioteket.doms.authchecker:authchecker-fedoralogin</include>
+            </includes>
+            <unpack>true</unpack>
+            <unpackOptions>
+                <includes>
+                    <include>*/lib/*</include>
+                </includes>
+                <excludes>
+                    <exclude>**/sbutil-*</exclude>
+                    <exclude>**/log4j-*</exclude>
+                    <exclude>**/xstream-*</exclude>
+                    <exclude>**/xpp3_min-*</exclude>
+                </excludes>
+            </unpackOptions>
+
+        </dependencySet>
+
+
+        <dependencySet>
+            <outputDirectory>fedoralib/utils</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
+            <useTransitiveFiltering>true</useTransitiveFiltering>
+            <includes>
+                <include>dk.statsbiblioteket.doms.domsutil:*:jar:*</include>
+                <include>dk.statsbiblioteket.sbutil:sbutil</include>
+            </includes>
+            <excludes>
+                <exclude>log4j:log4j</exclude>
+                <exclude>org.fcrepo:*</exclude>
+                <exclude>commons-*:*</exclude>
+                <exclude>com.thoughtworks.xstream:*</exclude>
+            </excludes>
+        </dependencySet>
+
+
+        <dependencySet>
+            <outputDirectory>fedoralib/validatorhook</outputDirectory>
             <useProjectArtifact>false</useProjectArtifact>
             <useTransitiveFiltering>true</useTransitiveFiltering>
             <includes>
                 <include>dk.statsbiblioteket.doms.ecm:ecm-fedoravalidatorhook</include>
-                <include>dk.statsbiblioteket.doms.domsutil:*:jar:*</include>
-                <include>dk.statsbiblioteket.sbutil:sbutil</include>
+            </includes>
+            <excludes>
+                <exclude>log4j:log4j</exclude>
+                <exclude>org.fcrepo:*</exclude>
+                <exclude>commons-*:*</exclude>
+                <exclude>com.thoughtworks.xstream:*</exclude>
+            </excludes>
+        </dependencySet>
+
+
+        <dependencySet>
+            <outputDirectory>fedoralib/noObjectPolicy</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
+            <useTransitiveFiltering>true</useTransitiveFiltering>
+            <includes>
                 <include>dk.statsbiblioteket.metadatarepository:fedoraNoObjectPolicy</include>
             </includes>
             <excludes>
