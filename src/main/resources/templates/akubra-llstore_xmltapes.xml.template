@@ -155,7 +155,7 @@
         <property name="rebuild" value="true"/>
 
         <!--Extension of the tape files-->
-        <property name="tapeExtension" value=".gz.tar"/>
+        <property name="tapeExtension" value=".tar"/>
 
         <!--prefix for the tape files-->
         <property name="tapePrefix" value="tape"/>
@@ -186,7 +186,7 @@
         <property name="rebuild" value="true"/>
 
         <!--Extension of the tape files-->
-        <property name="tapeExtension" value=".gz.tar"/>
+        <property name="tapeExtension" value=".tar"/>
 
         <!--prefix for the tape files-->
         <property name="tapePrefix" value="tape"/>
