@@ -1,4 +1,8 @@
-2014-03-31 Release 1.4
+2014-04-04 Release 1.4
+* Updated to 1.0.5 of xmltapes. This fixes a nasty bug introduced in the previous release, where some tapes used the extension ".gz.tar" and others the extension ".tar". To upgrade, rename all the xmltapes to .tar. Then update the akubra-config.xml to set rebuild true and restart the doms. After this first restart, you can set rebuild to false again.
+* Doms can now shut down correctly again.
+
+2014-03-31 Release 1.3
 
 * Updated to xml tapes 1.0.4 which have configurable tape names
 * Tape archives are now named '.tar', not '.tgz'. Existing files must be renamed and the redis database rebuild when upgrading
