@@ -9,7 +9,7 @@
 
     <groupId>dk.statsbiblioteket.doms.installer</groupId>
     <artifactId>installer</artifactId>
-    <version>1.4</version>
+    <version>1.5-SNAPSHOT</version>
 
     <properties>
         <!-- Note: Releases of Summarise for SBOI are generated from the Summarise branch
