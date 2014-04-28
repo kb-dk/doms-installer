@@ -17,7 +17,7 @@ apt-get install -y redis-server
 
 
 
-sudo su - vagrant -c "bash /vagrant/doms.sh"
+#sudo su - vagrant -c "bash /vagrant/doms.sh"
 
 #Disable ipv6
 #echo 'UseDNS no' >> /etc/ssh/sshd_config

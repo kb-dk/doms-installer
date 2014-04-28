@@ -14,7 +14,8 @@
     <properties>
         <!-- Note: Releases of Summarise for SBOI are generated from the Summarise branch
         https://svn.statsbiblioteket.dk/svn/summarise/branches/newspapr -->
-        <summarise.version>1.2</summarise.version>
+        <sboi.summarise.version>1.2</sboi.summarise.version>
+        <domsgui.summarise.version>1.1-NEWSPAPR-SNAPSHOT</domsgui.summarise.version>
     </properties>
 
 
@@ -168,17 +169,36 @@
                 <executions>
                     <execution>
                         <phase>package</phase>
+                        <id>sboi summa</id>
                         <goals>
                             <goal>run</goal>
                         </goals>
                         <configuration>
                             <target>
-                                <mkdir dir="${project.build.directory}/summarise/" />
+                                <mkdir dir="${project.build.directory}/sboi-summarise/" />
                                 <!--
                                 <scp knownhosts="${project.basedir}/known_hosts" file="fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${env.SSH_KEY}" />
                                 -->
                                 <exec failonerror="true" executable="rsync">
-                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${summarise.version}/* &quot;${project.build.directory}/summarise/&quot;" />
+                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${sboi.summarise.version}/* &quot;${project.build.directory}/sboi-summarise/&quot;" />
+                                </exec>
+                            </target>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <phase>package</phase>
+                        <id>domsgui summa</id>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <mkdir dir="${project.build.directory}/domsgui-summarise/"/>
+                                <!--
+                                <scp knownhosts="${project.basedir}/known_hosts" file="fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${env.SSH_KEY}" />
+                                -->
+                                <exec failonerror="true" executable="rsync">
+                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domsgui-${domsgui.summarise.version}/* &quot;${project.build.directory}/domsgui-summarise/&quot;"/>
                                 </exec>
                             </target>
                         </configuration>

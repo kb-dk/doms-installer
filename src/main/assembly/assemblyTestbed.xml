@@ -203,9 +203,14 @@
             <directory>docs</directory>
         </fileSet>
         <fileSet>
-            <outputDirectory>data/summarise</outputDirectory>
-            <directory>${project.build.directory}/summarise</directory>
+            <outputDirectory>data/sboi-summarise</outputDirectory>
+            <directory>${project.build.directory}/sboi-summarise</directory>
         </fileSet>
+        <fileSet>
+            <outputDirectory>data/domsgui-summarise</outputDirectory>
+            <directory>${project.build.directory}/domsgui-summarise</directory>
+        </fileSet>
+
     </fileSets>
 
 
