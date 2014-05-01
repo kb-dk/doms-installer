@@ -14,6 +14,10 @@ export JAVA_HOME=/usr/lib/jvm/java-7-oracle/
 
 apt-get install -y redis-server
 
+apt-get install -y xorg
+
+
+
 
 
 
