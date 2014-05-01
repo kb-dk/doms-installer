@@ -1,6 +1,9 @@
 #!/bin/bash
 export JAVA_HOME=/usr/lib/jvm/java-7-oracle/
 
+wget https://java.net/projects/visualvm/downloads/download/release137/visualvm_137.zip
+unzip visualvm_137.zip
+
 
 INSTALL_DIR="$HOME/7880-doms"
 
@@ -13,9 +16,11 @@ mkdir -p $STORAGE_DIR
 export TMPDIR=$HOME/tmp
 mkdir -p $TMPDIR
 
-echo "Getting doms from /target/installer-*-testbed.tar.gz"
+installer="/target/installer-*-installer.tar.gz"
 
-tar -xzf /target/installer-*-testbed.tar.gz
+echo "Getting doms from $installer"
+
+tar -xzf $installer
 rm -r $INSTALL_DIR
 installerDir=$(find * -maxdepth 0 -type d -name 'installer-*' | head -1)
 
