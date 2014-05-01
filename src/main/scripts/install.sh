@@ -74,7 +74,7 @@ sleep $sleepSeconds
 
 
 # Do the ingest of the base objects
-#$BASEOBJS_DIR/bin/createAll.sh
+$BASEOBJS_DIR/bin/createAll.sh
 
 
 SBOI_SUMMARISE_SOURCE_DIR="$BASEDIR/data/sboi-summarise"
