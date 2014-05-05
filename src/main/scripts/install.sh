@@ -135,7 +135,7 @@ if [ -e "$DOMSGUI_SUMMARISE_SOURCE_DIR" ] ; then
     cp "$DOMSGUI_SUMMARISE_SOURCE_DIR"/summix-*.zip "$DOMSGUI_SUMMARISE_DIR/summix-storage/"
     cp "$BASEDIR/data/tomcat/"apache-tomcat-*.zip "$DOMSGUI_SUMMARISE_DIR/"
     echo "Configuring DOMSGUI Summa"
-    sed -i -e "s/^site.portrange=586$/site.portrange=$DOMSGUI_SUMMA_PORTRANGE/" "$DOMSGUI_SUMMARISE_DIR/site.properties"
+    sed -i -e "s/^site.portrange=576$/site.portrange=$DOMSGUI_SUMMA_PORTRANGE/" "$DOMSGUI_SUMMARISE_DIR/site.properties"
     cp -v "$CONFIG_TEMP_DIR/storage_domsgui.xml" "$DOMSGUI_SUMMARISE_DIR/config/storage_domsgui.xml"
     echo "Running DOMSGUI Summa installer"
     pushd "$DOMSGUI_SUMMARISE_DIR" > /dev/null

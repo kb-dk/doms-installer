@@ -22,15 +22,4 @@ echo "192.168.50.4 domsgui-testbed" >> /etc/hosts
 
 
 
-#sudo su - vagrant -c "bash /vagrant/doms.sh"
-
-#Disable ipv6
-#echo 'UseDNS no' >> /etc/ssh/sshd_config
-#echo "#disable ipv6" | sudo tee -a /etc/sysctl.conf
-#echo "net.ipv6.conf.all.disable_ipv6 = 1" | sudo tee -a /etc/sysctl.conf
-#echo "net.ipv6.conf.default.disable_ipv6 = 1" | sudo tee -a /etc/sysctl.conf
-#echo "net.ipv6.conf.lo.disable_ipv6 = 1" | sudo tee -a /etc/sysctl.conf
-
-#install oracle java 7
-
-
+#sudo -u -u vagrant "bash /vagrant/install_doms.sh"
