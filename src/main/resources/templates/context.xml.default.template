@@ -29,7 +29,7 @@
                value="$TOMCAT_CONFIG_DIR$/log4j.centralDomsWebservice.xml"
                override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.central.summaWSDL"
-                   value="http://localhost:$DOMSGUI_SUMMA_PORTRANGE$08/newspapr/search/services/SearchWS?wsdl"
+                   value="http://localhost:$DOMSGUI_SUMMA_PORTRANGE$08/domsgui/search/services/SearchWS?wsdl"
                    override="false"/>
 
     <!--authchecker-->
