@@ -16,7 +16,7 @@ mkdir -p $STORAGE_DIR
 export TMPDIR=$HOME/tmp
 mkdir -p $TMPDIR
 
-installer="/target/installer-*-installer.tar.gz"
+installer="/target/installer-*-testbed.tar.gz"
 
 echo "Getting doms from $installer"
 
