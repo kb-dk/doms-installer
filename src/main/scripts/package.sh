@@ -36,7 +36,7 @@ if [ -z "$SETENV_SOURCED" ]; then
 fi
 popd > /dev/null
 
-if [ "USE_VALIDATOR_HOOK" == "true" ]; then
+if [ "$USE_VALIDATOR_HOOK" == "true" ]; then
     MODIFY_OBJECT_HOOK='<param name="decorator3" value="dk.statsbiblioteket.doms.ecm.fedoravalidatorhook.FedoraModifyObjectHook"/>'
 fi
 function replace(){
