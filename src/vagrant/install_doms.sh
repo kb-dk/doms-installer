@@ -11,7 +11,7 @@ STORAGE_DIR="$HOME/7880-data"
 DATADIR_DIR="$STORAGE_DIR/data"
 CACHEDIR_DIR="$STORAGE_DIR/cache"
 SBOI_SUMMA_STORAGE_DIR="$STORAGE_DIR/sboi-summaStorage"
-DOMSGUI_SUMMA_STORAGE_DIR="$STORAGE_DIR/domsgui-summaStorage"
+DOMSWUI_SUMMA_STORAGE_DIR="$STORAGE_DIR/domswui-summaStorage"
 mkdir -p $STORAGE_DIR
 export TMPDIR=$HOME/tmp
 mkdir -p $TMPDIR
@@ -27,7 +27,7 @@ installerDir=$(find * -maxdepth 0 -type d -name 'installer-*' | head -1)
 echo "DATA_DIR=$DATADIR_DIR" >> $installerDir/bin/setenv.sh
 echo "CACHE_DIR=$CACHEDIR_DIR" >> $installerDir/bin/setenv.sh
 echo "SBOI_SUMMA_STORAGE_DIR=$SBOI_SUMMA_STORAGE_DIR" >> $installerDir/bin/setenv.sh
-echo "DOMSGUI_SUMMA_STORAGE_DIR=$DOMSGUI_SUMMA_STORAGE_DIR" >> $installerDir/bin/setenv.sh
+echo "DOMSWUI_SUMMA_STORAGE_DIR=$DOMSWUI_SUMMA_STORAGE_DIR" >> $installerDir/bin/setenv.sh
 
 $installerDir/bin/install.sh $INSTALL_DIR
 

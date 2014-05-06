@@ -22,7 +22,7 @@ popd > /dev/null
 
 DOMS_BIN="$SCRIPT_DIR/../tomcat/bin/"
 SBOI_BIN="$SCRIPT_DIR/../sboi-summarise/bin"
-GUI_SUMMA_BIN="$SCRIPT_DIR/../domsgui-summarise/bin"
+DOMSWUI_SUMMA_BIN="$SCRIPT_DIR/../domswui-summarise/bin"
 
 
 function start_doms {
@@ -40,14 +40,14 @@ function stop_doms {
 function start_summa {
     echo "Starting summa (you can safely ignore the 'SEVERE Catalina.stop' error) .."
     $SBOI_BIN/start_resident.sh
-    $GUI_SUMMA_BIN/start_resident.sh
+    $DOMSWUI_SUMMA_BIN/start_resident.sh
     echo "Done."
 }
 
 function stop_summa {
     echo "Stopping summa .."
     $SBOI_BIN/stop_resident.sh
-    $GUI_SUMMA_BIN/stop_resident.sh
+    $DOMSWUI_SUMMA_BIN/stop_resident.sh
     echo "Done."
 }
 
@@ -73,9 +73,9 @@ function import {
     $SBOI_BIN/index_full.sh
 
     echo "Ingesting all data in domsGui .."
-    $GUI_SUMMA_BIN/ingest_full.sh
+    $DOMSWUI_SUMMA_BIN/ingest_full.sh
     echo "Re-building the index in domsGui.."
-    $GUI_SUMMA_BIN/index_full.sh
+    $DOMSWUI_SUMMA_BIN/index_full.sh
     echo "Restarting summa .."
 
     start_summa
@@ -86,10 +86,10 @@ function update {
 
     echo "Ingesting updates .."
     $SBOI_BIN/ingest_update.sh
-    $GUI_SUMMA_BIN/ingest_update.sh
+    $DOMSWUI_SUMMA_BIN/ingest_update.sh
     echo "Updating the index .."
     $SBOI_BIN/index_update.sh
-    $GUI_SUMMA_BIN/index_update.sh
+    $DOMSWUI_SUMMA_BIN/index_update.sh
 }
 
 case $1 in

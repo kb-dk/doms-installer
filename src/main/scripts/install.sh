@@ -78,7 +78,7 @@ $BASEOBJS_DIR/bin/createAll.sh
 
 
 SBOI_SUMMARISE_SOURCE_DIR="$BASEDIR/data/sboi-summarise"
-DOMSGUI_SUMMARISE_SOURCE_DIR="$BASEDIR/data/domsgui-summarise"
+DOMSWUI_SUMMARISE_SOURCE_DIR="$BASEDIR/data/domswui-summarise"
 CONFIG_TEMP_DIR=$TESTBED_DIR/tmp/config
 
 if [ -e "$SBOI_SUMMARISE_SOURCE_DIR" ] ; then
@@ -104,7 +104,7 @@ if [ -e "$SBOI_SUMMARISE_SOURCE_DIR" ] ; then
     cp "$SBOI_SUMMARISE_SOURCE_DIR"/summix-*.zip "$SBOI_SUMMARISE_DIR/summix-storage/"
     cp "$BASEDIR/data/tomcat/"apache-tomcat-*.zip "$SBOI_SUMMARISE_DIR/"
     echo "Configuring SBOI Summa"
-    sed -i -e "s/^site.portrange=586$/site.portrange=$SBOI_SUMMA_PORTRANGE/" "$SBOI_SUMMARISE_DIR/site.properties"
+    sed -i -e "s/^site.portrange=[0-9]{3}$/site.portrange=$SBOI_SUMMA_PORTRANGE/" "$SBOI_SUMMARISE_DIR/site.properties"
     cp -v "$CONFIG_TEMP_DIR/storage_newspapr.xml" "$SBOI_SUMMARISE_DIR/config/storage_newspapr.xml"
     echo "Running SBOI Summa installer"
     pushd "$SBOI_SUMMARISE_DIR" > /dev/null
@@ -112,34 +112,34 @@ if [ -e "$SBOI_SUMMARISE_SOURCE_DIR" ] ; then
     popd > /dev/null
 fi
 
-if [ -e "$DOMSGUI_SUMMARISE_SOURCE_DIR" ] ; then
-    echo "Installing DOMSGUI Summa"
-    unzip -q "$DOMSGUI_SUMMARISE_SOURCE_DIR/domsgui-*.zip" -d "$DOMSGUI_SUMMARISE_DIR"
+if [ -e "$DOMSWUI_SUMMARISE_SOURCE_DIR" ] ; then
+    echo "Installing DOMSWUI Summa"
+    unzip -q "$DOMSWUI_SUMMARISE_SOURCE_DIR/domswui-*.zip" -d "$DOMSWUI_SUMMARISE_DIR"
 
-    mkdir -p "$DOMSGUI_SUMMA_STORAGE_DIR/data"
-    ln -s "$DOMSGUI_SUMMA_STORAGE_DIR/data" "$DOMSGUI_SUMMARISE_DIR/data"
+    mkdir -p "$DOMSWUI_SUMMA_STORAGE_DIR/data"
+    ln -s "$DOMSWUI_SUMMA_STORAGE_DIR/data" "$DOMSWUI_SUMMARISE_DIR/data"
 
-    mkdir -p "$DOMSGUI_SUMMA_STORAGE_DIR/index"
-    ln -s "$DOMSGUI_SUMMA_STORAGE_DIR/index" "$DOMSGUI_SUMMARISE_DIR/index"
+    mkdir -p "$DOMSWUI_SUMMA_STORAGE_DIR/index"
+    ln -s "$DOMSWUI_SUMMA_STORAGE_DIR/index" "$DOMSWUI_SUMMARISE_DIR/index"
 
-    mkdir -p "$DOMSGUI_SUMMA_STORAGE_DIR/suggest"
-    ln -s "$DOMSGUI_SUMMA_STORAGE_DIR/suggest" "$DOMSGUI_SUMMARISE_DIR/suggest"
+    mkdir -p "$DOMSWUI_SUMMA_STORAGE_DIR/suggest"
+    ln -s "$DOMSWUI_SUMMA_STORAGE_DIR/suggest" "$DOMSWUI_SUMMARISE_DIR/suggest"
 
-    mkdir -p "$DOMSGUI_SUMMA_STORAGE_DIR/storage"
-    ln -s "$DOMSGUI_SUMMA_STORAGE_DIR/storage" "$DOMSGUI_SUMMARISE_DIR/storage"
+    mkdir -p "$DOMSWUI_SUMMA_STORAGE_DIR/storage"
+    ln -s "$DOMSWUI_SUMMA_STORAGE_DIR/storage" "$DOMSWUI_SUMMARISE_DIR/storage"
 
-    mkdir -p "$DOMSGUI_SUMMA_STORAGE_DIR/dump"
-    ln -s "$DOMSGUI_SUMMA_STORAGE_DIR/dump" "$DOMSGUI_SUMMARISE_DIR/dump"
+    mkdir -p "$DOMSWUI_SUMMA_STORAGE_DIR/dump"
+    ln -s "$DOMSWUI_SUMMA_STORAGE_DIR/dump" "$DOMSWUI_SUMMARISE_DIR/dump"
 
-    mkdir -p "$DOMSGUI_SUMMARISE_DIR/summix-storage/"
-    cp "$DOMSGUI_SUMMARISE_SOURCE_DIR"/summix-*.zip "$DOMSGUI_SUMMARISE_DIR/summix-storage/"
-    cp "$BASEDIR/data/tomcat/"apache-tomcat-*.zip "$DOMSGUI_SUMMARISE_DIR/"
-    echo "Configuring DOMSGUI Summa"
-    sed -i -e "s/^site.portrange=576$/site.portrange=$DOMSGUI_SUMMA_PORTRANGE/" "$DOMSGUI_SUMMARISE_DIR/site.properties"
-    cp -v "$CONFIG_TEMP_DIR/storage_domsgui.xml" "$DOMSGUI_SUMMARISE_DIR/config/storage_domsgui.xml"
-    echo "Running DOMSGUI Summa installer"
-    pushd "$DOMSGUI_SUMMARISE_DIR" > /dev/null
-    VERBOSE=1 "$DOMSGUI_SUMMARISE_DIR"/bin/all.sh
+    mkdir -p "$DOMSWUI_SUMMARISE_DIR/summix-storage/"
+    cp "$DOMSWUI_SUMMARISE_SOURCE_DIR"/summix-*.zip "$DOMSWUI_SUMMARISE_DIR/summix-storage/"
+    cp "$BASEDIR/data/tomcat/"apache-tomcat-*.zip "$DOMSWUI_SUMMARISE_DIR/"
+    echo "Configuring DOMSWUI Summa"
+    sed -i -e "s/^site.portrange=[0-9]{3}$/site.portrange=$DOMSWUI_SUMMA_PORTRANGE/" "$DOMSWUI_SUMMARISE_DIR/site.properties"
+    cp -v "$CONFIG_TEMP_DIR/storage_domswui.xml" "$DOMSWUI_SUMMARISE_DIR/config/storage_domswui.xml"
+    echo "Running DOMSWUI Summa installer"
+    pushd "$DOMSWUI_SUMMARISE_DIR" > /dev/null
+    VERBOSE=1 "$DOMSWUI_SUMMARISE_DIR"/bin/all.sh
     popd > /dev/null
 fi
 
