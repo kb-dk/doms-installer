@@ -128,7 +128,7 @@ This is not strictly necessary, but provides some optimization -->
                 <xproperties>
                     <entry>
                         <key>collectionBaseID</key>
-                        <value class="string">doms_NewspaperCollection</value>
+                        <value class="string">doms_newspaprCollection</value>
                     </entry>
                     <entry>
                         <key>collectionPID</key>
