@@ -17,7 +17,7 @@ apt-get install -y redis-server
 apt-get install -y xorg
 
 echo "192.168.50.2 doms-testbed" >> /etc/hosts
-echo "192.168.50.4 domsgui-testbed" >> /etc/hosts
+echo "192.168.50.4 domswui-testbed" >> /etc/hosts
 
 
 
