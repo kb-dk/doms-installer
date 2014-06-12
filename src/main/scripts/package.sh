@@ -308,6 +308,7 @@ cp -v $CONFIG_TEMP_DIR/fedora-users.xml $FEDORA_DIR/server/config/fedora-users.x
 # Setup the the lowlevel storage
 if [ "$USE_XMLTAPES" == "true" ]; then
     cp -v $CONFIG_TEMP_DIR/akubra-llstore_xmltapes.xml $FEDORA_DIR/server/config/spring/akubra-llstore.xml
+    cp -v $CONFIG_TEMP_DIR/xmlTapesConfig.xml $FEDORA_DIR/server/config/spring/xmlTapesConfig.xml
 fi
 
 # Install the "No object policy" rule
