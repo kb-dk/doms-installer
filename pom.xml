@@ -9,7 +9,7 @@
 
     <groupId>dk.statsbiblioteket.doms.installer</groupId>
     <artifactId>installer</artifactId>
-    <version>1.5-SNAPSHOT</version>
+    <version>1.5</version>
 
     <properties>
         <!-- Note: Releases of Summarise for SBOI are generated from the Summarise branch
@@ -25,7 +25,8 @@
         <connection>scm:git:git://github.com/statsbiblioteket/doms-installer.git</connection>
         <developerConnection>scm:git:git@github.com:statsbiblioteket/doms-installer.git</developerConnection>
         <url>https://github.com/statsbiblioteket/doms-installer</url>
-    </scm>
+      <tag>installer-1.5</tag>
+  </scm>
 
     <profiles>
         <profile>
@@ -193,12 +194,12 @@
                         </goals>
                         <configuration>
                             <target>
-                                <mkdir dir="${project.build.directory}/domswui-summarise/"/>
+                                <mkdir dir="${project.build.directory}/domswui-summarise/" />
                                 <!--
                                 <scp knownhosts="${project.basedir}/known_hosts" file="fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${env.SSH_KEY}" />
                                 -->
                                 <exec failonerror="true" executable="rsync">
-                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domswui-${domswui.summarise.version}/* &quot;${project.build.directory}/domswui-summarise/&quot;"/>
+                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domswui-${domswui.summarise.version}/* &quot;${project.build.directory}/domswui-summarise/&quot;" />
                                 </exec>
                             </target>
                         </configuration>
