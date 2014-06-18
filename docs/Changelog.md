@@ -1,3 +1,12 @@
+2014-06-18 Release 1.5
+* Update to 1.0.6 of xmltapes. This fixes the bug that would cause data loss by deleting source metadata files regardless of them being succesfully written to the tapes or not. 
+* The testbed has two summa instances deployed (one for SBOI, another for searching doms, as used by DomsGUI).
+* The project has been vagrant enabled, i.e. making it easy to setup a virtual machine with a running doms, for development purposes. 
+* Enable the validator hook.
+* Use the newest base objects ingester 1.5, with various improvements to newspaper datamodel and various fixes for radiotv datamodel
+* Use version 1.3 of doms-server for improved error messages, and better search
+* Use version 1.1 of ecm module to get exceptions from failed validations
+
 2014-04-04 Release 1.4
 * Updated to 1.0.5 of xmltapes. This fixes a nasty bug introduced in the previous release, where some tapes used the extension ".gz.tar" and others the extension ".tar". To upgrade, rename all the xmltapes to .tar. Then update the akubra-config.xml to set rebuild true and restart the doms. After this first restart, you can set rebuild to false again.
 * Doms can now shut down correctly again.
