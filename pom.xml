@@ -109,7 +109,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.metadatarepository</groupId>
             <artifactId>xmltapes</artifactId>
-            <version>1.0.7-SNAPSHOT</version>
+            <version>1.0.7</version>
             <classifier>bundle</classifier>
             <type>tar.gz</type>
         </dependency>

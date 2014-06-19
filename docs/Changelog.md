@@ -1,3 +1,6 @@
+2014-06-19 Release 1.6
+ * Fixed a bad bug in tapes (1.0.7),  that made upgrading from an old doms impossible
+
 2014-06-18 Release 1.5
 * Update to 1.0.6 of xmltapes. This fixes the bug that would cause data loss by deleting source metadata files regardless of them being succesfully written to the tapes or not. 
 * The testbed has two summa instances deployed (one for SBOI, another for searching doms, as used by DomsGUI).
