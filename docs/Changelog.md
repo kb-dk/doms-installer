@@ -1,5 +1,8 @@
+2014-06-23 Release 1.7
+* Updated to version 1.0.8 of xmltapes. Removing open files leak on errors, and stops urlencoding filenames in tapes.
+
 2014-06-19 Release 1.6
- * Fixed a bad bug in tapes (1.0.7),  that made upgrading from an old doms impossible
+* Fixed a bad bug in tapes (1.0.7),  that made upgrading from an old doms impossible
 
 2014-06-18 Release 1.5
 * Update to 1.0.6 of xmltapes. This fixes the bug that would cause data loss by deleting source metadata files regardless of them being succesfully written to the tapes or not. 
