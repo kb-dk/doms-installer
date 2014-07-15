@@ -1,3 +1,6 @@
+2014-07-15 Release 1.8
+* Updated to version 1.0.9 of xmltapes, which fixed the "Corrupt tapes on purge" bug.
+
 2014-06-23 Release 1.7
 * Updated to version 1.0.8 of xmltapes. Removing open files leak on errors, and stops urlencoding filenames in tapes.
 
