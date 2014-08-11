@@ -305,7 +305,7 @@
                 WSDL) to do their work.</comment>
         </param>
     </module>
-    <module role="org.fcrepo.server.search.FieldSearch" class="org.fcrepo.server.search.FieldSearchSQLModule">
+    <module role="org.fcrepo.server.search.FieldSearch" class="dk.statsbiblioteket.metadatarepository.fieldsearch.SBFieldSearchModule">
         <comment>Supports the API-A simpleSearch and advancedSearch methods.</comment>
         <param name="maxResults" value="100">
             <comment>(required, must be &gt; 0)
