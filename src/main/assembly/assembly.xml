@@ -101,7 +101,7 @@
             <useProjectArtifact>false</useProjectArtifact>
             <useTransitiveFiltering>true</useTransitiveFiltering>
             <includes>
-                <include>dk.statsbiblioteket.metadatarepository:fedoraNoObjectPolicy</include>
+                <include>dk.statsbiblioteket.metadatarepository:fedora-sb-additions</include>
             </includes>
             <excludes>
                 <exclude>log4j:log4j</exclude>
