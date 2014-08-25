@@ -1,3 +1,18 @@
+2014-08-23 Release 1.9
+* summarise doms-wui is now version 1.1
+* Fixed the SQL Like bug. This require a database rebuild of an existing system.
+* Base Objects Ingester to version 1.7
+ * Use the right Jpylyzer for the newspaper data model
+ * Include a Newspaper Title template object
+ * Use the newest and correct version of the Film schema
+ * Update to Summa relations
+ * Use the correct Mods 3.5 schema
+* XmlTapes to version 1.0.11
+ * Only create a new tape after we have checked the newest tape... Stupid bug
+ * Fixed the error that would appear in the log if the archive was closed. Now closing require the WriteLock, meaining that it waits for the taper thread.
+ * Added a more comprehensive test
+
+
 2014-07-23 Release 1.8
 * Updated to version 1.0.9 of xmltapes, which fixed the "Corrupt tapes on purge" bug.
 
