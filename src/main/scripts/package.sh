@@ -290,6 +290,8 @@ if [ "$USE_SURVEILANCE" == "true" ]; then
 else
     cp -v $CONFIG_TEMP_DIR/logback_unsurveyed.xml $FEDORA_DIR/server/config/logback.xml
 fi
+cp -v $CONFIG_TEMP_DIR/logback_rebuild.xml $FEDORA_DIR/server/bin/logback.xml
+
 
 # Add logappender to Fedora logback configuration
 cp -v $CONFIG_TEMP_DIR/fedora.fcfg  $FEDORA_DIR/server/config/fedora.fcfg
