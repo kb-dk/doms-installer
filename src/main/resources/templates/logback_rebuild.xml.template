@@ -12,7 +12,7 @@
             <Pattern>${pattern}</Pattern>
         </layout>
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <maxIndex>5</maxIndex>
+            <maxIndex>50</maxIndex>
             <FileNamePattern>${FEDORA_REBUILD_LOG_PATH}.%i</FileNamePattern>
         </rollingPolicy>
         <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
@@ -26,11 +26,14 @@
             <pattern>%p %d{HH:mm:ss.SSS} \(%c{0}\) %m%n</pattern>
         </encoder>
     </appender>
-    <logger name="org.fcrepo" additivity="false" level="WARN">
+    <logger name="org.fcrepo" additivity="false" level="DEBUG">
+        <appender-ref ref="FEDORA_REBUILD"/>
         <appender-ref ref="STDOUT"/>
+    </logger>
+    <logger name="org.mulgara" additivity="false" level="DEBUG">
         <appender-ref ref="FEDORA_REBUILD"/>
     </logger>
-    <root additivity="false" level="WARN">
+    <root level="WARN">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FEDORA_REBUILD"/>
     </root>
