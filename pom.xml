@@ -129,14 +129,6 @@
             <version>3.6.2</version>
         </dependency>
 
-        <!--Fedora dependencies for the fedora classes-->
-        <dependency>
-            <groupId>org.fcrepo</groupId>
-            <artifactId>fcrepo-security-jaas</artifactId>
-            <version>3.6.2</version>
-            <scope>provided</scope>
-        </dependency>
-
         <!--Webservices-->
         <dependency>
             <groupId>dk.statsbiblioteket.doms.pidgenerator</groupId>
