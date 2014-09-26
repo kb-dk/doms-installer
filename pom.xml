@@ -118,7 +118,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.metadatarepository</groupId>
             <artifactId>fedora-sb-additions</artifactId>
-            <version>1.0.2</version>
+            <version>1.0.3-SNAPSHOT</version>
         </dependency>
 
 
@@ -127,6 +127,14 @@
             <groupId>org.fcrepo</groupId>
             <artifactId>fcrepo-installer</artifactId>
             <version>3.6.2</version>
+        </dependency>
+
+        <!--Fedora dependencies for the fedora classes-->
+        <dependency>
+            <groupId>org.fcrepo</groupId>
+            <artifactId>fcrepo-security-jaas</artifactId>
+            <version>3.6.2</version>
+            <scope>provided</scope>
         </dependency>
 
         <!--Webservices-->

@@ -237,9 +237,7 @@ if [ "$USE_VALIDATOR_HOOK" == "true" ]; then
 fi
 
 if [ "$USE_NO_OBJECT_POLICY" == "true" ]; then
-    for file in $(find "$BASEDIR/fedoralib/noObjectPolicy/" -type f ); do
-       cp "$file" WEB-INF/lib
-    done
+    cp -r -v "$BASEDIR/fedoralib/fedoraSBadditions/"* WEB-INF/classes/
 fi
 
 if [ "$USE_LDAP" == "true" ]; then
