@@ -121,6 +121,18 @@
             <version>1.0.3-SNAPSHOT</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.fcrepo</groupId>
+            <artifactId>mulgara-core</artifactId>
+            <version>2.1.14-SB</version>
+          <exclusions>
+              <exclusion>
+                  <groupId>*</groupId>
+                  <artifactId>*</artifactId>
+              </exclusion>
+          </exclusions>
+        </dependency>
+
 
         <!--Fedora itself-->
         <dependency>

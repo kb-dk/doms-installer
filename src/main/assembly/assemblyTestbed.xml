@@ -62,6 +62,15 @@
 
         </dependencySet>
 
+        <dependencySet>
+            <outputDirectory>fedoralib/mulgara</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
+            <useTransitiveFiltering>false</useTransitiveFiltering>
+            <includes>
+                <include>org.fcrepo:mulgara-core</include>
+            </includes>
+        </dependencySet>
+
 
         <dependencySet>
             <outputDirectory>fedoralib/utils</outputDirectory>

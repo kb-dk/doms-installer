@@ -230,6 +230,11 @@ cp -v $CONFIG_TEMP_DIR/mulgara-x-config.xml WEB-INF/classes/
 # The fedora libs
 USE_CENTRAL=true
 
+rm WEB-INF/lib/mulgara-core-*.jar
+for file in $(find "$BASEDIR/fedoralib/mulgara/" -type f ); do
+    cp "$file" WEB-INF/lib
+done
+
 if [ "$USE_VALIDATOR_HOOK" == "true" ]; then
     for file in $(find "$BASEDIR/fedoralib/validatorhook/" -type f ); do
        cp "$file" WEB-INF/lib
