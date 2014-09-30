@@ -14,7 +14,7 @@
             <Pattern>${pattern}</Pattern>
         </layout>
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <maxIndex>5</maxIndex>
+            <maxIndex>12</maxIndex>
             <FileNamePattern>${FEDORA_WARN_LOG_PATH}.%i</FileNamePattern>
         </rollingPolicy>
         <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
@@ -32,7 +32,7 @@
             <Pattern>${pattern}</Pattern>
         </layout>
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <maxIndex>5</maxIndex>
+            <maxIndex>12</maxIndex>
             <FileNamePattern>${FEDORA_LOG_PATH}.%i</FileNamePattern>
         </rollingPolicy>
         <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
