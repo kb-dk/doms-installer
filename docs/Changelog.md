@@ -1,3 +1,11 @@
+Release 1.10
+ * Save the last 12 logs
+ * The new mulgara 2.1.14-SB is added and included in the installer
+ * Package the fedora sb additions in classes as this way we can override fedora classes
+ * Fixed the log config to correctly log to fedora.log.warn
+ * Log the mulgara stuff much more so that we can actually find the errors and track back to what the system is doing
+ * Better logfile, which excludes the AttributeFinder and makes a warn log
+
 2014-08-23 Release 1.9
 * summarise doms-wui is now version 1.1
 * Fixed the SQL Like bug. This require a database rebuild of an existing system.
