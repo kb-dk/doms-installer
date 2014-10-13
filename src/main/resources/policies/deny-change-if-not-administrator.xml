@@ -3,7 +3,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         PolicyId="deny-inactive-or-deleted-objects-or-datastreams-if-not-administrator"
         RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
-    <Description>deny any access to any modifiyng methods if not administrator
+    <Description>deny any access to any modifying methods if not administrator
     </Description>
     <Target>
         <Subjects>
