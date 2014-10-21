@@ -13,20 +13,20 @@
 
         <Resources>
             <Resource>
-                    <!--state is A AND NOT datastream is EVENTS-->
-                    <ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
-                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">A</AttributeValue>
-                        <ResourceAttributeDesignator AttributeId="urn:fedora:names:fedora:2.1:resource:object:state"
-                                                     MustBePresent="false"
-                                                     DataType="http://www.w3.org/2001/XMLSchema#string"/>
-                    </ResourceMatch>
+                <!--state is A-->
+                <ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">A</AttributeValue>
+                    <ResourceAttributeDesignator AttributeId="urn:fedora:names:fedora:2.1:resource:object:state"
+                                                 MustBePresent="false"
+                                                 DataType="http://www.w3.org/2001/XMLSchema#string"/>
+                </ResourceMatch>
 
             </Resource>
         </Resources>
 
         <Actions>
 
-        <Action>
+            <Action>
                 <ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
                     <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
                             >urn:fedora:names:fedora:2.1:action:id-purgeObject</AttributeValue>
@@ -115,6 +115,7 @@
     </Target>
 
     <Rule RuleId="denyChange" Effect="Deny">
+        <!--Deny change unless the datastream id is EVENTS-->
         <Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
             <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
                 <ResourceAttributeDesignator AttributeId="urn:fedora:names:fedora:2.1:resource:datastream:id"
@@ -122,9 +123,7 @@
                                              DataType="http://www.w3.org/2001/XMLSchema#string"/>
                 <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
                     <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-normalize-space">
-                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
-                                >EVENTS
-                        </AttributeValue>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">EVENTS</AttributeValue>
                     </Apply>
                 </Apply>
             </Apply>
