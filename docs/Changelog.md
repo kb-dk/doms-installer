@@ -1,3 +1,8 @@
+2014-11-12 Release 1.11
+* Use newest SBOI that supports the new Item-based autonomous components
+* Use the newest base-object-ingester, that defines Items and newspaper titles
+* Use newest central library that removes EVENTS from cloned templates
+
 Release 1.10
  * Save the last 12 logs
  * The new mulgara 2.1.14-SB is added and included in the installer
