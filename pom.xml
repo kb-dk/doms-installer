@@ -9,7 +9,7 @@
 
     <groupId>dk.statsbiblioteket.doms.installer</groupId>
     <artifactId>installer</artifactId>
-    <version>1.12-SNAPSHOT</version>
+    <version>1.11-SNAPSHOT</version>
 
     <properties>
         <!-- Note: Releases of Summarise for SBOI are generated from the Summarise branch
@@ -80,7 +80,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.installer</groupId>
             <artifactId>base-objects-ingester</artifactId>
-            <version>1.13-SNAPSHOT</version>
+            <version>1.12-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
 
