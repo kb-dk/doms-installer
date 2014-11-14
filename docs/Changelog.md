@@ -1,3 +1,6 @@
+2014-11-14 Release 1.12
+* Use functional Summa
+
 2014-11-12 Release 1.11
 * Use newest SBOI that supports the new Item-based autonomous components
 * Use the newest base-object-ingester, that defines Items and newspaper titles
