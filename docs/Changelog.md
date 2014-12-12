@@ -1,3 +1,6 @@
+2014-12-12 Release 1.13
+* Now with xml tapes that do not index twice
+
 2014-11-14 Release 1.12
 * Use functional Summa
 
