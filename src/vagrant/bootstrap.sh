@@ -16,6 +16,20 @@ apt-get install -y redis-server
 
 apt-get install -y xorg
 
+apt-get install -y postgresql postgresql-contrib
+
+sudo -u postgres psql -c " CREATE ROLE \"domsMPT\" LOGIN PASSWORD 'domsMPTPass'
+            NOINHERIT CREATEDB
+            VALID UNTIL 'infinity';"
+
+sudo -u postgres psql -U postgres -c "CREATE DATABASE \"domsTripleStore\"
+            WITH
+            TEMPLATE=template0
+            ENCODING='SQL_ASCII'
+            OWNER=\"domsMPT\";"
+
+
+
 echo "192.168.50.2 doms-testbed" >> /etc/hosts
 echo "192.168.50.4 domswui-testbed" >> /etc/hosts
 

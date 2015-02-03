@@ -62,6 +62,11 @@ sed \
 -e 's|\$POSTGRESQL_USER\$|'"$POSTGRESQL_USER"'|g' \
 -e 's|\$POSTGRESQL_PASS\$|'"$POSTGRESQL_PASS"'|g' \
 -e 's|\$DATABASE_SYSTEM\$|'"$DATABASE_SYSTEM"'|g' \
+-e 's|\$MPTSTORE_DB\$|'"$MPTSTORE_DB"'|g' \
+-e 's|\$MPTSTORE_SERVER\$|'"$MPTSTORE_SERVER"'|g' \
+-e 's|\$MPTSTORE_USER\$|'"$MPTSTORE_USER"'|g' \
+-e 's|\$MPTSTORE_PASS\$|'"$MPTSTORE_PASS"'|g' \
+-e 's|\$TRIPLESTORE_SYSTEM\$|'"$TRIPLESTORE_SYSTEM"'|g' \
 -e 's|\$REDIS_HOST\$|'"$REDIS_HOST"'|g' \
 -e 's|\$REDIS_PORT\$|'"$REDIS_PORT"'|g' \
 -e 's|\$REDIS_DATABASE\$|'"$REDIS_DATABASE"'|g' \
@@ -79,6 +84,13 @@ if [ "$USE_POSTGRESQL" = "true" ]; then
 else
   DATABASE_SYSTEM=localDerbyPool
 fi
+
+if [ "$USE_MPTSTORE" = "true" ]; then
+  TRIPLESTORE_SYSTEM=localPostgresMPTTriplestore
+else
+  TRIPLESTORE_SYSTEM=localMulgaraTriplestore
+fi
+
 
 
 #
