@@ -39,6 +39,27 @@ popd > /dev/null
 if [ "$USE_VALIDATOR_HOOK" == "true" ]; then
     MODIFY_OBJECT_HOOK='<param name="decorator3" value="dk.statsbiblioteket.doms.ecm.fedoravalidatorhook.FedoraModifyObjectHook"/>'
 fi
+
+if [ "$USE_POSTGRESQL" = "true" ]; then
+  DATABASE_SYSTEM="localPostgreSQLPool"
+else
+  DATABASE_SYSTEM="localDerbyPool"
+fi
+
+if [ "$USE_UPDATETRACKER" == "true" ]; then
+    UPDATETRACKER_HOOK='    <param name="decorator5" value="dk.statsbiblioteket.doms.updatetracker.DomsUpdateTrackerHook"/>
+    <param name="updateTrackerPoolName" value="'$DATABASE_SYSTEM'">
+            <comment>The storage pool used by the update tracker</comment>
+        </param>'
+fi
+
+if [ "$USE_MPTSTORE" = "true" ]; then
+  TRIPLESTORE_SYSTEM=localPostgresMPTTriplestore
+else
+  TRIPLESTORE_SYSTEM=localMulgaraTriplestore
+fi
+
+
 function replace(){
 sed \
 -e 's|\$LOG_DIR\$|'"$LOG_DIR"'|g' \
@@ -71,6 +92,7 @@ sed \
 -e 's|\$REDIS_PORT\$|'"$REDIS_PORT"'|g' \
 -e 's|\$REDIS_DATABASE\$|'"$REDIS_DATABASE"'|g' \
 -e 's|\$MODIFY_OBJECT_HOOK\$|'"$MODIFY_OBJECT_HOOK"'|g' \
+-e 's|\$UPDATETRACKER_HOOK\$|'"$UPDATETRACKER_HOOK"'|g' \
 <$1 > $2
 }
 
@@ -78,18 +100,6 @@ sed \
 
 CONFIG_TEMP_DIR=$TESTBED_DIR/tmp/config
 mkdir -p $CONFIG_TEMP_DIR
-
-if [ "$USE_POSTGRESQL" = "true" ]; then
-  DATABASE_SYSTEM=localPostgreSQLPool
-else
-  DATABASE_SYSTEM=localDerbyPool
-fi
-
-if [ "$USE_MPTSTORE" = "true" ]; then
-  TRIPLESTORE_SYSTEM=localPostgresMPTTriplestore
-else
-  TRIPLESTORE_SYSTEM=localMulgaraTriplestore
-fi
 
 
 

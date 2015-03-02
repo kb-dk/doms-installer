@@ -129,6 +129,28 @@
 
 
         <dependencySet>
+            <outputDirectory>fedoralib/updateTracker</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
+            <useTransitiveFiltering>true</useTransitiveFiltering>
+            <includes>
+                <include>dk.statsbiblioteket.doms.updatetracker:updatetracker-fcrepo-decorator</include>
+            </includes>
+            <excludes>
+                <exclude>log4j:log4j</exclude>
+                <exclude>org.fcrepo:*</exclude>
+                <exclude>commons-*:*</exclude>
+                <exclude>com.thoughtworks.xstream:*</exclude>
+            </excludes>
+            <unpack>true</unpack>
+            <unpackOptions>
+                <excludes>
+                    <exclude>**/META-INF/**</exclude>
+                </excludes>
+            </unpackOptions>
+        </dependencySet>
+
+
+        <dependencySet>
             <outputDirectory>data/fedora</outputDirectory>
             <useProjectArtifact>false</useProjectArtifact>
             <includes>
