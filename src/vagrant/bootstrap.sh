@@ -18,6 +18,20 @@ apt-get install -y xorg
 
 apt-get install -y postgresql postgresql-contrib
 
+
+
+sudo -u postgres psql -c " CREATE ROLE \"domsFieldSearch\" LOGIN PASSWORD 'domsFieldSearchPass'
+            NOINHERIT CREATEDB
+            VALID UNTIL 'infinity';"
+
+sudo -u postgres psql -U postgres -c "CREATE DATABASE \"domsFieldSearch\"
+            WITH
+            TEMPLATE=template0
+            ENCODING='SQL_ASCII'
+            OWNER=\"domsFieldSearch\";"
+
+
+
 sudo -u postgres psql -c " CREATE ROLE \"domsMPT\" LOGIN PASSWORD 'domsMPTPass'
             NOINHERIT CREATEDB
             VALID UNTIL 'infinity';"

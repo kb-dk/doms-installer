@@ -28,6 +28,7 @@ echo "DATA_DIR=$DATADIR_DIR" >> $installerDir/bin/setenv.sh
 echo "CACHE_DIR=$CACHEDIR_DIR" >> $installerDir/bin/setenv.sh
 echo "SBOI_SUMMA_STORAGE_DIR=$SBOI_SUMMA_STORAGE_DIR" >> $installerDir/bin/setenv.sh
 echo "DOMSWUI_SUMMA_STORAGE_DIR=$DOMSWUI_SUMMA_STORAGE_DIR" >> $installerDir/bin/setenv.sh
+echo "USE_POSTGRESQL=true" >> $installerDir/bin/setenv.sh
 
 $installerDir/bin/install.sh $INSTALL_DIR
 
