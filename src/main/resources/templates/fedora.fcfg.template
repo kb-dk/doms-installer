@@ -230,7 +230,7 @@
                 file should be kept in temporary storage.</comment>
         </param>
         $MODIFY_OBJECT_HOOK$
-        $UPDATE_TRACKER_HOOK$
+        $UPDATETRACKER_HOOK$
     </module>
     <module role="org.fcrepo.server.access.Access" class="org.fcrepo.server.access.DefaultAccess">
         <comment>Description: The access subsystem. This implements the methods

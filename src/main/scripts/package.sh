@@ -47,10 +47,7 @@ else
 fi
 
 if [ "$USE_UPDATETRACKER" == "true" ]; then
-    UPDATETRACKER_HOOK='    <param name="decorator5" value="dk.statsbiblioteket.doms.updatetracker.DomsUpdateTrackerHook"/>
-    <param name="updateTrackerPoolName" value="'$DATABASE_SYSTEM'">
-            <comment>The storage pool used by the update tracker</comment>
-        </param>'
+    UPDATETRACKER_HOOK='    <param name="decorator5" value="dk.statsbiblioteket.doms.updatetracker.DomsUpdateTrackerHook"/>     <param name="updateTrackerPoolName" value="'$DATABASE_SYSTEM'">            <comment>The storage pool used by the update tracker</comment>        </param>'
 fi
 
 if [ "$USE_MPTSTORE" = "true" ]; then
@@ -279,6 +276,13 @@ if [ "$USE_XMLTAPES" == "true" ]; then
        cp "$file" WEB-INF/lib
     done
 fi
+
+if [ "$USE_UPDATETRACKER" == "true" ]; then
+    for file in $(find "$BASEDIR/fedoralib/updateTracker/" -type f ); do
+       cp "$file" WEB-INF/lib
+    done
+fi
+
 
 # Utils is not optional at this time
 for file in $(find "$BASEDIR/fedoralib/utils/" -type f ); do

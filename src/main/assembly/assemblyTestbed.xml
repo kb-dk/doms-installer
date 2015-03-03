@@ -141,12 +141,6 @@
                 <exclude>commons-*:*</exclude>
                 <exclude>com.thoughtworks.xstream:*</exclude>
             </excludes>
-            <unpack>true</unpack>
-            <unpackOptions>
-                <excludes>
-                    <exclude>**/META-INF/**</exclude>
-                </excludes>
-            </unpackOptions>
         </dependencySet>
 
 

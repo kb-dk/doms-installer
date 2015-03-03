@@ -40,6 +40,24 @@
         </triggeringPolicy>
     </appender>
 
+    <property name="FEDORA_REPLAY_LOG_PATH"
+              value="$LOG_DIR$/fedora.replay${logfile.extension:-.log}"/>
+
+
+    <appender name="FEDORA_REPLAY" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${FEDORA_REPLAY_LOG_PATH}</File>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>${pattern}</Pattern>
+        </layout>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <maxIndex>12</maxIndex>
+            <FileNamePattern>${FEDORA_REPLAY_LOG_PATH}.%i</FileNamePattern>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>20MB</MaxFileSize>
+        </triggeringPolicy>
+    </appender>
+
 
     <property name="TAPES_LOG_PATH"
               value="$LOG_DIR$/xmltapes${logfile.extension:-.log}"/>
@@ -74,6 +92,10 @@
     <logger name="com.sun.xacml.finder" additivity="false" level="WARN">
         <appender-ref ref="FEDORA"/>
         <appender-ref ref="FEDORA_WARN"/>
+    </logger>
+
+    <logger name="dk.statsbiblioteket.doms.updatetracker.ReplayLog"  additivity="false" level="INFO">
+        <appender-ref ref="FEDORA_REPLAY"/>
     </logger>
 
     <!-- Remove the comments around this section to send FeSL debug messages to fesl.log
