@@ -41,21 +41,16 @@
     </appender>
 
     <property name="FEDORA_REPLAY_LOG_PATH"
-              value="$LOG_DIR$/fedora.replay${logfile.extension:-.log}"/>
+              value="$LOG_DIR$/fedora.replay.%d{yyyy-MM-dd}${logfile.extension:-.log}"/>
 
 
     <appender name="FEDORA_REPLAY" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${FEDORA_REPLAY_LOG_PATH}</File>
         <layout class="ch.qos.logback.classic.PatternLayout">
-            <Pattern>${pattern}</Pattern>
+            <Pattern>%p %d{yyyy-MM-dd' 'HH:mm:ss.SSS} %m%n</Pattern>
         </layout>
-        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <maxIndex>12</maxIndex>
-            <FileNamePattern>${FEDORA_REPLAY_LOG_PATH}.%i</FileNamePattern>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${FEDORA_REPLAY_LOG_PATH}</FileNamePattern>
         </rollingPolicy>
-        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
-            <MaxFileSize>20MB</MaxFileSize>
-        </triggeringPolicy>
     </appender>
 
 
