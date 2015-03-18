@@ -1,8 +1,10 @@
 #!/bin/bash
 export JAVA_HOME=/usr/lib/jvm/java-7-oracle/
 
+if [ ! -e visualvm_137.zip ]; then
 wget -N https://java.net/projects/visualvm/downloads/download/release137/visualvm_137.zip
 unzip visualvm_137.zip
+fi
 
 
 INSTALL_DIR="$HOME/7880-doms"

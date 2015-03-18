@@ -720,9 +720,9 @@
             CREATE ROLE "$MPTSTORE_USER$" LOGIN PASSWORD '$MPTSTORE_PASS$'
             NOINHERIT CREATEDB
             VALID UNTIL 'infinity';
-            CREATE DATABASE "MPTSTORE_DB"
+            CREATE DATABASE "$MPTSTORE_DB$"
             WITH ENCODING='SQL_ASCII'
-            OWNER="MPTSTORE_USER";
+            OWNER="$MPTSTORE_USER$";
             3) Make sure you can login to your Postgres server as fedoraAdmin.
             4) Download the appropriate Postgres JDBC 3 driver from
             http://jdbc.postgresql.org/download.html
