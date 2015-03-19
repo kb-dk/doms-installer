@@ -18,9 +18,9 @@
                value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora"
                override="false"/>
 
-    <Parameter name="fedora.updatetracer.web.Username" value="$FEDORAUSER$" override="false"/>
+    <Parameter name="fedora.updatetracer.web.username" value="$FEDORAUSER$" override="false"/>
 
-    <Parameter name="fedora.updatetracer.web.Password" value="$FEDORAUSERPASS$" override="false"/>
+    <Parameter name="fedora.updatetracer.web.password" value="$FEDORAUSERPASS$" override="false"/>
 
     <Parameter name="fedora.updatetracker.delay" value="1000" override="false"/>
 
