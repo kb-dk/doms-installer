@@ -88,6 +88,7 @@ if [ -e "$SBOI_SUMMARISE_SOURCE_DIR" ] ; then
     mkdir -p "$SBOI_SUMMA_STORAGE_DIR/data"
     ln -s "$SBOI_SUMMA_STORAGE_DIR/data" "$SBOI_SUMMARISE_DIR/data"
 
+
     mkdir -p "$SBOI_SUMMA_STORAGE_DIR/index"
     ln -s "$SBOI_SUMMA_STORAGE_DIR/index" "$SBOI_SUMMARISE_DIR/index"
 

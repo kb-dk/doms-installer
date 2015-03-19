@@ -3,6 +3,36 @@
     <!-- fedora settings, the only one relevant -->
     <Parameter name="fedora.home" value="$FEDORA_DIR$" override="false"/>
 
+    <Parameter name="fedora.worklog.database.driver" value="org.postgresql.Driver" override="false"/>
+
+    <Parameter name="fedora.worklog.database.URL"
+               value="jdbc:postgresql://$POSTGRESQL_SERVER$/$POSTGRESQL_DB$"
+               override="false"/>
+
+    <Parameter name="fedora.worklog.database.username" value="$POSTGRESQL_USER$" override="false"/>
+
+    <Parameter name="fedora.worklog.database.password" value="$POSTGRESQL_PASS$" override="false"/>
+
+
+    <Parameter name="fedora.updatetracer.web.url"
+               value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora"
+               override="false"/>
+
+    <Parameter name="fedora.updatetracer.web.Username" value="$FEDORAUSER$" override="false"/>
+
+    <Parameter name="fedora.updatetracer.web.Password" value="$FEDORAUSERPASS$" override="false"/>
+
+    <Parameter name="fedora.updatetracker.delay" value="1000" override="false"/>
+
+    <Parameter name="fedora.updatetracker.period" value="1000" override="false"/>
+
+    <Parameter name="fedora.updatetracker.limit" value="1000" override="false"/>
+
+    <Parameter name="fedora.updatetracker.hibernateConfigFile"
+               value="$TOMCAT_CONFIG_DIR$/updatetracker.hibernate.cfg.xml"
+               override="false"/>
+
+
     <!--ecm-->
     <Parameter name="dk.statsbiblioteket.doms.ecm.fedora.connector"
                value="dk.statsbiblioteket.doms.ecm.repository.fedoraclient.FedoraClientConnector"
