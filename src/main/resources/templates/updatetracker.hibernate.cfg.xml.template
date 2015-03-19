@@ -17,8 +17,8 @@
         <property name="hibernate.current_session_context_class">thread</property>
         <!-- JDBC connection pool (use the built-in) -->
         <property name="hibernate.connection.pool_size">5</property>
-        <!-- Drop and re-create the database schema on startup -->
-        <property name="hibernate.hbm2ddl.auto">create</property>
+
+        <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- helper debug settings -->
         <property name="hibernate.use_sql_comments">true</property>

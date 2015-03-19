@@ -31,7 +31,6 @@ sudo -u postgres psql -U postgres -c "CREATE DATABASE \"domsFieldSearch\"
             OWNER=\"domsFieldSearch\";"
 
 
-
 sudo -u postgres psql -c " CREATE ROLE \"domsMPT\" LOGIN PASSWORD 'domsMPTPass'
             NOINHERIT CREATEDB
             VALID UNTIL 'infinity';"
@@ -41,6 +40,16 @@ sudo -u postgres psql -U postgres -c "CREATE DATABASE \"domsTripleStore\"
             TEMPLATE=template0
             ENCODING='SQL_ASCII'
             OWNER=\"domsMPT\";"
+
+sudo -u postgres psql -c " CREATE ROLE \"domsUpdateTracker\" LOGIN PASSWORD 'domsuptrack'
+            NOINHERIT CREATEDB
+            VALID UNTIL 'infinity';"
+
+sudo -u postgres psql -U postgres -c "CREATE DATABASE \"domsUpdateTracker\"
+            WITH
+            TEMPLATE=template0
+            ENCODING='SQL_ASCII'
+            OWNER=\"domsUpdateTracker\";"
 
 
 
