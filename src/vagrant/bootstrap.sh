@@ -18,6 +18,9 @@ apt-get install -y xorg
 
 apt-get install -y postgresql postgresql-contrib
 
+echo "host    all             all             0.0.0.0/0               md5" >> /etc/postgresql/9.3/main/pg_hba.conf
+echo "listen_addresses = '*'" >> /etc/postgresql/9.3/main/postgresql.conf
+service postgresql restart
 
 
 sudo -u postgres psql -c " CREATE ROLE \"domsFieldSearch\" LOGIN PASSWORD 'domsFieldSearchPass'
