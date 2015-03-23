@@ -8,4 +8,5 @@ PGPASSWORD=$2 psql -U $1 $3 -h localhost -t -c "select 'drop table \"' || tablen
 killall -9 java
 drop domsFieldSearch domsFieldSearchPass domsFieldSearch
 drop domsMPT domsMPTPass domsTripleStore
+drop domsUpdateTracker domsuptrack domsUpdateTracker
 rm -rf ~/7880-d*
