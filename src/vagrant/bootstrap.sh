@@ -23,6 +23,7 @@ echo "listen_addresses = '*'" >> /etc/postgresql/9.3/main/postgresql.conf
 service postgresql restart
 
 
+#TODO remember to check database encoding with IT Drift
 sudo -u postgres psql -c " CREATE ROLE \"domsFieldSearch\" LOGIN PASSWORD 'domsFieldSearchPass'
             NOINHERIT CREATEDB
             VALID UNTIL 'infinity';"
