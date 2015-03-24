@@ -115,7 +115,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.metadatarepository</groupId>
             <artifactId>xmltapes</artifactId>
-            <version>1.0.13-SNAPSHOT</version>
+            <version>1.0.14-SNAPSHOT</version>
             <classifier>bundle</classifier>
             <type>tar.gz</type>
         </dependency>
