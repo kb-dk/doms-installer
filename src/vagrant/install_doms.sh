@@ -1,5 +1,5 @@
 #!/bin/bash
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
+export JAVA_HOME=/usr/lib/jvm/java-7-oracle/
 
 wget -N https://java.net/projects/visualvm/downloads/download/release137/visualvm_137.zip
 unzip visualvm_137.zip
