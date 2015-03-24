@@ -22,9 +22,9 @@
 
     <Parameter name="fedora.updatetracker.web.password" value="$FEDORAUSERPASS$" override="false"/>
 
-    <Parameter name="fedora.updatetracker.delay" value="1000" override="false"/>
+    <Parameter name="fedora.updatetracker.delay" value="10000" override="false"/>
 
-    <Parameter name="fedora.updatetracker.period" value="1000" override="false"/>
+    <Parameter name="fedora.updatetracker.period" value="30000" override="false"/>
 
     <Parameter name="fedora.updatetracker.limit" value="1000" override="false"/>
 
@@ -75,11 +75,6 @@
                override="false"/>
     <Parameter name="dk.statsbiblioteket.doms.authchecker.log4jconfig"
                value="$TOMCAT_CONFIG_DIR$/log4j.authchecker.xml"
-               override="false"/>
-
-    <!--updatetracker-->
-    <Parameter name="dk.statsbiblioteket.doms.updatetracker.fedoralocation"
-               value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora"
                override="false"/>
 
     <!--pidgenerator-->
