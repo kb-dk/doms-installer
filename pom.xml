@@ -46,7 +46,7 @@
     <dependencies>
 
         <!--Ingesters-->
-        <dependency>
+     <!--   <dependency>
             <groupId>dk.statsbiblioteket.doms.ingesters</groupId>
             <artifactId>radio-tv</artifactId>
             <version>1.0</version>
@@ -73,8 +73,19 @@
             <classifier>bundle</classifier>
             <type>tar.gz</type>
         </dependency>
+-->
 
+        <dependency>
+            <groupId>dk.statsbiblioteket.sbutil</groupId>
+            <artifactId>sbutil-common</artifactId>
+            <version>0.5.28</version>
+        </dependency>
 
+        <dependency>
+            <groupId>dk.statsbiblioteket.doms.domsutil.surveyable</groupId>
+            <artifactId>domsutil-logappender</artifactId>
+            <version>1.1-SNAPSHOT</version>
+        </dependency>
 
 
         <dependency>
@@ -86,12 +97,6 @@
 
 
         <!--Stuff for fedora libs-->
-        <dependency>
-            <groupId>dk.statsbiblioteket.doms.domsutil</groupId>
-            <artifactId>domsutil-bundle</artifactId>
-            <version>1.1-SNAPSHOT</version>
-            <type>pom</type>
-        </dependency>
 
         <dependency>
             <groupId>dk.statsbiblioteket.doms.authchecker</groupId>
