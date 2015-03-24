@@ -32,6 +32,9 @@
                value="$TOMCAT_CONFIG_DIR$/updatetracker.hibernate.cfg.xml"
                override="false"/>
 
+    <Parameter name="fedora.updatetracker.progressFile"
+               value="/tmp/updateTracker.progress"
+               override="false"/>
 
     <!--ecm-->
     <Parameter name="dk.statsbiblioteket.doms.ecm.fedora.connector"
