@@ -78,8 +78,8 @@
             <useProjectArtifact>false</useProjectArtifact>
             <useTransitiveFiltering>true</useTransitiveFiltering>
             <includes>
-                <include>dk.statsbiblioteket.doms.domsutil:*:jar:*</include>
-                <include>dk.statsbiblioteket.sbutil:sbutil</include>
+                <include>dk.statsbiblioteket.doms.domsutil.surveyable:*:jar:*</include>
+                <include>dk.statsbiblioteket.sbutil:sbutil-*</include>
             </includes>
             <excludes>
                 <exclude>log4j:log4j</exclude>
