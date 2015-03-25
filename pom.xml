@@ -46,6 +46,7 @@
     <dependencies>
 
         <!--Ingesters-->
+        <!--Removed, as they have not been used for more than a year-->
      <!--   <dependency>
             <groupId>dk.statsbiblioteket.doms.ingesters</groupId>
             <artifactId>radio-tv</artifactId>
