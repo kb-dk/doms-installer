@@ -77,7 +77,7 @@
     </appender>
 
     <logger name="dk.statsbiblioteket.doms.updatetracker" additivity="false">
-        <level value="INFO"/>
+        <level value="DEBUG"/>
         <appender-ref ref="ErrorEmailAppender"/>
         <appender-ref ref="UpdateTrackerFile"/>
     </logger>
