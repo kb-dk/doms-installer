@@ -50,6 +50,38 @@
         </layout>
     </appender>
 
+    <appender name="UpdateTrackerFile"
+              class="org.apache.log4j.RollingFileAppender">
+        <param name="Threshold" value="DEBUG"/>
+        <param name="File" value="$LOG_DIR$/UpdateTracker.log"/>
+        <param name="MaxFileSize" value="10MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+
+    <appender name="UpdateTrackerErrorEmailAppender" class="org.apache.log4j.net.SMTPAppender">
+        <param name="SMTPHost" value="post"/>
+        <param name="SMTPPort" value="25"/>
+        <param name="SMTPUsername" value="myuser@mydomain.com"/>
+        <param name="SMTPPassword" value="password"/>
+        <param name="From" value="achernar@statsbiblioteket.dk"/>
+        <param name="To" value="hugin@statsbiblioteket.dk"/>
+        <param name="Subject" value="Doms Updatetracker worklog failed: %-5p [%t] [%d] [%c] %m%n"/>
+        <param name="BufferSize" value="512"/><!--Send the 512 latest log statements-->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
+    <logger name="dk.statsbiblioteket.doms.updatetracker" additivity="false">
+        <level value="INFO"/>
+        <appender-ref ref="ErrorEmailAppender"/>
+        <appender-ref ref="UpdateTrackerFile"/>
+    </logger>
+
 
     <logger name="dk.statsbiblioteket.doms" additivity="false">
         <level value="ALL"/>
