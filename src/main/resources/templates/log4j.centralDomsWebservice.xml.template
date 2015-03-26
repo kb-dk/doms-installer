@@ -76,9 +76,15 @@
         </layout>
     </appender>
 
+
+    <logger name="com.mchange.v2.c3p0">
+        <level value="SEVERE"/>
+    </logger>
+
+
     <logger name="dk.statsbiblioteket.doms.updatetracker" additivity="false">
         <level value="DEBUG"/>
-        <appender-ref ref="ErrorEmailAppender"/>
+        <appender-ref ref="UpdateTrackerErrorEmailAppender"/>
         <appender-ref ref="UpdateTrackerFile"/>
     </logger>
 
