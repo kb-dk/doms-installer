@@ -52,8 +52,7 @@
 
     <appender name="UpdateTrackerFile"
               class="org.apache.log4j.RollingFileAppender">
-        <param name="Threshold" value="DEBUG"/>
-        <param name="File" value="$LOG_DIR$/UpdateTracker.log"/>
+        <param name="File" value="$LOG_DIR$/updateTracker.log"/>
         <param name="MaxFileSize" value="10MB"/>
         <param name="MaxBackupIndex" value="10"/>
         <layout class="org.apache.log4j.PatternLayout">
@@ -77,15 +76,24 @@
     </appender>
 
 
-    <logger name="com.mchange.v2.c3p0">
-        <level value="SEVERE"/>
+    <logger name="org.hibernate" additivity="false">
+        <level value="debug"/>
+        <appender-ref ref="UpdateTrackerFile"/>
+    </logger>
+    <logger name="com.mchange.v2.c3p0" additivity="false">
+        <level value="ERROR"/>
+        <appender-ref ref="UpdateTrackerFile"/>
+    </logger>
+    <logger name="org.jboss.logging" additivity="false">
+        <level value="ERROR"/>
+        <appender-ref ref="UpdateTrackerFile"/>
     </logger>
 
 
     <logger name="dk.statsbiblioteket.doms.updatetracker" additivity="false">
         <level value="DEBUG"/>
-        <appender-ref ref="UpdateTrackerErrorEmailAppender"/>
         <appender-ref ref="UpdateTrackerFile"/>
+        <appender-ref ref="UpdateTrackerErrorEmailAppender"/>
     </logger>
 
 
