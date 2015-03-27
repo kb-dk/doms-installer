@@ -76,11 +76,18 @@
         </dependency>
 -->
 
+        <!--TODO fix the sbutil in fedora integration-->
         <dependency>
             <groupId>dk.statsbiblioteket.sbutil</groupId>
             <artifactId>sbutil-common</artifactId>
             <version>0.5.29</version>
         </dependency>
+        <dependency>
+            <groupId>dk.statsbiblioteket.sbutil</groupId>
+            <artifactId>sbutil-webservices-common</artifactId>
+            <version>0.5.29</version>
+        </dependency>
+
 
         <dependency>
             <groupId>dk.statsbiblioteket.doms.domsutil.surveyable</groupId>
