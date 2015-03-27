@@ -76,7 +76,6 @@
         </dependency>
 -->
 
-        <!--TODO fix the sbutil in fedora integration-->
         <dependency>
             <groupId>dk.statsbiblioteket.sbutil</groupId>
             <artifactId>sbutil-common</artifactId>
