@@ -31,6 +31,10 @@
     <Parameter name="fedora.updatetracker.hibernateConfigFile"
                value="$TOMCAT_CONFIG_DIR$/updatetracker.hibernate.cfg.xml"
                override="false"/>
+    <Parameter name="fedora.updatetracker.hibernateConfigFile"
+               value="$TOMCAT_CONFIG_DIR$/updatetracker.hibernate.mappings.xml"
+               override="false"/>
+
 
     <!--ecm-->
     <Parameter name="dk.statsbiblioteket.doms.ecm.fedora.connector"

@@ -225,7 +225,7 @@ done
 chmod 644 $WEBAPPS_DIR/*.war
 
 
-cp -v $CONFIG_TEMP_DIR/updatetracker.hibernate.cfg.xml $TOMCAT_CONFIG_DIR
+cp -v $CONFIG_TEMP_DIR/updatetracker.hibernate.*.xml $TOMCAT_CONFIG_DIR
 
 
 ##
