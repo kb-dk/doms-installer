@@ -31,7 +31,7 @@
     <Parameter name="fedora.updatetracker.hibernateConfigFile"
                value="$TOMCAT_CONFIG_DIR$/updatetracker.hibernate.cfg.xml"
                override="false"/>
-    <Parameter name="fedora.updatetracker.hibernateConfigFile"
+    <Parameter name="fedora.updatetracker.hibernateMappingsFile"
                value="$TOMCAT_CONFIG_DIR$/updatetracker.hibernate.mappings.xml"
                override="false"/>
 
