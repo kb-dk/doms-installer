@@ -35,6 +35,13 @@
                value="$TOMCAT_CONFIG_DIR$/updatetracker.hibernate.mappings.xml"
                override="false"/>
 
+    <Parameter name="fedora.updatetracker.viewbundleMaxThreads"
+               value="2"
+               override="false"/>
+    <Parameter name="fedora.updatetracker.contentModelMaxThreads"
+               value="2"
+               override="false"/>
+
 
     <!--ecm-->
     <Parameter name="dk.statsbiblioteket.doms.ecm.fedora.connector"

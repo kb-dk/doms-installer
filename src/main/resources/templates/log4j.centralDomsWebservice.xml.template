@@ -25,8 +25,10 @@
   ~ specific language governing permissions and limitations
   ~ under the License.
   -->
+<!DOCTYPE log4j:configuration PUBLIC
+        "-//APACHE//DTD LOG4J 1.2//EN"
+        "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
 
-<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
 
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
                      debug="false">
@@ -43,8 +45,8 @@
               class="org.apache.log4j.RollingFileAppender">
         <param name="Threshold" value="DEBUG"/>
         <param name="File" value="$LOG_DIR$/centralDomsWebservice.log"/>
-        <param name="MaxFileSize" value="10MB" />
-        <param name="MaxBackupIndex" value="10" />
+        <param name="MaxFileSize" value="10MB"/>
+        <param name="MaxBackupIndex" value="10"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -69,7 +71,8 @@
         <param name="From" value="achernar@statsbiblioteket.dk"/>
         <param name="To" value="hugin@statsbiblioteket.dk"/>
         <param name="Subject" value="Doms Updatetracker worklog failed: %-5p [%t] [%d] [%c] %m%n"/>
-        <param name="BufferSize" value="512"/><!--Send the 512 latest log statements-->
+        <param name="BufferSize" value="512"/>
+        <!--Send the 512 latest log statements-->
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>
@@ -110,5 +113,5 @@
         <appender-ref ref="DomsCentralFile"/>
     </root>
 
-    
+
 </log4j:configuration>
