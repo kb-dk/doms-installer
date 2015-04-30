@@ -70,7 +70,7 @@
         <param name="SMTPPassword" value="password"/>
         <param name="From" value="achernar@statsbiblioteket.dk"/>
         <param name="To" value="hugin@statsbiblioteket.dk"/>
-        <param name="Subject" value="Doms Updatetracker worklog failed: %-5p [%t] [%d] [%c] %m%n"/>
+        <param name="Subject" value="Doms Updatetracker failed"/>
         <param name="BufferSize" value="512"/>
         <!--Send the 512 latest log statements-->
         <layout class="org.apache.log4j.PatternLayout">
