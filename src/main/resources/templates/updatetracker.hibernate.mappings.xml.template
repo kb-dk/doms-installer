@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
     <database-object>
@@ -21,34 +21,28 @@
     </database-object>
 
     <database-object>
-        <create>create index inactive_all_idx on PUBLIC.RECORDS (inactive, VIEWANGLE, COLLECTION)</create>
-        <drop>drop index if exists inactive_all_idx</drop>
+        <create>create index records_all_idx on PUBLIC.RECORDS (LASTMODIFIED, VIEWANGLE, COLLECTION)</create>
+        <drop>drop index if exists records_all_idx</drop>
     </database-object>
 
     <database-object>
-        <create>create index active_all_notnull_idx on PUBLIC.RECORDS (active, VIEWANGLE, COLLECTION)</create>
-        <drop>drop index if exists active_all_notnull_idx</drop>
-        <dialect-scope name="org.hibernate.dialect.HSQLDialect"/>
+        <create>create index records_active_notnull_idx on PUBLIC.RECORDS (LASTMODIFIED, VIEWANGLE, COLLECTION) where
+            DELETED is not null or ACTIVE is not null
+        </create>
+        <drop>drop index if exists records_active_notnull_idx</drop>
     </database-object>
     <database-object>
-        <create>create index active_all_notnull_idx on PUBLIC.RECORDS (active, VIEWANGLE, COLLECTION) WHERE active is
-            not null
+        <create>create index records_inactive_notnull_idx on PUBLIC.RECORDS (LASTMODIFIED, VIEWANGLE, COLLECTION) where
+            DELETED is not null or INACTIVE is not null
         </create>
-        <drop>drop index if exists active_all_notnull_idx</drop>
-        <dialect-scope name="org.hibernate.dialect.PostgreSQL9Dialect"/>
+        <drop>drop index if exists records_inactive_notnull_idx</drop>
     </database-object>
 
     <database-object>
-        <create>create index deleted_all_notnull_idx on PUBLIC.RECORDS (deleted, VIEWANGLE, COLLECTION)</create>
-        <drop>drop index if exists deleted_all_notnull_idx</drop>
-        <dialect-scope name="org.hibernate.dialect.HSQLDialect"/>
-    </database-object>
-    <database-object>
-        <create>create index deleted_all_notnull_idx on PUBLIC.RECORDS (deleted, VIEWANGLE, COLLECTION) WHERE deleted is
-            not null
+        <create>create index records_deleted_notnull_idx on PUBLIC.RECORDS (LASTMODIFIED, VIEWANGLE, COLLECTION) where
+            DELETED is not null
         </create>
-        <drop>drop index if exists deleted_all_notnull_idx</drop>
-        <dialect-scope name="org.hibernate.dialect.PostgreSQL9Dialect"/>
+        <drop>drop index if exists records_deleted_notnull_idx</drop>
     </database-object>
 
 </hibernate-mapping>
