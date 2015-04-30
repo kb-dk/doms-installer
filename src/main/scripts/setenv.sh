@@ -58,8 +58,7 @@ BASEOBJS_DIR=$TESTBED_DIR/base-objects-ingester
 DOCS_DIR=$TESTBED_DIR/docs
 
 #Database
-#USE_POSTGRESQL=true
-USE_POSTGRESQL=false
+USE_POSTGRESQL=true
 POSTGRESQL_SERVER=localhost
 POSTGRESQL_DB=domsFieldSearch
 POSTGRESQL_USER=domsFieldSearch
