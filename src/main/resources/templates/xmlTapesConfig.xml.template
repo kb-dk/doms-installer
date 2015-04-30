@@ -19,7 +19,7 @@
         <property name="tapeWaitBeforeStartInMS" value="30000"/>
         <property name="tempTapePrefix" value="tempTape"/>
         <property name="fixErrorsOnRestart" value="false"/>
-        <property name="rebuildIndexFromTapesOnRestart" value="true"/>
+        <property name="rebuildIndexFromTapesOnRestart" value="false"/>
         <property name="redisHost" value="$REDIS_HOST$"/>
         <property name="redisPort" value="$REDIS_PORT$"/>
         <property name="redisDB" value="0"/>
@@ -37,7 +37,7 @@
         <property name="tapeWaitBeforeStartInMS" value="30000"/>
         <property name="tempTapePrefix" value="tempTape"/>
         <property name="fixErrorsOnRestart" value="false"/>
-        <property name="rebuildIndexFromTapesOnRestart" value="true"/>
+        <property name="rebuildIndexFromTapesOnRestart" value="false"/>
         <property name="redisHost" value="$REDIS_HOST$"/>
         <property name="redisPort" value="$REDIS_PORT$"/>
         <property name="redisDB" value="1"/>
