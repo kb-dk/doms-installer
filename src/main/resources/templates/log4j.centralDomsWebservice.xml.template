@@ -78,6 +78,26 @@
         </layout>
     </appender>
 
+    <appender name="UpdateTrackerContentModelChangedEmailAppender" class="org.apache.log4j.net.SMTPAppender">
+        <param name="SMTPHost" value="post"/>
+        <param name="SMTPPort" value="25"/>
+        <param name="Subject" value="Content Model changed, but records not recalculated"/>
+        <param name="BufferSize" value="2"/>
+        <triggeringPolicy class="org.apache.log4j.rolling.FilterBasedTriggeringPolicy">
+            <filter class="org.apache.log4j.filter.LevelRangeFilter">
+                <param name="levelMin" value="WARN"/>
+            </filter>
+        </triggeringPolicy>
+        <!--Send the 512 latest log statements-->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+    <logger name="dk.statsbiblioteket.doms.updatetracker.improved.database.ContentModelChangedLogging">
+        <level value="WARN"/>
+        <appender-ref ref="UpdateTrackerContentModelChangedEmailAppender"/>
+    </logger>
+
 
     <logger name="org.hibernate" additivity="false">
         <level value="debug"/>
