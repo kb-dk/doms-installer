@@ -11,3 +11,4 @@ drop domsMPT domsMPTPass domsTripleStore
 drop domsUpdateTracker domsuptrack domsUpdateTracker
 rm -rf ~/7880-d*
 rm -rf /tmp/updateTracker.progress*
+redis-cli flushall
