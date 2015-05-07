@@ -15,7 +15,7 @@
         <property name="minAgeToTapeInMS" value="600000"/>
         <property name="tapeExtension" value=".tar"/>
         <property name="tapePrefix" value="tape"/>
-        <property name="tapeSize" value="#{ 1024*1024*100 }"/>
+        <property name="tapeSize" value="#{ 1024*1024*1000 }"/>
         <property name="tapeWaitBeforeStartInMS" value="30000"/>
         <property name="tempTapePrefix" value="tempTape"/>
         <property name="fixErrorsOnRestart" value="false"/>
@@ -33,7 +33,7 @@
         <property name="minAgeToTapeInMS" value="600000"/>
         <property name="tapeExtension" value=".tar"/>
         <property name="tapePrefix" value="tape"/>
-        <property name="tapeSize" value="#{ 1024*1024*100 }"/>
+        <property name="tapeSize" value="#{ 1024*1024*1000 }"/>
         <property name="tapeWaitBeforeStartInMS" value="30000"/>
         <property name="tempTapePrefix" value="tempTape"/>
         <property name="fixErrorsOnRestart" value="false"/>
