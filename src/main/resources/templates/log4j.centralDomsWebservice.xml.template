@@ -66,10 +66,8 @@
     <appender name="UpdateTrackerErrorEmailAppender" class="org.apache.log4j.net.SMTPAppender">
         <param name="SMTPHost" value="post"/>
         <param name="SMTPPort" value="25"/>
-        <param name="SMTPUsername" value="myuser@mydomain.com"/>
-        <param name="SMTPPassword" value="password"/>
-        <param name="From" value="achernar@statsbiblioteket.dk"/>
-        <param name="To" value="hugin@statsbiblioteket.dk"/>
+        <param name="From" value="$MAILER_SENDER$"/>
+        <param name="To" value="$MAILER_RECIPIENT$"/>
         <param name="Subject" value="Doms Updatetracker failed"/>
         <param name="BufferSize" value="512"/>
         <!--Send the 512 latest log statements-->
@@ -81,14 +79,17 @@
     <appender name="UpdateTrackerContentModelChangedEmailAppender" class="org.apache.log4j.net.SMTPAppender">
         <param name="SMTPHost" value="post"/>
         <param name="SMTPPort" value="25"/>
+        <param name="From" value="$MAILER_SENDER$"/>
+        <param name="To" value="$MAILER_RECIPIENT$"/>
         <param name="Subject" value="Content Model changed, but records not recalculated"/>
         <param name="BufferSize" value="2"/>
+
         <triggeringPolicy class="org.apache.log4j.rolling.FilterBasedTriggeringPolicy">
             <filter class="org.apache.log4j.filter.LevelRangeFilter">
                 <param name="levelMin" value="WARN"/>
             </filter>
         </triggeringPolicy>
-        <!--Send the 512 latest log statements-->
+
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
         </layout>

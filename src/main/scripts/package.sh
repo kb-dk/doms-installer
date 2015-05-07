@@ -94,6 +94,8 @@ sed \
 -e 's|\$REDIS_DATABASE\$|'"$REDIS_DATABASE"'|g' \
 -e 's|\$MODIFY_OBJECT_HOOK\$|'"$MODIFY_OBJECT_HOOK"'|g' \
 -e 's|\$UPDATETRACKER_HOOK\$|'"$UPDATETRACKER_HOOK"'|g' \
+-e 's|\$MAILER_SENDER\$|'"$MAILER_SENDER"'|g' \
+-e 's|\$MAILER_RECIPIENT\$|'"$MAILER_RECIPIENT"'|g' \
 <$1 > $2
 }
 

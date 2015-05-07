@@ -36,7 +36,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 
 
-  config.vm.hostname = "doms-testbed"
+  config.vm.hostname = "doms-vagrant-testbed"
   config.vm.network :private_network, :ip => "192.168.50.2", :virtualbox__intnet => "localvagrantnetwork"
 
 end

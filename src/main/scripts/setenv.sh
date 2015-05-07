@@ -19,6 +19,9 @@ FEDORAADMINPASS=fedoraAdminPass
 FEDORAUSER=fedoraReadOnlyAdmin
 FEDORAUSERPASS=fedoraReadOnlyPass
 
+MAILER_SENDER=$(whoami)"@"$(hostname)".statsbiblioteket.dk"
+MAILER_RECIPIENT="hugin@statsbiblioteket.dk"
+
 # The folders
 TOMCAT_DIR=$TESTBED_DIR/tomcat
 
