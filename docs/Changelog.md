@@ -1,3 +1,207 @@
+2015-05-08 Release 1.14
+* Use MPT Store, not Mulgara. This adds new configuration and a new database. See below. This requires a resource index rebuild on startup
+* Include new update tracker. This adds new configuration and a new database. See below.
+* No longer supports any other database than postgres
+* Sends mail on serious errors from logging config.
+* No longer bundles ingesters in testbed
+* Now requires Java 7
+* Updated a few dependencies
+* Uses newest sboi in testbed
+* Some default values have changed
+
+A new database is needed for the doms triple store. It should be created like this:
+
+            CREATE ROLE "$MPTSTORE_USER$" LOGIN PASSWORD '$MPTSTORE_PASS$'
+            NOINHERIT CREATEDB
+            VALID UNTIL 'infinity';
+            CREATE DATABASE "$MPTSTORE_DB$"
+            WITH ENCODING='SQL_ASCII'
+            OWNER="$MPTSTORE_USER$";
+
+A new database is needed for the doms update tracker. It should have the schema found in
+bin/rebuildupdatetracker/updatetrackerschema.sql 
+of the base-objects-ingester.
+
+A new table is needed in the existing doms database. It should be created with the sql script found in
+bin/rebuildupdatetracker/updateTrackerLogs.sql
+of the base-objects-ingester.
+
+New configuration in context-default.xml:
+
+    <Parameter name="fedora.worklog.database.driver" value="org.postgresql.Driver" override="false"/>
+    <Parameter name="fedora.worklog.database.URL"
+               value="jdbc:postgresql://$POSTGRESQL_SERVER$/$POSTGRESQL_DB$"
+               override="false"/>
+    <Parameter name="fedora.worklog.database.username" value="$POSTGRESQL_USER$" override="false"/>
+    <Parameter name="fedora.worklog.database.password" value="$POSTGRESQL_PASS$" override="false"/>
+    <Parameter name="fedora.updatetracker.web.URL"
+               value="http://$TOMCAT_SERVERNAME$:$PORTRANGE$80/fedora"
+               override="false"/>
+    <Parameter name="fedora.updatetracker.web.username" value="$FEDORAUSER$" override="false"/>
+    <Parameter name="fedora.updatetracker.web.password" value="$FEDORAUSERPASS$" override="false"/>
+    <Parameter name="fedora.updatetracker.delay" value="10000" override="false"/>
+    <Parameter name="fedora.updatetracker.period" value="30000" override="false"/>
+    <Parameter name="fedora.updatetracker.limit" value="1000" override="false"/>
+    <Parameter name="fedora.updatetracker.hibernateConfigFile"
+               value="$TOMCAT_CONFIG_DIR$/updatetracker.hibernate.cfg.xml"
+               override="false"/>
+    <Parameter name="fedora.updatetracker.hibernateMappingsFile"
+               value="$TOMCAT_CONFIG_DIR$/updatetracker.hibernate.mappings.xml"
+               override="false"/>
+    <Parameter name="fedora.updatetracker.viewbundleMaxThreads"
+               value="2"
+               override="false"/>
+    <Parameter name="fedora.updatetracker.contentModelMaxThreads"
+               value="2"
+               override="false"/>
+
+(No longer used is dk.statsbiblioteket.doms.updatetracker.fedoralocation)
+
+New configuration in fedora.fcfg:
+
+A new hook needs to be inserted:
+
+     <param name="decorator5" value="dk.statsbiblioteket.doms.updatetracker.DomsUpdateTrackerHook"/>
+     <param name="updateTrackerPoolName" value="localPostgreSQLPool">
+     <comment>The storage pool used by the update tracker</comment>
+
+
+The datastore parameter for the resource index should be set to MPTStore:
+
+    <param name="datastore" value="localPostgresMPTTriplestore">
+
+And the following should be added to enable the MPTStore:
+
+    <datastore id="localPostgresMPTTriplestore">
+        <comment>
+            Example local MPTStore backed by Postgres.
+            To use this triplestore for the Resource Index:
+            1) In fedora.fcfg, change the "datastore" parameter of the
+            ResourceIndex module to localPostgresMPTTriplestore.
+            2) Login to your Postgres server as an administrative user and
+            run the following commands:
+            CREATE ROLE "$MPTSTORE_USER$" LOGIN PASSWORD '$MPTSTORE_PASS$'
+            NOINHERIT CREATEDB
+            VALID UNTIL 'infinity';
+            CREATE DATABASE "$MPTSTORE_DB$"
+            WITH ENCODING='SQL_ASCII'
+            OWNER="$MPTSTORE_USER$";
+            3) Make sure you can login to your Postgres server as fedoraAdmin.
+            4) Download the appropriate Postgres JDBC 3 driver from
+            http://jdbc.postgresql.org/download.html
+            and make sure it's accessible to your servlet container.
+            If you're running Tomcat, putting it in common/lib/ will work.
+        </comment>
+        <param name="connectorClassName" value="org.trippi.impl.mpt.MPTConnector"/>
+        <param name="ddlGenerator" value="org.nsdl.mptstore.impl.postgres.PostgresDDLGenerator"/>
+        <param name="jdbcDriver" value="org.postgresql.Driver"/>
+        <param name="jdbcURL" value="jdbc:postgresql://$MPTSTORE_SERVER$/$MPTSTORE_DB$"/>
+        <param name="username" value="$MPTSTORE_USER$"/>
+        <param name="password" value="$MPTSTORE_PASS$"/>
+        <param name="poolInitialSize" value="3"/>
+        <param name="poolMaxSize" value="10"/>
+        <param name="backslashIsEscape" value="true"/>
+        <param name="fetchSize" value="1000"/>
+        <param name="autoFlushDormantSeconds" value="5"/>
+        <param name="autoFlushBufferSize" value="1000"/>
+        <param name="bufferFlushBatchSize" value="1000"/>
+        <param name="bufferSafeCapacity" value="2000"/>
+    </datastore>
+
+
+A new configuration file updatetracker.hibernate.cfg.xml is needed:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- database connection settings, change these for drift-->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://$UPDATETRACKER_POSTGRESQL_SERVER$/$UPDATETRACKER_POSTGRESQL_DB$</property>
+        <property name="hibernate.connection.username">$UPDATETRACKER_POSTGRESQL_USER$</property>
+        <property name="hibernate.connection.password">$UPDATETRACKER_POSTGRESQL_PASS$</property>
+        <property name="hibernate.default_schema">PUBLIC</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
+
+
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.c3p0.min_size">1</property>
+        <property name="hibernate.c3p0.max_size">10</property>
+        <property name="hibernate.c3p0.timeout">3000</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+        <property name="hibernate.c3p0.idle_test_period">300</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- helper debug settings -->
+        <property name="hibernate.use_sql_comments">false</property>
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">false</property>
+
+        <mapping class="dk.statsbiblioteket.doms.updatetracker.improved.database.datastructures.Record"/>
+        <mapping class="dk.statsbiblioteket.doms.updatetracker.improved.database.datastructures.LatestKey"/>
+    </session-factory>
+</hibernate-configuration>
+
+A new configuration file updatetracker.hibernate.mappings.xml
+
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <database-object>
+        <create>create index memberships_objects_idx on PUBLIC.MEMBERSHIPS (OBJECTPID)</create>
+        <drop>drop index if exists membership_objects_idx</drop>
+    </database-object>
+
+    <database-object>
+        <create>create index memberships_records_idx on PUBLIC.MEMBERSHIPS (VIEWANGLE,ENTRYPID,COLLECTION)</create>
+        <drop>drop index if exists memberships_records_idx</drop>
+    </database-object>
+
+
+    <database-object>
+        <create>create index entrypid_idx on PUBLIC.RECORDS (ENTRYPID)</create>
+        <drop>drop index if exists entrypid_idx</drop>
+    </database-object>
+
+    <database-object>
+        <create>create index records_all_idx on PUBLIC.RECORDS (LASTMODIFIED, VIEWANGLE, COLLECTION)</create>
+        <drop>drop index if exists records_all_idx</drop>
+    </database-object>
+
+    <database-object>
+        <create>create index records_active_notnull_idx on PUBLIC.RECORDS (LASTMODIFIED, VIEWANGLE, COLLECTION) where
+            DELETED is not null or ACTIVE is not null
+        </create>
+        <drop>drop index if exists records_active_notnull_idx</drop>
+    </database-object>
+    <database-object>
+        <create>create index records_inactive_notnull_idx on PUBLIC.RECORDS (LASTMODIFIED, VIEWANGLE, COLLECTION) where
+            DELETED is not null or INACTIVE is not null
+        </create>
+        <drop>drop index if exists records_inactive_notnull_idx</drop>
+    </database-object>
+
+    <database-object>
+        <create>create index records_deleted_notnull_idx on PUBLIC.RECORDS (LASTMODIFIED, VIEWANGLE, COLLECTION) where
+            DELETED is not null
+        </create>
+        <drop>drop index if exists records_deleted_notnull_idx</drop>
+    </database-object>
+
+</hibernate-mapping>
+
+Some log configurations have been updated. Especially, make sure you set the email sender and recepient in log4j.centralDomsWebservice.xml
+
+
+
+
 2014-12-12 Release 1.13
 * Now with xml tapes that do not index twice
 
