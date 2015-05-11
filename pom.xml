@@ -169,7 +169,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.pidgenerator</groupId>
             <artifactId>pidgenerator-service</artifactId>
-            <version>1.1</version>
+            <version>1.2</version>
             <type>war</type>
         </dependency>
 
