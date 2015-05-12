@@ -1,3 +1,6 @@
+2015-05-11 Release 1.15
+* Pid generator updated to version that bundles correct dependencies.
+
 2015-05-08 Release 1.14
 * Use MPT Store, not Mulgara. This adds new configuration and a new database. See below. This requires a resource index rebuild on startup
 * Include new update tracker. This adds new configuration and a new database. See below.
