@@ -24,9 +24,9 @@
 
     <Parameter name="fedora.updatetracker.delay" value="10000" override="false"/>
 
-    <Parameter name="fedora.updatetracker.period" value="30000" override="false"/>
+    <Parameter name="fedora.updatetracker.period" value="10000" override="false"/>
 
-    <Parameter name="fedora.updatetracker.limit" value="1000" override="false"/>
+    <Parameter name="fedora.updatetracker.limit" value="10000" override="false"/>
 
     <Parameter name="fedora.updatetracker.hibernateConfigFile"
                value="$TOMCAT_CONFIG_DIR$/updatetracker.hibernate.cfg.xml"
