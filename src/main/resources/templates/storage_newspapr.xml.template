@@ -120,6 +120,11 @@ This is not strictly necessary, but provides some optimization -->
         </entry>
 
         <entry>
+            <key>DomsRetrievalThreadCount</key>
+            <value class="int">4</value>
+        </entry>
+
+        <entry>
             <key>accessibleCollectionBases</key>
             <value class="list">
                 <!-- DANGER Will robinson!
