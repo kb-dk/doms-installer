@@ -14,9 +14,9 @@
     <properties>
         <!-- Note: Releases of Summarise for SBOI are generated from the Summarise branch
         https://svn.statsbiblioteket.dk/svn/summarise/branches/newspapr -->
-        <sboi.summarise.version>2.7-SNAPSHOT</sboi.summarise.version>
-        <domswui.summarise.version>1.2-SNAPSHOT</domswui.summarise.version>
-        <centralWebservice.version>1.9-SNAPSHOT</centralWebservice.version>
+        <sboi.summarise.version>2.7</sboi.summarise.version>
+        <domswui.summarise.version>1.2</domswui.summarise.version>
+        <centralWebservice.version>1.9</centralWebservice.version>
     </properties>
 
 
@@ -136,13 +136,13 @@
         <dependency>
             <groupId>dk.statsbiblioteket.metadatarepository</groupId>
             <artifactId>fedora-sb-additions</artifactId>
-            <version>1.0.4-SNAPSHOT</version>
+            <version>1.1</version>
         </dependency>
 
         <dependency>
             <groupId>dk.statsbiblioteket.doms.updatetracker</groupId>
             <artifactId>updatetracker-fcrepo-decorator</artifactId>
-            <version>1.2-SNAPSHOT</version>
+            <version>1.2</version>
         </dependency>
 
         <dependency>
