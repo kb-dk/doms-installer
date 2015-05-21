@@ -188,7 +188,7 @@
         </fileSet>
         <fileSet>
             <outputDirectory>bin</outputDirectory>
-            <directory>src/main/scripts/**</directory>
+            <directory>src/main/scripts</directory>
             <fileMode>0755</fileMode>
         </fileSet>
         <fileSet>
