@@ -1,3 +1,6 @@
+2015-05-22 Release 1.17
+Fix bug where bin-directory was not bundled
+
 2015-05-21 Release 1.16
 * Update tracker correctly tracks last modified
 * Fix bug: Wider width of database column for method parameters in update tracker worklog
