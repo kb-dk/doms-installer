@@ -9,7 +9,7 @@
 
     <groupId>dk.statsbiblioteket.doms.installer</groupId>
     <artifactId>installer</artifactId>
-    <version>1.18-SNAPSHOT</version>
+    <version>1.18</version>
 
     <properties>
         <!-- Note: Releases of Summarise for SBOI are generated from the Summarise branch
@@ -26,7 +26,7 @@
         <connection>scm:git:git://github.com/statsbiblioteket/doms-installer.git</connection>
         <developerConnection>scm:git:git@github.com:statsbiblioteket/doms-installer.git</developerConnection>
         <url>https://github.com/statsbiblioteket/doms-installer</url>
-      <tag>HEAD</tag>
+      <tag>installer-1.18</tag>
   </scm>
 
     <profiles>
