@@ -1,16 +1,24 @@
+Release 1.18
+
+* Use newest doms webservice, that always uses newest content model when updating web services
+
 2015-05-22 Release 1.17
-Fix bug where bin-directory was not bundled
+
+* Fix bug where bin-directory was not bundled
 
 2015-05-21 Release 1.16
+
 * Update tracker correctly tracks last modified
 * Fix bug: Wider width of database column for method parameters in update tracker worklog
 * Fix bug where fedora sets connections read-only
 * In testbed, bundle summas with correct handling of last modified
 
 2015-05-11 Release 1.15
+
 * Pid generator updated to version that bundles correct dependencies.
 
 2015-05-08 Release 1.14
+
 * Use MPT Store, not Mulgara. This adds new configuration and a new database. See below. This requires a resource index rebuild on startup
 * Include new update tracker. This adds new configuration and a new database. See below.
 * No longer supports any other database than postgres
