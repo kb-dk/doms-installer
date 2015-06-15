@@ -1,4 +1,4 @@
-Release 1.18
+2015-06-15 Release 1.18
 
 * Use newest doms webservice, that always uses newest content model when updating web services
 
