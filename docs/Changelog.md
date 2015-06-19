@@ -1,3 +1,6 @@
+2015-06-19 Release 1.19
+* Use the newest doms webservice (actually update tracker) which handles caching correctly
+
 2015-06-15 Release 1.18
 
 * Use newest doms webservice, that always uses newest content model when updating web services
