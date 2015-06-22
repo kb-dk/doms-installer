@@ -1,5 +1,9 @@
-2015-06-19 Release 1.19
-* Use the newest doms webservice (actually update tracker) which handles caching correctly
+2015-06-22 Release 1.19
+
+ * Updated central to 1.13 which
+    * Handles caching correctly
+    * uses the UTC timezone consistently when bundling objects for search
+    * Update tracker do not log enormous lists which cause OutOfMemory
 
 2015-06-15 Release 1.18
 
