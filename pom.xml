@@ -16,7 +16,7 @@
         https://svn.statsbiblioteket.dk/svn/summarise/branches/newspapr -->
         <sboi.summarise.version>2.7</sboi.summarise.version>
         <domswui.summarise.version>1.2</domswui.summarise.version>
-        <centralWebservice.version>1.13</centralWebservice.version>
+        <centralWebservice.version>1.14-SNAPSHOT</centralWebservice.version>
     </properties>
 
 
