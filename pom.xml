@@ -16,7 +16,6 @@
         https://svn.statsbiblioteket.dk/svn/summarise/branches/newspapr -->
         <sboi.summarise.version>2.7</sboi.summarise.version>
         <domswui.summarise.version>1.2</domswui.summarise.version>
-        <centralWebservice.version>1.14-SNAPSHOT</centralWebservice.version>
     </properties>
 
 
@@ -142,7 +141,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.updatetracker</groupId>
             <artifactId>updatetracker-fcrepo-decorator</artifactId>
-            <version>1.6</version>
+            <version>1.8-SNAPSHOT</version>
         </dependency>
 
         <dependency>
@@ -182,7 +181,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.central</groupId>
             <artifactId>centralWebservice-service</artifactId>
-            <version>${centralWebservice.version}</version>
+            <version>1.14-SNAPSHOT</version>
             <type>war</type>
         </dependency>
         <dependency>
