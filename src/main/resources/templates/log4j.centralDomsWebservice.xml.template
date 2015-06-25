@@ -62,6 +62,16 @@
         </layout>
     </appender>
 
+    <appender name="UpdateTrackerHibernateFile"
+              class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="$LOG_DIR$/updateTrackerHibernate.log"/>
+        <param name="MaxFileSize" value="10MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p [%t] [%d] [%c] %m%n"/>
+        </layout>
+    </appender>
+
 
     <appender name="UpdateTrackerErrorEmailAppender" class="org.apache.log4j.net.SMTPAppender">
         <param name="SMTPHost" value="post"/>
@@ -101,8 +111,8 @@
 
 
     <logger name="org.hibernate" additivity="false">
-        <level value="INFO"/>
-        <appender-ref ref="UpdateTrackerFile"/>
+        <level value="DEBUG"/>
+        <appender-ref ref="UpdateTrackerHibernateFile"/>
     </logger>
     <logger name="com.mchange.v2.c3p0" additivity="false">
         <level value="ERROR"/>
