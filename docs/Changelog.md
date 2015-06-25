@@ -1,3 +1,10 @@
+2015-06-25 Release 1.20
+Updated to central 1.14 which
+        Worklog events with age below "update tracker delay" are ignored. This should stop the short
+            inconsistent states that DOMS can have.
+        Thread pool now names threads correctly
+        Fixed dependencies so that log4j can mail on errors
+
 2015-06-22 Release 1.19
 
  * Updated central to 1.13 which
