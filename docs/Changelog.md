@@ -1,3 +1,7 @@
+2015-06-26 Release 1.20
+Updated to central 1.15, which is just a bugfix to central 1.14. There was a bad bug in the
+update tracker delay feature introduced.
+
 2015-06-25 Release 1.19
 
 Updated to central 1.14 which
