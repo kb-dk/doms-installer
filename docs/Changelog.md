@@ -1,17 +1,22 @@
+2015-07-06
+
+* Update to central 1.16 and update tracker 1.9, which fixes an excessive logging issue, and avoids duplicate class inclusions
+
 2015-06-26 Release 1.20
-Updated to central 1.15, which is just a bugfix to central 1.14. There was a bad bug in the
-update tracker delay feature introduced.
+
+* Updated to central 1.15, which is just a bugfix to central 1.14. There was a bad bug in the
+  update tracker delay feature introduced.
 
 2015-06-25 Release 1.19
 
-Updated to central 1.14 which
+* Updated to central 1.14 which
 
-* Worklog events with age below "update tracker delay" are ignored. This should stop the short inconsistent states that DOMS can have.
-* Thread pool now names threads correctly
-* Fixed dependencies so that log4j can mail on errors
-* Handles caching correctly
-* uses the UTC timezone consistently when bundling objects for search
-* Update tracker do not log enormous lists which cause OutOfMemory
+  * Worklog events with age below "update tracker delay" are ignored. This should stop the short inconsistent states that DOMS can have.
+  * Thread pool now names threads correctly
+  * Fixed dependencies so that log4j can mail on errors
+  * Handles caching correctly
+  * uses the UTC timezone consistently when bundling objects for search
+  * Update tracker do not log enormous lists which cause OutOfMemory
 
 2015-06-15 Release 1.18
 
