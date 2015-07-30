@@ -101,11 +101,17 @@ if [ -e "$SBOI_SUMMARISE_SOURCE_DIR" ] ; then
     mkdir -p "$SBOI_SUMMA_STORAGE_DIR/dump"
     ln -s "$SBOI_SUMMA_STORAGE_DIR/dump" "$SBOI_SUMMARISE_DIR/dump"
 
+    mkdir -p "$SBOI_SUMMA_STORAGE_DIR/progress"
+    ln -s "$SBOI_SUMMA_STORAGE_DIR/progress" "$SBOI_SUMMARISE_DIR/progress"
+
+
     mkdir -p "$SBOI_SUMMARISE_DIR/summix-storage/"
     cp "$SBOI_SUMMARISE_SOURCE_DIR"/summix-*.zip "$SBOI_SUMMARISE_DIR/summix-storage/"
     cp "$BASEDIR/data/tomcat/"apache-tomcat-*.zip "$SBOI_SUMMARISE_DIR/"
     echo "Configuring SBOI Summa"
     sed -i -e "s/^site.portrange=[0-9]{3}$/site.portrange=$SBOI_SUMMA_PORTRANGE/" "$SBOI_SUMMARISE_DIR/site.properties"
+    sed -i -e "s/^\([:space:]*<value class=\"string\">\)\(progress_index_newspapr\.xml\)\(</value>[:space:]*\)$/\1$SBOI_SUMMARISE_DIR\/progress\/\2\3/" "$SBOI_SUMMARISE_DIR/config/index_newspapr.xml"
+
     cp -v "$CONFIG_TEMP_DIR/storage_newspapr.xml" "$SBOI_SUMMARISE_DIR/config/storage_newspapr.xml"
     echo "Running SBOI Summa installer"
     pushd "$SBOI_SUMMARISE_DIR" > /dev/null
