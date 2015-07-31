@@ -113,10 +113,6 @@ if [ -e "$SBOI_SUMMARISE_SOURCE_DIR" ] ; then
     sed -i -e 's|^\(\s*<value class="string">\)\(progress_in[^<]*\.xml\)\(</value>\s*\)$|\1'$SBOI_SUMMARISE_DIR'\/progress\/\2\3|' $SBOI_SUMMARISE_DIR/config/in*.xml
 
     cp -v "$CONFIG_TEMP_DIR/storage_newspapr.xml" "$SBOI_SUMMARISE_DIR/config/storage_newspapr.xml"
-    echo "Running SBOI Summa installer"
-    pushd "$SBOI_SUMMARISE_DIR" > /dev/null
-    VERBOSE=1 "$SBOI_SUMMARISE_DIR"/bin/all.sh
-    popd > /dev/null
 fi
 
 if [ -e "$DOMSWUI_SUMMARISE_SOURCE_DIR" ] ; then
@@ -150,10 +146,6 @@ if [ -e "$DOMSWUI_SUMMARISE_SOURCE_DIR" ] ; then
     sed -i -e 's|^\(\s*<value class="string">\)\(progress_in[^<]*\.xml\)\(</value>\s*\)$|\1'$DOMSWUI_SUMMARISE_DIR'\/progress\/\2\3|' $DOMSWUI_SUMMARISE_DIR/config/in*.xml
 
     cp -v "$CONFIG_TEMP_DIR/storage_domswui.xml" "$DOMSWUI_SUMMARISE_DIR/config/storage_domswui.xml"
-    echo "Running DOMSWUI Summa installer"
-    pushd "$DOMSWUI_SUMMARISE_DIR" > /dev/null
-    VERBOSE=1 "$DOMSWUI_SUMMARISE_DIR"/bin/all.sh
-    popd > /dev/null
 fi
 
 
@@ -161,5 +153,7 @@ BIN_DIR="$TESTBED_DIR/bin"
 echo "Creating control script in $BIN_DIR"
 mkdir -p "$BIN_DIR"
 cp "$SCRIPT_DIR"/doms.sh "$BIN_DIR/"
+
+$BIN_DIR/doms.sh update
 
 echo "Install complete"
