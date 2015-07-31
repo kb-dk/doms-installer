@@ -110,7 +110,7 @@ if [ -e "$SBOI_SUMMARISE_SOURCE_DIR" ] ; then
     cp "$BASEDIR/data/tomcat/"apache-tomcat-*.zip "$SBOI_SUMMARISE_DIR/"
     echo "Configuring SBOI Summa"
     sed -i -e "s/^site.portrange=[0-9]{3}$/site.portrange=$SBOI_SUMMA_PORTRANGE/" "$SBOI_SUMMARISE_DIR/site.properties"
-    sed -i -e "s/^\([:space:]*<value class=\"string\">\)\(progress_index_newspapr\.xml\)\(</value>[:space:]*\)$/\1$SBOI_SUMMARISE_DIR\/progress\/\2\3/" "$SBOI_SUMMARISE_DIR/config/index_newspapr.xml"
+    sed -i -e 's|^\(\s*<value class="string">\)\(progress_in[^<]*\.xml\)\(</value>\s*\)$|\1'$SBOI_SUMMARISE_DIR'\/progress\/\2\3|' $SBOI_SUMMARISE_DIR/config/in*.xml
 
     cp -v "$CONFIG_TEMP_DIR/storage_newspapr.xml" "$SBOI_SUMMARISE_DIR/config/storage_newspapr.xml"
     echo "Running SBOI Summa installer"
@@ -138,11 +138,17 @@ if [ -e "$DOMSWUI_SUMMARISE_SOURCE_DIR" ] ; then
     mkdir -p "$DOMSWUI_SUMMA_STORAGE_DIR/dump"
     ln -s "$DOMSWUI_SUMMA_STORAGE_DIR/dump" "$DOMSWUI_SUMMARISE_DIR/dump"
 
+    mkdir -p "$SBOI_SUMMA_STORAGE_DIR/progress"
+    ln -s "$SBOI_SUMMA_STORAGE_DIR/progress" "$SBOI_SUMMARISE_DIR/progress"
+
+
     mkdir -p "$DOMSWUI_SUMMARISE_DIR/summix-storage/"
     cp "$DOMSWUI_SUMMARISE_SOURCE_DIR"/summix-*.zip "$DOMSWUI_SUMMARISE_DIR/summix-storage/"
     cp "$BASEDIR/data/tomcat/"apache-tomcat-*.zip "$DOMSWUI_SUMMARISE_DIR/"
     echo "Configuring DOMSWUI Summa"
     sed -i -e "s/^site.portrange=[0-9]{3}$/site.portrange=$DOMSWUI_SUMMA_PORTRANGE/" "$DOMSWUI_SUMMARISE_DIR/site.properties"
+    sed -i -e 's|^\(\s*<value class="string">\)\(progress_in[^<]*\.xml\)\(</value>\s*\)$|\1'$DOMSWUI_SUMMARISE_DIR'\/progress\/\2\3|' $DOMSWUI_SUMMARISE_DIR/config/in*.xml
+
     cp -v "$CONFIG_TEMP_DIR/storage_domswui.xml" "$DOMSWUI_SUMMARISE_DIR/config/storage_domswui.xml"
     echo "Running DOMSWUI Summa installer"
     pushd "$DOMSWUI_SUMMARISE_DIR" > /dev/null
