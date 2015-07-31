@@ -138,8 +138,8 @@ if [ -e "$DOMSWUI_SUMMARISE_SOURCE_DIR" ] ; then
     mkdir -p "$DOMSWUI_SUMMA_STORAGE_DIR/dump"
     ln -s "$DOMSWUI_SUMMA_STORAGE_DIR/dump" "$DOMSWUI_SUMMARISE_DIR/dump"
 
-    mkdir -p "$SBOI_SUMMA_STORAGE_DIR/progress"
-    ln -s "$SBOI_SUMMA_STORAGE_DIR/progress" "$SBOI_SUMMARISE_DIR/progress"
+    mkdir -p "$DOMSWUI_SUMMA_STORAGE_DIR/progress"
+    ln -s "$DOMSWUI_SUMMA_STORAGE_DIR/progress" "$DOMSWUI_SUMMA_STORAGE_DIR/progress"
 
 
     mkdir -p "$DOMSWUI_SUMMARISE_DIR/summix-storage/"
