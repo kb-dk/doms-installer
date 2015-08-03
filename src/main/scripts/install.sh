@@ -113,6 +113,8 @@ if [ -e "$SBOI_SUMMARISE_SOURCE_DIR" ] ; then
     sed -i -e 's|^\(\s*<value class="string">\)\(progress_in[^<]*\.xml\)\(</value>\s*\)$|\1'$SBOI_SUMMARISE_DIR'\/progress\/\2\3|' $SBOI_SUMMARISE_DIR/config/in*.xml
 
     cp -v "$CONFIG_TEMP_DIR/storage_newspapr.xml" "$SBOI_SUMMARISE_DIR/config/storage_newspapr.xml"
+    $SBOI_SUMMARISE_DIR/bin/setup.sh
+    $SBOI_SUMMARISE_DIR/bin/deploy.sh
 fi
 
 if [ -e "$DOMSWUI_SUMMARISE_SOURCE_DIR" ] ; then
@@ -146,6 +148,9 @@ if [ -e "$DOMSWUI_SUMMARISE_SOURCE_DIR" ] ; then
     sed -i -e 's|^\(\s*<value class="string">\)\(progress_in[^<]*\.xml\)\(</value>\s*\)$|\1'$DOMSWUI_SUMMARISE_DIR'\/progress\/\2\3|' $DOMSWUI_SUMMARISE_DIR/config/in*.xml
 
     cp -v "$CONFIG_TEMP_DIR/storage_domswui.xml" "$DOMSWUI_SUMMARISE_DIR/config/storage_domswui.xml"
+    $DOMSWUI_SUMMARISE_DIR/bin/setup.sh
+    $DOMSWUI_SUMMARISE_DIR/bin/deploy.sh
+
 fi
 
 
