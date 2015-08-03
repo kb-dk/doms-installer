@@ -159,6 +159,7 @@ echo "Creating control script in $BIN_DIR"
 mkdir -p "$BIN_DIR"
 cp "$SCRIPT_DIR"/doms.sh "$BIN_DIR/"
 
+$BIN_DIR/doms.sh restart
 $BIN_DIR/doms.sh update
 
 echo "Install complete"
