@@ -14,7 +14,7 @@
     <properties>
         <!-- Note: Releases of Summarise for SBOI are generated from the Summarise branch
         https://svn.statsbiblioteket.dk/svn/summarise/branches/newspapr -->
-        <sboi.summarise.version>2.7</sboi.summarise.version>
+        <sboi.summarise.version>2.8-SNAPSHOT</sboi.summarise.version>
         <domswui.summarise.version>1.2</domswui.summarise.version>
     </properties>
 
@@ -223,7 +223,8 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <phase>package</phase>
+                        <phase>none</phase><!--Commented out while I work on the nohup scripts-->
+                        <!--<phase>package</phase>-->
                         <id>domswui summa</id>
                         <goals>
                             <goal>run</goal>
