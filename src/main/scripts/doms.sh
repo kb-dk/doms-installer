@@ -52,13 +52,13 @@ function stop_summa {
 }
 
 function start {
-    start_summa
     start_doms
+    start_summa
 }
 
 function stop {
-    stop_doms
     stop_summa
+    stop_doms
 }
 
 function restart {
