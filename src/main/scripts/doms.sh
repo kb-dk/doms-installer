@@ -96,8 +96,20 @@ case $1 in
     start)
         start
         ;;
+    start_summa)
+        start_summa
+        ;;
+    start_doms)
+        start_doms
+        ;;
     stop)
         stop
+        ;;
+    stop_summa)
+        stop_summa
+        ;;
+    stop_doms)
+        stop_doms
         ;;
     restart)
         restart
@@ -109,7 +121,7 @@ case $1 in
         update
         ;;
     *)
-        echo $"Usage: $0 {start|stop|restart|import|update}"
+        echo $"Usage: $0 {start|start_summa|start_doms|stop|stop_summa|stop_doms|restart|import|update}"
         exit 1
 
 esac
