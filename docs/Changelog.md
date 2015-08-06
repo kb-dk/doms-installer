@@ -1,4 +1,11 @@
-2015-07-06
+2015-08-06 Release 1.22
+* Numerous fixes to the testbed install.sh to better accomadate the devel deploy system.
+* Added start/stop_summa and start/stop_doms options to the doms.sh for more finegrained restarting. Relevant when upgrading the testbed
+* Made the testbed save the summa progress files in the storage dir, so they survice reinstall. Only relevant for the testbed instance
+* Update central to 1.17, which fixes the forgotten update tracker events bug
+* Updated update tracker to 1.10 which corresponds to central 1.17
+
+2015-07-06 Release 1.21
 
 * Update to central 1.16 and update tracker 1.9, which fixes an excessive logging issue, and avoids duplicate class inclusions
 
