@@ -8,7 +8,7 @@
     </parent>
 
     <groupId>dk.statsbiblioteket.doms.installer</groupId>
-    <artifactId>installer</artifactId>
+    <artifactId>doms-installer</artifactId>
     <version>1.23-SNAPSHOT</version>
 
     <properties>
