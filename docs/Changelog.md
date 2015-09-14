@@ -1,5 +1,6 @@
 1.23
  * Renamed maven from installer to doms-installer
+ * New version of central which fixes the domsgui search problem
 
 2015-08-06 Release 1.22
 * Numerous fixes to the testbed install.sh to better accomadate the devel deploy system.
