@@ -18,13 +18,13 @@ mkdir -p $STORAGE_DIR
 export TMPDIR=$HOME/tmp
 mkdir -p $TMPDIR
 
-installer="/target/installer-*-testbed.tar.gz"
+installer="/target/doms-installer-*-testbed.tar.gz"
 
 echo "Getting doms from $installer"
 
-tar -xzf $installer
+tar -xzf ${installer}
 rm -r $INSTALL_DIR
-installerDir=$(find * -maxdepth 0 -type d -name 'installer-*' | head -1)
+installerDir=$(find * -maxdepth 0 -type d -name 'doms-installer-*' | head -1)
 
 echo "DATA_DIR=$DATADIR_DIR" >> $installerDir/bin/setenv.sh
 echo "CACHE_DIR=$CACHEDIR_DIR" >> $installerDir/bin/setenv.sh
