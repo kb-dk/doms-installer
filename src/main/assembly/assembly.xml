@@ -41,6 +41,29 @@
         </dependencySet>
 
         <dependencySet>
+            <outputDirectory>extras/xmltapes</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
+            <useTransitiveFiltering>false</useTransitiveFiltering>
+            <includes>
+                <include>dk.statsbiblioteket.metadatarepository:xmltapes</include>
+            </includes>
+            <unpack>true</unpack>
+            <unpackOptions>
+                <includes>
+                    <include>*/sql/*</include>
+                </includes>
+                <excludes>
+                    <exclude>**/sbutil-*</exclude>
+                    <exclude>**/log4j-*</exclude>
+                    <exclude>**/xstream-*</exclude>
+                    <exclude>**/xpp3_min-*</exclude>
+                </excludes>
+            </unpackOptions>
+
+        </dependencySet>
+
+
+        <dependencySet>
             <outputDirectory>fedoralib/fedoralogin</outputDirectory>
             <useProjectArtifact>false</useProjectArtifact>
             <useTransitiveFiltering>false</useTransitiveFiltering>

@@ -12,9 +12,9 @@ apt-get install -y oracle-java7-installer oracle-java7-set-default
 export JAVA_HOME=/usr/lib/jvm/java-7-oracle/
 
 
-apt-get install -y redis-server
+#apt-get install -y redis-server
 
-apt-get install -y xorg
+#apt-get install -y xorg
 
 apt-get install -y postgresql postgresql-contrib
 
@@ -55,7 +55,24 @@ sudo -u postgres psql -U postgres -c "CREATE DATABASE \"domsUpdateTracker\"
             ENCODING='SQL_ASCII'
             OWNER=\"domsUpdateTracker\";"
 
+sudo -u postgres psql -c " CREATE ROLE \"xmltapesIndex\" LOGIN PASSWORD 'xmltapesIndexPass'
+            NOINHERIT CREATEDB
+            VALID UNTIL 'infinity';"
 
+sudo -u postgres psql -U postgres -c "CREATE DATABASE \"xmltapesObjectIndex\"
+            WITH
+            TEMPLATE=template0
+            ENCODING='UTF8'
+            OWNER=\"xmltapesIndex\";"
+
+sudo -u postgres psql -U postgres -c "CREATE DATABASE \"xmltapesDatastreamIndex\"
+            WITH
+            TEMPLATE=template0
+            ENCODING='UTF8'
+            OWNER=\"xmltapesIndex\";"
+
+PGPASSWORD=xmltapesIndexPass psql -d xmltapesObjectIndex -U xmltapesIndex -h localhost -f /vagrant/postgres-index-schema.sql
+PGPASSWORD=xmltapesIndexPass psql -d xmltapesDatastreamIndex -U xmltapesIndex -h localhost -f /vagrant/postgres-index-schema.sql
 
 echo "192.168.50.2 doms-testbed" >> /etc/hosts
 echo "192.168.50.4 domswui-testbed" >> /etc/hosts
