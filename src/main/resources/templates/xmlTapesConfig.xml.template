@@ -24,9 +24,9 @@
         <property name="redisPort" value="$REDIS_PORT$"/>
         <property name="redisDB" value="0"/>
         <property name="dbDriver" value="org.postgresql.Driver"/>
-        <property name="jdbcUrl" value="jdbc:postgresql:xmltapesObjectIndex"/>
-        <property name="dbUser" value="$XMLTAPESDBUSER$"/>
-        <property name="dbPass" value="$XMLTAPESDBPASS$"/>
+        <property name="jdbcUrl" value="$XMLTAPES_OBJECTS_JDBC$"/>
+        <property name="dbUser" value="$XMLTAPES_DBUSER$"/>
+        <property name="dbPass" value="$XMLTAPES_DBPASS$"/>
     </bean>
 
     <bean class="dk.statsbiblioteket.metadatarepository.xmltapes.common.XmlTapesConfig" id="tapeDatastreamConfig">
@@ -46,9 +46,9 @@
         <property name="redisPort" value="$REDIS_PORT$"/>
         <property name="redisDB" value="1"/>
         <property name="dbDriver" value="org.postgresql.Driver"/>
-        <property name="jdbcUrl" value="jdbc:postgresql:xmltapesDatastreamIndex"/>
-        <property name="dbUser" value="$XMLTAPESDBUSER$"/>
-        <property name="dbPass" value="$XMLTAPESDBPASS$"/>
+        <property name="jdbcUrl" value="$XMLTAPES_DATASTREAMS_JDBC$"/>
+        <property name="dbUser" value="$XMLTAPES_DBUSER$"/>
+        <property name="dbPass" value="$XMLTAPES_DBPASS$"/>
     </bean>
 
 

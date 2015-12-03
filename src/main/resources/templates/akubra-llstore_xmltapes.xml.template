@@ -174,7 +174,7 @@
     </bean>
 
     <!--This is our Postgres index-->
-    <bean name="postgresObjectIndex" class="dk.statsbiblioteket.metadatarepository.xmltapes.postgres.PostgresIndex"
+    <bean name="postgresObjectIndex" class="dk.statsbiblioteket.metadatarepository.xmltapes.sqlindex.SQLIndex"
             >
         <!-- database driver class -->
         <constructor-arg value="#{tapeObjectConfig.dbDriver}" index="0"/>
@@ -287,7 +287,7 @@
     </bean>
 
     <!--This is our Postgres index-->
-    <bean name="postgresDatastreamIndex" class="dk.statsbiblioteket.metadatarepository.xmltapes.postgres.PostgresIndex"
+    <bean name="postgresDatastreamIndex" class="dk.statsbiblioteket.metadatarepository.xmltapes.sqlindex.SQLIndex"
             >
         <!-- database driver class -->
         <constructor-arg value="#{tapeDatastreamConfig.dbDriver}" index="0"/>

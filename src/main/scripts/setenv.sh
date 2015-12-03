@@ -92,5 +92,8 @@ REDIS_HOST=localhost
 REDIS_PORT=6379
 REDIS_DATABASE=0
 
-XMLTAPESDBUSER=xmltapesIndex
-XMLTAPESDBPASS=xmltapesIndexPass
+
+XMLTAPES_OBJECTS_JDBC=jdbc:postgresql:xmltapesObjectIndex
+XMLTAPES_DATASTREAMS_JDBC=jdbc:postgresql:xmltapesDatastreamIndex
+XMLTAPES_DBUSER=xmltapesIndex
+XMLTAPES_DBPASS=xmltapesIndexPass

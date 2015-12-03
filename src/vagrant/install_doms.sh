@@ -33,6 +33,14 @@ echo "DOMSWUI_SUMMA_STORAGE_DIR=$DOMSWUI_SUMMA_STORAGE_DIR" >> $installerDir/bin
 echo "USE_POSTGRESQL=true" >> $installerDir/bin/setenv.sh
 echo "MAILER_RECIPIENT=null@example.com" >> $installerDir/bin/setenv.sh
 
+echo "XMLTAPES_OBJECTS_JDBC=jdbc:postgresql:xmltapesObjectIndex" >> $installerDir/bin/setenv.sh 
+echo "XMLTAPES_DATASTREAMS_JDBC=jdbc:postgresql:xmltapesDatastreamIndex" >> $installerDir/bin/setenv.sh
+echo "XMLTAPES_DBUSER=xmltapesIndex" >> $installerDir/bin/setenv.sh
+echo "XMLTAPES_DBPASS=xmltapesIndexPass" >> $installerDir/bin/setenv.sh
+
+PGPASSWORD=xmltapesIndexPass psql -d xmltapesObjectIndex -U xmltapesIndex -h localhost -f $installerDir/extras/xmltapes-*/config/sql/postgres-index-schema.sql
+PGPASSWORD=xmltapesIndexPass psql -d xmltapesDatastreamIndex -U xmltapesIndex -h localhost -f $installerDir/extras/xmltapes-*/config/sql/postgres-index-schema.sql
+
 $installerDir/bin/install.sh $INSTALL_DIR
 
 rm -r $installerDir

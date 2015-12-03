@@ -71,8 +71,8 @@ sudo -u postgres psql -U postgres -c "CREATE DATABASE \"xmltapesDatastreamIndex\
             ENCODING='UTF8'
             OWNER=\"xmltapesIndex\";"
 
-PGPASSWORD=xmltapesIndexPass psql -d xmltapesObjectIndex -U xmltapesIndex -h localhost -f /vagrant/postgres-index-schema.sql
-PGPASSWORD=xmltapesIndexPass psql -d xmltapesDatastreamIndex -U xmltapesIndex -h localhost -f /vagrant/postgres-index-schema.sql
+#PGPASSWORD=xmltapesIndexPass psql -d xmltapesObjectIndex -U xmltapesIndex -h localhost -f /vagrant/postgres-index-schema.sql
+#PGPASSWORD=xmltapesIndexPass psql -d xmltapesDatastreamIndex -U xmltapesIndex -h localhost -f /vagrant/postgres-index-schema.sql
 
 echo "192.168.50.2 doms-testbed" >> /etc/hosts
 echo "192.168.50.4 domswui-testbed" >> /etc/hosts

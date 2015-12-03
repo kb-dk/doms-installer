@@ -41,7 +41,7 @@
         </dependencySet>
 
         <dependencySet>
-            <outputDirectory>extras/xmltapes</outputDirectory>
+            <outputDirectory>extras/</outputDirectory>
             <useProjectArtifact>false</useProjectArtifact>
             <useTransitiveFiltering>false</useTransitiveFiltering>
             <includes>
@@ -50,7 +50,7 @@
             <unpack>true</unpack>
             <unpackOptions>
                 <includes>
-                    <include>*/sql/*</include>
+                    <include>**/sql/*.sql</include>
                 </includes>
                 <excludes>
                     <exclude>**/sbutil-*</exclude>
