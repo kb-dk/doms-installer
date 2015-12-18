@@ -1,4 +1,5 @@
 2015-12-18 Release 1.25
+ * Included the xmltapes-migrator
  * Use version 1.2 of xmlTapes. This includes a speedup, and the possibility to replace the Redis Index with Postgres
  * Doms package renamed
 
