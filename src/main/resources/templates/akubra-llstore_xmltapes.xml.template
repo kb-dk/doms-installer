@@ -144,7 +144,7 @@
         <constructor-arg value="#{tapeObjectConfig.tapeSize}"/>
         <!--10 MB-->
         <!--This is the reference to the index-->
-        <property name="index" ref="postgresObjectIndex"/>
+        <property name="index" ref="$OBJECT_INDEX$"/>
         <!--Remove broken records from the newest tape when initialising-->
         <property name="fixErrors" value="#{tapeObjectConfig.fixErrorsOnRestart}"/>
         <!--Reindex all the tape files when initialising-->
@@ -162,7 +162,7 @@
 
 
     <!--This is our Redis index-->
-    <bean name="redisIndex" class="dk.statsbiblioteket.metadatarepository.xmltapes.redis.RedisIndex"
+    <bean name="redisObjectIndex" class="dk.statsbiblioteket.metadatarepository.xmltapes.redis.RedisIndex"
             >
         <constructor-arg type="redis.clients.jedis.JedisPoolConfig" ref="jedisPoolConfig" index="3"/>
         <!--The redis server-->
@@ -257,7 +257,7 @@
         <constructor-arg value="#{tapeDatastreamConfig.tapeSize}"/>
         <!--10 MB-->
         <!--This is the reference to the index-->
-        <property name="index" ref="postgresDatastreamIndex"/>
+        <property name="index" ref="$DATASTREAM_INDEX$"/>
         <!--Remove broken records from the newest tape when initialising-->
         <property name="fixErrors" value="#{tapeDatastreamConfig.fixErrorsOnRestart}"/>
         <!--Reindex all the tape files when initialising-->

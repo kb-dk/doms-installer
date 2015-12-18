@@ -56,6 +56,15 @@ else
   TRIPLESTORE_SYSTEM=localMulgaraTriplestore
 fi
 
+if [ "$USE_REDIS" = "true" ]; then
+  DATASTREAM_INDEX=redisDatastreamIndex
+  OBJECT_INDEX=redisObjectIndex
+else
+  DATASTREAM_INDEX=postgresDatastreamIndex
+  OBJECT_INDEX=postgresObjectIndex
+fi
+
+
 
 function replace(){
 sed \
@@ -100,6 +109,8 @@ sed \
 -e 's|\$XMLTAPES_OBJECTS_JDBC\$|'"$XMLTAPES_OBJECTS_JDBC"'|g' \
 -e 's|\$XMLTAPES_DBUSER\$|'"$XMLTAPES_DBUSER"'|g' \
 -e 's|\$XMLTAPES_DBPASS\$|'"$XMLTAPES_DBPASS"'|g' \
+-e 's|\$DATASTREAM_INDEX\$|'"$DATASTREAM_INDEX"'|g' \
+-e 's|\$OBJECT_INDEX\$|'"$OBJECT_INDEX"'|g' \
 <$1 > $2
 }
 
