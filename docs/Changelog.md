@@ -1,4 +1,11 @@
-1.23
+2015-12-18 Release 1.25
+ * Use version 1.2 of xmlTapes. This includes a speedup, and the possibility to replace the Redis Index with Postgres
+ * Doms package renamed
+
+2015-09-25 Release 1.24
+ * No change, why did we release?
+
+2015-09-14 Release 1.23
  * Renamed maven from installer to doms-installer
  * New version of central which fixes the domsgui search problem
 
