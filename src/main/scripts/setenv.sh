@@ -60,6 +60,8 @@ BASEOBJS_DIR=$TESTBED_DIR/base-objects-ingester
 
 DOCS_DIR=$TESTBED_DIR/docs
 
+XMLTAPES_MIGRATOR_DIR=$TESTBED_DIR/xmltapes-migrator
+
 #Database
 USE_POSTGRESQL=true
 POSTGRESQL_SERVER=localhost

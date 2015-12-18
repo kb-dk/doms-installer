@@ -59,7 +59,15 @@
                     <exclude>**/xpp3_min-*</exclude>
                 </excludes>
             </unpackOptions>
-
+        </dependencySet>
+        <dependencySet>
+            <outputDirectory>extras/</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
+            <useTransitiveFiltering>false</useTransitiveFiltering>
+            <includes>
+                <include>dk.statsbiblioteket.metadatarepository:xmltapes-migrator</include>
+            </includes>
+            <unpack>true</unpack>
         </dependencySet>
 
 

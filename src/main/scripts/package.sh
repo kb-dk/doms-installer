@@ -414,5 +414,19 @@ if [ -f $BASEDIR/ingester/$INGESTERZIP ]; then
   rm -rf $CONFIG_TEMP_DIR > /dev/null
 fi
 
+#installing the xmltapes migrator
+
+echo "Installing xmltapes migrator"
+mkdir -p $XMLTAPES_MIGRATOR_DIR/bin
+mkdir -p $XMLTAPES_MIGRATOR_DIR/lib
+cp -r $BASEDIR/extras/xmltapes-migrator-*/bin/*  $XMLTAPES_MIGRATOR_DIR/bin/
+cp -r $BASEDIR/extras/xmltapes-migrator-*/lib/*  $XMLTAPES_MIGRATOR_DIR/lib/
+mkdir -p $XMLTAPES_MIGRATOR_DIR/conf-datastreams
+cp -r $BASEDIR/extras/xmltapes-migrator-*/config/logback.xml $XMLTAPES_MIGRATOR_DIR/conf-datastreams/
+cp -v $CONFIG_TEMP_DIR/migrator.datastreams.properties $XMLTAPES_MIGRATOR_DIR/conf-datastreams/migrator.properties
+mkdir -p $XMLTAPES_MIGRATOR_DIR/conf-objects
+cp -r $BASEDIR/extras/xmltapes-migrator-*/config/logback.xml $XMLTAPES_MIGRATOR_DIR/conf-objects/
+cp -v $CONFIG_TEMP_DIR/migrator.objects.properties $XMLTAPES_MIGRATOR_DIR/conf-objects/migrator.properties
+
 echo "Install complete"
 
