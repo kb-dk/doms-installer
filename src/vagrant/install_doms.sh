@@ -3,7 +3,7 @@ export JAVA_HOME=/usr/lib/jvm/java-7-oracle/
 
 if [ ! -e visualvm_137.zip ]; then
 wget -N https://java.net/projects/visualvm/downloads/download/release137/visualvm_137.zip
-unzip visualvm_137.zip
+unzip -q visualvm_137.zip
 fi
 
 
@@ -33,6 +33,7 @@ echo "DOMSWUI_SUMMA_STORAGE_DIR=$DOMSWUI_SUMMA_STORAGE_DIR" >> $installerDir/bin
 echo "USE_POSTGRESQL=true" >> $installerDir/bin/setenv.sh
 echo "MAILER_RECIPIENT=null@example.com" >> $installerDir/bin/setenv.sh
 
+echo "USE_REDIS=false" >> $installerDir/bin/setenv.sh
 echo "XMLTAPES_OBJECTS_JDBC=jdbc:postgresql:xmltapesObjectIndex" >> $installerDir/bin/setenv.sh 
 echo "XMLTAPES_DATASTREAMS_JDBC=jdbc:postgresql:xmltapesDatastreamIndex" >> $installerDir/bin/setenv.sh
 echo "XMLTAPES_DBUSER=xmltapesIndex" >> $installerDir/bin/setenv.sh
