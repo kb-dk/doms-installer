@@ -261,7 +261,7 @@ popd > /dev/null
 # Deploy stuff from fedoralib
 echo "Repacking Fedora war files with changes"
 pushd $FEDORA_DIR/install > /dev/null
-unzip fedora.war -d fedorawar
+unzip -q fedora.war -d fedorawar
 cd fedorawar
 mkdir -p WEB-INF/lib
 
@@ -324,7 +324,7 @@ fi
 
 #repackage
 mv ../fedora.war ../fedora_original.war
-zip -r ../fedora.war *    > /dev/null
+zip -rq ../fedora.war *    > /dev/null
 popd > /dev/null
 
 
