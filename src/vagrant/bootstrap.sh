@@ -12,7 +12,7 @@ apt-get install -y oracle-java7-installer oracle-java7-set-default
 export JAVA_HOME=/usr/lib/jvm/java-7-oracle/
 
 
-#apt-get install -y redis-server
+apt-get install -y redis-server
 
 #apt-get install -y xorg
 
