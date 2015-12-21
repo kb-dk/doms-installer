@@ -4,7 +4,7 @@
  * Doms package renamed
 
 2015-09-25 Release 1.24
- * No change, why did we release?
+ * Use newest doms-server that fixes the beanutils classpath problem
 
 2015-09-14 Release 1.23
  * Renamed maven from installer to doms-installer
