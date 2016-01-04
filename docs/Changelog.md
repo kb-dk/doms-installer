@@ -1,7 +1,74 @@
+2016-01-04 Release 1.26
+======================
+ * Upgraded Doms Central to 1.21. This fixes the "Summa Dead causes Doms Dead" bug
+ 
+
 2015-12-18 Release 1.25
+==============
+ * Doms package renamed
  * Included the xmltapes-migrator
  * Use version 1.2 of xmlTapes. This includes a speedup, and the possibility to replace the Redis Index with Postgres
- * Doms package renamed
+ 
+ Two new databases are needed for the Object Index and for the Datastream Index, to replace the two databases in Redis.
+ The can be created with these commands
+ 
+    psql -c "CREATE ROLE \"xmltapesIndex\" LOGIN PASSWORD 'xmltapesIndexPass'
+            NOINHERIT CREATEDB
+            VALID UNTIL 'infinity';"
+
+    psql -c "CREATE DATABASE \"xmltapesObjectIndex\"
+            WITH
+            TEMPLATE=template0
+            ENCODING='UTF8'
+            OWNER=\"xmltapesIndex\";"
+
+    psql -c "CREATE DATABASE \"xmltapesDatastreamIndex\"
+            WITH
+            TEMPLATE=template0
+            ENCODING='UTF8'
+            OWNER=\"xmltapesIndex\";"
+
+ These should then be set up with the correct schema
+
+    psql -d xmltapesObjectIndex     -U xmltapesIndex -h localhost -f $installerDir/extras/xmltapes-*/config/sql/postgres-index-schema.sql
+    psql -d xmltapesDatastreamIndex -U xmltapesIndex -h localhost -f $installerDir/extras/xmltapes-*/config/sql/postgres-index-schema.sql
+
+ In akubra-llstore.xml, change line 260 to from
+    
+    <property name="index" ref="redisDatastreamIndex"/>
+ to
+ 
+    <property name="index" ref="postgresDatastreamIndex"/>
+
+and line 147 from 
+    
+    <property name="index" ref="redisObjectIndex"/>
+to
+
+    <property name="index" ref="postgresObjectIndex"/>
+    
+Update the six new lines in xmlTapesConfig.xml to match the database setup for both the objectIndex and the datastreamIndex
+    
+    <property name="jdbcUrl" value="$XMLTAPES_OBJECTS_JDBC$"/>
+    <property name="dbUser" value="$XMLTAPES_DBUSER$"/>
+    <property name="dbPass" value="$XMLTAPES_DBPASS$"/>
+
+
+To migrate an existing redis installation to postgres, first change the config files 
+    
+    $installerDir/extras/xmltapes-migrator-1.2/conf-datastreams/migrate.properties
+    $installerDir/extras/xmltapes-migrator-1.2/conf-objects/migrate.properties
+to match your postgres setup.
+Stop the doms system.
+Then run 
+    
+    $installerDir/extras/xmltapes-migrator-1.2/bin/migrate.sh $installerDir/extras/xmltapes-migrator-1.2/conf-datastreams redis-to-postgres 
+    $installerDir/extras/xmltapes-migrator-1.2/bin/migrate.sh $installerDir/extras/xmltapes-migrator-1.2/conf-objects redis-to-postgres
+
+The complete migration might take a while. The two migrations can easily be run in parallel. Consider putting postgres
+into unsafe mode by disabling flushing. The redis server will not be changed in any way.
+Then start the Doms system
+
 
 2015-09-25 Release 1.24
  * Use newest doms-server that fixes the beanutils classpath problem
