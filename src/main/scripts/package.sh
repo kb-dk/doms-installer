@@ -422,10 +422,10 @@ mkdir -p $XMLTAPES_MIGRATOR_DIR/lib
 cp -r $BASEDIR/extras/xmltapes-migrator-*/bin/*  $XMLTAPES_MIGRATOR_DIR/bin/
 cp -r $BASEDIR/extras/xmltapes-migrator-*/lib/*  $XMLTAPES_MIGRATOR_DIR/lib/
 mkdir -p $XMLTAPES_MIGRATOR_DIR/conf-datastreams
-cp -r $BASEDIR/extras/xmltapes-migrator-*/config/logback.xml $XMLTAPES_MIGRATOR_DIR/conf-datastreams/
+cp $CONFIG_TEMP_DIR/migrator.datastreams.logback.xml $XMLTAPES_MIGRATOR_DIR/conf-datastreams/logback.xml
 cp -v $CONFIG_TEMP_DIR/migrator.datastreams.properties $XMLTAPES_MIGRATOR_DIR/conf-datastreams/migrator.properties
 mkdir -p $XMLTAPES_MIGRATOR_DIR/conf-objects
-cp -r $BASEDIR/extras/xmltapes-migrator-*/config/logback.xml $XMLTAPES_MIGRATOR_DIR/conf-objects/
+cp $CONFIG_TEMP_DIR/migrator.objects.logback.xml $XMLTAPES_MIGRATOR_DIR/conf-objects/logback.xml
 cp -v $CONFIG_TEMP_DIR/migrator.objects.properties $XMLTAPES_MIGRATOR_DIR/conf-objects/migrator.properties
 
 echo "Install complete"
