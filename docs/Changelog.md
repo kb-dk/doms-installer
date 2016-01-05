@@ -1,10 +1,6 @@
-2016-01-05 Release 1.26
+2016-01-04 Release 1.25
 ======================
  * Upgraded Doms Central to 1.21. This fixes the "Summa Dead causes Doms Dead" bug
- 
-
-2015-12-18 Release 1.25
-==============
  * Doms package renamed
  * Included the xmltapes-migrator
  * Use version 1.2 of xmlTapes. This includes a speedup, and the possibility to replace the Redis Index with Postgres
