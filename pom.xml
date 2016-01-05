@@ -9,7 +9,7 @@
 
     <groupId>dk.statsbiblioteket.doms.installer</groupId>
     <artifactId>doms-installer</artifactId>
-    <version>1.25</version>
+    <version>1.26-SNAPSHOT</version>
 
     <properties>
         <!-- Note: Releases of Summarise for SBOI are generated from the Summarise branch
@@ -30,7 +30,7 @@
         <connection>scm:git:git://github.com/statsbiblioteket/doms-installer.git</connection>
         <developerConnection>scm:git:git@github.com:statsbiblioteket/doms-installer.git</developerConnection>
         <url>https://github.com/statsbiblioteket/doms-installer</url>
-      <tag>doms-installer-1.25</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <profiles>
@@ -132,7 +132,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.metadatarepository</groupId>
             <artifactId>xmltapes</artifactId>
-            <version>1.2</version>
+            <version>1.3-SNAPSHOT</version>
             <classifier>bundle</classifier>
             <type>tar.gz</type>
         </dependency>
@@ -140,7 +140,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.metadatarepository</groupId>
             <artifactId>xmltapes-migrator</artifactId>
-            <version>1.2</version>
+            <version>1.3-SNAPSHOT</version>
             <classifier>bundle</classifier>
             <type>tar.gz</type>
         </dependency>
@@ -155,7 +155,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.updatetracker</groupId>
             <artifactId>updatetracker-fcrepo-decorator</artifactId>
-            <version>1.11</version>
+            <version>1.12-SNAPSHOT</version>
         </dependency>
 
         <dependency>
@@ -195,7 +195,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.central</groupId>
             <artifactId>centralWebservice-service</artifactId>
-            <version>1.21</version>
+            <version>1.22-SNAPSHOT</version>
             <type>war</type>
         </dependency>
         <dependency>
