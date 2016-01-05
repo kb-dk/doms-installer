@@ -1,4 +1,4 @@
-2016-01-04 Release 1.26
+2016-01-05 Release 1.26
 ======================
  * Upgraded Doms Central to 1.21. This fixes the "Summa Dead causes Doms Dead" bug
  
