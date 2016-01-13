@@ -1,3 +1,8 @@
+2016-??-?? Release 1.26
+======================
+ * Use newest base-object-ingester, which does not bundle newspaper titles in every page object when harvester for Mediestream
+   * This needs an upgrade script, migrate_1.16.sh to be run
+
 2016-01-04 Release 1.25
 ======================
  * Upgraded Doms Central to 1.21. This fixes the "Summa Dead causes Doms Dead" bug
