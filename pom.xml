@@ -107,7 +107,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.installer</groupId>
             <artifactId>base-objects-ingester</artifactId>
-            <version>1.15</version>
+            <version>1.16</version>
             <type>zip</type>
         </dependency>
 
