@@ -1,5 +1,8 @@
 #!/bin/bash
+
 export JAVA_HOME=/usr/lib/jvm/java-7-oracle/
+
+# Download visualvm from Oracle.  Consider looking at version in JDK.
 
 if [ ! -e visualvm_137.zip ]; then
 wget -N https://java.net/projects/visualvm/downloads/download/release137/visualvm_137.zip
@@ -22,8 +25,10 @@ installer="/target/doms-installer-*-testbed.tar.gz"
 
 echo "Getting doms from $installer"
 
+# Expected CWD is $HOME
 tar -xzf ${installer}
 rm -r $INSTALL_DIR
+# Get name of unpacked testbed dir.
 installerDir=$(find * -maxdepth 0 -type d -name 'doms-installer-*' | head -1)
 
 echo "DATA_DIR=$DATADIR_DIR" >> $installerDir/bin/setenv.sh

@@ -3,6 +3,8 @@
 apt-get update > /dev/null
 apt-get install -y zip unzip
 
+# Download and install Oracle Java 7
+
 apt-get install -y python-software-properties
 add-apt-repository ppa:webupd8team/java
 apt-get update > /dev/null
@@ -14,10 +16,9 @@ export JAVA_HOME=/usr/lib/jvm/java-7-oracle/
 
 apt-get install -y redis-server
 
-#apt-get install -y xorg
-
 apt-get install -y postgresql postgresql-contrib
 
+# Postgres:  Listen and accept login on all network interfaces.
 echo "host    all             all             0.0.0.0/0               md5" >> /etc/postgresql/9.3/main/pg_hba.conf
 echo "listen_addresses = '*'" >> /etc/postgresql/9.3/main/postgresql.conf
 service postgresql restart
@@ -74,10 +75,10 @@ sudo -u postgres psql -U postgres -c "CREATE DATABASE \"xmltapesDatastreamIndex\
 #PGPASSWORD=xmltapesIndexPass psql -d xmltapesObjectIndex -U xmltapesIndex -h localhost -f /vagrant/postgres-index-schema.sql
 #PGPASSWORD=xmltapesIndexPass psql -d xmltapesDatastreamIndex -U xmltapesIndex -h localhost -f /vagrant/postgres-index-schema.sql
 
+# For DOMS Wui Vagrant virtual network.
 echo "192.168.50.2 doms-testbed" >> /etc/hosts
 echo "192.168.50.4 domswui-testbed" >> /etc/hosts
 
 
-
-
+# It is better to install the DOMS using "vagrant ssh".
 #sudo -u -u vagrant "bash /vagrant/install_doms.sh"
