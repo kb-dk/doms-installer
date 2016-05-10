@@ -43,9 +43,15 @@ Download and install Zookeeper, and the two autonomous components:  batch-trigge
 
     /vagrant/setup-newspapers.sh
 
+Create target folder:
+
+    sudo mkdir /newspapr_batches
+    sudo chown vagrant /newspapr_batches
+    sudo chmod 755 /newspapr_batches
+
 Put batches in /newspapr-batches _inside_ vagrant machine:
 
-    vagrant scp '~/ownCloud/2016-02-29/llo/standard\ pakker\ til\ repo/avis/Fjerritslev\ avis/*' /newspapr_batches
+    vagrant scp ~/ownCloud/2016-02-29/llo/standard\ pakker\ til\ repo/avis/Fjerritslev\ avis/. /newspapr_batches
 
 
 Update SBIO index, and run each of the autonomous components:
