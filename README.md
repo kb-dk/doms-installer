@@ -9,6 +9,10 @@ Create artifacts to deploy:
 
     mvn clean install
 
+Install the vagrant timezone fix
+    
+    vagrant plugin install vagrant-timezone
+
 Start vagrant:
 
     cd src/vagrant
@@ -18,6 +22,14 @@ Start vagrant:
 
 Inside vagrant:
 ===
+
+
+
+Install vagrant scp plugin:
+http://stackoverflow.com/a/28359455/4527948
+
+    vagrant plugin install vagrant-scp
+
 
 Go inside vagrant:
 
@@ -30,11 +42,6 @@ Install VisualVM, DOMS, SBOI and Summa: (takes a few minutes)
 Download and install Zookeeper, and the two autonomous components:  batch-trigger, doms-ingester:
 
     /vagrant/setup-newspapers.sh
-
-    estbed:/vagrant# mkdir /newspapr_batches
-    root@doms-vagrant-testbed:/vagrant# chown vagrant /newspapr_batches
-    root@doms-vagrant-testbed:/vagrant# chmod 755 /newspapr_batches
-    root@doms-vagrant-testbed:/vagrant#
 
 Put batches in /newspapr-batches _inside_ vagrant machine:
 

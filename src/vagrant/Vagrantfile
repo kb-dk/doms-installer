@@ -40,10 +40,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   config.vm.network :public_network, :nictype => 'virtio', :type => "dhcp", :use_dhcp_assigned_default_route => true
 
+  config.vm.provider :virtualbox do |v|
+    v.name = "doms-vagrant-testbed"
+  end
 
   # For bash prompt when running along DOMS Gui-installer vagrant.
   config.vm.hostname = "doms-vagrant-testbed"
   # For shared virtual network when running along DOMS Gui-installer vagrant.
   config.vm.network :private_network, :ip => "192.168.50.2", :virtualbox__intnet => "localvagrantnetwork"
 
+
+  if Vagrant.has_plugin?("vagrant-timezone")
+    config.timezone.value = :host
+  end
 end
