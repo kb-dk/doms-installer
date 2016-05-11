@@ -9,57 +9,45 @@ Create artifacts to deploy:
 
     mvn clean install
 
-Install the vagrant timezone fix
-    
-    vagrant plugin install vagrant-timezone
+Install the necessary vagrant plugins: http://stackoverflow.com/a/28359455/4527948
 
-Start vagrant:
+    vagrant plugin install vagrant-timezone
+    vagrant plugin install vagrant-scp
+
+Start vagrant (using virtualbox provider):
 
     cd src/vagrant
-    vagrant up --provider virtualbox
+    vagrant up
 
+(may take a few minutes and download quite a bit the first time)
 
 
 Inside vagrant:
 ===
 
+Install DOMS, SBOI and Summa: (takes a few minutes)
 
+     vagrant ssh -c /vagrant/install_doms.sh
 
-Install vagrant scp plugin:
-http://stackoverflow.com/a/28359455/4527948
-
-    vagrant plugin install vagrant-scp
-
-
-Go inside vagrant:
-
-    vagrant ssh
-
-Install VisualVM, DOMS, SBOI and Summa: (takes a few minutes)
-
-     /vagrant/install_doms.sh
+Wait up to several minutes until SBOI Solr is ready and answers on link below.
 
 Download and install Zookeeper, and the two autonomous components:  batch-trigger, doms-ingester:
 
-    /vagrant/setup-newspapers.sh
+    vagrant ssh -c /vagrant/setup-newspapers.sh
 
 Create target folder:
 
-    sudo mkdir /newspapr_batches
-    sudo chown vagrant /newspapr_batches
-    sudo chmod 755 /newspapr_batches
+    vagrant ssh -c "sudo mkdir /newspapr_batches; sudo chown vagrant /newspapr_batches; sudo chmod 755 /newspapr_batches"
 
 Put batches in /newspapr-batches _inside_ vagrant machine:
 
     vagrant scp ~/ownCloud/2016-02-29/llo/standard\ pakker\ til\ repo/avis/Fjerritslev\ avis/. /newspapr_batches
 
-
 Update SBIO index, and run each of the autonomous components:
 
-    /vagrant/newspapers_poll.sh
-    /vagrant/newspapers_poll.sh
-    /vagrant/newspapers_poll.sh
-
+    vagrant ssh -c /vagrant/newspapers_poll.sh
+    vagrant ssh -c /vagrant/newspapers_poll.sh
+    vagrant ssh -c /vagrant/newspapers_poll.sh
 
 
 

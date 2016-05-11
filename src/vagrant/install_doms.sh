@@ -2,14 +2,6 @@
 
 export JAVA_HOME=/usr/lib/jvm/java-7-oracle/
 
-# Download visualvm from Oracle.  Consider looking at version in JDK.
-
-if [ ! -e visualvm_137.zip ]; then
-wget -N https://java.net/projects/visualvm/downloads/download/release137/visualvm_137.zip
-unzip -q visualvm_137.zip
-fi
-
-
 INSTALL_DIR="$HOME/7880-doms"
 
 STORAGE_DIR="$HOME/7880-data"
