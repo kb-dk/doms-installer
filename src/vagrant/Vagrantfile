@@ -7,7 +7,9 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "ubuntu/trusty64"
-  # config.vm.box = "chef/centos-6.5"
+  # Initial experiments with xenial64 showed that the image is not completely ready yet.
+  # config.vm.box = "ubuntu/xenial64"
+
   config.vm.provision :shell, :name => "bootstrap.sh", :path => "bootstrap.sh"
   # Tomcat med DOMS + Central Web-service.
   config.vm.network :forwarded_port, :host => 7880, :guest => 7880
