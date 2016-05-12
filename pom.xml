@@ -230,7 +230,11 @@
                                 <scp knownhosts="${project.basedir}/known_hosts" file="fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${env.SSH_KEY}" />
                                 -->
                                 <exec failonerror="true" executable="rsync">
+                                    <!--
                                     <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${sboi.summarise.version}/* &quot;${project.build.directory}/sboi-summarise/&quot;" />
+                                    -->
+
+                                    <arg line="-av /Users/ravn/Downloads/newspapr-${sboi.summarise.version}.zip &quot;${project.build.directory}/sboi-summarise/&quot;" />
                                 </exec>
                             </target>
                         </configuration>
@@ -248,7 +252,10 @@
                                 <scp knownhosts="${project.basedir}/known_hosts" file="fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${env.SSH_KEY}" />
                                 -->
                                 <exec failonerror="true" executable="rsync">
+                                    <!--
                                     <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domswui-${domswui.summarise.version}/* &quot;${project.build.directory}/domswui-summarise/&quot;" />
+                                    -->
+                                    <arg line="-av /Users/ravn/Downloads/domswui-${domswui.summarise.version}.zip &quot;${project.build.directory}/domswui-summarise/&quot;" />
                                 </exec>
                             </target>
                         </configuration>
