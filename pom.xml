@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <parent>
@@ -16,10 +17,10 @@
         https://svn.statsbiblioteket.dk/svn/summarise/branches/newspapr -->
         <sboi.summarise.version>2.8-SNAPSHOT</sboi.summarise.version>
         <domswui.summarise.version>1.3-SNAPSHOT</domswui.summarise.version>
-<!--
-        <sboi.summarise.version>2.7</sboi.summarise.version>
-        <domswui.summarise.version>1.2</domswui.summarise.version>
--->
+        <!--
+                <sboi.summarise.version>2.7</sboi.summarise.version>
+                <domswui.summarise.version>1.2</domswui.summarise.version>
+        -->
     </properties>
 
 
@@ -29,8 +30,8 @@
         <connection>scm:git:git://github.com/statsbiblioteket/doms-installer.git</connection>
         <developerConnection>scm:git:git@github.com:statsbiblioteket/doms-installer.git</developerConnection>
         <url>https://github.com/statsbiblioteket/doms-installer</url>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 
     <profiles>
         <profile>
@@ -56,34 +57,34 @@
 
         <!--Ingesters-->
         <!--Removed, as they have not been used for more than a year-->
-     <!--   <dependency>
-            <groupId>dk.statsbiblioteket.doms.ingesters</groupId>
-            <artifactId>radio-tv</artifactId>
-            <version>1.0</version>
-            <classifier>ingester</classifier>
-            <type>tar.gz</type>
-        </dependency>
+        <!--   <dependency>
+               <groupId>dk.statsbiblioteket.doms.ingesters</groupId>
+               <artifactId>radio-tv</artifactId>
+               <version>1.0</version>
+               <classifier>ingester</classifier>
+               <type>tar.gz</type>
+           </dependency>
 
-        <dependency>
-            <groupId>dk.statsbiblioteket.medieplatform</groupId>
-            <artifactId>yousee-doms-ingester</artifactId>
-            <version>1.0</version>
-            <classifier>bundle</classifier>
-            <type>zip</type>
-        </dependency>
-
-
+           <dependency>
+               <groupId>dk.statsbiblioteket.medieplatform</groupId>
+               <artifactId>yousee-doms-ingester</artifactId>
+               <version>1.0</version>
+               <classifier>bundle</classifier>
+               <type>zip</type>
+           </dependency>
 
 
 
-        <dependency>
-            <groupId>dk.statsbiblioteket.medieplatform</groupId>
-            <artifactId>reklame-doms-ingester</artifactId>
-            <version>1.0</version>
-            <classifier>bundle</classifier>
-            <type>tar.gz</type>
-        </dependency>
--->
+
+
+           <dependency>
+               <groupId>dk.statsbiblioteket.medieplatform</groupId>
+               <artifactId>reklame-doms-ingester</artifactId>
+               <version>1.0</version>
+               <classifier>bundle</classifier>
+               <type>tar.gz</type>
+           </dependency>
+   -->
 
         <dependency>
             <groupId>dk.statsbiblioteket.sbutil</groupId>
@@ -161,12 +162,12 @@
             <groupId>org.fcrepo</groupId>
             <artifactId>mulgara-core</artifactId>
             <version>2.1.14-SB</version>
-          <exclusions>
-              <exclusion>
-                  <groupId>*</groupId>
-                  <artifactId>*</artifactId>
-              </exclusion>
-          </exclusions>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
 
@@ -225,16 +226,16 @@
                         </goals>
                         <configuration>
                             <target>
-                                <mkdir dir="${project.build.directory}/sboi-summarise/" />
+                                <mkdir dir="${project.build.directory}/sboi-summarise/"/>
                                 <!--
                                 <scp knownhosts="${project.basedir}/known_hosts" file="fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${env.SSH_KEY}" />
                                 -->
                                 <exec failonerror="true" executable="rsync">
-                                    <!--
-                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${sboi.summarise.version}/* &quot;${project.build.directory}/sboi-summarise/&quot;" />
-                                    -->
+                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${sboi.summarise.version}/* &quot;${project.build.directory}/sboi-summarise/&quot;"/>
 
+                                    <!--
                                     <arg line="-av /Users/ravn/Downloads/newspapr-${sboi.summarise.version}.zip &quot;${project.build.directory}/sboi-summarise/&quot;" />
+                                    -->
                                 </exec>
                             </target>
                         </configuration>
@@ -247,15 +248,15 @@
                         </goals>
                         <configuration>
                             <target>
-                                <mkdir dir="${project.build.directory}/domswui-summarise/" />
+                                <mkdir dir="${project.build.directory}/domswui-summarise/"/>
                                 <!--
                                 <scp knownhosts="${project.basedir}/known_hosts" file="fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${env.SSH_KEY}" />
                                 -->
                                 <exec failonerror="true" executable="rsync">
+                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domswui-${domswui.summarise.version}/* &quot;${project.build.directory}/domswui-summarise/&quot;"/>
                                     <!--
-                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domswui-${domswui.summarise.version}/* &quot;${project.build.directory}/domswui-summarise/&quot;" />
-                                    -->
                                     <arg line="-av /Users/ravn/Downloads/domswui-${domswui.summarise.version}.zip &quot;${project.build.directory}/domswui-summarise/&quot;" />
+                                                -->
                                 </exec>
                             </target>
                         </configuration>
@@ -310,14 +311,9 @@
                             <goal>single</goal>
                             <!-- goals == mojos -->
                         </goals>
-
                     </execution>
                 </executions>
-
             </plugin>
-
-
-
         </plugins>
     </build>
 </project>

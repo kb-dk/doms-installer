@@ -19,7 +19,8 @@ echo "Getting doms from $installer"
 
 # Expected CWD is $HOME
 tar -xzf ${installer}
-rm -r $INSTALL_DIR
+# rm -r $INSTALL_DIR
+
 # Get name of unpacked testbed dir.
 installerDir=$(find * -maxdepth 0 -type d -name 'doms-installer-*' | head -1)
 

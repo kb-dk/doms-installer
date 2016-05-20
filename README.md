@@ -1,3 +1,9 @@
+Before starting:
+===
+
+The version of Vagrant shipping with Ubuntu 16.04 is 1.7.4.  Snapshot functionality in vagrant itself requires
+1.8.1.  If you need this install vagrant yourself.
+
 Outside vagrant:
 ===
 
@@ -54,7 +60,9 @@ Update SBIO index, and run each of the autonomous components:
 Extra:
 ===
 
-Access Fedora:
+Links work both inside vagrant box and outside.
+
+Access Fedora (fedoraAdmin/fedoraAdminPass):
 
     http://localhost:7880/fedora/objects
 
