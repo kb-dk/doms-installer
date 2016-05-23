@@ -30,7 +30,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.cpus = 2 # or more for heavy load
   end
 
-  # for VisualVM
+  # for jvisualvm
   config.ssh.forward_x11 = true
 
   # These network things are nessesary to make ubuntu work fast
@@ -42,9 +42,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   config.vm.network :public_network, :nictype => 'virtio', :type => "dhcp", :use_dhcp_assigned_default_route => true
 
-  config.vm.provider :virtualbox do |v|
-    v.name = "doms-vagrant-testbed"
-  end
+    # Easier naming disabled until we have a ruby snippet adding the CWD to the name.
+#  config.vm.provider :virtualbox do |v|
+#    v.name = "doms-vagrant-testbed-2"
+#  end
 
   # For bash prompt when running along DOMS Gui-installer vagrant.
   config.vm.hostname = "doms-vagrant-testbed"

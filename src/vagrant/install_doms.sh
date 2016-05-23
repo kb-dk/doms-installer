@@ -42,4 +42,4 @@ PGPASSWORD=xmltapesIndexPass psql -d xmltapesDatastreamIndex -U xmltapesIndex -h
 
 $installerDir/bin/install.sh $INSTALL_DIR
 
-rm -r $installerDir
+# rm -r $installerDir

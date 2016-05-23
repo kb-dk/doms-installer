@@ -4,6 +4,9 @@ Before starting:
 The version of Vagrant shipping with Ubuntu 16.04 is 1.7.4.  Snapshot functionality in vagrant itself requires
 1.8.1.  If you need this install vagrant yourself.
 
+Note:  For now, use the VirtualBox GUI to restore snapshots.  "bootstrap.sh" is not properly
+written to reprovision the virtual machine as invoked with "vagrant snapshot restore".
+
 Outside vagrant:
 ===
 
@@ -25,27 +28,29 @@ Start vagrant (using virtualbox provider):
     cd src/vagrant
     vagrant up
 
-(may take a few minutes and download quite a bit the first time)
+(may take 5-10 minutes and download quite a bit the first time).  Also
+SBOI and DOMS Wui Solr may take an additional while to initialize.  Check
+the URLs below to see when they are ready and responsive.
+
+You now have a local, empty DOMS.
+
+Create a snapshot to be able to easily revert to this point.
+
+    vagrant snapshot save up
+
+Use
+
+    vagrant suspend
+
+instead of "vagrant halt" as efforts have not yet been done to ensure
+production quality of this image.
+
 
 
 Inside vagrant:
 ===
 
-Install DOMS, SBOI and Summa: (takes a few minutes)
-
-     vagrant ssh -c /vagrant/install_doms.sh
-
-Wait up to several minutes until SBOI Solr is ready and answers on link below.
-
-Download and install Zookeeper, and the two autonomous components:  batch-trigger, doms-ingester:
-
-    vagrant ssh -c /vagrant/setup-newspapers.sh
-
-Create target folder:
-
-    vagrant ssh -c "sudo mkdir /newspapr_batches; sudo chown vagrant /newspapr_batches; sudo chmod 755 /newspapr_batches"
-
-Put batches in /newspapr-batches _inside_ vagrant machine:
+Put batches in /newspapr-batches _inside_ vagrant machine: (link valid for PC599)
 
     vagrant scp ~/ownCloud/2016-02-29/llo/standard\ pakker\ til\ repo/avis/Fjerritslev\ avis/. /newspapr_batches
 
@@ -54,6 +59,10 @@ Update SBIO index, and run each of the autonomous components:
     vagrant ssh -c /vagrant/newspapers_poll.sh
     vagrant ssh -c /vagrant/newspapers_poll.sh
     vagrant ssh -c /vagrant/newspapers_poll.sh
+
+This command invokes several batch scripts to ensure all the work has been done.
+It is very important to do so, as the index must be up to date for the DOMS
+query routines to see any updates.
 
 
 
