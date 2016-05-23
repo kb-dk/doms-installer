@@ -84,13 +84,3 @@ echo "192.168.50.4 domswui-testbed" >> /etc/hosts
 sudo mkdir /newspapr_batches
 sudo chown vagrant /newspapr_batches
 sudo chmod 755 /newspapr_batches
-
-# It is better to install the DOMS using "vagrant ssh".
-#sudo -u -u vagrant "bash /vagrant/install_doms.sh"
-
-bash -x /vagrant/install_doms.sh
-
-echo "---"
-
-bash -x /vagrant/setup-newspapers.sh
-

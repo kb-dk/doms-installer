@@ -37,7 +37,7 @@ ln -s /vagrant/devel-config $HOME/devel-config
 
 cd ~
 wget -N "http://ftp.download-by.net/apache/zookeeper/stable/zookeeper-3.4.8.tar.gz"
-tar -xvzf zookeeper-3.4.8.tar.gz
+tar -xzf zookeeper-3.4.8.tar.gz
 cp /vagrant/zoo.cfg  $HOME/zookeeper-3.4.8/conf/
 bash $HOME/zookeeper-3.4.8/bin/zkServer.sh restart
 

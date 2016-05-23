@@ -28,8 +28,11 @@ Start vagrant (using virtualbox provider):
     cd src/vagrant
     vagrant up
 
-(may take 5-10 minutes and download quite a bit the first time).  Also
-SBOI and DOMS Wui Solr may take an additional while to initialize.  Check
+(may take 5-10 minutes and download quite a bit the first time).
+
+    vagrant ssh -c "nohup bash -x /vagrant/install_doms.sh; nohup bash -x /vagrant/setup-newspapers.sh"
+
+SBOI and DOMS Wui Solr will take a while to initialize.  Check
 the URLs below to see when they are ready and responsive.
 
 You now have a local, empty DOMS.
@@ -38,13 +41,7 @@ Create a snapshot to be able to easily revert to this point.
 
     vagrant snapshot save up
 
-Use
-
-    vagrant suspend
-
-instead of "vagrant halt" as efforts have not yet been done to ensure
-production quality of this image.
-
+This can be reverted to using the VirtualBox GUI directly.
 
 
 Inside vagrant:
@@ -57,17 +54,22 @@ Put batches in /newspapr-batches _inside_ vagrant machine: (link valid for PC599
 Update SBIO index, and run each of the autonomous components:
 
     vagrant ssh -c /vagrant/newspapers_poll.sh
-    vagrant ssh -c /vagrant/newspapers_poll.sh
-    vagrant ssh -c /vagrant/newspapers_poll.sh
 
 This command invokes several batch scripts to ensure all the work has been done.
 It is very important to do so, as the index must be up to date for the DOMS
-query routines to see any updates.
+query routines to see any updates.  Repeat after each change to DOMS data.
 
 
-
-Extra:
+Notes:
 ===
+
+Use
+
+    vagrant suspend
+
+instead of "vagrant halt" as efforts have not yet been done to ensure
+production quality of this image.
+
 
 Links work both inside vagrant box and outside.
 
