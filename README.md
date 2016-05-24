@@ -41,7 +41,8 @@ Create a snapshot to be able to easily revert to this point.
 
     vagrant snapshot save up
 
-This can be reverted to using the VirtualBox GUI directly.
+Do not use the VirtualBox gui to save and restore snapshots.  The
+file system mappings will not be properly handled.
 
 
 Inside vagrant:
@@ -67,8 +68,8 @@ Use
 
     vagrant suspend
 
-instead of "vagrant halt" as efforts have not yet been done to ensure
-production quality of this image.
+to stop working instead of "vagrant halt" as efforts have not yet been
+done to ensure production quality of this image.
 
 
 Links work both inside vagrant box and outside.
