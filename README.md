@@ -85,3 +85,7 @@ Access SBOI Solr:
 Access DOMS Wui Solr:
 
     http://localhost:58708/domswui/sbsolr/#/collection1/query
+
+Local pid generator:
+
+    http://localhost:7880/pidgenerator-service/rest/pids/generatePid
