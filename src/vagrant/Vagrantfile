@@ -9,24 +9,30 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty64"
   # config.vm.box = "chef/centos-6.5"
   config.vm.provision :shell, :name => "bootstrap.sh", :path => "bootstrap.sh"
+  # Tomcat med DOMS + Central Web-service.
   config.vm.network :forwarded_port, :host => 7880, :guest => 7880
+  # Java debug port (easy with Tomcat)
   config.vm.network :forwarded_port, :host => 8000, :guest => 8000
+  # Postgresql network port, high end to avoid clash with host install
   config.vm.network :forwarded_port, :host => 15432, :guest => 5432
+  # DOMS Wui Tomcat port
   config.vm.network :forwarded_port, :host => 58708, :guest => 58708
+  # SBOI Tomcat port
   config.vm.network :forwarded_port, :host => 58608, :guest => 58608
 
-
-  #Be able to get the artifacts
+  # Be able to get the artifacts from host Maven build.
   config.vm.synced_folder "../../target/", "/target"
 
   config.vm.provider "virtualbox" do |v|
     v.memory = 2048
-    v.cpus = 4
+    v.cpus = 2 # or more for heavy load
   end
 
+  # for VisualVM
   config.ssh.forward_x11 = true
 
-  #These network things are nessesary to make ubuntu work fast
+  # These network things are nessesary to make ubuntu work fast
+  # TODO: Insert links to Stackoverflow questions, and explain why!
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
     vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
@@ -35,8 +41,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :public_network, :nictype => 'virtio', :type => "dhcp", :use_dhcp_assigned_default_route => true
 
 
-
+  # For bash prompt when running along DOMS Gui-installer vagrant.
   config.vm.hostname = "doms-vagrant-testbed"
+  # For shared virtual network when running along DOMS Gui-installer vagrant.
   config.vm.network :private_network, :ip => "192.168.50.2", :virtualbox__intnet => "localvagrantnetwork"
 
 end
