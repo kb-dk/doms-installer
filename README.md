@@ -1,8 +1,11 @@
 Before starting:
 ===
 
+This was tested with a manually downloaded VirtualBox 5.0.20 on Ubuntu 16.04 LTS with OpenJDK 8 as java.
+
 The version of Vagrant shipping with Ubuntu 16.04 is 1.7.4.  Snapshot functionality in vagrant itself requires
-1.8.1.  If you need this install vagrant yourself.
+1.8.1.  If you need this install vagrant yourself from https://www.vagrantup.com/downloads.html.
+
 
 Note:  For now, use the VirtualBox GUI to restore snapshots.  "bootstrap.sh" is not properly
 written to reprovision the virtual machine as invoked with "vagrant snapshot restore".
@@ -35,7 +38,7 @@ Start vagrant (using virtualbox provider):
 SBOI and DOMS Wui Solr will take a while to initialize.  Check
 the URLs below to see when they are ready and responsive.
 
-You now have a local, empty DOMS.
+**You now have a local, empty DOMS**.
 
 Create a snapshot to be able to easily revert to this point.
 
@@ -48,7 +51,7 @@ file system mappings will not be properly handled.
 Inside vagrant:
 ===
 
-Put batches in /newspapr-batches _inside_ vagrant machine: (link valid for PC599)
+Put two well-known batches in /newspapr-batches _inside_ vagrant machine: (link valid for PC591)
 
     vagrant scp ~/ownCloud/2016-02-29/llo/standard\ pakker\ til\ repo/avis/Fjerritslev\ avis/. /newspapr_batches
 
@@ -59,6 +62,10 @@ Update SBIO index, and run each of the autonomous components:
 This command invokes several batch scripts to ensure all the work has been done.
 It is very important to do so, as the index must be up to date for the DOMS
 query routines to see any updates.  Repeat after each change to DOMS data.
+
+Repeat several times until both batches have been ingested.  This is indicated with log
+lines on the form
+`2016-07-12 ... PromptDomsIngesterComponent - result was: Worked on ... successfully`
 
 
 Notes:
@@ -72,7 +79,9 @@ to stop working instead of "vagrant halt" as efforts have not yet been
 done to ensure production quality of this image.
 
 
-Links work both inside vagrant box and outside.
+Links work both inside vagrant box and outside if the correct network interface
+was chosed for bridging during "vagrant up" (depending on host configuration
+vagrant may have asked).
 
 Access Fedora (fedoraAdmin/fedoraAdminPass):
 
