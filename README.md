@@ -48,14 +48,21 @@ Do not use the VirtualBox gui to save and restore snapshots.  The
 file system mappings will not be properly handled.
 
 
-Inside vagrant:
+Adding batches:
 ===
 
-Put two well-known batches in /newspapr-batches _inside_ vagrant machine: (link valid for PC591)
+Use something along these lines for copying in an existing, unpacked delivery into `/newspapr_batches` 
+_inside_ the vagrant machine: (links valid for PC591)
+ 
+1. Two sample batches from LLO:
 
-    vagrant scp ~/ownCloud/2016-02-29/llo/standard\ pakker\ til\ repo/avis/Fjerritslev\ avis/. /newspapr_batches
+    `vagrant scp ~/ownCloud/2016-02-29/llo/standard\ pakker\ til\ repo/avis/Fjerritslev\ avis/. /newspapr_batches`
 
-Update SBIO index, and run each of the autonomous components:
+2. Copy in digital-pligtaflevering-aviser-tools sample delivery:
+
+    `vagrant scp ~/git/digital-pligtaflevering-aviser-tools/delivery-samples/20160811-RT1 /newspapr_batches`
+    
+After changes update SBIO index, and run each of the autonomous components:
 
     vagrant ssh -c /vagrant/newspapers_poll.sh
 
