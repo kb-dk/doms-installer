@@ -26,7 +26,7 @@ function getComponent(){
     local classifier=$4
     local URL="https://sbforge.org/nexus/service/local/artifact/maven/redirect?r=snapshots&g=$groupID&a=$artifactID&v=LATEST&e=$type&c=$classifier"
     echo $URL
-    local file="$artifactID-LATEST-$classifier.$extension"
+    local file="$artifactID-LATEST-$classifier.$type"
     wget -q "$URL" -O "$file"
     echo ${file}
 

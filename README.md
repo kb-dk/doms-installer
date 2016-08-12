@@ -60,7 +60,7 @@ _inside_ the vagrant machine: (links valid for PC591)
 
 2. Copy in digital-pligtaflevering-aviser-tools sample delivery:
 
-    `vagrant scp ~/git/digital-pligtaflevering-aviser-tools/delivery-samples/20160811-RT1 /newspapr_batches`
+    `vagrant scp ~/git/digital-pligtaflevering-aviser-tools/delivery-samples/B20160811-RT1 /newspapr_batches/`
     
 After changes update SBIO index, and run each of the autonomous components:
 

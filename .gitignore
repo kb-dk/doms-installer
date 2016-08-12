@@ -6,3 +6,4 @@ target/
 *.iml
 *.ipr
 atlassian-ide-plugin.xml
+/src/vagrant/.vagrant/
