@@ -21,6 +21,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :forwarded_port, :host => 58708, :guest => 58708
   # SBOI Tomcat port
   config.vm.network :forwarded_port, :host => 58608, :guest => 58608
+  # Zookeeper lock server
+  config.vm.network :forwarded_port, :host => 2181, :guest => 2181
+
 
   # Be able to get the artifacts from host Maven build.
   config.vm.synced_folder "../../target/", "/target"
