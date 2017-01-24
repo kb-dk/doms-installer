@@ -22,7 +22,7 @@
 
     <Parameter name="fedora.updatetracker.web.password" value="$FEDORAUSERPASS$" override="false"/>
 
-    <Parameter name="fedora.updatetracker.delay" value="60000" override="false"/>
+    <Parameter name="fedora.updatetracker.delay" value="300000" override="false"/>
 
     <Parameter name="fedora.updatetracker.period" value="10000" override="false"/>
 

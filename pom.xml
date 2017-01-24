@@ -15,12 +15,13 @@
     <properties>
         <!-- Note: Releases of Summarise for SBOI are generated from the Summarise branch
         https://svn.statsbiblioteket.dk/svn/summarise/branches/newspapr -->
+<!--
         <sboi.summarise.version>2.8-SNAPSHOT</sboi.summarise.version>
         <domswui.summarise.version>1.3-SNAPSHOT</domswui.summarise.version>
-        <!--
-                <sboi.summarise.version>2.7</sboi.summarise.version>
-                <domswui.summarise.version>1.2</domswui.summarise.version>
-        -->
+-->
+
+        <sboi.summarise.version>2.7</sboi.summarise.version>
+        <domswui.summarise.version>1.2</domswui.summarise.version>
     </properties>
 
 
@@ -108,7 +109,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.installer</groupId>
             <artifactId>base-objects-ingester</artifactId>
-            <version>1.16</version>
+            <version>1.17-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
 
