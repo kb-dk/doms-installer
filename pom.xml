@@ -109,7 +109,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.installer</groupId>
             <artifactId>base-objects-ingester</artifactId>
-            <version>1.17-SNAPSHOT</version>
+            <version>1.17</version>
             <type>zip</type>
         </dependency>
 
@@ -211,6 +211,15 @@
             <version>1.1</version>
             <type>war</type>
         </dependency>
+
+        <!-- bitrepository reference to be installed inside vagrant if requested.  Belongs to the vagrant stuff. -->
+        <dependency>
+            <groupId>org.bitrepository.reference</groupId>
+            <artifactId>bitrepository-integration</artifactId>
+            <version>1.9-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -342,6 +351,35 @@
                     </execution>
                 </executions>
 
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>copy</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.bitrepository.reference</groupId>
+                                    <artifactId>bitrepository-integration</artifactId>
+                                    <type>tar.gz</type>
+                                    <classifier>quickstart</classifier>
+                                    <overWrite>yes</overWrite>
+                                    <outputDirectory>${project.build.directory}/artifacts-copied/</outputDirectory>
+                                    <destFileName>bitrepository-integration-quickstart.tar.gz</destFileName>
+                                </artifactItem>
+                            </artifactItems>
+                            <!-- other configurations here -->
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
