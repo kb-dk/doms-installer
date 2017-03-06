@@ -1,14 +1,6 @@
 #!/bin/bash
 
-export JAVA_HOME=/usr/lib/jvm/java-7-oracle/
-
-# Download visualvm from Oracle.  Consider looking at version in JDK.
-
-if [ ! -e visualvm_137.zip ]; then
-wget -N https://java.net/projects/visualvm/downloads/download/release137/visualvm_137.zip
-unzip -q visualvm_137.zip
-fi
-
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/
 
 INSTALL_DIR="$HOME/7880-doms"
 
@@ -27,7 +19,8 @@ echo "Getting doms from $installer"
 
 # Expected CWD is $HOME
 tar -xzf ${installer}
-rm -r $INSTALL_DIR
+# rm -r $INSTALL_DIR
+
 # Get name of unpacked testbed dir.
 installerDir=$(find * -maxdepth 0 -type d -name 'doms-installer-*' | head -1)
 
@@ -49,4 +42,4 @@ PGPASSWORD=xmltapesIndexPass psql -d xmltapesDatastreamIndex -U xmltapesIndex -h
 
 $installerDir/bin/install.sh $INSTALL_DIR
 
-rm -r $installerDir
+# rm -r $installerDir

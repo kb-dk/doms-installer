@@ -185,7 +185,7 @@
         <!--The database password-->
         <constructor-arg value="#{tapeObjectConfig.dbPass}" index="3"/>
     </bean>
-    
+
     <!--This is the tape store Akubra Implementation-->
     <bean name="tapeDatastreamStore"
           class="dk.statsbiblioteket.metadatarepository.xmltapes.akubra.XmlTapesBlobStore"

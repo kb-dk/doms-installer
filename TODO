@@ -1,0 +1,4 @@
+vagrant usage works a lot better if the context.xml.default.template
+has fedora.updatetracker.delay changed from 300000 to 60000.  A
+mechanism to do this is needed.
+
