@@ -44,7 +44,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.cpus = 2 # or more for heavy load
   end
 
-  # for jvisualvm
+  # Allow "vagrant ssh -- -Y" to run e.g. visualvm in the guest and display on the host
   config.ssh.forward_x11 = true
 
   # These network things are nessesary to make ubuntu work fast
@@ -56,10 +56,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   config.vm.network :public_network, :nictype => 'virtio', :type => "dhcp", :use_dhcp_assigned_default_route => true
 
-    # Easier naming disabled until we have a ruby snippet adding the CWD to the name.
-#  config.vm.provider :virtualbox do |v|
-#    v.name = "doms-vagrant-testbed-2"
-#  end
 
   # For bash prompt when running along DOMS Gui-installer vagrant.
   config.vm.hostname = "doms-vagrant-testbed"
@@ -67,6 +63,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :private_network, :ip => "192.168.50.2", :virtualbox__intnet => "localvagrantnetwork"
 
 
+  # Without a timezone the JVM generate date strings on a form our code does not expect.
   if Vagrant.has_plugin?("vagrant-timezone")
     config.timezone.value = :host
   end

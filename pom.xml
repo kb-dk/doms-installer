@@ -353,6 +353,9 @@
 
             </plugin>
 
+            <!-- Download the bitrepository quickstart distribution from Maven (which mean we do not need
+            to keep track of the physical location) and put it where the vagrant guest can see it.
+            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>

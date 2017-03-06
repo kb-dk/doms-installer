@@ -6,6 +6,9 @@
    * This needs an upgrade script, migrate_1.17.sh to be run
  * Use newest base-object-ingester, which does not bundle newspaper titles in every page object when harvester for Mediestream
    * This needs an upgrade script, migrate_1.16.sh to be run
+ * Vagrant changes from digital-pligtaflevering-aviser-tools backported. 
+   See https://sbprojects.statsbiblioteket.dk/fisheye/cru/AVIS-65
+
 
 2016-01-04 Release 1.25
 ======================

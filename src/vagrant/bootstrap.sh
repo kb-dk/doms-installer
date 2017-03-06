@@ -77,6 +77,6 @@ echo "192.168.50.4 domswui-testbed" >> /etc/hosts
 
 # and create batch folder
 
-sudo mkdir /newspapr_batches
-sudo chown vagrant /newspapr_batches
-sudo chmod 755 /newspapr_batches
+mkdir /newspapr_batches
+chown vagrant /newspapr_batches
+chmod 755 /newspapr_batches
