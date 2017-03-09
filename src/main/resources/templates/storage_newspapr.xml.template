@@ -152,6 +152,30 @@ This is not strictly necessary, but provides some optimization -->
                         <value class="string">1000000000</value>
                     </entry>
                 </xproperties>
+
+
+                <xproperties>
+                    <entry>
+                        <key>collectionBaseID</key>
+                        <value class="string">doms_sboi_dpaCollection</value>
+                    </entry>
+                    <entry>
+                        <key>collectionPID</key>
+                        <value class="string">doms:DPA_Collection</value>
+                    </entry>
+                    <entry>
+                        <key>viewID</key>
+                        <value class="string">SBOI</value>
+                    </entry>
+                    <entry>
+                        <key>State</key>
+                        <value class="string">NotDeleted</value>
+                    </entry>
+                    <entry>
+                        <key>MaxSizePerRetrieval</key>
+                        <value class="string">1000000000</value>
+                    </entry>
+                </xproperties>
             </value>
         </entry>
 
