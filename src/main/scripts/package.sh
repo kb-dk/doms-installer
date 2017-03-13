@@ -162,7 +162,7 @@ chmod +x $TOMCAT_DIR/bin/*.sh
 cp -v $CONFIG_TEMP_DIR/context.xml.default $TOMCAT_CONFIG_DIR/tomcat-context-params.xml
 
 # Install schemaStore "webservice" configuration
-mkdir $TOMCAT_APPS_DIR
+mkdir -p $TOMCAT_APPS_DIR
 cp -v $CONFIG_TEMP_DIR/schemaStore.xml $TOMCAT_APPS_DIR/schemaStore.xml
 
 # Set the session timeout to 1 min
