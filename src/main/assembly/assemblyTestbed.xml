@@ -270,10 +270,12 @@
             <outputDirectory>data/sboi-summarise</outputDirectory>
             <directory>${project.build.directory}/sboi-summarise</directory>
         </fileSet>
+<!--
         <fileSet>
             <outputDirectory>data/domswui-summarise</outputDirectory>
             <directory>${project.build.directory}/domswui-summarise</directory>
         </fileSet>
+-->
 
     </fileSets>
 
