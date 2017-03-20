@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <parent>
@@ -10,7 +9,7 @@
 
     <groupId>dk.statsbiblioteket.doms.installer</groupId>
     <artifactId>doms-installer</artifactId>
-    <version>1.26-SNAPSHOT</version>
+    <version>1.26</version>
 
     <properties>
         <!-- Note: Releases of Summarise for SBOI are generated from the Summarise branch
@@ -30,7 +29,7 @@
         <connection>scm:git:git://github.com/statsbiblioteket/doms-installer.git</connection>
         <developerConnection>scm:git:git@github.com:statsbiblioteket/doms-installer.git</developerConnection>
         <url>https://github.com/statsbiblioteket/doms-installer</url>
-        <tag>HEAD</tag>
+        <tag>doms-installer-1.26</tag>
     </scm>
 
     <profiles>
@@ -132,7 +131,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.metadatarepository</groupId>
             <artifactId>xmltapes</artifactId>
-            <version>1.3-SNAPSHOT</version>
+            <version>1.2</version>
             <classifier>bundle</classifier>
             <type>tar.gz</type>
         </dependency>
@@ -140,7 +139,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.metadatarepository</groupId>
             <artifactId>xmltapes-migrator</artifactId>
-            <version>1.3-SNAPSHOT</version>
+            <version>1.2</version>
             <classifier>bundle</classifier>
             <type>tar.gz</type>
         </dependency>
@@ -155,7 +154,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.updatetracker</groupId>
             <artifactId>updatetracker-fcrepo-decorator</artifactId>
-            <version>1.12-SNAPSHOT</version>
+            <version>1.11</version>
         </dependency>
 
         <dependency>
@@ -195,7 +194,7 @@
         <dependency>
             <groupId>dk.statsbiblioteket.doms.central</groupId>
             <artifactId>centralWebservice-service</artifactId>
-            <version>1.22-SNAPSHOT</version>
+            <version>1.21</version>
             <type>war</type>
         </dependency>
         <dependency>
@@ -235,12 +234,12 @@
                         </goals>
                         <configuration>
                             <target>
-                                <mkdir dir="${project.build.directory}/sboi-summarise/"/>
+                                <mkdir dir="${project.build.directory}/sboi-summarise/" />
                                 <!--
                                 <scp knownhosts="${project.basedir}/known_hosts" file="fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${env.SSH_KEY}" />
                                 -->
                                 <exec failonerror="true" executable="rsync">
-                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${sboi.summarise.version}/* &quot;${project.build.directory}/sboi-summarise/&quot;"/>
+                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${sboi.summarise.version}/* &quot;${project.build.directory}/sboi-summarise/&quot;" />
 
                                     <!--
                                     <arg line="-av /Users/ravn/Downloads/newspapr-${sboi.summarise.version}.zip &quot;${project.build.directory}/sboi-summarise/&quot;" />
@@ -258,12 +257,12 @@
                         </goals>
                         <configuration>
                             <target>
-                                <mkdir dir="${project.build.directory}/domswui-summarise/"/>
+                                <mkdir dir="${project.build.directory}/domswui-summarise/" />
                                 &lt;!&ndash;
                                 <scp knownhosts="${project.basedir}/known_hosts" file="fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${env.SSH_KEY}" />
                                 &ndash;&gt;
                                 <exec failonerror="true" executable="rsync">
-                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domswui-${domswui.summarise.version}/* &quot;${project.build.directory}/domswui-summarise/&quot;"/>
+                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domswui-${domswui.summarise.version}/* &quot;${project.build.directory}/domswui-summarise/&quot;" />
                                     &lt;!&ndash;
                                     <arg line="-av /Users/ravn/Downloads/domswui-${domswui.summarise.version}.zip &quot;${project.build.directory}/domswui-summarise/&quot;" />
                                                 &ndash;&gt;
