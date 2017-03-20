@@ -1,13 +1,22 @@
-2016-??-?? Release 1.26
+2016-03-20 Release 1.26
 ======================
- * Update default update tracker delay from 1 to 5 minutes
- * Add documentation for local Vagrant test-installs
- * Use newest base-object-ingester, which provides the DPA datamodel
-   * This needs an upgrade script, migrate_1.17.sh to be run
- * Use newest base-object-ingester, which does not bundle newspaper titles in every page object when harvester for Mediestream
-   * This needs an upgrade script, migrate_1.16.sh to be run
- * Vagrant changes from digital-pligtaflevering-aviser-tools backported. 
-   See https://sbprojects.statsbiblioteket.dk/fisheye/cru/AVIS-65
+ 
+ * Vagrant (no change for Drift)
+    * Vagrant scripts updated from DPA (no change for Drift)
+    * Add documentation for local Vagrant test-installs
+    * Vagrant changes from digital-pligtaflevering-aviser-tools backported. 
+        See https://sbprojects.statsbiblioteket.dk/fisheye/cru/AVIS-65
+ * Testbed (no change for Drift)
+    * Testbed no longer includes DomsWui instance
+    * Lift bitrepository dependency version from SNAPSHOT to 1.9
+    * Use the dpa enabled sboi (2.8-SNAPSHOT)
+ * Drift
+    * Update default update tracker delay from 1 to 5 minutes
+    * Use newest base-object-ingester, which provides the DPA datamodel
+        * This needs an upgrade script, migrate_1.17.sh to be run
+    * Use newest base-object-ingester, which does not bundle newspaper titles in every page object when harvester for Mediestream
+        * This needs an upgrade script, migrate_1.16.sh to be run
+
 
 
 2016-01-04 Release 1.25
