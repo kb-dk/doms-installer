@@ -13,5 +13,5 @@ rsync \
 wget \
     --timestamping \
     --no-if-modified-since \
-    https://archive.apache.org/dist/tomcat/tomcat-6/v6.0.33/bin/apache-tomcat-6.0.33.tar.gz \
+    https://archive.apache.org/dist/tomcat/tomcat-6/v6.0.33/bin/apache-tomcat-6.0.33.zip \
     --directory-prefix=${SCRIPT_DIR}/docker/sboi/
