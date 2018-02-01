@@ -1,0 +1,59 @@
+version: '3'
+# Version 3 requires a fairly new docker compose.
+
+#
+#networks:
+#  #Due to me wanting the autonomous components (in another compose project) to link to these services, they must be on the same network
+#  #Default creates a network for each project per default, so we must set the network explicitly
+#  #But then it is not autocreated, so you must create it once with this command
+#  #   docker network create domsNetwork
+#  default:
+#    external:
+#      name: domsNetwork
+
+services:
+  db:
+    build:
+      context: docker/postgres
+      dockerfile: Dockerfile.db
+    image: postgres
+    environment:
+     - POSTGRES_PASSWORD=mysecretpassword
+    expose: #Meaning only accessible to linked containers
+      - "5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+
+  doms:
+    build:
+      context: ./
+      dockerfile: Dockerfile.doms
+    ports:
+      - "7880:7880"
+    volumes:
+      - ./data/doms:/doms-data/
+    links:
+      - db
+    depends_on:
+      - db
+
+  sboi:
+    build: #Hardcoded config values that match the ones in doms above
+      context: ./docker/sboi
+      dockerfile: Dockerfile.sboi
+    ports:
+      - "58608:58608"
+    volumes:
+      - ./data/sboi:/persistent/
+    links:
+      - doms
+    depends_on:
+      - doms
+
+  zookeeper:
+    build:
+      context: ./docker/zookeeper
+      dockerfile: Dockerfile.zookeeper
+    ports:
+      - "2181:2181"
+    restart: always
