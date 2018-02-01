@@ -4,12 +4,12 @@ WORKDIR /root
 
 COPY pom.xml .
 
-RUN mvn --settings /usr/share/maven/ref/settings-docker.xml  org.apache.maven.plugins:maven-dependency-plugin:3.0.2:go-offline
+RUN mvn -P!testbed,!vagrant --settings /usr/share/maven/ref/settings-docker.xml  org.apache.maven.plugins:maven-dependency-plugin:3.0.2:go-offline
 
 COPY src /root/src
 COPY docs /root/docs
 
-RUN mvn --settings /usr/share/maven/ref/settings-docker.xml -DskipTests package
+RUN mvn -P!testbed,!vagrant --settings /usr/share/maven/ref/settings-docker.xml -DskipTests package
 
 
 FROM tomcat:6.0.45-jre7
