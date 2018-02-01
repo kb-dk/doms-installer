@@ -1,0 +1,55 @@
+FROM openjdk:7-jre
+
+RUN apt-get update -q; apt-get install -y zip less cron vim
+
+ENV summarise_install_dir=/usr/local/sboi-summarise
+ENV summarise_storage_dir=/sboi-data
+
+RUN mkdir -p ${summarise_storage_dir} && \
+    cd ${summarise_storage_dir} && \
+    mkdir -p data && \
+    mkdir -p index && \
+    mkdir -p suggest && \
+    mkdir -p storage && \
+    mkdir -p dump && \
+    mkdir -p progress && \
+    mkdir -p summix-storage;
+
+WORKDIR ${summarise_install_dir}
+
+ADD newspapr-*.zip .
+ADD summix-*.zip summix-storage/
+ADD apache-tomcat-*.zip .
+
+RUN unzip newspapr-\*.zip && \
+    rm newspapr-*.zip
+
+RUN ln -s ${summarise_storage_dir}/data data; \
+    ln -s ${summarise_storage_dir}/index index; \
+    ln -s ${summarise_storage_dir}/suggest suggest; \
+    ln -s ${summarise_storage_dir}/storage storage; \
+    ln -s ${summarise_storage_dir}/dump dump; \
+    ln -s ${summarise_storage_dir}/progress progress;
+
+RUN sed -i -e "s/^site.portrange=[0-9]{3}$/site.portrange=586/" site.properties; \
+    sed -i -e 's|^\(\s*<value class="string">\)\(progress_in[^<]*\.xml\)\(</value>\s*\)$|\1'${summarise_install_dir}'\/progress\/\2\3|' config/in*.xml
+
+# Hack, better to replace relevant values
+ADD storage_newspapr.xml config/storage_newspapr.xml
+
+RUN bin/setup.sh && bin/deploy.sh
+
+# Add crontab file in the cron directory
+ADD crontab /etc/cron.d/sboi-cron
+
+# Give execution rights on the cron job
+RUN chmod 0644 /etc/cron.d/sboi-cron
+
+ADD dockerEntry.sh /bin/
+
+ENTRYPOINT /bin/dockerEntry.sh
+
+#Hack to fix less WARNING: terminal is not fully functional
+RUN echo "export TERM=xterm" >> /root/.bashrc
+#Set java home...
+RUN echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre/" >> /root/.bashrc
