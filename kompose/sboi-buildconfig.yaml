@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  annotations:
+    kompose.cmd: kompose convert --provider openshift --build build-config
+    kompose.version: 1.6.0 (e4adfef)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: sboi
+  name: sboi
+spec:
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: sboi:latest
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    contextDir: docker/sboi/
+    git:
+      ref: openshift
+      uri: git@github.com:statsbiblioteket/doms-installer.git
+    type: Git
+  strategy:
+    dockerStrategy:
+      dockerfilePath: Dockerfile.sboi
+    type: Docker
+  triggers:
+  - type: ConfigChange
+status:
+  lastVersion: 0
