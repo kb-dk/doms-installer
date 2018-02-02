@@ -59,3 +59,8 @@ ENV PATH=$PATH:/$DISTRO_NAME/bin \
 COPY docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["zkServer.sh", "start-foreground"]
+
+#Attempt to fix permission problem https://docs.openshift.org/latest/creating_images/guidelines.html#use-uid
+RUN chgrp -R 0 $ZOO_CONF_DIR $ZOO_DATA_DIR $ZOO_DATA_LOG_DIR \
+    && \
+    chmod -R g=u $ZOO_CONF_DIR $ZOO_DATA_DIR $ZOO_DATA_LOG_DIR
