@@ -23,7 +23,7 @@ spec:
         kind: ImageStreamTag
         name: doms-maven:latest
       paths:
-      - destinationDir: /root/target
+      - destinationDir: target
         sourcePath: /root/target
     git:
       ref: openshift
@@ -31,7 +31,7 @@ spec:
     type: Git
   strategy:
     dockerStrategy:
-      dockerfilePath: docker/doms/Dockerfile.doms.postbuild
+      dockerfilePath: docker/doms/Dockerfile.doms.tomcat
     type: Docker
   triggers:
   - type: ConfigChange

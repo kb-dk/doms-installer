@@ -7,7 +7,7 @@ ENV tomcatDir=/usr/local/tomcat
 RUN mkdir -p ${installDir}
 WORKDIR ${installDir}
 
-COPY /root/target/doms-installer-*-installer.tar.gz ${installDir}
+COPY target/doms-installer-*-installer.tar.gz ${installDir}
 
 RUN tar -xvzf ${installDir}/doms-installer-*-installer.tar.gz && rm ${installDir}/doms-installer-*-installer.tar.gz;
 

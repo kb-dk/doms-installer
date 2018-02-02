@@ -4,13 +4,13 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: doms
-  name: doms
+  name: doms-maven
 spec:
   tags:
   - annotations: null
     from:
       kind: DockerImage
-      name: doms
+      name: doms-maven
     generation: null
     importPolicy: {}
     name: latest

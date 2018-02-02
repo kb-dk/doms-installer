@@ -24,7 +24,7 @@ spec:
     type: Git
   strategy:
     dockerStrategy:
-      dockerfilePath: docker/doms/Dockerfile.doms.prebuild
+      dockerfilePath: docker/doms/Dockerfile.doms.maven
     type: Docker
   triggers:
   - type: ConfigChange
