@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - image: ' '
-        name: doms
+        name: doms-tomcat
         ports:
         - containerPort: 7880
         resources: {}
@@ -44,6 +44,6 @@ spec:
       - doms
       from:
         kind: ImageStreamTag
-        name: doms:latest
+        name: doms-tomcat:latest
     type: ImageChange
 status: {}
