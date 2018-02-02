@@ -23,7 +23,7 @@ spec:
         kind: ImageStreamTag
         name: doms-maven:latest
       paths:
-      - destinationDir: target
+      - destinationDir: build/
         sourcePath: /root/target
     git:
       ref: openshift

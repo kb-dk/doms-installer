@@ -1,0 +1,9 @@
+Added public key 
+
+    ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpxpIkkT5coKEIRYe37hxLgIHjNogaERGwIR0LRoHPh+tdoYUmlh/lzIiN3wOI9N/L38huTGyf7EZMQpLjt0D7uepiOYSxAUscpEjKB3OAiJVbfvNoT1vllWonDGVBHSe+w9Zip2tBcqL+zRRPipfNNILFegh2OHIVim/h21mZCFNrMv1sQQJ2YwCBWO34vv3JJHeJZ2EcpcyNY9ReBEEGGZBJd9r/E9LbqTC5v1hvhPqt9FHE8KiCe/B7UP2cD1E/ZCbQv1ZId4vbxDi3r0M/I6PP9hdQ6LhyB0ClgPlJy2u9yBRpqAUQvFhRNKy6Fa3D+EdILzhh89I8Zu5s4/v3 my_secret_key_for_OpenShift
+to fedora@alhena:.ssh/authorized_keys
+
+Created a secret with the corresponding private key (from dvdripper)
+
+Linked that into sboi-buildconfig.yaml
+
