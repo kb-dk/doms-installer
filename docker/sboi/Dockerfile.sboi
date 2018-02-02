@@ -21,7 +21,7 @@ WORKDIR ${summarise_install_dir}
 
 RUN rsync \
     -avz \
-    -e "ssh -i ssh_key/my-secret-key-for-openshift -o StrictHostKeyChecking=no" \
+    -e "ssh -i ssh_key/ssh-privatekey -o StrictHostKeyChecking=no" \
     fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-$SBOI_SUMMARISE_VERSION/* \
     .
 
