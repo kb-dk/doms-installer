@@ -1,6 +1,6 @@
 FROM openjdk:7-jre
 
-RUN apt-get update -q; apt-get install -y zip less cron vim
+RUN apt-get update -q; apt-get install -y zip less cron vim xmlstarlet
 
 ENV summarise_install_dir=/usr/local/sboi-summarise
 ENV summarise_storage_dir=/sboi-data
@@ -31,11 +31,29 @@ RUN ln -s ${summarise_storage_dir}/data data; \
     ln -s ${summarise_storage_dir}/dump dump; \
     ln -s ${summarise_storage_dir}/progress progress;
 
-RUN sed -i -e "s/^site.portrange=[0-9]{3}$/site.portrange=586/" site.properties; \
-    sed -i -e 's|^\(\s*<value class="string">\)\(progress_in[^<]*\.xml\)\(</value>\s*\)$|\1'${summarise_install_dir}'\/progress\/\2\3|' config/in*.xml
 
-# Hack, better to replace relevant values
-ADD storage_newspapr.xml config/storage_newspapr.xml
+RUN sed -i -e "s/^site.portrange=[0-9]{3}$/site.portrange=586/" site.properties \
+    && \
+    xmlstarlet ed \
+           --pf \
+           --inplace \
+           --insert "//entry[key/text()='summa.storage.recordreader.progressfile']/value/text()" \
+           --type 'text' \
+           -n "name" \
+           --value "${summarise_install_dir}/" \
+           config/in*.xml \
+    && \
+    xmlstarlet ed \
+           --inplace \
+           --update "/xproperties/xproperties/entry[key/text()='DOMSWebserviceURL']/value" \
+           --value "http://doms:7880/centralWebservice-service/central/?wsdl" \
+           config/storage_newspapr.xml \
+    && \
+    xmlstarlet ed \
+           --inplace \
+           --update "/xproperties/xproperties/entry[key/text()='DOMSPassword']/value" \
+           --value "fedoraAdminPass" \
+           config/storage_newspapr.xml
 
 RUN bin/setup.sh && bin/deploy.sh
 
@@ -48,8 +66,3 @@ RUN chmod 0644 /etc/cron.d/sboi-cron
 ADD dockerEntry.sh /bin/
 
 ENTRYPOINT /bin/dockerEntry.sh
-
-#Hack to fix less WARNING: terminal is not fully functional
-RUN echo "export TERM=xterm" >> /root/.bashrc
-#Set java home...
-RUN echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre/" >> /root/.bashrc
