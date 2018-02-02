@@ -19,15 +19,11 @@ RUN mkdir -p ${summarise_storage_dir} && \
 
 WORKDIR ${summarise_install_dir}
 
-ADD newspapr-*.zip .
-ADD summix-*.zip summix-storage/
-
 RUN rsync \
     -avz \
     -e "ssh -i ssh_key/my-secret-key-for-openshift -o StrictHostKeyChecking=no" \
     fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-$SBOI_SUMMARISE_VERSION/* \
     .
-
 
 ADD https://archive.apache.org/dist/tomcat/tomcat-6/v6.0.33/bin/apache-tomcat-6.0.33.zip .
 

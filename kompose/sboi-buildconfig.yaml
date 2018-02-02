@@ -22,6 +22,10 @@ spec:
     git:
       ref: openshift
       uri: https://github.com/statsbiblioteket/doms-installer.git
+    secrets:
+      - destinationDir: ssh_key
+        secret:
+          name: my-secret-key-for-openshift
     type: Git
   strategy:
     dockerStrategy:
