@@ -21,7 +21,7 @@ spec:
     contextDir: docker/zookeeper/
     git:
       ref: openshift
-      uri: git@github.com:statsbiblioteket/doms-installer.git
+      uri: https://github.com/statsbiblioteket/doms-installer.git
     type: Git
   strategy:
     dockerStrategy:
