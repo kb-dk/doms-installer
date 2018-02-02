@@ -19,9 +19,10 @@ RUN mkdir -p ${summarise_storage_dir} && \
 
 WORKDIR ${summarise_install_dir}
 
+ADD ssh_key/ssh-privatekey ssh-privatekey
 RUN rsync \
     -avz \
-    -e "ssh -i ssh_key/ssh-privatekey -o StrictHostKeyChecking=no" \
+    -e "ssh -i ssh-privatekey -o StrictHostKeyChecking=no" \
     fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-$SBOI_SUMMARISE_VERSION/* \
     .
 
