@@ -1,0 +1,24 @@
+FROM tomcat:6.0.45-jre7
+
+ENV installDir=/usr/local/doms
+ENV storageDir=/doms-data
+ENV tomcatDir=/usr/local/tomcat
+
+RUN mkdir -p ${installDir}
+WORKDIR ${installDir}
+
+COPY /root/target/doms-installer-*-installer.tar.gz ${installDir}
+
+RUN tar -xvzf ${installDir}/doms-installer-*-installer.tar.gz && rm ${installDir}/doms-installer-*-installer.tar.gz;
+
+ADD docker/doms/setenv.sh ${installDir}/
+
+ADD docker/doms/dockerEntry.sh /bin/
+
+RUN apt-get update && \
+    apt-get install -y zip less psmisc
+
+RUN mv ${installDir}/setenv.sh ${installDir}/doms-installer-*/bin/ && \
+    ${installDir}/doms-installer-*/bin/package.sh ${installDir}
+
+ENTRYPOINT /bin/dockerEntry.sh

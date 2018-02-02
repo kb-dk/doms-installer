@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  annotations:
+    kompose.cmd: kompose convert --provider openshift --build build-config
+    kompose.version: 1.6.0 (e4adfef)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: doms
+  name: doms-maven
+spec:
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: doms-maven:latest
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    git:
+      ref: openshift
+      uri: https://github.com/statsbiblioteket/doms-installer.git
+    type: Git
+  strategy:
+    dockerStrategy:
+      dockerfilePath: docker/doms/Dockerfile.doms.prebuild
+    type: Docker
+  triggers:
+  - type: ConfigChange
+status:
+  lastVersion: 0
