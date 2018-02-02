@@ -2,15 +2,20 @@
 
 
 echo Creating storage folder ${summarise_storage_dir}
-mkdir -p ${summarise_storage_dir}
-pushd ${summarise_storage_dir}
-mkdir data index suggest storage dump progress summix-storage
-popd
+mkdir -p \
+    ${summarise_storage_dir}/data \
+    ${summarise_storage_dir}/index \
+    ${summarise_storage_dir}/suggest \
+    ${summarise_storage_dir}/storage \
+    ${summarise_storage_dir}/dump \
+    ${summarise_storage_dir}/progress \
+    ${summarise_storage_dir}/summix-storage
 
 bin/start_resident.sh
 
-# Run the command on container startup
+# In a docker container, cron does not start automatically, so start it here
 cron
+# see crontab to see how we use cron to run updates every 5 mins
 
 #TODO fix firstrun
 
