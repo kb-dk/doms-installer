@@ -10,6 +10,7 @@
 
         <dependencySet>
             <outputDirectory>webservices</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
             <includes>
                 <include>dk.statsbiblioteket.doms.*:*:war:*:*</include>
             </includes>

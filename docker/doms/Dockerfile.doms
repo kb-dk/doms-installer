@@ -36,6 +36,3 @@ RUN mv ${installDir}/setenv.sh ${installDir}/doms-installer-*/bin/ && \
     ${installDir}/doms-installer-*/bin/package.sh ${installDir}
 
 ENTRYPOINT /bin/dockerEntry.sh
-
-#Hack to fix less WARNING: terminal is not fully functional
-RUN echo "export TERM=xterm" >> /root/.bashrc

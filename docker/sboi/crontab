@@ -1,2 +1,11 @@
-*/5 * * * * root . /root/.bashrc; date >> /var/log/cron.log 2>&1; /usr/local/sboi-summarise/bin/ingest_update.sh >> /var/log/cron.log 2>&1; /usr/local/sboi-summarise/bin/index_update.sh >> /var/log/cron.log 2>&1
+SHELL=/bin/bash
+
+JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre/
+
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sboi-summarise/bin/
+
+LOCKFILE=/tmp/sboi.lock
+
+*/1 * * * * root (flock --nonblock $LOCKFILE --command "ingest_update.sh -v; index_update.sh -v") >> /var/log/sboi-crontab.log 2>&1
+
 # An empty line is required at the end of this file for a valid cron file.
