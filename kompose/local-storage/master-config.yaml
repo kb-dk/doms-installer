@@ -116,7 +116,12 @@ kubernetesMasterConfig:
     - etcd3
     storage-media-type:
     - application/vnd.kubernetes.protobuf
-  controllerArguments: null
+    feature-gates:
+     - PersistentLocalVolumes=true
+  controllerArguments:
+    apiServerArguments:
+       feature-gates:
+       - PersistentLocalVolumes=true
   masterCount: 1
   masterIP: 10.5.0.130
   podEvictionTimeout: null
@@ -210,3 +215,6 @@ servingInfo:
   requestTimeoutSeconds: 3600
 volumeConfig:
   dynamicProvisioningEnabled: true
+
+
+#https://docs.openshift.com/container-platform/3.7/install_config/configuring_local.html#install-config-configuring-local
