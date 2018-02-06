@@ -19,7 +19,8 @@ WORKDIR ${summarise_install_dir}
 
 ADD newspapr-*.zip .
 ADD summix-*.zip summix-storage/
-ADD apache-tomcat-*.zip .
+
+ADD https://archive.apache.org/dist/tomcat/tomcat-6/v6.0.33/bin/apache-tomcat-6.0.33.zip .
 
 RUN unzip newspapr-\*.zip && \
     rm newspapr-*.zip
