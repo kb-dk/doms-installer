@@ -1,17 +1,21 @@
 #!/usr/bin/env bash
 
 SCRIPT_DIR=$(dirname $(readlink -f $BASH_SOURCE[0]))
+
 SSH_KEY=$HOME/.ssh/id_rsa
-SBOI_SUMMARISE_VERSION=2.8-SNAPSHOT
+
+SBOI_SUMMARISE_VERSION=$(\
+    xmlstarlet sel \
+            -N pom='http://maven.apache.org/POM/4.0.0' \
+           --template \
+           --value-of \
+           "/pom:project/pom:profiles/pom:profile[pom:id/text()='testbed']/pom:properties/pom:sboi.summarise.version" \
+           $SCRIPT_DIR/pom.xml
+)
 
 rsync \
     -avz \
-    -e "ssh -i ${SSH_KEY} -o UserKnownHostsFile=\"$SCRIPT_DIR/known_hosts\"" \
+    -e "ssh -i ${SSH_KEY} -o StrictHostKeyChecking=no" \
     fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-$SBOI_SUMMARISE_VERSION/* \
     ${SCRIPT_DIR}/docker/sboi/
 
-wget \
-    --timestamping \
-    --no-if-modified-since \
-    https://archive.apache.org/dist/tomcat/tomcat-6/v6.0.33/bin/apache-tomcat-6.0.33.zip \
-    --directory-prefix=${SCRIPT_DIR}/docker/sboi/
