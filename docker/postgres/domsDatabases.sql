@@ -1,3 +1,5 @@
+-- FIXME: passwords should be set from global configuration
+
 CREATE ROLE "domsFieldSearch" LOGIN PASSWORD 'domsFieldSearchPass'
 NOINHERIT CREATEDB
 VALID UNTIL 'infinity';
