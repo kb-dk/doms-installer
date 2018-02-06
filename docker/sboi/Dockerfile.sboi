@@ -1,6 +1,6 @@
 FROM openjdk:7-jre
 
-RUN apt-get update -q; apt-get install -y zip less cron vim xmlstarlet
+RUN apt-get update -q; apt-get install -y zip less cron vim xmlstarlet lsof
 
 ENV summarise_install_dir=/usr/local/sboi-summarise
 ENV summarise_storage_dir=/sboi-data
@@ -15,6 +15,7 @@ RUN mkdir -p ${summarise_storage_dir} && \
     mkdir -p progress && \
     mkdir -p summix-storage;
 
+# Copy in distribution artifacts
 WORKDIR ${summarise_install_dir}
 
 ADD newspapr-*.zip .
