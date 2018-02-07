@@ -129,7 +129,7 @@
                                     <target>
                                         <mkdir dir="${project.build.directory}/sboi-summarise/" />
                                         <exec failonerror="true" executable="rsync">
-                                            <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${sboi.summarise.version}/* &quot;${project.build.directory}/sboi-summarise/&quot;" />
+                                            <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o StrictHostKeyChecking=no' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${sboi.summarise.version}/* &quot;${project.build.directory}/sboi-summarise/&quot;" />
                                         </exec>
                                     </target>
                                 </configuration>
@@ -183,13 +183,6 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
-        </repository>
-        <repository>
-            <id>myGrid</id>
-            <url>http://www.mygrid.org.uk/maven/repository/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
         </repository>
     </repositories>
     <pluginRepositories>
