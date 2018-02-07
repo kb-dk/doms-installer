@@ -6,17 +6,24 @@ SCRIPT_DIR=$(dirname $(readlink -f $BASH_SOURCE[0]))
 DISK_NR=$1
 SIZE=$2
 
+#TODO fail if params 1 and 2 are not set...
+
 set -x
 set -e
 
 IMG=$SCRIPT_DIR/disk_$DISK_NR
-DEV=/dev/loop_$DISK_NR
 MOUNT=/mnt/local-storage/hdd/disk_$DISK_NR
 
-# Create a 100M file as the file_system
+#Umount if already mounted
+mount | grep ${MOUNT} && umount ${MOUNT}
+
+#Detach if already detached
+losetup --associated $IMG | cut -d':' -f1 | xargs -r -I'{}' losetup --detach '{}'
+
+# Create a X M file as the file_system
 dd if=/dev/zero of=$IMG bs=1M count=$SIZE
 
-losetup --find --show $IMG
+DEV=$(losetup --find --show $IMG)
 
 mkfs -t ext4 -m 1 -v $DEV
 
