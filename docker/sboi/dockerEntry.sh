@@ -15,8 +15,8 @@ bin/start_resident.sh
 
 # In a docker container, cron does not start automatically, so start it here
 cron
-# see crontab to see how we use cron to run updates every 1 mins.
-# In prod, we run every 5 mins, but for development, a faster update cycle is preferred
+# see crontab to see how we use cron to run updates every X mins.
+# In prod, we run every 5 mins, but for development, a faster update cycle is often preferred
 
 #TODO fix firstrun
 
