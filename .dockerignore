@@ -1,0 +1,24 @@
+
+#Git
+.git/
+
+#Docker
+docker/*
+!docker/doms
+
+#Maven
+target/
+
+#Eclipse
+.project
+.settings/*
+
+# intellij
+.idea/
+*.iws
+*.iml
+*.ipr
+atlassian-ide-plugin.xml
+
+#Vagrant
+src/vagrant/

@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <parent>
@@ -11,16 +12,6 @@
     <artifactId>doms-installer</artifactId>
     <version>1.27-SNAPSHOT</version>
 
-    <properties>
-        <!-- Note: Releases of Summarise for SBOI are generated from the Summarise branch
-        https://svn.statsbiblioteket.dk/svn/summarise/branches/newspapr -->
-<!--
-        <sboi.summarise.version>2.8-SNAPSHOT</sboi.summarise.version>
-        <domswui.summarise.version>1.3-SNAPSHOT</domswui.summarise.version>
--->
-
-        <sboi.summarise.version>2.8</sboi.summarise.version>
-    </properties>
 
 
     <packaging>pom</packaging>
@@ -34,17 +25,179 @@
 
     <profiles>
         <profile>
-            <id>sshkey</id>
+            <id>vagrant</id>
             <activation>
-                <property>
-                    <name>!env.SSH_KEY</name>
-                </property>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <dependencies>
+                <!-- bitrepository reference to be installed inside vagrant if requested.  Belongs to the vagrant stuff. -->
+                <dependency>
+                    <groupId>org.bitrepository.reference</groupId>
+                    <artifactId>bitrepository-integration</artifactId>
+                    <version>1.9</version>
+                    <scope>test</scope>
+                </dependency>
+            </dependencies>
+            <build>
+                <plugins>
+                    <!-- Download the bitrepository quickstart distribution from Maven (which mean we do not need to keep track of the physical location) and put it where the vagrant guest can see it. -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <version>3.0.0</version>
+                        <executions>
+                            <execution>
+                                <id>copy</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>copy</goal>
+                                </goals>
+                                <configuration>
+                                    <artifactItems>
+                                        <artifactItem>
+                                            <groupId>org.bitrepository.reference</groupId>
+                                            <artifactId>bitrepository-integration</artifactId>
+                                            <type>tar.gz</type>
+                                            <classifier>quickstart</classifier>
+                                            <overWrite>yes</overWrite>
+                                            <outputDirectory>${project.build.directory}/artifacts-copied/</outputDirectory>
+                                            <destFileName>bitrepository-integration-quickstart.tar.gz</destFileName>
+                                        </artifactItem>
+                                    </artifactItems>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- ensure that developer-config/ is present! -->
+                    <!-- http://maven.apache.org/enforcer/enforcer-rules/requireFilesExist.html -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-enforcer-plugin</artifactId>
+                        <version>1.4.1</version>
+                        <executions>
+                            <execution>
+                                <id>enforce-files-exist</id>
+                                <goals>
+                                    <goal>enforce</goal>
+                                </goals>
+                                <configuration>
+                                    <rules>
+                                        <requireFilesExist>
+                                            <message>*** devel-config not present - check README.md for cloning instructions ***</message>
+                                            <files>
+                                                <file>${project.basedir}/src/vagrant/devel-config</file>
+                                            </files>
+                                        </requireFilesExist>
+                                    </rules>
+                                    <fail>true</fail>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>testbed</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <env.SSH_KEY>${user.home}/.ssh/id_rsa</env.SSH_KEY>
+                <!-- Note: Releases of Summarise for SBOI are generated from the Summarise branch
+                        https://svn.statsbiblioteket.dk/svn/summarise/branches/newspapr -->
+                <!--
+                        <sboi.summarise.version>2.8-SNAPSHOT</sboi.summarise.version>
+                        <domswui.summarise.version>1.3-SNAPSHOT</domswui.summarise.version>
+                -->
+                <sboi.summarise.version>2.8</sboi.summarise.version>
             </properties>
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>1.7</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <id>sboi summa</id>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <target>
+                                        <mkdir dir="${project.build.directory}/sboi-summarise/" />
+                                        <exec failonerror="true" executable="rsync">
+                                            <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o StrictHostKeyChecking=no' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${sboi.summarise.version}/* &quot;${project.build.directory}/sboi-summarise/&quot;" />
+                                        </exec>
+                                    </target>
+                                </configuration>
+                            </execution>
+                        </executions>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.apache.ant</groupId>
+                                <artifactId>ant-jsch</artifactId>
+                                <version>1.8.2</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-assembly-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <configuration>
+                                    <descriptors>
+                                        <descriptor>src/main/assembly/assemblyTestbed.xml</descriptor>
+                                    </descriptors>
+                                    <tarLongFileMode>gnu</tarLongFileMode>
+                                    <ignoreMissingDescriptor>true</ignoreMissingDescriptor>
+                                </configuration>
+                                <id>make-assembly-testbed</id>
+                                <!-- this is used for inheritance merges -->
+                                <phase>package</phase>
+                                <!-- append to the packaging phase. -->
+                                <goals>
+                                    <goal>single</goal>
+                                    <!-- goals == mojos -->
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                </plugins>
+            </build>
         </profile>
     </profiles>
+
+    <!--Enable snapshots for the built in central repo to direct -->
+    <!--all requests to nexus via the mirror -->
+    <repositories>
+        <repository>
+            <id>sbforge-nexus</id>
+            <url>https://sbforge.org/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>sbforge-nexus</id>
+            <url>https://sbforge.org/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
 
     <dependencies>
         <dependency>
@@ -71,10 +224,6 @@
                <classifier>bundle</classifier>
                <type>zip</type>
            </dependency>
-
-
-
-
 
            <dependency>
                <groupId>dk.statsbiblioteket.medieplatform</groupId>
@@ -210,79 +359,14 @@
             <type>war</type>
         </dependency>
 
-        <!-- bitrepository reference to be installed inside vagrant if requested.  Belongs to the vagrant stuff. -->
-        <dependency>
-            <groupId>org.bitrepository.reference</groupId>
-            <artifactId>bitrepository-integration</artifactId>
-            <version>1.9</version>
-            <scope>test</scope>
-        </dependency>
 
     </dependencies>
 
     <build>
         <plugins>
             <plugin>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <version>1.7</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <id>sboi summa</id>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                        <configuration>
-                            <target>
-                                <mkdir dir="${project.build.directory}/sboi-summarise/" />
-                                <!--
-                                <scp knownhosts="${project.basedir}/known_hosts" file="fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${env.SSH_KEY}" />
-                                -->
-                                <exec failonerror="true" executable="rsync">
-                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${sboi.summarise.version}/* &quot;${project.build.directory}/sboi-summarise/&quot;" />
-
-                                    <!--
-                                    <arg line="-av /Users/ravn/Downloads/newspapr-${sboi.summarise.version}.zip &quot;${project.build.directory}/sboi-summarise/&quot;" />
-                                    -->
-                                </exec>
-                            </target>
-                        </configuration>
-                    </execution>
-<!--
-                    <execution>
-                        <phase>package</phase>
-                        <id>domswui summa</id>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                        <configuration>
-                            <target>
-                                <mkdir dir="${project.build.directory}/domswui-summarise/" />
-                                &lt;!&ndash;
-                                <scp knownhosts="${project.basedir}/known_hosts" file="fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-${summarise.version}/*" todir="${project.build.directory}/summarise/" keyfile="${env.SSH_KEY}" />
-                                &ndash;&gt;
-                                <exec failonerror="true" executable="rsync">
-                                    <arg line="-avz -e 'ssh -i ${env.SSH_KEY} -o UserKnownHostsFile=&quot;${project.basedir}/known_hosts&quot;' fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/domswui-${domswui.summarise.version}/* &quot;${project.build.directory}/domswui-summarise/&quot;" />
-                                    &lt;!&ndash;
-                                    <arg line="-av /Users/ravn/Downloads/domswui-${domswui.summarise.version}.zip &quot;${project.build.directory}/domswui-summarise/&quot;" />
-                                                &ndash;&gt;
-                                </exec>
-                            </target>
-                        </configuration>
-                    </execution>
--->
-                </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.ant</groupId>
-                        <artifactId>ant-jsch</artifactId>
-                        <version>1.8.2</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-            <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.2-beta-4</version>
+                <version>3.1.0</version>
                 <executions>
                     <execution>
                         <id>make-assembly</id>
@@ -293,97 +377,15 @@
                             <tarLongFileMode>gnu</tarLongFileMode>
                             <ignoreMissingDescriptor>true</ignoreMissingDescriptor>
                         </configuration>
-
-                        <!-- this is used for inheritance merges -->
                         <phase>package</phase>
-                        <!-- append to the packaging phase. -->
                         <goals>
                             <goal>single</goal>
-                            <!-- goals == mojos -->
-                        </goals>
-
-                    </execution>
-
-                    <execution>
-                        <configuration>
-                            <descriptors>
-                                <descriptor>src/main/assembly/assemblyTestbed.xml</descriptor>
-                            </descriptors>
-                            <tarLongFileMode>gnu</tarLongFileMode>
-                            <ignoreMissingDescriptor>true</ignoreMissingDescriptor>
-                        </configuration>
-
-                        <id>make-assembly-testbed</id>
-                        <!-- this is used for inheritance merges -->
-                        <phase>package</phase>
-                        <!-- append to the packaging phase. -->
-                        <goals>
-                            <goal>single</goal>
-                            <!-- goals == mojos -->
                         </goals>
                     </execution>
                 </executions>
             </plugin>
 
-            <!-- ensure that developer-config/ is present! -->
-            <!-- http://maven.apache.org/enforcer/enforcer-rules/requireFilesExist.html -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-enforcer-plugin</artifactId>
-                <version>1.4.1</version>
-                <executions>
-                    <execution>
-                        <id>enforce-files-exist</id>
-                        <goals>
-                            <goal>enforce</goal>
-                        </goals>
-                        <configuration>
-                            <rules>
-                                <requireFilesExist>
-                                    <message>*** devel-config not present - check README.md for cloning instructions ***</message>
-                                    <files>
-                                        <file>${project.basedir}/src/vagrant/devel-config</file>
-                                    </files>
-                                </requireFilesExist>
-                            </rules>
-                            <fail>true</fail>
-                        </configuration>
-                    </execution>
-                </executions>
 
-            </plugin>
-
-            <!-- Download the bitrepository quickstart distribution from Maven (which mean we do not need
-            to keep track of the physical location) and put it where the vagrant guest can see it.
-            -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.0.0</version>
-                <executions>
-                    <execution>
-                        <id>copy</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy</goal>
-                        </goals>
-                        <configuration>
-                            <artifactItems>
-                                <artifactItem>
-                                    <groupId>org.bitrepository.reference</groupId>
-                                    <artifactId>bitrepository-integration</artifactId>
-                                    <type>tar.gz</type>
-                                    <classifier>quickstart</classifier>
-                                    <overWrite>yes</overWrite>
-                                    <outputDirectory>${project.build.directory}/artifacts-copied/</outputDirectory>
-                                    <destFileName>bitrepository-integration-quickstart.tar.gz</destFileName>
-                                </artifactItem>
-                            </artifactItems>
-                            <!-- other configurations here -->
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 </project>

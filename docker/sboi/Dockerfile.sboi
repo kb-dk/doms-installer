@@ -1,0 +1,68 @@
+FROM openjdk:7-jre
+
+RUN apt-get update -q; apt-get install -y zip less cron vim xmlstarlet lsof
+
+ENV summarise_install_dir=/usr/local/sboi-summarise
+ENV summarise_storage_dir=/sboi-data
+
+RUN mkdir -p ${summarise_storage_dir} && \
+    cd ${summarise_storage_dir} && \
+    mkdir -p data && \
+    mkdir -p index && \
+    mkdir -p suggest && \
+    mkdir -p storage && \
+    mkdir -p dump && \
+    mkdir -p progress && \
+    mkdir -p summix-storage;
+
+# Copy in distribution artifacts
+WORKDIR ${summarise_install_dir}
+
+ADD newspapr-*.zip .
+ADD summix-*.zip summix-storage/
+
+ADD https://archive.apache.org/dist/tomcat/tomcat-6/v6.0.33/bin/apache-tomcat-6.0.33.zip .
+
+RUN unzip newspapr-\*.zip && \
+    rm newspapr-*.zip
+
+RUN ln -s ${summarise_storage_dir}/data data; \
+    ln -s ${summarise_storage_dir}/index index; \
+    ln -s ${summarise_storage_dir}/suggest suggest; \
+    ln -s ${summarise_storage_dir}/storage storage; \
+    ln -s ${summarise_storage_dir}/dump dump; \
+    ln -s ${summarise_storage_dir}/progress progress;
+
+
+RUN sed -i -e "s/^site.portrange=[0-9]{3}$/site.portrange=586/" site.properties \
+    && \
+    xmlstarlet ed \
+           --pf \
+           --inplace \
+           --insert "//entry[key/text()='summa.storage.recordreader.progressfile']/value/text()" \
+           --type 'text' \
+           -n "name" \
+           --value "${summarise_install_dir}/" \
+           config/in*.xml \
+    && \
+    xmlstarlet ed \
+           --inplace \
+           --update "/xproperties/xproperties/entry[key/text()='DOMSWebserviceURL']/value" \
+           --value "http://doms:7880/centralWebservice-service/central/?wsdl" \
+           config/storage_newspapr.xml \
+    && \
+    xmlstarlet ed \
+           --inplace \
+           --update "/xproperties/xproperties/entry[key/text()='DOMSPassword']/value" \
+           --value "fedoraAdminPass" \
+           config/storage_newspapr.xml
+
+RUN bin/setup.sh && bin/deploy.sh
+
+# Add crontab file in the cron directory
+ADD sboi-crontab /etc/cron.d/
+# Give execution rights on the cron job
+RUN chmod a+rx /etc/cron.d/sboi-crontab
+
+ADD dockerEntry.sh /bin/
+ENTRYPOINT /bin/dockerEntry.sh
