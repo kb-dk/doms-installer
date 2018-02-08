@@ -28,7 +28,7 @@ spec:
     type: Docker
   strategy:
     dockerStrategy:
-      dockerfilePath: build/docker/doms/Dockerfile.doms.tomcat
+      dockerfilePath: build/root/docker/doms/Dockerfile.doms.tomcat
     type: Docker
   triggers:
   - type: ConfigChange

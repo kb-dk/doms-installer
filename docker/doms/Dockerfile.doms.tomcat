@@ -7,13 +7,13 @@ ENV tomcatDir=/usr/local/tomcat
 RUN mkdir -p ${installDir}
 WORKDIR ${installDir}
 
-COPY build/target/doms-installer-*-installer.tar.gz ${installDir}
+COPY build/root/target/doms-installer-*-installer.tar.gz ${installDir}
 
 RUN tar -xvzf ${installDir}/doms-installer-*-installer.tar.gz && rm ${installDir}/doms-installer-*-installer.tar.gz;
 
-ADD build/docker/doms/setenv.sh ${installDir}/
+ADD build/root/docker/doms/setenv.sh ${installDir}/
 
-ADD build/docker/doms/dockerEntry.sh /bin/
+ADD build/root/docker/doms/dockerEntry.sh /bin/
 
 RUN apt-get update && \
     apt-get install -y zip less psmisc
