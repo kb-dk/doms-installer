@@ -1,6 +1,6 @@
 FROM openjdk:7-jre
 
-RUN apt-get update -q; apt-get install -y zip less cron vim xmlstarlet rsync ssh
+RUN apt-get update -q; apt-get install -y zip lsof less cron vim xmlstarlet rsync ssh
 
 ENV summarise_install_dir=/usr/local/sboi-summarise
 ENV summarise_storage_dir=/sboi-data

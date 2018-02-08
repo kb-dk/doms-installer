@@ -17,11 +17,12 @@ services:
       context: docker/postgres
       dockerfile: Dockerfile.db
     environment:
-     - POSTGRES_PASSWORD=mysecretpassword
+     - POSTGRESQL_ADMIN_PASSWORD=mysecretpassword
+     - PGDATA=/var/lib/postgresql/data/pgdata
     expose: #Meaning only accessible to linked containers
       - "5432"
     volumes:
-      - ./data/postgres:/var/lib/postgresql/data
+      - ./data/postgres:/var/lib/postgresql/data/
 
   doms:
     build:
