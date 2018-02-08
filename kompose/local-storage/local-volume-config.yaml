@@ -1,8 +1,9 @@
+apiVersion: v1
 kind: ConfigMap
 metadata:
   name: local-volume-config
 data:
-    "local-hdd": |
+    "local-storage": |
       {
         "hostDir": "/mnt/local-storage/hdd",
         "mountDir": "/mnt/local-storage/hdd"
