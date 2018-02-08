@@ -21,21 +21,25 @@ spec:
       labels:
         io.kompose.service: db
     spec:
+      serviceAccountName: postgres
       containers:
       - env:
         - name: POSTGRES_PASSWORD
           value: mysecretpassword
+        - name: PGDATA
+          value: /var/lib/postgresql/data/pgdata
         image: ' '
         name: db
         resources: {}
         volumeMounts:
-        - mountPath: /var/lib/postgresql/data
+        - mountPath: /var/lib/postgresql/data/
           name: db-claim0
       restartPolicy: Always
       volumes:
       - name: db-claim0
         persistentVolumeClaim:
           claimName: db-claim0
+
   test: false
   triggers:
   - type: ConfigChange
