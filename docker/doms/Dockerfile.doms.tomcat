@@ -11,9 +11,9 @@ COPY build/target/doms-installer-*-installer.tar.gz ${installDir}
 
 RUN tar -xvzf ${installDir}/doms-installer-*-installer.tar.gz && rm ${installDir}/doms-installer-*-installer.tar.gz;
 
-ADD docker/doms/setenv.sh ${installDir}/
+ADD build/docker/doms/setenv.sh ${installDir}/
 
-ADD docker/doms/dockerEntry.sh /bin/
+ADD build/docker/doms/dockerEntry.sh /bin/
 
 RUN apt-get update && \
     apt-get install -y zip less psmisc

@@ -24,14 +24,11 @@ spec:
         name: doms-maven:latest
       paths:
       - destinationDir: build/
-        sourcePath: /root/target
-    git:
-      ref: openshift
-      uri: https://github.com/statsbiblioteket/doms-installer.git
-    type: Git
+        sourcePath: /root
+    type: Docker
   strategy:
     dockerStrategy:
-      dockerfilePath: docker/doms/Dockerfile.doms.tomcat
+      dockerfilePath: build/docker/doms/Dockerfile.doms.tomcat
     type: Docker
   triggers:
   - type: ConfigChange

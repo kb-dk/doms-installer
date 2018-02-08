@@ -8,5 +8,6 @@ RUN mvn -P!testbed,!vagrant --settings /usr/share/maven/ref/settings-docker.xml 
 
 COPY src /root/src
 COPY docs /root/docs
+COPY docker /root/docker
 
 RUN mvn -P!testbed,!vagrant --settings /usr/share/maven/ref/settings-docker.xml -DskipTests package
