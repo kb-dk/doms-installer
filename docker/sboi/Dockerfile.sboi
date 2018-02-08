@@ -65,9 +65,9 @@ RUN sed -i -e "s/^site.portrange=[0-9]{3}$/site.portrange=586/" site.properties 
 RUN bin/setup.sh && bin/deploy.sh
 
 # Add crontab file in the cron directory
-ADD crontab /etc/cron.d/sboi.crontab
+ADD crontab /etc/cron.d/sboi-crontab
 # Give execution rights on the cron job
-RUN chmod 0644 /etc/cron.d/sboi.crontab
+RUN chmod a+x /etc/cron.d/sboi-crontab
 
 ADD dockerEntry.sh /bin/
 ENTRYPOINT /bin/dockerEntry.sh
