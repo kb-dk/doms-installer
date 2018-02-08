@@ -21,4 +21,8 @@ RUN apt-get update && \
 RUN mv ${installDir}/setenv.sh ${installDir}/doms-installer-*/bin/ && \
     ${installDir}/doms-installer-*/bin/package.sh ${installDir}
 
+#Attempt to fix permission problem https://docs.openshift.org/latest/creating_images/guidelines.html#use-uid
+RUN chgrp -R 0 ${installDir} ${storageDir} ${tomcatDir} && \
+    chmod -R g=u ${installDir} ${storageDir} ${tomcatDir}
+
 ENTRYPOINT /bin/dockerEntry.sh

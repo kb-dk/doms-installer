@@ -71,3 +71,7 @@ RUN chmod 0644 /etc/cron.d/sboi.crontab
 
 ADD dockerEntry.sh /bin/
 ENTRYPOINT /bin/dockerEntry.sh
+
+#Attempt to fix permission problem https://docs.openshift.org/latest/creating_images/guidelines.html#use-uid
+RUN chgrp -R 0 ${summarise_install_dir} ${summarise_storage_dir} && \
+    chmod -R g=u ${summarise_install_dir} ${summarise_storage_dir}
