@@ -4,7 +4,7 @@ ENV installDir=/usr/local/doms
 ENV storageDir=/doms-data
 ENV tomcatDir=/usr/local/tomcat
 
-RUN mkdir -p ${installDir}
+RUN mkdir -p ${installDir} ${storageDir} ${tomcatDir}
 WORKDIR ${installDir}
 
 COPY build/root/target/doms-installer-*-installer.tar.gz ${installDir}
