@@ -14,7 +14,7 @@ kind: NodeConfig
 kubeletArguments:
   node-labels: []
   feature-gates:
-   - PersistentLocalVolumes=true
+  - PersistentLocalVolumes=true
 masterClientConnectionOverrides:
   acceptContentTypes: application/vnd.kubernetes.protobuf,application/json
   contentType: application/vnd.kubernetes.protobuf

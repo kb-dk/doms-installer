@@ -117,7 +117,7 @@ kubernetesMasterConfig:
     storage-media-type:
     - application/vnd.kubernetes.protobuf
     feature-gates:
-     - PersistentLocalVolumes=true
+    - PersistentLocalVolumes=true
   controllerArguments:
     apiServerArguments:
        feature-gates:
