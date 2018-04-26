@@ -110,7 +110,7 @@
                         <sboi.summarise.version>2.8-SNAPSHOT</sboi.summarise.version>
                         <domswui.summarise.version>1.3-SNAPSHOT</domswui.summarise.version>
                 -->
-                <sboi.summarise.version>2.8</sboi.summarise.version>
+                <sboi.summarise.version>2.9-SNAPSHOT</sboi.summarise.version>
             </properties>
 
             <build>
