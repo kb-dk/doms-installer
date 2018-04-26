@@ -119,9 +119,8 @@ kubernetesMasterConfig:
     feature-gates:
     - PersistentLocalVolumes=true
   controllerArguments:
-    apiServerArguments:
-       feature-gates:
-       - PersistentLocalVolumes=true
+    feature-gates:
+    - PersistentLocalVolumes=true
   masterCount: 1
   masterIP: 10.5.0.130
   podEvictionTimeout: null
