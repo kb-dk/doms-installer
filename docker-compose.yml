@@ -13,15 +13,17 @@ version: '3'
 
 services:
   db:
-    build:
-      context: docker/postgres
-      dockerfile: Dockerfile.db
+    image: postgres:9.4
     environment:
      - POSTGRES_PASSWORD=mysecretpassword
     expose: #Meaning only accessible to linked containers
       - "5432"
+    ports:
+      - "15432:5432"
+    userns_mode: host
     volumes:
-      - ./data/postgres:/var/lib/postgresql/data
+      - ./docker/postgres/:/docker-entrypoint-initdb.d/:ro,Z
+      - ./data/postgres/:/var/lib/postgresql/data/:rw,Z
 
   doms:
     build:
@@ -30,7 +32,9 @@ services:
     ports:
       - "7880:7880"
     volumes:
-      - ./data/doms:/doms-data/
+      - ./data/doms:/doms-data/:rw,U,Z
+      - ./data/logs/:/logs/:rw,U,Z
+    userns_mode: host
     links:
       - db
     depends_on:
@@ -42,8 +46,9 @@ services:
       dockerfile: Dockerfile.sboi
     ports:
       - "58608:58608"
+    userns_mode: host
     volumes:
-      - ./data/sboi:/persistent/
+      - ./data/sboi:/persistent/:rw,Z,U
     links:
       - doms
     depends_on:
@@ -53,6 +58,8 @@ services:
     build:
       context: ./docker/zookeeper
       dockerfile: Dockerfile.zookeeper
+    image: kb/zookeeper
     ports:
       - "2181:2181"
     restart: always
+    depends_on: []

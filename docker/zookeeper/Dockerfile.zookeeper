@@ -23,29 +23,42 @@ RUN set -ex; \
     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR"; \
     chown "$ZOO_USER:$ZOO_USER" "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR"
 
-ARG GPG_KEY=D0BC8D8A4E90A40AFDFC43B3E22A746A68E327C1
-ARG DISTRO_NAME=zookeeper-3.4.11
+ARG GPG_KEY=3D296268A36FACA1B7EAF110792D43153B5B5147
+ARG DISTRO_NAME=zookeeper-3.5.9
+ARG PACKAGE_NAME=apache-$DISTRO_NAME-bin
 
-# Download Apache Zookeeper, verify its PGP signature, untar and clean up
+
+
+#Download Apache Zookeeper,
+ADD "https://www.apache.org/dist/zookeeper/$DISTRO_NAME/$PACKAGE_NAME.tar.gz" .
+ADD "https://www.apache.org/dist/zookeeper/$DISTRO_NAME/$PACKAGE_NAME.tar.gz.asc" .
+
+# verify its PGP signature
+ADD KEYS .
 RUN set -ex; \
     apk add --no-cache --virtual .build-deps \
         ca-certificates \
         gnupg \
         libressl; \
-    wget -q "https://www.apache.org/dist/zookeeper/$DISTRO_NAME/$DISTRO_NAME.tar.gz"; \
-    wget -q "https://www.apache.org/dist/zookeeper/$DISTRO_NAME/$DISTRO_NAME.tar.gz.asc"; \
     export GNUPGHOME="$(mktemp -d)"; \
-    gpg --keyserver ha.pool.sks-keyservers.net --recv-key "$GPG_KEY" || \
-    gpg --keyserver pgp.mit.edu --recv-keys "$GPG_KEY" || \
-    gpg --keyserver keyserver.pgp.com --recv-keys "$GPG_KEY"; \
-    gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz"; \
-    tar -xzf "$DISTRO_NAME.tar.gz"; \
-    mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR"; \
-    rm -rf "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc"; \
+    gpg --import KEYS; \
+    gpg --batch --trust-model always --verify "$PACKAGE_NAME.tar.gz.asc" "$PACKAGE_NAME.tar.gz"; \
+    rm -f "/$PACKAGE_NAME.tar.gz.asc"; \
     apk del .build-deps; \
-    rm -rf "$GNUPGHOME"
+    rm -rf "$GNUPGHOME;"
 
-WORKDIR $DISTRO_NAME
+#    UNTAR
+RUN     tar -xzf "/$PACKAGE_NAME.tar.gz"; \
+        mv "/$PACKAGE_NAME/conf/"* "$ZOO_CONF_DIR"; \
+        rm -rf "/$PACKAGE_NAME.tar.gz";
+
+
+RUN chown -R $ZOO_USER "/$PACKAGE_NAME"
+
+USER "$ZOO_USER"
+
+
+WORKDIR /$PACKAGE_NAME
 
 # Do not create the volumes. I can do this when I start the container, if I so desire
 #VOLUME ["$ZOO_DATA_DIR", "$ZOO_DATA_LOG_DIR"]
@@ -53,7 +66,7 @@ WORKDIR $DISTRO_NAME
 # Do not expose ports. I can do this when I start the container, if I so desire
 #EXPOSE $ZOO_PORT 2888 3888
 
-ENV PATH=$PATH:/$DISTRO_NAME/bin \
+ENV PATH=$PATH:/$PACKAGE_NAME/bin \
     ZOOCFGDIR=$ZOO_CONF_DIR
 
 COPY docker-entrypoint.sh /

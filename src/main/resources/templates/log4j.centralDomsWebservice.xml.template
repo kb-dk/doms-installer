@@ -74,7 +74,7 @@
 
 
     <appender name="UpdateTrackerErrorEmailAppender" class="org.apache.log4j.net.SMTPAppender">
-        <param name="SMTPHost" value="post"/>
+        <param name="SMTPHost" value="post.kb.dk"/>
         <param name="SMTPPort" value="25"/>
         <param name="From" value="$MAILER_SENDER$"/>
         <param name="To" value="$MAILER_RECIPIENT$"/>
@@ -87,7 +87,7 @@
     </appender>
 
     <appender name="UpdateTrackerContentModelChangedEmailAppender" class="org.apache.log4j.net.SMTPAppender">
-        <param name="SMTPHost" value="post"/>
+        <param name="SMTPHost" value="post.kb.dk"/>
         <param name="SMTPPort" value="25"/>
         <param name="From" value="$MAILER_SENDER$"/>
         <param name="To" value="$MAILER_RECIPIENT$"/>

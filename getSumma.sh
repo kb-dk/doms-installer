@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-SCRIPT_DIR=$(dirname $(readlink -f $BASH_SOURCE[0]))
-
-SSH_KEY=$HOME/.ssh/id_rsa
+SCRIPT_DIR=$(dirname "$(readlink -f -- ${BASH_SOURCE[0]})")
 
 SBOI_SUMMARISE_VERSION=$(\
     xmlstarlet sel \
@@ -10,12 +8,12 @@ SBOI_SUMMARISE_VERSION=$(\
            --template \
            --value-of \
            "/pom:project/pom:profiles/pom:profile[pom:id/text()='testbed']/pom:properties/pom:sboi.summarise.version" \
-           $SCRIPT_DIR/pom.xml
+           "$SCRIPT_DIR/pom.xml"
 )
 
 rsync \
     -avz \
-    -e "ssh -i ${SSH_KEY} -o StrictHostKeyChecking=no" \
-    fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-$SBOI_SUMMARISE_VERSION/* \
-    ${SCRIPT_DIR}/docker/sboi/
+    --delete \
+    "fedora@alhena.statsbiblioteket.dk:/fedora/SummariseReleases/newspapr-$SBOI_SUMMARISE_VERSION/" \
+    "${SCRIPT_DIR}/docker/sboi/summa/"
 

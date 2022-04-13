@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+set -x
 
 # Allow the container to be started with `--user`
 if [[ "$1" = 'zkServer.sh' && "$(id -u)" = '0' ]]; then

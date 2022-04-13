@@ -25,7 +25,7 @@ MAILER_RECIPIENT="abr@kb.dk"
 # The folders
 TOMCAT_DIR=${tomcatDir}
 
-LOG_DIR=$TOMCAT_DIR/logs
+LOG_DIR=/logs
 
 SERVICES_DIR=$TESTBED_DIR/services
 

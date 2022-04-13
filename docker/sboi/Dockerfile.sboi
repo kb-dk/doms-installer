@@ -18,12 +18,12 @@ RUN mkdir -p ${summarise_storage_dir} && \
 # Copy in distribution artifacts
 WORKDIR ${summarise_install_dir}
 
-ADD newspapr-*.zip .
-ADD summix-*.zip summix-storage/
+ADD summa/newspapr-*.zip .
+ADD summa/summix-*.zip summix-storage/
 
-ADD https://archive.apache.org/dist/tomcat/tomcat-6/v6.0.33/bin/apache-tomcat-6.0.33.zip .
+ADD "https://archive.apache.org/dist/tomcat/tomcat-6/v6.0.33/bin/apache-tomcat-6.0.33.zip" .
 
-RUN unzip newspapr-\*.zip && \
+RUN unzip -o newspapr-\*.zip && \
     rm newspapr-*.zip
 
 RUN ln -s ${summarise_storage_dir}/data data; \
